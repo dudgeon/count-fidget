@@ -1,0 +1,12 @@
+Hello,
+
+One additional display qualification point for the click-counter RFQ: I obtained the manufacturer's complete DE188 Rev4 specification. Its general electrical table lists 440 ms combined on/off response. That would be a concern for crisp feedback during rapid clicking, even though the MCU can count correctly.
+
+Please treat the DE188 as a provisional candidate, not an approved part. Can you confirm a current product-specific response-time specification and bias requirement for the exact 3 V suffix? If it is still slow, please identify an available reflective segmented LCD of approximately this size (ideally eight digits, no larger than about 35 x 15 mm), with a substantially faster response; a combined on/off response around 50 ms at room temperature is a design target, not a claim about the DE188.
+
+If no suitable reflective part is practical at 5/10-unit quantities, please identify and price a compact 0.91-inch-class monochrome 128 x 32 OLED as an alternative, including its complete datasheet and assembly interface. We would revise the PCB, firmware and battery-life estimate before approving an OLED.
+
+Please also include the current mechanical drawing and sourcing lead time for whichever display you recommend.
+
+Thank you,
+Geoff

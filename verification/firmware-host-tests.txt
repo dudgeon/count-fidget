@@ -1,0 +1,3 @@
+PASS: bounce, held-key no-repeat/sleep, wake click, reset priority, overflow, timer wrap
+PASS: blank memory, all 10 power-cut boundaries, CRC fallback, 100000 journal commits
+Host simulation only: target electrical, LCD, interrupt and brownout tests remain.

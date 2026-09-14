@@ -1,0 +1,6 @@
+# Preserve manufacturing and firmware hashes across checkouts.
+* -text
+*.zip binary
+*.png binary
+*.elf binary
+*.stl binary

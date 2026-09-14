@@ -1,0 +1,1004 @@
+{
+  "board_mm": [
+    42,
+    40,
+    1
+  ],
+  "layers": 4,
+  "revision": "Q1 quote prototype",
+  "parts": [
+    {
+      "ref": "DS1",
+      "value": "DE188-RU-30/7,5/V(3V)",
+      "mpn": "DE188-RU-30/7,5/V(3V)",
+      "manufacturer": "Display Elektronik",
+      "footprint": "ClickCounter:DE188_20P_34.9x13mm",
+      "x": 21,
+      "y": 8.75,
+      "rotation": 0,
+      "side": "top",
+      "pins": {
+        "20": "COM0",
+        "1": "COM1",
+        "11": "COM2",
+        "10": "COM3",
+        "2": "SEG0",
+        "3": "SEG1",
+        "4": "SEG2",
+        "5": "SEG3",
+        "6": "SEG4",
+        "7": "SEG5",
+        "8": "SEG6",
+        "9": "SEG7",
+        "12": "SEG8",
+        "13": "SEG9",
+        "14": "SEG10",
+        "15": "SEG11",
+        "16": "SEG12",
+        "17": "SEG13",
+        "18": "SEG14",
+        "19": "SEG15"
+      },
+      "notes": "THT hand solder; glass rear 4.0 mm above PCB top; 260 C / 5 s maximum; quote-only display, sample qualification required"
+    },
+    {
+      "ref": "SW1",
+      "value": "COUNT",
+      "mpn": "MX1A-E1NW",
+      "manufacturer": "Cherry",
+      "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+      "x": 14.015,
+      "y": 22.92,
+      "rotation": 0,
+      "side": "top",
+      "pins": {
+        "1": "COUNT_N",
+        "2": "GND"
+      },
+      "notes": "Clicky blue; PCB-mount 5-pin solder version; full hand solder"
+    },
+    {
+      "ref": "SW2",
+      "value": "RESET",
+      "mpn": "MX1A-E1NW",
+      "manufacturer": "Cherry",
+      "footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+      "x": 33.065,
+      "y": 22.92,
+      "rotation": 0,
+      "side": "top",
+      "pins": {
+        "1": "RESET_N",
+        "2": "GND"
+      },
+      "notes": "Same switch as SW1"
+    },
+    {
+      "ref": "J1",
+      "value": "USB-C charge",
+      "mpn": "USB4105-GF-A",
+      "manufacturer": "GCT",
+      "footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "x": 38.9,
+      "y": 13.3,
+      "rotation": 90,
+      "side": "top",
+      "pins": {
+        "A1": "GND",
+        "A12": "GND",
+        "B1": "GND",
+        "B12": "GND",
+        "A4": "VBUS",
+        "A9": "VBUS",
+        "B4": "VBUS",
+        "B9": "VBUS",
+        "A5": "CC1",
+        "B5": "CC2",
+        "SH": "GND"
+      },
+      "notes": "0.95 mm standard stakes; D+/D-/SBU unconnected; shell grounded"
+    },
+    {
+      "ref": "J2",
+      "value": "Battery + NTC",
+      "mpn": "SM04B-SRSS-TB(LF)(SN)",
+      "manufacturer": "JST",
+      "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "x": 5,
+      "y": 16.8,
+      "rotation": 90,
+      "side": "top",
+      "pins": {
+        "1": "CELL_P",
+        "2": "CELL_N_RAW",
+        "3": "TEMP_SENSE",
+        "4": "GND"
+      },
+      "notes": "Mating keyed custom pack CC-BAT-001; no bare coin-cell holder"
+    },
+    {
+      "ref": "U1",
+      "value": "MSP430FR4133",
+      "mpn": "MSP430FR4133IG48R",
+      "manufacturer": "Texas Instruments",
+      "footprint": "Package_SO:TSSOP-48_6.1x12.5mm_P0.5mm",
+      "x": 21,
+      "y": 8.75,
+      "rotation": 90,
+      "side": "top",
+      "pins": {
+        "6": "COM0",
+        "5": "COM1",
+        "4": "COM2",
+        "3": "COM3",
+        "14": "GND",
+        "15": "V3",
+        "16": "SBWTDIO",
+        "17": "SBWTCK",
+        "26": "COUNT_N",
+        "25": "RESET_N",
+        "10": "LCDCAP1",
+        "11": "LCDCAP0",
+        "2": "SEG0",
+        "1": "SEG1",
+        "48": "SEG2",
+        "47": "SEG3",
+        "46": "SEG4",
+        "45": "SEG5",
+        "44": "SEG6",
+        "43": "SEG7",
+        "42": "SEG8",
+        "41": "SEG9",
+        "40": "SEG10",
+        "39": "SEG11",
+        "38": "SEG12",
+        "37": "SEG13",
+        "36": "SEG14",
+        "35": "SEG15"
+      },
+      "notes": "48-pin TSSOP, not the earlier 64-pin draft; SBW program and verify"
+    },
+    {
+      "ref": "U2",
+      "value": "Li-ion charger",
+      "mpn": "BQ25185DLHR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "Package_DFN_QFN:Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm",
+      "x": 33,
+      "y": 7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS",
+        "2": "CELL_P",
+        "4": "CE_N",
+        "5": "GND",
+        "6": "TS_FIXED",
+        "7": "VSET",
+        "8": "ISET",
+        "10": "VBUS",
+        "11": "GND"
+      },
+      "notes": "4.2 V; 100 mA input limit; 18.2 mA nominal battery charge"
+    },
+    {
+      "ref": "U3",
+      "value": "3.0 V LDO",
+      "mpn": "TPS7A0230DBVR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "x": 27,
+      "y": 7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS",
+        "2": "GND",
+        "3": "SYS",
+        "4": "GND",
+        "5": "V3"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "U4",
+      "value": "Cell protector",
+      "mpn": "BQ29700DSER",
+      "manufacturer": "Texas Instruments",
+      "footprint": "Package_SON:WSON-6_1.5x1.5mm_P0.5mm",
+      "x": 7,
+      "y": 6,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "2": "COUT",
+        "3": "DOUT",
+        "4": "CELL_N_RAW",
+        "5": "BAT_SENSE",
+        "6": "VMINUS"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "Q1",
+      "value": "Discharge FET",
+      "mpn": "DMN2056U-7",
+      "manufacturer": "Diodes Incorporated",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "x": 5,
+      "y": 11,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "DOUT",
+        "2": "CELL_N_RAW",
+        "3": "FET_DRAIN"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "Q2",
+      "value": "Charge FET",
+      "mpn": "DMN2056U-7",
+      "manufacturer": "Diodes Incorporated",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "x": 9,
+      "y": 11,
+      "rotation": 180,
+      "side": "bottom",
+      "pins": {
+        "1": "COUT",
+        "2": "SENSE_FET",
+        "3": "FET_DRAIN"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "U5",
+      "value": "Charge temperature window",
+      "mpn": "TLV7042DGKR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "x": 17,
+      "y": 7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_OK",
+        "2": "TEMP_SENSE",
+        "3": "TEMP_COLD",
+        "4": "GND",
+        "5": "TEMP_SENSE",
+        "6": "TEMP_HOT",
+        "7": "TEMP_OK",
+        "8": "VBUS"
+      },
+      "notes": "USB-powered independent conservative charge-temperature window"
+    },
+    {
+      "ref": "Q3",
+      "value": "Charge enable",
+      "mpn": "2N7002",
+      "manufacturer": "Nexperia",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "x": 22,
+      "y": 19,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_OK",
+        "2": "GND",
+        "3": "CE_N"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "D1",
+      "value": "USB ESD",
+      "mpn": "USBLC6-2SC6",
+      "manufacturer": "STMicroelectronics",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "x": 37.3,
+      "y": 20.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CC1",
+        "2": "GND",
+        "3": "CC2",
+        "4": "CC2",
+        "5": "VBUS",
+        "6": "CC1"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "R1",
+      "value": "5.1k",
+      "mpn": "RC0603FR-075K1L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 29.5,
+      "y": 18.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CC1",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R2",
+      "value": "5.1k",
+      "mpn": "RC0603FR-075K1L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 31.5,
+      "y": 20.2,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CC2",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R3",
+      "value": "24k",
+      "mpn": "RC0603FR-0724KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 36.6,
+      "y": 5.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VSET",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R4",
+      "value": "16.5k",
+      "mpn": "RC0603FR-0716K5L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 39,
+      "y": 6.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "ISET",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R5",
+      "value": "10k",
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 33.5,
+      "y": 11,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TS_FIXED",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R6",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 26.5,
+      "y": 18.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "CE_N"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R7",
+      "value": "330",
+      "mpn": "RC0603FR-07330RL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 4,
+      "y": 5.3,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_P",
+        "2": "BAT_SENSE"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R8",
+      "value": "2.2k",
+      "mpn": "RC0603FR-072K2L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 10,
+      "y": 5.3,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "GND",
+        "2": "VMINUS"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R9",
+      "value": "3.3",
+      "mpn": "RC0603FR-073R3L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 12.3,
+      "y": 12,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "SENSE_FET",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R10",
+      "value": "10k",
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 12.6,
+      "y": 5.2,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "TEMP_SENSE"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R11",
+      "value": "49.9k",
+      "mpn": "RC0603FR-0749K9L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 11.5,
+      "y": 18.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "TEMP_COLD"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R12",
+      "value": "40.2k",
+      "mpn": "RC0603FR-0740K2L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 14.8,
+      "y": 18.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_COLD",
+        "2": "TEMP_HOT"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R13",
+      "value": "60.4k",
+      "mpn": "RC0603FR-0760K4L",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 18.1,
+      "y": 18.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_HOT",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R14",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 21,
+      "y": 5.3,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "TEMP_OK"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R15",
+      "value": "1M",
+      "mpn": "RC0603FR-071ML",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 21,
+      "y": 9.7,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_OK",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R16",
+      "value": "47k",
+      "mpn": "RC0603FR-0747KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 23.5,
+      "y": 11.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "V3",
+        "2": "SBWTDIO"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R17",
+      "value": "470k",
+      "mpn": "RC0603FR-07470KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 5.5,
+      "y": 33.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "V3",
+        "2": "COUNT_N"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R18",
+      "value": "470k",
+      "mpn": "RC0603FR-07470KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 36.5,
+      "y": 33.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "V3",
+        "2": "RESET_N"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "R19",
+      "value": "2k",
+      "mpn": "RC0603FR-072KL",
+      "manufacturer": "Yageo",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "x": 39,
+      "y": 12.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "ISET",
+        "2": "RC_COMP"
+      },
+      "notes": "1%, 0603, 0.1 W"
+    },
+    {
+      "ref": "C4",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 7,
+      "y": 3,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "BAT_SENSE",
+        "2": "CELL_N_RAW"
+      },
+      "notes": "100 nF, 50 V, X7R"
+    },
+    {
+      "ref": "C7",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 25,
+      "y": 4.3,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "V3",
+        "2": "GND"
+      },
+      "notes": "100 nF, 50 V, X7R"
+    },
+    {
+      "ref": "C8",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 15.5,
+      "y": 11.3,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "LCDCAP1",
+        "2": "LCDCAP0"
+      },
+      "notes": "100 nF, 50 V, X7R"
+    },
+    {
+      "ref": "C9",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 17,
+      "y": 4.3,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "notes": "100 nF, 50 V, X7R"
+    },
+    {
+      "ref": "C1",
+      "value": "2.2u",
+      "mpn": "GRM21BR71E225KA73L",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "x": 33,
+      "y": 4.3,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "notes": "2.2 uF, 25 V, X7R; effective >=1 uF at 5 V"
+    },
+    {
+      "ref": "C2",
+      "value": "10u",
+      "mpn": "GRM21BR61E106KA73L",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "x": 29,
+      "y": 4.3,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS",
+        "2": "GND"
+      },
+      "notes": "10 uF, 25 V, X5R; effective >=1 uF at 4.5 V"
+    },
+    {
+      "ref": "C3",
+      "value": "2.2u",
+      "mpn": "GRM21BR71E225KA73L",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "x": 38.5,
+      "y": 3,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_P",
+        "2": "GND"
+      },
+      "notes": "2.2 uF, 25 V, X7R"
+    },
+    {
+      "ref": "C5",
+      "value": "2.2u",
+      "mpn": "GRM21BR71E225KA73L",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "x": 29.5,
+      "y": 10.2,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS",
+        "2": "GND"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "C6",
+      "value": "2.2u",
+      "mpn": "GRM21BR71E225KA73L",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "x": 23.5,
+      "y": 7,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "V3",
+        "2": "GND"
+      },
+      "notes": ""
+    },
+    {
+      "ref": "C10",
+      "value": "1n",
+      "mpn": "GRM1885C1H102JA01D",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 25.5,
+      "y": 11.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "SBWTDIO",
+        "2": "GND"
+      },
+      "notes": "1 nF, 50 V, C0G"
+    },
+    {
+      "ref": "C11",
+      "value": "1n",
+      "mpn": "GRM1885C1H102JA01D",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 8,
+      "y": 34.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "COUNT_N",
+        "2": "GND"
+      },
+      "notes": "1 nF, 50 V, C0G"
+    },
+    {
+      "ref": "C12",
+      "value": "1n",
+      "mpn": "GRM1885C1H102JA01D",
+      "manufacturer": "Murata",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 34,
+      "y": 33.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "RESET_N",
+        "2": "GND"
+      },
+      "notes": "1 nF, 50 V, C0G"
+    },
+    {
+      "ref": "C13",
+      "value": "4.7n",
+      "mpn": "C0603C472J5RACTU",
+      "manufacturer": "KEMET",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "x": 39,
+      "y": 15,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "RC_COMP",
+        "2": "GND"
+      },
+      "notes": "TI EVM low-current series compensation: ISET -> 2k -> 4.7n -> GND"
+    },
+    {
+      "ref": "TP1",
+      "value": "GND",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 9,
+      "y": 37.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "GND"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP2",
+      "value": "V3",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 12,
+      "y": 37.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "V3"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP3",
+      "value": "SBWTDIO",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 15,
+      "y": 37.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SBWTDIO"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP4",
+      "value": "SBWTCK",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 18,
+      "y": 37.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SBWTCK"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP5",
+      "value": "VBUS",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 21,
+      "y": 37.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP6",
+      "value": "SYS",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 9,
+      "y": 31.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP7",
+      "value": "CELL_P",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 12,
+      "y": 31.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_P"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP8",
+      "value": "CELL_N_RAW",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 15,
+      "y": 31.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_N_RAW"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP9",
+      "value": "COUNT_N",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 18,
+      "y": 31.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "COUNT_N"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "TP10",
+      "value": "RESET_N",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "x": 21,
+      "y": 31.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "RESET_N"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly"
+    },
+    {
+      "ref": "H1",
+      "value": "M2 clearance",
+      "mpn": "NPTH",
+      "manufacturer": "PCB",
+      "footprint": "MountingHole:MountingHole_2.2mm_M2",
+      "x": 2.5,
+      "y": 37.5,
+      "rotation": 0,
+      "side": "top",
+      "pins": {},
+      "notes": "Unplated mechanical hole; not fitted"
+    },
+    {
+      "ref": "H2",
+      "value": "M2 clearance",
+      "mpn": "NPTH",
+      "manufacturer": "PCB",
+      "footprint": "MountingHole:MountingHole_2.2mm_M2",
+      "x": 39.5,
+      "y": 37.5,
+      "rotation": 0,
+      "side": "top",
+      "pins": {},
+      "notes": "Unplated mechanical hole; not fitted"
+    }
+  ]
+}

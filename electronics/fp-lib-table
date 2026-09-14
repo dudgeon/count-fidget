@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "ClickCounter")(type "KiCad")(uri "${KIPRJMOD}/ClickCounter.pretty")(options "")(descr "DE188 Rev4 custom footprint")))

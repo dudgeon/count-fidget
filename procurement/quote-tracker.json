@@ -1,0 +1,85 @@
+{
+  "snapshot_date": "2026-09-14",
+  "phase": "local-session handoff; website uploads unconfirmed",
+  "quantities": [
+    5,
+    10
+  ],
+  "currency": "USD",
+  "destination_postcode": "20815",
+  "complete_quotes_received": false,
+  "paid_procurement": false,
+  "order_placed": false,
+  "manufacturing_released": false,
+  "vendors": [
+    {
+      "name": "JLCPCB",
+      "website": "https://cart.jlcpcb.com/quote",
+      "rep_name": "Frank Chen",
+      "full_rfq_sent_utc": "2026-09-14T18:32:33Z",
+      "sent_attachment_bytes": 275486,
+      "package_acknowledged": true,
+      "acknowledgement_utc": "2026-09-14T21:23:46Z",
+      "website_uploaded": false,
+      "submission_number": null,
+      "complete_total_usd": null,
+      "feedback": [
+        "Offboard items missing from CPL flagged; PCB-only BOM correction prepared locally",
+        "Stock shortages and unmatched parts require exact line review",
+        "Rough 5-piece quotation excludes missing/shortfall/unmatched parts; embedded price images not read"
+      ],
+      "exclusions": [
+        "Battery assembly unsupported",
+        "Functional-test review/pricing only after payment; exception declined"
+      ],
+      "next_action": "Website upload corrected PCB BOM/CPL/Gerbers, manual matching, attach full RFQ and clarify exclusions"
+    },
+    {
+      "name": "PCBWay",
+      "website": "https://www.pcbway.com/quotesmt.aspx",
+      "rep_name": "Remi",
+      "full_rfq_sent_utc": "2026-09-14T18:33:59Z",
+      "sent_attachment_bytes": 275486,
+      "package_acknowledged": false,
+      "website_uploaded": false,
+      "submission_number": null,
+      "complete_total_usd": null,
+      "cloud_signed_in_verified": true,
+      "q1_form_filled": true,
+      "blocker": "Calculate timed out, then global browser controller refresh-tabs timeouts; no upload confirmation",
+      "quoted_review_time": "Representative stated 1–2 days after file receipt, not guaranteed",
+      "next_action": "Inspect existing account for Q1 draft and submit complete 5/10 RFQ; do not alter unrelated cart items"
+    }
+  ],
+  "import_correction": {
+    "pcb_refs": 46,
+    "offboard_refs": [
+      "BAT1",
+      "K1",
+      "K2"
+    ],
+    "uploaded": false,
+    "emailed": false
+  },
+  "historical_packages": [
+    {
+      "kind": "original emailed",
+      "bytes": 275486,
+      "sha256": "a466023de8ad41de98c0b33f86140ed7ca76bd34908660f1e451e3b740217e0b"
+    },
+    {
+      "kind": "cloud import correction not sent",
+      "bytes": 278820,
+      "sha256": "724e8561cdf35d701c3b65d125a6b082fcedce1af7ca87d215ec258098cf6363"
+    }
+  ],
+  "current_package_manifest": "../dist/manifest.json",
+  "cloud_followup": {
+    "title": "Click-counter vendor quotes",
+    "scheduled_utc": "2026-09-15T18:35:03Z",
+    "last_known_enabled": true,
+    "run_confirmed": false,
+    "migration_changed_task": false
+  },
+  "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md"
+}

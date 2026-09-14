@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-14T17:00:04.857422+00:00",
+  "pcb_drc_violations": 0,
+  "pcb_unconnected_items": 0,
+  "pcb_fitted_components": 46,
+  "placement_bom_reference_match": true,
+  "target": "MSP430FR4133IG48R",
+  "firmware_compiled": true,
+  "hardware_tested": false,
+  "production_released": false,
+  "gerber_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "notes": "No ERC-cleared native schematic is claimed. Neutral connectivity source is netlist.json; component/charge safety and physical fit require engineering review."
+}

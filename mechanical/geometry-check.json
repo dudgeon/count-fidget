@@ -1,0 +1,32 @@
+{
+  "status": "FIT STUDY ONLY \u2014 LCD speed, approved standoff and USB/switch fit pending",
+  "body_mm": [
+    46.0,
+    44.0,
+    18.0
+  ],
+  "overall_keycap_envelope_mm": [
+    46.0,
+    44.0,
+    28.8
+  ],
+  "pcb_envelope_mm": [
+    42,
+    40,
+    1.0
+  ],
+  "solid_PLA_shell_mass_g": {
+    "base": 7.221,
+    "lid": 2.68
+  },
+  "base_solids": 1,
+  "lid_solids": 1,
+  "base_lid_intersection_mm3": 0.0,
+  "battery_pcb_gap_mm": 4.6,
+  "caveats": [
+    "LCD pin matrix obtained; current part suffix, response time and mechanical support not finalized.",
+    "Switch plate stack height and clip clearance need physical fit test.",
+    "No LCD leads, battery leads, NTC, solder fillets, passive parts, screws or cable overmold are modeled.",
+    "Component envelope intersections do not constitute assembly clearance verification."
+  ]
+}

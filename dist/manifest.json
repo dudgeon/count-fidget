@@ -1,0 +1,101 @@
+{
+  "revision": "Q1-public-handoff",
+  "file": "click-counter-Q1-RFQ.zip",
+  "bytes": 278870,
+  "sha256": "79f633ba625e66e39d76e7fbf77db87a0d13eb99414107857d6a8c11ef63616d",
+  "purpose": "Prototype quotation only; no technical release. Repackaged with public contact text and corrected importer BOM.",
+  "members": {
+    "electronics/click-counter-Q1.kicad_pcb": {
+      "bytes": 535772,
+      "sha256": "e7ef623977910ca38b127a35a5166a79c2bad8350304f9c1c3cdf64d0660cb77"
+    },
+    "electronics/netlist.json": {
+      "bytes": 22960,
+      "sha256": "2c5e467ac28debd6ef5a9b3e1fad04f4b897df52ebad9772dd8da920530f8d7b"
+    },
+    "firmware/SHA256.json": {
+      "bytes": 194,
+      "sha256": "4489d42afe06128d55bcf0531685958d32662d1ed4d209e784737d8682843fae"
+    },
+    "firmware/click-counter-Q1.hex": {
+      "bytes": 6656,
+      "sha256": "98e775d027c6de064d5f0e2c25695ad2b998d30e9aae37ea2704a56c85b46b18"
+    },
+    "firmware/counter.c": {
+      "bytes": 3377,
+      "sha256": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe"
+    },
+    "firmware/counter.h": {
+      "bytes": 1077,
+      "sha256": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6"
+    },
+    "firmware/factory-display-info.hex": {
+      "bytes": 100,
+      "sha256": "ef7291f4e43d64b14684b13a0d4269a03ae6fa84429d377064bf04964b194736"
+    },
+    "firmware/lcd_de188.c": {
+      "bytes": 786,
+      "sha256": "757c91b25374c0aba871d53c0d368efb562ac4c2ecdead77c6d1013907715e9c"
+    },
+    "firmware/lcd_de188.h": {
+      "bytes": 381,
+      "sha256": "0df7cf67cb9511faaa975e9323683a852f024778bdb82f834ea465cb7401c091"
+    },
+    "firmware/main_msp430.c": {
+      "bytes": 5659,
+      "sha256": "40b1529be1c165102e68546ad00af45330aa28dffeff1426075bf49e2df4ea06"
+    },
+    "procurement/BOM-PCBA-Q1.csv": {
+      "bytes": 4926,
+      "sha256": "5698723d578d83831dbed50f4657e02a423e7774705b8e703fb4eb955fb73349"
+    },
+    "procurement/BOM-Q1.csv": {
+      "bytes": 5383,
+      "sha256": "41f05c2c0edc69a27c2187a18d7f4d270b5c8e8777a8bff04db54988d4304ee8"
+    },
+    "procurement/CPL-JLCPCB-Q1.csv": {
+      "bytes": 2101,
+      "sha256": "09fa350fb1aebeb0e2761b2f9d51ab61cfba204bc50505cc6ecfd7bae4d16345"
+    },
+    "procurement/OFFBOARD-items-Q1.csv": {
+      "bytes": 549,
+      "sha256": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66"
+    },
+    "procurement/RFQ-Q1.html": {
+      "bytes": 152034,
+      "sha256": "a3a403a3656431689c5e4aaa3b74ea21dcf0b8f8809601cc0ee35450c8806346"
+    },
+    "procurement/RFQ-Q1.md": {
+      "bytes": 16156,
+      "sha256": "0a5802329e4ad2e6c1fc62beb070f09a7c92adf6c0ffd9c51cb4debaec309b42"
+    },
+    "procurement/WEBSITE-IMPORT-NOTES-Q1.md": {
+      "bytes": 1796,
+      "sha256": "68204fb939061eaebfa48a48080e3edf9fc7d994800b590d1836b3dccb613973"
+    },
+    "procurement/assembly-bottom.svg": {
+      "bytes": 86011,
+      "sha256": "07c2bc6099b7fe56089a9c4eabb7f198d785e1aca4686b27de9e1c5e36784a80"
+    },
+    "procurement/assembly-top.svg": {
+      "bytes": 13793,
+      "sha256": "75cfd5b667aa9ad692c13ec0288d9c78e206ccf4a738453b0dade893c2d492aa"
+    },
+    "procurement/click-counter-Q1-Gerbers.zip": {
+      "bytes": 85741,
+      "sha256": "f5e88b602ae17b81dd4745eb1f1715504f1baafe69ee0a844f275cde5b0be212"
+    },
+    "procurement/placements-KiCad-Q1.csv": {
+      "bytes": 3390,
+      "sha256": "85d5aec18a8912b8907a8d57110fef3a27be92b02e40c6e5d90921db09fa9f29"
+    },
+    "verification/Q1-status.json": {
+      "bytes": 547,
+      "sha256": "77d450224be24b6257fba65553d7be1d027130f766dd9f77165b14b59f65cf72"
+    },
+    "verification/routed-drc.json": {
+      "bytes": 1073,
+      "sha256": "1e8edb629cc96b52deab28c0713952e4f40cad7c4716c90e78e9caca0df6d610"
+    }
+  }
+}

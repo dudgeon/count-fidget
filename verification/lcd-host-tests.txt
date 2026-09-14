@@ -1,0 +1,1 @@
+PASS: DE188 zero, one, eight/all-digit segment mapping and digit order (host only)

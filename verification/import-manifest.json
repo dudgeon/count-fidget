@@ -1,0 +1,551 @@
+{
+  "source": "recovered click-counter project",
+  "entries": [
+    {
+      "source": "README-rev0-superseded.md",
+      "source_sha256": "ea28fc1cdb177f5631174e24d7e3fd11139c29cb38e7946e1ce38a45c5e439e3",
+      "destination": "archive/rev0/README-rev0-superseded.md",
+      "destination_sha256_at_import": "ea28fc1cdb177f5631174e24d7e3fd11139c29cb38e7946e1ce38a45c5e439e3",
+      "status": "byte-identical"
+    },
+    {
+      "source": "README.md",
+      "source_sha256": "e3dadbcf199df715743b1af9148fe927719759f92806aa3781e9f43ff67e3308",
+      "destination": "README.md",
+      "destination_sha256_at_import": "efbc427851ae663b2b59143b69048b22e0d54717f00ff52f2d34ad457ce043f3",
+      "status": "public-context rewrite or metadata sanitization; technical scope retained"
+    },
+    {
+      "source": "build_q1_package.py",
+      "source_sha256": "8a79d8d603acd41a80fefdc9eb094137ca7e6ff46622e34e1cc23cea55c18d9c",
+      "destination": "archive/tooling/build_q1_package.py",
+      "destination_sha256_at_import": "8a79d8d603acd41a80fefdc9eb094137ca7e6ff46622e34e1cc23cea55c18d9c",
+      "status": "byte-identical"
+    },
+    {
+      "source": "build_review.py",
+      "source_sha256": "ed9639c62ff4943675797af9092ee873c64772c9278b497a145cdb4bb1533493",
+      "destination": "archive/tooling/build_review.py",
+      "destination_sha256_at_import": "2ffb381b7d933d6e58735870107df9d70c778ef49fd0859209087b87db65667f",
+      "status": "public-context rewrite or metadata sanitization; technical scope retained"
+    },
+    {
+      "source": "electronics/ClickCounter.pretty/DE188_20P_34.9x13mm.kicad_mod",
+      "source_sha256": "6c9425d95f20a3c92286fb6bb929362e969313232de547dc63bf1ac02d3d99f3",
+      "destination": "electronics/ClickCounter.pretty/DE188_20P_34.9x13mm.kicad_mod",
+      "destination_sha256_at_import": "6c9425d95f20a3c92286fb6bb929362e969313232de547dc63bf1ac02d3d99f3",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/assembly-view.kicad_pro",
+      "source_sha256": "724cf13282273f7e5b73fedc5845b5ff90d41a152ca831dfa4884c495ba849e4",
+      "destination": "electronics/assembly-view.kicad_pro",
+      "destination_sha256_at_import": "724cf13282273f7e5b73fedc5845b5ff90d41a152ca831dfa4884c495ba849e4",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/build_pcb.py",
+      "source_sha256": "b465e6c3898fcfa038f43f6a15c7debd1b2abf4a482194be5f09182917e38113",
+      "destination": "electronics/build_pcb.py",
+      "destination_sha256_at_import": "b465e6c3898fcfa038f43f6a15c7debd1b2abf4a482194be5f09182917e38113",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/click-counter-Q1.dsn",
+      "source_sha256": "eeed988479dca5798563ad84c19ed3ce3164313d8df7e686c31b2798948e839e",
+      "destination": "electronics/click-counter-Q1.dsn",
+      "destination_sha256_at_import": "eeed988479dca5798563ad84c19ed3ce3164313d8df7e686c31b2798948e839e",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/click-counter-Q1.kicad_pcb",
+      "source_sha256": "e7ef623977910ca38b127a35a5166a79c2bad8350304f9c1c3cdf64d0660cb77",
+      "destination": "electronics/click-counter-Q1.kicad_pcb",
+      "destination_sha256_at_import": "e7ef623977910ca38b127a35a5166a79c2bad8350304f9c1c3cdf64d0660cb77",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/click-counter-Q1.kicad_pro",
+      "source_sha256": "95199078bcda58a39af9a058c25421662a5cff5b8e67a15f69ddb13fb99be4e8",
+      "destination": "electronics/click-counter-Q1.kicad_pro",
+      "destination_sha256_at_import": "95199078bcda58a39af9a058c25421662a5cff5b8e67a15f69ddb13fb99be4e8",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/click-counter-Q1.ses",
+      "source_sha256": "c5e28cb0b8df8cbc88faa1b966b7744f376c91c7276ecdf4b4f7b42d52ef71eb",
+      "destination": "electronics/click-counter-Q1.ses",
+      "destination_sha256_at_import": "c5e28cb0b8df8cbc88faa1b966b7744f376c91c7276ecdf4b4f7b42d52ef71eb",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/design-rev0-superseded.md",
+      "source_sha256": "5c5eacd87d4a5116a877a199498a523b433bbe763ab058f8627e53db3873ff92",
+      "destination": "archive/rev0/design-rev0-superseded.md",
+      "destination_sha256_at_import": "5c5eacd87d4a5116a877a199498a523b433bbe763ab058f8627e53db3873ff92",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/design.md",
+      "source_sha256": "578a1e0dab1a52358524ef44a790cdeb371bcfacf605b5032014b00bf85ceea6",
+      "destination": "electronics/design.md",
+      "destination_sha256_at_import": "578a1e0dab1a52358524ef44a790cdeb371bcfacf605b5032014b00bf85ceea6",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/finish_pcb.py",
+      "source_sha256": "f0f74af002ae48ee18f5706d00218240e7eb1b5d60fb8c747edf82572d4b988c",
+      "destination": "electronics/finish_pcb.py",
+      "destination_sha256_at_import": "f0f74af002ae48ee18f5706d00218240e7eb1b5d60fb8c747edf82572d4b988c",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/fp-lib-table",
+      "source_sha256": "1bc55accd5780b304aacc66b9bc3d72695a9ba9c6f59a90b11c0807cce48ac5a",
+      "destination": "electronics/fp-lib-table",
+      "destination_sha256_at_import": "1bc55accd5780b304aacc66b9bc3d72695a9ba9c6f59a90b11c0807cce48ac5a",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-B_Cu.gbl",
+      "source_sha256": "d3948d30e5e9125e7cd0d608ba93dd367dd0ea53cdc1e053122c45f38a2b9b00",
+      "destination": "electronics/gerbers/click-counter-Q1-B_Cu.gbl",
+      "destination_sha256_at_import": "d3948d30e5e9125e7cd0d608ba93dd367dd0ea53cdc1e053122c45f38a2b9b00",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-B_Mask.gbs",
+      "source_sha256": "ce5c3ac2413a282d197ebb22f902c044893b42e9cc2eceb05779a56e8ea3e855",
+      "destination": "electronics/gerbers/click-counter-Q1-B_Mask.gbs",
+      "destination_sha256_at_import": "ce5c3ac2413a282d197ebb22f902c044893b42e9cc2eceb05779a56e8ea3e855",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-B_Paste.gbp",
+      "source_sha256": "273458269a3e04cf2b18f555636d409036aa3772dab34775c1cdd4a4f5a21326",
+      "destination": "electronics/gerbers/click-counter-Q1-B_Paste.gbp",
+      "destination_sha256_at_import": "273458269a3e04cf2b18f555636d409036aa3772dab34775c1cdd4a4f5a21326",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-B_Silkscreen.gbo",
+      "source_sha256": "5555d8ec1b9b94048e4c0ce8d4334cd69a4a98e8df3e2fa1cebba96adf4ef5e6",
+      "destination": "electronics/gerbers/click-counter-Q1-B_Silkscreen.gbo",
+      "destination_sha256_at_import": "5555d8ec1b9b94048e4c0ce8d4334cd69a4a98e8df3e2fa1cebba96adf4ef5e6",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-Edge_Cuts.gm1",
+      "source_sha256": "37e3b08818588e0b4048adf72d28ae2a4cc35fbc5972786375b8a73bf6e31f23",
+      "destination": "electronics/gerbers/click-counter-Q1-Edge_Cuts.gm1",
+      "destination_sha256_at_import": "37e3b08818588e0b4048adf72d28ae2a4cc35fbc5972786375b8a73bf6e31f23",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-F_Cu.gtl",
+      "source_sha256": "0aaca92c98036654f5d5cfa2c2c39640eead408df5cc3a64af8ae92cac3f812a",
+      "destination": "electronics/gerbers/click-counter-Q1-F_Cu.gtl",
+      "destination_sha256_at_import": "0aaca92c98036654f5d5cfa2c2c39640eead408df5cc3a64af8ae92cac3f812a",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-F_Mask.gts",
+      "source_sha256": "ea7f710414935a40ce66dc5baae562546530b995ef4f64d625215d3cdc9d5766",
+      "destination": "electronics/gerbers/click-counter-Q1-F_Mask.gts",
+      "destination_sha256_at_import": "ea7f710414935a40ce66dc5baae562546530b995ef4f64d625215d3cdc9d5766",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-F_Paste.gtp",
+      "source_sha256": "12c2f9d5f767cbb8290ed0bbbe6e3294e5aa1fd3dd26c634edc93a2893ac47f2",
+      "destination": "electronics/gerbers/click-counter-Q1-F_Paste.gtp",
+      "destination_sha256_at_import": "12c2f9d5f767cbb8290ed0bbbe6e3294e5aa1fd3dd26c634edc93a2893ac47f2",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-F_Silkscreen.gto",
+      "source_sha256": "6fecf4c5dc55fcf95e9dd4dbea4f96a0c2a86b175087455b656a3a67e9943241",
+      "destination": "electronics/gerbers/click-counter-Q1-F_Silkscreen.gto",
+      "destination_sha256_at_import": "6fecf4c5dc55fcf95e9dd4dbea4f96a0c2a86b175087455b656a3a67e9943241",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-In1_Cu.g1",
+      "source_sha256": "39be5f4f5812e36de1a636f0f27e0ca844ca5ded483be7443b9a40fba6c58c23",
+      "destination": "electronics/gerbers/click-counter-Q1-In1_Cu.g1",
+      "destination_sha256_at_import": "39be5f4f5812e36de1a636f0f27e0ca844ca5ded483be7443b9a40fba6c58c23",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-In2_Cu.g2",
+      "source_sha256": "b4854d950d3edf30fa3b27c95bc724043785f1d1b9ee4ceaff04c23d0cbb215d",
+      "destination": "electronics/gerbers/click-counter-Q1-In2_Cu.g2",
+      "destination_sha256_at_import": "b4854d950d3edf30fa3b27c95bc724043785f1d1b9ee4ceaff04c23d0cbb215d",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-NPTH.drl",
+      "source_sha256": "8881e3d7a3af3a59b5324888e0c012676f9d9af03633b95e1dac87360038f48c",
+      "destination": "electronics/gerbers/click-counter-Q1-NPTH.drl",
+      "destination_sha256_at_import": "8881e3d7a3af3a59b5324888e0c012676f9d9af03633b95e1dac87360038f48c",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-PTH.drl",
+      "source_sha256": "ead9c8b7d8093e3c05301bceaa6cf88e63d0159c300e55d9fc9b3cef448fbaf7",
+      "destination": "electronics/gerbers/click-counter-Q1-PTH.drl",
+      "destination_sha256_at_import": "ead9c8b7d8093e3c05301bceaa6cf88e63d0159c300e55d9fc9b3cef448fbaf7",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-drill.rpt",
+      "source_sha256": "44eac22792df6f00b31aed8e9b9081303a42de0628517582aa1486fc31d3f0ba",
+      "destination": "electronics/gerbers/click-counter-Q1-drill.rpt",
+      "destination_sha256_at_import": "44eac22792df6f00b31aed8e9b9081303a42de0628517582aa1486fc31d3f0ba",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/gerbers/click-counter-Q1-job.gbrjob",
+      "source_sha256": "1e04848553308099b7572f87eb81c6ccf376246a56bfd1cf035e5f1f95b3eac4",
+      "destination": "electronics/gerbers/click-counter-Q1-job.gbrjob",
+      "destination_sha256_at_import": "1e04848553308099b7572f87eb81c6ccf376246a56bfd1cf035e5f1f95b3eac4",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/netlist.json",
+      "source_sha256": "2c5e467ac28debd6ef5a9b3e1fad04f4b897df52ebad9772dd8da920530f8d7b",
+      "destination": "electronics/netlist.json",
+      "destination_sha256_at_import": "2c5e467ac28debd6ef5a9b3e1fad04f4b897df52ebad9772dd8da920530f8d7b",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/pcb-bottom.svg",
+      "source_sha256": "53b894df34a014b928fba4d1a4d86f09f6860fbfbc7ba826cf0ac32777d0f88a",
+      "destination": "electronics/pcb-bottom.svg",
+      "destination_sha256_at_import": "53b894df34a014b928fba4d1a4d86f09f6860fbfbc7ba826cf0ac32777d0f88a",
+      "status": "byte-identical"
+    },
+    {
+      "source": "electronics/pcb-top.svg",
+      "source_sha256": "1b232ce771c6118fac39540c98be2df9d0ba9b5a564002f15609314afd9ccf3e",
+      "destination": "electronics/pcb-top.svg",
+      "destination_sha256_at_import": "1b232ce771c6118fac39540c98be2df9d0ba9b5a564002f15609314afd9ccf3e",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/README.md",
+      "source_sha256": "4a3e1eb0c12bd874f3e7ca175e91c0179b20953322a080f527e0c1b2d1ba23db",
+      "destination": "firmware/README.md",
+      "destination_sha256_at_import": "4a3e1eb0c12bd874f3e7ca175e91c0179b20953322a080f527e0c1b2d1ba23db",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/SHA256.json",
+      "source_sha256": "4489d42afe06128d55bcf0531685958d32662d1ed4d209e784737d8682843fae",
+      "destination": "firmware/SHA256.json",
+      "destination_sha256_at_import": "4489d42afe06128d55bcf0531685958d32662d1ed4d209e784737d8682843fae",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/click-counter-Q1.elf",
+      "source_sha256": "f0b097a8ada422daa1f2760f866c7d3d97dbafa786782e333109e910620a819a",
+      "destination": "firmware/click-counter-Q1.elf",
+      "destination_sha256_at_import": "f0b097a8ada422daa1f2760f866c7d3d97dbafa786782e333109e910620a819a",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/click-counter-Q1.hex",
+      "source_sha256": "98e775d027c6de064d5f0e2c25695ad2b998d30e9aae37ea2704a56c85b46b18",
+      "destination": "firmware/click-counter-Q1.hex",
+      "destination_sha256_at_import": "98e775d027c6de064d5f0e2c25695ad2b998d30e9aae37ea2704a56c85b46b18",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/click-counter-Q1.map",
+      "source_sha256": "ea9168b62cce7ac14ee9e46066e327ceac8e4581f86ad3204945d25e5f453830",
+      "destination": "firmware/click-counter-Q1.map",
+      "destination_sha256_at_import": "ea9168b62cce7ac14ee9e46066e327ceac8e4581f86ad3204945d25e5f453830",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/counter.c",
+      "source_sha256": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe",
+      "destination": "firmware/counter.c",
+      "destination_sha256_at_import": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/counter.h",
+      "source_sha256": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6",
+      "destination": "firmware/counter.h",
+      "destination_sha256_at_import": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/factory-display-info.hex",
+      "source_sha256": "ef7291f4e43d64b14684b13a0d4269a03ae6fa84429d377064bf04964b194736",
+      "destination": "firmware/factory-display-info.hex",
+      "destination_sha256_at_import": "ef7291f4e43d64b14684b13a0d4269a03ae6fa84429d377064bf04964b194736",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/lcd_de188.c",
+      "source_sha256": "757c91b25374c0aba871d53c0d368efb562ac4c2ecdead77c6d1013907715e9c",
+      "destination": "firmware/lcd_de188.c",
+      "destination_sha256_at_import": "757c91b25374c0aba871d53c0d368efb562ac4c2ecdead77c6d1013907715e9c",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/lcd_de188.h",
+      "source_sha256": "0df7cf67cb9511faaa975e9323683a852f024778bdb82f834ea465cb7401c091",
+      "destination": "firmware/lcd_de188.h",
+      "destination_sha256_at_import": "0df7cf67cb9511faaa975e9323683a852f024778bdb82f834ea465cb7401c091",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/main_msp430.c",
+      "source_sha256": "40b1529be1c165102e68546ad00af45330aa28dffeff1426075bf49e2df4ea06",
+      "destination": "firmware/main_msp430.c",
+      "destination_sha256_at_import": "40b1529be1c165102e68546ad00af45330aa28dffeff1426075bf49e2df4ea06",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/test_counter.c",
+      "source_sha256": "bd0513dfc7b8662d4cdaeda5c17ff7dddf0e79a7d538fb72acd515b4940937d3",
+      "destination": "firmware/test_counter.c",
+      "destination_sha256_at_import": "bd0513dfc7b8662d4cdaeda5c17ff7dddf0e79a7d538fb72acd515b4940937d3",
+      "status": "byte-identical"
+    },
+    {
+      "source": "firmware/test_lcd.c",
+      "source_sha256": "c0a1bca3fa5633fcba030b9dab80376c030013dc733d2296562641db1faf1f3a",
+      "destination": "firmware/test_lcd.c",
+      "destination_sha256_at_import": "c0a1bca3fa5633fcba030b9dab80376c030013dc733d2296562641db1faf1f3a",
+      "status": "byte-identical"
+    },
+    {
+      "source": "mechanical/assembled-cad.png",
+      "source_sha256": "61f5f76e64e5d7a0ea83bd6fe9c18f45324e5586a456833fb728adcf709b7af4",
+      "destination": "mechanical/assembled-cad.png",
+      "destination_sha256_at_import": "61f5f76e64e5d7a0ea83bd6fe9c18f45324e5586a456833fb728adcf709b7af4",
+      "status": "byte-identical"
+    },
+    {
+      "source": "mechanical/base-fit-study.stl",
+      "source_sha256": "435aa1403ad855f890878a9b7f8814c79354f54b68b30b002997193326dd3879",
+      "destination": "mechanical/base-fit-study.stl",
+      "destination_sha256_at_import": "435aa1403ad855f890878a9b7f8814c79354f54b68b30b002997193326dd3879",
+      "status": "byte-identical"
+    },
+    {
+      "source": "mechanical/enclosure.py",
+      "source_sha256": "29b81bf46bdb849dc6e22e12ed8315b5811353168755f823c2d5e738e2b62821",
+      "destination": "mechanical/enclosure.py",
+      "destination_sha256_at_import": "29b81bf46bdb849dc6e22e12ed8315b5811353168755f823c2d5e738e2b62821",
+      "status": "byte-identical"
+    },
+    {
+      "source": "mechanical/exploded-cad.png",
+      "source_sha256": "f5c1e5ada0da08d213c44d434b75041e9124c56f1cb7b88fda5982dd44a30980",
+      "destination": "mechanical/exploded-cad.png",
+      "destination_sha256_at_import": "f5c1e5ada0da08d213c44d434b75041e9124c56f1cb7b88fda5982dd44a30980",
+      "status": "byte-identical"
+    },
+    {
+      "source": "mechanical/fit-study.step",
+      "source_sha256": "754fab2f0405745701952a5c7d7c29df752684952b4f93f49db4194fe5386472",
+      "destination": "mechanical/fit-study.step",
+      "destination_sha256_at_import": "754fab2f0405745701952a5c7d7c29df752684952b4f93f49db4194fe5386472",
+      "status": "byte-identical"
+    },
+    {
+      "source": "mechanical/geometry-check.json",
+      "source_sha256": "4d58ae20726feea0dca6c7771ebffdd177677fe44cef917de34709745d449d9d",
+      "destination": "mechanical/geometry-check.json",
+      "destination_sha256_at_import": "4d58ae20726feea0dca6c7771ebffdd177677fe44cef917de34709745d449d9d",
+      "status": "byte-identical"
+    },
+    {
+      "source": "mechanical/lid-fit-study.stl",
+      "source_sha256": "a38c0b664dfdef61bc2db845b2af4f44e9f9953c7ca6adf63543e5c7d907a14a",
+      "destination": "mechanical/lid-fit-study.stl",
+      "destination_sha256_at_import": "a38c0b664dfdef61bc2db845b2af4f44e9f9953c7ca6adf63543e5c7d907a14a",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/BOM-PCBA-Q1.csv",
+      "source_sha256": "5698723d578d83831dbed50f4657e02a423e7774705b8e703fb4eb955fb73349",
+      "destination": "procurement/BOM-PCBA-Q1.csv",
+      "destination_sha256_at_import": "5698723d578d83831dbed50f4657e02a423e7774705b8e703fb4eb955fb73349",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/BOM-Q1.csv",
+      "source_sha256": "41f05c2c0edc69a27c2187a18d7f4d270b5c8e8777a8bff04db54988d4304ee8",
+      "destination": "procurement/BOM-Q1.csv",
+      "destination_sha256_at_import": "41f05c2c0edc69a27c2187a18d7f4d270b5c8e8777a8bff04db54988d4304ee8",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/CPL-JLCPCB-Q1.csv",
+      "source_sha256": "09fa350fb1aebeb0e2761b2f9d51ab61cfba204bc50505cc6ecfd7bae4d16345",
+      "destination": "procurement/CPL-JLCPCB-Q1.csv",
+      "destination_sha256_at_import": "09fa350fb1aebeb0e2761b2f9d51ab61cfba204bc50505cc6ecfd7bae4d16345",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/OFFBOARD-items-Q1.csv",
+      "source_sha256": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66",
+      "destination": "procurement/OFFBOARD-items-Q1.csv",
+      "destination_sha256_at_import": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/RFQ-Q1.html",
+      "source_sha256": "c1597e29b4b3357e7e105b4dbd85e4dd3a9fc4f17391246af3c54dea68097362",
+      "destination": "procurement/RFQ-Q1.html",
+      "destination_sha256_at_import": "a3a403a3656431689c5e4aaa3b74ea21dcf0b8f8809601cc0ee35450c8806346",
+      "status": "public-context rewrite or metadata sanitization; technical scope retained"
+    },
+    {
+      "source": "procurement/RFQ-Q1.md",
+      "source_sha256": "cf19fcf278c5e3351b6e88c02bb093da4f7d3c504966551c71a1fa163fdba714",
+      "destination": "procurement/RFQ-Q1.md",
+      "destination_sha256_at_import": "0a5802329e4ad2e6c1fc62beb070f09a7c92adf6c0ffd9c51cb4debaec309b42",
+      "status": "public-context rewrite or metadata sanitization; technical scope retained"
+    },
+    {
+      "source": "procurement/WEBSITE-IMPORT-NOTES-Q1.md",
+      "source_sha256": "68204fb939061eaebfa48a48080e3edf9fc7d994800b590d1836b3dccb613973",
+      "destination": "procurement/WEBSITE-IMPORT-NOTES-Q1.md",
+      "destination_sha256_at_import": "68204fb939061eaebfa48a48080e3edf9fc7d994800b590d1836b3dccb613973",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/assembly-bottom.png",
+      "source_sha256": "42abade9b3fa5111dc4add155cd13ed030529b1346fc6e042acc80c93eaaca75",
+      "destination": "procurement/assembly-bottom.png",
+      "destination_sha256_at_import": "42abade9b3fa5111dc4add155cd13ed030529b1346fc6e042acc80c93eaaca75",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/assembly-bottom.svg",
+      "source_sha256": "07c2bc6099b7fe56089a9c4eabb7f198d785e1aca4686b27de9e1c5e36784a80",
+      "destination": "procurement/assembly-bottom.svg",
+      "destination_sha256_at_import": "07c2bc6099b7fe56089a9c4eabb7f198d785e1aca4686b27de9e1c5e36784a80",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/assembly-top.png",
+      "source_sha256": "2c5eabfcd86cf2c9a8038efc16f483c36e9f9c81c06d202b9168a353e5ed0e55",
+      "destination": "procurement/assembly-top.png",
+      "destination_sha256_at_import": "2c5eabfcd86cf2c9a8038efc16f483c36e9f9c81c06d202b9168a353e5ed0e55",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/assembly-top.svg",
+      "source_sha256": "75cfd5b667aa9ad692c13ec0288d9c78e206ccf4a738453b0dade893c2d492aa",
+      "destination": "procurement/assembly-top.svg",
+      "destination_sha256_at_import": "75cfd5b667aa9ad692c13ec0288d9c78e206ccf4a738453b0dade893c2d492aa",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/click-counter-Q1-Gerbers.zip",
+      "source_sha256": "f5e88b602ae17b81dd4745eb1f1715504f1baafe69ee0a844f275cde5b0be212",
+      "destination": "procurement/click-counter-Q1-Gerbers.zip",
+      "destination_sha256_at_import": "f5e88b602ae17b81dd4745eb1f1715504f1baafe69ee0a844f275cde5b0be212",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/display-followup.txt",
+      "source_sha256": "c09be8f4afb3e915ac7111d5a6809344dd5ccfbb695373601dc122ae4d0c9ae2",
+      "destination": "archive/rev0/display-followup.txt",
+      "destination_sha256_at_import": "c09be8f4afb3e915ac7111d5a6809344dd5ccfbb695373601dc122ae4d0c9ae2",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/initial-rfq.txt",
+      "source_sha256": "3f7253cfd4860544fd5d3830654f31f931194d4eaa9c6a1da1583b187beec72a",
+      "destination": "archive/rev0/initial-rfq.txt",
+      "destination_sha256_at_import": "3f7253cfd4860544fd5d3830654f31f931194d4eaa9c6a1da1583b187beec72a",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/placements-KiCad-Q1.csv",
+      "source_sha256": "85d5aec18a8912b8907a8d57110fef3a27be92b02e40c6e5d90921db09fa9f29",
+      "destination": "procurement/placements-KiCad-Q1.csv",
+      "destination_sha256_at_import": "85d5aec18a8912b8907a8d57110fef3a27be92b02e40c6e5d90921db09fa9f29",
+      "status": "byte-identical"
+    },
+    {
+      "source": "procurement/quote-tracker.json",
+      "source_sha256": "668f19f1b8190c86a92dc5a910320b8ebe72717ce2eca7abe0250c8363fea120",
+      "destination": "procurement/quote-tracker.json",
+      "destination_sha256_at_import": "d6f7e80a9464aa375c775edca1a3f78becbaaedf14c9a716f23221c62bb92e43",
+      "status": "public-context rewrite or metadata sanitization; technical scope retained"
+    },
+    {
+      "source": "procurement/vendor-submissions-Q1.md",
+      "source_sha256": "fe228c3a4a3f3fd1f9298de0e0e12dde5059d7f2e9b2d9447b27f8097f108362",
+      "destination": "procurement/vendor-status.md",
+      "destination_sha256_at_import": "4c1f6cb24b5f304c83dc33c1dec795994d58b7563a9ff12c0621b1a0bd502cdc",
+      "status": "public-context rewrite or metadata sanitization; technical scope retained"
+    },
+    {
+      "source": "procurement/website-quotes.md",
+      "source_sha256": "1cf65e33ecb984ad79dc69189b05f09b41bd02b22c068e8f366d2767b96fff7f",
+      "destination": "archive/rev0/website-quotes.md",
+      "destination_sha256_at_import": "1cf65e33ecb984ad79dc69189b05f09b41bd02b22c068e8f366d2767b96fff7f",
+      "status": "byte-identical"
+    },
+    {
+      "source": "verification/Q1-status.json",
+      "source_sha256": "77d450224be24b6257fba65553d7be1d027130f766dd9f77165b14b59f65cf72",
+      "destination": "verification/Q1-status.json",
+      "destination_sha256_at_import": "77d450224be24b6257fba65553d7be1d027130f766dd9f77165b14b59f65cf72",
+      "status": "byte-identical"
+    },
+    {
+      "source": "verification/build-pcb.log",
+      "source_sha256": "77a7e462e7d7f66f549c4ea1ae2e9f24932de6fec2c8a9ce1abf7439fa130414",
+      "destination": "verification/build-pcb.log",
+      "destination_sha256_at_import": "77a7e462e7d7f66f549c4ea1ae2e9f24932de6fec2c8a9ce1abf7439fa130414",
+      "status": "byte-identical"
+    },
+    {
+      "source": "verification/firmware-host-tests.txt",
+      "source_sha256": "375a2e016da26be1c9ce39ebac8bed2352ecd4a40c70c16dd06498c8a9b244e8",
+      "destination": "verification/firmware-host-tests.txt",
+      "destination_sha256_at_import": "375a2e016da26be1c9ce39ebac8bed2352ecd4a40c70c16dd06498c8a9b244e8",
+      "status": "byte-identical"
+    },
+    {
+      "source": "verification/lcd-host-tests.txt",
+      "source_sha256": "083a7c21c6e1a9a22753372c75a2cbf4bda30feef370689cfae3e8c39f92c0e2",
+      "destination": "verification/lcd-host-tests.txt",
+      "destination_sha256_at_import": "083a7c21c6e1a9a22753372c75a2cbf4bda30feef370689cfae3e8c39f92c0e2",
+      "status": "byte-identical"
+    },
+    {
+      "source": "verification/placement-drc.json",
+      "source_sha256": "f5a91af6b425906129da926ace92956127e807aa8bf3a538dbc49c6144bdab4e",
+      "destination": "verification/placement-drc.json",
+      "destination_sha256_at_import": "f5a91af6b425906129da926ace92956127e807aa8bf3a538dbc49c6144bdab4e",
+      "status": "byte-identical"
+    },
+    {
+      "source": "verification/routed-drc.json",
+      "source_sha256": "1e8edb629cc96b52deab28c0713952e4f40cad7c4716c90e78e9caca0df6d610",
+      "destination": "verification/routed-drc.json",
+      "destination_sha256_at_import": "1e8edb629cc96b52deab28c0713952e4f40cad7c4716c90e78e9caca0df6d610",
+      "status": "byte-identical"
+    },
+    {
+      "source": "verification/router.log",
+      "source_sha256": "d2cddeb870afa0cf423689c6fe4313e84689e4e97db05a6f24db6d9287b4e205",
+      "destination": "verification/router.log",
+      "destination_sha256_at_import": "984a0e79a35cad0a4defcc77383b2e70b3a38a181bc946d4d90853d3174fbe96",
+      "status": "public-context rewrite or metadata sanitization; technical scope retained"
+    }
+  ]
+}

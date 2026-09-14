@@ -1,0 +1,24 @@
+Hello,
+
+I'm developing a small personal prototype: a rechargeable, two-key mechanical-switch fidget with an eight-digit LCD click counter. Please provide a preliminary, itemized budget quotation for 5 and 10 fully assembled and programmed units, delivered to ZIP 20815, Maryland, USA, and confirm the sourcing/assembly points below.
+
+The design is in progress, so this is a feasibility and budget RFQ, not a manufacturing release or purchase authorization. Final Gerbers, BOM, placement data, assembly drawings, firmware and test instructions will follow once the mechanical parts and sourcing are confirmed.
+
+Provisional construction:
+- One approximately 42 x 40 mm FR-4 board per unit, 1.0 mm thick; quote 4 layers and identify savings if a 2-layer layout is feasible. Lead-free assembly, ENIG on programming/test pads, rounded outline.
+- TI MSP430FR4133IPM microcontroller (64-pin LQFP, integrated LCD controller and FRAM). Program and verify via accessible Spy-Bi-Wire test pads; quote fixture/NRE separately.
+- Display Elektronik DE 188-RU-30/7,5/V (3 VOLT), eight-digit reflective LCD, 34.9 x 13 mm glass. Please confirm exact orderable suffix, current availability, mechanical/pin drawing, hand/through-hole assembly, and controlled standoff/lead trimming. Do not substitute the 4 V version.
+- Two Cherry MX Blue MX1A-E1NW PCB-mount switches, soldered to the PCB; ordinary removable MX keycaps. Please confirm sourcing and the allowable PCB thickness/fixture requirements.
+- USB-C charging-only receptacle, TI BQ25185 charger with hardware-set 4.2 V / approximately 20 mA charge current and 100 mA USB input limit, battery-contact NTC, TPS7A02 3.0 V regulator, plus a separately reviewed battery protection circuit. Around 50 placements total is a planning estimate.
+- Preferred readily available cell option: genuine EEMB LIR2032, 45 mAh rechargeable lithium-ion coin cell. Need a factory-prepared insulated lead/connector assembly and thermistor contact, or a secure soldered holder arrangement that fits the final drawing. No soldering directly to a bare cell. As a lighter alternative, please identify whether a genuine VARTA CP1254 CoinPower assembly is available in these quantities and provide its exact cell/pack specification; its charging and protection circuit would be reviewed separately.
+
+The customer will only fit the supplied electronics/battery connection into a home-printed enclosure and press on keycaps. Please include all PCB soldering, LCD and switch installation, battery lead/connector work, firmware loading, and functional testing; explicitly list any exclusions. The enclosure itself is not part of this quote.
+
+Please itemize PCB fabrication, parts, sourcing/consignment charges, SMT and through-hole/hand assembly, programming fixture and per-unit programming, test costs, battery preparation, shipping/lithium-battery surcharges, taxes/duties if known, lead time and quote validity. If batteries cannot ship installed, please price the fully assembled board separately and explain the remaining plug-in battery step.
+
+Functional tests will cover increment/reset, sleep/wake (including counting the wake-up click), retained count after power removal, LCD segments, charge current/termination, thermal charge inhibit and battery protection. Please indicate which you can perform and any fixture cost.
+
+Please reply by email with feasibility, budget pricing where possible, and the exact additional files needed for a firm quotation.
+
+Thank you,
+Geoff Dudgeon

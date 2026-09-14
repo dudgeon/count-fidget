@@ -1,0 +1,19 @@
+Migration verification (not hardware qualification)
+Source import: 78 recovered files mapped; PCB/Gerber/firmware data retained.
+Current documentation links: PASS
+Known private-account and credential-pattern scan, including ZIP members: PASS
+
+verify_project.py
+PASS: original firmware hashes, valid HEXs and application/factory journal separation
+PASS: exact 46-ref PCB BOM/CPL match and separate offboard commercial scope
+PASS: retained DRC result and explicit unqualified/unreleased status (no fresh DRC run)
+PASS: Gerber archive equals all loose manufacturing files
+PASS: RFQ archive/manifest equals repository files, including corrected import BOMs
+Q1 remains a quotation prototype. Hardware tests and final enclosure remain outstanding.
+
+run_host_tests.py
+PASS: bounce, held-key no-repeat/sleep, wake click, reset priority, overflow, timer wrap
+PASS: blank memory, all 10 power-cut boundaries, CRC fallback, 100000 journal commits
+Host simulation only: target electrical, LCD, interrupt and brownout tests remain.
+PASS: DE188 zero, one, eight/all-digit segment mapping and digit order (host only)
+Host tests passed. Target electronics and physical qualification remain untested.
