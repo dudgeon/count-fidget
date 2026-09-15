@@ -1,4 +1,4 @@
-# Build, verify and preserve Q1
+# Build, verify and preserve the submitted Q1 baseline
 
 The first local-session task is website quoting. It needs the existing files, not a CAD/compiler installation. No Linux binaries or old scratch tool paths are required to upload them.
 
@@ -9,24 +9,31 @@ python3 scripts/verify_project.py
 python3 scripts/run_host_tests.py
 ```
 
-The first checks stored firmware hashes, Intel HEX integrity/journal separation, exact 46-ref BOM/CPL match, Gerber ZIP versus loose files, recorded DRC status and RFQ ZIP bytes against the repository. The second compiles/runs the existing counter/journal and LCD host tests using `CC` or an available `cc`, in a temporary directory. It requires a C compiler; it does not flash hardware.
+The first checks stored Q1 firmware hashes, Intel HEX integrity/journal separation, exact 46-ref BOM/CPL match, Gerber ZIP versus loose files, recorded DRC status and every frozen RFQ member against its manifest. It also validates Q2 source/header/build inputs and actual compiled outputs against the separate build manifest, compiled LCD register values, and application information-FRAM exclusion. Only the explicitly recorded `firmware/main_msp430.c` Q1/Q2 divergence is allowed; every other RFQ member must still match the working tree. The second compiles/runs the existing counter/journal and LCD host tests using `CC` or an available `cc`, in a temporary directory. It requires a C compiler; it does not flash hardware.
 
 Host tests exercise bounce, no repeat, wake click, reset priority, saturation, timer wrap, blank memory, CRC fallback, ten interrupted-journal word boundaries and 100,000 commits, plus LCD digit mapping. They do not cover analog brownout, pin mux, LCD optical/bias behavior, charging, protection or enclosure fit.
 
 ## RFQ packaging
 
-```sh
-python3 scripts/package_rfq.py
-python3 scripts/verify_project.py
-```
-
-This uses Python standard library only. It renders the public RFQ HTML and creates deterministic `dist/click-counter-Q1-RFQ.zip` plus checksum/member manifest. It does not regenerate Gerbers, reroute, recompile firmware, or claim a fresh DRC run. It includes the PCB-only BOM, full BOM, offboard BOM, import notes, source/HEX/checksums and drawings. Contact details come from the authenticated vendor account; do not commit personal contact information to customize the public package.
+**Do not run `scripts/package_rfq.py` while shared source is the Q2 candidate.** The submitted Q1 ZIP and its manifest are frozen; this branch intentionally has newer source. That legacy packager copies working sources and could combine Q2 source with Q1 HEX. A future coordinated Q2 engineering release needs its own package revision after hardware/firmware qualification. The current archive still includes its matching Q1 source, PCB-only/full/offboard BOMs, import notes, HEX/checksums and drawings. Contact details come from the authenticated vendor account.
 
 ## Target firmware
 
-Retained image target: MSP430FR4133IG48R. Original build used TI MSP430 GCC **9.3.1.11**, support files **1.212**, warnings as errors; original recorded size was 2238 text / 98 data / 68 BSS bytes. ELF/map/HEX and source remain included; original shell command history was not retained, so bit-identical rebuild is not claimed.
+Retained image target: MSP430FR4133IG48R. Original build used TI MSP430 GCC **9.3.1.11**, support files **1.212**, warnings as errors; size is 2238 text / 98 data / 68 BSS bytes. The original command history was not retained, but the controlled recipe documented in `review-lcd-firmware-Q2.md` reproduced the complete Q1 application HEX byte-for-byte on macOS. The full ELF file differs in non-load metadata. `LCD4MUX` includes `LCDSON` in the actual header: the alleged missing segment-enable/source drift was refuted.
 
-For a deliberate rebuild, obtain the official host-compatible TI toolchain/support package, compile `main_msp430.c`, `counter.c` and `lcd_de188.c` for `msp430fr4133` with the supplied device headers/linker script, then emit Intel HEX with the toolchain objcopy. Review optimization/linker/section settings and map, especially that application output does not initialize information FRAM `0x1800–0x181F`. Build into ignored `build/` first, compare, then intentionally promote reviewed artifacts and update the hash manifest. Do not install or invoke an old Linux executable on macOS.
+The current shared source is a **Q2 LCD verification candidate**, changing only the LCD clock divider to 8 (32 Hz nominal) and making the already implied `LCDSON` explicit. Q1 hardware is missing R13/R23/R33 reservoir capacitors; no software build clears that hold. Existing charger/protection, schematic/ERC, fit and first-article gates also remain open.
+
+Obtain the [official TI compiler](https://www.ti.com/tool/download/MSP430-GCC-OPENSOURCE), host-compatible **9.3.1.11**, and support **1.212**. Set paths to their installation roots, not their `bin`/`include` subdirectories:
+
+```sh
+python3 scripts/build_firmware.py --toolchain /path/to/msp430-gcc-9.3.1.11_macos --support /path/to/msp430-gcc-support-files
+python3 scripts/verify_project.py
+python3 scripts/run_host_tests.py
+```
+
+Default output is the separate `firmware/q2-lcd-check/` directory; use `--output /path/to/separate-directory` for a comparison build. The script compiles fixed source order with explicit `-mmcu=msp430fr4133 -std=c11 -Os -Wall -Wextra -Werror -ffunction-sections -fdata-sections` and links with `--gc-sections`. It records command argument arrays, hashes all source/header/build/verification inputs, resolved compiler dependencies, compiler tools and full toolchain/support trees. Temporary paths are normalized in the map/listing and recorded commands. The manifest records actual output hashes and the exact historical/new source hashes; no timestamps enter the build products.
+
+Validation is intentionally restricted to this exact candidate: it binds the frozen Q1 application HEX hash, requires the same loaded addresses and exactly `0xc53d: 0x18 -> 0x38`, and checks the compiled `lcd_start` instructions for `LCDCTL0=0x385d` and `LCDVCTL=0xf0a0`. It checks ELF/HEX load-byte equality using ELF program-header load addresses, and excludes information FRAM `0x1800–0x19FF`. A disassembly listing is retained for review. A later register override or any other loaded-byte change is rejected; future firmware changes require a separately reviewed recipe. Repeating this recipe produced identical Q2 ELF/HEX/map/listing/manifest files locally. That does not establish byte reproducibility across hosts, different toolchain builds or uncontrolled environments. These are build checks, not MCU execution, waveform, current or brownout tests. Do not flash or promote this candidate without a controlled hardware validation plan; never overwrite Q1 outputs or the factory initializer to perform a rebuild.
 
 `factory-display-info.hex` initializes a valid 88,888,888 journal only for factory display inspection. It is not a field update image. Program via an MSP-FET-compatible Spy-Bi-Wire fixture per the RFQ; leave security unlocked for prototype debugging and never backfeed target V3. Reset count to zero after factory tests. USB is charge-only.
 

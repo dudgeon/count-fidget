@@ -1,5 +1,7 @@
 # Quote comparison — awaiting vendor review
 
+**Engineering hold, 15 September 2026:** the submitted Q1 package needs LCD hardware/timing correction before final production prices. Both vendors have the hold notice and the correction refuting the initial source/binary allegation. Existing figures below are historical or budgetary only. JLCPCB reports no stocked alternative to the requested LCD and requires paid Global Sourcing preorder for DE188; no preorder is authorized. See `vendor-status.md` and `../docs/adversarial-review-Q2.md`.
+
 No complete values available at handoff. Fill this from actual vendor-reviewed evidence, with currency, quote number/date/expiry, quantity and explicit inclusions. A dash below means unquoted, not free. Use one column per vendor and quantity; add separately priced supported-scope alternatives if needed.
 
 | USD cost / scope | JLCPCB 5 | JLCPCB 10 | PCBWay 5 | PCBWay 10 |

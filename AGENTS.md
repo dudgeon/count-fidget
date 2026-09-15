@@ -12,6 +12,7 @@ Confirm the new session exposes the intended local browser. Use that session's s
 
 ## Engineering truthfulness
 
+- Q1 is on engineering hold after the 15 September independent review. Read `docs/adversarial-review-Q2.md` and linked audits before further engineering or final quotations. Preserve submitted Q1 archives/binaries as historical evidence; corrections belong in an identified revision. The alleged source/binary mismatch was refuted by exact TI rebuild: LCD4MUX includes LCDSON. The missing LCD capacitors remain a real hardware issue.
 - Q1 is a quotation prototype. Historical DRC is clear and firmware compiled; no board has been physically tested. There is no native schematic/ERC.
 - Retain the LCD, charger/thermal, protection and fit caveats in RFQs. Resolve release gates before manufacture/use.
 - Current MCU is **48-pin MSP430FR4133IG48R**. Rev0's 64-pin wiring, charging settings and compensation statements are obsolete.
@@ -19,6 +20,7 @@ Confirm the new session exposes the intended local browser. Use that session's s
 - `mechanical/` is an obsolete fit study, not Q1's finished enclosure.
 - USB charges only. Programming uses Spy-Bi-Wire; ordinary firmware updates must preserve the information-FRAM journal.
 - Do not overwrite routed PCB or approved HEXs just to get a quote. `electronics/build_pcb.py` generates an unrouted board and overwrites Q1 files; intentional rebuilds belong in a working branch.
+- Current shared firmware source is the separate Q2 LCD candidate. Do not run the Q1 RFQ packager against it: that would mix newer source with frozen Q1 binaries. Read `docs/build-and-verify.md`; future engineering packages need a coordinated revision.
 
 ## Repository maintenance
 

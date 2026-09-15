@@ -2,6 +2,16 @@
 
 You are continuing Geoff's Count Fidget project in `https://github.com/dudgeon/count-fidget`. Read `AGENTS.md` and `PROJECT.md`, then the product spec, user-research evidence, decisions, open issues and vendor ledger. Do not restart the design or ask Geoff to repeat the interview.
 
+## Current priority — independent engineering review
+
+The user supplied an adversarial review while display selection was under evaluation. Read `docs/adversarial-review-Q2.md` and the linked LCD/firmware, charger and protection audits first. Q1 is on engineering hold for missing LCD bias reservoir capacitors and frame-rate margin. Do not preserve the review's incorrect source/binary allegation: exact TI compilation reproduces Q1 application bytes because LCD4MUX includes LCDSON. The BQ25185 combined ILIM/VSET pin and resistor choices are correct. Other existing qualification gaps remain open.
+
+Vendor correspondence includes the engineering hold and an explicit retraction of the initially repeated source/binary claim. Retain the Q1 submission references below for sourcing; do not submit them as final production orders. The current work branch is `codex/q2-engineering-audit`; vendor/import/display-evaluation checkpoint `a8128ec` is pushed on main. Complete the controlled display/hardware decision and validation before reissuing a manufacturing package or seeking final production quotes.
+
+The separate `firmware/q2-lcd-check/` candidate implements divider 8 (32 Hz nominal); explicit LCDSON is clarity only. It changes one loaded byte from Q1. `scripts/build_firmware.py` and its manifest record and check sources, compiler/support, flags and outputs. Frozen Q1 binaries/manufacturing files/RFQ are unchanged. Read `docs/build-and-verify.md` before further builds; do not regenerate Q1 to make live main-source equality pass. No target has been flashed or physically qualified.
+
+Latest JLCPCB replies: about **02:07 UTC**, Mitchell identified stocked TPS7A0230PDBVR / C3747031 and suggested paid Global Sourcing preorder for DE188; about **02:15 UTC**, he said no alternative to the requested LCD was stocked. He directed follow-up to the existing colleague's email case, without returning a separate case ID. No substitution/preorder accepted. Corrected engineering statements were sent to both vendors around **02:17 UTC** (PCBWay exact **02:17:56 UTC**). Broader display research must not treat eight digits or 35 × 13 mm as hard requirements; OLED candidates also require a new current/protection budget.
+
 ## Latest local state — PCBWay updated 2026-09-15 01:47:22 UTC
 
 Local checkout opened and fetched; it matched `origin/main`. Integrity and host tests passed. Chrome native controls are usable, with occasional stale menus/IDs; the browser-tab connector fails with `codex app-server exited before returning initialize`. Refresh native accessibility state after user interaction or UI changes, and use supported screenshots/controls only. Geoff completed PCBWay sign-in; JLCPCB was already signed in. Do not repeat sign-in.

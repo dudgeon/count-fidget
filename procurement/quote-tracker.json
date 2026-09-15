@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-09-15",
-  "phase": "PCBWay remains Subject to audit; JLCPCB refuses full Q1 quote with non-stock parts included; stocked display alternatives under evaluation, no revision approved; complete quotes unavailable",
+  "phase": "Q1 engineering hold; separate 32 Hz Q2 firmware candidate, hardware/display revision pending; PCBWay submitted, JLCPCB declines complete non-stock-parts quote; no complete quotes",
   "quantities": [
     5,
     10
@@ -34,12 +34,12 @@
         "Functional-test review/pricing only after payment; exception declined",
         "Cannot quote order with non-stock parts included, per Mitchell Chen around 2026-09-15 02:02 UTC"
       ],
-      "next_action": "Preserve final adapter/CPL, required parts and saved Q1 draft. Follow requested case ID and stocked eight-digit 3 V passive LCD suggestions around 35 x 13 mm; evaluate low-power sourcing alternatives and redesign consequences at user request. No substitute/redesign approved. Do not repeat imports, accept DNP, pay to unlock quoting or silently substitute U3.",
+      "next_action": "Retain accepted adapter/CPL and all required parts. Follow existing Frank email case as Mitchell requested; no duplicate outreach or paid Global Sourcing. Complete controlled hardware/display/U3 review and reissue identified revision for final 5/10 scope. Battery/test-pricing exclusions still unresolved.",
       "website_submission_complete": false,
       "bom_cpl_imported": true,
       "bom_match_verified": false,
       "local_signed_in_verified": true,
-      "blocker": "Mitchell Chen stated around 2026-09-15 02:02 UTC that JLCPCB cannot quote an order including non-stock parts. Full required Q1 scope retained; no DNP. No formal quote/order or returned support case ID.",
+      "blocker": "Full Q1 quote refused for non-stock parts; no stocked alternative to requested LCD per representative, paid Global Sourcing suggested but unauthorized. Q1 engineering hold also requires reviewed revision.",
       "historical_partial_totals_usd": {
         "5": 134.83,
         "10": 157.82
@@ -202,8 +202,34 @@
         "support_case_id_requested": true,
         "support_case_id": null,
         "stocked_display_suggestions_requested": true,
-        "stocked_display_suggestions_pending": true
-      }
+        "stocked_display_suggestions_pending": false,
+        "display_reply_utc_approx": "2026-09-15 02:15 UTC",
+        "display_reply": "No alternative to the requested LCD in stock; DE188 may be preordered through Global Sourcing (suggested around 02:07 UTC); not an exhaustive all-display catalog conclusion",
+        "regulator_candidate": {
+          "mpn": "TPS7A0230PDBVR",
+          "catalog_code": "C3747031",
+          "representative_reports_in_stock": true,
+          "reply_utc_approx": "2026-09-15 02:07 UTC",
+          "selected_or_approved": false,
+          "review_required": "Active output discharge and FRAM/brownout behavior"
+        },
+        "follow_existing_email_case": true,
+        "colleague_followup_requested_by_representative": true
+      },
+      "engineering_hold": true,
+      "source_binary_allegation_retracted": true,
+      "engineering_messages": [
+        {
+          "sent_utc_approx": "2026-09-15 02:12 UTC",
+          "verified": true,
+          "purpose": "Engineering hold; initial message included subsequently refuted source/binary allegation"
+        },
+        {
+          "sent_utc_approx": "2026-09-15 02:17 UTC",
+          "verified": true,
+          "purpose": "Explicit retraction of source/binary allegation; retain LCD bias/timing engineering hold"
+        }
+      ]
     },
     {
       "name": "PCBWay",
@@ -222,10 +248,10 @@
       "complete_total_usd": null,
       "cloud_signed_in_verified": true,
       "q1_form_filled": true,
-      "blocker": "Awaiting vendor audit, exact sourcing/DFM review and full itemized 5/10-unit prices",
+      "blocker": "Vendor audit/full pricing pending; Q1 engineering hold requires reviewed revision before final production quote",
       "special_notes_accepted_by": "User, manually before file upload",
-      "quoted_review_time": "Representative stated 1\u20132 days after file receipt, not guaranteed",
-      "next_action": "Follow existing linked submission W914112AS1N4 / T-1N5W914112A and confirmed Remi site-message thread for vendor audit and complete separate 5/10-unit quotes; do not duplicate or check out. Preserve Count Fidget entries; Geoff authorizes removal of verified previous-project cart entries if any appear.",
+      "quoted_review_time": "Representative stated 1–2 days after file receipt, not guaranteed",
+      "next_action": "Preserve linked W914112AS1N4 / T-1N5W914112A and Remi correspondence for sourcing/budgetary review. Complete controlled hardware/display revision and validate package before requesting final itemized 5/10 quotes. No duplicate, checkout or paid procurement.",
       "local_signed_in_verified": true,
       "local_cart_before_draft": "No listings/zero orders observed; unrelated items unchanged",
       "local_cart_recheck": "Before Q1 submission, native Chrome cart refreshed: Cart 0; All Orders, Under Review and Awaiting Payment all 0; search fields empty; no listings. Nothing to remove; no deletion performed. Authorization to remove verified previous-project entries remains applicable if they appear later.",
@@ -291,7 +317,21 @@
         "sent_verified": true,
         "existing_submission_thread": true,
         "scope": "Readily sourced low-power numeric LCD as a separate alternative; exact MPN, stock, assembly cost, lead time and power tradeoff. Continue quoting uploaded Q1; no automatic replacement or manufacture."
-      }
+      },
+      "engineering_hold": true,
+      "source_binary_allegation_retracted": true,
+      "engineering_messages": [
+        {
+          "sent_utc": "2026-09-15T02:11:11Z",
+          "verified": true,
+          "purpose": "Engineering hold; initial message included subsequently refuted source/binary allegation"
+        },
+        {
+          "sent_utc": "2026-09-15T02:17:56Z",
+          "verified": true,
+          "purpose": "Explicit retraction of source/binary allegation following exact TI rebuild; retain LCD capacitor/frame-rate engineering hold"
+        }
+      ]
     }
   ],
   "import_correction": {
@@ -330,28 +370,55 @@
     "local_check": "Not found in inspected task list; local automation directory absent; original cloud conversation idle. Current schedule/run state still unknown."
   },
   "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md",
-  "snapshot_utc": "2026-09-15T01:47:22Z",
+  "snapshot_utc": "2026-09-15T02:29:57Z",
   "local_checks": {
-    "existing_checkout_matches_origin_main": true,
+    "existing_checkout_matches_origin_main": false,
     "package_integrity_passed": true,
     "host_tests_passed": true,
     "fresh_drc_run": false,
     "hardware_validated": false,
     "browser_native_access_verified": true,
     "browser_tab_connector": "Initialization failed",
-    "site_agreements_pending": []
+    "site_agreements_pending": [],
+    "branch_note": "Main contains vendor checkpoint a8128ec; current separate engineering branch is codex/q2-engineering-audit"
   },
   "display_evaluation": {
     "requested_by_user": true,
     "reason": "User asks whether a more readily sourced display would be preferable and notes original choice was arbitrary",
-    "state": "Evaluate stocked low-power alternatives and redesign consequences",
-    "vendor_suggestion_request": "Both vendors asked: JLCPCB for stocked eight-digit 3 V passive LCDs around 35 x 13 mm; PCBWay through Remi on 2026-09-15 02:04:31 UTC for a separately identified readily sourced low-power numeric LCD, exact MPN/stock/assembly cost/lead time/power tradeoff. Continue quoting uploaded Q1; no automatic replacement or manufacture.",
+    "state": "No qualified replacement selected; low-power reflective LCD preferred; OLED requires power/protection redesign review",
+    "vendor_suggestion_request": "Both vendors asked: JLCPCB for stocked eight-digit 3 V passive LCDs around 35 x 13 mm; PCBWay through Remi on 2026-09-15 02:04:31 UTC for a separately identified readily sourced low-power numeric LCD, exact MPN/stock/assembly cost/lead time/power tradeoff. Continue quoting uploaded Q1; no automatic replacement or manufacture. Subsequent engineering hold limits Q1 to budgetary sourcing; controlled correction required before final quotes.",
     "substitution_approved": false,
-    "redesign_approved": false,
     "submitted_q1_baseline_preserved": true,
     "vendors_asked": [
       "JLCPCB",
       "PCBWay"
-    ]
+    ],
+    "engineering_evaluation_authorized": true,
+    "stocked_passive_alternative_verified": false,
+    "latest_vendor_feedback": "JLCPCB at about 02:15 UTC reports no stocked alternative to the requested LCD and suggests paid Global Sourcing preorder for DE188; no purchase authorized",
+    "power_constraint": "Existing protection nominally trips near 30 mA; OLED example 23–29 mA needs full power-budget review"
+  },
+  "engineering_review": {
+    "document": "../docs/adversarial-review-Q2.md",
+    "branch": "codex/q2-engineering-audit",
+    "q1_hold": true,
+    "q1_manufacturing_and_binary_artifacts_preserved": true,
+    "confirmed": [
+      "Missing LCD bias reservoirs on U1 pins 7/8/9",
+      "LCD frame-rate tolerance exceeds recommended maximum",
+      "DE188 nominal row-center discrepancy",
+      "Existing enclosure fit-study geometry mismatches"
+    ],
+    "refuted": [
+      "Alleged firmware source/binary mismatch: exact Q1 HEX reproduced; LCD4MUX includes LCDSON",
+      "Suspected BQ25185 combined ILIM/VSET and ISET pin/resistor error"
+    ],
+    "additional_inferred_gap": "U5 monitor supply loss while pull-up remains powered can allow charge enable; requires fault review and test",
+    "candidate": "../firmware/q2-lcd-check/build-manifest.json",
+    "candidate_frame_hz": 32,
+    "hardware_revised": false,
+    "hardware_tested": false,
+    "fresh_drc_or_erc": false,
+    "revised_manufacturing_package_submitted": false
   }
 }

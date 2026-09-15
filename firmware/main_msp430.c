@@ -1,6 +1,6 @@
-/* Q1 engineering prototype firmware, MSP430FR4133IG48R (48 pin).
- * This image is compiled for quoting/programming preparation. Hardware and LCD
- * bias/temperature qualification are still required before production release.
+/* Q2 LCD verification candidate, MSP430FR4133IG48R (48 pin).
+ * The submitted Q1 images remain frozen. This candidate requires corrected LCD
+ * bias hardware and waveform/temperature qualification before any release.
  */
 #include <msp430.h>
 #include <stdint.h>
@@ -52,10 +52,12 @@ static void lcd_start(void) {
     LCDCSSEL0=0x000FU;LCDCSSEL1=0;LCDCSSEL2=0;
     LCDMEMCTL=LCDCLRM|LCDCLRBM;
     LCDM0=0x21;LCDM1=0x84; /* one-hot COM assignments */
-    /* SLAU445I mode 2: VDD=3.0 V, internal 1/3 bias, 100 nF pump.
-     * REFO 32768 / 4 / 16 / (2*4) = 64 Hz frame rate. */
+    /* SLAU445I mode 2: VDD=3.0 V, internal 1/3 bias; requires the pump
+     * capacitor AND 100 nF reservoirs at R13/R23/R33 (missing on Q1 PCB).
+     * REFO 32768 / 8 / 16 / (2*4) = 32 Hz nominal frame rate.
+     * LCD4MUX already includes LCDSON in TI support 1.212; explicit for clarity. */
     LCDVCTL=LCDSELVDD|LCDCPEN|(LCDCPFSEL0|LCDCPFSEL1|LCDCPFSEL2|LCDCPFSEL3);
-    LCDCTL0=LCDSSEL__ACLK|LCDDIV__4|LCD4MUX|LCDON;
+    LCDCTL0=LCDSSEL__ACLK|LCDDIV__8|LCD4MUX|LCDON|LCDSON;
     display_on=true;
 }
 static void lcd_stop(void) {
