@@ -1,0 +1,2 @@
+(fp_lib_table (version 7)
+(lib (name "ClickCounterQ2") (type "KiCad") (uri "${KIPRJMOD}/ClickCounterQ2.pretty") (options "") (descr "Reviewed Q2 display and TI DGK land patterns")))

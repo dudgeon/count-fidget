@@ -4,6 +4,7 @@ import csv
 import hashlib
 import json
 import zipfile
+from build_firmware import verify_manifest
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -89,6 +90,8 @@ def main():
     print("PASS: Gerber archive equals all loose manufacturing files")
 
     manifest = json.loads((ROOT / "dist/manifest.json").read_text())
+    q2 = verify_manifest(ROOT)
+    divergences = q2["frozen_q1_divergences"]
     archive_path = ROOT / "dist" / manifest["file"]
     assert archive_path.stat().st_size == manifest["bytes"]
     assert sha(archive_path.read_bytes()) == manifest["sha256"]
@@ -98,9 +101,15 @@ def main():
         assert set(archive.namelist()) == set(manifest["members"])
         for name, item in manifest["members"].items():
             data = archive.read(name)
-            assert data == (ROOT / name).read_bytes(), f"Stale RFQ member: {name}"
             assert len(data) == item["bytes"] and sha(data) == item["sha256"]
-    print("PASS: RFQ archive/manifest equals repository files, including corrected import BOMs")
+            if name in divergences:
+                assert sha(data) == divergences[name]["q1_sha256"]
+                assert sha((ROOT / name).read_bytes()) == divergences[name]["q2_sha256"]
+            else:
+                assert data == (ROOT / name).read_bytes(), f"Stale RFQ member: {name}"
+    print("PASS: frozen Q1 RFQ archive/manifest and all unchanged repository members")
+    print("NOTICE: firmware/main_msp430.c is the separately compiled Q2 LCD candidate; Q1 ZIP retains Q1 source")
+    print("PASS: Q2 source/header/build inputs and outputs match build manifest; target registers and info-FRAM exclusion verified")
     print("Q1 remains a quotation prototype. Hardware tests and final enclosure remain outstanding.")
 
 

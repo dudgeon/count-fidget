@@ -1,0 +1,215 @@
+(footprint "Package_SON_WSON-6_1.5x1.5mm_P0.5mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "WSON6, http://www.ti.com/lit/ds/symlink/tlv702.pdf")
+	(tags "WSON6_1.5x1.5mm_P0.5mm")
+	(property "Reference" "U4"
+		(at 0 -2 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "5261bfb9-981a-47c0-8b33-4b0b9c879818")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Cell protector"
+		(at 0 2 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1af08094-f7f4-48a3-8ea0-56b427817d23")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6353251c-21ac-4a88-9457-0ead280239f6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "57a9cb65-aacc-4dd9-8287-a2454a5e210e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.2 1.02)
+		(end -1.2 -1.02)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "46e501dc-12cc-4d6f-9b96-95d3cafbaaa4")
+	)
+	(fp_line
+		(start -1.2 1.02)
+		(end 1.2 1.02)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "24f8f43a-b35e-417f-8a15-b584b883b04e")
+	)
+	(fp_line
+		(start 1.2 -1.02)
+		(end -1.2 -1.02)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8a5c8955-13ea-49f2-b900-f1eecaf7b899")
+	)
+	(fp_line
+		(start 1.2 -1.02)
+		(end 1.2 1.02)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e646c4f3-0679-46fc-b23a-fbc412a44c11")
+	)
+	(fp_line
+		(start -0.775 -0.5)
+		(end -0.775 0.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d91ddd8f-4b79-42ef-a4d9-98af16b82bbe")
+	)
+	(fp_line
+		(start -0.775 0.78)
+		(end 0.785 0.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "49b52ab3-3400-4ce4-913b-aa0730f73f28")
+	)
+	(fp_line
+		(start -0.495 -0.78)
+		(end -0.775 -0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b11f2f1f-6c36-4fd0-8144-35357646e8ef")
+	)
+	(fp_line
+		(start 0.785 -0.78)
+		(end -0.495 -0.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a30bf1f3-0303-4f78-8031-306b0ced70bf")
+	)
+	(fp_line
+		(start 0.785 -0.78)
+		(end 0.785 0.78)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "70e09624-08f8-4903-9e0e-6b4408b79e2f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.005 0 180)
+		(layer "F.Fab")
+		(uuid "252e8df3-056a-473d-99dd-6308a721b910")
+		(effects
+			(font
+				(size 0.4 0.4)
+				(thickness 0.05)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.525 -0.5 270)
+		(size 0.28 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "e66c5faf-7fec-4bdd-befd-5bc8050f87f6")
+	)
+	(pad "2" smd roundrect
+		(at -0.575 0 270)
+		(size 0.28 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "9d81fccb-7aba-4549-9ce8-51139693d828")
+	)
+	(pad "3" smd roundrect
+		(at -0.575 0.5 270)
+		(size 0.28 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "e8136c98-2e2d-4776-8b3f-1d7f9926b25a")
+	)
+	(pad "4" smd roundrect
+		(at 0.575 0.5 270)
+		(size 0.28 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "a3d013cf-7b2d-40e7-a1f6-355987f11acc")
+	)
+	(pad "5" smd roundrect
+		(at 0.575 0 270)
+		(size 0.28 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "b8bcb51a-4921-4289-9643-bc6d471b7a0b")
+	)
+	(pad "6" smd roundrect
+		(at 0.575 -0.5 270)
+		(size 0.28 0.75)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "2bcdbb73-1aa3-494c-806e-68f70f255047")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/WSON-6_1.5x1.5mm_P0.5mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
