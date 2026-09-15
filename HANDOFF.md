@@ -6,7 +6,8 @@ Continue [dudgeon/count-fidget](https://github.com/dudgeon/count-fidget) without
 
 - Branch: `codex/q2-engineering-audit`; [draft PR #1](https://github.com/dudgeon/count-fidget/pull/1). Main's vendor checkpoint is `a8128ec`; the first audit/firmware checkpoint is `fe9aa6b`.
 - The user said “What's next? Keep pushing forward.” Separate Q2 hardware/schematic/enclosure correction and quote files are complete and checked. Do not return to a requirements interview or merely restate the audit.
-- Engineering, reversible fixes, quote preparation, website submissions and the established vendor correspondence are authorized. Obtain a **concrete approved order before money, chargeable part preorder or manufacture**. Quantities remain 5 and 10 separately.
+- Engineering, reversible fixes, quote preparation, website submissions and the established vendor correspondence are authorized. **The user explicitly approved sharing the finished Q2 package/technical follow-up with both vendors on 15 September 2026.** Obtain a **concrete approved order before money, chargeable part preorder or manufacture**. Quantities remain 5 and 10 separately.
+- The user requires choosing email or portal correspondence, not both. The selected channel is **email only for both vendors**: Remi's explicit request and Mitchell's referral to the existing Frank email case support that choice. Portals are only for required file imports/forms; no portal chats or duplicate correspondence messages.
 - The original Q1 board/firmware/BOM/CPL/Gerber/RFQ files are historical evidence. Do not run their destructive builders or the Q1 RFQ packager against the current Q2 firmware source.
 
 ## Engineering facts
@@ -48,17 +49,19 @@ The saved Q1 draft and late chat were freshly inspected after access was restore
 
 Q2 U3 identity is resolved, while exact TLV7032DGKR also has no verified JLC stock. External sourcing leads are in the Q2 documents; stock observations are not allocations. Display replacement alone does not produce a complete delivered JLC quote. Historical134.83/5 and157.82/10 were incomplete and included an incorrectoldSW2match.
 
-## Restored local access and pending specific email approval
+## Restored local access and approved Q2 sharing
 
 **Native Chrome access is restored**, and the PCBWay/JLCPCB pages and replies above were freshly verified; PCBWay counters were checked at **2026-09-15 10:36 UTC**. The continuation initially encountered a locked Mac, failed automatic unlock and unavailable app/browser surfaces; a separate browser connector also failed initialization. Those are historical observations, not the current native-access blocker. Use fresh supported UI state. Earlier sign-in and both site-agreement acceptances were completed by Geoff; do not ask for them again without evidence.
 
-A concrete Q2 pad-pattern/file-replacement email was prepared for Remi. **Automatic approval review rejected sending it**, stating that unpublished revised design details require specific user approval despite established quote authorization. The email was not sent. A focused approval question now covers sharing the finished Q2 package and technical follow-up with both existing vendor cases; exact original email draft is ignored `private/pcbway-q2-reply.txt`. Do not retry by another channel without the required approval. Continue unaffected engineering work.
+The user has now **explicitly approved sharing the finished Q2 package and technical follow-up with both existing vendor cases**. Earlier, automatic approval review rejected the prepared Remi pad-pattern/file-replacement email because specific disclosure approval was missing; that attempt was not sent. The approval blocker is resolved. The original local draft remains ignored under `private/pcbway-q2-reply.txt`; it is not delivery evidence. Both Q2 dispatches are verified in Gmail Sent on **2026-09-15**: PCBWay at **11:12:50 UTC** in the existing Remi engineering-question thread for W914112AS1N4, and JLCPCB at **11:17:46 UTC** in the existing Frank Budget RFQ email case. Neither vendor has acknowledged Q2 or accepted Q2 portal files.
+
+At **2026-09-15 11:06:51 UTC**, the latest four vendor emails were reread before choosing the channel. No email was newer than Remi's **2026-09-15 03:23:59 UTC** email-only reply or Frank's **2026-09-14 21:23:46 UTC** rough quote/import reply. Continue **email-only correspondence** with those existing cases; reserve portals for required upload/form workflow.
 
 The user also authorizes removing verified previous-project PCBWay cart items; preserve CountFidget. Last pre-submission cart wasempty and no deletion occurred. No complete quotes have been received. No money or manufacture.
 
 ## Finish the work
 
-The coordinated Q2 files are now complete: fresh native ERC/DRC/connectivity/parity all zero; 62 refs/50 fitted/195 connected pins/28 NC agree; 21 negative checks rejected; 50-ref BOM/CPL and exported Gerbers checked; three valid/manifold enclosure print parts with zero modeled intersections. The SW2 thermal issue and Q4 via-to-pad overlap were corrected; final board SHA256 is `c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867`. The website response has been read and native access is available. After specific Q2 email approval, reissue reviewed Q2 files under existing vendor references as directed and obtain complete itemized 5/10 quotes. Published service rates do not fill the missing hours/scope/landed totals. Unsupported lines need explicit exclusions and a priced completion plan. Present a concrete order/first-article scope for Geoff's approval before spending.
+The coordinated Q2 files are now complete: fresh native ERC/DRC/connectivity/parity all zero; 62 refs/50 fitted/195 connected pins/28 NC agree; 21 negative checks rejected; 50-ref BOM/CPL and exported Gerbers checked; three valid/manifold enclosure print parts with zero modeled intersections. The SW2 thermal issue and Q4 via-to-pad overlap were corrected; final board SHA256 is `c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867`. The website response has been read and native access is available. Both Q2 email dispatches are verified; follow vendor replies by email in the existing Remi and Frank cases. Use portals only for required import/form workflow under existing references, then obtain complete itemized 5/10 quotes. Published service rates do not fill the missing hours/scope/landed totals. Unsupported lines need explicit exclusions and a priced completion plan. Present a concrete order/first-article scope for Geoff's approval before spending.
 
 Update `PROJECT.md`, vendor ledger, structured tracker and open issues; commit/push project work to the existing draft PR when appropriate. This is a public repo: never commit private draft IDs/URLs, mail IDs, credentials, personal account details or private email images. The historical cloud follow-up was scheduled September15at18:35:03UTC; its current status remains unverified. Do not claim continuous background work or create a duplicate schedule.
 
@@ -66,4 +69,29 @@ Latest cart read at **10:48:59 UTC**: PCB **Awaiting reply**, assembly **Being r
 
 ## Finished Q2 quote artifact
 
-`dist/q2/click-counter-Q2-RFQ.zip`: 1,930,577 bytes, 124 files, SHA256 `29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438`. `dist/q2/manifest-Q2.json` binds each member; `procurement/q2/export-manifest-Q2.json` binds native exports. ZIP CRC and every member hash passed. This package is prepared locally, not submitted or accepted. Recheck current evidence before changing it.
+Ready at commit `c1240b9`. `dist/q2/click-counter-Q2-RFQ.zip`: 1,930,577 bytes, 124 files, SHA256 `29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438`. `dist/q2/manifest-Q2.json` binds each member; `procurement/q2/export-manifest-Q2.json` binds native exports. ZIP CRC and every member hash passed. This package is complete and approved for sharing. Both email dispatches are verified; Q2 portal submission and vendor acknowledgment are still pending. Recheck current evidence before changing it.
+
+
+## Verified Q2 Sent-mail records
+
+**PCBWay — 2026-09-15 11:12:50 UTC:** Gmail Sent confirms dispatch to Remi in the existing W914112AS1N4 engineering-question thread. Four attachment filenames and byte sizes were verified:
+
+| Attachment | Bytes |
+|---|---:|
+| click-counter-Q2-RFQ.zip | 1,930,577 |
+| click-counter-Q2-Gerbers.zip | 87,741 |
+| BOM-PCBA-Q2.csv | 7,017 |
+| placements-KiCad-Q2.csv | 4,389 |
+
+The email confirms email-only correspondence; requests exact U5 pattern/process acceptance, association of all four files with the existing case and instructions for required portal replacement; asks for complete separate 5/10-unit RFQ prices and hours/scope behind the $75 plus $10/hour test rates. It retains all physical gates and prohibits charges, paid parts procurement or manufacture without a concrete approved order. No combined opening was approved. Dispatch is not vendor acknowledgment, Q2 portal acceptance or a complete quote.
+
+**JLCPCB — 2026-09-15 11:17:46 UTC:** Gmail Sent confirms dispatch in the existing Frank Budget RFQ email case. Four attachment filenames and byte sizes were verified:
+
+| Attachment | Bytes |
+|---|---:|
+| click-counter-Q2-RFQ.zip | 1,930,577 |
+| click-counter-Q2-Gerbers.zip | 87,741 |
+| BOM-JLCPCB-Q2.csv | 8,006 |
+| CPL-JLCPCB-Q2.csv | 2,295 |
+
+Continue this email case for Q2 review and complete separate 5/10 quotes. No Q2 acknowledgment, portal replacement/import acceptance, complete quote, paid preorder or manufacturing release is established. Portals remain limited to required file imports/forms, with no duplicate portal correspondence.

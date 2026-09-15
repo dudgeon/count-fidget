@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-09-15",
-  "phase": "Q2 engineering candidate verified and packaged; Q1 engineering hold preserved; specific Q2 disclosure approval pending; no complete vendor quotes",
+  "phase": "Q2 verified package emailed to both existing vendor cases with four verified attachments each; email-only correspondence; acknowledgments/portal acceptance/full quotes pending",
   "quantities": [
     5,
     10
@@ -34,7 +34,7 @@
         "Functional-test review/pricing only after payment; exception declined",
         "Cannot quote order with non-stock parts included, per Mitchell Chen around 2026-09-15 02:02 UTC"
       ],
-      "next_action": "Preserve Q1 draft/full scope and follow existing Frank email case. Q2 U3 identity resolved; DE188/U5 and other shortages still need priced supported paths. Clarify programming/testing hours/scope and excluded battery completion without paid order or preorder.",
+      "next_action": "Follow existing Frank email case for Q2 acknowledgment, priced sourcing/test scope and excluded battery completion; use portal only for required Q2 file/form replacement. No payment, DNP or duplicate portal correspondence.",
       "website_submission_complete": false,
       "bom_cpl_imported": true,
       "bom_match_verified": false,
@@ -255,6 +255,42 @@
         "complete_quote_received": false,
         "verified_date": "2026-09-15",
         "verification_time_note": "Fresh continuation read after native access restored; exact observation time not separately recorded"
+      },
+      "correspondence_channel": "email",
+      "q2_email_sent": true,
+      "q2_sharing_approved": true,
+      "q2_email": {
+        "sent_utc": "2026-09-15T11:17:46Z",
+        "recipient_rep": "Frank Chen",
+        "existing_thread_context": "Budget RFQ email case",
+        "dispatch_verified": true,
+        "evidence": "Gmail SENT search and all four attachment filenames/byte sizes verified",
+        "attachments": [
+          {
+            "filename": "click-counter-Q2-RFQ.zip",
+            "bytes": 1930577,
+            "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438"
+          },
+          {
+            "filename": "click-counter-Q2-Gerbers.zip",
+            "bytes": 87741,
+            "sha256": "ce9faa396e9178dc2fcefb0b02d0e083b0a82e53b5bc393b019dff1d1d61b3f0"
+          },
+          {
+            "filename": "BOM-JLCPCB-Q2.csv",
+            "bytes": 8006,
+            "sha256": "b51803b612ec3b8aa883b989d908776650009a0bc0f2206158b79746bcb68dde"
+          },
+          {
+            "filename": "CPL-JLCPCB-Q2.csv",
+            "bytes": 2295,
+            "sha256": "a57bf21c9b9a3e75c57e50273bc751b639a753518884ffb40584dbf888d36280"
+          }
+        ],
+        "scope": "Finished Q2 RFQ review/quotation in existing email case; complete separate5/10 scope with engineering gates; no paid preorder/order/manufacture",
+        "vendor_acknowledged": false,
+        "q2_portal_accepted": false,
+        "complete_quote_received": false
       }
     },
     {
@@ -277,7 +313,7 @@
       "blocker": "Vendor audit/full pricing pending; Q1 engineering hold requires reviewed revision before final production quote",
       "special_notes_accepted_by": "User, manually before file upload",
       "quoted_review_time": "Representative stated 1\u20132 days after file receipt, not guaranteed",
-      "next_action": "After specific Q2 email approval, send the held technical reply by email only. Replace reviewed files under existing references only after vendor instructions; obtain complete separate 5/10 prices including test hours/scope and landed charges.",
+      "next_action": "Follow existing Remi email case for acknowledgment, exact U5 process acceptance, full separate5/10 pricing/test scope, and instructions for required portal file replacement. No duplicate portal correspondence or paid procurement.",
       "local_signed_in_verified": true,
       "local_cart_before_draft": "No listings/zero orders observed; unrelated items unchanged",
       "local_cart_recheck": "Before Q1 submission, native Chrome cart refreshed: Cart 0; All Orders, Under Review and Awaiting Payment all 0; search fields empty; no listings. Nothing to remove; no deletion performed. Authorization to remove verified previous-project entries remains applicable if they appear later.",
@@ -330,13 +366,16 @@
         "excludes": "Parts, full additional scope, customs duties and VAT; shipping discount not a landed lithium quote"
       },
       "latest_recheck": {
-        "utc": "2026-09-15T10:36:00Z",
+        "utc": "2026-09-15T10:48:59Z",
         "evidence": "Fresh supported native Chrome inspection",
         "under_review": 2,
         "awaiting_payment": 0,
         "production": 0,
         "complete_quote_received": false,
-        "uploaded_revision": "Q1"
+        "uploaded_revision": "Q1",
+        "pcb_status": "Awaiting reply",
+        "assembly_status": "Being reviewed",
+        "all_four_q1_filenames_present": true
       },
       "display_options_message": {
         "recipient": "Remi",
@@ -407,6 +446,43 @@
         "all_four_Q1_files_present": true,
         "complete_quote": false,
         "unrelated_cart_items_observed": false
+      },
+      "correspondence_channel": "email",
+      "q2_email_sent": true,
+      "q2_sharing_approved": true,
+      "q2_email": {
+        "sent_utc": "2026-09-15T11:12:50Z",
+        "recipient_rep": "Remi",
+        "existing_case": "W914112AS1N4 / T-1N5W914112A",
+        "existing_thread_context": "Engineering question for W914112AS1N4",
+        "dispatch_verified": true,
+        "evidence": "Gmail SENT and all four attachment filenames/byte sizes verified",
+        "attachments": [
+          {
+            "filename": "click-counter-Q2-RFQ.zip",
+            "bytes": 1930577,
+            "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438"
+          },
+          {
+            "filename": "click-counter-Q2-Gerbers.zip",
+            "bytes": 87741,
+            "sha256": "ce9faa396e9178dc2fcefb0b02d0e083b0a82e53b5bc393b019dff1d1d61b3f0"
+          },
+          {
+            "filename": "BOM-PCBA-Q2.csv",
+            "bytes": 7017,
+            "sha256": "5f83204edfb3f961b5e65507c9161a7d43487057f6ac0c48e3def5324811a0ef"
+          },
+          {
+            "filename": "placements-KiCad-Q2.csv",
+            "bytes": 4389,
+            "sha256": "4fa79f094e8737dfc3c5e9d294cb7f670affb7a17e98b163992d73e219352f53"
+          }
+        ],
+        "scope": "Email-only; exact U5 pattern/process acceptance, associate all four files with existing case/how to replace portal files; complete separate5/10 full-RFQ prices and test hours/scope behind75USD plus10USD/hour; all physical gates/no charges/paid parts/manufacture",
+        "vendor_acknowledged": false,
+        "q2_portal_accepted": false,
+        "complete_quote_received": false
       }
     }
   ],
@@ -436,7 +512,7 @@
       "sha256": "724e8561cdf35d701c3b65d125a6b082fcedce1af7ca87d215ec258098cf6363"
     }
   ],
-  "current_package_manifest": "../dist/manifest.json",
+  "current_package_manifest": "../dist/q2/manifest-Q2.json",
   "cloud_followup": {
     "title": "Click-counter vendor quotes",
     "scheduled_utc": "2026-09-15T18:35:03Z",
@@ -446,7 +522,7 @@
     "local_check": "Not found in inspected task list; local automation directory absent; original cloud conversation idle. Current schedule/run state still unknown."
   },
   "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md",
-  "snapshot_utc": "2026-09-15T10:45:18Z",
+  "snapshot_utc": "2026-09-15T11:19:40Z",
   "local_checks": {
     "existing_checkout_matches_origin_main": false,
     "package_integrity_passed": true,
@@ -499,10 +575,15 @@
     "hardware_revised": true,
     "hardware_tested": false,
     "fresh_drc_or_erc": true,
-    "revised_manufacturing_package_submitted": false,
+    "revised_manufacturing_package_submitted": true,
     "hardware_revision_note": "Separate Q2 native board/schematic/firmware/enclosure/50-ref quote exports verified and packaged; physical qualification open; Q1 preserved",
-    "final_native_validation_complete": false,
-    "latest_layout_issue": "One SW2 thermal-relief issue under correction; no final clean package claim"
+    "final_native_validation_complete": true,
+    "latest_layout_issue": null,
+    "resolved_layout_issues": [
+      "SW2 thermal-relief island corrected with pad-specific solid GND connection",
+      "Q4 same-net via/land overlap corrected; final native DRC/connectivity/parity clear"
+    ],
+    "submission_note": "Q2 sent to both existing vendor cases by email for quotation/review only; Q2 portal replacement/acceptance pending; no manufacturing release"
   },
   "browser_current": {
     "available": true,
@@ -515,11 +596,29 @@
     "separate_browser_connector": "Initialization failed earlier; recovery not established or needed for verified native access"
   },
   "q2_outreach": {
-    "sent": false,
-    "approval_pending": true,
-    "reason": "Automatic approval review requires specific approval to disclose revised Q2 engineering details to PCBWay",
+    "sent": true,
+    "approval_pending": false,
+    "reason": "User explicitly approved sharing the finished Q2 package and technical follow-up with both existing vendor cases",
     "scope": "TI U5 pad pattern, separate mask-opening confirmation and replacing files under existing quote references; no spend/manufacture",
-    "approval_scope": "Finished Q2 quote package and technical follow-up to PCBWay Remi and existing JLCPCB Frank case; quote/review only; no paid sourcing/order/manufacture"
+    "approval_scope": "Finished Q2 quote package and technical follow-up to PCBWay Remi and existing JLCPCB Frank case; quote/review only; no paid sourcing/order/manufacture",
+    "approved_by_user": true,
+    "approval_date": "2026-09-15",
+    "correspondence_channel": "email",
+    "portal_correspondence_allowed": false,
+    "portal_use": "Required file imports and form workflow only",
+    "delivery_state": "Both dispatches verified in Gmail SENT: PCBWay2026-09-15 11:12:50UTC and JLCPCB11:17:46UTC; vendor acknowledgments and Q2 portal acceptance pending",
+    "historical_approval_review": {
+      "rejected": true,
+      "sent": false,
+      "reason": "The earlier prepared PCBWay pad-pattern/file-replacement email was rejected because specific disclosure approval was missing",
+      "resolved": true,
+      "resolution": "User subsequently explicitly approved finished Q2 sharing and technical follow-up to both vendors on 2026-09-15"
+    },
+    "vendors_sent": [
+      "PCBWay",
+      "JLCPCB"
+    ],
+    "all_requested_vendors_sent": true
   },
   "latest_website_observation_utc": "2026-09-15T10:48:59Z",
   "browser_access_history": [
@@ -545,6 +644,34 @@
     "unconnected_items": 0,
     "schematic_parity_findings": 0,
     "fitted_pcb_parts": 50,
-    "hardware_tested": false
-  }
+    "hardware_tested": false,
+    "ready_commit": "c1240b9",
+    "sharing_approved": true,
+    "email_sent": true,
+    "manifest": "../dist/q2/manifest-Q2.json",
+    "email_recipients_verified": [
+      "PCBWay",
+      "JLCPCB"
+    ]
+  },
+  "correspondence_policy": {
+    "selected_channel": "email",
+    "vendors": [
+      "PCBWay",
+      "JLCPCB"
+    ],
+    "basis": "User said check latest vendor emails and choose email or portal correspondence, not both; Remi requested email only and Mitchell referred back to existing Frank email case",
+    "portal_correspondence": false,
+    "portal_file_imports_and_forms": true
+  },
+  "latest_email_recheck": {
+    "date": "2026-09-15",
+    "latest_messages_reread": 4,
+    "newer_vendor_email_found": false,
+    "latest_pcbway_email_utc": "2026-09-15T03:23:59Z",
+    "latest_jlcpcb_frank_email_utc": "2026-09-14T21:23:46Z",
+    "result": "No new email beyond Remi email-only reply and Frank rough quote/import issues",
+    "checked_utc": "2026-09-15T11:06:51Z"
+  },
+  "submitted_q1_package_manifest": "../dist/manifest.json"
 }
