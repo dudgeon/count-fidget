@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-09-14",
-  "phase": "local-session handoff; website uploads unconfirmed",
+  "snapshot_date": "2026-09-15",
+  "phase": "local website drafts; site agreement confirmations pending; complete submissions and full quotes unfinished",
   "quantities": [
     5,
     10
@@ -20,19 +20,73 @@
       "sent_attachment_bytes": 275486,
       "package_acknowledged": true,
       "acknowledgement_utc": "2026-09-14T21:23:46Z",
-      "website_uploaded": false,
+      "website_uploaded": true,
       "submission_number": null,
       "complete_total_usd": null,
       "feedback": [
-        "Offboard items missing from CPL flagged; PCB-only BOM correction prepared locally",
-        "Stock shortages and unmatched parts require exact line review",
-        "Rough 5-piece quotation excludes missing/shortfall/unmatched parts; embedded price images not read"
+        "Original images read locally; BAT1/K1/K2 are offboard and need no CPL",
+        "Historical SW2 matched incorrectly to E-Switch TL1220S1BBSG-RESET C5798268 with 5 shortfall; correct to Cherry MX1A-E1NW",
+        "Historical unmatched D1,DS1,J1,J2,Q1,Q2,Q3,SW1,U2,U3,U4,U5 require exact matching and current stock/MOQ review",
+        "Historical rough 5/10 estimates exclude missing, shortfall and unmatched lines; full delivered scope unquoted"
       ],
       "exclusions": [
         "Battery assembly unsupported",
         "Functional-test review/pricing only after payment; exception declined"
       ],
-      "next_action": "Website upload corrected PCB BOM/CPL/Gerbers, manual matching, attach full RFQ and clarify exclusions"
+      "next_action": "After site-terms confirmation, continue existing draft to PCB-only BOM/CPL import, exact matching and final submission; preserve attached RFQ/test scope and no-auto-confirm settings",
+      "website_submission_complete": false,
+      "bom_cpl_imported": false,
+      "local_signed_in_verified": true,
+      "blocker": "Assembly-service terms confirmation pending before Next and PCB-only BOM/CPL import",
+      "historical_partial_totals_usd": {
+        "5": 134.83,
+        "10": 157.82
+      },
+      "accepted_uploads": [
+        {
+          "filename": "click-counter-Q1-Gerbers.zip",
+          "bytes": 85741,
+          "sha256": "f5e88b602ae17b81dd4745eb1f1715504f1baafe69ee0a844f275cde5b0be212",
+          "field": "Gerbers",
+          "evidence": "Chooser filename verified; processing completed; detected 4 layers, 42 x 40 mm",
+          "verified_by_utc": "2026-09-15T00:59:30Z"
+        },
+        {
+          "filename": "click-counter-Q1-RFQ.zip",
+          "bytes": 278870,
+          "sha256": "79f633ba625e66e39d76e7fbf77db87a0d13eb99414107857d6a8c11ef63616d",
+          "fields": [
+            "Assembly remark attachment",
+            "Function test attachment"
+          ],
+          "evidence": "Filename visible in both fields; assembly remark saved",
+          "verified_by_utc": "2026-09-15T00:59:30Z"
+        }
+      ],
+      "local_form": {
+        "pcb_qty": 5,
+        "pcba_qty": 5,
+        "alternative_qty_requested": 10,
+        "finished_outline_mm": [
+          42,
+          40
+        ],
+        "handling_panel_mm": [
+          70,
+          70
+        ],
+        "thickness_mm": 1.0,
+        "material": "S1000H TG155",
+        "finish": "ENIG nominal 1 microinch",
+        "outer_copper_oz": 1,
+        "inner_copper_oz": 0.5,
+        "assembly": "Standard, both sides",
+        "depanel_before_delivery": true,
+        "function_test_requested": true,
+        "production_file_auto_confirmation": false,
+        "placement_auto_confirmation": false,
+        "terms_accepted": false
+      }
     },
     {
       "name": "PCBWay",
@@ -46,9 +100,25 @@
       "complete_total_usd": null,
       "cloud_signed_in_verified": true,
       "q1_form_filled": true,
-      "blocker": "Calculate timed out, then global browser controller refresh-tabs timeouts; no upload confirmation",
-      "quoted_review_time": "Representative stated 1–2 days after file receipt, not guaranteed",
-      "next_action": "Inspect existing account for Q1 draft and submit complete 5/10 RFQ; do not alter unrelated cart items"
+      "blocker": "Special Notes agreement confirmation pending after Save to Cart, before file upload",
+      "quoted_review_time": "Representative stated 1\u20132 days after file receipt, not guaranteed",
+      "next_action": "After Special Notes confirmation, continue existing calculated Q1 draft to Gerbers/BOM/CPL/full RFQ uploads and obtain real submission number",
+      "local_signed_in_verified": true,
+      "local_cart_before_draft": "No listings/zero orders observed; unrelated items unchanged",
+      "local_q1_form_filled": true,
+      "local_calculate_succeeded": true,
+      "website_submission_complete": false,
+      "local_draft_estimate": {
+        "quantity": 5,
+        "pcb_usd": 55.93,
+        "assembly_usd": 29.0,
+        "shipping_displayed_usd": 27.27,
+        "discount_displayed_usd": -27.27,
+        "subtotal_usd": 84.93,
+        "vendor_reviewed": false,
+        "complete": false,
+        "excludes": "Parts, full additional scope, customs duties and VAT; shipping discount not a landed lithium quote"
+      }
     }
   ],
   "import_correction": {
@@ -59,7 +129,9 @@
       "K2"
     ],
     "uploaded": false,
-    "emailed": false
+    "emailed": false,
+    "uploaded_in_jlcpcb_rfq_supplement": true,
+    "automated_import_completed": false
   },
   "historical_packages": [
     {
@@ -79,7 +151,22 @@
     "scheduled_utc": "2026-09-15T18:35:03Z",
     "last_known_enabled": true,
     "run_confirmed": false,
-    "migration_changed_task": false
+    "migration_changed_task": false,
+    "local_check": "Not found in inspected task list; local automation directory absent; original cloud conversation idle. Current schedule/run state still unknown."
   },
-  "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md"
+  "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md",
+  "snapshot_utc": "2026-09-15T00:59:30Z",
+  "local_checks": {
+    "existing_checkout_matches_origin_main": true,
+    "package_integrity_passed": true,
+    "host_tests_passed": true,
+    "fresh_drc_run": false,
+    "hardware_validated": false,
+    "browser_native_access_verified": true,
+    "browser_tab_connector": "Initialization failed",
+    "site_agreements_pending": [
+      "PCBWay Special Notes",
+      "JLCPCB assembly-service terms"
+    ]
+  }
 }

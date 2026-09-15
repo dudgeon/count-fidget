@@ -2,6 +2,20 @@
 
 You are continuing Geoff's Count Fidget project in `https://github.com/dudgeon/count-fidget`. Read `AGENTS.md` and `PROJECT.md`, then the product spec, user-research evidence, decisions, open issues and vendor ledger. Do not restart the design or ask Geoff to repeat the interview.
 
+## Latest local state — 2026-09-15 00:59:30 UTC
+
+Local checkout opened and fetched; it matched `origin/main`. Integrity and host tests passed. Chrome native controls are usable, with occasional stale menus/IDs; the browser-tab connector fails with `codex app-server exited before returning initialize`. Refresh native accessibility state after user interaction or UI changes, and use supported screenshots/controls only. Geoff completed PCBWay sign-in; JLCPCB was already signed in. Do not repeat sign-in.
+
+Two site-specific agreement confirmations are pending in the conversation (required at action time by the browser-control rules): PCBWay **Special Notes / Agree** after Save to Cart, and JLCPCB **assembly-service Terms and Conditions** before Next. Quotation uploads remain authorized; these are separate agreement gates, not renewed permission to quote or spend.
+
+PCBWay: Q1 form for 5 with 10-unit alternative is filled, including 581-character assembly note and fabrication metadata clarification. Calculate worked; the $84.93 draft subtotal is incomplete. No file upload or formal submission number exists. The inspected local cart was empty; do not assume the prior cloud cart item is present.
+
+JLCPCB: Gerber-only ZIP accepted; detected 42 × 40 mm/four layers. `dist/click-counter-Q1-RFQ.zip` accepted separately in assembly remarks and function-test attachments. Selected 1.0 mm, S1000H Tg155, ENIG, 0.5 oz inner; standard both-side assembly adds a 70 × 70 mm handling panel. Depaneling is Yes. Production-file and placement confirmation are Yes with **Do not confirm automatically** checked. Function test and assembly remark are Yes. Terms checkbox is deliberately unchecked. PCB-only BOM/CPL upload, matching and formal submission are still pending; preserve these drafts and attachments.
+
+Frank's four embedded images have now been read through Gmail. They show incomplete historical totals $134.83/5 and $157.82/10 and an incorrect SW2 match to E-Switch TL1220S1BBSG-RESET (C5798268), not Cherry MX1A-E1NW. Twelve unmatched references remain in that historical screenshot. See vendor ledger/comparison for details. No newer reply or duplicate outbound follow-up was found. The one-time cloud schedule's current status could not be established.
+
+No charge, paid parts order or manufacturing release. No design/package regeneration. New read-only quote import audit and E13 preserve finish/copper/outline metadata discrepancies for vendor acknowledgment. The older migration account below remains historical context; use this section and the current ledger for continuation.
+
 ## Why this handoff exists
 
 The user wants a local session after repeated cloud browser failures. Switching the ChatGPT client to desktop did not switch the old session's browser: only cloud CDP Chrome was exposed. PCBWay login had succeeded, but a Calculate action and later navigation, screenshots, fresh-tab observations and manual handoff repeatedly failed with `CDP operation refresh tabs timed out after 20000ms`. A tab could sometimes be created without being usable. No Q1 upload succeeded. Cloud execution is the user's suspected cause, not a confirmed diagnosis.

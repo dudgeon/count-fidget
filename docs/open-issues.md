@@ -16,8 +16,9 @@ These are existing unresolved findings. A quotation, host test or re-read of a D
 | E10 | Firmware robustness/overflow | Watchdog disabled; overflow flag not displayed |
 | E11 | Placement/DFM/sample fit | Vendor pad-1 and rotation review; LCD flat-lead holes, standoff and 1 mm switch support checks |
 | E12 | NTC legacy/NRND choice | Confirm stock/lifecycle; qualify replacement for repeat builds if needed |
-| P01 | No website submission IDs | Accepted-file evidence and formal RFQ numbers for both vendors |
-| P02 | JLCPCB shortage/matching details unread | Read embedded images/live importer; record exact MPNs/quantities/prices/MOQs/lead times |
+| E13 | Gerber-job metadata differs from quote specification: finish `None`, 0.035 mm inner copper and 42.05 × 40.05 mm stroke bounds; see `docs/quote-import-audit.md` | Vendor acknowledgment that RFQ/form ENIG and disclosed stack alternative control the quote, with 42 × 40 mm finished profile centerline; confirm actual stack/finish/dimensions/tolerances and reconcile metadata under controlled release review |
+| P01 | No complete website submissions or formal IDs; JLCPCB Gerbers/RFQ supplements accepted locally, BOM/CPL pending; PCBWay pre-upload agreement pending | Complete both site workflows after pending agreement confirmations; record accepted files and formal RFQ numbers |
+| P02 | Historical JLCPCB images read: SW2 incorrectly matched to E-Switch C5798268 with 5 shortfall; twelve refs unmatched; rough totals exclude these lines | Correct SW1/SW2 to Cherry MX1A-E1NW and resolve current exact MPNs/quantities/prices/MOQs/lead times in live importer |
 | P03 | JLCPCB battery and test-pricing exclusions | Written scope and priced completion plan; no payment merely to unlock quoting |
 | P04 | No complete landed totals | Full 5/10-unit component/assembly/harness/programming/test/freight/tax comparison |
 

@@ -1,6 +1,40 @@
 # Vendor status and website resume procedure
 
-Snapshot: last verified in the September 14, 2026 cloud session. No complete quote, paid order, paid parts pre-order, or manufacturing release exists. Neither website has a confirmed Q1 upload or submission number. The repo migration does not change those facts.
+Current local snapshot: **2026-09-15 00:59:30 UTC** (September 14 Eastern). JLCPCB accepted Q1 Gerbers and full-RFQ supplements, but BOM/CPL import and final submission remain pending. PCBWay's form is calculated but remains before upload. Neither vendor has a formal Q1 submission number or complete quote. No paid order, paid parts pre-order or manufacturing release exists.
+
+## Local website progress and evidence
+
+Local native Chrome control was verified; the browser-tab connector fails initialization. Intermittent native stale state recovered after refreshing the page observation and user interaction. The local checkout matches GitHub; integrity and portable host tests passed once. No fresh DRC/hardware validation occurred.
+
+### PCBWay local draft
+
+- Geoff completed local sign-in. The local cart showed no listings/zero orders, unlike the historical cloud-cart observation; no unrelated item was changed.
+- Five-unit form completed, requesting separate 10-unit alternative in the assembly notes. Full turnkey/both sides; 42 × 40 × 1.0 mm, four layers, S1000H Tg150, ENIG 1 microinch, green/white, 1 oz outer/inner standard with preferred 0.5 oz inner alternative explicitly requested. Four Gerber layer names were submitted to the layer-order dialog.
+- Counts entered: 32 unique types, 43 SMT placements, 0 BGA/QFP, 4 physical parts requiring through-hole soldering (3 THT-only plus USB tabs). The note explains 46 total physical PCB parts and 28 THT joints.
+- Calculate succeeded. Draft calculator showed PCB **$55.93**, assembly **$29.00**, shipping **$27.27** and a **-$27.27** discount, subtotal **$84.93**. This excludes parts/full reviewed scope and customs/VAT, and is not a complete or vendor-reviewed quote.
+- Save to Cart opened **Special Notes / Agree**, a notice about prohibited/export-controlled/weapon-related/IP-infringing files referencing Terms of Service. User confirmation requested and still pending; no final agreement acceptance or file upload occurred.
+- Form notes carry quotation-only/no-charge/no-manufacture restrictions, all RFQ scope, offboard distinction, first-article hold and preserved engineering gates. Both textarea fields are within the site's 600-character limit; the assembly note is 581 characters.
+
+### JLCPCB local upload
+
+- Already signed in; orders showed none, and saved Quotes showed **No files yet** before this new upload.
+- **Accepted:** `procurement/click-counter-Q1-Gerbers.zip` (85,741 bytes; SHA-256 `f5e88b602ae17b81dd4745eb1f1715504f1baafe69ee0a844f275cde5b0be212`). Native chooser selection followed by completed processing and detection of a four-layer **42 × 40 mm** board were observed. No formal quote/submission number yet.
+- **Accepted:** `dist/click-counter-Q1-RFQ.zip` (278,870 bytes; SHA-256 `79f633ba625e66e39d76e7fbf77db87a0d13eb99414107857d6a8c11ef63616d`) in the **Assembly remark** attachment dialog, filename verified and Save clicked. The same package was accepted in the separate **Function test** attachment field; filename verified there too. These acceptance observations occurred in this local session, by the snapshot time above. They are uploads to a draft, not a completed RFQ submission.
+- Form: quantity 5, 1.0 mm, S1000H Tg155, ENIG/1 microinch, 1 oz outer/0.5 oz inner, Standard PCBA/Both Sides. Standard PCBA automatically adds a **70 × 70 mm handling panel**; **Depanel boards & edge rail before delivery = Yes**. Finished circuit outline remains 42 × 40 mm. Vendor DFM/stack confirmation still required.
+- **Confirm Production file** and **Confirm Parts Placement** are Yes, with **Do not confirm automatically** checked in both dialogs. Function test = Yes. Assembly remarks request complete separate 5/10 pricing, full scope, battery exclusion/completion path, existing engineering gates and no charge/preorder/manufacture before separate approval.
+- JLCPCB assembly-service terms checkbox was unchecked and confirmation requested before **Next**. Still pending. **BOM-PCBA-Q1.csv and CPL-JLCPCB-Q1.csv have not yet been imported; exact matching and formal submission remain unfinished.**
+
+### Mail/image continuity checked locally
+
+No newer reply or outbound follow-up found. All four images in Frank's **2026-09-14 21:23:46 UTC** message are now read through the actual Gmail image viewer. The email connector alone did not expose usable attachments; direct external image web access failed, but the existing Gmail message displayed them normally.
+
+- Original CPL error identifies BAT1/K1/K2, already addressed by the prepared PCB-only/offboard BOM split.
+- Historical stock screenshot shows SW2 matched to **E-Switch TL1220S1BBSG-RESET, C5798268**, with **5 shortfall**. This is an incorrect match: required SW2 is **Cherry MX1A-E1NW**, same as SW1. Do not preorder or accept the wrong part. Official catalog identity check is recorded in `quote-comparison.md`; current stock/MOQ remains to be checked.
+- Historical unmatched references: **D1, DS1, J1, J2, Q1, Q2, Q3, SW1, U2, U3, U4, U5**. U1's C2053877 identifies the correct MSP430FR4133IG48R.
+- Rough totals **$134.83/5** and **$157.82/10** are partial supported-scope estimates, not complete quotes. See the separate historical section in `quote-comparison.md` for itemization. The second image explicitly labels 10 pieces despite the email prose mentioning only five. All missing/shortfall/unmatched parts remain excluded, and the complete battery/programming/test/freight/tax scope is unpriced.
+- The scheduled cloud follow-up was not found among the inspected task list; no local automation directory existed. The original cloud conversation was idle. These facts do **not** establish the one-time schedule's current enabled/run status. No automation was changed or duplicated.
+
+## Historical cloud procedure (retained context)
 
 ## JLCPCB
 
@@ -8,10 +42,10 @@ Snapshot: last verified in the September 14, 2026 cloud session. No complete quo
 - Website chat representative Gan required Gerber/BOM/CPL review. Battery assembly is unsupported. Programming/testing can be offered, but functional-test review was available only after payment; a prepayment exception was requested and declined. Do not pay to unlock quoting.
 - Complete original Q1 RFQ ZIP emailed to verified representative Frank Chen on **2026-09-14 at 18:32:33 UTC**. SENT status and a **275,486-byte** attachment were verified.
 - Frank's **2026-09-14 21:23:46 UTC** reply acknowledges receiving/reviewing the package. It flags BAT1/K1/K2 without CPL positions, unspecified part shortages, and unmatched parts requiring manual matching.
-- That reply refers to a rough 5-piece PCB/PCBA price excluding all missing/shortfall/unmatched lines. Four embedded external images contain offboard/import errors, stock/matching information and rough price details. **Those images have not been read; their amounts and exact shortage MPNs remain unknown.** It is not a final complete quote.
+- That reply refers to a rough 5-piece PCB/PCBA price excluding all missing/shortfall/unmatched lines. The four embedded images were unread at migration; they have now been read locally as described above. They do not establish a final complete quote.
 - No approved substitute, paid pre-order, or private-parts-library procurement exists.
 
-The BOM/CPL complaint is clarified locally: BAT1 is a supplied cell/NTC harness and K1/K2 are loose caps. They have no PCB coordinates. `BOM-PCBA-Q1.csv` now contains exactly the 46 PCB refs present in the CPL; `OFFBOARD-items-Q1.csv` lists the rest. This correction has **not** been uploaded or emailed. Do not add fake placements or omit offboard items from commercial scope.
+The BOM/CPL complaint is clarified locally: BAT1 is a supplied cell/NTC harness and K1/K2 are loose caps. They have no PCB coordinates. `BOM-PCBA-Q1.csv` contains exactly the 46 PCB refs present in the CPL; `OFFBOARD-items-Q1.csv` lists the rest. The correction is included in JLCPCB's uploaded RFQ supplement, but the automated BOM/CPL import is still pending and no corrected email was sent. Do not add fake placements or omit offboard items from commercial scope.
 
 Next: open the authenticated quote workflow, upload Gerber ZIP, PCB-only BOM and CPL, inspect/manual-match each part, resolve exact quantities/stock/MOQs, and attach full RFQ/offboard notes. Ask whether caps can be supplied loose. Keep battery/test exclusions visible. If the website cannot price required work, obtain written exclusions and document what a separately priced completion path would require; don't declare a supported subtotal complete.
 
