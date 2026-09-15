@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-09-15",
-  "phase": "local website drafts; site agreement confirmations pending; complete submissions and full quotes unfinished",
+  "phase": "PCBWay remains Subject to audit; JLCPCB refuses full Q1 quote with non-stock parts included; stocked display alternatives under evaluation, no revision approved; complete quotes unavailable",
   "quantities": [
     5,
     10
@@ -31,13 +31,15 @@
       ],
       "exclusions": [
         "Battery assembly unsupported",
-        "Functional-test review/pricing only after payment; exception declined"
+        "Functional-test review/pricing only after payment; exception declined",
+        "Cannot quote order with non-stock parts included, per Mitchell Chen around 2026-09-15 02:02 UTC"
       ],
-      "next_action": "After site-terms confirmation, continue existing draft to PCB-only BOM/CPL import, exact matching and final submission; preserve attached RFQ/test scope and no-auto-confirm settings",
+      "next_action": "Preserve final adapter/CPL, required parts and saved Q1 draft. Follow requested case ID and stocked eight-digit 3 V passive LCD suggestions around 35 x 13 mm; evaluate low-power sourcing alternatives and redesign consequences at user request. No substitute/redesign approved. Do not repeat imports, accept DNP, pay to unlock quoting or silently substitute U3.",
       "website_submission_complete": false,
-      "bom_cpl_imported": false,
+      "bom_cpl_imported": true,
+      "bom_match_verified": false,
       "local_signed_in_verified": true,
-      "blocker": "Assembly-service terms confirmation pending before Next and PCB-only BOM/CPL import",
+      "blocker": "Mitchell Chen stated around 2026-09-15 02:02 UTC that JLCPCB cannot quote an order including non-stock parts. Full required Q1 scope retained; no DNP. No formal quote/order or returned support case ID.",
       "historical_partial_totals_usd": {
         "5": 134.83,
         "10": 157.82
@@ -61,6 +63,23 @@
           ],
           "evidence": "Filename visible in both fields; assembly remark saved",
           "verified_by_utc": "2026-09-15T00:59:30Z"
+        },
+        {
+          "filename": "BOM-JLCPCB-Q1.csv",
+          "bytes": 5823,
+          "sha256": "f9ee94d67b7c9b908563e4461acd866a7702c9557c117fae1b217782b816e8e7",
+          "field": "BOM import",
+          "evidence": "Final adapter accepted: exact MPNs in Comment, source wording in Source Label, 46 detected PCB refs",
+          "verified_by_utc_approx": "2026-09-15 01:56 UTC",
+          "included_in_rfq_archive": false
+        },
+        {
+          "filename": "CPL-JLCPCB-Q1.csv",
+          "bytes": 2101,
+          "sha256": "09fa350fb1aebeb0e2761b2f9d51ab61cfba204bc50505cc6ecfd7bae4d16345",
+          "field": "CPL import",
+          "evidence": "Unchanged CPL accepted with final adapter; 46 detected refs; placements not advanced",
+          "verified_by_utc_approx": "2026-09-15 01:56 UTC"
         }
       ],
       "local_form": {
@@ -85,7 +104,105 @@
         "function_test_requested": true,
         "production_file_auto_confirmation": false,
         "placement_auto_confirmation": false,
-        "terms_accepted": false
+        "terms_accepted": true
+      },
+      "placements_advanced": false,
+      "dnp_authorized": false,
+      "import_history": [
+        "Original BOM-PCBA-Q1.csv import detected 46 refs but ignored MPN column and made generic passive/reset matches",
+        "Intermediate adapter preserving original comments also made generic matches",
+        "Final BOM-JLCPCB-Q1.csv uses exact MPNs in Comment and source wording in Source Label; accepted with unchanged CPL"
+      ],
+      "manual_match_corrections": [
+        {
+          "reference": "Q3",
+          "rejected_match": "CJ C8545",
+          "selected_manufacturer": "Nexperia",
+          "selected_mpn": "2N7002,215",
+          "selected_catalog_code": "C65189",
+          "verification": "Manufacturer packing-only suffix verified; see JLCPCB-IMPORT-ADAPTER-Q1.md"
+        },
+        {
+          "reference": "J1",
+          "selected_manufacturer": "GCT",
+          "selected_mpn": "USB4105-GF-A",
+          "selected_catalog_code": "C3020560"
+        }
+      ],
+      "live_sourcing": {
+        "detected_refs": 46,
+        "confirmed_label": 38,
+        "shortage_label": 7,
+        "unselected_label": 2,
+        "counts_note": "Site labels overlap: R9 is partially stocked and also has a shortage; do not sum labels as distinct refs",
+        "shortages": [
+          {
+            "refs": [
+              "C1",
+              "C3",
+              "C5",
+              "C6"
+            ],
+            "manufacturer": "Murata",
+            "mpn": "GRM21BR71E225KA73L",
+            "catalog_code": "C469542",
+            "shortage_pieces": 24
+          },
+          {
+            "refs": [
+              "R9"
+            ],
+            "manufacturer": "Yageo",
+            "mpn": "RC0603FR-073R3L",
+            "catalog_code": "C137725",
+            "site_required_pieces": 20,
+            "available_pieces": 19,
+            "shortage_pieces": 1
+          },
+          {
+            "refs": [
+              "SW1",
+              "SW2"
+            ],
+            "manufacturer": "Cherry",
+            "mpn": "MX1A-E1NW",
+            "catalog_code": "C5120587",
+            "shortage_pieces": 10
+          }
+        ],
+        "required_unmatched": [
+          {
+            "reference": "DS1",
+            "manufacturer": "Display Elektronik",
+            "mpn": "DE188-RU-30/7,5/V(3V)"
+          },
+          {
+            "reference": "U3",
+            "manufacturer": "Texas Instruments",
+            "mpn": "TPS7A0230DBVR",
+            "open_issue": "E14: current TI TPS7A0230PDBVR has functional active-output-discharge feature; no silent substitution"
+          }
+        ],
+        "next_dialog_choice": "Select parts, preserving required DS1/U3; Do not place was not authorized"
+      },
+      "live_chat": {
+        "initial_representative": "Chian",
+        "current_representative": "Mitchell Chen",
+        "sent_utc_approx": "2026-09-15 01:56 UTC",
+        "sent_visible": true,
+        "saved_draft_link_shared": true,
+        "private_draft_link_stored_in_public_repo": false,
+        "acknowledged_utc_approx": "2026-09-15 01:56:30 UTC",
+        "acknowledgement": "Mitchell Chen received the question and requested time to investigate",
+        "substantive_resolution_pending": false,
+        "scope": "Manual engineering/sales complete itemized separate 5/10-unit quotation, all shortages, required unmatched DS1/U3, full RFQ scope, battery/test exclusions and priced completion path; no charge or manufacture authorized",
+        "reply_utc_approx": "2026-09-15 02:02 UTC",
+        "reply": "Mitchell Chen says JLCPCB cannot quote the order with non-stock parts included",
+        "full_quote_refused_for_non_stock_parts": true,
+        "support_case_id_requested": true,
+        "support_case_id": null,
+        "stocked_display_suggestions_requested": true,
+        "stocked_display_suggestions_pending": true
       }
     },
     {
@@ -95,30 +212,85 @@
       "full_rfq_sent_utc": "2026-09-14T18:33:59Z",
       "sent_attachment_bytes": 275486,
       "package_acknowledged": false,
-      "website_uploaded": false,
-      "submission_number": null,
+      "website_uploaded": true,
+      "submission_number": "T-1N5W914112A",
+      "pcb_product_number": "W914112AS1N4",
+      "submission_quantity": 5,
+      "alternative_quantity_requested": 10,
+      "submitted_utc": "2026-09-15T01:46:47Z",
+      "website_status": "Subject to audit on both linked PCB and assembly entries",
       "complete_total_usd": null,
       "cloud_signed_in_verified": true,
       "q1_form_filled": true,
-      "blocker": "Special Notes agreement confirmation pending after Save to Cart, before file upload",
+      "blocker": "Awaiting vendor audit, exact sourcing/DFM review and full itemized 5/10-unit prices",
+      "special_notes_accepted_by": "User, manually before file upload",
       "quoted_review_time": "Representative stated 1\u20132 days after file receipt, not guaranteed",
-      "next_action": "Inspect current PCBWay cart; Geoff authorizes removal of previous-project entries after verifying filenames/project identity while preserving Count Fidget. No deletion is recorded by this authorization. After Special Notes confirmation, continue existing calculated Q1 draft to Gerbers/BOM/CPL/full RFQ uploads and obtain real submission number",
+      "next_action": "Follow existing linked submission W914112AS1N4 / T-1N5W914112A and confirmed Remi site-message thread for vendor audit and complete separate 5/10-unit quotes; do not duplicate or check out. Preserve Count Fidget entries; Geoff authorizes removal of verified previous-project cart entries if any appear.",
       "local_signed_in_verified": true,
       "local_cart_before_draft": "No listings/zero orders observed; unrelated items unchanged",
-      "local_cart_recheck": "Native Chrome cart refreshed: Cart 0; All Orders, Under Review and Awaiting Payment all 0; search fields empty; no listings. Nothing to remove; no deletion performed. Authorization to remove verified previous-project entries remains applicable if they appear later.",
+      "local_cart_recheck": "Before Q1 submission, native Chrome cart refreshed: Cart 0; All Orders, Under Review and Awaiting Payment all 0; search fields empty; no listings. Nothing to remove; no deletion performed. Authorization to remove verified previous-project entries remains applicable if they appear later.",
       "local_q1_form_filled": true,
       "local_calculate_succeeded": true,
-      "website_submission_complete": false,
+      "website_submission_complete": true,
+      "accepted_uploads": [
+        {
+          "filename": "click-counter-Q1-Gerbers.zip",
+          "purpose": "Gerbers",
+          "verified_utc": "2026-09-15T01:46:47Z"
+        },
+        {
+          "filename": "BOM-PCBA-Q1.csv",
+          "purpose": "46-reference PCB-only BOM",
+          "verified_utc": "2026-09-15T01:46:47Z"
+        },
+        {
+          "filename": "placements-KiCad-Q1.csv",
+          "purpose": "Generic placement data",
+          "verified_utc": "2026-09-15T01:46:47Z"
+        },
+        {
+          "filename": "click-counter-Q1-RFQ.zip",
+          "bytes": 278870,
+          "sha256": "79f633ba625e66e39d76e7fbf77db87a0d13eb99414107857d6a8c11ef63616d",
+          "purpose": "Full technical and commercial RFQ supplement",
+          "verified_utc": "2026-09-15T01:46:47Z"
+        }
+      ],
+      "upload_evidence": "Four individual 100% Success states, followed by Submit File Now; cart then showed all four file links and the linked five-unit PCB/assembly entries, both Subject to audit",
+      "linked_site_message": {
+        "recipient": "Remi",
+        "sent_utc": "2026-09-15T01:47:22Z",
+        "site_display_time": "09:47:22 China time",
+        "delivery_verified": true,
+        "evidence": "Message history and full-message screenshot",
+        "scope": "Complete itemized separate 5/10-unit RFQ scope, every component/MOQ, both-side SMT and THT/manual work, LCD/switch/USB work, battery/NTC harness, loose caps, SBW programming, fixtures/setup, first-article engineering, recurring tests, packaging, lithium freight, tax/duty/brokerage, explicit exclusions/completion paths and preferred 0.5 oz inner versus standard 1 oz inner stack; no charge or manufacture before separate approval"
+      },
       "local_draft_estimate": {
         "quantity": 5,
         "pcb_usd": 55.93,
         "assembly_usd": 29.0,
+        "components_displayed_usd": 0.0,
         "shipping_displayed_usd": 27.27,
         "discount_displayed_usd": -27.27,
         "subtotal_usd": 84.93,
         "vendor_reviewed": false,
         "complete": false,
         "excludes": "Parts, full additional scope, customs duties and VAT; shipping discount not a landed lithium quote"
+      },
+      "latest_recheck": {
+        "utc_approx": "2026-09-15 02:00 UTC",
+        "pcb_status": "Subject to audit",
+        "assembly_status": "Subject to audit",
+        "unread_messages": 0,
+        "awaiting_payment": 0,
+        "complete_quote_received": false
+      },
+      "display_options_message": {
+        "recipient": "Remi",
+        "sent_utc": "2026-09-15T02:04:31Z",
+        "sent_verified": true,
+        "existing_submission_thread": true,
+        "scope": "Readily sourced low-power numeric LCD as a separate alternative; exact MPN, stock, assembly cost, lead time and power tradeoff. Continue quoting uploaded Q1; no automatic replacement or manufacture."
       }
     }
   ],
@@ -129,10 +301,12 @@
       "K1",
       "K2"
     ],
-    "uploaded": false,
+    "uploaded": true,
+    "uploaded_to_pcbway": true,
     "emailed": false,
     "uploaded_in_jlcpcb_rfq_supplement": true,
-    "automated_import_completed": false
+    "automated_import_completed": true,
+    "matching_complete": false
   },
   "historical_packages": [
     {
@@ -156,7 +330,7 @@
     "local_check": "Not found in inspected task list; local automation directory absent; original cloud conversation idle. Current schedule/run state still unknown."
   },
   "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md",
-  "snapshot_utc": "2026-09-15T00:59:30Z",
+  "snapshot_utc": "2026-09-15T01:47:22Z",
   "local_checks": {
     "existing_checkout_matches_origin_main": true,
     "package_integrity_passed": true,
@@ -165,9 +339,19 @@
     "hardware_validated": false,
     "browser_native_access_verified": true,
     "browser_tab_connector": "Initialization failed",
-    "site_agreements_pending": [
-      "PCBWay Special Notes",
-      "JLCPCB assembly-service terms"
+    "site_agreements_pending": []
+  },
+  "display_evaluation": {
+    "requested_by_user": true,
+    "reason": "User asks whether a more readily sourced display would be preferable and notes original choice was arbitrary",
+    "state": "Evaluate stocked low-power alternatives and redesign consequences",
+    "vendor_suggestion_request": "Both vendors asked: JLCPCB for stocked eight-digit 3 V passive LCDs around 35 x 13 mm; PCBWay through Remi on 2026-09-15 02:04:31 UTC for a separately identified readily sourced low-power numeric LCD, exact MPN/stock/assembly cost/lead time/power tradeoff. Continue quoting uploaded Q1; no automatic replacement or manufacture.",
+    "substitution_approved": false,
+    "redesign_approved": false,
+    "submitted_q1_baseline_preserved": true,
+    "vendors_asked": [
+      "JLCPCB",
+      "PCBWay"
     ]
   }
 }

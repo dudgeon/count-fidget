@@ -1,0 +1,47 @@
+Comment,Designator,Footprint,Quantity,Manufacturer,Manufacturer Part Number,Assembly,Notes,Source Label,LCSC Part #
+"DE188-RU-30/7,5/V(3V)",DS1,ClickCounter:DE188_20P_34.9x13mm,1,Display Elektronik,"DE188-RU-30/7,5/V(3V)",top,"THT hand solder; glass rear 4.0 mm above PCB top; 260 C / 5 s maximum; quote-only display, sample qualification required","DE188-RU-30/7,5/V(3V)",
+MX1A-E1NW,SW1,Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB,1,Cherry,MX1A-E1NW,top,Clicky blue; PCB-mount 5-pin solder version; full hand solder,COUNT,C5120587
+MX1A-E1NW,SW2,Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB,1,Cherry,MX1A-E1NW,top,Same switch as SW1,RESET,C5120587
+USB4105-GF-A,J1,Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,1,GCT,USB4105-GF-A,top,0.95 mm standard stakes; D+/D-/SBU unconnected; shell grounded,USB-C charge,C3020560
+SM04B-SRSS-TB(LF)(SN),J2,Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal,1,JST,SM04B-SRSS-TB(LF)(SN),top,Mating keyed custom pack CC-BAT-001; no bare coin-cell holder,Battery + NTC,C160404
+MSP430FR4133IG48R,U1,Package_SO:TSSOP-48_6.1x12.5mm_P0.5mm,1,Texas Instruments,MSP430FR4133IG48R,top,"48-pin TSSOP, not the earlier 64-pin draft; SBW program and verify",MSP430FR4133,C2053877
+BQ25185DLHR,U2,Package_DFN_QFN:Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm,1,Texas Instruments,BQ25185DLHR,bottom,4.2 V; 100 mA input limit; 18.2 mA nominal battery charge,Li-ion charger,C19725033
+TPS7A0230DBVR,U3,Package_TO_SOT_SMD:SOT-23-5,1,Texas Instruments,TPS7A0230DBVR,bottom,,3.0 V LDO,
+BQ29700DSER,U4,Package_SON:WSON-6_1.5x1.5mm_P0.5mm,1,Texas Instruments,BQ29700DSER,bottom,,Cell protector,C183096
+DMN2056U-7,Q1,Package_TO_SOT_SMD:SOT-23,1,Diodes Incorporated,DMN2056U-7,bottom,,Discharge FET,C332302
+DMN2056U-7,Q2,Package_TO_SOT_SMD:SOT-23,1,Diodes Incorporated,DMN2056U-7,bottom,,Charge FET,C332302
+TLV7042DGKR,U5,Package_SO:VSSOP-8_3x3mm_P0.65mm,1,Texas Instruments,TLV7042DGKR,bottom,USB-powered independent conservative charge-temperature window,Charge temperature window,C2760466
+2N7002,Q3,Package_TO_SOT_SMD:SOT-23,1,Nexperia,2N7002,bottom,,Charge enable,
+USBLC6-2SC6,D1,Package_TO_SOT_SMD:SOT-23-6,1,STMicroelectronics,USBLC6-2SC6,bottom,,USB ESD,C7519
+RC0603FR-075K1L,R1,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-075K1L,bottom,"1%, 0603, 0.1 W",5.1k,
+RC0603FR-075K1L,R2,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-075K1L,bottom,"1%, 0603, 0.1 W",5.1k,
+RC0603FR-0724KL,R3,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0724KL,bottom,"1%, 0603, 0.1 W",24k,
+RC0603FR-0716K5L,R4,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0716K5L,bottom,"1%, 0603, 0.1 W",16.5k,
+RC0603FR-0710KL,R5,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0710KL,bottom,"1%, 0603, 0.1 W",10k,
+RC0603FR-07100KL,R6,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,"1%, 0603, 0.1 W",100k,
+RC0603FR-07330RL,R7,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-07330RL,bottom,"1%, 0603, 0.1 W",330,
+RC0603FR-072K2L,R8,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-072K2L,bottom,"1%, 0603, 0.1 W",2.2k,
+RC0603FR-073R3L,R9,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-073R3L,bottom,"1%, 0603, 0.1 W",3.3,
+RC0603FR-0710KL,R10,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0710KL,bottom,"1%, 0603, 0.1 W",10k,
+RC0603FR-0749K9L,R11,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0749K9L,bottom,"1%, 0603, 0.1 W",49.9k,
+RC0603FR-0740K2L,R12,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0740K2L,bottom,"1%, 0603, 0.1 W",40.2k,
+RC0603FR-0760K4L,R13,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0760K4L,bottom,"1%, 0603, 0.1 W",60.4k,
+RC0603FR-07100KL,R14,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,"1%, 0603, 0.1 W",100k,
+RC0603FR-071ML,R15,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-071ML,bottom,"1%, 0603, 0.1 W",1M,
+RC0603FR-0747KL,R16,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-0747KL,bottom,"1%, 0603, 0.1 W",47k,
+RC0603FR-07470KL,R17,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-07470KL,bottom,"1%, 0603, 0.1 W",470k,
+RC0603FR-07470KL,R18,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-07470KL,bottom,"1%, 0603, 0.1 W",470k,
+RC0603FR-072KL,R19,Resistor_SMD:R_0603_1608Metric,1,Yageo,RC0603FR-072KL,bottom,"1%, 0603, 0.1 W",2k,
+GRM188R71H104KA93D,C4,Capacitor_SMD:C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,"100 nF, 50 V, X7R",100n,
+GRM188R71H104KA93D,C7,Capacitor_SMD:C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,"100 nF, 50 V, X7R",100n,
+GRM188R71H104KA93D,C8,Capacitor_SMD:C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,"100 nF, 50 V, X7R",100n,
+GRM188R71H104KA93D,C9,Capacitor_SMD:C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,"100 nF, 50 V, X7R",100n,
+GRM21BR71E225KA73L,C1,Capacitor_SMD:C_0805_2012Metric,1,Murata,GRM21BR71E225KA73L,bottom,"2.2 uF, 25 V, X7R; effective >=1 uF at 5 V",2.2u,
+GRM21BR61E106KA73L,C2,Capacitor_SMD:C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,bottom,"10 uF, 25 V, X5R; effective >=1 uF at 4.5 V",10u,
+GRM21BR71E225KA73L,C3,Capacitor_SMD:C_0805_2012Metric,1,Murata,GRM21BR71E225KA73L,bottom,"2.2 uF, 25 V, X7R",2.2u,
+GRM21BR71E225KA73L,C5,Capacitor_SMD:C_0805_2012Metric,1,Murata,GRM21BR71E225KA73L,bottom,,2.2u,
+GRM21BR71E225KA73L,C6,Capacitor_SMD:C_0805_2012Metric,1,Murata,GRM21BR71E225KA73L,bottom,,2.2u,
+GRM1885C1H102JA01D,C10,Capacitor_SMD:C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,
+GRM1885C1H102JA01D,C11,Capacitor_SMD:C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,
+GRM1885C1H102JA01D,C12,Capacitor_SMD:C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,
+C0603C472J5RACTU,C13,Capacitor_SMD:C_0603_1608Metric,1,KEMET,C0603C472J5RACTU,bottom,TI EVM low-current series compensation: ISET -> 2k -> 4.7n -> GND,4.7n,

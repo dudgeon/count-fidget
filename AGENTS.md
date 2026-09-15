@@ -15,7 +15,7 @@ Confirm the new session exposes the intended local browser. Use that session's s
 - Q1 is a quotation prototype. Historical DRC is clear and firmware compiled; no board has been physically tested. There is no native schematic/ERC.
 - Retain the LCD, charger/thermal, protection and fit caveats in RFQs. Resolve release gates before manufacture/use.
 - Current MCU is **48-pin MSP430FR4133IG48R**. Rev0's 64-pin wiring, charging settings and compensation statements are obsolete.
-- Upload `BOM-PCBA-Q1.csv` with the 46 PCB refs. BAT1/K1/K2 are supplied offboard; never invent CPL coordinates. Attach offboard items and full RFQ separately.
+- `BOM-PCBA-Q1.csv` is the controlling 46-ref PCB BOM and PCBWay upload. For JLCPCB's importer use the separate `BOM-JLCPCB-Q1.csv` adapter with unchanged `CPL-JLCPCB-Q1.csv`; read `procurement/JLCPCB-IMPORT-ADAPTER-Q1.md` and verify exact MPN/manufacturer matches. The adapter is a supplement, not part of the existing RFQ ZIP. BAT1/K1/K2 are supplied offboard; never invent CPL coordinates. Attach offboard items and full RFQ separately.
 - `mechanical/` is an obsolete fit study, not Q1's finished enclosure.
 - USB charges only. Programming uses Spy-Bi-Wire; ordinary firmware updates must preserve the information-FRAM journal.
 - Do not overwrite routed PCB or approved HEXs just to get a quote. `electronics/build_pcb.py` generates an unrouted board and overwrites Q1 files; intentional rebuilds belong in a working branch.
