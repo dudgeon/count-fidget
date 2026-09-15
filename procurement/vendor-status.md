@@ -9,6 +9,7 @@ Local native Chrome control was verified; the browser-tab connector fails initia
 ### PCBWay local draft
 
 - Geoff completed local sign-in. The local cart showed no listings/zero orders, unlike the historical cloud-cart observation; no unrelated item was changed.
+- Geoff subsequently authorized clearing PCBWay cart entries from previous projects. Verify filenames/project identity before removing entries and preserve Count Fidget. Native Chrome cart recheck and refresh showed **Cart 0**, **All Orders 0**, **Under Review 0**, **Awaiting Payment 0**, empty search fields and no listings. There was nothing to remove; no deletion was performed. The authorization remains applicable if previous-project entries appear later.
 - Five-unit form completed, requesting separate 10-unit alternative in the assembly notes. Full turnkey/both sides; 42 × 40 × 1.0 mm, four layers, S1000H Tg150, ENIG 1 microinch, green/white, 1 oz outer/inner standard with preferred 0.5 oz inner alternative explicitly requested. Four Gerber layer names were submitted to the layer-order dialog.
 - Counts entered: 32 unique types, 43 SMT placements, 0 BGA/QFP, 4 physical parts requiring through-hole soldering (3 THT-only plus USB tabs). The note explains 46 total physical PCB parts and 28 THT joints.
 - Calculate succeeded. Draft calculator showed PCB **$55.93**, assembly **$29.00**, shipping **$27.27** and a **-$27.27** discount, subtotal **$84.93**. This excludes parts/full reviewed scope and customs/VAT, and is not a complete or vendor-reviewed quote.
@@ -56,7 +57,7 @@ Next: open the authenticated quote workflow, upload Gerber ZIP, PCB-only BOM and
 - Website chat representative Assistant05 (US) said the specified battery harness, programming and testing can be reviewed/quoted after receiving files through the existing account; stated turnaround **1–2 days after receipt**, not guaranteed.
 - Full original Q1 RFQ emailed to PCBWay customer service **2026-09-14 at 18:33:59 UTC**. SENT and **275,486-byte** attachment verified. No full quote or subsequent reply had been found at the last check (approximately 21:24 UTC).
 - **PCBWay sign-in succeeded and the signed-in account was observed.** Earlier notes saying sign-in was still the blocker are superseded. Assigned representative was **Remi**; use the current account's displayed contact details.
-- Account cart contained an unrelated July `companion_carrier_v0` item. It is not Count Fidget, was not modified and its assembly price is not relevant. Verify filename/project before editing any existing item.
+- Account cart historically contained an unrelated July `companion_carrier_v0` item. It is not Count Fidget, was not modified in that historical session and its assembly price is not relevant. Geoff's latest authorization permits removing previous-project cart entries after verifying filename/project identity; preserve Count Fidget entries.
 - A new Q1 assembly form was filled but the **Calculate** action timed out. All later observation/navigation/screenshot/manual-handoff recovery attempts failed with `CDP operation refresh tabs timed out after 20000ms`. No file chooser was reached and no upload success or RFQ number was observed.
 
 ### Last confirmed form values

@@ -31,7 +31,7 @@ The existing local checkout matches `origin/main`. Package integrity and all por
 ## Immediate next sequence
 
 1. Resume the existing local vendor tabs after the pending site-agreement confirmations; inspect current state rather than assuming tab handles persist.
-2. Complete PCBWay's website RFQ using Q1 Gerbers, PCB-only BOM, placements and full RFQ. Request complete 5/10-unit quotes and record a real submission number. Do not create a duplicate if the draft was submitted manually.
+2. Complete PCBWay's website RFQ using Q1 Gerbers, PCB-only BOM, placements and full RFQ. Request complete 5/10-unit quotes and record a real submission number. Do not create a duplicate if the draft was submitted manually. Geoff authorizes clearing previous-project PCBWay cart entries after verifying filenames/project identity; preserve Count Fidget. A refreshed cart recheck showed no entries; no deletion was performed.
 3. Complete JLCPCB PCB-only BOM/CPL import and exact manual matching, including both Cherry switches. Preserve attached scope, depaneling and no-auto-confirm settings; resolve current stock/MOQs and battery/test exclusions without paying to unlock quoting.
 4. Continue to check the existing cloud follow-up before duplicate outreach; its current schedule status remains unverified. Mail and embedded images were checked locally; no newer reply was found.
 5. Obtain vendor-reviewed itemized totals using `procurement/quote-comparison.md`. Unsupported work requires an explicit completion plan and price, not a zero line.
