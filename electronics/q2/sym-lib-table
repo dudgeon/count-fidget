@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "CountFidgetQ2")(type "KiCad")(uri "${KIPRJMOD}/CountFidgetQ2.kicad_sym")(options "")(descr "Q2 exact package pins; reviewed custom symbols")))

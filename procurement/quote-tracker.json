@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-09-15",
-  "phase": "Q1 engineering hold; separate 32 Hz Q2 firmware candidate, hardware/display revision pending; PCBWay submitted, JLCPCB declines complete non-stock-parts quote; no complete quotes",
+  "phase": "Q2 engineering candidate verified and packaged; Q1 engineering hold preserved; specific Q2 disclosure approval pending; no complete vendor quotes",
   "quantities": [
     5,
     10
@@ -34,7 +34,7 @@
         "Functional-test review/pricing only after payment; exception declined",
         "Cannot quote order with non-stock parts included, per Mitchell Chen around 2026-09-15 02:02 UTC"
       ],
-      "next_action": "Retain accepted adapter/CPL and all required parts. Follow existing Frank email case as Mitchell requested; no duplicate outreach or paid Global Sourcing. Complete controlled hardware/display/U3 review and reissue identified revision for final 5/10 scope. Battery/test-pricing exclusions still unresolved.",
+      "next_action": "Preserve Q1 draft/full scope and follow existing Frank email case. Q2 U3 identity resolved; DE188/U5 and other shortages still need priced supported paths. Clarify programming/testing hours/scope and excluded battery completion without paid order or preorder.",
       "website_submission_complete": false,
       "bom_cpl_imported": true,
       "bom_match_verified": false,
@@ -183,7 +183,8 @@
             "open_issue": "E14: current TI TPS7A0230PDBVR has functional active-output-discharge feature; no silent substitution"
           }
         ],
-        "next_dialog_choice": "Select parts, preserving required DS1/U3; Do not place was not authorized"
+        "next_dialog_choice": "Select parts, preserving required DS1/U3; Do not place was not authorized",
+        "freshly_reverified_date": "2026-09-15"
       },
       "live_chat": {
         "initial_representative": "Chian",
@@ -214,7 +215,21 @@
           "review_required": "Active output discharge and FRAM/brownout behavior"
         },
         "follow_existing_email_case": true,
-        "colleague_followup_requested_by_representative": true
+        "colleague_followup_requested_by_representative": true,
+        "programming_testing_reply": {
+          "reply_utc_approx": "2026-09-15 02:18 UTC",
+          "chat_display_time": "22:18 Eastern, September 14",
+          "condition": "Programming/testing quoted only after order",
+          "currency": "USD",
+          "additional_engineering_amount": 15.7,
+          "labor_hourly_rate": 7.86,
+          "hours": null,
+          "complete_scope_accepted": false,
+          "complete_total": null,
+          "battery_assembly_supported": false,
+          "rates_only": true,
+          "freshly_reverified_date": "2026-09-15"
+        }
       },
       "engineering_hold": true,
       "source_binary_allegation_retracted": true,
@@ -229,7 +244,18 @@
           "verified": true,
           "purpose": "Explicit retraction of source/binary allegation; retain LCD bias/timing engineering hold"
         }
-      ]
+      ],
+      "latest_recheck": {
+        "evidence": "Fresh supported native Chrome inspection of existing Q1 draft and chat",
+        "detected_refs": 46,
+        "confirmed_label": 38,
+        "shortage_label": 7,
+        "unselected_label": 2,
+        "formal_order_exists": false,
+        "complete_quote_received": false,
+        "verified_date": "2026-09-15",
+        "verification_time_note": "Fresh continuation read after native access restored; exact observation time not separately recorded"
+      }
     },
     {
       "name": "PCBWay",
@@ -244,14 +270,14 @@
       "submission_quantity": 5,
       "alternative_quantity_requested": 10,
       "submitted_utc": "2026-09-15T01:46:47Z",
-      "website_status": "Subject to audit on both linked PCB and assembly entries",
+      "website_status": "2026-09-15 10:48:59 UTC: PCB W914112AS1N4 Awaiting reply; assembly T-1N5W914112A Being reviewed; Under Review 2, Awaiting Payment 0, Production 0",
       "complete_total_usd": null,
       "cloud_signed_in_verified": true,
       "q1_form_filled": true,
       "blocker": "Vendor audit/full pricing pending; Q1 engineering hold requires reviewed revision before final production quote",
       "special_notes_accepted_by": "User, manually before file upload",
-      "quoted_review_time": "Representative stated 1–2 days after file receipt, not guaranteed",
-      "next_action": "Preserve linked W914112AS1N4 / T-1N5W914112A and Remi correspondence for sourcing/budgetary review. Complete controlled hardware/display revision and validate package before requesting final itemized 5/10 quotes. No duplicate, checkout or paid procurement.",
+      "quoted_review_time": "Representative stated 1\u20132 days after file receipt, not guaranteed",
+      "next_action": "After specific Q2 email approval, send the held technical reply by email only. Replace reviewed files under existing references only after vendor instructions; obtain complete separate 5/10 prices including test hours/scope and landed charges.",
       "local_signed_in_verified": true,
       "local_cart_before_draft": "No listings/zero orders observed; unrelated items unchanged",
       "local_cart_recheck": "Before Q1 submission, native Chrome cart refreshed: Cart 0; All Orders, Under Review and Awaiting Payment all 0; search fields empty; no listings. Nothing to remove; no deletion performed. Authorization to remove verified previous-project entries remains applicable if they appear later.",
@@ -304,12 +330,13 @@
         "excludes": "Parts, full additional scope, customs duties and VAT; shipping discount not a landed lithium quote"
       },
       "latest_recheck": {
-        "utc_approx": "2026-09-15 02:00 UTC",
-        "pcb_status": "Subject to audit",
-        "assembly_status": "Subject to audit",
-        "unread_messages": 0,
+        "utc": "2026-09-15T10:36:00Z",
+        "evidence": "Fresh supported native Chrome inspection",
+        "under_review": 2,
         "awaiting_payment": 0,
-        "complete_quote_received": false
+        "production": 0,
+        "complete_quote_received": false,
+        "uploaded_revision": "Q1"
       },
       "display_options_message": {
         "recipient": "Remi",
@@ -331,7 +358,56 @@
           "verified": true,
           "purpose": "Explicit retraction of source/binary allegation following exact TI rebuild; retain LCD capacitor/frame-rate engineering hold"
         }
-      ]
+      ],
+      "latest_incoming_email": {
+        "utc": "2026-09-15T03:23:59Z",
+        "summary": "Use email only for future follow-up; website response was already sent. That website response was subsequently read after native access was restored."
+      },
+      "dfm_question": {
+        "utc": "2026-09-15T03:07:50Z",
+        "scope": "Green solder-mask bridge requires >=0.19 mm copper spacing; attachment identifies Q1 U5 pads6/7 gap0.15 mm",
+        "combined_openings_approved": false,
+        "q2_proposal": "TI DGK0008A lands1.4x0.45mm at0.65mm pitch,0.05mm mask expansion;0.20mm copper gap,0.10mm nominal web",
+        "vendor_acceptance": false
+      },
+      "website_recheck_history": [
+        {
+          "utc_approx": "2026-09-15 02:00 UTC",
+          "pcb_status": "Subject to audit",
+          "assembly_status": "Subject to audit",
+          "unread_messages": 0,
+          "awaiting_payment": 0,
+          "complete_quote_received": false
+        }
+      ],
+      "website_reply": {
+        "rep": "Remi",
+        "sent_utc": "2026-09-15T02:25:22Z",
+        "site_display_time": "2026-09-15 10:25:22 China time (UTC+08:00)",
+        "freshly_read_by_utc": "2026-09-15T10:36:00Z",
+        "summary": "Follow supplied Gerbers/BOM/online parameters; include all notes in files. Programming/testing is additional; provide step-by-step instructions.",
+        "programming_testing_rates": {
+          "currency": "USD",
+          "testing_starting_amount": 75,
+          "subsequent_hourly_rate": 10,
+          "billing_timing": "Charged after the process",
+          "hours": null,
+          "complete_scope_accepted": false,
+          "complete_total": null
+        },
+        "full_quote": false
+      },
+      "latest_cart_observation": {
+        "utc": "2026-09-15T10:48:59Z",
+        "pcb_status": "Awaiting reply",
+        "assembly_status": "Being reviewed",
+        "pcb_partial_usd": 55.93,
+        "assembly_partial_usd": 29,
+        "component_pricing_missing": true,
+        "all_four_Q1_files_present": true,
+        "complete_quote": false,
+        "unrelated_cart_items_observed": false
+      }
     }
   ],
   "import_correction": {
@@ -370,17 +446,20 @@
     "local_check": "Not found in inspected task list; local automation directory absent; original cloud conversation idle. Current schedule/run state still unknown."
   },
   "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md",
-  "snapshot_utc": "2026-09-15T02:29:57Z",
+  "snapshot_utc": "2026-09-15T10:45:18Z",
   "local_checks": {
     "existing_checkout_matches_origin_main": false,
     "package_integrity_passed": true,
     "host_tests_passed": true,
-    "fresh_drc_run": false,
+    "fresh_drc_run": true,
     "hardware_validated": false,
     "browser_native_access_verified": true,
-    "browser_tab_connector": "Initialization failed",
+    "browser_tab_connector": "Historical initialization failure; supported native Chrome now available",
     "site_agreements_pending": [],
-    "branch_note": "Main contains vendor checkpoint a8128ec; current separate engineering branch is codex/q2-engineering-audit"
+    "branch_note": "Main contains vendor checkpoint a8128ec; current separate engineering branch is codex/q2-engineering-audit",
+    "browser_native_access_verified_by_utc": "2026-09-15T10:36:00Z",
+    "q2_final_validation_complete": true,
+    "q2_latest_layout_check": "Native DRC0, unconnected0, parity0, ERC0; final board SHA c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867"
   },
   "display_evaluation": {
     "requested_by_user": true,
@@ -396,7 +475,8 @@
     "engineering_evaluation_authorized": true,
     "stocked_passive_alternative_verified": false,
     "latest_vendor_feedback": "JLCPCB at about 02:15 UTC reports no stocked alternative to the requested LCD and suggests paid Global Sourcing preorder for DE188; no purchase authorized",
-    "power_constraint": "Existing protection nominally trips near 30 mA; OLED example 23–29 mA needs full power-budget review"
+    "power_constraint": "Existing protection nominally trips near 30 mA; OLED example 23\u201329 mA needs full power-budget review",
+    "q2_recommendation": "Retain exact DE188 3 V for corrected Q2 baseline; alternate passive displays did not establish JLC stock advantage"
   },
   "engineering_review": {
     "document": "../docs/adversarial-review-Q2.md",
@@ -416,9 +496,55 @@
     "additional_inferred_gap": "U5 monitor supply loss while pull-up remains powered can allow charge enable; requires fault review and test",
     "candidate": "../firmware/q2-lcd-check/build-manifest.json",
     "candidate_frame_hz": 32,
-    "hardware_revised": false,
+    "hardware_revised": true,
     "hardware_tested": false,
-    "fresh_drc_or_erc": false,
-    "revised_manufacturing_package_submitted": false
+    "fresh_drc_or_erc": true,
+    "revised_manufacturing_package_submitted": false,
+    "hardware_revision_note": "Separate Q2 native board/schematic/firmware/enclosure/50-ref quote exports verified and packaged; physical qualification open; Q1 preserved",
+    "final_native_validation_complete": false,
+    "latest_layout_issue": "One SW2 thermal-relief issue under correction; no final clean package claim"
+  },
+  "browser_current": {
+    "available": true,
+    "control": "Supported native Chrome",
+    "verified_by_utc": "2026-09-15T10:36:00Z",
+    "reason": "Native access restored; PCBWay/JLCPCB pages and replies freshly inspected",
+    "user_unlock_requested": true,
+    "unlock_request_pending": false,
+    "website_state_fresh": true,
+    "separate_browser_connector": "Initialization failed earlier; recovery not established or needed for verified native access"
+  },
+  "q2_outreach": {
+    "sent": false,
+    "approval_pending": true,
+    "reason": "Automatic approval review requires specific approval to disclose revised Q2 engineering details to PCBWay",
+    "scope": "TI U5 pad pattern, separate mask-opening confirmation and replacing files under existing quote references; no spend/manufacture",
+    "approval_scope": "Finished Q2 quote package and technical follow-up to PCBWay Remi and existing JLCPCB Frank case; quote/review only; no paid sourcing/order/manufacture"
+  },
+  "latest_website_observation_utc": "2026-09-15T10:48:59Z",
+  "browser_access_history": [
+    {
+      "available": false,
+      "reason": "Mac locked; automatic unlock failed; separate browser connector initialization fails",
+      "user_unlock_requested": true,
+      "website_state_fresh": false,
+      "snapshot_utc": "2026-09-15T10:06:00Z",
+      "historical": true
+    }
+  ],
+  "q2_package": {
+    "file": "dist/q2/click-counter-Q2-RFQ.zip",
+    "bytes": 1930577,
+    "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438",
+    "members": 124,
+    "prepared": true,
+    "website_uploaded": false,
+    "vendor_accepted": false,
+    "native_erc_violations": 0,
+    "native_drc_violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity_findings": 0,
+    "fitted_pcb_parts": 50,
+    "hardware_tested": false
   }
 }

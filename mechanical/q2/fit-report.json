@@ -1,0 +1,132 @@
+{
+  "status": "Q2 engineering fit candidate; physical qualification pending",
+  "body_mm": [
+    50.0,
+    45.0,
+    19.8
+  ],
+  "keycap_envelope_height_mm": 29.8,
+  "pcb_bottom_z_mm": 10.5,
+  "pcb_mm": [
+    42,
+    40,
+    1
+  ],
+  "mounts_board_xy_mm": [
+    [
+      2.5,
+      37.5
+    ],
+    [
+      39.5,
+      37.5
+    ]
+  ],
+  "key_centers_board_xy_mm": [
+    [
+      11.475,
+      28
+    ],
+    [
+      30.525,
+      28
+    ]
+  ],
+  "battery_max_envelope_mm": [
+    21,
+    21,
+    4.2
+  ],
+  "battery_bore_mm": 21.8,
+  "battery_to_board_mm": 4.4,
+  "battery_to_keeper_mm": 0.3000000000000007,
+  "lcd_standoff_mm": 4,
+  "lcd_nominal_glass_mm": [
+    34.9,
+    13,
+    2.2
+  ],
+  "lcd_checked_max_mm": [
+    35.1,
+    13.2,
+    2.85
+  ],
+  "lcd_pocket_mm": [
+    36.2,
+    14.8
+  ],
+  "lcd_max_top_gap_mm": 0.4499999999999993,
+  "usb_opening_y_mm": 13.3,
+  "usb_opening_mm": [
+    13.2,
+    5
+  ],
+  "board_side_clearance_mm": [
+    2.3999999999999986,
+    0.8999999999999986
+  ],
+  "valid_solids": {
+    "base": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 8200.683
+    },
+    "lid": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 2432.863
+    },
+    "battery-keeper": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 148.624
+    }
+  },
+  "shell_intersections_mm3": {
+    "base_lid": 0,
+    "base_keeper": 0,
+    "lid_keeper": 0
+  },
+  "reported_intersections": [],
+  "minimum_modeled_distances_mm": {
+    "pack_to_bottom_components": 2.8,
+    "pack_to_switch_tails": 2.1,
+    "keeper_to_bottom_components": 1.6869,
+    "keeper_screw_to_bottom_components": 0.79558,
+    "max_lcd_to_mcu": 2.8,
+    "max_lcd_to_usb": 0.69,
+    "max_lcd_to_jst": 1.04,
+    "pack_to_fasteners": 1.76756,
+    "pressed_keycap_to_rear_screw": 0.6
+  },
+  "source_board_sha256": "c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867",
+  "source_model_sha256": "3aae3dafcf2b6b5d1c1cac8932200bd2ba3e52ed39507f2c22e9a41b771bb065",
+  "generator_sha256": "cbcc9332c3c81f6314d6f8b296a523fa1d032f53aa5344201b846e2a84c1da73",
+  "cadquery_version": "2.8.0",
+  "python_version": "3.12.14",
+  "limitations": [
+    "Component bodies, pins and screws are simplified envelopes; no exact assembled vendor CAD claim.",
+    "Native footprint bounding boxes conservatively bound bottom components; heights are stated family allowances.",
+    "Four-wire corridor and tab/NTC reservations do not prove the finished 40\u00b15mm harness bends or connector insertion.",
+    "Keycaps are provisional envelopes, not approved Adafruit CAD; full travel and fit require a sample.",
+    "LCD compliant pads need material/contact approval; no glass clamping or preload qualified.",
+    "Screw thread strength, print tolerances, battery retention, USB strain and drop behavior remain untested."
+  ],
+  "stl_mesh_checks": {
+    "battery-keeper-Q2.stl": {
+      "triangles": 1940,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05
+    },
+    "base-Q2.stl": {
+      "triangles": 7014,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05
+    },
+    "lid-Q2.stl": {
+      "triangles": 4198,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05
+    }
+  }
+}

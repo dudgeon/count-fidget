@@ -13,13 +13,14 @@ Confirm the new session exposes the intended local browser. Use that session's s
 ## Engineering truthfulness
 
 - Q1 is on engineering hold after the 15 September independent review. Read `docs/adversarial-review-Q2.md` and linked audits before further engineering or final quotations. Preserve submitted Q1 archives/binaries as historical evidence; corrections belong in an identified revision. The alleged source/binary mismatch was refuted by exact TI rebuild: LCD4MUX includes LCDSON. The missing LCD capacitors remain a real hardware issue.
-- Q1 is a quotation prototype. Historical DRC is clear and firmware compiled; no board has been physically tested. There is no native schematic/ERC.
+- Q1 is a quotation prototype. Historical DRC is clear and firmware compiled; no board has been physically tested. Q1 has no native schematic/ERC; the separate Q2 native schematic/PCB and current checks live under `electronics/q2/` and `verification/q2-*`. Never use Q1 reports as Q2 evidence.
 - Retain the LCD, charger/thermal, protection and fit caveats in RFQs. Resolve release gates before manufacture/use.
 - Current MCU is **48-pin MSP430FR4133IG48R**. Rev0's 64-pin wiring, charging settings and compensation statements are obsolete.
 - `BOM-PCBA-Q1.csv` is the controlling 46-ref PCB BOM and PCBWay upload. For JLCPCB's importer use the separate `BOM-JLCPCB-Q1.csv` adapter with unchanged `CPL-JLCPCB-Q1.csv`; read `procurement/JLCPCB-IMPORT-ADAPTER-Q1.md` and verify exact MPN/manufacturer matches. The adapter is a supplement, not part of the existing RFQ ZIP. BAT1/K1/K2 are supplied offboard; never invent CPL coordinates. Attach offboard items and full RFQ separately.
-- `mechanical/` is an obsolete fit study, not Q1's finished enclosure.
+- Top-level `mechanical/` is an obsolete Rev0 fit study. Separate `mechanical/q2/` is a coordinated engineering fit candidate with simplified envelopes and explicit physical-print/retention limitations; it is not physically qualified.
 - USB charges only. Programming uses Spy-Bi-Wire; ordinary firmware updates must preserve the information-FRAM journal.
 - Do not overwrite routed PCB or approved HEXs just to get a quote. `electronics/build_pcb.py` generates an unrouted board and overwrites Q1 files; intentional rebuilds belong in a working branch.
+- Separate Q2 export/package tools are `scripts/export_q2.py` and `scripts/package_q2.py`; they require current native checks and preserve Q1. Q2 has 50 fitted PCB refs with offboard BAT1/K1/K2 kept separate.
 - Current shared firmware source is the separate Q2 LCD candidate. Do not run the Q1 RFQ packager against it: that would mix newer source with frozen Q1 binaries. Read `docs/build-and-verify.md`; future engineering packages need a coordinated revision.
 
 ## Repository maintenance

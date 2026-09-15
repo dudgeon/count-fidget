@@ -1,0 +1,224 @@
+{
+  "commands": [
+    [
+      "/private/tmp/count-fidget-kicad/mounted/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "--output",
+      "verification/q2-native-netlist.xml",
+      "electronics/q2/click-counter-Q2.kicad_sch"
+    ],
+    [
+      "/private/tmp/count-fidget-kicad/mounted/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "verification/q2-native-erc.json",
+      "electronics/q2/click-counter-Q2.kicad_sch"
+    ],
+    [
+      "/private/tmp/count-fidget-kicad/mounted/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--all-track-errors",
+      "--severity-all",
+      "--exit-code-violations",
+      "--output",
+      "verification/q2-native-drc.json",
+      "electronics/q2/click-counter-Q2.kicad_pcb"
+    ]
+  ],
+  "hardware_tested": false,
+  "inputs_sha256": {
+    "electronics/netlist.json": "2c5e467ac28debd6ef5a9b3e1fad04f4b897df52ebad9772dd8da920530f8d7b",
+    "electronics/q2/ClickCounterQ2.pretty/Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB.kicad_mod": "c8e601f0038d18db886fca595462a92e19a587bb79a610992cfb1c2ff776d319",
+    "electronics/q2/ClickCounterQ2.pretty/Capacitor_SMD_C_0603_1608Metric.kicad_mod": "17877a5fef658fdf5b737d8315d75ff1c46214553ef2ff05f107442fc584bd1e",
+    "electronics/q2/ClickCounterQ2.pretty/Capacitor_SMD_C_0805_2012Metric.kicad_mod": "2bf5abdba5044a3374af2e9aab575101b6d343e97a8f36e1956ec6699cb12348",
+    "electronics/q2/ClickCounterQ2.pretty/Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal.kicad_mod": "1a9eadea3cfe496757704fc37694085e6f38122664b33a43872a973a8da69926",
+    "electronics/q2/ClickCounterQ2.pretty/Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": "a2617d52a4e9b6ab2729406cc8d3c5520c8b3355eb4d1846ca9240b144a2829a",
+    "electronics/q2/ClickCounterQ2.pretty/DE188_20P_rows13.0mm.kicad_mod": "27f936423efb8c96974d5d9cdb4e30f267553adbb40c009692bf830bd0429279",
+    "electronics/q2/ClickCounterQ2.pretty/MountingHole_MountingHole_2.2mm_M2.kicad_mod": "bcc8a7c1efe5c59463d539bd786e8e14f2e90f30130fe894b1d04e358bce4710",
+    "electronics/q2/ClickCounterQ2.pretty/Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm.kicad_mod": "2199e528764ad21497f8b71404146d00b4203519c7fcfbf1ed1fd92ecc614728",
+    "electronics/q2/ClickCounterQ2.pretty/Package_SON_WSON-6_1.5x1.5mm_P0.5mm.kicad_mod": "e036eb44c0a1e856cd610e82391afd6061ff69ddc4bba6c3fb360a7ba63352b9",
+    "electronics/q2/ClickCounterQ2.pretty/Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm.kicad_mod": "4dbdffd726bba11e5aa1385088f43251318433d9452bf230ed432a5ce8e11926",
+    "electronics/q2/ClickCounterQ2.pretty/Package_TO_SOT_SMD_SOT-23-5.kicad_mod": "0ed633c9b02477b6b2782351882eac81bb78cb735dfa30f43e64a7a7673ee262",
+    "electronics/q2/ClickCounterQ2.pretty/Package_TO_SOT_SMD_SOT-23-6.kicad_mod": "12aef0095926303e22872b7966a7249266ddf7c04b1569177a7de029b3eca6aa",
+    "electronics/q2/ClickCounterQ2.pretty/Package_TO_SOT_SMD_SOT-23.kicad_mod": "27e4b7f0574acd3b773024f9fa8cd87b2b7099e1d0d9053ae27084e853134853",
+    "electronics/q2/ClickCounterQ2.pretty/Resistor_SMD_R_0603_1608Metric.kicad_mod": "f6a36ee2b44dbad84910754eaf46b0732a61cca0d34aee97e1cd5513e0dee705",
+    "electronics/q2/ClickCounterQ2.pretty/TLV7032_DGK0008A_TI.kicad_mod": "27f5b299dd099fdc794929e1b6206f7af1e81c9096ef6df6b97832502adcc0d6",
+    "electronics/q2/ClickCounterQ2.pretty/TestPoint_TestPoint_Pad_D1.5mm.kicad_mod": "3323cabc242552f1c7eecb74381ad5510b00a89824374ae13f3c637bf721e1af",
+    "electronics/q2/CountFidgetQ2.kicad_sym": "ed92b65309a1c81817a83e736991bc1da665cdf92d8319cef7bae30e13382bdf",
+    "electronics/q2/battery-protection.kicad_sch": "0f87af93b32aa58bb1113631f3f8250e617f0d6f94bd6147e27b6cd7e333f5a0",
+    "electronics/q2/buttons.kicad_sch": "8f607b80df0449521843a9dbe238210dcecd64debab0464d117349e1aeb0ec19",
+    "electronics/q2/click-counter-Q2.kicad_pcb": "c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867",
+    "electronics/q2/click-counter-Q2.kicad_pro": "d7f8ab4930d9f721c4853c81b37b06bd529ea5b076349895729f7a7ead9e0565",
+    "electronics/q2/click-counter-Q2.kicad_sch": "43acd499a83ba2bb26b372a6f450d892a661d346ec4024ad600f1700c8da7b0e",
+    "electronics/q2/erc-Q2.json": "baac93e67cdd5ac18762f33644f9ca554c5c5251d9320a083152c7d6eca863b6",
+    "electronics/q2/fp-lib-table": "778cd945f579d6f6b6621aea9e660f6e1dc9ea1de53d2387bafc25fd76f992b6",
+    "electronics/q2/mcu-lcd.kicad_sch": "9054b4351644cb48eff796888e5b4c357d126e3d8baf6062e51164cfc4167b6f",
+    "electronics/q2/netlist-Q2.json": "3aae3dafcf2b6b5d1c1cac8932200bd2ba3e52ed39507f2c22e9a41b771bb065",
+    "electronics/q2/schematic-Q2.pdf": "27d0216d3c954917a043dcbbedc6cddab3e4fee0bae2d9638daadb7ee708a1be",
+    "electronics/q2/schematic-netlist-Q2.xml": "d51eedfca22f0c53b1588d8c72d467e6980cc55783c0ef457512231a2817ab32",
+    "electronics/q2/schematic-paths-Q2.json": "b107b83dd547e5f93e327e4b02498874df2301ebf69ba80d39f5b0b2e5c01b9d",
+    "electronics/q2/schematic-svg/click-counter-Q2-Battery connector and independent cell protection.svg": "061232c330ccde4aee9d454d646c97a7b9ac031e2d9d6af783c6f0ee9d9cdf36",
+    "electronics/q2/schematic-svg/click-counter-Q2-Count_reset keys, filtering and fixture access.svg": "4750d95f78bcd5b4542faa1255c0d52abb556839994272cde6d59036dd0762ec",
+    "electronics/q2/schematic-svg/click-counter-Q2-Independent temperature window and charge inhibit.svg": "80a884608179ae09bf9547074717a183a5216cd8359d47957b83de046c05b656",
+    "electronics/q2/schematic-svg/click-counter-Q2-MCU, LCD bias and programming.svg": "028a3598384e18cd55b4727b6bf2fba5b5a0296dc16e577b2efd04ffee4f2fed",
+    "electronics/q2/schematic-svg/click-counter-Q2-USB input, charging and 3 V supply.svg": "e8dddd602b98bf0a5c7256ac74d51a6756c4b1ac28cb42b5185b4e11d6068226",
+    "electronics/q2/schematic-svg/click-counter-Q2.svg": "34984ba60735f52484dbfe2c37cb8b86b08d4b5f5b6f852bddac6eac13d65fde",
+    "electronics/q2/schematic-validation-Q2.json": "c3402946f4e21797039c3cfb49888769c95dd417bbf36a2fe7be570a69221882",
+    "electronics/q2/sym-lib-table": "3c8e3d56323cf5aefba77c525b8423da0885efb902fd15457ac621ea8d6f09fa",
+    "electronics/q2/thermal.kicad_sch": "35079e6539ddc517268a9984be2f9bea489ba076ac9e992fcc40da2c18f526db",
+    "electronics/q2/usb-power.kicad_sch": "5ed97dabe0c8277ecc6fd463cb756fc8f6fe661eba27e7053d72c4210756d279",
+    "scripts/build_q2_board.py": "0bd078ba044d0b5d3ceba77483e5d1304d7991de77cd36f997b8f03f75d830ae",
+    "scripts/build_q2_model.py": "4f56d9d1d16c02a7ed52cdaa4f637ea0c15938dbcda0bd81d30a9df37cef7b36",
+    "scripts/build_q2_schematic.py": "f299786cd0eab1c5be139c8f7f2d88ec583374050b37081cbd2845513ea659e3",
+    "scripts/finish_q2_board.py": "45427be5268807dc107a4ecf30af450306b6e0fb43350cd52e29bee324602460",
+    "scripts/kicad_sexpr.py": "4a6c547f7f5bb0fcc7160da24c04e918c1d146026b4f990db624482fb8eacfeb",
+    "scripts/preroute_q2.py": "3484e82283e7901d85b8886a1e768e020f157e7d70b36b52c07c8e6669ace4af",
+    "scripts/sync_q2_board.py": "4ba806eee8f2f50b4522c982804940346d13aa6c7f2b41b29fa271db07ada47b",
+    "scripts/verify_q2.py": "36df13862f689c0860ead1c97f7ca55cfb4fbcdb25306f4704dc60e428dc5ff4"
+  },
+  "limitations": [
+    "File agreement, ERC and DRC do not establish analog behavior, battery safety, component sourcing or physical fit.",
+    "DE188 1.7 mm drill remains a quote/fit assumption, not a validated assembly tolerance.",
+    "Pulldown distance is pad-center straight-line proximity, not trace length or parasitic simulation.",
+    "Recorded native ignored checks remain explicit; clean reports are under that check configuration.",
+    "Q1 frozen package verification is separate: run scripts/verify_project.py."
+  ],
+  "manufacturing_released": false,
+  "native_checks": {
+    "drc": {
+      "date_from_native_report": "2026-09-15T06:49:02",
+      "ignored_checks": [
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch",
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries"
+      ],
+      "included_severities": [
+        "error",
+        "exclusion",
+        "warning"
+      ],
+      "kicad_version": "10.0.6"
+    },
+    "erc": {
+      "date_from_native_report": "2026-09-15T06:48:59",
+      "ignored_checks": [
+        "footprint_filter",
+        "four_way_junction",
+        "simulation_model_issue",
+        "single_global_label"
+      ],
+      "included_severities": [
+        "error",
+        "exclusion",
+        "warning"
+      ],
+      "kicad_version": "10.0.6"
+    }
+  },
+  "reports_sha256": {
+    "verification/q2-native-drc.json": "767555b81203d681d37e0d5fe08ddc17041b0b292b5cdae81ecfee4a108711cb",
+    "verification/q2-native-erc.json": "20dcdee96ce344023b4af6a3bc2e8467db5e92e2d698d1ca03b75101ae7253f5",
+    "verification/q2-native-netlist.xml": "527e4b55c97154dbaefe6006ea1c46039c7ced66e046611a544bf7a14df764b9"
+  },
+  "schema_version": 1,
+  "semantic_checks": {
+    "all_fields_nets_placements_and_paths_match": true,
+    "comparator_land_mm": [
+      1.4,
+      0.45
+    ],
+    "comparator_nsmd_margin_mm": 0.05,
+    "connected_physical_pins": 195,
+    "critical_lcd_paths": {
+      "LCDCAP0": {
+        "locked_segments": 4,
+        "locked_through_vias": 1,
+        "trace_length_mm": 3.079962
+      },
+      "LCDCAP1": {
+        "locked_segments": 4,
+        "locked_through_vias": 1,
+        "trace_length_mm": 3.287069
+      },
+      "LCD_R13": {
+        "locked_segments": 4,
+        "locked_through_vias": 1,
+        "trace_length_mm": 2.981003
+      },
+      "LCD_R23": {
+        "locked_segments": 4,
+        "locked_through_vias": 1,
+        "trace_length_mm": 3.171061
+      },
+      "LCD_R33": {
+        "locked_segments": 4,
+        "locked_through_vias": 1,
+        "trace_length_mm": 3.912805
+      }
+    },
+    "display_retained_drill_mm": 1.7,
+    "display_row_pitch_mm": 13.0,
+    "explicit_nc_physical_pins": 28,
+    "fitted_components": 50,
+    "fixture_lands": 10,
+    "gate_pulldown_pad_distances_mm": {
+      "R14.1-to-Q3.1": 1.7375,
+      "R15.1-to-Q4.1": 1.743963
+    },
+    "mounting_holes": 2,
+    "native_named_pads_including_duplicates": 226,
+    "nc_nets": {
+      "J1.A6": "unconnected-(J1-D+-PadA6)",
+      "J1.A7": "unconnected-(J1-D--PadA7)",
+      "J1.A8": "unconnected-(J1-SBUA-PadA8)",
+      "J1.B6": "unconnected-(J1-D+-PadB6)",
+      "J1.B7": "unconnected-(J1-D--PadB7)",
+      "J1.B8": "unconnected-(J1-SBUB-PadB8)",
+      "J2.MP1": "unconnected-(J2-ANCHOR1-PadMP1)",
+      "J2.MP2": "unconnected-(J2-ANCHOR2-PadMP2)",
+      "U1.12": "unconnected-(U1-P4.2/XOUT-Pad12)",
+      "U1.13": "unconnected-(U1-P4.1/XIN-Pad13)",
+      "U1.18": "unconnected-(U1-P4.0/TA1.1-Pad18)",
+      "U1.19": "unconnected-(U1-P1.7/TA0.1/TDO/A7-Pad19)",
+      "U1.20": "unconnected-(U1-P1.6/TA0.2/TDI/TCLK/A6-Pad20)",
+      "U1.21": "unconnected-(U1-P1.5/TA0CLK/TMS/A5-Pad21)",
+      "U1.22": "unconnected-(U1-P1.4/MCLK/TCK/A4/VREF+-Pad22)",
+      "U1.23": "unconnected-(U1-P1.3/UCA0STE/A3-Pad23)",
+      "U1.24": "unconnected-(U1-P1.2/UCA0CLK/A2-Pad24)",
+      "U1.27": "unconnected-(U1-P5.3/UCB0SOMI/UCB0SCL/L35-Pad27)",
+      "U1.28": "unconnected-(U1-P5.2/UCB0SIMO/UCB0SDA/L34-Pad28)",
+      "U1.29": "unconnected-(U1-P5.1/UCB0CLK/L33-Pad29)",
+      "U1.30": "unconnected-(U1-P5.0/UCB0STE/L32-Pad30)",
+      "U1.31": "unconnected-(U1-P2.7/L31-Pad31)",
+      "U1.32": "unconnected-(U1-P2.6/L30-Pad32)",
+      "U1.33": "unconnected-(U1-P2.5/L29-Pad33)",
+      "U1.34": "unconnected-(U1-P2.4/L28-Pad34)",
+      "U2.3": "unconnected-(U2-STAT2-Pad3)",
+      "U2.9": "unconnected-(U2-STAT1-Pad9)",
+      "U4.1": "unconnected-(U4-NC-Pad1)"
+    },
+    "pcb_uuid_count": 1790,
+    "references": 62,
+    "series_fet_body_diode_direction": "GND -> CE_MID -> CE_N; no CE_N -> GND body-diode bypass"
+  },
+  "status": "PASS \u2014 unreleased engineering candidate",
+  "tool": {
+    "executable_sha256": "bc9966f4a3c24db726aaac04856debf5dae8c2cc43eee6a482182c0f5df14aa8",
+    "version": "10.0.6"
+  }
+}

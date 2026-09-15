@@ -1,6 +1,6 @@
 # Independent review and controlled Q2 work
 
-Reviewed 15 September 2026 following Geoff's supplied adversarial review. **Q1 is on engineering hold.** Its submitted manufacturing files and firmware are preserved as historical evidence. The separate Q2 LCD firmware candidate corrects timing; it does not fix or qualify the board.
+Reviewed 15 September 2026 following Geoff's supplied adversarial review. **Q1 is on engineering hold.** Its submitted manufacturing files and firmware are preserved as historical evidence. The initial separate Q2 LCD firmware candidate corrects timing. The later coordinated Q2 hardware/schematic/enclosure work is tracked in `../PROJECT.md`, `q2-power-design.md` and `../electronics/q2/`; physical qualification remains open.
 
 ## Findings and dispositions
 
@@ -29,25 +29,25 @@ The initial manual check incorrectly repeated the source/binary allegation. An e
 
 The existing Rev0 fit study has concrete Q1 mismatches: rear screw centers are displaced 1.118 mm radially; the two front screws have no Q1 holes; the LCD pocket is displaced 1.25 mm and the USB opening 2.1 mm; the 20.9 mm battery bore is smaller than the permitted 21.0 mm insulated pack. Its generic MCU is modeled on the wrong board side, and many actual components, leads and tolerances are absent. These source-coordinate comparisons strengthen E08; they are not fresh solid-intersection or sample-fit tests. Existing STEP/STLs remain obsolete.
 
-## Work implemented and checked
+## Initial firmware checkpoint — fe9aa6b
 
 On `codex/q2-engineering-audit`, `firmware/main_msp430.c` uses divider 8 and makes LCDSON explicit. New `scripts/build_firmware.py` produces separate `firmware/q2-lcd-check/` outputs. The manifest records source/header/build-script hashes, exact compiler/support provenance, command flags, dependencies and output hashes.
 
 The candidate differs from Q1 in exactly **one loaded byte**, the LCD divider at 0xc53d. Compiled register writes, ELF/HEX equality and exclusion of information FRAM 0x1800–0x19ff are checked. Repeated builds reproduce all candidate files, and portable host tests pass. Verification continues to check frozen Q1 archive/member hashes; only the explicitly identified, manifest-bound main-source divergence is permitted.
 
-No PCB, BOM, placements, Gerbers, Q1 HEX/ELF/map, factory initializer or RFQ archive was changed. No target was flashed, fresh DRC/ERC run or physical test performed.
+At that initial firmware checkpoint, no PCB, BOM, placements, Gerbers, Q1 HEX/ELF/map, factory initializer or RFQ archive was changed; no target was flashed, fresh DRC/ERC run or physical test performed. This is historical checkpoint evidence. The subsequent separate Q2 native design and its fresh reports do not alter the frozen Q1 package.
 
 ## Display and quotation consequences
 
 The user's original display choice was arbitrary. Eight digits, 35 × 13 mm and the months-of-use target are design assumptions rather than fixed user requirements. [Display sourcing research](display-options-Q2.md) has not established a qualified replacement. The available OLED example's 23–29 mA specification could approach the current protection trip near 30 mA; its module-level 3 V operation and application consumption are also unverified. A stocked part alone is insufficient to select it.
 
-A broader search found the four-digit reflective Lumex LCD-S401M16KR as a smaller, credible low-power redesign lead with external distributor stock. JLCPCB stock is still unverified and LCSC reports zero, so it does not establish an easier two-vendor path. Choosing four digits would also require an explicit count-presentation decision. No display has been selected or removed from the existing scope.
+A broader search found the four-digit reflective Lumex LCD-S401M16KR as a smaller, credible low-power redesign lead with external distributor stock. JLCPCB stock is still unverified and LCSC reports zero, so it does not establish an easier two-vendor path. Choosing four digits would also require an explicit count-presentation decision. The subsequent Q2 decision retains the exact DE188 baseline because the researched alternatives do not establish a JLC stock advantage; see `q2-display-selection.md`.
 
 JLCPCB says no alternative to the requested LCD is stocked and suggests paid Global Sourcing preorder for DE188. That does not establish an exhaustive catalog search or authorize a purchase. Its battery-assembly exclusion and test-pricing restriction also remain, so replacing the display alone does not produce the requested complete delivered quote.
 
 Both vendors retain existing Q1 references for sourcing and budgetary discussion. PCBWay has the submitted five-unit PCB/assembly pair **W914112AS1N4 / T-1N5W914112A**. JLCPCB has the saved import draft but no formal order/quote number. Neither has supplied complete reviewed 5/10-unit prices. See [vendor ledger](../procurement/vendor-status.md).
 
-## Next controlled engineering sequence
+## Controlled engineering sequence and remaining gates
 
 1. Select a sourceable low-power display using exact electrical/mechanical data and assembler confirmation. Resolve U3's valid ordering variant and power consequences in the same revision.
 2. Create and review a native schematic, including the confirmed LCD correction where applicable and the power/thermal fault cases. Reconcile netlist, footprints, component values, routing and assembly files. Keep Q1 frozen.

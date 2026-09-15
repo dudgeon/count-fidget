@@ -1,0 +1,508 @@
+{
+  "revision": "Q2 engineering quotation candidate",
+  "purpose": "Vendor review and quotation only; no paid procurement or manufacturing release",
+  "hardware_tested": false,
+  "manufacturing_released": false,
+  "source_board_sha256": "c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867",
+  "file": "click-counter-Q2-RFQ.zip",
+  "bytes": 1930577,
+  "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438",
+  "members": {
+    "docs/adversarial-review-Q2.md": {
+      "bytes": 8834,
+      "sha256": "146beb3f9ab9b20086dbc985463274e978c3371f5ee62263af4f33e008e2f507"
+    },
+    "docs/open-issues.md": {
+      "bytes": 8547,
+      "sha256": "2bd55352e648ec119364c839c13e7a2f22c381aee0e63f94510677883898f227"
+    },
+    "docs/q2-candidate-independent-review.md": {
+      "bytes": 14764,
+      "sha256": "ded1828debb064be63053fd8c2a16f1d0b6245b17046d31ec7476ef6b6beb933"
+    },
+    "docs/q2-display-selection.md": {
+      "bytes": 6692,
+      "sha256": "147cf17e15aebd299a46c1ce3ab36ebaf2019da16d65d6f6e2c7ec8ca5218847"
+    },
+    "docs/q2-power-design.md": {
+      "bytes": 18739,
+      "sha256": "2b041e6738f90ee43dc9d6ffa9a87e3173bc79a2a5f6a6e346d6ad427d90b7c1"
+    },
+    "docs/q2-power-independent-review.md": {
+      "bytes": 5209,
+      "sha256": "eec9ff4555e85e872d28a9a1d4ff27911cc0e74c1ee7f2a8c36fa45dbebedc22"
+    },
+    "docs/q2-solder-mask-review.md": {
+      "bytes": 3571,
+      "sha256": "80260972ebe9dea237267c52ca6467523251796c89919d154c89a608b7109d60"
+    },
+    "docs/review-charger-Q2.md": {
+      "bytes": 8236,
+      "sha256": "4a757e2e50c0c87449c5bac6b0772bb39ac35fb96d6842a2c1baa5aa70b3992f"
+    },
+    "docs/review-lcd-firmware-Q2.md": {
+      "bytes": 8660,
+      "sha256": "5d4867e9606e6d56a48c2dae25346c8725c5c0367aa53979f654bdcc0f7362dd"
+    },
+    "docs/review-mechanical-Q2.md": {
+      "bytes": 7224,
+      "sha256": "0940022ab5bd27883514a10fd6dfabac1ef53490b96c0b315f176ba2a750d348"
+    },
+    "docs/review-protection-Q2.md": {
+      "bytes": 5808,
+      "sha256": "7646672e59145f3e2510337ef716ee24b885d846cc91d06b24d4af0a2cc9985e"
+    },
+    "electronics/netlist.json": {
+      "bytes": 22960,
+      "sha256": "2c5e467ac28debd6ef5a9b3e1fad04f4b897df52ebad9772dd8da920530f8d7b"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB.kicad_mod": {
+      "bytes": 4417,
+      "sha256": "c8e601f0038d18db886fca595462a92e19a587bb79a610992cfb1c2ff776d319"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Capacitor_SMD_C_0603_1608Metric.kicad_mod": {
+      "bytes": 2451,
+      "sha256": "17877a5fef658fdf5b737d8315d75ff1c46214553ef2ff05f107442fc584bd1e"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Capacitor_SMD_C_0805_2012Metric.kicad_mod": {
+      "bytes": 2545,
+      "sha256": "2bf5abdba5044a3374af2e9aab575101b6d343e97a8f36e1956ec6699cb12348"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal.kicad_mod": {
+      "bytes": 6379,
+      "sha256": "1a9eadea3cfe496757704fc37694085e6f38122664b33a43872a973a8da69926"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": {
+      "bytes": 6522,
+      "sha256": "a2617d52a4e9b6ab2729406cc8d3c5520c8b3355eb4d1846ca9240b144a2829a"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/DE188_20P_rows13.0mm.kicad_mod": {
+      "bytes": 4547,
+      "sha256": "27f936423efb8c96974d5d9cdb4e30f267553adbb40c009692bf830bd0429279"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/MountingHole_MountingHole_2.2mm_M2.kicad_mod": {
+      "bytes": 2003,
+      "sha256": "bcc8a7c1efe5c59463d539bd786e8e14f2e90f30130fe894b1d04e358bce4710"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm.kicad_mod": {
+      "bytes": 5955,
+      "sha256": "2199e528764ad21497f8b71404146d00b4203519c7fcfbf1ed1fd92ecc614728"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Package_SON_WSON-6_1.5x1.5mm_P0.5mm.kicad_mod": {
+      "bytes": 4034,
+      "sha256": "e036eb44c0a1e856cd610e82391afd6061ff69ddc4bba6c3fb360a7ba63352b9"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm.kicad_mod": {
+      "bytes": 12381,
+      "sha256": "4dbdffd726bba11e5aa1385088f43251318433d9452bf230ed432a5ce8e11926"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Package_TO_SOT_SMD_SOT-23-5.kicad_mod": {
+      "bytes": 5393,
+      "sha256": "0ed633c9b02477b6b2782351882eac81bb78cb735dfa30f43e64a7a7673ee262"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Package_TO_SOT_SMD_SOT-23-6.kicad_mod": {
+      "bytes": 4900,
+      "sha256": "12aef0095926303e22872b7966a7249266ddf7c04b1569177a7de029b3eca6aa"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Package_TO_SOT_SMD_SOT-23.kicad_mod": {
+      "bytes": 5042,
+      "sha256": "27e4b7f0574acd3b773024f9fa8cd87b2b7099e1d0d9053ae27084e853134853"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/Resistor_SMD_R_0603_1608Metric.kicad_mod": {
+      "bytes": 2453,
+      "sha256": "f6a36ee2b44dbad84910754eaf46b0732a61cca0d34aee97e1cd5513e0dee705"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/TLV7032_DGK0008A_TI.kicad_mod": {
+      "bytes": 5558,
+      "sha256": "27f5b299dd099fdc794929e1b6206f7af1e81c9096ef6df6b97832502adcc0d6"
+    },
+    "electronics/q2/ClickCounterQ2.pretty/TestPoint_TestPoint_Pad_D1.5mm.kicad_mod": {
+      "bytes": 1608,
+      "sha256": "3323cabc242552f1c7eecb74381ad5510b00a89824374ae13f3c637bf721e1af"
+    },
+    "electronics/q2/CountFidgetQ2.kicad_sym": {
+      "bytes": 75080,
+      "sha256": "ed92b65309a1c81817a83e736991bc1da665cdf92d8319cef7bae30e13382bdf"
+    },
+    "electronics/q2/SCHEMATIC-README.md": {
+      "bytes": 4607,
+      "sha256": "5a44a16ae4e8b7ad34445c65d5eba2d84b53fa4035512ccee8c0f285027c58ed"
+    },
+    "electronics/q2/VALIDATION-README.md": {
+      "bytes": 7148,
+      "sha256": "8957f81cdc079a3246c519c8a614c78d3b9b1635cea9500b99dde952cee397ea"
+    },
+    "electronics/q2/battery-protection.kicad_sch": {
+      "bytes": 37629,
+      "sha256": "0f87af93b32aa58bb1113631f3f8250e617f0d6f94bd6147e27b6cd7e333f5a0"
+    },
+    "electronics/q2/buttons.kicad_sch": {
+      "bytes": 22320,
+      "sha256": "8f607b80df0449521843a9dbe238210dcecd64debab0464d117349e1aeb0ec19"
+    },
+    "electronics/q2/click-counter-Q2.kicad_pcb": {
+      "bytes": 599329,
+      "sha256": "c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867"
+    },
+    "electronics/q2/click-counter-Q2.kicad_pro": {
+      "bytes": 9780,
+      "sha256": "d7f8ab4930d9f721c4853c81b37b06bd529ea5b076349895729f7a7ead9e0565"
+    },
+    "electronics/q2/click-counter-Q2.kicad_sch": {
+      "bytes": 4182,
+      "sha256": "43acd499a83ba2bb26b372a6f450d892a661d346ec4024ad600f1700c8da7b0e"
+    },
+    "electronics/q2/erc-Q2.json": {
+      "bytes": 2112,
+      "sha256": "baac93e67cdd5ac18762f33644f9ca554c5c5251d9320a083152c7d6eca863b6"
+    },
+    "electronics/q2/fp-lib-table": {
+      "bytes": 182,
+      "sha256": "778cd945f579d6f6b6621aea9e660f6e1dc9ea1de53d2387bafc25fd76f992b6"
+    },
+    "electronics/q2/mcu-lcd.kicad_sch": {
+      "bytes": 71131,
+      "sha256": "9054b4351644cb48eff796888e5b4c357d126e3d8baf6062e51164cfc4167b6f"
+    },
+    "electronics/q2/netlist-Q2.json": {
+      "bytes": 30446,
+      "sha256": "3aae3dafcf2b6b5d1c1cac8932200bd2ba3e52ed39507f2c22e9a41b771bb065"
+    },
+    "electronics/q2/schematic-Q2.pdf": {
+      "bytes": 273709,
+      "sha256": "27d0216d3c954917a043dcbbedc6cddab3e4fee0bae2d9638daadb7ee708a1be"
+    },
+    "electronics/q2/schematic-netlist-Q2.xml": {
+      "bytes": 134591,
+      "sha256": "d51eedfca22f0c53b1588d8c72d467e6980cc55783c0ef457512231a2817ab32"
+    },
+    "electronics/q2/schematic-paths-Q2.json": {
+      "bytes": 43068,
+      "sha256": "b107b83dd547e5f93e327e4b02498874df2301ebf69ba80d39f5b0b2e5c01b9d"
+    },
+    "electronics/q2/schematic-svg/click-counter-Q2-Battery connector and independent cell protection.svg": {
+      "bytes": 445376,
+      "sha256": "061232c330ccde4aee9d454d646c97a7b9ac031e2d9d6af783c6f0ee9d9cdf36"
+    },
+    "electronics/q2/schematic-svg/click-counter-Q2-Count_reset keys, filtering and fixture access.svg": {
+      "bytes": 272871,
+      "sha256": "4750d95f78bcd5b4542faa1255c0d52abb556839994272cde6d59036dd0762ec"
+    },
+    "electronics/q2/schematic-svg/click-counter-Q2-Independent temperature window and charge inhibit.svg": {
+      "bytes": 383063,
+      "sha256": "80a884608179ae09bf9547074717a183a5216cd8359d47957b83de046c05b656"
+    },
+    "electronics/q2/schematic-svg/click-counter-Q2-MCU, LCD bias and programming.svg": {
+      "bytes": 889219,
+      "sha256": "028a3598384e18cd55b4727b6bf2fba5b5a0296dc16e577b2efd04ffee4f2fed"
+    },
+    "electronics/q2/schematic-svg/click-counter-Q2-USB input, charging and 3 V supply.svg": {
+      "bytes": 607639,
+      "sha256": "e8dddd602b98bf0a5c7256ac74d51a6756c4b1ac28cb42b5185b4e11d6068226"
+    },
+    "electronics/q2/schematic-svg/click-counter-Q2.svg": {
+      "bytes": 453812,
+      "sha256": "34984ba60735f52484dbfe2c37cb8b86b08d4b5f5b6f852bddac6eac13d65fde"
+    },
+    "electronics/q2/schematic-validation-Q2.json": {
+      "bytes": 6263,
+      "sha256": "c3402946f4e21797039c3cfb49888769c95dd417bbf36a2fe7be570a69221882"
+    },
+    "electronics/q2/sym-lib-table": {
+      "bytes": 182,
+      "sha256": "3c8e3d56323cf5aefba77c525b8423da0885efb902fd15457ac621ea8d6f09fa"
+    },
+    "electronics/q2/thermal.kicad_sch": {
+      "bytes": 30466,
+      "sha256": "35079e6539ddc517268a9984be2f9bea489ba076ac9e992fcc40da2c18f526db"
+    },
+    "electronics/q2/usb-power.kicad_sch": {
+      "bytes": 75953,
+      "sha256": "5ed97dabe0c8277ecc6fd463cb756fc8f6fe661eba27e7053d72c4210756d279"
+    },
+    "electronics/q2/~click-counter-Q2.kicad_pro.lck": {
+      "bytes": 47,
+      "sha256": "836f4bc354dceb74a96a7a2476003b6594f7264fe1f7a21f045b1c4ab565207e"
+    },
+    "firmware/counter.c": {
+      "bytes": 3377,
+      "sha256": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe"
+    },
+    "firmware/counter.h": {
+      "bytes": 1077,
+      "sha256": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6"
+    },
+    "firmware/factory-display-info.hex": {
+      "bytes": 100,
+      "sha256": "ef7291f4e43d64b14684b13a0d4269a03ae6fa84429d377064bf04964b194736"
+    },
+    "firmware/lcd_de188.c": {
+      "bytes": 786,
+      "sha256": "757c91b25374c0aba871d53c0d368efb562ac4c2ecdead77c6d1013907715e9c"
+    },
+    "firmware/lcd_de188.h": {
+      "bytes": 381,
+      "sha256": "0df7cf67cb9511faaa975e9323683a852f024778bdb82f834ea465cb7401c091"
+    },
+    "firmware/main_msp430.c": {
+      "bytes": 5828,
+      "sha256": "416b1301496537745f250c7fe4adea980f7ae35105715457f88b5a4a50343a7c"
+    },
+    "firmware/q2-lcd-check/build-manifest.json": {
+      "bytes": 10986,
+      "sha256": "c1bcb9466c7dbdbb6b9a7b7a2354931e0ca1ca3691526873cd441ea8a1f81ce3"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.elf": {
+      "bytes": 10376,
+      "sha256": "c0bcc80eb388957fdf445f392e36c233bebb9822cd08a99dc4b339cae0d38ed8"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.hex": {
+      "bytes": 6656,
+      "sha256": "ede21ce66a43bf40929522c9839521c5b1b94b2c458bb4a5411a1d6222cbcfe7"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.lst": {
+      "bytes": 35951,
+      "sha256": "7bea565bafe771d68b2585835c8ca724c9c20af4a7d75356e6ed60a7bb850112"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.map": {
+      "bytes": 71754,
+      "sha256": "c82f60bb3e98eab19e8d25aaa6973b36ace7bb1ca75c26065ef9b7160a3d8e7a"
+    },
+    "mechanical/q2/README.md": {
+      "bytes": 10961,
+      "sha256": "7a981892a52bfd63fa863c46065cc896d995d4eebbb2263267873bc08ba865c7"
+    },
+    "mechanical/q2/assembled-Q2.png": {
+      "bytes": 39219,
+      "sha256": "12a74cc0d1b63c6670fe48c01b5210899e9f918101aed7bc1770f73684b72c89"
+    },
+    "mechanical/q2/base-Q2.stl": {
+      "bytes": 350784,
+      "sha256": "24a545865405fd7210a503ec8a562ac656345c40b12dabb10fabb11651ceff3c"
+    },
+    "mechanical/q2/battery-bay-Q2.png": {
+      "bytes": 41350,
+      "sha256": "cbd045b3bb446b5422dbfafaa02f0231ee50df54624a566ab82f4b285ee094cc"
+    },
+    "mechanical/q2/battery-keeper-Q2.stl": {
+      "bytes": 97084,
+      "sha256": "cbeb574d60d7937ecef8e6f24475051529db9002c2d6d28a319c23a8579b1c29"
+    },
+    "mechanical/q2/board-geometry.json": {
+      "bytes": 78343,
+      "sha256": "c9d06bb98c7704e1fad645cc0ff71f623fdc10df5a91719964008868d2aaef16"
+    },
+    "mechanical/q2/build-manifest.json": {
+      "bytes": 1180,
+      "sha256": "447ad2dd4f89203fcffb8df440132680e95064cde0265cb57f7a8e62f5492663"
+    },
+    "mechanical/q2/enclosure-Q2.step": {
+      "bytes": 2337105,
+      "sha256": "aa8522bc0e27cfcd5116b6402bf2826a49c8d4ddfc5c09856fc248bd6dc92443"
+    },
+    "mechanical/q2/exploded-Q2.png": {
+      "bytes": 43768,
+      "sha256": "bb417a23da4b586856c3f7c583fda4bed36842545f4714bc4a4031863213902e"
+    },
+    "mechanical/q2/fit-report.json": {
+      "bytes": 3206,
+      "sha256": "da00702c8f5bceaf81a541e9dddc0a4bfab3f9252a02a57647a5f3c49484450c"
+    },
+    "mechanical/q2/interior-Q2.png": {
+      "bytes": 41316,
+      "sha256": "d676978a3664085efd7601847b88f81eba9bb232f8acd34b1735497558b9d133"
+    },
+    "mechanical/q2/lid-Q2.stl": {
+      "bytes": 209984,
+      "sha256": "58e3ba9c5953a7347d225eb19cd2c10098b4fafdba7126633f9f8f597d0f9b8c"
+    },
+    "procurement/q2/BOM-JLCPCB-Q2.csv": {
+      "bytes": 8006,
+      "sha256": "b51803b612ec3b8aa883b989d908776650009a0bc0f2206158b79746bcb68dde"
+    },
+    "procurement/q2/BOM-PCBA-Q2.csv": {
+      "bytes": 7017,
+      "sha256": "5f83204edfb3f961b5e65507c9161a7d43487057f6ac0c48e3def5324811a0ef"
+    },
+    "procurement/q2/BOM-Q2.csv": {
+      "bytes": 7474,
+      "sha256": "d37d44598639acb358a19649c87f5092ed5befe7ad4e5c923b4312e3d7dced19"
+    },
+    "procurement/q2/CPL-JLCPCB-Q2.csv": {
+      "bytes": 2295,
+      "sha256": "a57bf21c9b9a3e75c57e50273bc751b639a753518884ffb40584dbf888d36280"
+    },
+    "procurement/q2/OFFBOARD-items-Q2.csv": {
+      "bytes": 549,
+      "sha256": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66"
+    },
+    "procurement/q2/README.md": {
+      "bytes": 2802,
+      "sha256": "9e55b39c8d63af470d0729b505c230c3ca75279a93e51a5569404ef3eff5a7a7"
+    },
+    "procurement/q2/RFQ-Q2.html": {
+      "bytes": 22890,
+      "sha256": "8a4335f53a4a2d7032f9da495642e1f967f76a61ce4de41b5f38100de07be987"
+    },
+    "procurement/q2/RFQ-Q2.md": {
+      "bytes": 20404,
+      "sha256": "b85a2b5be62f80cf6c79b859dfc8191b9ea1ad5c9056f021e4ffdc54d902ee44"
+    },
+    "procurement/q2/assembly-bottom-Q2.svg": {
+      "bytes": 378278,
+      "sha256": "e44db9b4e7e0268d51bcd92ab268cc24930c39c9e4e3ddf67ad00af672f3f7b0"
+    },
+    "procurement/q2/assembly-top-Q2.svg": {
+      "bytes": 227119,
+      "sha256": "c9687b0c803c1c15e2339348c7e1aaf7a781571958c9eaf059955bc60aa15bb3"
+    },
+    "procurement/q2/click-counter-Q2-Gerbers.zip": {
+      "bytes": 87741,
+      "sha256": "ce9faa396e9178dc2fcefb0b02d0e083b0a82e53b5bc393b019dff1d1d61b3f0"
+    },
+    "procurement/q2/drill-report-Q2.txt": {
+      "bytes": 994,
+      "sha256": "a938f7534b1d8033b322219e3df360416cc0f63aae58da1342063295d558ac62"
+    },
+    "procurement/q2/export-manifest-Q2.json": {
+      "bytes": 6701,
+      "sha256": "4a35c94eb722475b6b2c6527e9c50f937b303d77c512aceb3630e4898e8bf368"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-B_Cu.gbl": {
+      "bytes": 30396,
+      "sha256": "0231c120dc345767984bef5e17881c9a9a03cc809ab1dd445606d1ea8ecca125"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-B_Mask.gbs": {
+      "bytes": 8039,
+      "sha256": "197f2a0c42af6a3b908378f1bbbd8cf01cb4bf1fe3615aa9100d681844a1da7b"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-B_Paste.gbp": {
+      "bytes": 6421,
+      "sha256": "62b5f3b5d3c46660dabac549da125ab124d6a894fe6814f16e6e625b2a4e46eb"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-B_Silkscreen.gbo": {
+      "bytes": 12825,
+      "sha256": "637524bac28a3dfdd65fe7a6bb342242abd52687e60b4d08e6e0adb8eb98d2a1"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-Edge_Cuts.gm1": {
+      "bytes": 909,
+      "sha256": "f8e1e49ebc17504d670e75879d4588795031098adce2b08eb1da66092f5da730"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-F_Cu.gtl": {
+      "bytes": 18060,
+      "sha256": "402b1b48e1aba099753a3ccbc99f028a3d8bd17bb63cdbbe14445733fad43a8f"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-F_Mask.gts": {
+      "bytes": 4467,
+      "sha256": "44c282ceac4e881a3368d39ef45f483831581f3d469a1b8d095057d9d0a51928"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-F_Paste.gtp": {
+      "bytes": 3442,
+      "sha256": "74f6e6e23de89d7e05f63931f7e402f71f1468147ff4a7ad942b463239122615"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-F_Silkscreen.gto": {
+      "bytes": 7717,
+      "sha256": "d52838b77a6dd18596a1d509b61b0f52b76389f6a6508e0a708d98aa8edc11d4"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-In1_Cu.g1": {
+      "bytes": 119599,
+      "sha256": "c89ec3c567888958eaf646b32bb03be67789a2820fb7cc875393300e5721e345"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-In2_Cu.g2": {
+      "bytes": 115506,
+      "sha256": "46544e3aa96a6686da20539fb0eb87a2e064fec65cad0d4bbd92d9b93926828f"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-NPTH.drl": {
+      "bytes": 656,
+      "sha256": "6b6432d4488e8b7aeec5d09132b5d83c8f6b6e3509f9366535ca679579abb472"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-PTH.drl": {
+      "bytes": 2283,
+      "sha256": "66fd0095cb942096f6e2af100dca3ea0a4c097545d5abec03a9312feae9494ba"
+    },
+    "procurement/q2/gerbers/click-counter-Q2-job.gbrjob": {
+      "bytes": 3874,
+      "sha256": "091aae08a3ea2743838853fcd71c16b9c0220d608d208b015e64c4b724eb4b04"
+    },
+    "procurement/q2/placements-KiCad-Q2.csv": {
+      "bytes": 4389,
+      "sha256": "4fa79f094e8737dfc3c5e9d294cb7f670affb7a17e98b163992d73e219352f53"
+    },
+    "scripts/build_firmware.py": {
+      "bytes": 14130,
+      "sha256": "2467b517d5eccd84cfffee0493a635e1b5242137cf7c7f49c4c618aea9131b36"
+    },
+    "scripts/build_q2_board.py": {
+      "bytes": 5947,
+      "sha256": "0bd078ba044d0b5d3ceba77483e5d1304d7991de77cd36f997b8f03f75d830ae"
+    },
+    "scripts/build_q2_enclosure.py": {
+      "bytes": 19882,
+      "sha256": "cbcc9332c3c81f6314d6f8b296a523fa1d032f53aa5344201b846e2a84c1da73"
+    },
+    "scripts/build_q2_model.py": {
+      "bytes": 5498,
+      "sha256": "4f56d9d1d16c02a7ed52cdaa4f637ea0c15938dbcda0bd81d30a9df37cef7b36"
+    },
+    "scripts/build_q2_schematic.py": {
+      "bytes": 21044,
+      "sha256": "f299786cd0eab1c5be139c8f7f2d88ec583374050b37081cbd2845513ea659e3"
+    },
+    "scripts/export_q2.py": {
+      "bytes": 6837,
+      "sha256": "4423aacb5d2a4c66fde8294519f3a9d75b0da26ca5d337eb94701bde75f62e74"
+    },
+    "scripts/finish_q2_board.py": {
+      "bytes": 5309,
+      "sha256": "45427be5268807dc107a4ecf30af450306b6e0fb43350cd52e29bee324602460"
+    },
+    "scripts/kicad_sexpr.py": {
+      "bytes": 1426,
+      "sha256": "4a6c547f7f5bb0fcc7160da24c04e918c1d146026b4f990db624482fb8eacfeb"
+    },
+    "scripts/package_q2.py": {
+      "bytes": 4737,
+      "sha256": "5a02882c55fe5bbf7c15835ad9bb915c3f03fe04513761637a3486ae3374c1ec"
+    },
+    "scripts/package_rfq.py": {
+      "bytes": 7142,
+      "sha256": "cc5d06cfe442d3996c8284a8669c5c1a29f98756a7173febe1bcaa74961ba33e"
+    },
+    "scripts/preroute_q2.py": {
+      "bytes": 3712,
+      "sha256": "3484e82283e7901d85b8886a1e768e020f157e7d70b36b52c07c8e6669ace4af"
+    },
+    "scripts/run_host_tests.py": {
+      "bytes": 1181,
+      "sha256": "243baf1a8f6b91a6520aaab3b29a853182b3fe4a760cf828d56c961b560a3f9e"
+    },
+    "scripts/sync_q2_board.py": {
+      "bytes": 2928,
+      "sha256": "4ba806eee8f2f50b4522c982804940346d13aa6c7f2b41b29fa271db07ada47b"
+    },
+    "scripts/verify_project.py": {
+      "bytes": 5375,
+      "sha256": "9dedec8765ca969222315f3a70cea879a78886be67f5d3758f504dcd2dd69dab"
+    },
+    "scripts/verify_q2.py": {
+      "bytes": 27103,
+      "sha256": "36df13862f689c0860ead1c97f7ca55cfb4fbcdb25306f4704dc60e428dc5ff4"
+    },
+    "verification/q2-native-drc.json": {
+      "bytes": 1094,
+      "sha256": "767555b81203d681d37e0d5fe08ddc17041b0b292b5cdae81ecfee4a108711cb"
+    },
+    "verification/q2-native-erc.json": {
+      "bytes": 2112,
+      "sha256": "20dcdee96ce344023b4af6a3bc2e8467db5e92e2d698d1ca03b75101ae7253f5"
+    },
+    "verification/q2-native-netlist.xml": {
+      "bytes": 134591,
+      "sha256": "527e4b55c97154dbaefe6006ea1c46039c7ced66e046611a544bf7a14df764b9"
+    },
+    "verification/q2-validation.json": {
+      "bytes": 12204,
+      "sha256": "ba60d02d9c2d90c276d16f353a1c3193bd151c83b9001326d8c2759acc1800de"
+    }
+  }
+}
