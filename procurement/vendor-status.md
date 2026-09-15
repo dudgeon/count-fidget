@@ -1,22 +1,80 @@
 # Vendor status and website resume procedure
 
-## Current continuation — approved Q2 sharing, 15 September 2026
+## Current portal progress — 15 September 2026
 
-- **User approval received:** Geoff explicitly approved sharing the finished Q2 package and technical follow-up with both vendors. The previous specific-disclosure approval blocker is resolved. Both Q2 email dispatches are confirmed below; vendor acknowledgment and portal acceptance remain pending.
-- **One correspondence channel: email only for both vendors.** At **2026-09-15 11:06:51 UTC**, the latest four vendor emails were reread. No newer email was found beyond Remi's 2026-09-15 03:23:59 UTC email-only request and Frank's 2026-09-14 21:23:46 UTC rough quote/import reply. Remi explicitly requested email; Mitchell directed follow-up to Frank's existing email case. The user instructed us to choose email or portal correspondence, not both. Portals are reserved for required file imports/forms, with no portal chat/messages or duplicate correspondence.
+**Latest user direction: use both portals proactively for revised-file uploads and automatic quotes; email is the fallback for matters the portals cannot accomplish.** Do not await email file-replacement instructions when the site already supports the action, and do not duplicate correspondence. This supersedes the earlier email-only workflow choice; both verified Q2 email sends remain historical evidence.
+
+### JLCPCB Q2 saved revision — 5 units approximately 11:36 UTC; 10 units approximately 11:46 UTC
+
+**Imports processed; quote advancement blocked.**
+
+- Used **Re-Upload** to create a saved Q2 revision. `click-counter-Q2-Gerbers.zip` was processed as **4 layers / 42×40 mm**. `BOM-JLCPCB-Q2.csv` and `CPL-JLCPCB-Q2.csv` processed **50 PCB refs**. The private saved-draft identifier is intentionally omitted from this public repo.
+- Quantity **5**, **Standard / both sides**, **1.0 mm**, **S1000H Tg155**, **ENIG 1 microinch**, **1 oz outer / 0.5 oz inner** selected. **Depanel before delivery = Yes**. JLCPCB forces a **70×70 mm support panel**; the finished board remains 42×40 mm.
+- **Function Test = Yes** and **Assembly Remark = Yes**, with `click-counter-Q2-RFQ.zip` attached in both fields and the filenames verified. **Confirm Production File = Yes** and **Confirm Parts Placement = Yes**, with **Do not confirm automatically** checked for both. These are draft review settings, not release approval.
+- **Via process difference remains open:** the portal forces **Plugged**, while **Tented** is disabled. The PCB note requests review against the RFQ's tenting specification. The selected portal option is a quotation input, not confirmation that this process difference is accepted for manufacture.
+- J1 was automatically unchecked during import; it was restored manually as exact **GCT USB4105-GF-A / C3020560**. Current labels: **40 confirmed / 10 shortage / 1 unmatched**; they overlap and must not be summed as distinct refs. All **50 required refs are retained**.
+- Shortages shown for **C1, C3, C5, R3, R9, R11, R16, SW1, SW2 and U5**. **DS1 remains unmatched**. Catalog searches for `DE188` and `DE 188` returned **No Result**, with all stock filters unchecked. This describes those searches, not proof that every possible sourcing path is unavailable.
+- **Next** shows **Project has unselected parts**, offering **Do not place** or **Select parts**. **Select parts** was chosen; no DNP accepted. The **Quote & Order** tab did not advance. No complete formal quote/order exists from this draft.
+- Quantity-5 estimates displayed: **PCB subtotal $32.41** and **DHL DDP shipping $27.63**. Components and assembly are not included yet. These are partial calculator estimates, not a complete RFQ, supported lithium-shipping acceptance or final landed quote.
+
+**Subsequent ten-unit saved draft, approximately 11:46 UTC:** the same Q2 revision now has **10 PCB + 10 PCBA**, Standard/both sides. Current labels are **50 detected / 39 confirmed / 10 shortage / 1 not selected**. J1 remains selected: quantity 10, displayed component line **$10.8220**; this is not a full component subtotal. DS1 is still unmatched; Next again showed **Project has unselected parts**, and **Select parts** was chosen, never DNP. JLCPCB manual matching requires $10 and starts 1–2 working days after payment under its [service terms](https://jlcpcb.com/help/article/terms-and-conditions-of-jlcpcb-parts-selection-service); it was not activated. No successful LCD match or Quote & Order advancement is established.
+
+| Ten-unit shortage shown | Pieces short |
+|---|---:|
+| C1/C3/C5 combined | 34 |
+| R3 | 4 |
+| R9 | 1 |
+| R11 | 20 |
+| R16 | 4 |
+| SW1/SW2 combined | 20 |
+| U5 | 10 |
+
+Ten-unit **PCB estimate $39.81** comprises **$13.00 special offer + $17.60 ENIG + $8.17 material + $1.04 production-file confirmation**. **DHL DDP $27.63**, 2–4 business days, 0.24 kg was shown. Assembly and total component prices remain dashes. Neither this PCB subtotal nor the selected J1 line is a complete quote.
+
+Changing PCB specifications cleared the PCB remark and opened an empty assembly remark modal. Both were restored: a **193-character PCB remark** explicitly identifies the **finished 42×40×1 mm board**, and a **485-character assembly scope plus RFQ attachment** was verified. The Function Test RFQ attachment remained present. The production **Do not confirm automatically** checkbox was reapplied and confirmed; **Confirm Parts Placement = Yes** was verified selected. The earlier no-auto placement setting is part of the five-unit observation; do not claim a fresh ten-unit checkbox recheck that was not recorded.
+
+**Still open at JLCPCB:** resolve the exact required LCD and shortages without DNP or paid preorder using the existing Frank case, and obtain a priced completion path for unsupported battery/test scope. Manual matching requires payment and was not activated.
+
+### PCBWay Q2 form — five- and ten-unit calculations captured
+
+Both quantities were calculated in a fresh Q2 form. The user approved the new Special Notes / Agree notice, accepted before cart creation at **11:48:56 UTC**. All four uploaded Q2 files showed **100% Success**, and **Submit the File Now** completed. Final cart verification at **11:51:09 UTC** showed PCB **W914112AS1N6** / assembly **T-1N7W914112A**, quantity **5**, PO **COUNT-FIDGET-Q2-RFQ-5**, both **Subject to audit**. The Gerber ZIP appears on the PCB entry; all four filenames appear on assembly. **Under Review 4 / Awaiting Payment 0 / Production 0**, including the unchanged Q1 entries. Ten is calculator-only; the submitted scope requests complete separate 5/10 prices.
+
+| Partial online calculation (USD) | 5 units | 10 units |
+|---|---:|---:|
+| PCB | 55.93 | 81.36 |
+| Assembly | 88.00 | 102.95 |
+| DHL shipping shown | 27.27 | 27.27 |
+| Shipping discount shown | −27.27 | −27.27 |
+| **Partial total** | **143.93** | **184.31** |
+| Quoted shipping weight (kg) | 0.52 | 0.54 |
+
+**Components and advanced services are excluded from these online costs.** The form requests depaneling, functional testing, firmware loading and cable-harness work; selecting these services does not include their prices in the totals above. The shipping promotion is not a confirmed full-scope lithium/landed quote. PCB lead time shown is **4–5 days**; freight is **2–4 business days**. Neither establishes the complete assembled-product delivery schedule.
+
+The form uses turnkey sourcing, both sides, **no Chinese alternatives**, **32 unique types / 47 SMT placements / 0 BGA-QFP / 4 parts requiring through-hole work**. The four include the hybrid USB connector, already counted among SMT placements; this does not change the **50 fitted PCB references**.
+
+Selected construction: **1.0 mm, Tg150–160, 5/5 mil, 0.3 mm minimum drill, ENIG 1 microinch, tenting, 1 oz outer copper**. The portal's minimum inner copper is **1 oz**, so these calculations do **not** represent the preferred 0.5 oz inner construction. The PCB remark explicitly requests 0.5 oz inner and a separately quoted alternative. Retain the construction difference when comparing with JLCPCB's selected 0.5 oz inner configuration.
+
+The specific Special Notes / Agree gate is resolved by the user’s explicit approval. Saved fabrication details confirm **S1000H TG150**, the construction above and the full no-manufacture/0.5 oz-inner-review note. Saved assembly details confirm both sides, quantity5, counts32/47/0/4, and Yes for depaneling, function test, firmware loading and cable harness. The full assembly remark is present. The form labels47 as SMD Parts but saved detail says SMT Pads:47 is placements, and vendor solder-point pricing remains to be calculated from the board/BOM.
+
+Q2 files are submitted for review; this establishes file acceptance, not technical acceptance or a complete quote. No paid sourcing, purchase or manufacturing release occurred.
+
+## Q2 sharing and Sent-mail records — earlier in this continuation
+
+- **User approval received:** Geoff explicitly approved sharing the finished Q2 package and technical follow-up with both vendors. The previous specific-disclosure approval blocker is resolved. Both Q2 email dispatches are confirmed below. JLCPCB subsequently processed the Q2 draft imports described above; PCBWay Q2 files were subsequently accepted for review; vendor technical acknowledgment/full quotation remain unconfirmed.
+- **Historical channel decision:** at **2026-09-15 11:06:51 UTC**, the latest four vendor emails were reread. No newer email was found beyond Remi's 2026-09-15 03:23:59 UTC email-only request and Frank's 2026-09-14 21:23:46 UTC rough quote/import reply. This informed the then-current email-only choice. The user subsequently clarified **portal workflows first, email fallback** as recorded above; do not treat the old choice as a reason to wait for email instructions.
 - **Q2 ready at commit `c1240b9`:** `dist/q2/click-counter-Q2-RFQ.zip`, **124 files / 1,930,577 bytes**, SHA-256 `29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438`. The [manifest](../dist/q2/manifest-Q2.json) binds the members. Native ERC/DRC/connectivity/parity checks are clear; the SW2 thermal and Q4 via issues were corrected. Physical qualification and vendor DFM acceptance remain open.
-- **Q2 PCBWay dispatch verified — 11:12:50 UTC:** Gmail Sent confirms the email to Remi in the existing W914112AS1N4 engineering-question thread. Verified attachments: `click-counter-Q2-RFQ.zip` **1,930,577 bytes**, `click-counter-Q2-Gerbers.zip` **87,741 bytes**, `BOM-PCBA-Q2.csv` **7,017 bytes**, `placements-KiCad-Q2.csv` **4,389 bytes**. The body requests exact U5 pattern/process acceptance (not combined openings), association of all four files with the existing case and required portal-replacement instructions, and complete separate 5/10 RFQ prices with test hours/scope behind $75 plus $10/hour. Email-only correspondence and all physical/no-charge/no-paid-parts/no-manufacture gates are retained.
-- **Q2 JLCPCB dispatch verified — 11:17:46 UTC:** Gmail Sent confirms the email in the existing Frank Budget RFQ case. Verified attachments: `click-counter-Q2-RFQ.zip` **1,930,577 bytes**, `click-counter-Q2-Gerbers.zip` **87,741 bytes**, `BOM-JLCPCB-Q2.csv` **8,006 bytes**, `CPL-JLCPCB-Q2.csv` **2,295 bytes**. Follow this email case for Q2 review and complete separate 5/10 quotes.
-- **Remaining delivery state:** both email dispatches are verified, but neither vendor has acknowledged Q2 or accepted Q2 portal files. All currently accepted portal files remain Q1. No spending, paid part preorder, order or manufacturing release.
+- **Q2 PCBWay dispatch verified — 11:12:50 UTC:** Gmail Sent confirms the email to Remi in the existing W914112AS1N4 engineering-question thread. Verified attachments: `click-counter-Q2-RFQ.zip` **1,930,577 bytes**, `click-counter-Q2-Gerbers.zip` **87,741 bytes**, `BOM-PCBA-Q2.csv` **7,017 bytes**, `placements-KiCad-Q2.csv` **4,389 bytes**. The body requests exact U5 pattern/process acceptance (not combined openings), association of all four files with the existing case and required portal-replacement instructions, and complete separate 5/10 RFQ prices with test hours/scope behind $75 plus $10/hour. That email recorded the then-current email-only choice. The later portal-first direction changes the workflow; all physical/no-charge/no-paid-parts/no-manufacture gates remain.
+- **Q2 JLCPCB dispatch verified — 11:17:46 UTC:** Gmail Sent confirms the email in the existing Frank Budget RFQ case. Verified attachments: `click-counter-Q2-RFQ.zip` **1,930,577 bytes**, `click-counter-Q2-Gerbers.zip` **87,741 bytes**, `BOM-JLCPCB-Q2.csv` **8,006 bytes**, `CPL-JLCPCB-Q2.csv` **2,295 bytes**. Use this existing email case for Q2 issues that the portal cannot accomplish.
+- **Subsequent state:** both email sends are verified; JLCPCB later processed Q2 files in the saved draft described above. This does not establish vendor technical acceptance, completed Quote & Order or a full quote. PCBWay Q2 upload/submission is verified above. No spending, paid part preorder, order or manufacturing release.
 
-## Latest verified website state — 15 September 2026, 10:48:59 UTC
+## Earlier verified website state — 15 September 2026, 10:48:59 UTC
 
 - **Access restored:** supported native Chrome access is available; the existing PCBWay/JLCPCB pages and replies were freshly read. The earlier locked-Mac failure is preserved below as historical evidence, not a current blocker.
 - **PCBWay latest cart at 10:48:59 UTC:** PCB **Awaiting reply**, assembly **Being reviewed**; **Under Review 2, Awaiting Payment 0, Production 0**. Existing Q1 references remain W914112AS1N4 / T-1N5W914112A, with all four Q1 filenames present. No Q2 file submission, payment or manufacturing release.
 - **PCBWay website reply, 02:25:22 UTC:** Remi's site timestamp is **2026-09-15 10:25:22 China time**. Follow supplied Gerbers/BOM/online parameters and include all notes in the files. Programming/testing is additional and needs step-by-step instructions. Testing starts at **$75**, then **$10/hour**, charged after the process. No hours, complete agreed test scope or fixed 5/10-unit total were supplied. This reply was read after access was restored; its earlier message time is not the verification time.
 - **JLCPCB saved Q1 draft:** freshly reconfirmed **46 refs, 38 confirmed, 7 shortage, 2 unselected**; the labels overlap and there is no formal order. Mitchell's late **22:18 Eastern September 14 chat (approximately 02:18 UTC September 15)** says programming/testing is quoted only after order, with **$15.70 engineering** and **$7.86/hour labor** additional. These are rates only; hours, scope and a full total remain absent. Battery assembly remains excluded; non-stock-part quotation refusal is unresolved.
-- **Q2 approval context:** the earlier pad-pattern/file-replacement email was rejected by automatic approval review before specific user approval. That attempt was not sent; the user has now supplied the required sharing approval. Correspondence remains email only. No combined mask opening has been approved.
-- **Engineering/package:** the finished, checked Q2 package is ready as identified above. All vendor-uploaded files remain Q1 until an actual replacement/import is verified; all physical qualification/first-article gates remain open.
+- **Q2 approval context:** the earlier pad-pattern/file-replacement email was rejected by automatic approval review before specific user approval. That attempt was not sent; the user has now supplied the required sharing approval. The subsequent user direction is portal-first with email fallback. No combined mask opening has been approved.
+- **Engineering/package:** the finished, checked Q2 package is ready as identified above. At that earlier checkpoint vendor-uploaded files remained Q1. The later JLCPCB Q2 imports are recorded above; all physical qualification/first-article gates remain open.
 
 Neither vendor has supplied a complete quote. Do not spend, preorder parts or release manufacture to obtain missing pricing.
 
@@ -33,7 +91,7 @@ The 10:04 UTC access/read state above was superseded by the 10:36 UTC native ins
 
 ## Current engineering hold — 15 September 2026
 
-Q1 remains available for **sourcing/budgetary review only**. Its missing LCD bias capacitors and frame-rate margin require a controlled revision before final production quotations. The alleged source/binary mismatch was independently **refuted** by an exact TI rebuild; the initial mistaken claim was explicitly corrected with both vendors. Read [the consolidated review](../docs/adversarial-review-Q2.md). Q2 has now been sent by email for review/quotation; required Q2 portal replacement/import acceptance remains unverified. No money, paid preorder or manufacturing release is authorized.
+Q1 remains available for **sourcing/budgetary review only**. Its missing LCD bias capacitors and frame-rate margin require a controlled revision before final production quotations. The alleged source/binary mismatch was independently **refuted** by an exact TI rebuild; the initial mistaken claim was explicitly corrected with both vendors. Read [the consolidated review](../docs/adversarial-review-Q2.md). Q2 has been sent by email for review/quotation and processed in the JLCPCB saved portal revision. Completed quotation, vendor technical acceptance and the PCBWay Q2 portal result remain unverified. No money, paid preorder or manufacturing release is authorized.
 
 | Existing case | Verified subsequent correspondence |
 |---|---|

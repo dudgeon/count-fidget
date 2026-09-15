@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-09-15",
-  "phase": "Q2 verified package emailed to both existing vendor cases with four verified attachments each; email-only correspondence; acknowledgments/portal acceptance/full quotes pending",
+  "phase": "Q2 four-file PCBWay submission under audit; JLCPCB Q2 saved ten-unit draft blocked by required LCD/shortages; five/ten partial estimates captured, no complete quotes",
   "quantities": [
     5,
     10
@@ -34,12 +34,12 @@
         "Functional-test review/pricing only after payment; exception declined",
         "Cannot quote order with non-stock parts included, per Mitchell Chen around 2026-09-15 02:02 UTC"
       ],
-      "next_action": "Follow existing Frank email case for Q2 acknowledgment, priced sourcing/test scope and excluded battery completion; use portal only for required Q2 file/form replacement. No payment, DNP or duplicate portal correspondence.",
+      "next_action": "Use existing Frank case for exact LCD/shortage sourcing and complete battery/test scope; no DNP or paid matching/sourcing to unlock quotation",
       "website_submission_complete": false,
       "bom_cpl_imported": true,
       "bom_match_verified": false,
       "local_signed_in_verified": true,
-      "blocker": "Full Q1 quote refused for non-stock parts; no stocked alternative to requested LCD per representative, paid Global Sourcing suggested but unauthorized. Q1 engineering hold also requires reviewed revision.",
+      "blocker": "Q2 required DS1 unmatched and shortages remain; Quote & Order does not advance without resolving required parts. Select parts preserved all50; no DNP/payment authorized.",
       "historical_partial_totals_usd": {
         "5": 134.83,
         "10": 157.82
@@ -83,9 +83,9 @@
         }
       ],
       "local_form": {
-        "pcb_qty": 5,
-        "pcba_qty": 5,
-        "alternative_qty_requested": 10,
+        "pcb_qty": 10,
+        "pcba_qty": 10,
+        "alternative_qty_requested": 5,
         "finished_outline_mm": [
           42,
           40
@@ -104,7 +104,16 @@
         "function_test_requested": true,
         "production_file_auto_confirmation": false,
         "placement_auto_confirmation": false,
-        "terms_accepted": true
+        "terms_accepted": true,
+        "revision": "Q2",
+        "via_cover_selected": "Plugged",
+        "tented_option_enabled": false,
+        "via_cover_note": "Portal-forced Plugged; PCB note requests review of RFQ tenting requirement; process acceptance pending",
+        "support_panel_forced": true,
+        "assembly_remark_enabled": true,
+        "confirm_production_file": true,
+        "confirm_parts_placement": true,
+        "placement_auto_confirmation_verification_note": "Do not confirm automatically checked at five-unit observation; ten-unit recheck confirmed placementYes selected, but no separate fresh checkbox observation supplied"
       },
       "placements_advanced": false,
       "dnp_authorized": false,
@@ -130,43 +139,57 @@
         }
       ],
       "live_sourcing": {
-        "detected_refs": 46,
-        "confirmed_label": 38,
-        "shortage_label": 7,
-        "unselected_label": 2,
-        "counts_note": "Site labels overlap: R9 is partially stocked and also has a shortage; do not sum labels as distinct refs",
+        "revision": "Q2",
+        "observed_utc_approx": "2026-09-15 11:46 UTC",
+        "detected_refs": 50,
+        "confirmed_label": 39,
+        "shortage_label": 10,
+        "unmatched_label": 1,
+        "counts_note": "Site labels overlap; do not sum them as distinct refs. All50required refs retained.",
         "shortages": [
           {
             "refs": [
               "C1",
               "C3",
-              "C5",
-              "C6"
+              "C5"
             ],
-            "manufacturer": "Murata",
-            "mpn": "GRM21BR71E225KA73L",
-            "catalog_code": "C469542",
-            "shortage_pieces": 24
+            "shortage_pieces": 34
+          },
+          {
+            "refs": [
+              "R3"
+            ],
+            "shortage_pieces": 4
           },
           {
             "refs": [
               "R9"
             ],
-            "manufacturer": "Yageo",
-            "mpn": "RC0603FR-073R3L",
-            "catalog_code": "C137725",
-            "site_required_pieces": 20,
-            "available_pieces": 19,
             "shortage_pieces": 1
+          },
+          {
+            "refs": [
+              "R11"
+            ],
+            "shortage_pieces": 20
+          },
+          {
+            "refs": [
+              "R16"
+            ],
+            "shortage_pieces": 4
           },
           {
             "refs": [
               "SW1",
               "SW2"
             ],
-            "manufacturer": "Cherry",
-            "mpn": "MX1A-E1NW",
-            "catalog_code": "C5120587",
+            "shortage_pieces": 20
+          },
+          {
+            "refs": [
+              "U5"
+            ],
             "shortage_pieces": 10
           }
         ],
@@ -175,16 +198,31 @@
             "reference": "DS1",
             "manufacturer": "Display Elektronik",
             "mpn": "DE188-RU-30/7,5/V(3V)"
-          },
-          {
-            "reference": "U3",
-            "manufacturer": "Texas Instruments",
-            "mpn": "TPS7A0230DBVR",
-            "open_issue": "E14: current TI TPS7A0230PDBVR has functional active-output-discharge feature; no silent substitution"
           }
         ],
-        "next_dialog_choice": "Select parts, preserving required DS1/U3; Do not place was not authorized",
-        "freshly_reverified_date": "2026-09-15"
+        "catalog_searches": [
+          {
+            "query": "DE188",
+            "result": "No Result",
+            "stock_filters": "All unchecked"
+          },
+          {
+            "query": "DE 188",
+            "result": "No Result",
+            "stock_filters": "All unchecked"
+          }
+        ],
+        "next_dialog": "Project has unselected parts",
+        "offered_actions": [
+          "Do not place",
+          "Select parts"
+        ],
+        "action_taken": "Select parts",
+        "dnp_authorized": false,
+        "quote_and_order_advanced": false,
+        "quantity": 10,
+        "unselected_label": 1,
+        "manual_matching_investigation": "In progress; no successful DS1 match yet established"
       },
       "live_chat": {
         "initial_representative": "Chian",
@@ -246,17 +284,20 @@
         }
       ],
       "latest_recheck": {
-        "evidence": "Fresh supported native Chrome inspection of existing Q1 draft and chat",
-        "detected_refs": 46,
-        "confirmed_label": 38,
-        "shortage_label": 7,
-        "unselected_label": 2,
+        "revision": "Q2",
+        "observed_utc_approx": "2026-09-15 11:46 UTC",
+        "evidence": "Native portal Re-Upload/import workflow, file names and matching/quote states verified",
+        "detected_refs": 50,
+        "confirmed_label": 39,
+        "shortage_label": 10,
+        "unmatched_label": 1,
         "formal_order_exists": false,
         "complete_quote_received": false,
-        "verified_date": "2026-09-15",
-        "verification_time_note": "Fresh continuation read after native access restored; exact observation time not separately recorded"
+        "quote_and_order_advanced": false,
+        "quantity": 10,
+        "unselected_label": 1
       },
-      "correspondence_channel": "email",
+      "correspondence_channel": "Portal workflows first; email fallback",
       "q2_email_sent": true,
       "q2_sharing_approved": true,
       "q2_email": {
@@ -289,9 +330,326 @@
         ],
         "scope": "Finished Q2 RFQ review/quotation in existing email case; complete separate5/10 scope with engineering gates; no paid preorder/order/manufacture",
         "vendor_acknowledged": false,
-        "q2_portal_accepted": false,
-        "complete_quote_received": false
-      }
+        "q2_portal_accepted": true,
+        "complete_quote_received": false,
+        "q2_portal_acceptance_scope": "File imports/attachments in saved revision only; no technical acceptance or completed Quote & Order"
+      },
+      "q1_live_sourcing_history": {
+        "detected_refs": 46,
+        "confirmed_label": 38,
+        "shortage_label": 7,
+        "unselected_label": 2,
+        "counts_note": "Site labels overlap: R9 is partially stocked and also has a shortage; do not sum labels as distinct refs",
+        "shortages": [
+          {
+            "refs": [
+              "C1",
+              "C3",
+              "C5",
+              "C6"
+            ],
+            "manufacturer": "Murata",
+            "mpn": "GRM21BR71E225KA73L",
+            "catalog_code": "C469542",
+            "shortage_pieces": 24
+          },
+          {
+            "refs": [
+              "R9"
+            ],
+            "manufacturer": "Yageo",
+            "mpn": "RC0603FR-073R3L",
+            "catalog_code": "C137725",
+            "site_required_pieces": 20,
+            "available_pieces": 19,
+            "shortage_pieces": 1
+          },
+          {
+            "refs": [
+              "SW1",
+              "SW2"
+            ],
+            "manufacturer": "Cherry",
+            "mpn": "MX1A-E1NW",
+            "catalog_code": "C5120587",
+            "shortage_pieces": 10
+          }
+        ],
+        "required_unmatched": [
+          {
+            "reference": "DS1",
+            "manufacturer": "Display Elektronik",
+            "mpn": "DE188-RU-30/7,5/V(3V)"
+          },
+          {
+            "reference": "U3",
+            "manufacturer": "Texas Instruments",
+            "mpn": "TPS7A0230DBVR",
+            "open_issue": "E14: current TI TPS7A0230PDBVR has functional active-output-discharge feature; no silent substitution"
+          }
+        ],
+        "next_dialog_choice": "Select parts, preserving required DS1/U3; Do not place was not authorized",
+        "freshly_reverified_date": "2026-09-15"
+      },
+      "q1_local_form_history": {
+        "pcb_qty": 5,
+        "pcba_qty": 5,
+        "alternative_qty_requested": 10,
+        "finished_outline_mm": [
+          42,
+          40
+        ],
+        "handling_panel_mm": [
+          70,
+          70
+        ],
+        "thickness_mm": 1.0,
+        "material": "S1000H TG155",
+        "finish": "ENIG nominal 1 microinch",
+        "outer_copper_oz": 1,
+        "inner_copper_oz": 0.5,
+        "assembly": "Standard, both sides",
+        "depanel_before_delivery": true,
+        "function_test_requested": true,
+        "production_file_auto_confirmation": false,
+        "placement_auto_confirmation": false,
+        "terms_accepted": true
+      },
+      "q1_latest_recheck_history": {
+        "evidence": "Fresh supported native Chrome inspection of existing Q1 draft and chat",
+        "detected_refs": 46,
+        "confirmed_label": 38,
+        "shortage_label": 7,
+        "unselected_label": 2,
+        "formal_order_exists": false,
+        "complete_quote_received": false,
+        "verified_date": "2026-09-15",
+        "verification_time_note": "Fresh continuation read after native access restored; exact observation time not separately recorded"
+      },
+      "q2_portal": {
+        "saved_revision": true,
+        "workflow": "Re-Upload",
+        "observed_utc_approx": "2026-09-15 11:46 UTC",
+        "private_draft_id_omitted": true,
+        "gerbers_processed": true,
+        "bom_cpl_processed": true,
+        "rfq_attached_both_test_and_remark": true,
+        "file_imports_accepted": true,
+        "technical_review_accepted": false,
+        "quote_and_order_advanced": false,
+        "website_submission_complete": false,
+        "formal_quote_or_order_id": null,
+        "quantity": 10,
+        "alternative_quantity": 5,
+        "alternative_quantity_progress": "Five- and ten-unit saved draft observations captured; no complete Quote & Order",
+        "detected_layers": 4,
+        "detected_finished_outline_mm": [
+          42,
+          40
+        ],
+        "accepted_uploads": [
+          {
+            "filename": "click-counter-Q2-Gerbers.zip",
+            "bytes": 87741,
+            "sha256": "ce9faa396e9178dc2fcefb0b02d0e083b0a82e53b5bc393b019dff1d1d61b3f0",
+            "fields": [
+              "Gerbers"
+            ],
+            "verified_utc_approx": "2026-09-15 11:36 UTC",
+            "evidence": "Portal processed imported file / RFQ attachment filename verified"
+          },
+          {
+            "filename": "BOM-JLCPCB-Q2.csv",
+            "bytes": 8006,
+            "sha256": "b51803b612ec3b8aa883b989d908776650009a0bc0f2206158b79746bcb68dde",
+            "fields": [
+              "BOM import"
+            ],
+            "verified_utc_approx": "2026-09-15 11:36 UTC",
+            "evidence": "Portal processed imported file / RFQ attachment filename verified"
+          },
+          {
+            "filename": "CPL-JLCPCB-Q2.csv",
+            "bytes": 2295,
+            "sha256": "a57bf21c9b9a3e75c57e50273bc751b639a753518884ffb40584dbf888d36280",
+            "fields": [
+              "CPL import"
+            ],
+            "verified_utc_approx": "2026-09-15 11:36 UTC",
+            "evidence": "Portal processed imported file / RFQ attachment filename verified"
+          },
+          {
+            "filename": "click-counter-Q2-RFQ.zip",
+            "bytes": 1930577,
+            "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438",
+            "fields": [
+              "Function Test",
+              "Assembly Remark"
+            ],
+            "verified_utc_approx": "2026-09-15 11:36 UTC",
+            "evidence": "Portal processed imported file / RFQ attachment filename verified"
+          }
+        ],
+        "required_parts_retained": 50,
+        "j1_import_correction": {
+          "initial_state": "Automatically unchecked",
+          "restored_selected": true,
+          "manufacturer": "GCT",
+          "mpn": "USB4105-GF-A",
+          "catalog_code": "C3020560"
+        },
+        "partial_estimates": {
+          "currency": "USD",
+          "quantity": 10,
+          "pcb_subtotal": 39.81,
+          "pcb_breakdown": {
+            "special_offer": 13,
+            "enig": 17.6,
+            "material": 8.17,
+            "production_file_confirmation": 1.04
+          },
+          "shipping_label": "DHL DDP",
+          "shipping_estimate": 27.63,
+          "shipping_business_days": [
+            2,
+            4
+          ],
+          "shipping_weight_kg": 0.24,
+          "assembly_display": "dash",
+          "components_total_display": "dash",
+          "components_included": false,
+          "assembly_included": false,
+          "complete_rfq_total": null,
+          "vendor_reviewed": false,
+          "selected_component_line": {
+            "reference": "J1",
+            "mpn": "USB4105-GF-A",
+            "catalog_code": "C3020560",
+            "selected": true,
+            "quantity": 10,
+            "line_price_usd": 10.822
+          }
+        },
+        "process_difference": {
+          "rfq_via_cover": "Tented",
+          "portal_selected": "Plugged",
+          "tented_option_disabled": true,
+          "rfq_tenting_review_requested_in_pcb_note": true,
+          "manufacturing_acceptance": false
+        },
+        "blocker": "Required DS1 unmatched; Next offers Do not place/Select parts; Select parts chosen and Quote & Order will not advance",
+        "dnp_accepted": false,
+        "payment_or_release": false,
+        "quantity_history": [
+          {
+            "quantity": 5,
+            "observed_utc_approx": "2026-09-15 11:36 UTC",
+            "saved": true
+          },
+          {
+            "quantity": 10,
+            "observed_utc_approx": "2026-09-15 11:46 UTC",
+            "saved": true
+          }
+        ],
+        "partial_estimate_history": [
+          {
+            "currency": "USD",
+            "quantity": 5,
+            "pcb_subtotal": 32.41,
+            "shipping_label": "DHL DDP",
+            "shipping_estimate": 27.63,
+            "components_included": false,
+            "assembly_included": false,
+            "complete_rfq_total": null,
+            "vendor_reviewed": false
+          }
+        ],
+        "remarks_after_specification_change": {
+          "pcb_remark_was_cleared": true,
+          "assembly_remark_modal_was_empty": true,
+          "pcb_remark_restored_and_verified": true,
+          "pcb_remark_characters": 193,
+          "explicit_finished_board_mm": [
+            42,
+            40,
+            1
+          ],
+          "assembly_scope_restored_and_verified": true,
+          "assembly_scope_characters": 485,
+          "assembly_rfq_attachment_restored_and_verified": true,
+          "function_test_rfq_retained": true,
+          "production_no_auto_confirmation_reapplied_and_confirmed": true,
+          "placement_yes_selected_reverified": true,
+          "placement_no_auto_checkbox_fresh_recheck_not_recorded": true
+        },
+        "manual_matching": {
+          "service_fee_usd": 10,
+          "review_after_payment_working_days": [
+            1,
+            2
+          ],
+          "source": "https://jlcpcb.com/help/article/terms-and-conditions-of-jlcpcb-parts-selection-service",
+          "activated": false,
+          "fee_waiver_verified": false
+        }
+      },
+      "website_status": "Q2 ten-unit saved draft:50detected/39confirmed/10shortage/1notselected; requiredDS1unmatched and Quote & Order blocked; five/ten partialPCB estimates captured",
+      "q2_sourcing_history": [
+        {
+          "revision": "Q2",
+          "observed_utc_approx": "2026-09-15 11:36 UTC",
+          "detected_refs": 50,
+          "confirmed_label": 40,
+          "shortage_label": 10,
+          "unmatched_label": 1,
+          "counts_note": "Site labels overlap; do not sum them as distinct refs. All50required refs retained.",
+          "shortages": [
+            {
+              "refs": [
+                "C1",
+                "C3",
+                "C5",
+                "R3",
+                "R9",
+                "R11",
+                "R16",
+                "SW1",
+                "SW2",
+                "U5"
+              ],
+              "shortage_quantities_not_recorded": true
+            }
+          ],
+          "required_unmatched": [
+            {
+              "reference": "DS1",
+              "manufacturer": "Display Elektronik",
+              "mpn": "DE188-RU-30/7,5/V(3V)"
+            }
+          ],
+          "catalog_searches": [
+            {
+              "query": "DE188",
+              "result": "No Result",
+              "stock_filters": "All unchecked"
+            },
+            {
+              "query": "DE 188",
+              "result": "No Result",
+              "stock_filters": "All unchecked"
+            }
+          ],
+          "next_dialog": "Project has unselected parts",
+          "offered_actions": [
+            "Do not place",
+            "Select parts"
+          ],
+          "action_taken": "Select parts",
+          "dnp_authorized": false,
+          "quote_and_order_advanced": false
+        }
+      ]
     },
     {
       "name": "PCBWay",
@@ -301,19 +659,19 @@
       "sent_attachment_bytes": 275486,
       "package_acknowledged": false,
       "website_uploaded": true,
-      "submission_number": "T-1N5W914112A",
-      "pcb_product_number": "W914112AS1N4",
+      "submission_number": "T-1N7W914112A",
+      "pcb_product_number": "W914112AS1N6",
       "submission_quantity": 5,
       "alternative_quantity_requested": 10,
-      "submitted_utc": "2026-09-15T01:46:47Z",
-      "website_status": "2026-09-15 10:48:59 UTC: PCB W914112AS1N4 Awaiting reply; assembly T-1N5W914112A Being reviewed; Under Review 2, Awaiting Payment 0, Production 0",
+      "submitted_utc": "2026-09-15T11:51:09Z",
+      "website_status": "Q2 five-unit PCB and assembly Subject to audit; all four files accepted",
       "complete_total_usd": null,
       "cloud_signed_in_verified": true,
       "q1_form_filled": true,
-      "blocker": "Vendor audit/full pricing pending; Q1 engineering hold requires reviewed revision before final production quote",
+      "blocker": "Q2 technical review and complete component/advanced-service/landed pricing pending",
       "special_notes_accepted_by": "User, manually before file upload",
-      "quoted_review_time": "Representative stated 1\u20132 days after file receipt, not guaranteed",
-      "next_action": "Follow existing Remi email case for acknowledgment, exact U5 process acceptance, full separate5/10 pricing/test scope, and instructions for required portal file replacement. No duplicate portal correspondence or paid procurement.",
+      "quoted_review_time": "Representative stated 1–2 days after file receipt, not guaranteed",
+      "next_action": "Obtain review of Q2 files, exact stack/mask/process and complete separate5/10 prices including components and all advanced services through existing Remi case; no duplicate uploads",
       "local_signed_in_verified": true,
       "local_cart_before_draft": "No listings/zero orders observed; unrelated items unchanged",
       "local_cart_recheck": "Before Q1 submission, native Chrome cart refreshed: Cart 0; All Orders, Under Review and Awaiting Payment all 0; search fields empty; no listings. Nothing to remove; no deletion performed. Authorization to remove verified previous-project entries remains applicable if they appear later.",
@@ -322,26 +680,32 @@
       "website_submission_complete": true,
       "accepted_uploads": [
         {
-          "filename": "click-counter-Q1-Gerbers.zip",
-          "purpose": "Gerbers",
-          "verified_utc": "2026-09-15T01:46:47Z"
+          "filename": "click-counter-Q2-RFQ.zip",
+          "bytes": 1930577,
+          "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438",
+          "verified_utc": "2026-09-15T11:51:09Z",
+          "evidence": "100%Success upload followed by submitted cart file link"
         },
         {
-          "filename": "BOM-PCBA-Q1.csv",
-          "purpose": "46-reference PCB-only BOM",
-          "verified_utc": "2026-09-15T01:46:47Z"
+          "filename": "click-counter-Q2-Gerbers.zip",
+          "bytes": 87741,
+          "sha256": "ce9faa396e9178dc2fcefb0b02d0e083b0a82e53b5bc393b019dff1d1d61b3f0",
+          "verified_utc": "2026-09-15T11:51:09Z",
+          "evidence": "100%Success upload followed by submitted cart file link"
         },
         {
-          "filename": "placements-KiCad-Q1.csv",
-          "purpose": "Generic placement data",
-          "verified_utc": "2026-09-15T01:46:47Z"
+          "filename": "BOM-PCBA-Q2.csv",
+          "bytes": 7017,
+          "sha256": "5f83204edfb3f961b5e65507c9161a7d43487057f6ac0c48e3def5324811a0ef",
+          "verified_utc": "2026-09-15T11:51:09Z",
+          "evidence": "100%Success upload followed by submitted cart file link"
         },
         {
-          "filename": "click-counter-Q1-RFQ.zip",
-          "bytes": 278870,
-          "sha256": "79f633ba625e66e39d76e7fbf77db87a0d13eb99414107857d6a8c11ef63616d",
-          "purpose": "Full technical and commercial RFQ supplement",
-          "verified_utc": "2026-09-15T01:46:47Z"
+          "filename": "placements-KiCad-Q2.csv",
+          "bytes": 4389,
+          "sha256": "4fa79f094e8737dfc3c5e9d294cb7f670affb7a17e98b163992d73e219352f53",
+          "verified_utc": "2026-09-15T11:51:09Z",
+          "evidence": "100%Success upload followed by submitted cart file link"
         }
       ],
       "upload_evidence": "Four individual 100% Success states, followed by Submit File Now; cart then showed all four file links and the linked five-unit PCB/assembly entries, both Subject to audit",
@@ -366,16 +730,15 @@
         "excludes": "Parts, full additional scope, customs duties and VAT; shipping discount not a landed lithium quote"
       },
       "latest_recheck": {
-        "utc": "2026-09-15T10:48:59Z",
-        "evidence": "Fresh supported native Chrome inspection",
-        "under_review": 2,
+        "utc": "2026-09-15T11:51:09Z",
+        "under_review": 4,
         "awaiting_payment": 0,
         "production": 0,
-        "complete_quote_received": false,
-        "uploaded_revision": "Q1",
-        "pcb_status": "Awaiting reply",
-        "assembly_status": "Being reviewed",
-        "all_four_q1_filenames_present": true
+        "uploaded_revision": "Q2",
+        "pcb_status": "Subject to audit",
+        "assembly_status": "Subject to audit",
+        "all_four_q2_filenames_present": true,
+        "complete_quote_received": false
       },
       "display_options_message": {
         "recipient": "Remi",
@@ -437,17 +800,21 @@
         "full_quote": false
       },
       "latest_cart_observation": {
-        "utc": "2026-09-15T10:48:59Z",
-        "pcb_status": "Awaiting reply",
-        "assembly_status": "Being reviewed",
+        "utc": "2026-09-15T11:51:09Z",
+        "under_review": 4,
+        "awaiting_payment": 0,
+        "production": 0,
+        "uploaded_revision": "Q2",
+        "pcb_status": "Subject to audit",
+        "assembly_status": "Subject to audit",
+        "all_four_q2_filenames_present": true,
+        "complete_quote_received": false,
         "pcb_partial_usd": 55.93,
-        "assembly_partial_usd": 29,
+        "assembly_partial_usd": 88,
         "component_pricing_missing": true,
-        "all_four_Q1_files_present": true,
-        "complete_quote": false,
-        "unrelated_cart_items_observed": false
+        "q1_entries_preserved": true
       },
-      "correspondence_channel": "email",
+      "correspondence_channel": "Portal workflows first; email fallback",
       "q2_email_sent": true,
       "q2_sharing_approved": true,
       "q2_email": {
@@ -481,8 +848,204 @@
         ],
         "scope": "Email-only; exact U5 pattern/process acceptance, associate all four files with existing case/how to replace portal files; complete separate5/10 full-RFQ prices and test hours/scope behind75USD plus10USD/hour; all physical gates/no charges/paid parts/manufacture",
         "vendor_acknowledged": false,
-        "q2_portal_accepted": false,
+        "q2_portal_accepted": true,
         "complete_quote_received": false
+      },
+      "q2_portal": {
+        "observation_date": "2026-09-15",
+        "observation_time_note": "Fresh calculator results in current continuation; exact time not separately recorded",
+        "form_revision": "Q2",
+        "quantities_calculated": [
+          5,
+          10
+        ],
+        "five_unit_save_in_progress": false,
+        "four_file_upload_in_progress": false,
+        "save_verified": true,
+        "files_accepted": true,
+        "formal_submission_number": "T-1N7W914112A",
+        "ten_unit_status": "Calculator result captured only",
+        "form": {
+          "assembly": "Turnkey, both sides",
+          "chinese_alternatives_allowed": false,
+          "unique_types": 32,
+          "smt_placements": 47,
+          "bga_qfp": 0,
+          "parts_requiring_tht": 4,
+          "tht_count_note": "Includes hybrid USB connector also counted as SMT;50fittedPCBrefs unchanged",
+          "finished_thickness_mm": 1.0,
+          "tg_range_c": [
+            150,
+            160
+          ],
+          "trace_clearance_mil": [
+            5,
+            5
+          ],
+          "minimum_drill_mm": 0.3,
+          "finish": "ENIG1microinch",
+          "via_cover": "Tenting",
+          "outer_copper_oz": 1,
+          "inner_copper_oz": 1,
+          "preferred_inner_copper_oz": 0.5,
+          "preferred_inner_available_in_form": false,
+          "pcb_remark_requests_preferred_inner_and_separate_alternative_quote": true,
+          "advanced_services_requested": [
+            "Depaneling",
+            "Functional test",
+            "Firmware loading",
+            "Cable harness"
+          ],
+          "advanced_services_cost_in_online_total": false,
+          "material_saved": "S1000H TG150",
+          "smd_field_label_note": "Form Number of SMD Parts; saved detail SMT Pads.47entered is placements; vendor must derive solder-point pricing."
+        },
+        "complete_quote_received": false,
+        "paid_or_manufacturing_release": false,
+        "save_state": "Four files uploaded100%Success, Submit the File Now completed; both entries Subject to audit",
+        "q1_entries_untouched": true,
+        "agreement_gate": {
+          "name": "Special Notes / Agree",
+          "trigger": "Save to Cart",
+          "covers": [
+            "Export-controlled or military content",
+            "Illegal use",
+            "Intellectual-property violations",
+            "Referenced Terms of Service"
+          ],
+          "action_time_user_confirmation_required": true,
+          "requirement_source": "Browser interaction rules for accepting site agreements",
+          "asynchronous_user_question_active": false,
+          "user_answer_received": true,
+          "accepted": true,
+          "q2_sharing_upload_authorization_remains_valid": true,
+          "user_answer": "Yes, agree for the Q2 quote"
+        },
+        "pcb_product_number": "W914112AS1N6",
+        "submission_quantity": 5,
+        "po_number": "COUNT-FIDGET-Q2-RFQ-5",
+        "verified_utc": "2026-09-15T11:51:09Z",
+        "cart_created_utc": "2026-09-15T11:48:56Z",
+        "technical_review_accepted": false,
+        "accepted_uploads": [
+          {
+            "filename": "click-counter-Q2-RFQ.zip",
+            "bytes": 1930577,
+            "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438",
+            "verified_utc": "2026-09-15T11:51:09Z",
+            "evidence": "100%Success upload followed by submitted cart file link"
+          },
+          {
+            "filename": "click-counter-Q2-Gerbers.zip",
+            "bytes": 87741,
+            "sha256": "ce9faa396e9178dc2fcefb0b02d0e083b0a82e53b5bc393b019dff1d1d61b3f0",
+            "verified_utc": "2026-09-15T11:51:09Z",
+            "evidence": "100%Success upload followed by submitted cart file link"
+          },
+          {
+            "filename": "BOM-PCBA-Q2.csv",
+            "bytes": 7017,
+            "sha256": "5f83204edfb3f961b5e65507c9161a7d43487057f6ac0c48e3def5324811a0ef",
+            "verified_utc": "2026-09-15T11:51:09Z",
+            "evidence": "100%Success upload followed by submitted cart file link"
+          },
+          {
+            "filename": "placements-KiCad-Q2.csv",
+            "bytes": 4389,
+            "sha256": "4fa79f094e8737dfc3c5e9d294cb7f670affb7a17e98b163992d73e219352f53",
+            "verified_utc": "2026-09-15T11:51:09Z",
+            "evidence": "100%Success upload followed by submitted cart file link"
+          }
+        ]
+      },
+      "q2_calculator_estimates": {
+        "currency": "USD",
+        "observed_date": "2026-09-15",
+        "vendor_reviewed": false,
+        "components_included": false,
+        "advanced_services_included": false,
+        "complete": false,
+        "construction_note": "Form-priced1ozinner; preferred0.5ozinner requested inPCBremark, not priced here",
+        "shipping_note": "Displayed DHL promotion only, not confirmed full-RFQ lithium/landed quote",
+        "pcb_lead_time_days": [
+          4,
+          5
+        ],
+        "shipping_business_days": [
+          2,
+          4
+        ],
+        "estimates": {
+          "5": {
+            "pcb": 55.93,
+            "assembly": 88,
+            "shipping": 27.27,
+            "shipping_discount": -27.27,
+            "partial_total": 143.93,
+            "shipping_weight_kg": 0.52
+          },
+          "10": {
+            "pcb": 81.36,
+            "assembly": 102.95,
+            "shipping": 27.27,
+            "shipping_discount": -27.27,
+            "partial_total": 184.31,
+            "shipping_weight_kg": 0.54
+          }
+        }
+      },
+      "q1_submission_history": {
+        "submission_number": "T-1N5W914112A",
+        "pcb_product_number": "W914112AS1N4",
+        "submitted_utc": "2026-09-15T01:46:47Z",
+        "accepted_uploads": [
+          {
+            "filename": "click-counter-Q1-Gerbers.zip",
+            "purpose": "Gerbers",
+            "verified_utc": "2026-09-15T01:46:47Z"
+          },
+          {
+            "filename": "BOM-PCBA-Q1.csv",
+            "purpose": "46-reference PCB-only BOM",
+            "verified_utc": "2026-09-15T01:46:47Z"
+          },
+          {
+            "filename": "placements-KiCad-Q1.csv",
+            "purpose": "Generic placement data",
+            "verified_utc": "2026-09-15T01:46:47Z"
+          },
+          {
+            "filename": "click-counter-Q1-RFQ.zip",
+            "bytes": 278870,
+            "sha256": "79f633ba625e66e39d76e7fbf77db87a0d13eb99414107857d6a8c11ef63616d",
+            "purpose": "Full technical and commercial RFQ supplement",
+            "verified_utc": "2026-09-15T01:46:47Z"
+          }
+        ],
+        "website_status": "2026-09-15 10:48:59 UTC: PCB W914112AS1N4 Awaiting reply; assembly T-1N5W914112A Being reviewed; Under Review 2, Awaiting Payment 0, Production 0",
+        "latest_recheck": {
+          "utc": "2026-09-15T10:48:59Z",
+          "evidence": "Fresh supported native Chrome inspection",
+          "under_review": 2,
+          "awaiting_payment": 0,
+          "production": 0,
+          "complete_quote_received": false,
+          "uploaded_revision": "Q1",
+          "pcb_status": "Awaiting reply",
+          "assembly_status": "Being reviewed",
+          "all_four_q1_filenames_present": true
+        },
+        "latest_cart_observation": {
+          "utc": "2026-09-15T10:48:59Z",
+          "pcb_status": "Awaiting reply",
+          "assembly_status": "Being reviewed",
+          "pcb_partial_usd": 55.93,
+          "assembly_partial_usd": 29,
+          "component_pricing_missing": true,
+          "all_four_Q1_files_present": true,
+          "complete_quote": false,
+          "unrelated_cart_items_observed": false
+        }
       }
     }
   ],
@@ -522,7 +1085,7 @@
     "local_check": "Not found in inspected task list; local automation directory absent; original cloud conversation idle. Current schedule/run state still unknown."
   },
   "privacy": "Private mailbox/account identifiers omitted; use authenticated mailbox searches in vendor-status.md",
-  "snapshot_utc": "2026-09-15T11:19:40Z",
+  "snapshot_utc": "2026-09-15T11:51:33Z",
   "local_checks": {
     "existing_checkout_matches_origin_main": false,
     "package_integrity_passed": true,
@@ -551,7 +1114,7 @@
     "engineering_evaluation_authorized": true,
     "stocked_passive_alternative_verified": false,
     "latest_vendor_feedback": "JLCPCB at about 02:15 UTC reports no stocked alternative to the requested LCD and suggests paid Global Sourcing preorder for DE188; no purchase authorized",
-    "power_constraint": "Existing protection nominally trips near 30 mA; OLED example 23\u201329 mA needs full power-budget review",
+    "power_constraint": "Existing protection nominally trips near 30 mA; OLED example 23–29 mA needs full power-budget review",
     "q2_recommendation": "Retain exact DE188 3 V for corrected Q2 baseline; alternate passive displays did not establish JLC stock advantage"
   },
   "engineering_review": {
@@ -583,7 +1146,7 @@
       "SW2 thermal-relief island corrected with pad-specific solid GND connection",
       "Q4 same-net via/land overlap corrected; final native DRC/connectivity/parity clear"
     ],
-    "submission_note": "Q2 sent to both existing vendor cases by email for quotation/review only; Q2 portal replacement/acceptance pending; no manufacturing release"
+    "submission_note": "Both Q2 emails verified; PCBWay four-file Q2 submission under audit; JLCPCB Q2 saved ten-unit draft blocked by required LCD/shortages; both quantity estimates captured"
   },
   "browser_current": {
     "available": true,
@@ -603,10 +1166,9 @@
     "approval_scope": "Finished Q2 quote package and technical follow-up to PCBWay Remi and existing JLCPCB Frank case; quote/review only; no paid sourcing/order/manufacture",
     "approved_by_user": true,
     "approval_date": "2026-09-15",
-    "correspondence_channel": "email",
-    "portal_correspondence_allowed": false,
-    "portal_use": "Required file imports and form workflow only",
-    "delivery_state": "Both dispatches verified in Gmail SENT: PCBWay2026-09-15 11:12:50UTC and JLCPCB11:17:46UTC; vendor acknowledgments and Q2 portal acceptance pending",
+    "correspondence_channel": "Portal workflows first; email fallback",
+    "portal_use": "Proactive Q2 replacement/import, forms, exact-part matching, placement review and automatic quotes; no duplicate correspondence",
+    "delivery_state": "Both Q2 emails verified; PCBWay four-file Q2 submission under audit; JLCPCB Q2 saved ten-unit draft blocked by required LCD/shortages; both quantity estimates captured",
     "historical_approval_review": {
       "rejected": true,
       "sent": false,
@@ -620,7 +1182,7 @@
     ],
     "all_requested_vendors_sent": true
   },
-  "latest_website_observation_utc": "2026-09-15T10:48:59Z",
+  "latest_website_observation_utc": "2026-09-15T11:51:09Z",
   "browser_access_history": [
     {
       "available": false,
@@ -637,7 +1199,7 @@
     "sha256": "29512016b9f83003bf416642617bfb0f8bbc76ea2ca64ba1c31d07e6df0b9438",
     "members": 124,
     "prepared": true,
-    "website_uploaded": false,
+    "website_uploaded": true,
     "vendor_accepted": false,
     "native_erc_violations": 0,
     "native_drc_violations": 0,
@@ -652,17 +1214,25 @@
     "email_recipients_verified": [
       "PCBWay",
       "JLCPCB"
-    ]
+    ],
+    "portal_upload_vendors": [
+      "PCBWay",
+      "JLCPCB"
+    ],
+    "portal_upload_scope": "PCBWay four-file Q2 submission under audit; JLCPCB Q2 Gerbers/BOM/CPL and RFQ supplements in saved draft"
   },
   "correspondence_policy": {
-    "selected_channel": "email",
+    "selected_workflow": "Portal workflows first; email fallback",
     "vendors": [
       "PCBWay",
       "JLCPCB"
     ],
-    "basis": "User said check latest vendor emails and choose email or portal correspondence, not both; Remi requested email only and Mitchell referred back to existing Frank email case",
-    "portal_correspondence": false,
-    "portal_file_imports_and_forms": true
+    "basis": "Latest user correction directs proactive revised-file upload and automatic quote progress through both portals; use email only for matters portals cannot accomplish",
+    "await_email_instructions_for_supported_portal_actions": false,
+    "duplicate_correspondence_allowed": false,
+    "portal_file_imports_and_forms": true,
+    "automatic_quote_progress_authorized": true,
+    "payment_or_manufacture_authorized": false
   },
   "latest_email_recheck": {
     "date": "2026-09-15",
@@ -673,5 +1243,18 @@
     "result": "No new email beyond Remi email-only reply and Frank rough quote/import issues",
     "checked_utc": "2026-09-15T11:06:51Z"
   },
-  "submitted_q1_package_manifest": "../dist/manifest.json"
+  "submitted_q1_package_manifest": "../dist/manifest.json",
+  "latest_website_observation_utc_approx": "2026-09-15 11:51 UTC",
+  "latest_website_observation_note": "PCBWay Q2 accepted for review; JLCPCB saved ten-unit Q2 observation approximately11:46UTC",
+  "previous_correspondence_policy": {
+    "selected_channel": "email",
+    "vendors": [
+      "PCBWay",
+      "JLCPCB"
+    ],
+    "basis": "User said check latest vendor emails and choose email or portal correspondence, not both; Remi requested email only and Mitchell referred back to existing Frank email case",
+    "portal_correspondence": false,
+    "portal_file_imports_and_forms": true,
+    "superseded": true
+  }
 }
