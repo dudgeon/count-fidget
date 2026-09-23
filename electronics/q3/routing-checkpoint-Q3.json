@@ -1,0 +1,68 @@
+{
+  "status": "Routed Q3 engineering candidate; not released",
+  "tool_versions": {
+    "kicad": "10.0.6",
+    "freerouting": "2.4.1 (build-date 2026-09-03)"
+  },
+  "router_jar_sha256": "251101c3eeac22d7e7dfcf6796603279e5d1000283eb82d8f093780f7afc6aa9",
+  "router_parameters": {
+    "maximum_passes": 50,
+    "optimizer_threads": 1,
+    "headless": true
+  },
+  "router_result": {
+    "unrouted_before_native_finish": 3,
+    "elapsed_seconds": 43.22,
+    "notes": "Router stopped with one unrouted item, optimizer saved three; native finish joins the low-current VBUS branch, restores full connectivity with pours, and adds the direct local OLED logic-bypass branch. Incremental SES excludes fixed seeds. Final preroute source includes the reviewed ground-stitch relocation after this router input was exported; original DSN is retained as actual router-input evidence."
+  },
+  "hashes": {
+    "scripts/build_q3_model.py": "eef7aa8c6986a826fb479968fcef95ae5f134fda942ddd2fec66436c34219a27",
+    "scripts/build_q3_board.py": "d7e4ca1d0efd11dc91674adf14f032d1331f986f672399f4c3033ba18a4a278b",
+    "scripts/preroute_q3.py": "962c830ff93d4245e8b42fdac7bd2343528a5f4cac882286b64417c2ccf24661",
+    "scripts/finish_q3_board.py": "a773a0ebccf151520625eb053273433ba82ccc566b1b37239a5c46f2d85baa4f",
+    "scripts/sync_q3_board.py": "5d8c4b8aa4513492d76401bd1adc9c0da6c7f877b1c37175c9823ed4bc9f20fc",
+    "electronics/q3/click-counter-Q3.dsn": "53717cc670241c21eb7c21fa31c4e66fdce1a00f8521418e0a1a4c9bfef770fa",
+    "electronics/q3/click-counter-Q3.ses": "1da71a0c9f2d239a1d307ce3aa1e91a16e7bb47d4846d65072ff00938770c4ad",
+    "electronics/q3/click-counter-Q3.kicad_pcb": "b33b1e1d0c9e4d58c5642fc3f63faaa4e190092601f26103376537a5b12621fd",
+    "scripts/prepare_q3_route.py": "f9459e11ff79277ac282231dee4701774fe8e22f9e9328c36767585c1f43cb12"
+  },
+  "native_checkpoint": {
+    "report": "electronics/q3/routing-checkpoint-native-drc.json",
+    "report_sha256": "25584b90307cbbe970c84b7e62d4723f328942287584071372b86a106398864c",
+    "unconnected": 0,
+    "schematic_parity": 0,
+    "copper_edge_clearance_violations": 0,
+    "approved_geometry_exceptions": 1
+  },
+  "limitations": [
+    "Checkpoint only; final hash-bound independent verifier and mechanical build govern package validity.",
+    "PCB routing and DRC do not qualify converter stability, capacitor bias, OLED pump transients, protected-cell current, solder-process fit, or first article.",
+    "Original router warning counts do not replace native KiCad physical checks."
+  ],
+  "local_route_lengths_mm": {
+    "LX1": 2.374264,
+    "LX2": 2.622792,
+    "OLED_C2P": 3.379889,
+    "OLED_C2N": 5.281016,
+    "OLED_C1P": 3.942316,
+    "OLED_C1N": 3.48935,
+    "OLED_VBAT_pin5_to_C27_positive": 3.183148,
+    "OLED_GND_pin7_to_C27_negative": 6.177534,
+    "OLED_logic_C20_to_pin8": 6.329224,
+    "OLED_logic_C20_ground_stub": 1.100305
+  },
+  "route_measurement_note": "Planar copper centerline lengths, excluding barrel depth. Each flying leg, VBAT positive and logic positive has one 1mm through via; explicit VBAT return has two. Ground stub ends at a ground via/pour, not a measured impedance proof.",
+  "router_command_parameters": [
+    "-de",
+    "electronics/q3/click-counter-Q3.dsn",
+    "-do",
+    "electronics/q3/click-counter-Q3.ses",
+    "-mp",
+    "50",
+    "-mt",
+    "1",
+    "--gui.enabled=false",
+    "--usage_and_diagnostic_data.disable_analytics=true",
+    "--profile.allow_telemetry=false"
+  ]
+}

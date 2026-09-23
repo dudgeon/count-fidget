@@ -1,0 +1,1281 @@
+{
+  "battery_insertion": {
+    "example_above_threshold_us": 179.45471245253003,
+    "independent_euler_example_us": 179.45,
+    "limitations": [
+      "Hard BATFET/protector turn-on assumed; actual slew not established.",
+      "Unknown cell impedance and nonlinear capacitance; selected grid is sensitivity, not component limits.",
+      "No direct BAT-capacitor or LDO/MCU startup load modeled; no protector state-machine or recovery model.",
+      "TPS63900 current limit does not limit charging its VIN capacitor."
+    ],
+    "sample_grid": [
+      {
+        "above_threshold_us": 84.865244,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 75.493215,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 67.835709,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 141.442073,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 125.822024,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 113.059515,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 241.865945,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 215.155662,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 193.331771,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 93.641048,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 82.126841,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 72.719048,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 156.068413,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 136.878068,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 121.198414,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 266.876986,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 234.061495,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 207.249287,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 115.248006,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 93.022908,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 74.863681,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 192.08001,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 155.038181,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 124.772802,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 328.456817,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 265.115289,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 213.361492,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 34.925018,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 58.208363,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 99.5363,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 90.962888,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 81.590859,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 73.933354,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 151.604814,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 135.984765,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 123.222256,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 259.244231,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 232.533948,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 210.710058,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 101.132439,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 89.618232,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 80.21044,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 168.554066,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 149.36372,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 133.684066,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 288.227452,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 255.411962,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 228.599754,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 129.708134,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 107.483037,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 89.32381,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 216.180224,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 179.138394,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 148.873016,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 369.668183,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 306.326654,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 254.572857,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 75.517908,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 13.126971,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 125.863179,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 21.878284,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 215.226037,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 37.411866,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 3.7,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 96.28646,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 86.914431,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 79.256925,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 160.477433,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 144.857384,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 132.094875,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 274.41641,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 247.706127,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 225.882237,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 0.2,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 107.672827,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 96.15862,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 86.750828,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 179.454712,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 160.264367,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 144.584713,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 306.867558,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 274.052068,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 247.239859,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 1.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 142.332604,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 120.107506,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 101.948279,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 237.221007,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 200.179177,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 169.913799,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 405.647922,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 342.306393,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 290.552596,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 5.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 110.957684,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 48.566748,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 184.929474,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 80.944579,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 316.229401,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 138.41523,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": true,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 20.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 12.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 20.0,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.4
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.5
+      },
+      {
+        "above_threshold_us": 0.0,
+        "cell_v": 4.2,
+        "effective_sys_c_uf": 34.2,
+        "exceeds_minimum_125us_delay": false,
+        "other_series_r_ohm": 40.0,
+        "short_threshold_v": 0.6
+      }
+    ],
+    "short_circuit_delay_us": [
+      125,
+      250,
+      375
+    ],
+    "short_circuit_threshold_25c_v": [
+      0.4,
+      0.5,
+      0.6
+    ],
+    "sys_capacitors": {
+      "C17": "22u",
+      "C2": "10u",
+      "C5": "2.2u"
+    },
+    "sys_nominal_total_uf": 34.199999999999996
+  },
+  "date": "2026-09-22",
+  "i2c": {
+    "100pf_bus_actual4700ohm_plus1pct_r_rise_ns": 402.21229432580554,
+    "hypothetical_compliant_weak_sink": {
+      "ack_voltage_with_actual4700ohm_at3v_v": 1.6822429906542056,
+      "actual_module_resistance_known": false,
+      "linear_resistance_ohm": 6000,
+      "vol_at100ua_v": 0.6
+    },
+    "mcu_negative_threshold_range_at3v": [
+      0.75,
+      1.65
+    ],
+    "module_max_rise_ns": 300,
+    "module_vol_max_fraction_vdd": 0.2,
+    "module_vol_test_current_ua": 100,
+    "pullup_sensitivities": [
+      {
+        "pullup_nominal_ohm": 4700.0,
+        "rise_300ns_max_total_capacitance_pf_at_plus_1pct_r": 74.58747637310903,
+        "sink_ua_at_0p2vdd_3p09v_minus_1pct_r": 531.2701482914249,
+        "sink_ua_at_zero_v_3p09v_minus_1pct_r": 664.0876853642811
+      },
+      {
+        "pullup_nominal_ohm": 25500.0,
+        "rise_300ns_max_total_capacitance_pf_at_plus_1pct_r": 13.747495645239702,
+        "sink_ua_at_0p2vdd_3p09v_minus_1pct_r": 97.92038027332144,
+        "sink_ua_at_zero_v_3p09v_minus_1pct_r": 122.4004753416518
+      },
+      {
+        "pullup_nominal_ohm": 33000.0,
+        "rise_300ns_max_total_capacitance_pf_at_plus_1pct_r": 10.623064816776136,
+        "sink_ua_at_0p2vdd_3p09v_minus_1pct_r": 75.66574839302112,
+        "sink_ua_at_zero_v_3p09v_minus_1pct_r": 94.5821854912764
+      }
+    ]
+  },
+  "inputs_sha256": {
+    "electronics/q3/click-counter-Q3.kicad_pcb": "b33b1e1d0c9e4d58c5642fc3f63faaa4e190092601f26103376537a5b12621fd",
+    "electronics/q3/netlist-Q3.json": "6f3dbc9d34e34576b680ad77fb27a0f70313f038b3d74dab6b434705e55d1c79",
+    "firmware/q3-oled/main_msp430.c": "2f85d8195801e232dae80d5868771f6805203ee08b13a9b20523db599b419dc0",
+    "firmware/q3-oled/oled.c": "6227d98c0dfbc48c5cd5d460fea6006f80a0f4c0cf26b71f1ef3413ac829f508",
+    "scripts/analyze_q3_hardware_corners_20260922.py": "530808ed3eab712095e465348af939892e2eb5f582454b54989c7fc5de912f5a"
+  },
+  "limitations": [
+    "No SPICE/macromodel, oscilloscope data, new DRC or physical qualification.",
+    "No artifact/design change or vendor communication. Source references and dispositions are in the dated hardware review."
+  ],
+  "model_checks": {
+    "i2c_spec_consistent_failure_counterexample_reproduced": true,
+    "rc_analytic_crosschecked_by_euler": true
+  },
+  "oled_power": {
+    "limit_minmax_guaranteed": false,
+    "nominal_input_limit_ma": 10,
+    "note": "No linear pixel/contrast scaling assumed; logic current and converter/pump losses remain separate.",
+    "output_budget_sensitivities": [
+      {
+        "assumed_efficiency": 0.7,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 5.25,
+        "sys_v": 3.0
+      },
+      {
+        "assumed_efficiency": 0.8,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 6.0,
+        "sys_v": 3.0
+      },
+      {
+        "assumed_efficiency": 0.9,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 6.75,
+        "sys_v": 3.0
+      },
+      {
+        "assumed_efficiency": 1.0,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 7.5,
+        "sys_v": 3.0
+      },
+      {
+        "assumed_efficiency": 0.7,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 6.475,
+        "sys_v": 3.7
+      },
+      {
+        "assumed_efficiency": 0.8,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 7.4,
+        "sys_v": 3.7
+      },
+      {
+        "assumed_efficiency": 0.9,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 8.325000000000001,
+        "sys_v": 3.7
+      },
+      {
+        "assumed_efficiency": 1.0,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 9.25,
+        "sys_v": 3.7
+      },
+      {
+        "assumed_efficiency": 0.7,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 7.874999999999999,
+        "sys_v": 4.5
+      },
+      {
+        "assumed_efficiency": 0.8,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 9.0,
+        "sys_v": 4.5
+      },
+      {
+        "assumed_efficiency": 0.9,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 10.125,
+        "sys_v": 4.5
+      },
+      {
+        "assumed_efficiency": 1.0,
+        "pump_feed_ma_from_nominal_10ma_input_at4v": 11.25,
+        "sys_v": 4.5
+      }
+    ],
+    "panel_all_on_vbat_typ_ma": 13,
+    "sparse_firmware_current_guaranteed": false
+  },
+  "status": "CONDITIONAL_ANALYSIS_NOT_HARDWARE_QUALIFICATION",
+  "thermal": {
+    "nominal_trip_c": {
+      "cold": 7.490391190601201,
+      "hot": 35.923943190095656
+    },
+    "retained_conservative_error_model": {
+      "independent_corner_combinations": 256,
+      "qualification": "Conditional beta/offset model; not guaranteed installed-cell temperatures",
+      "r25_and_beta_tolerance_fraction": 0.01,
+      "resistor_tolerance_fraction": 0.0201,
+      "temperature_c": {
+        "cold": [
+          4.831576,
+          10.204024
+        ],
+        "hot": [
+          31.846146,
+          40.496293
+        ]
+      },
+      "threshold_error_v": 0.0215,
+      "vbus_v": [
+        2.95,
+        5.5
+      ]
+    },
+    "tlv7012_half_supply_table_plus_assumed_1mv_allowance": {
+      "independent_corner_combinations": 256,
+      "qualification": "Conditional beta/offset model; not guaranteed installed-cell temperatures",
+      "r25_and_beta_tolerance_fraction": 0.01,
+      "resistor_tolerance_fraction": 0.0201,
+      "temperature_c": {
+        "cold": [
+          5.028161,
+          9.989473
+        ],
+        "hot": [
+          32.302584,
+          39.912539
+        ]
+      },
+      "threshold_error_v": 0.0165,
+      "vbus_v": [
+        2.95,
+        5.5
+      ]
+    },
+    "warning": "Neither offset model bounds arbitrary common-mode, board leakage, NTC beta fit or attachment error"
+  }
+}

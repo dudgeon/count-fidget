@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "purpose": "Q3 nominal-equivalent sourcing candidates; no engineering substitutions or purchases performed by this research",
+  "live_baseline_reported_by_parent": {
+    "R16_R23": {
+      "code": "C105579",
+      "stock": 16,
+      "minimum": 1792
+    },
+    "R9": {
+      "code": "C137725",
+      "stock": 19,
+      "minimum": 1544
+    },
+    "R3": {
+      "code": "C137760",
+      "stock": 16,
+      "minimum": 3583
+    },
+    "R11": {
+      "code": "C137806",
+      "stock": 0,
+      "minimum": 3583
+    },
+    "C17_C18_C19": {
+      "code": "C86816",
+      "stock": 314,
+      "minimum": 43,
+      "lot_price_USD": 8.9999
+    }
+  },
+  "candidates": [
+    {
+      "refs": [
+        "R16",
+        "R23"
+      ],
+      "baseline_mpn": "RC0603FR-0747KL",
+      "candidate_mpn": "0603WAF4702T5E",
+      "lcsc": "C25819",
+      "specification": {
+        "ohms": 47000,
+        "package": "0603",
+        "tolerance_percent": 1,
+        "power_W": 0.1,
+        "TCR_ppm_C": 100
+      },
+      "status": "Preferred nominal equivalent; live JLC stock check pending",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "5 days",
+        "stock": 897500,
+        "orderable": null,
+        "minimum": 100,
+        "url": "https://www.lcsc.com/product-detail/_UNI-ROYAL-Uniroyal-Elec-_C25819.html"
+      },
+      "primary_sources": [
+        "https://www.royalohm.com/assets/pdf/products/smd/1.pdf"
+      ],
+      "notes": [
+        "JLC Basic SMT assembly identity verified at https://jlcpcb.com/partdetail/C25819; page extractor did not expose current JLC stock.",
+        "R16 is SBW reset pullup; R23 biases the OLED switch gate."
+      ],
+      "live_stock_followup": {
+        "date": "2026-09-15",
+        "stock": 2444046,
+        "recommended_quantity_for_one_per_board_x10": 20,
+        "observed_by": "parent native JLC bulk BOM checker",
+        "selected_by_parent": true
+      }
+    },
+    {
+      "refs": [
+        "R3"
+      ],
+      "baseline_mpn": "RC0603FR-0724KL",
+      "candidate_mpn": "0603WAF2402T5E",
+      "lcsc": "C23352",
+      "specification": {
+        "ohms": 24000,
+        "package": "0603",
+        "tolerance_percent": 1,
+        "power_W": 0.1,
+        "TCR_ppm_C": 100
+      },
+      "status": "Preferred nominal equivalent; live JLC stock check pending",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "last month",
+        "stock": 282600,
+        "orderable": null,
+        "minimum": 100,
+        "url": "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Uniroyal-Elec-0603WAF2402T5E_C23352.html"
+      },
+      "primary_sources": [
+        "https://www.royalohm.com/assets/pdf/products/smd/1.pdf"
+      ],
+      "notes": [
+        "JLC Basic SMT assembly identity: https://jlcpcb.com/partdetail/0603WAF2402T5E/C23352.",
+        "Preserves the charger VSET divider nominal ratio and existing resistor tolerance envelope."
+      ],
+      "live_stock_followup": {
+        "date": "2026-09-15",
+        "stock": 1132835,
+        "recommended_quantity_for_one_per_board_x10": 20,
+        "observed_by": "parent native JLC bulk BOM checker",
+        "selected_by_parent": true
+      }
+    },
+    {
+      "refs": [
+        "R11"
+      ],
+      "baseline_mpn": "RC0603FR-07115KL",
+      "candidate_mpn": "0603WAF1153T5E",
+      "lcsc": "C22783",
+      "specification": {
+        "ohms": 115000,
+        "package": "0603",
+        "tolerance_percent": 1,
+        "power_W": 0.1,
+        "TCR_ppm_C": 100
+      },
+      "status": "Preferred nominal equivalent; live JLC stock/class check pending",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "last month",
+        "stock": 99600,
+        "orderable": null,
+        "minimum": 100,
+        "url": "https://www.lcsc.com/zh-TW/product-detail/Chip-Resistor-Surface-Mount_Uniroyal-Elec-0603WAF1153T5E_C22783.html"
+      },
+      "primary_sources": [
+        "https://www.royalohm.com/assets/pdf/products/smd/1.pdf"
+      ],
+      "notes": [
+        "Preserves the thermal divider value and \u00b12.01% resistor envelope already used in q2-power-design.md.",
+        "LCSC stock is not evidence of current JLC assembly allocation."
+      ],
+      "live_stock_followup": {
+        "date": "2026-09-15",
+        "stock": 109076,
+        "recommended_quantity_for_one_per_board_x10": 20,
+        "observed_by": "parent native JLC bulk BOM checker",
+        "selected_by_parent": true
+      }
+    },
+    {
+      "refs": [
+        "R9"
+      ],
+      "baseline_mpn": "RC0603FR-073R3L",
+      "candidate_mpn": "0603WAF330KT5E",
+      "lcsc": "C22979",
+      "specification": {
+        "ohms": 3.3,
+        "package": "0603",
+        "tolerance_percent": 1,
+        "power_W": 0.1,
+        "TCR_ppm_C": 200
+      },
+      "status": "Nominal equivalent, cheaper lead; live JLC stock/class check pending",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "last month",
+        "stock": 52700,
+        "orderable": null,
+        "minimum": 100,
+        "url": "https://www.lcsc.com/es/product-detail/C22979.html"
+      },
+      "primary_sources": [
+        "https://www.royalohm.com/assets/pdf/products/smd/1.pdf"
+      ],
+      "notes": [
+        "Manufacturer specifies \u00b1200ppm/\u00b0C for 0603 from1\u03a9 through10\u03a9, matching baseline Yageo low-ohm rating.",
+        "Preserve protector/current-limit qualification; no nominal current threshold change."
+      ],
+      "live_stock_followup": {
+        "date": "2026-09-15",
+        "stock": 371398,
+        "recommended_quantity_for_one_per_board_x10": 20,
+        "observed_by": "parent native JLC bulk BOM checker",
+        "selected_by_parent": true
+      }
+    },
+    {
+      "refs": [
+        "R9"
+      ],
+      "baseline_mpn": "RC0603FR-073R3L",
+      "candidate_mpn": "ARG03BTC3R30",
+      "lcsc": "C2828649",
+      "specification": {
+        "ohms": 3.3,
+        "package": "0603",
+        "tolerance_percent": 0.1,
+        "power_W": 0.1,
+        "TCR_ppm_C": 25
+      },
+      "status": "Tighter-tolerance alternative; live JLC stock check pending",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "3 months",
+        "stock": 12424,
+        "orderable": 12284,
+        "minimum": 1,
+        "url": "https://jlcpcb.com/partdetail/VikingTech-ARG03BTC3R30/C2828649"
+      },
+      "primary_sources": [
+        "https://www.viking.com.tw/Templates/att/ARG_Series.pdf?lng=en",
+        "https://www.viking.com.tw/en/product/ARG03BTC3R30.html"
+      ],
+      "notes": [
+        "JLC Extended SMT; indexed unit price $0.0250 at1+.",
+        "Same nominal sense resistance; temperature/tolerance bounds improve but total protector threshold/peak/transient qualification remains.",
+        "Power rating is at70\u00b0C; do not treat75V family ceiling as rated continuous voltage for3.3\u03a9. sqrt(0.1W*3.3\u03a9)=0.574V at70\u00b0C."
+      ],
+      "live_stock_followup": {
+        "date": "2026-09-15",
+        "stock": 4538,
+        "recommended_quantity_for_one_per_board_x10": 20,
+        "observed_by": "parent native JLC bulk BOM checker",
+        "selected_by_parent": false
+      }
+    },
+    {
+      "refs": [
+        "C1",
+        "C3",
+        "C5"
+      ],
+      "baseline_mpn": "GRM21BR71E225KA73L",
+      "candidate_mpn": "GRM21BR71E225KE11L",
+      "lcsc": "C77081",
+      "specification": {
+        "uF": 2.2,
+        "volts": 25,
+        "dielectric": "X7R",
+        "tolerance_percent": 10,
+        "package": "0805",
+        "height_max_mm": 1.4
+      },
+      "status": "Preferred consolidation with existing C22, conditional effective-capacitance qualification",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "last month",
+        "stock": 150000,
+        "orderable": null,
+        "minimum": 20,
+        "url": "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Murata-Electronics-GRM21BR71E225KE11L_C77081.html"
+      },
+      "primary_sources": [
+        "https://www.murata.com/-/media/webrenewal/tool/library/common-pdf/dynamic-model/component-list-d-mlcc-2506.ashx?cvid=20250805040419000000&la=ja-jp"
+      ],
+      "notes": [
+        "JLC Extended SMT catalog identity: https://jlcpcb.com/partdetail/MurataElectronics-GRM21BR71E225KE11L/C77081.",
+        "Exact DC-bias guaranteed minimum not obtained in this bounded review. Require C1>=1\u00b5F effective at5V and other rail minima, including tolerance/temp/aging. Nominal equivalence alone does not close that gate."
+      ],
+      "live_stock_followup": {
+        "date": "2026-09-15",
+        "stock": 115774,
+        "recommended_quantity_for_one_per_board_x10": 20,
+        "observed_by": "parent native JLC bulk BOM checker",
+        "selected_by_parent": true
+      }
+    },
+    {
+      "refs": [
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "baseline_mpn": "GRM21BR61E226ME44L",
+      "candidate_mpn": "CL21A226MAQNNNE",
+      "lcsc": "C45783",
+      "specification": {
+        "uF": 22,
+        "volts": 25,
+        "dielectric": "X5R",
+        "tolerance_percent": 20,
+        "package": "0805",
+        "height_max_mm": 1.4
+      },
+      "status": "Stocked Basic alternative, manufacturer NRND caveat",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "4 days",
+        "stock": 4982390,
+        "orderable": 4323754,
+        "minimum": 1,
+        "url": "https://jlcpcb.com/partdetail/C45783"
+      },
+      "primary_sources": [
+        "https://product.samsungsem.com/mlcc/CL21A226MAQNNN.do"
+      ],
+      "notes": [
+        "Indexed price $0.2454 at1+; no minimum-spend lot beyondMOQ1 reported. Compare actual assembled total with current43-piece Murata quote, not unit price alone.",
+        "Samsung marks NRND and recommends CL21A226MAYNNNE.",
+        "Primary typical DC-bias curve at25\u00b0C,120Hz,0.5Vrms:4V -41.0476%=12.9695\u00b5F each. Illustrative multiplication by0.8 tolerance and0.85 temperature gives8.8193\u00b5F each/17.6386\u00b5F pair; not a guaranteed all-condition bound.",
+        "At5.5V typical9.7911\u00b5F; same illustrative factors6.65795\u00b5F. Input must meet>=5\u00b5F overactualSYS range; outputpair>=10\u00b5F at4V. Aging, lot spread, combined-bias-temperature effects and board transients remain open."
+      ]
+    },
+    {
+      "refs": [
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "baseline_mpn": "GRM21BR61E226ME44L",
+      "candidate_mpn": "CL21A226MAYNNNE",
+      "lcsc": "C602037",
+      "specification": {
+        "uF": 22,
+        "volts": 25,
+        "dielectric": "X5R",
+        "tolerance_percent": 20,
+        "package": "0805",
+        "height_max_mm": 1.45
+      },
+      "status": "Preferred lifecycle successor only if live stock/quote qualifies",
+      "stock_evidence": {
+        "kind": "web-indexed supplier page, not live allocation",
+        "retrieved_date": "2026-09-15",
+        "crawl_age": "5 days",
+        "stock": null,
+        "orderable": null,
+        "minimum": null,
+        "url": "https://jlcpcb.com/partdetail/631473-CL21A226MAYNNNE/C602037"
+      },
+      "primary_sources": [
+        "https://product.samsungsem.com/mlcc/CL21A226MAYNNN.do"
+      ],
+      "notes": [
+        "JLC Extended SMT identity; current stock not exposed by page extractor.",
+        "Samsung mass-production successor; larger maximumheight1.45mm vs1.4mm must fit native enclosure.",
+        "Primary typical4V DC-bias -45.925%=11.8965\u00b5F; same illustrative0.8\u00d70.85 factors8.0896\u00b5F each/16.1792\u00b5F pair. At5.5V sameillustrative5.96625\u00b5F input. Effective minima still notguaranteed."
+      ],
+      "live_stock_followup": {
+        "date": "2026-09-15",
+        "stock": 352428,
+        "recommended_quantity_for_one_per_board_x10": 20,
+        "observed_by": "parent native JLC bulk BOM checker",
+        "selected_by_parent": true
+      }
+    }
+  ],
+  "restrictions": [
+    "No stock reserved or purchase authorized.",
+    "Use live BOM allocation and attrition quantities for5/10units; LCSC stock differs fromJLC.",
+    "Preserve E01-E19 and Q3 electrical/thermal/power/physical qualification gates.",
+    "Do not replace with merely similar values or a worseTCR."
+  ],
+  "source_records": [
+    {
+      "url": "https://www.royalohm.com/assets/pdf/products/smd/1.pdf",
+      "retrieved_date": "2026-09-15",
+      "bytes": 3958769,
+      "sha256": "6344d3f6a60ea3d3a4c4726f3562df5847a0e5910ce0bd4356328c1363a25f0d"
+    },
+    {
+      "url": "https://product.samsungsem.com/mlcc/CL21A226MAQNNN.do",
+      "retrieved_date": "2026-09-15",
+      "bytes": 189338,
+      "sha256": "dcf6226cd265b08179da13556ba37f46a3866ac9e19e1e0a550cc5197cc1afbf"
+    },
+    {
+      "url": "https://product.samsungsem.com/mlcc/CL21A226MAYNNN.do",
+      "retrieved_date": "2026-09-15",
+      "bytes": 175745,
+      "sha256": "cad2ab14031607984e24f391d9fa141c7d1e1b372dc57fe285e8a4949380076b"
+    }
+  ],
+  "live_followup": {
+    "date": "2026-09-15",
+    "observer": "parent agent native JLC bulk BOM checker",
+    "stock": {
+      "C25819": 2444046,
+      "C23352": 1132835,
+      "C22783": 109076,
+      "C22979": 371398,
+      "C2828649": 4538,
+      "C602037": 352428,
+      "C77081": 115774
+    },
+    "one_per_board_test_quantity": 10,
+    "recommended_quantity_for_one_per_board": 20,
+    "selected_codes": [
+      "C25819",
+      "C23352",
+      "C22783",
+      "C22979",
+      "C602037",
+      "C77081"
+    ],
+    "note": "For actual shared-value capacitor/resistor quantities, rerun the complete BOM for total demand and attrition; no reservation or payment."
+  }
+}

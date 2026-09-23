@@ -1,5 +1,7 @@
 # Q2 display recommendation
 
+**Superseded by the user's explicit replacement requirement on 15 September 2026.** This is the historical Q2 decision. Continue with [Q3 display replacement](q3-display-selection.md); retaining DE188 did not satisfy support at both assemblers. Submitted Q2 files remain historical evidence.
+
 Reviewed **2026-09-15**. **Retain the exact 3 V Display Elektronik DE188 for the corrected Q2 engineering baseline.** Correct its bias capacitors, frame timing and footprint; obtain an assembler's actual sourcing quotation before deciding to replace it. This is an engineering recommendation, not a purchasing or production approval.
 
 The original eight digits, 35 × 13 mm envelope and 2–4-month runtime estimate were implementation assumptions, not user requirements. The user explicitly says the display choice was arbitrary. Even with those assumptions relaxed, the passive alternatives below do not have verified purchasable JLCPCB inventory. Reducing to four digits solely to resolve JLC sourcing therefore has no demonstrated benefit. The OLED and memory-LCD leads in [the earlier comparison](display-options-Q2.md) remain unqualified.

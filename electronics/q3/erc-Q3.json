@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-15T09:24:14",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72",
+            "violations": []
+        },
+        {
+            "path": "/FRAM MCU and programming/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72/761103ad-5a70-5686-bec8-30e4cfaa9d6e",
+            "violations": []
+        },
+        {
+            "path": "/USB input, charging and 3 V supply/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72/83e349cc-983e-5244-b0a1-220f890ab886",
+            "violations": []
+        },
+        {
+            "path": "/Battery connector and independent cell protection/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72/a7b3b257-2b56-5925-86c8-e65a8560f8b4",
+            "violations": []
+        },
+        {
+            "path": "/Independent temperature window and charge inhibit/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72/f5b95c9b-0828-5f22-8d39-2a08e1f3eff5",
+            "violations": []
+        },
+        {
+            "path": "/Count/reset keys, filtering and fixture access/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72/b48af7b9-fddf-5d3f-9876-3a10fca22492",
+            "violations": []
+        },
+        {
+            "path": "/OLED 4 V buck-boost and pump isolation/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72/a9587ddc-31a8-5e8f-ad61-2e52ad83b6fa",
+            "violations": []
+        },
+        {
+            "path": "/SSD1312 OLED and support parts/",
+            "uuid_path": "/d9bc8b59-f4ab-54ac-8e79-907996a8fd72/70820370-815d-5cf3-8b6a-03598b10a099",
+            "violations": []
+        }
+    ],
+    "source": "click-counter-Q3.kicad_sch"
+}

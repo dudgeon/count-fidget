@@ -1,0 +1,968 @@
+{
+  "record_date": "2026-09-22",
+  "scope": "Read-only engineering availability check; all vendor contact and quote submissions paused by user. No purchase, allocation, quote changes, preorders or manufacture release.",
+  "observed_window_utc": "2026-09-22T23:48:44Z/2026-09-22T23:58:27Z",
+  "input_bom": "procurement/q3/BOM-JLCPCB-Q3-minimal.csv",
+  "input_bom_sha256": "4bf3bca3b50cfc9ea116d985dec98807b4972dd639bbbf5acedafd0eecf87009",
+  "historical_comparison": "procurement/q3/live-stock-2026-09-15.json remains unchanged; its inventory snapshot is not current availability.",
+  "summary": {
+    "exact_unique_mpns": 43,
+    "fitted_references": 70,
+    "jlc_explicit_available_order_qty": 40,
+    "jlc_preorder_no_available_order_qty": 3,
+    "minimum_explicit_orderable_buffer_parts": [
+      "C2053877:23",
+      "C2859969:21"
+    ],
+    "all_40_explicit_orderable_parts_cover_10_before_attrition": true,
+    "exact_external_stock_found_for_all_3_exceptions": true
+  },
+  "limitations": [
+    "Stock is volatile and not reserved. Available Order Qty, total stock and minimum are distinct fields.",
+    "Catalog minima and per-board counts do not include assembly attrition.",
+    "DigiKey stock is external inventory; neither vendor has accepted, reserved or quoted its use. No supplier contact was made.",
+    "Public page inventory does not establish assembly-process acceptance, physical qualification or a complete PCBA quote.",
+    "No generic replacements were selected: exact originals were found in stock externally, preserving existing engineering identities."
+  ],
+  "records": [
+    {
+      "lcsc": "C18723015",
+      "mpn": "X087-2832TSWIG02-H14",
+      "references": [
+        "DS1"
+      ],
+      "footprint": "CountFidgetQ3:X087-2832TSWIG02-H14",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:48:44.113Z",
+      "source": "https://jlcpcb.com/partdetail/C18723015",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 1065,
+      "available_order_qty": 1052,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C2053877",
+      "mpn": "MSP430FR4133IG48R",
+      "references": [
+        "U1"
+      ],
+      "footprint": "CountFidgetQ3:Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:03.392Z",
+      "source": "https://jlcpcb.com/partdetail/C2053877",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 23,
+      "available_order_qty": 23,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C2859969",
+      "mpn": "TLV7012DGKR",
+      "references": [
+        "U5"
+      ],
+      "footprint": "CountFidgetQ3:TLV7032_DGK0008A_TI",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:05.090Z",
+      "source": "https://jlcpcb.com/partdetail/C2859969",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 22,
+      "available_order_qty": 21,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C1518762",
+      "mpn": "TPS63900DSKR",
+      "references": [
+        "U6"
+      ],
+      "footprint": "CountFidgetQ3:TPS63900_DSK0010A_TI",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:06.447Z",
+      "source": "https://jlcpcb.com/partdetail/C1518762",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 19391,
+      "available_order_qty": 19145,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C49234235",
+      "mpn": "CPG151101D13",
+      "references": [
+        "SW1",
+        "SW2"
+      ],
+      "footprint": "CountFidgetQ3:HanElectricity_CPG151101D13_MX_Plate",
+      "quantity_per_board": 2,
+      "quantity_5_boards_before_attrition": 10,
+      "quantity_10_boards_before_attrition": 20,
+      "observed_utc": "2026-09-22T23:49:07.804Z",
+      "source": "https://jlcpcb.com/partdetail/C49234235",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 14141,
+      "available_order_qty": 13928,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C602037",
+      "mpn": "CL21A226MAYNNNE",
+      "references": [
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric",
+      "quantity_per_board": 3,
+      "quantity_5_boards_before_attrition": 15,
+      "quantity_10_boards_before_attrition": 30,
+      "observed_utc": "2026-09-22T23:49:09.169Z",
+      "source": "https://jlcpcb.com/partdetail/C602037",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 131284,
+      "available_order_qty": 71631,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C77081",
+      "mpn": "GRM21BR71E225KE11L",
+      "references": [
+        "C1",
+        "C3",
+        "C5",
+        "C22"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric",
+      "quantity_per_board": 4,
+      "quantity_5_boards_before_attrition": 20,
+      "quantity_10_boards_before_attrition": 40,
+      "observed_utc": "2026-09-22T23:49:10.351Z",
+      "source": "https://jlcpcb.com/partdetail/C77081",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 155395,
+      "available_order_qty": 152310,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C85980",
+      "mpn": "GRM1885C1H472JA01D",
+      "references": [
+        "C13"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:11.846Z",
+      "source": "https://jlcpcb.com/partdetail/C85980",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 3811,
+      "available_order_qty": 2814,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C19725033",
+      "mpn": "BQ25185DLHR",
+      "references": [
+        "U2"
+      ],
+      "footprint": "CountFidgetQ3:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:35.969Z",
+      "source": "https://jlcpcb.com/partdetail/C19725033",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 4248,
+      "available_order_qty": 4161,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C3747031",
+      "mpn": "TPS7A0230PDBVR",
+      "references": [
+        "U3"
+      ],
+      "footprint": "CountFidgetQ3:Package_TO_SOT_SMD_SOT-23-5",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:43.447Z",
+      "source": "https://jlcpcb.com/partdetail/C3747031",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 37689,
+      "available_order_qty": 37631,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C183096",
+      "mpn": "BQ29700DSER",
+      "references": [
+        "U4"
+      ],
+      "footprint": "CountFidgetQ3:Package_SON_WSON-6_1.5x1.5mm_P0.5mm",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:50:25.283Z",
+      "source": "https://jlcpcb.com/partdetail/C183096",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 2607,
+      "available_order_qty": 2552,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C3020560",
+      "mpn": "USB4105-GF-A",
+      "references": [
+        "J1"
+      ],
+      "footprint": "CountFidgetQ3:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:53:11.191Z",
+      "source": "https://jlcpcb.com/partdetail/C3020560",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 860,
+      "available_order_qty": null,
+      "minimum": 7,
+      "status": "preorder_only_no_available_order_qty",
+      "enough_for_10_before_attrition": null,
+      "limitation": "Page offered Pre-order and did not show Available Order Qty. Displayed stock and minimum alone do not establish immediate orderability.",
+      "additional_evidence": "The settled page labeled 7 pcs as Recent Order, not an available resale lot."
+    },
+    {
+      "lcsc": "C160404",
+      "mpn": "SM04B-SRSS-TB(LF)(SN)",
+      "references": [
+        "J2"
+      ],
+      "footprint": "CountFidgetQ3:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:53.084Z",
+      "source": "https://jlcpcb.com/partdetail/C160404",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 43068,
+      "available_order_qty": 29781,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C337893",
+      "mpn": "DFE201612E-2R2M=P2",
+      "references": [
+        "L1"
+      ],
+      "footprint": "CountFidgetQ3:Inductor_SMD_L_Murata_DFE201612E_2.0x1.6mm",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:49:55.713Z",
+      "source": "https://jlcpcb.com/partdetail/C337893",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 31227,
+      "available_order_qty": 23075,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C84416",
+      "mpn": "GRM21BR61E106KA73L",
+      "references": [
+        "C2",
+        "C6",
+        "C21"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric",
+      "quantity_per_board": 3,
+      "quantity_5_boards_before_attrition": 15,
+      "quantity_10_boards_before_attrition": 30,
+      "observed_utc": "2026-09-22T23:49:58.394Z",
+      "source": "https://jlcpcb.com/partdetail/C84416",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 67746,
+      "available_order_qty": 62069,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C437557",
+      "mpn": "GRM21BZ71H475KE15L",
+      "references": [
+        "C23"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:50:02.352Z",
+      "source": "https://jlcpcb.com/partdetail/C437557",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 113041,
+      "available_order_qty": 104535,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C332302",
+      "mpn": "DMN2056U-7",
+      "references": [
+        "Q1",
+        "Q2",
+        "Q6"
+      ],
+      "footprint": "CountFidgetQ3:Package_TO_SOT_SMD_SOT-23",
+      "quantity_per_board": 3,
+      "quantity_5_boards_before_attrition": 15,
+      "quantity_10_boards_before_attrition": 30,
+      "observed_utc": "2026-09-22T23:52:40.642Z",
+      "source": "https://jlcpcb.com/partdetail/C332302",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 5,
+      "available_order_qty": null,
+      "minimum": 160,
+      "status": "preorder_only_no_available_order_qty",
+      "enough_for_10_before_attrition": null,
+      "limitation": "Page offered Pre-order and did not show Available Order Qty. Displayed stock and minimum alone do not establish immediate orderability."
+    },
+    {
+      "lcsc": "C110499",
+      "mpn": "DMP2035U-7",
+      "references": [
+        "Q5"
+      ],
+      "footprint": "CountFidgetQ3:Package_TO_SOT_SMD_SOT-23",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:35.652Z",
+      "source": "https://jlcpcb.com/partdetail/C110499",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 113412,
+      "available_order_qty": 113163,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C65189",
+      "mpn": "2N7002,215",
+      "references": [
+        "Q3",
+        "Q4"
+      ],
+      "footprint": "CountFidgetQ3:Package_TO_SOT_SMD_SOT-23",
+      "quantity_per_board": 2,
+      "quantity_5_boards_before_attrition": 10,
+      "quantity_10_boards_before_attrition": 20,
+      "observed_utc": "2026-09-22T23:51:07.443Z",
+      "source": "https://jlcpcb.com/partdetail/C65189",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 496786,
+      "available_order_qty": 495478,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C7519",
+      "mpn": "USBLC6-2SC6",
+      "references": [
+        "D1"
+      ],
+      "footprint": "CountFidgetQ3:Package_TO_SOT_SMD_SOT-23-6",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:09.144Z",
+      "source": "https://jlcpcb.com/partdetail/C7519",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 41091,
+      "available_order_qty": 38279,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C29936",
+      "mpn": "CL10B105KA8NNNC",
+      "references": [
+        "C25",
+        "C26"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric",
+      "quantity_per_board": 2,
+      "quantity_5_boards_before_attrition": 10,
+      "quantity_10_boards_before_attrition": 20,
+      "observed_utc": "2026-09-22T23:51:10.587Z",
+      "source": "https://jlcpcb.com/partdetail/C29936",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 241118,
+      "available_order_qty": 222733,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C77026",
+      "mpn": "GRM1885C1H102JA01D",
+      "references": [
+        "C10",
+        "C11",
+        "C12"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric",
+      "quantity_per_board": 3,
+      "quantity_5_boards_before_attrition": 15,
+      "quantity_10_boards_before_attrition": 30,
+      "observed_utc": "2026-09-22T23:51:12.580Z",
+      "source": "https://jlcpcb.com/partdetail/C77026",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 147786,
+      "available_order_qty": 140401,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C77055",
+      "mpn": "GRM188R71H104KA93D",
+      "references": [
+        "C4",
+        "C7",
+        "C9",
+        "C20",
+        "C24",
+        "C27"
+      ],
+      "footprint": "CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric",
+      "quantity_per_board": 6,
+      "quantity_5_boards_before_attrition": 30,
+      "quantity_10_boards_before_attrition": 60,
+      "observed_utc": "2026-09-22T23:51:14.224Z",
+      "source": "https://jlcpcb.com/partdetail/C77055",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 1400231,
+      "available_order_qty": 1276842,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C105576",
+      "mpn": "RC0603FR-072KL",
+      "references": [
+        "R19"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:33.338Z",
+      "source": "https://jlcpcb.com/partdetail/C105576",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 785877,
+      "available_order_qty": 723041,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C105580",
+      "mpn": "RC0603FR-075K1L",
+      "references": [
+        "R1",
+        "R2"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 2,
+      "quantity_5_boards_before_attrition": 10,
+      "quantity_10_boards_before_attrition": 20,
+      "observed_utc": "2026-09-22T23:51:35.476Z",
+      "source": "https://jlcpcb.com/partdetail/C105580",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 167212,
+      "available_order_qty": 119735,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C105881",
+      "mpn": "RC0603FR-07330RL",
+      "references": [
+        "R7"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:37.749Z",
+      "source": "https://jlcpcb.com/partdetail/C105881",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 643918,
+      "available_order_qty": 602109,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C112314",
+      "mpn": "RC0603FR-075K11L",
+      "references": [
+        "R20"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:39.926Z",
+      "source": "https://jlcpcb.com/partdetail/C112314",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 501,
+      "available_order_qty": 446,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C114662",
+      "mpn": "RC0603FR-072K2L",
+      "references": [
+        "R8"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:41.740Z",
+      "source": "https://jlcpcb.com/partdetail/C114662",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 844700,
+      "available_order_qty": 812574,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C137684",
+      "mpn": "RC0603FR-07750KL",
+      "references": [
+        "R28"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:42.829Z",
+      "source": "https://jlcpcb.com/partdetail/C137684",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 164053,
+      "available_order_qty": 162944,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C137761",
+      "mpn": "RC0603FR-0724K9L",
+      "references": [
+        "R22"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:36.986Z",
+      "source": "https://jlcpcb.com/partdetail/C137761",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 278520,
+      "available_order_qty": 272764,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C137790",
+      "mpn": "RC0603FR-0716K2L",
+      "references": [
+        "R13"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:39.025Z",
+      "source": "https://jlcpcb.com/partdetail/C137790",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 62,
+      "available_order_qty": null,
+      "minimum": 3112,
+      "status": "preorder_only_no_available_order_qty",
+      "enough_for_10_before_attrition": null,
+      "limitation": "Page offered Pre-order and did not show Available Order Qty. Displayed stock and minimum alone do not establish immediate orderability."
+    },
+    {
+      "lcsc": "C14675",
+      "mpn": "RC0603FR-07100KL",
+      "references": [
+        "R6",
+        "R14",
+        "R15",
+        "R24",
+        "R25"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 5,
+      "quantity_5_boards_before_attrition": 25,
+      "quantity_10_boards_before_attrition": 50,
+      "observed_utc": "2026-09-22T23:51:55.577Z",
+      "source": "https://jlcpcb.com/partdetail/C14675",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 8601006,
+      "available_order_qty": 8311032,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C22783",
+      "mpn": "0603WAF1153T5E",
+      "references": [
+        "R11"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:56.880Z",
+      "source": "https://jlcpcb.com/partdetail/C22783",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 105117,
+      "available_order_qty": 100813,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C22961",
+      "mpn": "0603WAF2203T5E",
+      "references": [
+        "R17",
+        "R18"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 2,
+      "quantity_5_boards_before_attrition": 10,
+      "quantity_10_boards_before_attrition": 20,
+      "observed_utc": "2026-09-22T23:51:58.169Z",
+      "source": "https://jlcpcb.com/partdetail/C22961",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 1448827,
+      "available_order_qty": 1394900,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C22979",
+      "mpn": "0603WAF330KT5E",
+      "references": [
+        "R9"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:51:59.375Z",
+      "source": "https://jlcpcb.com/partdetail/C22979",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 361973,
+      "available_order_qty": 348586,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C23352",
+      "mpn": "0603WAF2402T5E",
+      "references": [
+        "R3"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:00.877Z",
+      "source": "https://jlcpcb.com/partdetail/C23352",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 1069129,
+      "available_order_qty": 1008519,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C245983",
+      "mpn": "RC0603FR-0757K6L",
+      "references": [
+        "R10"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:02.144Z",
+      "source": "https://jlcpcb.com/partdetail/C245983",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 5389,
+      "available_order_qty": 5365,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C25819",
+      "mpn": "0603WAF4702T5E",
+      "references": [
+        "R16",
+        "R23"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 2,
+      "quantity_5_boards_before_attrition": 10,
+      "quantity_10_boards_before_attrition": 20,
+      "observed_utc": "2026-09-22T23:52:03.281Z",
+      "source": "https://jlcpcb.com/partdetail/C25819",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 1913814,
+      "available_order_qty": 1488851,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C273769",
+      "mpn": "RC0603FR-0716K5L",
+      "references": [
+        "R4"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:04.508Z",
+      "source": "https://jlcpcb.com/partdetail/C273769",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 8128,
+      "available_order_qty": 8111,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C273789",
+      "mpn": "RC0603FR-0720K5L",
+      "references": [
+        "R21"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:13.987Z",
+      "source": "https://jlcpcb.com/partdetail/C273789",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 3167,
+      "available_order_qty": 3154,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C276290",
+      "mpn": "RC0603FR-0724K3L",
+      "references": [
+        "R12"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:15.345Z",
+      "source": "https://jlcpcb.com/partdetail/C276290",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 7317,
+      "available_order_qty": 7296,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "references": [
+        "R5"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 1,
+      "quantity_5_boards_before_attrition": 5,
+      "quantity_10_boards_before_attrition": 10,
+      "observed_utc": "2026-09-22T23:52:16.547Z",
+      "source": "https://jlcpcb.com/partdetail/C98220",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 14048574,
+      "available_order_qty": 12401482,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    },
+    {
+      "lcsc": "C99782",
+      "mpn": "RC0603FR-074K7L",
+      "references": [
+        "R26",
+        "R27"
+      ],
+      "footprint": "CountFidgetQ3:Resistor_SMD_R_0603_1608Metric",
+      "quantity_per_board": 2,
+      "quantity_5_boards_before_attrition": 10,
+      "quantity_10_boards_before_attrition": 20,
+      "observed_utc": "2026-09-22T23:52:17.795Z",
+      "source": "https://jlcpcb.com/partdetail/C99782",
+      "method": "Fresh native Chrome public product-page accessibility text; no quote or cart interaction",
+      "stock": 9325939,
+      "available_order_qty": 9011912,
+      "minimum": 1,
+      "status": "available_order_qty_shown",
+      "enough_for_10_before_attrition": true
+    }
+  ],
+  "external_exact_identity_checks": [
+    {
+      "lcsc": "C3020560",
+      "mpn": "USB4105-GF-A",
+      "supplier": "LCSC",
+      "observed_utc": "2026-09-22T23:54:11.288Z",
+      "source": "https://www.lcsc.com/product-detail/C3020560.html",
+      "method": "Fresh native Chrome public product page",
+      "status": "out_of_stock",
+      "stock": null,
+      "minimum": 1,
+      "multiple": 1,
+      "evidence": "Out of Stock Notify Me; stated minimum/multiple",
+      "not_jlcpcb_inventory": true
+    },
+    {
+      "lcsc": "C3020560",
+      "mpn": "USB4105-GF-A",
+      "supplier": "DigiKey",
+      "observed_utc": "2026-09-22T23:57:28.775Z",
+      "source": "https://www.digikey.com/en/products/detail/gct/USB4105-GF-A/11198441",
+      "method": "Fresh native Chrome public product page",
+      "status": "in_stock",
+      "stock": 129457,
+      "minimum": 1,
+      "multiple": 1,
+      "evidence": "In-Stock count; Cut Tape price tiers start at quantity 1; Add to Cart shown but not used",
+      "not_jlcpcb_inventory": true
+    },
+    {
+      "lcsc": "C332302",
+      "mpn": "DMN2056U-7",
+      "supplier": "LCSC",
+      "observed_utc": "2026-09-22T23:57:47.016Z",
+      "source": "https://www.lcsc.com/product-detail/C332302.html",
+      "method": "Fresh native Chrome public product page",
+      "status": "out_of_stock",
+      "stock": null,
+      "minimum": 10,
+      "multiple": 10,
+      "evidence": "Out of Stock Notify Me; stated minimum/multiple",
+      "not_jlcpcb_inventory": true
+    },
+    {
+      "lcsc": "C332302",
+      "mpn": "DMN2056U-7",
+      "supplier": "DigiKey",
+      "observed_utc": "2026-09-22T23:58:08.868Z",
+      "source": "https://www.digikey.com/en/products/detail/diodes-incorporated/DMN2056U-7/7352909",
+      "method": "Fresh native Chrome public product page",
+      "status": "in_stock",
+      "stock": 57542,
+      "minimum": 1,
+      "multiple": 1,
+      "evidence": "In-Stock count; Cut Tape price tiers start at quantity 1; Add to Cart shown but not used",
+      "not_jlcpcb_inventory": true
+    },
+    {
+      "lcsc": "C137790",
+      "mpn": "RC0603FR-0716K2L",
+      "supplier": "LCSC",
+      "observed_utc": "2026-09-22T23:58:18.987Z",
+      "source": "https://www.lcsc.com/product-detail/C137790.html",
+      "method": "Fresh native Chrome public product page",
+      "status": "out_of_stock",
+      "stock": null,
+      "minimum": 100,
+      "multiple": 100,
+      "evidence": "Out of Stock Notify Me; stated minimum/multiple",
+      "not_jlcpcb_inventory": true
+    },
+    {
+      "lcsc": "C137790",
+      "mpn": "RC0603FR-0716K2L",
+      "supplier": "DigiKey",
+      "observed_utc": "2026-09-22T23:58:26.180Z",
+      "source": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0716K2L/726967",
+      "method": "Fresh native Chrome public product page",
+      "status": "in_stock",
+      "stock": 262066,
+      "minimum": 1,
+      "multiple": 1,
+      "evidence": "In-Stock count; Cut Tape price tiers start at quantity 1; Add to Cart shown but not used",
+      "not_jlcpcb_inventory": true
+    }
+  ],
+  "manufacturer_references": {
+    "USB4105-GF-A": "https://gct.co/files/drawings/usb4105.pdf",
+    "DMN2056U-7": "https://www.diodes.com/assets/Datasheets/DMN2056U.pdf",
+    "RC0603FR-0716K2L": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-0716K2L"
+  }
+}

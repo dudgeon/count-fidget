@@ -1,0 +1,16 @@
+{
+  "controller": {
+    "bytes": 3372775,
+    "document": "Solomon SSD1312 Rev 1.2 March 2021, with command table",
+    "reviewed_date": "2026-09-15",
+    "sha256": "849d17833fa81c0ebd8a5c6e142470a5b0cbeb3056c2c7cf38c694d8a50eb526",
+    "url": "https://admin.osptek.com/uploads/SSD_1312_1_2_6a7ea26d1f.pdf"
+  },
+  "module": {
+    "bytes": 3244547,
+    "document": "Wisevision X087-2832TSWIG02-H14 Ver A",
+    "reviewed_date": "2026-09-15",
+    "sha256": "bf88a9e033ddb6656bc9ddc5f20d3de9188983bb2cdd4278199555ee6e7989ce",
+    "url": "https://www.lcsc.com/product-detail/C18723015.html"
+  }
+}

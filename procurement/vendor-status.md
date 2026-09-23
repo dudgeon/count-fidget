@@ -1,6 +1,52 @@
 # Vendor status and website resume procedure
 
-## Current portal progress — 15 September 2026
+## Active direction — 22 September 2026: engineering review only
+
+The user has **paused all new vendor quote submissions until a fresh explicit instruction**. Do not upload revisions, change quote drafts, advance automatic quotations, accept the old pending PCBWay Q3 notice, or send another technical review request. This supersedes every earlier portal-first/upload instruction below. Read-only stock research is allowed. No spending or manufacturing release is authorized.
+
+Finish an independent adversarial functional review, use deterministic models where meaningful, and commit/push a coherent review candidate to the existing branch/draft PR so another agent can inspect it. The user now permits **home programming and limited through-hole soldering if materially cheaper**. The implemented MCU remains **MSP430FR4133IG48R**, not ESP32; home programming needs a compatible Spy-Bi-Wire adapter. This permission does not ask for an ESP32 redesign or home fine-pitch/FPC work, nor does it qualify the battery pack.
+
+The dated review entry point is `docs/REVIEW-Q3-2026-09-22.md`. Historical Q1/Q2 and the September15 Q3 RFQ archive remain immutable evidence. Any new analysis must state what is actually verified and what still requires physical qualification. Do not call September15 catalog observations current stock or confuse the portal's preview with a final numbered-pad placement approval.
+
+### Fresh review result — 22 September
+
+The coordinated Q3 candidate is being committed for independent review. Fresh inventory covers40/43 exact PCB MPNs in JLC available stock; the remaining three exact identities have verified DigiKey stock, which is not accepted JLC/PCBWay sourcing or allocation. No substitutes were silently introduced. The new deterministic software harness passes more than2.5million bounded cases with no new confirmed production-code bug. The hardware review retains conditional I²C acknowledgement/rise-time and battery-insertion surge counterexamples, plus the existing OLED current, charging/protection, battery and physical qualification gaps. It does not claim a demonstrated working device. See `docs/REVIEW-Q3-2026-09-22.md` for the review entry point, evidence, stock sources and home-programming/USB tradeoffs.
+
+### Last observed quote state, retained without resubmission
+
+On **15 September at 13:58:26 UTC**, JLCPCB Q3 reached Quote & Order for five boards: **$255.86** = $22.04 PCB + $233.82 PCBA, including all43 component types. Depaneling was a separate **$3.28**. Programming/test/assembly remarks required review; battery/harness, keycaps and final delivered costs were incomplete. Earlier $27.63 freight was a PCB-stage estimate, not the final563.85g assembled/lithium shipment. All70 fitted refs were selected. There is **no observed ten-unit Q3 total**. No order/payment/manufacture occurred.
+
+The minimal BOM corrected a portal column-mapping issue. DS1 and U5 received preview adjustments; the original CPL remains unchanged. Full model-offset, numbered-pad and final vendor DFM review remain open. PCBWay Q3 had only $131.62/5 and $177.00/10 calculators excluding components/services; its Q3 submission was not completed. The old Q3 agreement question is inactive while quoting is paused. See `procurement/q3/portal-quotes.json`.
+
+## Incoming replies read on 22 September; no outgoing communication
+
+- **JLCPCB, 15 September 17:31:45 UTC:** C18723015 is normally treated as a standard assembly component. The representative says its Wave Soldering classification appears incorrect and will be referred for correction. This answers the catalog-label question; it does not approve the particular FPC lands, heat profile, support or tooling. Programming is Standard PCBA only, after assembly, quoted at $8.15 engineering plus $8.15/hour pending file review. Older programming/test rates are historical and must not be combined into a made-up total.
+- **PCBWay, 16 September 02:58:25 UTC and 17 September 03:21:24 UTC:** asks for one final version because every upload causes manual review; unresolved engineering questions prevent a final price. The representative explicitly says the online calculator amount is not the correct price or a pricing reference. Treat previous calculator values as historical observations, not savings evidence.
+- The inbox also contains Q1/Q2 component-quotation spreadsheet attachments from16September. Their line contents have not been inspected in this engineering turn; they do not establish Q3 pricing or stock. No reply, upload or new quote request was sent.
+
+## Historical instructions and checkpoint — superseded where inconsistent
+
+## Current Q3 portal checkpoint — 15 September 2026
+
+The selected OLED is Wisevision/Newvisio X087-2832TSWIG02-H14/C18723015. JLC native catalog explicitly supports assembly and showed1,075stock/1,060available, MOQ1. Exact PCBWay sourcing and FPC process acceptance remain pending. Existing email cases received the focused process/sourcing questions at12:11:01UTC (PCBWay) and12:11:44UTC (JLC); no duplicate portal chat was sent. A subsequent incoming-mail search found no newer technical reply. File updates and automatic quoting will use the portals.
+
+Q3 engineering, independent reviews/fixes, native/CAD/export checks, the final RFQ and the actual rendering shown to the user are complete. The two-layer board has bottom-only SMT, 70 fitted refs and 43 exact MPNs; positive catalog observations are recorded in `q3/live-stock-2026-09-15.json`. Stock observations are not reservations. The frozen RFQ has 152 members / 4,031,548 bytes, SHA-256 `4626d8ba64ef67d9bf5265399d6f6bf8e0d4ce9dda87d3656b5e5579aecef5ba`. Q1/Q2 remain frozen historical records; all physical qualification and no-spending/manufacturing gates remain open.
+
+### JLCPCB Q3 — five-unit import and matching accepted; Component Placements reached
+
+- The portal accepted `click-counter-Q3-Gerbers.zip` as **2 layers / finished 42×40 mm**. Draft settings: **5 units, Standard / both sides, 70×70 mm support rails, 1 mm thickness, ENIG 1 microinch, tented vias and depaneled delivery**. Support rails do not change the finished board outline.
+- Production-file and component-placement automatic approval are **disabled**. `click-counter-Q3-RFQ.zip` is attached in **Function Test**, and scope notes retain all vendor soldering, programming, testing and battery work. These are requests, not accepted service scope or release approval.
+- The extended BOM's **Notes** column was misread as **Footprint**. The separate portal adapter **`BOM-JLCPCB-Q3-minimal.csv`** was then accepted; the archived extended BOM/RFQ are unchanged. With `CPL-JLCPCB-Q3.csv`, **all 70 refs / 43 exact MPNs are matched, selected and have positive quantities**. Required OLED **X087-2832TSWIG02-H14 / C18723015**: five pieces, displayed line total **$8.7715**.
+- **Component Placements reached.** No complete quote amount or completed Quote & Order is established at this checkpoint. Continue placement review, then obtain separate 5/10 prices and explicit acceptance/exclusions for the full RFQ. Retain offboard BAT1/K1/K2 scope; no DNP or paid matching/preorder.
+- Before assembly pricing, the portal showed **PCB-only $22.04** and **shipping estimate $27.63**. Neither includes assembly/components or establishes a complete landed lithium/product quote. Exact observation time and a formal quote reference were not separately recorded for this checkpoint; private draft identifiers are omitted.
+
+### PCBWay Q3 — calculations captured; specific notice pending
+
+Five units calculate **$131.62** (**$43.62 PCB + $88 assembly**); ten units calculate **$177.00** (**$43.62 PCB + $133.38 assembly**). Components and additional services are excluded. The new Q3-specific **Agree** notice awaits the user's response to the question already asked; do not repeat historical Q2 agreement/sharing requests. **No Q3 PCBWay upload success or full quote is established.** Continue supported submission after that notice is resolved, preserving complete sourcing, offboard battery/keycaps, programming/tests, shipping and landed-cost scope.
+
+Neither vendor has a full Q3 quote. No money, chargeable parts preorder or manufacturing release. The ignored Q3 DSN/SES remain local router-exchange inputs with original path-bound checksums; they are excluded from the frozen RFQ and public staging.
+
+## Historical Q2 portal progress — 15 September 2026
 
 **Latest user direction: use both portals proactively for revised-file uploads and automatic quotes; email is the fallback for matters the portals cannot accomplish.** Do not await email file-replacement instructions when the site already supports the action, and do not duplicate correspondence. This supersedes the earlier email-only workflow choice; both verified Q2 email sends remain historical evidence.
 

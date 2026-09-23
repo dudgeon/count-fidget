@@ -1,16 +1,53 @@
 # Local continuation handoff
 
-Continue [dudgeon/count-fidget](https://github.com/dudgeon/count-fidget) without restarting requirements. Read `AGENTS.md`, `PROJECT.md`, product/user-research/decisions, `docs/open-issues.md`, `docs/adversarial-review-Q2.md` and the Q2 design documents.
+## Active direction — 22 September 2026: engineering review only
+
+The user has **paused all new vendor quote submissions until a fresh explicit instruction**. Do not upload revisions, change quote drafts, advance automatic quotations, accept the old pending PCBWay Q3 notice, or send another technical review request. This supersedes every earlier portal-first/upload instruction below. Read-only stock research is allowed. No spending or manufacturing release is authorized.
+
+Finish an independent adversarial functional review, use deterministic models where meaningful, and commit/push a coherent review candidate to the existing branch/draft PR so another agent can inspect it. The user now permits **home programming and limited through-hole soldering if materially cheaper**. The implemented MCU remains **MSP430FR4133IG48R**, not ESP32; home programming needs a compatible Spy-Bi-Wire adapter. This permission does not ask for an ESP32 redesign or home fine-pitch/FPC work, nor does it qualify the battery pack.
+
+The dated review entry point is `docs/REVIEW-Q3-2026-09-22.md`. Historical Q1/Q2 and the September15 Q3 RFQ archive remain immutable evidence. Any new analysis must state what is actually verified and what still requires physical qualification. Do not call September15 catalog observations current stock or confuse the portal's preview with a final numbered-pad placement approval.
+
+### Fresh review result — 22 September
+
+The coordinated Q3 candidate is being committed for independent review. Fresh inventory covers40/43 exact PCB MPNs in JLC available stock; the remaining three exact identities have verified DigiKey stock, which is not accepted JLC/PCBWay sourcing or allocation. No substitutes were silently introduced. The new deterministic software harness passes more than2.5million bounded cases with no new confirmed production-code bug. The hardware review retains conditional I²C acknowledgement/rise-time and battery-insertion surge counterexamples, plus the existing OLED current, charging/protection, battery and physical qualification gaps. It does not claim a demonstrated working device. See `docs/REVIEW-Q3-2026-09-22.md` for the review entry point, evidence, stock sources and home-programming/USB tradeoffs.
+
+### Last observed quote state, retained without resubmission
+
+On **15 September at 13:58:26 UTC**, JLCPCB Q3 reached Quote & Order for five boards: **$255.86** = $22.04 PCB + $233.82 PCBA, including all43 component types. Depaneling was a separate **$3.28**. Programming/test/assembly remarks required review; battery/harness, keycaps and final delivered costs were incomplete. Earlier $27.63 freight was a PCB-stage estimate, not the final563.85g assembled/lithium shipment. All70 fitted refs were selected. There is **no observed ten-unit Q3 total**. No order/payment/manufacture occurred.
+
+The minimal BOM corrected a portal column-mapping issue. DS1 and U5 received preview adjustments; the original CPL remains unchanged. Full model-offset, numbered-pad and final vendor DFM review remain open. PCBWay Q3 had only $131.62/5 and $177.00/10 calculators excluding components/services; its Q3 submission was not completed. The old Q3 agreement question is inactive while quoting is paused. See `procurement/q3/portal-quotes.json`.
+
+## Historical instructions and checkpoint — superseded where inconsistent
+
+## Latest direction — Q3 display replacement and cost review
+
+The user explicitly rejected leaving an unmatched LCD. Continue the replacement, not the historical retain-DE188 recommendation below. Q3 candidate **Wisevision/Newvisio X087-2832TSWIG02-H14 / C18723015** has live JLC stock/assembly support: approximately12:10UTC,1,075stock/1,060available, Economic/Standard, Wave Soldering/High difficulty. Exact PCBWay sourcing and FPC process acceptance remains pending; requests to existing Remi/Frank email cases were verified Sent at12:11:01UTC/12:11:44UTC. Use email only for these unresolved process details; use portals for revised uploads and automatic quotes.
+
+Read `docs/q3-display-selection.md` and the separate Q3 reviews. The requested sequence through revised design, adversarial-agent reviews/fixes and the actual updated rendering shown to the user is complete. **Q3 engineering and its final quotation package are ready; both portal updates and complete 5/10 quotes are now the active work.** Two-layer routing and bottom-only SMT cover 70 fitted refs/43 exact positive-stock MPNs. Final native binding verifies 82 refs/218 connected pins/50 NC; all 62 negative checks rejected deliberately corrupted inputs. Electrical DRC, connectivity and schematic parity pass with one exact documented J1/SW2 raised-courtyard projection retained. Final CAD has four valid/manifold print solids, zero modeled collisions, 242 assembly poses and 4,837 sampled collision tests. The firmware, OLED-loop and enclosure corrections are independently reviewed. File/model consistency does not establish physical qualification. Preserve all no-spending/manufacture, cell/charger/protection, power/runtime, FPC/solder-process and fit/retention gates; Q1/Q2 remain frozen historical records.
+
+### Completed Q3 files and current portal checkpoint
+
+- Full RFQ: `dist/q3/click-counter-Q3-RFQ.zip`, **152 members / 4,031,548 bytes**, SHA-256 `4626d8ba64ef67d9bf5265399d6f6bf8e0d4ce9dda87d3656b5e5579aecef5ba`.
+- Gerbers: `procurement/q3/click-counter-Q3-Gerbers.zip`, **106,301 bytes**, SHA-256 `ad3941a76d1c610792a9a38ed9eee54366379bdfb047c5e9a2a5d695628c6c85`.
+- PCBWay: use Q3 Gerbers, `BOM-PCBA-Q3.csv`, `placements-KiCad-Q3.csv` and the full RFQ supplement. Calculators show **$131.62 / 5** ($43.62 PCB + $88 assembly) and **$177.00 / 10** ($43.62 + $133.38), excluding components and additional services. The **new Q3-specific Agree notice awaits the user's response to the question already asked**. Prior Q2 agreement acceptance is not this new notice.
+- JLCPCB: Q3 Gerbers accepted as **2 layers / finished 42×40 mm**. The five-unit Standard/both-sides draft uses **70×70 mm support rails, 1 mm thickness, ENIG 1 microinch, tented vias and depaneled delivery**. Production and placement automatic approval are disabled. Full `click-counter-Q3-RFQ.zip` is attached in Function Test; scope notes retain all vendor soldering, programming, testing and battery work.
+- JLCPCB accepted separate `BOM-JLCPCB-Q3-minimal.csv` after the extended BOM's Notes column was misread as Footprint. With `CPL-JLCPCB-Q3.csv`, **all 70 refs / 43 exact MPNs are matched, selected and have positive quantities**. The OLED line is five pieces / **$8.7715** total. **Component Placements reached**; continue review and separate 5/10 quotes. BAT1/K1/K2 remain separate full-quote scope; do not treat a successful BOM match as battery/test-service acceptance.
+- **No complete Q3 quote amount or Q3 PCBWay upload success is established at this checkpoint.** JLCPCB's earlier PCB-only **$22.04** plus shipping estimate **$27.63** exclude assembly/components. Capture actual later acceptance, quantity, reference and timestamp in the ledger/tracker. No paid matching/preorder, DNP or manufacture.
+- Final native/firmware/mechanical/export/package manifests are checked. Do not rebuild unchanged artifacts or repeat the completed rendering instead of doing the authorized portal work. Revalidate if an input changes.
+- The JLC minimal BOM is a separate portal adapter; the archived extended BOM/RFQ remain frozen. Ignored Q3 DSN/SES remain local router-exchange evidence with path-bound original checksums; neither is in the RFQ. Do not stage them or silently sanitize a header and invalidate its recorded provenance.
+
+Continue [dudgeon/count-fidget](https://github.com/dudgeon/count-fidget) without restarting requirements. Read `AGENTS.md`, `PROJECT.md`, product/user-research/decisions, `docs/open-issues.md`, `docs/adversarial-review-Q2.md` and the active Q3 design/review documents; use Q2 documents for historical evidence.
 
 ## Working revision and authority
 
 - Branch: `codex/q2-engineering-audit`; [draft PR #1](https://github.com/dudgeon/count-fidget/pull/1). Main's vendor checkpoint is `a8128ec`; the first audit/firmware checkpoint is `fe9aa6b`.
-- The user said “What's next? Keep pushing forward.” Separate Q2 hardware/schematic/enclosure correction and quote files are complete and checked. Do not return to a requirements interview or merely restate the audit.
+- The user said “What's next? Keep pushing forward.” The subsequent Q3 design, reviews, rendering and quote package are now complete and checked. Do not return to a requirements interview or merely restate the audit.
 - Engineering, reversible fixes, quote preparation, website submissions and the established vendor correspondence are authorized. **The user explicitly approved sharing the finished Q2 package/technical follow-up with both vendors on 15 September 2026.** Obtain a **concrete approved order before money, chargeable part preorder or manufacture**. Quantities remain 5 and 10 separately.
-- **Latest user correction: portal workflows first.** Proactively upload revised Q2 files to both portals and progress automatic quotes as far as available. Do not wait for email file-replacement instructions when the portal supports the action. Use email only for matters the portals cannot accomplish; avoid duplicate messages across channels. This supersedes the earlier email-only workflow guidance.
+- **Latest user correction: portal workflows first.** Proactively upload the completed Q3 files to both portals and progress automatic quotes as far as available. Do not wait for email file-replacement instructions when the portal supports the action. Use email only for matters the portals cannot accomplish; avoid duplicate messages across channels. This supersedes the earlier email-only workflow guidance.
 - The original Q1 board/firmware/BOM/CPL/Gerber/RFQ files are historical evidence. Do not run their destructive builders or the Q1 RFQ packager against the current Q2 firmware source.
 
-## Engineering facts
+## Historical Q1/Q2 engineering facts
 
 1. **Source/binary mismatch was refuted.** TI support1.212 defines LCD4MUX to include LCDSON; unmodified source reproduces the entire frozen Q1 HEX. Both vendors received an explicit retraction around02:17UTC. Do not repeat the allegation.
 2. Q1 really lacks Mode2 LCD reservoirs on U1 pins7/8/9. Q2 adds C14/C15/C16=100nF. C8 remains100nF, consistent with TI's device specification; the LaunchPad's1µF example does not make1µF mandatory here.
@@ -23,7 +60,7 @@ Continue [dudgeon/count-fidget](https://github.com/dudgeon/count-fidget) without
 9. Separate `mechanical/q2/` replaces the obsolete Rev0 geometry for this candidate. It uses actual board/key/mount/USB/LCD/pack positions, simplified component envelopes and explicit physical-print/retention limitations. Do not label Rev0 files final.
 10. Physical battery/protector/thermal/LCD/FRAM/current/fit/retention tests are still open. A clear ERC/DRC report is not measured safety or performance.
 
-## Rebuild and verify
+## Historical Q2 rebuild and verification tools
 
 - `python3 scripts/verify_project.py`: frozen Q1 package and separate Q2 firmware provenance.
 - `python3 scripts/run_host_tests.py`: existing portable firmware tests, relevant when firmware changes.
@@ -33,7 +70,7 @@ Continue [dudgeon/count-fidget](https://github.com/dudgeon/count-fidget) without
 - `python3 scripts/verify_q2.py --kicad-cli /path/to/kicad-cli` runs fresh native checks and saves hash-bound evidence. Read-only default rejects stale input/report hashes. `--semantic-only` is not proof of fresh ERC/DRC.
 - `scripts/export_q2.py` and `package_q2.py` create separate quote exports/archive after successful verification. They must never overwrite Q1 artifacts. Include50 fitted PCB refs, separate offboard BAT1/K1/K2, and complete test/quotation scope.
 
-## Current Q2 portal checkpoint
+## Historical Q2 portal checkpoint
 
 - **JLCPCB:** Re-Upload processed Q2 Gerbers as 4 layers/finished42×40 mm and Q2 BOM/CPL as50refs. RFQ is attached in both Function Test and Assembly Remark. Five-unit draft observed about11:36UTC; the same saved revision is now10PCB/10PCBA, Standard/both sides, observed about11:46UTC. Current labels39confirmed/10shortage/1notselected; J1 restored exactGCTUSB4105-GF-A/C3020560 and selected. DS1 unmatched; DE188/DE 188 searches returnedNoResult with stockfiltersunchecked. Next offersDo not place/Select parts; Select parts chosen, noDNP, Quote & Order blocked. JLCPCB manual matching requires $10 and starts 1–2 working days after payment under its [service terms](https://jlcpcb.com/help/article/terms-and-conditions-of-jlcpcb-parts-selection-service); it was not activated.
 - **JLCPCB estimates only:** PCB$32.41/5 and$39.81/10; DHLDDP$27.63 shown each, with ten-unit freight2–4businessdays/0.24kg. The10PCBsubtotal is$13specialoffer+$17.60ENIG+$8.17material+$1.04fileconfirmation. Assembly/component totals are dashes; J1's10-piece line$10.8220 is not a complete components total. Ten-unit shortages: C1/C3/C5combined34;R3=4;R9=1;R11=20;R16=4;SW1/SW2combined20;U5=10.
@@ -69,7 +106,11 @@ At **2026-09-15 11:06:51 UTC**, the latest four vendor emails were reread before
 
 The user also authorizes removing verified previous-project PCBWay cart items; preserve CountFidget. Last pre-submission cart wasempty and no deletion occurred. No complete quotes have been received. No money or manufacture.
 
-## Finish the work
+## Finish the active Q3 work
+
+Continue the current Q3 portal steps described at the top. The engineering/review/render/package stages are complete. Record actual revised-file acceptance and complete separate 5/10 prices; calculator estimates are incomplete. Resolve the pending Q3-specific PCBWay notice without repeating earlier sharing or upload approvals. Use existing correspondence only for matters the portals cannot accomplish. Retain all required components and offboard work, show explicit exclusions with a priced completion path, and present a concrete order for approval before spending or manufacture.
+
+### Historical Q2 completion and superseded next action
 
 The coordinated Q2 files are now complete: fresh native ERC/DRC/connectivity/parity all zero; 62 refs/50 fitted/195 connected pins/28 NC agree; 21 negative checks rejected; 50-ref BOM/CPL and exported Gerbers checked; three valid/manifold enclosure print parts with zero modeled intersections. The SW2 thermal issue and Q4 via-to-pad overlap were corrected; final board SHA256 is `c80cf17a1d36d74e4c7c8f7cc4e14f5f42169fe0c3224811856b8bff0e5d0867`. The website response has been read and native access is available. Both Q2 email dispatches are verified. **Continue from the completed PCBWay Q2 submission and saved JLCPCB Q2 draft.** Both quantity calculations were captured; JLCPCB cannot advance with the required unmatched LCD, and its manual matching requires payment. Do not activate paid services to obtain a quote. Use supported portal actions directly without waiting for email replies; record actual acceptance rather than treating calculators as submissions. Use the existing Remi/Frank cases only for unresolved matters the portals cannot accomplish. Capture actual file acceptance and separate 5/10 quote results; avoid duplicate requests. Published service rates do not fill the missing hours/scope/landed totals. Unsupported lines need explicit exclusions and a priced completion plan. Present a concrete order/first-article scope for Geoff's approval before spending.
 

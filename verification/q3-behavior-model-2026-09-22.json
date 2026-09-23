@@ -1,0 +1,48 @@
+{
+  "compiler_flags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-pedantic"
+  ],
+  "completed_utc": "2026-09-23T00:00:45.225297+00:00",
+  "coverage": {
+    "analytic_button_waveforms": 7350,
+    "fault_marker_clear_patterns": 65536,
+    "fault_reset_power_cut_prefixes": 24,
+    "journal_torn_word_cases": 2359296,
+    "oled_bus_faults_actually_injected": 1576,
+    "oled_fault_sleep_schedules": 5441,
+    "queue_schedules_and_capacity_cases": 65665
+  },
+  "exit_code": 0,
+  "frozen_sources_and_images_unchanged": true,
+  "host_compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "inputs_sha256": {
+    "firmware/q3-oled/build/build-manifest.json": "5598687413d3dbfedd14398ff5082044a63c836c8f1e920820a78eb10eefee25",
+    "firmware/q3-oled/build/click-counter-Q3-oled.elf": "953169cd3b0b0eec37e43c150530148bdbc00dafabb90ea326252ff03af4a515",
+    "firmware/q3-oled/build/click-counter-Q3-oled.hex": "b19f9e62fe9833ebb61fa75e94a7adef5664e51c7bcb7ffaa619a7c00bf910bf",
+    "firmware/q3-oled/counter.c": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe",
+    "firmware/q3-oled/counter.h": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6",
+    "firmware/q3-oled/input.c": "bc228e7f25e075f082e07e726a3f7be6c575853a5fe8384f0d17a49e671b5934",
+    "firmware/q3-oled/input.h": "78a6b28fedf4af18b1eea651a1b726b72e57e43f17cbbc4ada5f4edc745f9d17",
+    "firmware/q3-oled/main_msp430.c": "2f85d8195801e232dae80d5868771f6805203ee08b13a9b20523db599b419dc0",
+    "firmware/q3-oled/oled.c": "6227d98c0dfbc48c5cd5d460fea6006f80a0f4c0cf26b71f1ef3413ac829f508",
+    "firmware/q3-oled/oled.h": "74d4a10f2f569de3800e762e7c3f3b19bf28a3262a42233b491f91e9ca58cb22",
+    "firmware/tests/q3_behavior_model_2026_09_22.c": "90e50c80c1e7ff1f74e99bbb66e91171e75c509617c35401f273041d497bd2c3",
+    "scripts/test_q3_behavior_model.py": "2a1b8ac8e45f94859c330e53fef931b7eba9e39f8c9a97455cde955713287a17"
+  },
+  "limitations": [
+    "Finite deterministic schedules, not exhaustive firmware-state or interrupt interleaving proof.",
+    "Journal faults damage one destination word then stop; active-slot corruption, multiword electrical failure and voltage timing are not emulated.",
+    "OLED logical model assumes reset stops pump/panel; recovered RAM is compared with a clean production run, not with physical bonded pixels.",
+    "Host portable modules are executed; MCU HAL, hardware register side effects, ISR timing and stack limits are not executed by this harness.",
+    "A newly detected volatile input gap is not durable until its marker write; a cut before that write cannot preserve that diagnosis."
+  ],
+  "physical_hardware_qualified": false,
+  "schema_version": 1,
+  "status": "PASS",
+  "stderr": ""
+}

@@ -1,0 +1,13 @@
+PASS: bounce, held-key no-repeat/sleep, wake click, reset priority, overflow, timer wrap
+PASS: blank memory, all 10 power-cut boundaries, CRC fallback, 100000 journal commits
+Host simulation only: target electrical, LCD, interrupt and brownout tests remain.
+PASS: SSD1312 startup/clear/9V commands, bounded chunks, dirty/coalesced frames, MAX, shutdown guard
+PASS: injected mid-frame NACK discards display state and recovers the latest committed count
+PASS: 150 sampled/committed presses through absent-display timeouts, bounded retries and recovery
+PASS: deadline wrap and sleep during every early startup tick
+Host model only; target ISR timing, rail sequencing, pixels and current require hardware tests.
+PASS: timestamped ISR samples preserve an entire reset pulse during a9ms foreground stall
+PASS:1000 delayed foreground batches across ring wraps, release and simultaneous reset priority
+PASS: explicit overflow, frozen increments, durable fault ordering, failed write/clear retry and reset recovery
+PASS: timestamp wrap, first/held/released wake input and saturating overflow diagnostics
+PASS: holding increment through fault-reset recovery produces no synthetic new press

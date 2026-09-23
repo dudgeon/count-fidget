@@ -1,36 +1,42 @@
 # Instructions for agents
 
-Read `PROJECT.md`, `HANDOFF.md`, `docs/product-spec.md`, `docs/user-research.md`, `docs/decisions.md`, `docs/open-issues.md`, and `procurement/vendor-status.md`. The user's current instructions take precedence over this handoff.
+## Current task and authorization — 22 September 2026
 
-## Authorization and expectations
+Continue the Q3 engineering review on `codex/q2-engineering-audit` and the existing draft PR #1. Read `PROJECT.md`, `HANDOFF.md`, `docs/REVIEW-Q3-2026-09-22.md`, `docs/product-spec.md`, `docs/user-research.md`, `docs/decisions.md`, `docs/open-issues.md`, and `procurement/vendor-status.md`. The user's current instructions override historical checkpoints.
 
-Continue engineering, reversible fixes, quote preparation, vendor website uploads and the established quotation correspondence with JLCPCB and PCBWay. Geoff has repeatedly authorized this work; do not ask again whether to upload or obtain quotes. Present a concrete, itemized order for approval before spending, preordering chargeable parts, or releasing manufacture. Quote quantities are 5 and 10; no budget cap or final order quantity is established.
+**All new vendor quotations are paused until the user explicitly authorizes another.** Do not upload revisions, change quote drafts, advance automatic quotations, accept the old pending PCBWay Q3 notice, or send another technical review request. Read-only catalog/stock research and reading incoming replies are allowed. No spending, paid sourcing/preorder, order placement or manufacturing release is authorized.
 
-**Latest user direction (15 September 2026): portal workflows first.** Geoff explicitly approved sharing the finished Q2 package with both vendors, then clarified that revised files should be uploaded proactively through **both portals** and automatic quotes progressed as far as available. Use supported portal replacement/import, form, BOM matching, placement review and quotation actions now. **Do not wait for email file-replacement instructions when the portal supports the action.** Email is a fallback for unresolved scope, sourcing, DFM or test questions that the portal cannot accomplish. Do not duplicate correspondence across channels. This latest direction supersedes the earlier email-only workflow guidance; it does not authorize spending, chargeable part preorder or manufacture.
-
-Q2 emails were already verified in Gmail Sent to PCBWay Remi at **2026-09-15 11:12:50 UTC** and to the existing JLCPCB Frank case at **11:17:46 UTC**, each with four checked attachments. Preserve those records. Sent-mail verification is not portal file acceptance, a vendor acknowledgment or a full quote. The earlier specific disclosure-approval blocker is resolved; do not ask for the same approval again. Inspect current portal state, use the existing cases/drafts where supported, and record each actual revised-file acceptance and quote result.
-
-**Current portal checkpoint:** PCBWay accepted all four Q2 files for five units under **W914112AS1N6 / T-1N7W914112A**, both **Subject to audit**, verified **2026-09-15 11:51:09 UTC**. The specific quotation notice was approved by the user and accepted before saving; no approval question remains. Five/ten automatic estimates are $143.93/$184.31, excluding components and advanced services; ten is calculator-only. JLCPCB Q2 is saved at ten units with 50 refs, 39 confirmed/10 shortage/1 unmatched required LCD; all parts retained and Quote & Order blocked. JLCPCB manual matching requires $10 and starts 1–2 working days after payment under its [service terms](https://jlcpcb.com/help/article/terms-and-conditions-of-jlcpcb-parts-selection-service); it was not activated. Use existing email cases for unresolved sourcing, DFM and service scope. No DNP, money, chargeable preorder or manufacture.
-
-Persist to a verifiable result, provide meaningful updates, and ask one focused question only when genuinely blocked. Do not invent user preferences, repeat the interview, or rebuild unchanged artifacts as a substitute for completing uploads. A calculator subtotal, email dispatch or local ZIP is not a website submission or complete quote. Record accepted filenames, quantity, submission number, timestamp and scope after each actual upload. Inspect account state to avoid duplicates and unrelated orders. Geoff authorizes removing PCBWay cart entries from previous projects after verifying their filenames/project identity; preserve Count Fidget entries. This permission does not establish that any removal occurred.
-
-Confirm the new session exposes the intended local browser. Use that session's supported browser/authentication tools. Cloud tab IDs, runtime handles and file paths are not portable. Do not copy cloud-specific setup into a local session or circumvent browser controls. Do not delegate to subagents unless explicitly authorized by the user or higher-priority instructions.
+The user requests adversarial functional review, meaningful deterministic simulation where useful, and a coherent committed review candidate for another agent. The user permits home programming and limited through-hole soldering when materially cheaper. This does not mandate an ESP32 redesign: the current MCU is **MSP430FR4133IG48R**, programmed with Spy-Bi-Wire. USB is charge-only. See the home-completion cost note for the supported scope and limits.
 
 ## Engineering truthfulness
 
-- Q1 is on engineering hold after the 15 September independent review. Read `docs/adversarial-review-Q2.md` and linked audits before further engineering or final quotations. Preserve submitted Q1 archives/binaries as historical evidence; corrections belong in an identified revision. The alleged source/binary mismatch was refuted by exact TI rebuild: LCD4MUX includes LCDSON. The missing LCD capacitors remain a real hardware issue.
-- Q1 is a quotation prototype. Historical DRC is clear and firmware compiled; no board has been physically tested. Q1 has no native schematic/ERC; the separate Q2 native schematic/PCB and current checks live under `electronics/q2/` and `verification/q2-*`. Never use Q1 reports as Q2 evidence.
-- Retain the LCD, charger/thermal, protection and fit caveats in RFQs. Resolve release gates before manufacture/use.
-- Current MCU is **48-pin MSP430FR4133IG48R**. Rev0's 64-pin wiring, charging settings and compensation statements are obsolete.
-- For current **Q2 portal uploads**, use `procurement/q2/click-counter-Q2-Gerbers.zip`; PCBWay gets `BOM-PCBA-Q2.csv` and `placements-KiCad-Q2.csv`, while JLCPCB gets `BOM-JLCPCB-Q2.csv` and `CPL-JLCPCB-Q2.csv` from that directory. Attach `dist/q2/click-counter-Q2-RFQ.zip` as the full scope supplement, not in a Gerber-only field. Verify all **50 fitted PCB refs**, exact MPN/manufacturer matches and placement handling. BAT1/K1/K2 remain offboard; never invent CPL coordinates or omit them from the complete quote. The 46-ref Q1 BOM/import adapter/CPL and `procurement/JLCPCB-IMPORT-ADAPTER-Q1.md` remain historical submitted-baseline evidence, not current Q2 upload files.
-- Top-level `mechanical/` is an obsolete Rev0 fit study. Separate `mechanical/q2/` is a coordinated engineering fit candidate with simplified envelopes and explicit physical-print/retention limitations; it is not physically qualified.
-- USB charges only. Programming uses Spy-Bi-Wire; ordinary firmware updates must preserve the information-FRAM journal.
-- Do not overwrite routed PCB or approved HEXs just to get a quote. `electronics/build_pcb.py` generates an unrouted board and overwrites Q1 files; intentional rebuilds belong in a working branch.
-- Separate Q2 export/package tools are `scripts/export_q2.py` and `scripts/package_q2.py`; they require current native checks and preserve Q1. Q2 has 50 fitted PCB refs with offboard BAT1/K1/K2 kept separate.
-- Current shared firmware source is the separate Q2 LCD candidate. Do not run the Q1 RFQ packager against it: that would mix newer source with frozen Q1 binaries. Read `docs/build-and-verify.md`; future engineering packages need a coordinated revision.
+- Q3 is a two-layer OLED candidate, not physically qualified. Source consistency, host tests, corner models and CAD checks are separate from measured electrical function, reliable assembly and manufacturing approval.
+- Do not call September15 inventory observations current. Read the September22 stock report and distinguish in-house stock, MOQ/preorder, third-party stock, allocation and both-vendor acceptance.
+- OLED X087-2832TSWIG02-H14/C18723015 is recognized by JLCPCB as an assembly component. Its corrected category is not an approved FPC heat/land/support process. Exact PCBWay sourcing/process acceptance remains open.
+- Preserve the OLED I²C sink/rise margin, converter/cell current, capacitor inrush, charging/protection/thermal, battery-pack, FRAM brownout, effective-capacitance, fit and runtime gaps. Simulated assumptions must not become specifications.
+- Preserve Q1/Q2 and the September15 Q3 RFQ archive as historical evidence. New analysis belongs in dated files. Do not overwrite frozen packages to make their old claims appear current.
+- The original Q1 source/binary mismatch allegation was refuted: TI's LCD4MUX includes LCDSON, and an exact rebuild reproduced the HEX. Missing LCD reservoir capacitors were real; the Q3 OLED removes that LCD circuit.
 
-## Repository maintenance
+## Active design and verification
 
-Update project status, vendor ledger and open issues after meaningful progress. Distinguish planned, attempted, sent, acknowledged, uploaded, quoted, approved and paid. This repo is public: keep credentials, personal delivery/contact details, private email screenshots and account metadata out of commits; ignored `private/` can hold local working files. Do not publish signed attachment URLs.
+Q3 native sources live in `electronics/q3/`, target firmware in `firmware/q3-oled/`, mechanics in `mechanical/q3/`, and procurement evidence in `procurement/q3/`. The top-level firmware and older directories are historical separate revisions. Never run a Q1/Q2 builder against Q3.
 
-Run `python3 scripts/verify_project.py` for package changes; use existing host tests where firmware or migration integrity warrants them. Reading historical DRC is not a new DRC run. Use `scripts/package_rfq.py`, not archived builders. A quote request, technical release and purchase approval are separate states.
+Run `scripts/verify_q3.py` for model/schematic/PCB/BOM/CPL consistency and source-bound native evidence; `scripts/test_verify_q3.py --full --bound` checks deliberate corruption rejection. A saved DRC report revalidated against unchanged inputs is not a new native DRC run. One exact documented J1/SW2 courtyard projection is disclosed; no electrical-clearance or connectivity exception is allowed.
+
+Any actual design change requires corresponding native synchronization, fresh ERC/DRC/parity, exports, firmware and mechanics checks as affected. `build_q3_board.py` can discard routes; do not regenerate the routed board casually. Read `docs/build-and-verify.md` first. Retain four enclosure parts (base, front lid, rear lid, battery keeper), not the obsolete one-piece lid.
+
+Firmware factory initialization clears exactly0x1800–0x1821. Ordinary updates must preserve all information FRAM0x1800–0x19FF. Verify sources, exact compiler flags, ELF/HEX/map/listing hashes and the factory/application separation. A successful flash does not qualify the hardware.
+
+Run `scripts/verify_project.py` to preserve prior-revision provenance. Never infer physical qualification from a package existing or from old reports passing.
+
+## Procurement and handoff
+
+The September15 JLCPCB five-board automatic result was $255.86 plus separately displayed $3.28 depaneling; final freight, battery/harness, keycaps, programming/testing and delivered costs were incomplete. There is no observed ten-unit Q3 total. PCBWay Q3 calculators excluded components/services and its representative cautioned they were not final prices. The old pending Q3 agreement is inactive during the quote pause. No payment/manufacture occurred.
+
+Preserve quote history in `procurement/q3/portal-quotes.json`, `procurement/quote-tracker.json` and the vendor ledger. Historical portal-first and correspondence instructions do not authorize activity during the current pause. When quoting is reauthorized, use one consolidated revision and one communication channel per unresolved matter.
+
+## Repository maintenance and privacy
+
+Commit/push coherent engineering progress to the existing branch/draft PR; do not merge or invent reviewer approval. Update the review entry point and current status after material findings. Distinguish planned, checked, submitted, acknowledged, quoted, paid and released.
+
+This repository is public. Do not commit credentials, mail/account IDs, personal delivery/contact details, private screenshots or signed attachment links. The ignored Q3 DSN/SES are local router-exchange provenance; the DSN contains a local path and is checksum-bound. Do not stage or silently sanitize those files. They are excluded from the frozen RFQ. Keep private working material ignored.

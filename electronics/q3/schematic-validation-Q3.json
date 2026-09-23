@@ -1,0 +1,167 @@
+{
+  "status": "Native Q3 schematic candidate; not a hardware release",
+  "kicad_version": "10.0.6",
+  "sheets": 8,
+  "components_and_pcb_features": 82,
+  "fitted_components": 70,
+  "connected_pins_matched": 218,
+  "explicit_unused_pins": 50,
+  "erc_violations": 0,
+  "nc_nets": {
+    "U1.1": "unconnected-(U1-P3.1/L9-Pad1)",
+    "U1.2": "unconnected-(U1-P3.0/L8-Pad2)",
+    "U1.3": "unconnected-(U1-P7.3/L3-Pad3)",
+    "U1.4": "unconnected-(U1-P7.2/L2-Pad4)",
+    "U1.5": "unconnected-(U1-P7.1/L1-Pad5)",
+    "U1.6": "unconnected-(U1-P7.0/L0-Pad6)",
+    "U1.7": "unconnected-(U1-P4.7/R13-Pad7)",
+    "U1.8": "unconnected-(U1-P4.6/R23-Pad8)",
+    "U1.9": "unconnected-(U1-P4.5/R33-Pad9)",
+    "U1.10": "unconnected-(U1-P4.4/LCDCAP1-Pad10)",
+    "U1.11": "unconnected-(U1-P4.3/LCDCAP0-Pad11)",
+    "U1.12": "unconnected-(U1-P4.2/XOUT-Pad12)",
+    "U1.13": "unconnected-(U1-P4.1/XIN-Pad13)",
+    "U1.18": "unconnected-(U1-P4.0/TA1.1-Pad18)",
+    "U1.19": "unconnected-(U1-P1.7/TA0.1/TDO/A7-Pad19)",
+    "U1.20": "unconnected-(U1-P1.6/TA0.2/TDI/TCLK/A6-Pad20)",
+    "U1.21": "unconnected-(U1-P1.5/TA0CLK/TMS/A5-Pad21)",
+    "U1.22": "unconnected-(U1-P1.4/MCLK/TCK/A4/VREF+-Pad22)",
+    "U1.29": "unconnected-(U1-P5.1/UCB0CLK/L33-Pad29)",
+    "U1.30": "unconnected-(U1-P5.0/UCB0STE/L32-Pad30)",
+    "U1.31": "unconnected-(U1-P2.7/L31-Pad31)",
+    "U1.32": "unconnected-(U1-P2.6/L30-Pad32)",
+    "U1.33": "unconnected-(U1-P2.5/L29-Pad33)",
+    "U1.34": "unconnected-(U1-P2.4/L28-Pad34)",
+    "U1.35": "unconnected-(U1-P2.3/L27-Pad35)",
+    "U1.36": "unconnected-(U1-P2.2/L26-Pad36)",
+    "U1.37": "unconnected-(U1-P2.1/L25-Pad37)",
+    "U1.38": "unconnected-(U1-P2.0/L24-Pad38)",
+    "U1.39": "unconnected-(U1-P6.3/L19-Pad39)",
+    "U1.40": "unconnected-(U1-P6.2/L18-Pad40)",
+    "U1.41": "unconnected-(U1-P6.1/L17-Pad41)",
+    "U1.42": "unconnected-(U1-P6.0/L16-Pad42)",
+    "U1.43": "unconnected-(U1-P3.7/L15-Pad43)",
+    "U1.44": "unconnected-(U1-P3.6/L14-Pad44)",
+    "U1.45": "unconnected-(U1-P3.5/L13-Pad45)",
+    "U1.46": "unconnected-(U1-P3.4/L12-Pad46)",
+    "U1.47": "unconnected-(U1-P3.3/L11-Pad47)",
+    "U1.48": "unconnected-(U1-P3.2/L10-Pad48)",
+    "J1.A6": "unconnected-(J1-D+-PadA6)",
+    "J1.A7": "unconnected-(J1-D--PadA7)",
+    "J1.A8": "unconnected-(J1-SBUA-PadA8)",
+    "J1.B6": "unconnected-(J1-D+-PadB6)",
+    "J1.B7": "unconnected-(J1-D--PadB7)",
+    "J1.B8": "unconnected-(J1-SBUB-PadB8)",
+    "U2.3": "unconnected-(U2-STAT2-Pad3)",
+    "U2.9": "unconnected-(U2-STAT1-Pad9)",
+    "J2.MP1": "unconnected-(J2-ANCHOR1-PadMP1)",
+    "J2.MP2": "unconnected-(J2-ANCHOR2-PadMP2)",
+    "U4.1": "unconnected-(U4-NC-Pad1)",
+    "DS1.6": "unconnected-(DS1-NC-Pad6)"
+  },
+  "erc_ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "commands": [
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "electronics/q3/schematic-netlist-Q3.xml",
+      "electronics/q3/click-counter-Q3.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "electronics/q3/erc-Q3.json",
+      "electronics/q3/click-counter-Q3.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "pdf",
+      "-o",
+      "electronics/q3/schematic-Q3.pdf",
+      "electronics/q3/click-counter-Q3.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "svg",
+      "-o",
+      "electronics/q3/schematic-svg/",
+      "electronics/q3/click-counter-Q3.kicad_sch"
+    ]
+  ],
+  "supply_assertions": {
+    "VBUS": "External USB source",
+    "GND": "System return via reviewed power topology",
+    "CELL_N_RAW": "External cell return",
+    "BAT_SENSE": "Cell supply through R7",
+    "OLED_VBAT": "Regulated OLED_4V through Q5 switch"
+  },
+  "limitations": [
+    "ERC does not verify analog thresholds, startup, protection bypass or battery safety.",
+    "Supply assertions describe external/passive power paths; they are not extra fitted parts.",
+    "The drawing uses global labels between functional sheets; pin names/types are explicit.",
+    "All existing first-article, mechanical, firmware and purchase approval gates remain."
+  ],
+  "inputs_sha256": {
+    "scripts/build_q3_schematic.py": "c7247bf75353ca7a879e4089bb866f089b1ee2e2a053f22aa103ed009baddf50",
+    "scripts/build_q3_model.py": "eef7aa8c6986a826fb479968fcef95ae5f134fda942ddd2fec66436c34219a27",
+    "electronics/q2/netlist-Q2.json": "3aae3dafcf2b6b5d1c1cac8932200bd2ba3e52ed39507f2c22e9a41b771bb065",
+    "procurement/q3/power-candidates.json": "c0ab4a84ff6665a5180b0f2ce07eef3c4dc3e308606973ba9be6a80c226153cf",
+    "procurement/q3/live-stock-2026-09-15.json": "f13c860e27d3c015cae2984383d82721a3c398562276c0ebdeaa9d91bd8a1bee"
+  },
+  "artifacts_sha256": {
+    "electronics/q3/click-counter-Q3.kicad_sch": "bb2ed8bca9f3542f7dfcb25c71c4ae55f6a9c2b9310a21764a50962f4afac4d9",
+    "electronics/q3/mcu.kicad_sch": "a8715c820dd820b1adfc50d6f516ca09bc05d7f582612fcdef54d010b614d232",
+    "electronics/q3/usb-power.kicad_sch": "40995791b45175d7e49d9280ad0e03cdb65917a0779383ad7839e45200245cea",
+    "electronics/q3/battery-protection.kicad_sch": "36aacdf0308d1aac17ae5e6071f24cc2d5e193f1b5f1bb9f326648c2e171c92d",
+    "electronics/q3/thermal.kicad_sch": "b30295469a39a56f04a16fd4ce9a83596d7878e546fe279872948fd08ae200eb",
+    "electronics/q3/buttons.kicad_sch": "97e1e25a116bd8fe8061c767a7104c2a6eeb80fe8ac78c63e3254807b254abf2",
+    "electronics/q3/oled-power.kicad_sch": "5bbca3a09219b550a329e6ec124fdbd5b8898a00653ba0ef6ab2bea8833520e6",
+    "electronics/q3/oled-panel.kicad_sch": "0e7ae3dbc2ac795862f501af955eb7d22c6354303c64ff47572fe7fd128056c7",
+    "electronics/q3/CountFidgetQ3.kicad_sym": "072835ba37a33e13ba595bb291b77efea11ba8544184f3f4d7769263733e2358",
+    "electronics/q3/sym-lib-table": "6168d1e62bded133848be6efcf5bd29780631f1a3baf3cd0da3197bacd9e5c57",
+    "electronics/q3/schematic-paths-Q3.json": "5f18163ba6804eecdefe85b15f3496caa84c58c9e0cba631caa52e2ef1dd418b",
+    "electronics/q3/schematic-netlist-Q3.xml": "09acd28cca9aa49d134973c29df23fbc60cd65f33638dbf9b3eb71da6b52e5d4",
+    "electronics/q3/erc-Q3.json": "7c6348439671fe5b679fe623f4cd857cadf1a466cd032c7880dc943eac46a307",
+    "electronics/q3/schematic-Q3.pdf": "30216462d7a85c3e88c4455786edec7041a6af89920adc93f3595cfb2267fa80",
+    "electronics/q3/schematic-svg/click-counter-Q3-Battery connector and independent cell protection.svg": "825563ed5672aa121e257788f8b23977ce649c17c05c8cd94ba1fb85eda90135",
+    "electronics/q3/schematic-svg/click-counter-Q3-Count_reset keys, filtering and fixture access.svg": "a3c2a3f7acefd77812d77e5c2b5f72dd66d57bb3821c86249cfcc8061319ffb8",
+    "electronics/q3/schematic-svg/click-counter-Q3-FRAM MCU and programming.svg": "93d249506d4df8c1f2d0fedb233b0f76deae8dd2099a4e17df2b2237205b0dd5",
+    "electronics/q3/schematic-svg/click-counter-Q3-Independent temperature window and charge inhibit.svg": "bc085182b099d5f19a4c965e9a974116d705bc5d6dffee5aac603cda208f5845",
+    "electronics/q3/schematic-svg/click-counter-Q3-OLED 4 V buck-boost and pump isolation.svg": "8779c20186202a439b6a1d8130c7f0d03f0ec3fcc1cad01a9bb28761db09bd42",
+    "electronics/q3/schematic-svg/click-counter-Q3-SSD1312 OLED and support parts.svg": "d8baab3b693b2dcf878f92d4a782582caa1b32f66dc32e365d6ed9b370af0ee7",
+    "electronics/q3/schematic-svg/click-counter-Q3-USB input, charging and 3 V supply.svg": "4a00cf5c9e1ab3d57a65e3c6a94aa2d629a257406579e62d860031b9efcaa2c6",
+    "electronics/q3/schematic-svg/click-counter-Q3.svg": "a9baeb0c530f255349032cd7a466cd6b754b12ebf25f8314b25847b5beed89a5"
+  }
+}

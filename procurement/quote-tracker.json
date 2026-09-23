@@ -1,12 +1,11 @@
 {
-  "snapshot_date": "2026-09-15",
-  "phase": "Q2 four-file PCBWay submission under audit; JLCPCB Q2 saved ten-unit draft blocked by required LCD/shortages; five/ten partial estimates captured, no complete quotes",
+  "snapshot_date": "2026-09-22",
+  "phase": "Engineering-only adversarial review and commit; user paused all new quote submissions",
   "quantities": [
     5,
     10
   ],
   "currency": "USD",
-  "destination_postcode": "20815",
   "complete_quotes_received": false,
   "paid_procurement": false,
   "order_placed": false,
@@ -34,7 +33,7 @@
         "Functional-test review/pricing only after payment; exception declined",
         "Cannot quote order with non-stock parts included, per Mitchell Chen around 2026-09-15 02:02 UTC"
       ],
-      "next_action": "Use existing Frank case for exact LCD/shortage sourcing and complete battery/test scope; no DNP or paid matching/sourcing to unlock quotation",
+      "next_action": "No vendor action until fresh explicit user instruction; engineering review and repository commit only.",
       "website_submission_complete": false,
       "bom_cpl_imported": true,
       "bom_match_verified": false,
@@ -670,8 +669,8 @@
       "q1_form_filled": true,
       "blocker": "Q2 technical review and complete component/advanced-service/landed pricing pending",
       "special_notes_accepted_by": "User, manually before file upload",
-      "quoted_review_time": "Representative stated 1–2 days after file receipt, not guaranteed",
-      "next_action": "Obtain review of Q2 files, exact stack/mask/process and complete separate5/10 prices including components and all advanced services through existing Remi case; no duplicate uploads",
+      "quoted_review_time": "Representative stated 1\u20132 days after file receipt, not guaranteed",
+      "next_action": "No vendor action until fresh explicit user instruction; engineering review and repository commit only.",
       "local_signed_in_verified": true,
       "local_cart_before_draft": "No listings/zero orders observed; unrelated items unchanged",
       "local_cart_recheck": "Before Q1 submission, native Chrome cart refreshed: Cart 0; All Orders, Under Review and Awaiting Payment all 0; search fields empty; no listings. Nothing to remove; no deletion performed. Authorization to remove verified previous-project entries remains applicable if they appear later.",
@@ -1114,7 +1113,7 @@
     "engineering_evaluation_authorized": true,
     "stocked_passive_alternative_verified": false,
     "latest_vendor_feedback": "JLCPCB at about 02:15 UTC reports no stocked alternative to the requested LCD and suggests paid Global Sourcing preorder for DE188; no purchase authorized",
-    "power_constraint": "Existing protection nominally trips near 30 mA; OLED example 23–29 mA needs full power-budget review",
+    "power_constraint": "Existing protection nominally trips near 30 mA; OLED example 23\u201329 mA needs full power-budget review",
     "q2_recommendation": "Retain exact DE188 3 V for corrected Q2 baseline; alternate passive displays did not establish JLC stock advantage"
   },
   "engineering_review": {
@@ -1182,7 +1181,7 @@
     ],
     "all_requested_vendors_sent": true
   },
-  "latest_website_observation_utc": "2026-09-15T11:51:09Z",
+  "latest_website_observation_utc": "2026-09-15T13:58:26Z",
   "browser_access_history": [
     {
       "available": false,
@@ -1222,7 +1221,7 @@
     "portal_upload_scope": "PCBWay four-file Q2 submission under audit; JLCPCB Q2 Gerbers/BOM/CPL and RFQ supplements in saved draft"
   },
   "correspondence_policy": {
-    "selected_workflow": "Portal workflows first; email fallback",
+    "selected_workflow": "Paused; no new quote submissions or technical vendor requests",
     "vendors": [
       "PCBWay",
       "JLCPCB"
@@ -1230,9 +1229,10 @@
     "basis": "Latest user correction directs proactive revised-file upload and automatic quote progress through both portals; use email only for matters portals cannot accomplish",
     "await_email_instructions_for_supported_portal_actions": false,
     "duplicate_correspondence_allowed": false,
-    "portal_file_imports_and_forms": true,
-    "automatic_quote_progress_authorized": true,
-    "payment_or_manufacture_authorized": false
+    "portal_file_imports_and_forms": false,
+    "automatic_quote_progress_authorized": false,
+    "payment_or_manufacture_authorized": false,
+    "superseded_on": "2026-09-22"
   },
   "latest_email_recheck": {
     "date": "2026-09-15",
@@ -1245,7 +1245,7 @@
   },
   "submitted_q1_package_manifest": "../dist/manifest.json",
   "latest_website_observation_utc_approx": "2026-09-15 11:51 UTC",
-  "latest_website_observation_note": "PCBWay Q2 accepted for review; JLCPCB saved ten-unit Q2 observation approximately11:46UTC",
+  "latest_website_observation_note": "Historical JLCPCB Q3 five-unit Quote & Order total recorded; not a fresh September22 quote; no ten-unit Q3 result.",
   "previous_correspondence_policy": {
     "selected_channel": "email",
     "vendors": [
@@ -1256,5 +1256,37 @@
     "portal_correspondence": false,
     "portal_file_imports_and_forms": true,
     "superseded": true
+  },
+  "q3": {
+    "revision": "Q3",
+    "stock_evidence": "procurement/q3/live-stock-2026-09-15.json",
+    "display_mpn": "X087-2832TSWIG02-H14",
+    "display_lcsc": "C18723015",
+    "fitted_pcb_references": 70,
+    "distinct_fitted_mpns": 43,
+    "layers": 2,
+    "smt_side": "bottom",
+    "pcbway_exact_display_acceptance": false,
+    "jlc_catalog_assembly_support": true,
+    "stock_reserved": false,
+    "portal_uploads_complete": false,
+    "complete_quotes_received": false,
+    "hardware_tested": false,
+    "manufacturing_released": false,
+    "portal_record": "procurement/q3/portal-quotes.json",
+    "historical_jlcpcb_5_unit_automatic_total_usd": 255.86,
+    "historical_jlcpcb_5_unit_depaneling_separate_usd": 3.28,
+    "portal_preview_placement_approved": false,
+    "quote_submissions_authorized": false
+  },
+  "quote_submissions_authorized": false,
+  "quote_pause": {
+    "date": "2026-09-22",
+    "instruction": "Do not submit for another quote until explicitly told to; do not advance or revise portal quote drafts during this review."
+  },
+  "home_completion_allowed": {
+    "programming": true,
+    "limited_through_hole_soldering": true,
+    "condition": "Material cost reduction; exact split and savings remain to be demonstrated."
   }
 }

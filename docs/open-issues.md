@@ -1,5 +1,25 @@
 # Open issues
 
+## Active Q3 status
+
+**22 September 2026: engineering review only; vendor quotations are paused.** The DE188 replacement is implemented as X087-2832TSWIG02-H14/C18723015 on a two-layer board. Fresh inventory checking found40 of43 exact PCB MPNs with positive JLC available quantity; J1, Q1/Q2/Q6 and R13 have ordering restrictions there, but all three exact MPNs have independent DigiKey stock. That provides a source path, not JLC/PCBWay allocation or accepted sourcing. See the [dated review](REVIEW-Q3-2026-09-22.md) and its stock evidence.
+
+The new deterministic software harness found no additional confirmed production-code defect in its bounded scenarios. Conditional hardware analysis does not close OLED acknowledgement/rise-time, current budget, startup or the retained qualification gaps below. Historical Q1/Q2 issues remain evidence for those revisions, not a claim that the removed LCD circuit is present in Q3.
+
+| ID | Q3 finding / state | Required closure |
+|---|---|---|
+| E20 | OLED power/process changes:4V TPS63900 supply, internal9V pump, gatedVBAT, exact14-pin FPC | Vendor-approved lot/land/mask/heat/support section; physical rail/start-stop/current/optics and low-cell/USB handover tests |
+| E21 |4.7k I²C pull-ups draw more than the controller's stated100µA VOL test current; increasing to33k would leave only10.6pF for the300ns rise-time limit | Obtain sink/capacitance evidence or measure actual ACK low level and rise time. Do not infer margin from100kHz operation alone |
+| E22 | Original Q3 foreground work could miss short presses; independent ISR tests exposed and fixed it with a timestamped63-entry input queue and visible persisted ERR state | Physical bounce/timing, queue-overflow and power-loss tests. Abrupt power loss before the foreground error marker write remains a gap |
+| E23 | Independent Q3 mechanics found initial shell collisions, one-piece cover assembly trap and0.1mm keeper-head clearance | Corrected split cover and raised PCB model; final source-bound CAD checks plus actual print/assembly/clip/lap/harness/USB/pack qualification required |
+| E24 | One exact J1 shell-pad/SW2 courtyard projection exception; rotated-pad nominal separation0.905mm, flange5mm high, checked top fillet≤0.5mm | Vendor3D/tolerance and solder-height confirmation; no electrical-clearance waiver |
+| P05 | September22: OLED available1,052;40/43 exact MPNs have positive JLC available quantity. Exact J1, DMN2056U-7 and R13 have verified DigiKey stock but JLC ordering restrictions | Choose accepted exact-part sourcing/allocation when vendor activity is explicitly reauthorized. No preorder, DNP or new quote now |
+| E25 | Deterministic battery-insertion sensitivity model can hold protector sense above0.4V for179.45µs, exceeding the125µs minimum short-circuit delay; assumes4.2V,20µF effective SYS capacitance and1Ω other series resistance | Establish actual cell impedance/BATFET slew and instrument insertion/recovery, or design bounded precharge. Converter input limiting does not bound input-capacitor charging; this is a conditional counterexample, not a measured failure |
+
+Q3 retains E01/E03–E05/E07–E09/E11/E12/E14/E18/E19 where applicable. E02/E15/E17 concern the removed DE188/LCD drive and remain historical; Q3 needs its own OLED qualification. E06 consistency requires fresh Q3 native evidence. E10 now has visible MAX/ERR behavior and adversarial tests; the watchdog strategy and hardware recovery remain review gates. No board is physically qualified.
+
+## Historical Q1/Q2 findings
+
 Q1 is on engineering hold after the 15 September independent review. Separate Q2 circuitry, schematic, layout and enclosure corrections are recorded below; a correction in files does not establish measured behavior. A quotation, host test or re-read of a DRC file does not close these findings. See `adversarial-review-Q2.md` and its linked audits.
 
 | ID | Issue / evidence | Closure |

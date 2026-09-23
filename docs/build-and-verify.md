@@ -50,3 +50,26 @@ For an intentional electronics change: first preserve a branch/checkpoint, make 
 ## CAD
 
 See `mechanical/README.md`. CadQuery source, STEP/STLs and rendered PNGs are supplied. Need CadQuery, NumPy and Pillow for the historical renderer; font paths are Linux-specific and must be adapted. Q1 mount/USB/component changes must be modeled before final printing. Solid-validity checks alone are insufficient.
+
+
+## Separate Q3 OLED candidate
+
+Q1/Q2 artifacts remain frozen. Q3 sources, board, schematic, mechanics, procurement exports and firmware live in their own q3 directories.
+
+1. The controlled model generator selects exact MPNs from the recorded live-stock evidence. Any position/circuit change requires regenerating the Q3 schematic provenance and synchronizing native fields/NC nets without discarding routes.
+2. Run verify_q3.py --prepare-native with the local KiCad CLI. Execute its exact native DRC (including schematic parity), ERC and netlist-export commands; use --bind-native only after all three finish and the sources remain unchanged. One exact disclosed J1/SW2 courtyard projection is permitted; no electrical violation or unconnected item is permitted.
+3. Run test_verify_q3.py --full --bound for deliberate corruption rejection against final evidence. It works on temporary copies.
+4. build_q3_enclosure.py requires CadQuery and --kicad-python. Its default input is the final native Q3 board/model. Require exit0 and a matching manifest, four valid/manifold print parts and zero modeled intersections; a file's existence is insufficient. Private snapshot arguments support experiments, but are not final package evidence.
+5. export_q3.py requires the current native validation and explicit local KiCad tools. package_q3.py then verifies historical integrity, Q3 evidence, firmware, mechanical and export hashes before producing dist/q3/click-counter-Q3-RFQ.zip.
+6. Q3 target firmware uses TI GCC9.3.1.11/support1.212. build_firmware_q3.py --verify-only checks sources, outputs and information-FRAM separation. Factory initialization now covers34bytes,0x1800–0x1821; ordinary updates preserve the entire information region.
+
+These checks establish file consistency and bounded software/geometry review. They do not establish physical power, protection, OLED process, runtime, battery or fit qualification, and do not authorize manufacture or payment.
+
+
+## Additional September22 adversarial review
+
+Run `python3 scripts/test_q3_behavior_model.py` to compile the unchanged production counter, input and OLED modules against a separate bounded deterministic harness. The saved result is `verification/q3-behavior-model-2026-09-22.json`. It checks arbitrary destination-word tears, recovery cuts, scheduling and display faults; it does not emulate analog rails or the MSP430 peripherals.
+
+Run `python3 scripts/analyze_q3_hardware_corners_20260922.py` for the separate conditional electrical analysis. Read its explicit assumptions and the dated hardware review; a reproduced counterexample is not a hardware pass. The native September15 artifacts remain unchanged. Rechecking their source bindings on September22 does not constitute fresh native DRC.
+
+The negative-check script currently uses the macOS scratch directory `/private/tmp`; ensure it exists when reproducing on another platform. Do not modify a hash-bound validation input and then reuse the previous native binding as though it still applied. The September15 RFQ is an immutable snapshot and does not contain these new reviews or later status documents.
