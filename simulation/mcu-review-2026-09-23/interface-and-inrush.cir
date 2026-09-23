@@ -1,0 +1,16 @@
+Conditional linear interface and insertion examples; NOT a whole-board model
+* All elements below are ideal behavioral assumptions, not vendor IC models.
+* 1 ohm is HYPOTHETICAL extra source resistance, not a cell specification.
+Vcell cell 0 4.2
+Rother cell sense 1
+Rsense sense sys 3.3
+Csys sys 0 20u IC=0
+* Hypothetical linear sink meets X087 0.6V at100uA; actual sink unknown.
+Vlogic logic 0 3
+Rpull logic ack 4.7k
+Rweak ack 0 6k
+* Rising edge after an ideal release; hypothetical100pF complete bus.
+Rrise logic edge 4.7k
+Cbus edge 0 100p IC=0
+.options reltol=1e-6 abstol=1e-12 vntol=1e-9
+.end

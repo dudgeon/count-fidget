@@ -1,0 +1,68 @@
+{
+  "review_date": "2026-09-23",
+  "downloaded_models_not_redistributed": [
+    {
+      "part": "TPS7A02",
+      "official_catalog": "https://www.ti.com/product/TPS7A02",
+      "download_url": "https://www.ti.com/lit/zip/sbvm950",
+      "zip_sha256": "648220f117c0e6fca0cec8e9d7c8dc1b6505ba3acd32660bf255431cd9b56f33",
+      "format": "Plain-text PSpice transient generic TPS7A0x core, version1.00",
+      "inspected_file": "tps7a02_03.lib",
+      "vendor_declared_omissions": [
+        "input and quiescent current",
+        "temperature effects",
+        "noise"
+      ],
+      "additional_review_limitations": [
+        "Exact TPS7A0230P/TPS7A0233P active-discharge behavior not established by generic core",
+        "No manufacturer macromodel run in this study",
+        "Constant generic dropout parameter is not an exact low-load device curve"
+      ]
+    },
+    {
+      "part": "TPS63900",
+      "official_catalog": "https://www.ti.com/product/TPS63900",
+      "download_url": "https://www.ti.com/lit/zip/slvmdc0a",
+      "zip_sha256": "3d275a799cc267e7082a634ff24dc6468f504fc4668cad40ea61f45d99dc3f0a",
+      "format": "Encrypted PSpice transient, version2.00",
+      "inspected_file": "TPS63900_PSPICE_TRANS/TPS63900_TRANS.LIB",
+      "vendor_declared_coverage": [
+        "soft start",
+        "input current limit",
+        "dynamic voltage scaling",
+        "Vo1/Vo2/ICL simulation parameters"
+      ],
+      "vendor_declared_omissions": [
+        "physical CFG1/CFG2/CFG3 resistor decoding",
+        "temperature dependent characteristics"
+      ],
+      "additional_review_limitations": [
+        "Encrypted library not directly usable with available ngspice; not decrypted or simulated",
+        "Nominal model does not create absent data-sheet minimum/maximum current-limit guarantees"
+      ]
+    }
+  ],
+  "model_gaps": [
+    {
+      "part": "BQ25185",
+      "checked": "https://www.ti.com/product/BQ25185",
+      "result": "No public SPICE model found in current catalog/search; EVM is physical evaluation hardware, not a simulation model"
+    },
+    {
+      "part": "BQ29700",
+      "checked": "https://www.ti.com/product/BQ2970",
+      "result": "No current public model found; historical official TI answer also states no SPICE/TINA model",
+      "historical_statement": "https://e2e.ti.com/support/tools/simulation-hardware-system-design-tools-group/sim-hw-system-design/f/simulation-hardware-system-design-tools-forum/828079/webench-tools-bq2970-spice-and-tina-ti-model"
+    },
+    {
+      "part": "STM32L072CB",
+      "checked": "https://www.st.com/en/microcontrollers-microprocessors/stm32l072cb.html",
+      "result": "Manufacturer lists STM32L0 IBIS3.0; no IBIS download/content validation in this study. I/O signal model, not CPU/USB protocol/current/NVM execution."
+    },
+    {
+      "part": "MSP430FR4133 / ESP32-C3 / ATtiny3226 / exact X087 FPC",
+      "result": "No executable electrical I/O model obtained/validated in this bounded study; use primary limits plus explicitly conditional external behavior."
+    }
+  ],
+  "actual_simulation": "Only original ideal R/C/source deck interface-and-inrush.cir was executed with ngspice; no vendor macromodel or whole-board simulation."
+}

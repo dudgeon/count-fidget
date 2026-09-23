@@ -1,5 +1,15 @@
 # Local continuation handoff
 
+## Continue here — 23 September 2026: USB-programmable candidate
+
+Read [MCU options and recommendation](docs/mcu-options-2026-09-23.md), its programming/hardware reviews and the fresh stock records. **STM32L072CBT6 is the recommended next design direction**, with 2,211 JLC orderable units; no STM32 schematic, routed board or target firmware has been produced yet. The Q3 MSP430 implementation and RFQ remain frozen. Do not mistake a completed options study for a completed revised device.
+
+Next engineering work: develop a separate candidate with all STM32 supply domains on a compliant 3.3 V rail, preserve OLED 3.0 V limits, provide factory-ROM USB boot/recovery and retained debug access, and implement a wear-distributed, interruption-safe EEPROM journal. Resolve the retained OLED bus/current, insertion surge, cell/protection and other engineering gaps as part of that coordinated revision. R25's existing OLED-reset pulldown must be reconsidered for open-drain reset; keep the pump disabled during ROM flashing. Review the detailed bank/write-latency constraints before porting retention.
+
+The new ngspice 45.2 deck under `simulation/mcu-review-2026-09-23/` checks three idealized subcircuits and agrees with independent equations. It does not model the complete board or validate the charger/protector/OLED/MCU. Read the model-coverage report before expanding it. Preserve the distinction between firmware, analog models, native CAD consistency and physical evidence.
+
+**No new quotes, uploads, draft changes, vendor requests, purchases or manufacture until explicitly authorized.** Read-only catalog work remains allowed. Commit/push coherent progress to `codex/q2-engineering-audit` and draft PR #1; do not merge. The older next-action instructions below are historical where inconsistent.
+
 ## Active direction — 22 September 2026: engineering review only
 
 The user has **paused all new vendor quote submissions until a fresh explicit instruction**. Do not upload revisions, change quote drafts, advance automatic quotations, accept the old pending PCBWay Q3 notice, or send another technical review request. This supersedes every earlier portal-first/upload instruction below. Read-only stock research is allowed. No spending or manufacturing release is authorized.

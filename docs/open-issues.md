@@ -1,5 +1,16 @@
 # Open issues
 
+## MCU follow-up — 23 September 2026
+
+[The options study](mcu-options-2026-09-23.md) recommends STM32L072CBT6 for the next candidate. It does not alter Q3 or close any issue below. New ngspice subcircuits reproduce E21/E25 under explicitly hypothetical parameters; a whole-board simulation has not been performed.
+
+| ID | Candidate issue | Required closure |
+|---|---|---|
+| E26 | Native USB needs a supply above the current nominal 3.0 V rail's tolerance floor; separate VDD_USB has sequencing constraints, while OLED logic limits prevent an unreviewed common 3.3 V substitution | Coordinate all STM32 supply domains, mixed-rail I²C/reset, boot/reset access, VBUS detection, USB protection/routing, regulator dropout and power-up/down behavior; implement and verify the revised native design |
+| E27 | STM32 EEPROM has different endurance, write latency, bank-execution and ECC behavior from MSP430 FRAM | Design a wear-distributed journal, preserve input handling during writes, validate interrupted-write recovery and factory/update separation, then test on the real target |
+
+The complete revised board still needs an inventory/assembly check; a stocked MCU and regulator do not establish both-vendor support. Quote activity remains paused until explicitly authorized.
+
 ## Active Q3 status
 
 **22 September 2026: engineering review only; vendor quotations are paused.** The DE188 replacement is implemented as X087-2832TSWIG02-H14/C18723015 on a two-layer board. Fresh inventory checking found40 of43 exact PCB MPNs with positive JLC available quantity; J1, Q1/Q2/Q6 and R13 have ordering restrictions there, but all three exact MPNs have independent DigiKey stock. That provides a source path, not JLC/PCBWay allocation or accepted sourcing. See the [dated review](REVIEW-Q3-2026-09-22.md) and its stock evidence.

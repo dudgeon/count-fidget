@@ -1,8 +1,10 @@
 # Instructions for agents
 
-## Current task and authorization — 22 September 2026
+## Current task and authorization — 23 September 2026
 
 Continue the Q3 engineering review on `codex/q2-engineering-audit` and the existing draft PR #1. Read `PROJECT.md`, `HANDOFF.md`, `docs/REVIEW-Q3-2026-09-22.md`, `docs/product-spec.md`, `docs/user-research.md`, `docs/decisions.md`, `docs/open-issues.md`, and `procurement/vendor-status.md`. The user's current instructions override historical checkpoints.
+
+The latest task is to bring concrete MCU/home-programming options and continue engineering. Read `docs/mcu-options-2026-09-23.md` and its programming, hardware and stock evidence. STM32L072CBT6 is the recommended next architecture, not an implemented replacement or user-approved order. Fresh stock supports that candidate; all-MCU-domain 3.3 V regulation, OLED 3.0 V interfaces, ROM USB recovery and EEPROM journaling still require a coordinated design. Preserve Q3 as the baseline. The new ngspice study contains idealized subcircuits only; never describe it as a whole-board simulation or hardware pass.
 
 **All new vendor quotations are paused until the user explicitly authorizes another.** Do not upload revisions, change quote drafts, advance automatic quotations, accept the old pending PCBWay Q3 notice, or send another technical review request. Read-only catalog/stock research and reading incoming replies are allowed. No spending, paid sourcing/preorder, order placement or manufacturing release is authorized.
 

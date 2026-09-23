@@ -1,5 +1,13 @@
 # Count Fidget — project status
 
+## Active direction — 23 September 2026: home-programming options
+
+The user requested concrete options after questioning the MCU choice and whole-board simulation coverage. The [completed options study](docs/mcu-options-2026-09-23.md) recommends **STM32L072CBT6 with factory USB programming** as the next engineering candidate. Fresh JLC stock is 2,211 orderable at $2.7916 each at ten; a candidate extra TPS7A0233 regulator has 8,852 orderable at $0.4751. These are unallocated component prices, not a revised device quote or both-vendor acceptance.
+
+The study compares retained MSP430, STM32, ATtiny/UPDI and ESP32-C3; it includes separate programming and hardware reviews plus a runnable ngspice subcircuit study. The simulation reproduces conditional interface/inrush risks with ideal elements; **no complete board has been simulated or physically qualified**. Q3 remains unchanged. Developing the recommended STM32 circuit requires power/interface changes and a new EEPROM journal before layout, firmware, CAD and qualification can be considered complete.
+
+**All quote submissions, uploads, draft changes, vendor requests, purchases and manufacture remain paused.** Continue engineering within the existing branch/draft PR, consolidate a future revision, and wait for explicit user instruction before any new vendor quote activity. The September22 review below remains the frozen Q3 baseline; historical retention of the MSP430 is superseded as a recommendation, not as the implemented design.
+
 ## Active direction — 22 September 2026: engineering review only
 
 The user has **paused all new vendor quote submissions until a fresh explicit instruction**. Do not upload revisions, change quote drafts, advance automatic quotations, accept the old pending PCBWay Q3 notice, or send another technical review request. This supersedes every earlier portal-first/upload instruction below. Read-only stock research is allowed. No spending or manufacturing release is authorized.
