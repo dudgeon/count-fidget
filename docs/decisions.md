@@ -1,5 +1,21 @@
 # Decisions and major findings
 
+## Current decisions — 23 September 2026
+
+| Decision / finding | Reason and consequence | State |
+|---|---|---|
+| Two-layer OLED Q3 | Replaces the original unmatched reflective LCD; MCU LCD peripheral is unused | Implemented and preserved; electrical/assembly qualification remains open |
+| Home programming and limited through-hole soldering | User permits them when materially useful; full vendor programming is no longer a fixed requirement | Authorized scope, not an approved order |
+| STM32L072CBT6 preferred for the next candidate | Factory USB programming, low-power architecture, adequate live stock and built-in EEPROM | Recommended after the [options study](mcu-options-2026-09-23.md); circuit and firmware not implemented |
+| Shared 3.3 V MCU domains, retained 3.0 V OLED | Avoid an under-voltage USB supply and independently powered USB-domain sequencing problem | Proposed architecture; interface, dropout and startup checks required |
+| EEPROM journal must be redesigned | FRAM's two-record write strategy does not transfer directly to EEPROM wear/timing/ECC behavior | Target implementation and adversarial verification pending |
+| Simulation scope is explicit | New ngspice run covers only idealized interface/inrush subcircuits | No whole-board simulation or hardware pass |
+| Vendor quotation pause | User wants one settled revision before another quote | No new submissions, uploads, draft changes or vendor requests until explicit instruction |
+
+See the dated study for component prices, model coverage and cost tradeoffs. Q3's existing firmware, native design and September15 archive are unchanged. Current user instructions supersede the historical table below.
+
+## Historical Q1 decisions
+
 Design reasoning, not blanket user approval. Q1 overrides Rev0; no hardware release is implied.
 
 | Decision / finding | Reason and consequence | State |

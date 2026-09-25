@@ -1,0 +1,30 @@
+{
+  "analytic": {
+    "hypothetical_ack_v": 1.6822429906542056,
+    "hypothetical_inrush_above_0p4v_us": 179.45471245253003,
+    "rc_rise_30_to_70_ns": 398.2299943819857
+  },
+  "date": "2026-09-23",
+  "engine": "ngspice-45.2 shared library",
+  "engine_library_sha256": "501e9b4981fe810571fe349000112590db4379377887ace04b2aa38d529d1e9a",
+  "input_sha256": {
+    "interface-and-inrush.cir": "92254218b98fd032cc0e523b0496092ac9135bfd4c994f7d34875aa2072dbc80",
+    "run.py": "bcfb7fbdda2ff5e4f2073ec48d8fe6daa900873d52995c41fe7a5e03440caab6"
+  },
+  "sample_count": 50014,
+  "scope": [
+    "Ideal R/C/source elements only; no semiconductor manufacturer model run.",
+    "6k sink,100pF bus,1ohm extra source resistance and20uF effective C are hypothetical.",
+    "No actual charger/protector slew/state machine, OLED behavior, CPU current or USB protocol.",
+    "No board/parasitic extraction, temperature qualification, assembly or manufacturing approval."
+  ],
+  "spice": {
+    "hypothetical_ack_v": 1.6822429906542056,
+    "hypothetical_inrush_above_0p4v_us": 179.45471238181113,
+    "rc_rise_30_to_70_ns": 398.21678305184787
+  },
+  "status": "BEHAVIORAL_SUBCIRCUITS_ONLY_NOT_HARDWARE_PASS",
+  "warnings": [
+    "stderr Warning: can't find the initialization file spinit."
+  ]
+}

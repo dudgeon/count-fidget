@@ -1,0 +1,71 @@
+Comment,Designator,Footprint,Quantity,Manufacturer,Manufacturer Part Number,Assembly,Notes,Source Label,LCSC Part #
+X087-2832TSWIG02-H14,DS1,CountFidgetQ3:X087-2832TSWIG02-H14,1,Newvisio / Wisevision,X087-2832TSWIG02-H14,top,"Vendor localized FPC solder after SMT reflow; proposed planar XY lands, glass support and terminal Z transition require approval; do not reflow glass; no customer soldering; exact vendor process and first article pending",X087-2832TSWIG02-H14,C18723015
+CPG151101D13,SW1,CountFidgetQ3:HanElectricity_CPG151101D13_MX_Plate,1,HanElectricity,CPG151101D13,top,"Click-tactile SPST, MX cross stem, plate mounted; vendor soldered; exact manufacturer lands and enclosure retention require first-article fit",COUNT,C49234235
+CPG151101D13,SW2,CountFidgetQ3:HanElectricity_CPG151101D13_MX_Plate,1,HanElectricity,CPG151101D13,top,"Click-tactile SPST, MX cross stem, plate mounted; vendor soldered; exact manufacturer lands and enclosure retention require first-article fit",RESET,C49234235
+USB4105-GF-A,J1,CountFidgetQ3:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,1,GCT,USB4105-GF-A,bottom,0.95 mm standard stakes; D+/D-/SBU unconnected; shell grounded,USB-C charge,C3020560
+SM04B-SRSS-TB(LF)(SN),J2,CountFidgetQ3:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal,1,JST,SM04B-SRSS-TB(LF)(SN),bottom,Mating keyed custom pack CC-BAT-001; no bare coin-cell holder,Battery + NTC,C160404
+MSP430FR4133IG48R,U1,CountFidgetQ3:Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm,1,Texas Instruments,MSP430FR4133IG48R,bottom,"48-pin TSSOP, not the earlier 64-pin draft; SBW program and verify",MSP430FR4133,C2053877
+BQ25185DLHR,U2,CountFidgetQ3:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm,1,Texas Instruments,BQ25185DLHR,bottom,4.2 V; 100 mA input limit; 18.2 mA nominal battery charge,Li-ion charger,C19725033
+TPS7A0230PDBVR,U3,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23-5,1,Texas Instruments,TPS7A0230PDBVR,bottom,3.0 V; active output discharge variant; EN tied to SYS; power-fall/FRAM validation required,3.0 V LDO,C3747031
+BQ29700DSER,U4,CountFidgetQ3:Package_SON_WSON-6_1.5x1.5mm_P0.5mm,1,Texas Instruments,BQ29700DSER,bottom,,Cell protector,C183096
+DMN2056U-7,Q1,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMN2056U-7,bottom,,Discharge FET,C332302
+DMN2056U-7,Q2,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMN2056U-7,bottom,,Charge FET,C332302
+TLV7012DGKR,U5,CountFidgetQ3:TLV7032_DGK0008A_TI,1,Texas Instruments,TLV7012DGKR,bottom,Separate push-pull outputs; charge enable requires both in-window indications; POR/supply-loss tests required; TLV7012 same DGK pins/POR; USB-powered; conditional thermal error budget retained,Push-pull temperature window,C2859969
+"2N7002,215",Q3,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23,1,Nexperia,"2N7002,215",bottom,Upper series charge-enable N-MOSFET; gate has ground pulldown,Charge enable,C65189
+USBLC6-2SC6,D1,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23-6,1,STMicroelectronics,USBLC6-2SC6,bottom,,USB ESD,C7519
+RC0603FR-075K1L,R1,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-075K1L,bottom,"1%, 0603, 0.1 W",5.1k,C105580
+RC0603FR-075K1L,R2,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-075K1L,bottom,"1%, 0603, 0.1 W",5.1k,C105580
+0603WAF2402T5E,R3,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF2402T5E,bottom,"1%, 0603, 0.1 W",24k,C23352
+RC0603FR-0716K5L,R4,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0716K5L,bottom,"1%, 0603, 0.1 W",16.5k,C273769
+RC0603FR-0710KL,R5,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0710KL,bottom,"1%, 0603, 0.1 W",10k,C98220
+RC0603FR-07100KL,R6,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,"1%, 0603, 0.1 W",100k,C14675
+RC0603FR-07330RL,R7,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07330RL,bottom,"1%, 0603, 0.1 W",330,C105881
+RC0603FR-072K2L,R8,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-072K2L,bottom,"1%, 0603, 0.1 W",2.2k,C114662
+0603WAF330KT5E,R9,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF330KT5E,bottom,"1%, 0603, 0.1 W",3.3,C22979
+RC0603FR-0757K6L,R10,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0757K6L,bottom,"1%, 0603, 0.1 W",57.6k,C245983
+0603WAF1153T5E,R11,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1153T5E,bottom,"1%, 0603, 0.1 W",115k,C22783
+RC0603FR-0724K3L,R12,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0724K3L,bottom,"1%, 0603, 0.1 W",24.3k,C276290
+RC0603FR-0716K2L,R13,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0716K2L,bottom,"1%, 0603, 0.1 W",16.2k,C137790
+RC0603FR-07100KL,R14,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,Local upper charge-enable gate pulldown; keep connected close to Q3 gate,100k,C14675
+RC0603FR-07100KL,R15,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,Local lower charge-enable gate pulldown; keep connected close to Q4 gate,100k,C14675
+0603WAF4702T5E,R16,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF4702T5E,bottom,"1%, 0603, 0.1 W",47k,C25819
+0603WAF2203T5E,R17,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF2203T5E,bottom,"1%, 0603, 0.1 W; >=13.4 uA held-contact current at 2.97 V, above switch 10 uA minimum",220k,C22961
+0603WAF2203T5E,R18,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF2203T5E,bottom,"1%, 0603, 0.1 W; >=13.4 uA held-contact current at 2.97 V, above switch 10 uA minimum",220k,C22961
+RC0603FR-072KL,R19,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-072KL,bottom,"1%, 0603, 0.1 W",2k,C105576
+GRM188R71H104KA93D,C4,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,"100 nF, 50 V, X7R",100n,C77055
+GRM188R71H104KA93D,C7,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required,100n,C77055
+GRM188R71H104KA93D,C9,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,100 nF local VBUS decoupler beside U5; nearby plane return,100n,C77055
+GRM21BR71E225KE11L,C1,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KE11L,bottom,"2.2 uF, 25 V, X7R; effective >=1 uF at 5 V",2.2u,C77081
+GRM21BR61E106KA73L,C2,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,bottom,"10 uF, 25 V, X5R; effective >=1 uF at 4.5 V",10u,C84416
+GRM21BR71E225KE11L,C3,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KE11L,bottom,"2.2 uF, 25 V, X7R",2.2u,C77081
+GRM21BR71E225KE11L,C5,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KE11L,bottom,,2.2u,C77081
+GRM21BR61E106KA73L,C6,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,bottom,"10 uF 25 V X5R, nominal +/-10%; MCU V3 bulk correction E19; require >=4.7 uF effective at 3 V after bias/temperature/tolerance; rail startup and reverse-current qualification required",10u,C84416
+GRM1885C1H102JA01D,C10,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,C77026
+GRM1885C1H102JA01D,C11,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,C77026
+GRM1885C1H102JA01D,C12,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,C77026
+GRM1885C1H472JA01D,C13,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM1885C1H472JA01D,bottom,"4.7 nF, 50 V, C0G, 5%; same nominal TI EVM compensation ISET -> 2k -> 4.7n -> GND; low-current stability still requires measurement",4.7n,C85980
+"2N7002,215",Q4,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23,1,Nexperia,"2N7002,215",bottom,Lower series charge-enable N-MOSFET; gate has ground pulldown,Charge enable hot gate,C65189
+TPS63900DSKR,U6,CountFidgetQ3:TPS63900_DSK0010A_TI,1,Texas Instruments,TPS63900DSKR,bottom,10mA average input setting; pad11 is exposed pad. SEL tied SYS. No guaranteed peak clamp.,4.0V OLED buck-boost,C1518762
+DFE201612E-2R2M=P2,L1,CountFidgetQ3:Inductor_SMD_L_Murata_DFE201612E_2.0x1.6mm,1,Murata,DFE201612E-2R2M=P2,bottom,"2.2uH +/-20%; saturation2.4A, rated1.8A; TI recommended family; use manufacturer land pattern; exact custom footprint required: similarly named DFE201610P is not automatically equivalent.",2.2u,C337893
+DMP2035U-7,Q5,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMP2035U-7,bottom,"PMOS:1G2S3D; off body diode conducts from OLED_VBAT toward OLED_4V, not forward feed. Not bidirectional isolation.",OLED VBAT disconnect,C110499
+DMN2056U-7,Q6,CountFidgetQ3:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMN2056U-7,bottom,"NMOS:1G2S3D; exact existing Q2 Q1/Q2 type; guaranteed Rds at1.5V, suitable3V GPIO.",OLED switch gate,C332302
+RC0603FR-075K11L,R20,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-075K11L,bottom,"1%,100mW,<=100ppm/C. CFG resistors total RMS error must remain<3% including temperature and aging.",5.11k,C112314
+RC0603FR-0720K5L,R21,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0720K5L,bottom,"1%,100mW,<=100ppm/C. CFG resistors total RMS error must remain<3% including temperature and aging.",20.5k,C273789
+RC0603FR-0724K9L,R22,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0724K9L,bottom,"1%,100mW,<=100ppm/C. CFG resistors total RMS error must remain<3% including temperature and aging.",24.9k,C137761
+0603WAF4702T5E,R23,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF4702T5E,bottom,"1%,100mW",47k,C25819
+RC0603FR-07100KL,R24,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,"1%,100mW",100k,C14675
+RC0603FR-07100KL,R25,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,"1%,100mW",100k,C14675
+RC0603FR-074K7L,R26,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-074K7L,bottom,"1%,100mW",4.7k,C99782
+RC0603FR-074K7L,R27,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-074K7L,bottom,"1%,100mW",4.7k,C99782
+RC0603FR-07750KL,R28,CountFidgetQ3:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07750KL,bottom,"1%,100mW; external IREF mode AD40 required.",750k,C137684
+CL21A226MAYNNNE,C17,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Samsung Electro-Mechanics,CL21A226MAYNNNE,bottom,"25V X5R +/-20%; converter input, require>=5uF effective over voltage/temperature/tolerance.",22u,C602037
+CL21A226MAYNNNE,C18,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Samsung Electro-Mechanics,CL21A226MAYNNNE,bottom,"25V X5R +/-20%; C18+C19 parallel44uF nominal, require>=10uF effective combined at4V.",22u,C602037
+CL21A226MAYNNNE,C19,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Samsung Electro-Mechanics,CL21A226MAYNNNE,bottom,Parallel converter output capacitor; no active discharge.,22u,C602037
+GRM188R71H104KA93D,C20,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,50V X7R +/-10%; at DS1.VDD.,100n,C77055
+GRM21BR61E106KA73L,C21,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,bottom,"25V X5R +/-10%; OLED logic bulk, require>=4.7uF effective at3V; existingQ2 C2/C6 MPN.",10u,C84416
+GRM21BR71E225KE11L,C22,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KE11L,bottom,25V X7R +/-10%; module recommends2.2uF16V X7R.,2.2u,C77081
+GRM21BZ71H475KE15L,C23,CountFidgetQ3:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BZ71H475KE15L,bottom,50V X7R +/-10%; module recommends4.7uF16V X7R. Verify effective capacitance at9V.,4.7u,C437557
+GRM188R71H104KA93D,C24,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,50V X7R +/-10%; no forced discharge/clamp on OLED_VCC.,100n,C77055
+CL10B105KA8NNNC,C25,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Samsung Electro-Mechanics,CL10B105KA8NNNC,bottom,"25V X7R +/-10%; flying capacitor, short direct traces and no ground connection.",1u,C29936
+CL10B105KA8NNNC,C26,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Samsung Electro-Mechanics,CL10B105KA8NNNC,bottom,"25V X7R +/-10%; flying capacitor, short direct traces and no ground connection.",1u,C29936
+GRM188R71H104KA93D,C27,CountFidgetQ3:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,50V X7R +/-10%; local switched pump-input bypass; include in measured startup surge.,100n,C77055

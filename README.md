@@ -2,22 +2,21 @@
 
 A lightweight, rechargeable two-key fidget that counts clicks, resets with a second key, and remembers its count while asleep or unpowered. Designed for a home-printed enclosure and professionally assembled electronics.
 
-**Q1 is a prototype quotation package.** The routed PCB, compiled firmware, BOMs, placements, assembly drawings and RFQ exist. No complete vendor quote has been received, no Q1 website upload is confirmed, and no purchase or manufacturing release has occurred. Hardware is unqualified. The enclosure is an older fit study that does not match Q1.
+**Q4 is the active engineering candidate:** STM32L072CBT6 with USB-C home programming, a complete SPI OLED module, external SPI FRAM count storage, and a two-layer PCB. JLC performs bottom-side SMT; home completion adds the display/header and two through-hole keys. Q1/Q2/Q3 remain historical, unchanged packages.
 
-Start with [PROJECT.md](PROJECT.md) for status and [HANDOFF.md](HANDOFF.md) for the new local session.
+**No new quote submission, purchase or manufacture is authorized.** The coordinated engineering files and independent review are complete; physical power, battery/harness, USB and enclosure qualification remain open.
 
-| Area | Files |
+Start with [the Q4 engineering review](docs/REVIEW-Q4-2026-09-24.md), [Q4 implementation and rationale](docs/Q4-implementation.md), [PROJECT.md](PROJECT.md) for status, and [HANDOFF.md](HANDOFF.md) for continuation.
+
+| Area | Current Q4 files |
 |---|---|
-| Product | [Specification](docs/product-spec.md), [user context](docs/user-research.md), [decisions](docs/decisions.md) |
-| PCB | [KiCad board](electronics/click-counter-Q1.kicad_pcb), [project](electronics/click-counter-Q1.kicad_pro), [electrical notes](electronics/design.md), [netlist](electronics/netlist.json) |
-| Firmware | [Source and status](firmware/README.md), [application HEX](firmware/click-counter-Q1.hex), [factory-only HEX](firmware/factory-display-info.hex) |
-| Vendor files | [RFQ ZIP](dist/click-counter-Q1-RFQ.zip), [Gerber ZIP](procurement/click-counter-Q1-Gerbers.zip), [import notes](procurement/WEBSITE-IMPORT-NOTES-Q1.md) |
-| Procurement | [Vendor status and upload procedure](procurement/vendor-status.md), [full RFQ](procurement/RFQ-Q1.md), [comparison template](procurement/quote-comparison.md) |
-| Enclosure | [Fit-study limitations and required changes](mechanical/README.md), source/STEP/STL/renders in `mechanical/` |
-| Verification | [Recorded status](verification/Q1-status.json), [open issues](docs/open-issues.md), [build instructions](docs/build-and-verify.md) |
-| Research | [Primary-source index](docs/sources.md) |
-| Browser-readable review | [Self-contained design review HTML](docs/design-review.html) (download/open locally) |
-| Provenance | [Migration record](docs/migration.md), [import manifest](verification/import-manifest.json) |
+| PCB | [KiCad project](electronics/q4/click-counter-Q4.kicad_pro), [board](electronics/q4/click-counter-Q4.kicad_pcb), [schematic PDF](electronics/q4/schematic-Q4.pdf), [power design](docs/q4-power-design.md) |
+| Firmware and programming | [Q4 source/build](firmware/q4-stm32/README.md), [USB and retention procedure](docs/q4-firmware.md) |
+| Inventory and assembly | [Stock evidence](procurement/q4/inventory.md), [local footprint review](docs/review-native-footprints-Q4.md) |
+| Enclosure | [Assembly and parts](mechanical/q4/README.md), [rendering](mechanical/q4/assembled-Q4.png), [STEP assembly](mechanical/q4/enclosure-Q4.step) |
+| Verification | [Build workflow](docs/build-and-verify.md), Q4 reports in `verification/`, [conditional power model](simulation/q4-power/result.json) |
+| Product history | [Specification](docs/product-spec.md), [user context](docs/user-research.md), [decisions](docs/decisions.md), [Q3 review](docs/REVIEW-Q3-2026-09-22.md) |
+| Vendor history | [Vendor status](procurement/vendor-status.md); retained RFQ packages in `dist/` do not authorize new submissions |
 
 Quick checks, with Python 3 and a C compiler:
 
@@ -26,4 +25,4 @@ python3 scripts/verify_project.py
 python3 scripts/run_host_tests.py
 ```
 
-These verify files, package consistency and portable firmware logic, not physical electronics. Existing upload files can be used without rebuilding the PCB or firmware. Toolchains, credentials, private mailbox content and customer account sessions are not stored in this public repository.
+These verify files, package consistency and portable firmware logic, not physical electronics. Toolchains, credentials, private mailbox content and customer account sessions are not stored in this public repository.

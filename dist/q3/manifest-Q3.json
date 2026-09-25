@@ -1,0 +1,625 @@
+{
+  "revision": "Q3 engineering quotation candidate",
+  "purpose": "Vendor review and quotation only; no paid procurement or manufacturing release",
+  "hardware_tested": false,
+  "manufacturing_released": false,
+  "source_board_sha256": "b33b1e1d0c9e4d58c5642fc3f63faaa4e190092601f26103376537a5b12621fd",
+  "file": "click-counter-Q3-RFQ.zip",
+  "bytes": 4031548,
+  "sha256": "4626d8ba64ef67d9bf5265399d6f6bf8e0d4ce9dda87d3656b5e5579aecef5ba",
+  "members": {
+    "docs/build-and-verify.md": {
+      "bytes": 9590,
+      "sha256": "362c18e59b8534b1468b6b57784c1bd83069a006299b37785d9fdae0d0a5968c"
+    },
+    "docs/open-issues.md": {
+      "bytes": 11613,
+      "sha256": "e80b6ae76168b1fb7b2eae1e2fb2b14c8709b9f78d8d6a0fcfe584ba6c410b3c"
+    },
+    "docs/q2-power-design.md": {
+      "bytes": 18739,
+      "sha256": "2b041e6738f90ee43dc9d6ffa9a87e3173bc79a2a5f6a6e346d6ad427d90b7c1"
+    },
+    "docs/q2-power-independent-review.md": {
+      "bytes": 5209,
+      "sha256": "eec9ff4555e85e872d28a9a1d4ff27911cc0e74c1ee7f2a8c36fa45dbebedc22"
+    },
+    "docs/q3-cost-decisions.md": {
+      "bytes": 5696,
+      "sha256": "8fcfa9a71b8b64b521a5ced44baebc99e8772a6e2732ee3126b3f0603055d85d"
+    },
+    "docs/q3-display-mechanics.md": {
+      "bytes": 17462,
+      "sha256": "63f3f2efb76a93b30d87091bb404608a9242e7070022169e01ae17ed96e6bf3e"
+    },
+    "docs/q3-display-selection.md": {
+      "bytes": 4930,
+      "sha256": "e9928f336735993dd09d46b504957190d4a3192cbfa06cb6212a96a7c49fb25d"
+    },
+    "docs/q3-layout-routing.md": {
+      "bytes": 5746,
+      "sha256": "a5a4e3cfcd939af6b52c90fd728b8909ffa3cdc5e23427aca419b4e814f5d445"
+    },
+    "docs/q3-power-design.md": {
+      "bytes": 14487,
+      "sha256": "b1cc0c3d4249d35cc4ebec6849590c509bc36bf28505fb139aa7beb570c3c099"
+    },
+    "docs/review-charger-Q2.md": {
+      "bytes": 8236,
+      "sha256": "4a757e2e50c0c87449c5bac6b0772bb39ac35fb96d6842a2c1baa5aa70b3992f"
+    },
+    "docs/review-firmware-Q3.md": {
+      "bytes": 17547,
+      "sha256": "718ee2c5805eb052bf3226fcccf7baabe54fb0d3aad1cfd6770bc0f520a44a29"
+    },
+    "docs/review-hardware-Q3.md": {
+      "bytes": 15440,
+      "sha256": "0e1f44854c56b843e826dc12c6ddd7907f69299d7b86e2af64a5a8c0c6f049a5"
+    },
+    "docs/review-mechanical-Q3.md": {
+      "bytes": 11280,
+      "sha256": "7ed8fe7922b1af168a1a26df319be194e1bd6bc63963f847b14f9a62267ab9b4"
+    },
+    "docs/review-protection-Q2.md": {
+      "bytes": 5808,
+      "sha256": "7646672e59145f3e2510337ef716ee24b885d846cc91d06b24d4af0a2cc9985e"
+    },
+    "electronics/q2/netlist-Q2.json": {
+      "bytes": 30446,
+      "sha256": "3aae3dafcf2b6b5d1c1cac8932200bd2ba3e52ed39507f2c22e9a41b771bb065"
+    },
+    "electronics/q3/CountFidgetQ3.kicad_sym": {
+      "bytes": 94869,
+      "sha256": "072835ba37a33e13ba595bb291b77efea11ba8544184f3f4d7769263733e2358"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Capacitor_SMD_C_0603_1608Metric.kicad_mod": {
+      "bytes": 2451,
+      "sha256": "17877a5fef658fdf5b737d8315d75ff1c46214553ef2ff05f107442fc584bd1e"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Capacitor_SMD_C_0805_2012Metric.kicad_mod": {
+      "bytes": 2545,
+      "sha256": "2bf5abdba5044a3374af2e9aab575101b6d343e97a8f36e1956ec6699cb12348"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal.kicad_mod": {
+      "bytes": 6379,
+      "sha256": "1a9eadea3cfe496757704fc37694085e6f38122664b33a43872a973a8da69926"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": {
+      "bytes": 6522,
+      "sha256": "a2617d52a4e9b6ab2729406cc8d3c5520c8b3355eb4d1846ca9240b144a2829a"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/HanElectricity_CPG151101D13_MX_Plate.kicad_mod": {
+      "bytes": 2130,
+      "sha256": "19d0cd0554b2256ce454de48420549d5d7809795c548d8e4552a844bcfeb755e"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Inductor_SMD_L_Murata_DFE201612E_2.0x1.6mm.kicad_mod": {
+      "bytes": 2594,
+      "sha256": "84f22ea6b66cfc8b126b20c97d3fe8b820cc4d8a450bfb30eb3fdb0432903c02"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/MountingHole_MountingHole_2.2mm_M2.kicad_mod": {
+      "bytes": 2003,
+      "sha256": "bcc8a7c1efe5c59463d539bd786e8e14f2e90f30130fe894b1d04e358bce4710"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm.kicad_mod": {
+      "bytes": 5955,
+      "sha256": "2199e528764ad21497f8b71404146d00b4203519c7fcfbf1ed1fd92ecc614728"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Package_SON_WSON-6_1.5x1.5mm_P0.5mm.kicad_mod": {
+      "bytes": 4034,
+      "sha256": "e036eb44c0a1e856cd610e82391afd6061ff69ddc4bba6c3fb360a7ba63352b9"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm.kicad_mod": {
+      "bytes": 12381,
+      "sha256": "4dbdffd726bba11e5aa1385088f43251318433d9452bf230ed432a5ce8e11926"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Package_TO_SOT_SMD_SOT-23-5.kicad_mod": {
+      "bytes": 5393,
+      "sha256": "0ed633c9b02477b6b2782351882eac81bb78cb735dfa30f43e64a7a7673ee262"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Package_TO_SOT_SMD_SOT-23-6.kicad_mod": {
+      "bytes": 4900,
+      "sha256": "12aef0095926303e22872b7966a7249266ddf7c04b1569177a7de029b3eca6aa"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Package_TO_SOT_SMD_SOT-23.kicad_mod": {
+      "bytes": 5042,
+      "sha256": "27e4b7f0574acd3b773024f9fa8cd87b2b7099e1d0d9053ae27084e853134853"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/Resistor_SMD_R_0603_1608Metric.kicad_mod": {
+      "bytes": 2453,
+      "sha256": "f6a36ee2b44dbad84910754eaf46b0732a61cca0d34aee97e1cd5513e0dee705"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/TLV7032_DGK0008A_TI.kicad_mod": {
+      "bytes": 5558,
+      "sha256": "27f5b299dd099fdc794929e1b6206f7af1e81c9096ef6df6b97832502adcc0d6"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/TPS63900_DSK0010A_TI.kicad_mod": {
+      "bytes": 4239,
+      "sha256": "41389f403705039987a5ffc6399b223076abbbe7df8d422dba83e89342ed421a"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/TestPoint_TestPoint_Pad_D1.5mm.kicad_mod": {
+      "bytes": 1608,
+      "sha256": "3323cabc242552f1c7eecb74381ad5510b00a89824374ae13f3c637bf721e1af"
+    },
+    "electronics/q3/CountFidgetQ3.pretty/X087-2832TSWIG02-H14.kicad_mod": {
+      "bytes": 7615,
+      "sha256": "c9b51c67ed4b2264a06bc883f71d73743ef5213e8ca488b4d0010892c94f9626"
+    },
+    "electronics/q3/battery-protection.kicad_sch": {
+      "bytes": 37603,
+      "sha256": "36aacdf0308d1aac17ae5e6071f24cc2d5e193f1b5f1bb9f326648c2e171c92d"
+    },
+    "electronics/q3/buttons.kicad_sch": {
+      "bytes": 22610,
+      "sha256": "97e1e25a116bd8fe8061c767a7104c2a6eeb80fe8ac78c63e3254807b254abf2"
+    },
+    "electronics/q3/click-counter-Q3.kicad_pcb": {
+      "bytes": 757653,
+      "sha256": "b33b1e1d0c9e4d58c5642fc3f63faaa4e190092601f26103376537a5b12621fd"
+    },
+    "electronics/q3/click-counter-Q3.kicad_pro": {
+      "bytes": 9780,
+      "sha256": "c1c6fa482ee176cfc2b72f1610358f24f21a861d426d2923adfe30a3c249e715"
+    },
+    "electronics/q3/click-counter-Q3.kicad_sch": {
+      "bytes": 5498,
+      "sha256": "bb2ed8bca9f3542f7dfcb25c71c4ae55f6a9c2b9310a21764a50962f4afac4d9"
+    },
+    "electronics/q3/erc-Q3.json": {
+      "bytes": 2533,
+      "sha256": "7c6348439671fe5b679fe623f4cd857cadf1a466cd032c7880dc943eac46a307"
+    },
+    "electronics/q3/fp-lib-table": {
+      "bytes": 189,
+      "sha256": "d9383babf3e1032501130f606617bed1ec42ecdae50824cc1c59c7e8f0b367b8"
+    },
+    "electronics/q3/mcu.kicad_sch": {
+      "bytes": 40589,
+      "sha256": "a8715c820dd820b1adfc50d6f516ca09bc05d7f582612fcdef54d010b614d232"
+    },
+    "electronics/q3/netlist-Q3.json": {
+      "bytes": 51729,
+      "sha256": "6f3dbc9d34e34576b680ad77fb27a0f70313f038b3d74dab6b434705e55d1c79"
+    },
+    "electronics/q3/oled-panel.kicad_sch": {
+      "bytes": 46236,
+      "sha256": "0e7ae3dbc2ac795862f501af955eb7d22c6354303c64ff47572fe7fd128056c7"
+    },
+    "electronics/q3/oled-power.kicad_sch": {
+      "bytes": 43561,
+      "sha256": "5bbca3a09219b550a329e6ec124fdbd5b8898a00653ba0ef6ab2bea8833520e6"
+    },
+    "electronics/q3/routing-checkpoint-Q3.json": {
+      "bytes": 3464,
+      "sha256": "b16622f17b01f00590ebcf533455f324d2d2f2fa15aefc8b3c4bf9183235ae4a"
+    },
+    "electronics/q3/routing-checkpoint-native-drc.json": {
+      "bytes": 1852,
+      "sha256": "25584b90307cbbe970c84b7e62d4723f328942287584071372b86a106398864c"
+    },
+    "electronics/q3/schematic-Q3.pdf": {
+      "bytes": 313761,
+      "sha256": "30216462d7a85c3e88c4455786edec7041a6af89920adc93f3595cfb2267fa80"
+    },
+    "electronics/q3/schematic-netlist-Q3.xml": {
+      "bytes": 174168,
+      "sha256": "09acd28cca9aa49d134973c29df23fbc60cd65f33638dbf9b3eb71da6b52e5d4"
+    },
+    "electronics/q3/schematic-paths-Q3.json": {
+      "bytes": 53819,
+      "sha256": "5f18163ba6804eecdefe85b15f3496caa84c58c9e0cba631caa52e2ef1dd418b"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3-Battery connector and independent cell protection.svg": {
+      "bytes": 446052,
+      "sha256": "825563ed5672aa121e257788f8b23977ce649c17c05c8cd94ba1fb85eda90135"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3-Count_reset keys, filtering and fixture access.svg": {
+      "bytes": 277184,
+      "sha256": "a3c2a3f7acefd77812d77e5c2b5f72dd66d57bb3821c86249cfcc8061319ffb8"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3-FRAM MCU and programming.svg": {
+      "bytes": 606631,
+      "sha256": "93d249506d4df8c1f2d0fedb233b0f76deae8dd2099a4e17df2b2237205b0dd5"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3-Independent temperature window and charge inhibit.svg": {
+      "bytes": 382955,
+      "sha256": "bc085182b099d5f19a4c965e9a974116d705bc5d6dffee5aac603cda208f5845"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3-OLED 4 V buck-boost and pump isolation.svg": {
+      "bytes": 449287,
+      "sha256": "8779c20186202a439b6a1d8130c7f0d03f0ec3fcc1cad01a9bb28761db09bd42"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3-SSD1312 OLED and support parts.svg": {
+      "bytes": 427748,
+      "sha256": "d8baab3b693b2dcf878f92d4a782582caa1b32f66dc32e365d6ed9b370af0ee7"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3-USB input, charging and 3 V supply.svg": {
+      "bytes": 599579,
+      "sha256": "4a00cf5c9e1ab3d57a65e3c6a94aa2d629a257406579e62d860031b9efcaa2c6"
+    },
+    "electronics/q3/schematic-svg/click-counter-Q3.svg": {
+      "bytes": 541099,
+      "sha256": "a9baeb0c530f255349032cd7a466cd6b754b12ebf25f8314b25847b5beed89a5"
+    },
+    "electronics/q3/schematic-validation-Q3.json": {
+      "bytes": 8073,
+      "sha256": "6554cd5137ae053aa9c352eb8eca5e603f950ea2cadefde73f33bf32466d9d98"
+    },
+    "electronics/q3/sym-lib-table": {
+      "bytes": 182,
+      "sha256": "6168d1e62bded133848be6efcf5bd29780631f1a3baf3cd0da3197bacd9e5c57"
+    },
+    "electronics/q3/thermal.kicad_sch": {
+      "bytes": 30527,
+      "sha256": "b30295469a39a56f04a16fd4ce9a83596d7878e546fe279872948fd08ae200eb"
+    },
+    "electronics/q3/usb-power.kicad_sch": {
+      "bytes": 72783,
+      "sha256": "40995791b45175d7e49d9280ad0e03cdb65917a0779383ad7839e45200245cea"
+    },
+    "firmware/counter.c": {
+      "bytes": 3377,
+      "sha256": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe"
+    },
+    "firmware/counter.h": {
+      "bytes": 1077,
+      "sha256": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6"
+    },
+    "firmware/q3-oled/README.md": {
+      "bytes": 10168,
+      "sha256": "d1d354dfcb093f24765a95111e150699ac88e878e1af5a9af80806e5a5e296d5"
+    },
+    "firmware/q3-oled/build/build-manifest.json": {
+      "bytes": 14507,
+      "sha256": "5598687413d3dbfedd14398ff5082044a63c836c8f1e920820a78eb10eefee25"
+    },
+    "firmware/q3-oled/build/click-counter-Q3-oled.elf": {
+      "bytes": 16376,
+      "sha256": "953169cd3b0b0eec37e43c150530148bdbc00dafabb90ea326252ff03af4a515"
+    },
+    "firmware/q3-oled/build/click-counter-Q3-oled.hex": {
+      "bytes": 14247,
+      "sha256": "b19f9e62fe9833ebb61fa75e94a7adef5664e51c7bcb7ffaa619a7c00bf910bf"
+    },
+    "firmware/q3-oled/build/click-counter-Q3-oled.lst": {
+      "bytes": 77103,
+      "sha256": "6af3b7487a8fea6e5519ed8faf5b9ca3a78cdb14f8056e74f1891e378ef503a0"
+    },
+    "firmware/q3-oled/build/click-counter-Q3-oled.map": {
+      "bytes": 75206,
+      "sha256": "d18a968feebfc7599f56976a812b0ab7ecedc859db3de3f2366b278bc9840756"
+    },
+    "firmware/q3-oled/build/factory-blank-info-Q3.hex": {
+      "bytes": 116,
+      "sha256": "35aabbf3a9f286a738c37eb72772794fb0e7462fb0d2e396b67c1d30c25cf1bd"
+    },
+    "firmware/q3-oled/build/host-tests.txt": {
+      "bytes": 1180,
+      "sha256": "22dcde93fae6164e20c9ff04ca44895996e011e486ae0aa55a25b63608923cb6"
+    },
+    "firmware/q3-oled/build/stack-usage.txt": {
+      "bytes": 1215,
+      "sha256": "6159e3e3a1c18d634a62d44357484a736f60808b743168c29afc95601c9035db"
+    },
+    "firmware/q3-oled/counter.c": {
+      "bytes": 3377,
+      "sha256": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe"
+    },
+    "firmware/q3-oled/counter.h": {
+      "bytes": 1077,
+      "sha256": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6"
+    },
+    "firmware/q3-oled/input.c": {
+      "bytes": 2686,
+      "sha256": "bc228e7f25e075f082e07e726a3f7be6c575853a5fe8384f0d17a49e671b5934"
+    },
+    "firmware/q3-oled/input.h": {
+      "bytes": 1342,
+      "sha256": "78a6b28fedf4af18b1eea651a1b726b72e57e43f17cbbc4ada5f4edc745f9d17"
+    },
+    "firmware/q3-oled/main_msp430.c": {
+      "bytes": 8544,
+      "sha256": "2f85d8195801e232dae80d5868771f6805203ee08b13a9b20523db599b419dc0"
+    },
+    "firmware/q3-oled/oled.c": {
+      "bytes": 8277,
+      "sha256": "6227d98c0dfbc48c5cd5d460fea6006f80a0f4c0cf26b71f1ef3413ac829f508"
+    },
+    "firmware/q3-oled/oled.h": {
+      "bytes": 2126,
+      "sha256": "74d4a10f2f569de3800e762e7c3f3b19bf28a3262a42233b491f91e9ca58cb22"
+    },
+    "firmware/q3-oled/source-records.json": {
+      "bytes": 592,
+      "sha256": "02c7c0eda811528e9d1bcc60b3e3fb253217ff48941cf80cbda6d1ff6ff7db99"
+    },
+    "firmware/q3-oled/test_counter.c": {
+      "bytes": 2559,
+      "sha256": "bd0513dfc7b8662d4cdaeda5c17ff7dddf0e79a7d538fb72acd515b4940937d3"
+    },
+    "firmware/q3-oled/test_input.c": {
+      "bytes": 4656,
+      "sha256": "37945218b729e2c901474ce73cb30fb33e32820672f0e577e2c01dfcc644831a"
+    },
+    "firmware/q3-oled/test_oled.c": {
+      "bytes": 7153,
+      "sha256": "16d7b216dd763ede96647095d31a6ee8a570ab595ac698b61b98009d8855c282"
+    },
+    "firmware/test_counter.c": {
+      "bytes": 2559,
+      "sha256": "bd0513dfc7b8662d4cdaeda5c17ff7dddf0e79a7d538fb72acd515b4940937d3"
+    },
+    "mechanical/q3/README.md": {
+      "bytes": 2460,
+      "sha256": "bae7e615dedf03d3e7dd2cda050a480867a82326a7c54eaf133112951f387429"
+    },
+    "mechanical/q3/assembled-Q3.png": {
+      "bytes": 39767,
+      "sha256": "b2860b56ecef1f6177386ec4018b825198ff501552dab04e9876181b554a97be"
+    },
+    "mechanical/q3/base-Q3.stl": {
+      "bytes": 356984,
+      "sha256": "1c6fe0d77ba80a417a9ed1e29221aa9e60495a340766c4dc5f0f5bd2289c3ed9"
+    },
+    "mechanical/q3/battery-bay-Q3.png": {
+      "bytes": 39483,
+      "sha256": "56244c47caf37854983019d1aa63905166b5d2dc44884f3820e75e203d1a6f0d"
+    },
+    "mechanical/q3/battery-keeper-Q3.stl": {
+      "bytes": 97084,
+      "sha256": "6b5685a2b3b981aae28316d3392496edbae56e7106fe9c52c18572632bb4a928"
+    },
+    "mechanical/q3/board-geometry.json": {
+      "bytes": 94554,
+      "sha256": "fdd982c49b9c13b2abc40b1a5d4d232116faf99a96fa239fbda5a7115506e023"
+    },
+    "mechanical/q3/build-manifest.json": {
+      "bytes": 1277,
+      "sha256": "fff3ef9418b30dfa798b065cbc450df1cb599d6848650c39efd332983bb4f7a1"
+    },
+    "mechanical/q3/enclosure-Q3.step": {
+      "bytes": 13752008,
+      "sha256": "8216bd83e34c5f4dd797ca1bbf89bee6118f414fa21024622a63cdc2ddc41be8"
+    },
+    "mechanical/q3/exploded-Q3.png": {
+      "bytes": 42909,
+      "sha256": "2348bbed7d9ac146f4927d0f2f815b3bf528169f9bf984181da01607cc6adbf4"
+    },
+    "mechanical/q3/fit-report.json": {
+      "bytes": 4371,
+      "sha256": "6e08155f61778c9fa9c3597968e91514302efe1b65c21c816b1b58c6987bb01b"
+    },
+    "mechanical/q3/interior-Q3.png": {
+      "bytes": 46336,
+      "sha256": "5d175812e6e4e7f910d63e2adab2b1db850009df56e7f511802ca660789bd540"
+    },
+    "mechanical/q3/lid-front-Q3.stl": {
+      "bytes": 22484,
+      "sha256": "5bcf4bc45ca9e4e6e210bcca1f289d8cc26c882e9327f899797a97a04acc7a19"
+    },
+    "mechanical/q3/lid-rear-Q3.stl": {
+      "bytes": 169084,
+      "sha256": "24c882dc20fce18c959696453cc08a05e90dc016c74e3be753ed6c8fea9dab5c"
+    },
+    "procurement/OFFBOARD-items-Q1.csv": {
+      "bytes": 549,
+      "sha256": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66"
+    },
+    "procurement/q3/BOM-JLCPCB-Q3.csv": {
+      "bytes": 12462,
+      "sha256": "9879447d009bcdbf246e59c9848e2826d83422312eefcb78f645d9eb97d4a82d"
+    },
+    "procurement/q3/BOM-PCBA-Q3.csv": {
+      "bytes": 10761,
+      "sha256": "30f9d8c3cc300add54f8ec5c2a6b9bd4eb4d62f4e96805a16408fc64f712e370"
+    },
+    "procurement/q3/BOM-Q3.csv": {
+      "bytes": 11218,
+      "sha256": "4f4a386ac5c831a5c47ea0e1b0c7eff19afd37e4b9de13c3165d45f1dae9575e"
+    },
+    "procurement/q3/CPL-JLCPCB-Q3.csv": {
+      "bytes": 3234,
+      "sha256": "d2768e31377fc93c050f1b03f5af1b3bb1e8d388b5d2be37f444a6d241f925c8"
+    },
+    "procurement/q3/OFFBOARD-items-Q3.csv": {
+      "bytes": 549,
+      "sha256": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66"
+    },
+    "procurement/q3/RFQ-Q3.html": {
+      "bytes": 19550,
+      "sha256": "980fc95a672e363b9820ded14b0e4fd45fe2a3e4ff7474fbb7f7e38fd8f88876"
+    },
+    "procurement/q3/RFQ-Q3.md": {
+      "bytes": 17512,
+      "sha256": "9b697c1bbe51d7f91a7e9cc5eecf8a287163d234193ed3909e1eb5d862a81c17"
+    },
+    "procurement/q3/assembly-bottom-Q3.svg": {
+      "bytes": 789021,
+      "sha256": "65b3b7e0b561d6108f2562c3f93c440f92268e9b0ddd71a9920e0cf9ca2cd1bc"
+    },
+    "procurement/q3/assembly-top-Q3.svg": {
+      "bytes": 152660,
+      "sha256": "4e9cbda55d6b16b44e453c30641753885324b607ee220b17b14243800a41eba1"
+    },
+    "procurement/q3/click-counter-Q3-Gerbers.zip": {
+      "bytes": 106301,
+      "sha256": "ad3941a76d1c610792a9a38ed9eee54366379bdfb047c5e9a2a5d695628c6c85"
+    },
+    "procurement/q3/drill-report-Q3.txt": {
+      "bytes": 837,
+      "sha256": "3ac960a4db8be06fdbaf95a10aea3f6e58ccbf84ea36440985f648f51518af99"
+    },
+    "procurement/q3/export-manifest-Q3.json": {
+      "bytes": 6640,
+      "sha256": "b7d5eadc4b09770dcb6396e7c7bb8a3c2566c32b0a0503f3f7d5b77ade15bfb6"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Cu.gbl": {
+      "bytes": 258225,
+      "sha256": "53d0fe73e59651a5520cb3e828bc200e034151c8adff654c10eb5864cb1f7a85"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Mask.gbs": {
+      "bytes": 11891,
+      "sha256": "0cb785a89bf98e5bb56dd525518c6eb9d4f1f5cee29aab2969dc2c7a50a1bfe5"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Paste.gbp": {
+      "bytes": 11035,
+      "sha256": "a1fefba8a87541b852a97376d1a0b0a033f45c2380724c1d54d47ecb6f6583c1"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Silkscreen.gbo": {
+      "bytes": 17062,
+      "sha256": "30ec735bea4154b5fd0094c6bc2ccd048106144f7bc4814ae35b63f4b9e8276e"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-Edge_Cuts.gm1": {
+      "bytes": 909,
+      "sha256": "e89e24c68f0479e78146228973441285d73ee00fc2c44e5b651b6eb9cea353e8"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Cu.gtl": {
+      "bytes": 91665,
+      "sha256": "caba88166820d7a747e010ca440364bdadebc2615a8a1b9dd31974fc33054f8d"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Mask.gts": {
+      "bytes": 2040,
+      "sha256": "5e5cbb628c2dfc31148ac4c400f90bc5fed09037f310fb39e26fc02d547c6dfd"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Paste.gtp": {
+      "bytes": 461,
+      "sha256": "694bff0e9d2a4abff243168f12c9b464bfde5a7d6b0a270b3e8d094b2e7a8708"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Silkscreen.gto": {
+      "bytes": 5688,
+      "sha256": "1e598a3203f6f1912b3f1368ac7a45513b0557a96ca9aa60d599b61358e6a946"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-NPTH.drl": {
+      "bytes": 537,
+      "sha256": "09b111ace3261056f297997b3cbe9c2800d1f3c99bef4659f7e3760ff47486d6"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-PTH.drl": {
+      "bytes": 1839,
+      "sha256": "0d64f498d61765dd45dace7e182c05a14420e40b6414600dc9c3c5c4b8015cfb"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-job.gbrjob": {
+      "bytes": 2891,
+      "sha256": "119fe18778791f4c9831fa2efa50424e09db0a4d05c1575d4c303083b48395dd"
+    },
+    "procurement/q3/live-stock-2026-09-15.json": {
+      "bytes": 12413,
+      "sha256": "f13c860e27d3c015cae2984383d82721a3c398562276c0ebdeaa9d91bd8a1bee"
+    },
+    "procurement/q3/passive-alternatives.json": {
+      "bytes": 14209,
+      "sha256": "29e286e29cffd165e9b6682f5b7edce14b170dfe44b4dc9c9cdc171b2a9a218f"
+    },
+    "procurement/q3/passive-alternatives.md": {
+      "bytes": 6223,
+      "sha256": "6371d576655ef430137f420061dd9c79f3edd1134ea88534b7de47871084ab55"
+    },
+    "procurement/q3/placements-KiCad-Q3.csv": {
+      "bytes": 6086,
+      "sha256": "7b8e111963147735ca82ae0f3042115b3dcb7cc64b22d5cc91b0c0c26fa205ba"
+    },
+    "procurement/q3/power-candidates.json": {
+      "bytes": 21343,
+      "sha256": "c0ab4a84ff6665a5180b0f2ce07eef3c4dc3e308606973ba9be6a80c226153cf"
+    },
+    "procurement/q3/stock-alternatives.md": {
+      "bytes": 8799,
+      "sha256": "c9bb464cfa2cab4c3717971c98bce22c2694958a7b3b57f30cd835c0ef9bc45d"
+    },
+    "scripts/build_firmware.py": {
+      "bytes": 14130,
+      "sha256": "2467b517d5eccd84cfffee0493a635e1b5242137cf7c7f49c4c618aea9131b36"
+    },
+    "scripts/build_firmware_q3.py": {
+      "bytes": 12344,
+      "sha256": "dd8d5e6993b0cf47f8cdfd7774caf66b8a354c09b3271108676e4009955d454b"
+    },
+    "scripts/build_q3_board.py": {
+      "bytes": 5192,
+      "sha256": "d7e4ca1d0efd11dc91674adf14f032d1331f986f672399f4c3033ba18a4a278b"
+    },
+    "scripts/build_q3_enclosure.py": {
+      "bytes": 25512,
+      "sha256": "896d9ecaa392db3d6c942dbdec4499bb3f28c7f0e1b6d627d04789e4545ec7b3"
+    },
+    "scripts/build_q3_model.py": {
+      "bytes": 7184,
+      "sha256": "eef7aa8c6986a826fb479968fcef95ae5f134fda942ddd2fec66436c34219a27"
+    },
+    "scripts/build_q3_schematic.py": {
+      "bytes": 22629,
+      "sha256": "c7247bf75353ca7a879e4089bb866f089b1ee2e2a053f22aa103ed009baddf50"
+    },
+    "scripts/export_q3.py": {
+      "bytes": 11185,
+      "sha256": "29da7b688dfcb135eb5d8913a6157e01225bb360affdc579345b48fb8182f8f8"
+    },
+    "scripts/finish_q3_board.py": {
+      "bytes": 5489,
+      "sha256": "a773a0ebccf151520625eb053273433ba82ccc566b1b37239a5c46f2d85baa4f"
+    },
+    "scripts/kicad_sexpr.py": {
+      "bytes": 1426,
+      "sha256": "4a6c547f7f5bb0fcc7160da24c04e918c1d146026b4f990db624482fb8eacfeb"
+    },
+    "scripts/package_q3.py": {
+      "bytes": 10752,
+      "sha256": "8ee91ba5aeea03f1c567fdeb17ed4fb0901fbb1b0fa62a85006a1b828598058f"
+    },
+    "scripts/package_rfq.py": {
+      "bytes": 7142,
+      "sha256": "cc5d06cfe442d3996c8284a8669c5c1a29f98756a7173febe1bcaa74961ba33e"
+    },
+    "scripts/prepare_q3_route.py": {
+      "bytes": 1464,
+      "sha256": "f9459e11ff79277ac282231dee4701774fe8e22f9e9328c36767585c1f43cb12"
+    },
+    "scripts/preroute_q3.py": {
+      "bytes": 5949,
+      "sha256": "962c830ff93d4245e8b42fdac7bd2343528a5f4cac882286b64417c2ccf24661"
+    },
+    "scripts/run_host_tests_q3.py": {
+      "bytes": 1072,
+      "sha256": "2f2cdf6aeec62acde54d3338a9c05f63c25928dbde1674d13e1123e8da3a2b92"
+    },
+    "scripts/sync_q3_board.py": {
+      "bytes": 2928,
+      "sha256": "5d8c4b8aa4513492d76401bd1adc9c0da6c7f877b1c37175c9823ed4bc9f20fc"
+    },
+    "scripts/test_verify_q3.py": {
+      "bytes": 14013,
+      "sha256": "884f32ed50d0eb9c7d3d44b7b0a25247bbd7fc692202838fea807c75aa4cb9c3"
+    },
+    "scripts/verify_project.py": {
+      "bytes": 5375,
+      "sha256": "9dedec8765ca969222315f3a70cea879a78886be67f5d3758f504dcd2dd69dab"
+    },
+    "scripts/verify_q3.py": {
+      "bytes": 49805,
+      "sha256": "f7bfe5d27e7de7c44aabc53183f4a81fe064be744b4dadc320621acc23b714ae"
+    },
+    "verification/q3-native-drc.json": {
+      "bytes": 1852,
+      "sha256": "055f2ba1237ec314f8914316bcd718daed960e2b37b8d96261abe98519fbf217"
+    },
+    "verification/q3-native-erc.json": {
+      "bytes": 2533,
+      "sha256": "413086241ddb9f6f8e6f8deb3de6bc3669a119dc06be218fa8ed6eb646156370"
+    },
+    "verification/q3-native-netlist.xml": {
+      "bytes": 174168,
+      "sha256": "cfc3e0f1deed6bc8d4db479801912c4dde773c03a594834459fb4c4c73cdfe8f"
+    },
+    "verification/q3-negative-checks.json": {
+      "bytes": 3760,
+      "sha256": "bc1195cfa35d364f4d5b586392b4c4f0e378a5a0a3490b7eedec795176c71c7b"
+    },
+    "verification/q3-validation.json": {
+      "bytes": 15874,
+      "sha256": "24b481675d8c1588095b8e64f3010c3e54c4bb8ee7546cb55ee012fab5564584"
+    }
+  },
+  "scope_notes": [
+    "Q3 production artifacts only; Q2 model and review documents are explicit reference inputs.",
+    "The unchanged OFFBOARD-items-Q1.csv is an export-source reference; quote the generated OFFBOARD-items-Q3.csv.",
+    "Full-repository history checks require the original frozen Q1/Q2 files, which are intentionally not distributed as program images."
+  ]
+}

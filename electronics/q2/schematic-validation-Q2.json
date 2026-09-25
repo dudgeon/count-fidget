@@ -1,0 +1,138 @@
+{
+  "status": "Native Q2 schematic candidate; not a hardware release",
+  "kicad_version": "10.0.6",
+  "sheets": 6,
+  "components_and_pcb_features": 62,
+  "fitted_components": 50,
+  "connected_pins_matched": 195,
+  "explicit_unused_pins": 28,
+  "erc_violations": 0,
+  "nc_nets": {
+    "U1.12": "unconnected-(U1-P4.2/XOUT-Pad12)",
+    "U1.13": "unconnected-(U1-P4.1/XIN-Pad13)",
+    "U1.18": "unconnected-(U1-P4.0/TA1.1-Pad18)",
+    "U1.19": "unconnected-(U1-P1.7/TA0.1/TDO/A7-Pad19)",
+    "U1.20": "unconnected-(U1-P1.6/TA0.2/TDI/TCLK/A6-Pad20)",
+    "U1.21": "unconnected-(U1-P1.5/TA0CLK/TMS/A5-Pad21)",
+    "U1.22": "unconnected-(U1-P1.4/MCLK/TCK/A4/VREF+-Pad22)",
+    "U1.23": "unconnected-(U1-P1.3/UCA0STE/A3-Pad23)",
+    "U1.24": "unconnected-(U1-P1.2/UCA0CLK/A2-Pad24)",
+    "U1.27": "unconnected-(U1-P5.3/UCB0SOMI/UCB0SCL/L35-Pad27)",
+    "U1.28": "unconnected-(U1-P5.2/UCB0SIMO/UCB0SDA/L34-Pad28)",
+    "U1.29": "unconnected-(U1-P5.1/UCB0CLK/L33-Pad29)",
+    "U1.30": "unconnected-(U1-P5.0/UCB0STE/L32-Pad30)",
+    "U1.31": "unconnected-(U1-P2.7/L31-Pad31)",
+    "U1.32": "unconnected-(U1-P2.6/L30-Pad32)",
+    "U1.33": "unconnected-(U1-P2.5/L29-Pad33)",
+    "U1.34": "unconnected-(U1-P2.4/L28-Pad34)",
+    "J1.A6": "unconnected-(J1-D+-PadA6)",
+    "J1.A7": "unconnected-(J1-D--PadA7)",
+    "J1.A8": "unconnected-(J1-SBUA-PadA8)",
+    "J1.B6": "unconnected-(J1-D+-PadB6)",
+    "J1.B7": "unconnected-(J1-D--PadB7)",
+    "J1.B8": "unconnected-(J1-SBUB-PadB8)",
+    "U2.3": "unconnected-(U2-STAT2-Pad3)",
+    "U2.9": "unconnected-(U2-STAT1-Pad9)",
+    "J2.MP1": "unconnected-(J2-ANCHOR1-PadMP1)",
+    "J2.MP2": "unconnected-(J2-ANCHOR2-PadMP2)",
+    "U4.1": "unconnected-(U4-NC-Pad1)"
+  },
+  "erc_ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "commands": [
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "electronics/q2/schematic-netlist-Q2.xml",
+      "electronics/q2/click-counter-Q2.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "electronics/q2/erc-Q2.json",
+      "electronics/q2/click-counter-Q2.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "pdf",
+      "-o",
+      "electronics/q2/schematic-Q2.pdf",
+      "electronics/q2/click-counter-Q2.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "svg",
+      "-o",
+      "electronics/q2/schematic-svg/",
+      "electronics/q2/click-counter-Q2.kicad_sch"
+    ]
+  ],
+  "supply_assertions": {
+    "VBUS": "External USB source",
+    "GND": "System return via reviewed power topology",
+    "CELL_N_RAW": "External cell return",
+    "BAT_SENSE": "Cell supply through R7"
+  },
+  "limitations": [
+    "ERC does not verify analog thresholds, startup, protection bypass or battery safety.",
+    "Supply assertions describe external/passive power paths; they are not extra fitted parts.",
+    "The drawing uses global labels between functional sheets; pin names/types are explicit.",
+    "All existing first-article, mechanical, firmware and purchase approval gates remain."
+  ],
+  "inputs_sha256": {
+    "scripts/build_q2_schematic.py": "f299786cd0eab1c5be139c8f7f2d88ec583374050b37081cbd2845513ea659e3",
+    "scripts/build_q2_model.py": "4f56d9d1d16c02a7ed52cdaa4f637ea0c15938dbcda0bd81d30a9df37cef7b36",
+    "electronics/netlist.json": "2c5e467ac28debd6ef5a9b3e1fad04f4b897df52ebad9772dd8da920530f8d7b"
+  },
+  "artifacts_sha256": {
+    "electronics/q2/click-counter-Q2.kicad_sch": "43acd499a83ba2bb26b372a6f450d892a661d346ec4024ad600f1700c8da7b0e",
+    "electronics/q2/mcu-lcd.kicad_sch": "9054b4351644cb48eff796888e5b4c357d126e3d8baf6062e51164cfc4167b6f",
+    "electronics/q2/usb-power.kicad_sch": "5ed97dabe0c8277ecc6fd463cb756fc8f6fe661eba27e7053d72c4210756d279",
+    "electronics/q2/battery-protection.kicad_sch": "0f87af93b32aa58bb1113631f3f8250e617f0d6f94bd6147e27b6cd7e333f5a0",
+    "electronics/q2/thermal.kicad_sch": "35079e6539ddc517268a9984be2f9bea489ba076ac9e992fcc40da2c18f526db",
+    "electronics/q2/buttons.kicad_sch": "8f607b80df0449521843a9dbe238210dcecd64debab0464d117349e1aeb0ec19",
+    "electronics/q2/CountFidgetQ2.kicad_sym": "ed92b65309a1c81817a83e736991bc1da665cdf92d8319cef7bae30e13382bdf",
+    "electronics/q2/sym-lib-table": "3c8e3d56323cf5aefba77c525b8423da0885efb902fd15457ac621ea8d6f09fa",
+    "electronics/q2/schematic-paths-Q2.json": "b107b83dd547e5f93e327e4b02498874df2301ebf69ba80d39f5b0b2e5c01b9d",
+    "electronics/q2/schematic-netlist-Q2.xml": "d51eedfca22f0c53b1588d8c72d467e6980cc55783c0ef457512231a2817ab32",
+    "electronics/q2/erc-Q2.json": "baac93e67cdd5ac18762f33644f9ca554c5c5251d9320a083152c7d6eca863b6",
+    "electronics/q2/schematic-Q2.pdf": "27d0216d3c954917a043dcbbedc6cddab3e4fee0bae2d9638daadb7ee708a1be",
+    "electronics/q2/schematic-svg/click-counter-Q2-Battery connector and independent cell protection.svg": "061232c330ccde4aee9d454d646c97a7b9ac031e2d9d6af783c6f0ee9d9cdf36",
+    "electronics/q2/schematic-svg/click-counter-Q2-Count_reset keys, filtering and fixture access.svg": "4750d95f78bcd5b4542faa1255c0d52abb556839994272cde6d59036dd0762ec",
+    "electronics/q2/schematic-svg/click-counter-Q2-Independent temperature window and charge inhibit.svg": "80a884608179ae09bf9547074717a183a5216cd8359d47957b83de046c05b656",
+    "electronics/q2/schematic-svg/click-counter-Q2-MCU, LCD bias and programming.svg": "028a3598384e18cd55b4727b6bf2fba5b5a0296dc16e577b2efd04ffee4f2fed",
+    "electronics/q2/schematic-svg/click-counter-Q2-USB input, charging and 3 V supply.svg": "e8dddd602b98bf0a5c7256ac74d51a6756c4b1ac28cb42b5185b4e11d6068226",
+    "electronics/q2/schematic-svg/click-counter-Q2.svg": "34984ba60735f52484dbfe2c37cb8b86b08d4b5f5b6f852bddac6eac13d65fde"
+  }
+}

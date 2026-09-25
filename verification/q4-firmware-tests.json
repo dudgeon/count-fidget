@@ -1,0 +1,110 @@
+{
+  "hardware_executed": false,
+  "host_compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "inputs": {
+    "firmware/q4-stm32/app.c": {
+      "bytes": 1951,
+      "sha256": "a954928851f1fb9f17c55986fcfc0133f385c094db95c66ffebee7498eb799e6"
+    },
+    "firmware/q4-stm32/app.h": {
+      "bytes": 700,
+      "sha256": "ae3423d24e976950c81076e9918392deba8e57467d82c14932f825fbb3700bf5"
+    },
+    "firmware/q4-stm32/board.h": {
+      "bytes": 1225,
+      "sha256": "89be484d7499f00332befbea787dd7ac949786024fa4c274e6464fcf146b0812"
+    },
+    "firmware/q4-stm32/counter.c": {
+      "bytes": 1250,
+      "sha256": "95de4a0c4082d0775e9d61c85a07fb3ad68c66061def73441c13995f119b6455"
+    },
+    "firmware/q4-stm32/counter.h": {
+      "bytes": 727,
+      "sha256": "63692a82cd9ecac1d7af81893d1a69afebf34f59b6b509efe3594dca5dbbc49f"
+    },
+    "firmware/q4-stm32/fram.c": {
+      "bytes": 3292,
+      "sha256": "e85aebd6a1d5d691af182b7be5cd6ef027a9ba94e0ffabdfd6b597d1735f992c"
+    },
+    "firmware/q4-stm32/fram.h": {
+      "bytes": 656,
+      "sha256": "bcacbf70935cfc4d0715d9a26d1b39f25fbd5cec91b0ff5b8de684ed45dcf9ff"
+    },
+    "firmware/q4-stm32/input.c": {
+      "bytes": 2081,
+      "sha256": "1d5ea028e0101a01aa3d38d003ddb639528dc3af5b2c881e30497b481025d659"
+    },
+    "firmware/q4-stm32/input.h": {
+      "bytes": 946,
+      "sha256": "934bff76ff328eb11a928bc3a0b6a66d5ff869fa6882d07f2425f4bd158356cb"
+    },
+    "firmware/q4-stm32/journal.c": {
+      "bytes": 3301,
+      "sha256": "e5d9a65aeea0463d4c46e7b9168a4ccf2ba59c0a4f92321406874d6aa727c454"
+    },
+    "firmware/q4-stm32/journal.h": {
+      "bytes": 1088,
+      "sha256": "6f8f7917b682a14b782b9858e73663d33dd16e41f667fb3d28e1b1cc1730e9fc"
+    },
+    "firmware/q4-stm32/main_stm32.c": {
+      "bytes": 17646,
+      "sha256": "ad1283369624412f2a65f006aaa60b242ebc655006a3cbae50cdd16e415dfe07"
+    },
+    "firmware/q4-stm32/oled.c": {
+      "bytes": 7999,
+      "sha256": "0ea086e8faefba3d2c7837b5148b0e3e8be8ab21c7e0af3dc39fcda0462710a6"
+    },
+    "firmware/q4-stm32/oled.h": {
+      "bytes": 2151,
+      "sha256": "844f82b441aa464f957130a4ae043b80c9f4ea149f32595e52e0eec2cdf90a6b"
+    },
+    "firmware/q4-stm32/rail.c": {
+      "bytes": 710,
+      "sha256": "b6bc53ad4799d1f8741bccfca1758f8a81e52477387bc7f862fb7df92b53d917"
+    },
+    "firmware/q4-stm32/rail.h": {
+      "bytes": 421,
+      "sha256": "d7e50c70bb060c88ba292c9251430cc110672928edc04f12be4a315ab760695b"
+    },
+    "firmware/q4-stm32/runtime.c": {
+      "bytes": 673,
+      "sha256": "d96d5feff5b7dd0582e10fc35997a9ae89485ac6ccac44d36fd72760159c511b"
+    },
+    "firmware/q4-stm32/startup.c": {
+      "bytes": 2014,
+      "sha256": "a760e5de47fa4de5b18662a59b15ed18d8c9f93d4a3bc8ba7ad67c6ec05d660f"
+    },
+    "firmware/q4-stm32/test_behavior.c": {
+      "bytes": 12178,
+      "sha256": "d286dbcd4da522c403a8e765e15aabc2df467ce86bc11afa5c1f2832234703fe"
+    },
+    "firmware/q4-stm32/test_fram.c": {
+      "bytes": 4419,
+      "sha256": "60b58be4acbddcb6b0e34a6db571799f1e7f3677773d843e38c8c3831768a500"
+    },
+    "firmware/q4-stm32/test_oled.c": {
+      "bytes": 6215,
+      "sha256": "63abfc5b9acf5bc6a3baa7295726ec2cec7fe5ec71b8dcc544ce7828e5bbc45a"
+    },
+    "firmware/q4-stm32/test_rail.c": {
+      "bytes": 1617,
+      "sha256": "776b3e16632d1d6e71d72cd3b591579b7fe24a34c4a47222a4755559d29bce67"
+    }
+  },
+  "models": "Production portable code; memory/bus/input models, not MCU or whole-board emulation",
+  "passed": true,
+  "results": {
+    "behavior": "{\"torn_word_reboots\":1179648,\"single_bit_corruptions\":256,\"button_waveforms\":7072,\"queue_storage_schedules\":2295,\"recovery_interleavings\":200,\"fault_idle_recovery_scenarios\":8,\"hardware_executed\":false}\n",
+    "fram": "PASS: two permanent sleep/wake failures stop bus retries; explicit reinitialization recovers\nPASS: 350 SPI FRAM transaction/byte-prefix failures, stuck MISO0/1, ignored writes, protected-device refusal,1000 sleep/wake guards across wrap; no MCU execution\n",
+    "oled": "PASS: HS96 SPI startup/clear/charge-pump commands, bounded chunks, dirty/coalesced frames, MAX, shutdown guard\nPASS: injected mid-frame transport error discards display state and recovers the latest committed count\nPASS: deadline wrap and sleep during every early startup tick\nPASS: transport failure at each of259 startup/frame packet positions\nHost model only; target ISR timing, rail sequencing, pixels and current require hardware tests.\n",
+    "rail": "PASS: 1527742 voltage/error/initial-state corners, hysteresis, invalid calibration/ADC, stale samples and timestamp wrap;2% bounded error model, no analog execution\n"
+  },
+  "runner": {
+    "bytes": 6911,
+    "sha256": "f38430edc6fbce1fd79dc11f0ab87bbe5597e9584c5f247e35f44913c710793e"
+  },
+  "sanitized": false,
+  "sanitizer": null,
+  "schema": 1,
+  "target": "STM32L072CBT6 Q4"
+}

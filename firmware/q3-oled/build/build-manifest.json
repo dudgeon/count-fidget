@@ -1,0 +1,443 @@
+{
+  "commands": [
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-gcc",
+      "-mmcu=msp430fr4133",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-I<SUPPORT>/include",
+      "-MD",
+      "-MF",
+      "main_msp430.c.d",
+      "-c",
+      "main_msp430.c",
+      "-o",
+      "main_msp430.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-gcc",
+      "-mmcu=msp430fr4133",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-I<SUPPORT>/include",
+      "-MD",
+      "-MF",
+      "counter.c.d",
+      "-c",
+      "counter.c",
+      "-o",
+      "counter.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-gcc",
+      "-mmcu=msp430fr4133",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-I<SUPPORT>/include",
+      "-MD",
+      "-MF",
+      "oled.c.d",
+      "-c",
+      "oled.c",
+      "-o",
+      "oled.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-gcc",
+      "-mmcu=msp430fr4133",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-I<SUPPORT>/include",
+      "-MD",
+      "-MF",
+      "input.c.d",
+      "-c",
+      "input.c",
+      "-o",
+      "input.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-gcc",
+      "-mmcu=msp430fr4133",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-L<SUPPORT>/include",
+      "main_msp430.c.o",
+      "counter.c.o",
+      "oled.c.o",
+      "input.c.o",
+      "-Wl,--gc-sections,-Map,click-counter-Q3-oled.map",
+      "-o",
+      "click-counter-Q3-oled.elf"
+    ],
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-objcopy",
+      "-O",
+      "ihex",
+      "click-counter-Q3-oled.elf",
+      "click-counter-Q3-oled.hex"
+    ],
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-objdump",
+      "-d",
+      "click-counter-Q3-oled.elf"
+    ],
+    [
+      "<TOOLCHAIN>/bin/msp430-elf-size",
+      "click-counter-Q3-oled.elf"
+    ]
+  ],
+  "dependencies": {
+    "<BUILD>/counter.c": {
+      "bytes": 3377,
+      "sha256": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe"
+    },
+    "<BUILD>/counter.h": {
+      "bytes": 1077,
+      "sha256": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6"
+    },
+    "<BUILD>/input.c": {
+      "bytes": 2686,
+      "sha256": "bc228e7f25e075f082e07e726a3f7be6c575853a5fe8384f0d17a49e671b5934"
+    },
+    "<BUILD>/input.h": {
+      "bytes": 1342,
+      "sha256": "78a6b28fedf4af18b1eea651a1b726b72e57e43f17cbbc4ada5f4edc745f9d17"
+    },
+    "<BUILD>/main_msp430.c": {
+      "bytes": 8544,
+      "sha256": "2f85d8195801e232dae80d5868771f6805203ee08b13a9b20523db599b419dc0"
+    },
+    "<BUILD>/oled.c": {
+      "bytes": 8277,
+      "sha256": "6227d98c0dfbc48c5cd5d460fea6006f80a0f4c0cf26b71f1ef3413ac829f508"
+    },
+    "<BUILD>/oled.h": {
+      "bytes": 2126,
+      "sha256": "74d4a10f2f569de3800e762e7c3f3b19bf28a3262a42233b491f91e9ca58cb22"
+    },
+    "<SUPPORT>/include/in430.h": {
+      "bytes": 9974,
+      "sha256": "e6b46acecc4e8d081a459aedc41f221038ac951f8fae46f39b5a2fa6626cbd3c"
+    },
+    "<SUPPORT>/include/iomacros.h": {
+      "bytes": 3213,
+      "sha256": "007ffdc90fbd34d5b454b9aebe4e1cf82cb4559785cd83916bb697a00a4295cd"
+    },
+    "<SUPPORT>/include/msp430.h": {
+      "bytes": 40325,
+      "sha256": "aaaaf437cccff3c9aaa6694e22a2375a787e3931d172da6800326dbc88838e3e"
+    },
+    "<SUPPORT>/include/msp430fr4133.h": {
+      "bytes": 211226,
+      "sha256": "026a2ded7ef066fb8474f4e61b87a50524a56fc62564cab7fc45f5c34de02823"
+    },
+    "<TOOLCHAIN>/lib/gcc/msp430-elf/9.3.1/include/stdbool.h": {
+      "bytes": 1524,
+      "sha256": "de1ff4572bf7f1bc0367e68ca72fc15f3b860415215459b2faac87913afe196e"
+    },
+    "<TOOLCHAIN>/lib/gcc/msp430-elf/9.3.1/include/stddef.h": {
+      "bytes": 12959,
+      "sha256": "45e80e1302342753d2f9e5945248fe3af7cf328a99804d2ec561850bbb550f7d"
+    },
+    "<TOOLCHAIN>/lib/gcc/msp430-elf/9.3.1/include/stdint.h": {
+      "bytes": 328,
+      "sha256": "86a7914ab7d6a18465a6fb9a7b54f945cad604fdbf3ca0d10e4e0254e0037911"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/_ansi.h": {
+      "bytes": 4325,
+      "sha256": "41306f6f597c4d30e3f52d445c3944dc24c8e1f00316f2537261f40979b5f598"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/_newlib_version.h": {
+      "bytes": 337,
+      "sha256": "a6aed3eb1c3fb8b2c8870298714f93ec2339260fb2cb918b15a0e218e0dd9c12"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/machine/_default_types.h": {
+      "bytes": 5833,
+      "sha256": "76569c9dcd2ede45e1e2a132824af881785b17262cc805c8094149e4bab05f9b"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/machine/_types.h": {
+      "bytes": 112,
+      "sha256": "44544ecbbc10c8aa58ca2da6d0617ffeee5af847af24515ab108c8218d6d92c8"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/machine/ieeefp.h": {
+      "bytes": 8610,
+      "sha256": "b11d6680608ec2aa58f52a041d7997694071aea21748aae3e4e59221c8e8c6cf"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/newlib.h": {
+      "bytes": 6769,
+      "sha256": "b5964e2f3647795b33cd3701c41c5f01a3ae57678a332a84e67799a56cba7da9"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/stdint.h": {
+      "bytes": 12905,
+      "sha256": "11a4d31bc87aa92addaf41231cf599f232e46ca18adfc45fed68a1bd9068b5a5"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/string.h": {
+      "bytes": 6181,
+      "sha256": "5f2d827ee8efb0fde92cbbb2f59b87e5732fbd91a091ac444690e373d044b976"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/_intsup.h": {
+      "bytes": 6219,
+      "sha256": "e3b26be888b9f7e4b7de0b2e3f2c13a9dd0420a7e97354fa0524e8af5ac669d8"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/_stdint.h": {
+      "bytes": 938,
+      "sha256": "1b71da155b8f13896bf38962af86d397c770b224506977950780aab3080ae933"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/_types.h": {
+      "bytes": 2010,
+      "sha256": "90980372c3ff717ef2fe1461db617c6ca307fe28c04fa7f2483591b2cfa88d8a"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/cdefs.h": {
+      "bytes": 22631,
+      "sha256": "32e313b4f2ff67250ff9770800665388e6d6986630db393b2ce7d5772057b2c6"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/config.h": {
+      "bytes": 6864,
+      "sha256": "cb917005c659711e710ca68c31bebbaca1580604654e778e9d5b3a4d433a4c49"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/features.h": {
+      "bytes": 14589,
+      "sha256": "92e3fc8ad5f70f30dd370abf3d32952139302bf8a6c2437c74d2c012c958cce1"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/lock.h": {
+      "bytes": 805,
+      "sha256": "43587d2d60a176cf6ad5117dd9515246e207398ffdf8fc52bbc0d9435f215152"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/reent.h": {
+      "bytes": 24500,
+      "sha256": "c501a9b6666940d084963e73c6282511295d35ce09c29152463a09c21b59a741"
+    },
+    "<TOOLCHAIN>/msp430-elf/include/sys/string.h": {
+      "bytes": 116,
+      "sha256": "b7164ee36ccb0a08bc27c7e381ea417c97d8c3fd3157de62b75d2a6bf7a0a589"
+    }
+  },
+  "display": "X087-2832TSWIG02-H14 / SSD1312",
+  "inputs": {
+    "firmware/q3-oled/README.md": {
+      "bytes": 10168,
+      "sha256": "d1d354dfcb093f24765a95111e150699ac88e878e1af5a9af80806e5a5e296d5"
+    },
+    "firmware/q3-oled/counter.c": {
+      "bytes": 3377,
+      "sha256": "d88358634769ff83962080ba66218078eda98019b4f21a702150633d286ca1fe"
+    },
+    "firmware/q3-oled/counter.h": {
+      "bytes": 1077,
+      "sha256": "75213183dc0dc0a4b17918737dc4cb24d50e00f4f5b060dfd17a33c37a72c4f6"
+    },
+    "firmware/q3-oled/input.c": {
+      "bytes": 2686,
+      "sha256": "bc228e7f25e075f082e07e726a3f7be6c575853a5fe8384f0d17a49e671b5934"
+    },
+    "firmware/q3-oled/input.h": {
+      "bytes": 1342,
+      "sha256": "78a6b28fedf4af18b1eea651a1b726b72e57e43f17cbbc4ada5f4edc745f9d17"
+    },
+    "firmware/q3-oled/main_msp430.c": {
+      "bytes": 8544,
+      "sha256": "2f85d8195801e232dae80d5868771f6805203ee08b13a9b20523db599b419dc0"
+    },
+    "firmware/q3-oled/oled.c": {
+      "bytes": 8277,
+      "sha256": "6227d98c0dfbc48c5cd5d460fea6006f80a0f4c0cf26b71f1ef3413ac829f508"
+    },
+    "firmware/q3-oled/oled.h": {
+      "bytes": 2126,
+      "sha256": "74d4a10f2f569de3800e762e7c3f3b19bf28a3262a42233b491f91e9ca58cb22"
+    },
+    "firmware/q3-oled/source-records.json": {
+      "bytes": 592,
+      "sha256": "02c7c0eda811528e9d1bcc60b3e3fb253217ff48941cf80cbda6d1ff6ff7db99"
+    },
+    "firmware/q3-oled/test_counter.c": {
+      "bytes": 2559,
+      "sha256": "bd0513dfc7b8662d4cdaeda5c17ff7dddf0e79a7d538fb72acd515b4940937d3"
+    },
+    "firmware/q3-oled/test_input.c": {
+      "bytes": 4656,
+      "sha256": "37945218b729e2c901474ce73cb30fb33e32820672f0e577e2c01dfcc644831a"
+    },
+    "firmware/q3-oled/test_oled.c": {
+      "bytes": 7153,
+      "sha256": "16d7b216dd763ede96647095d31a6ee8a570ab595ac698b61b98009d8855c282"
+    },
+    "scripts/build_firmware.py": {
+      "bytes": 14130,
+      "sha256": "2467b517d5eccd84cfffee0493a635e1b5242137cf7c7f49c4c618aea9131b36"
+    },
+    "scripts/build_firmware_q3.py": {
+      "bytes": 12344,
+      "sha256": "dd8d5e6993b0cf47f8cdfd7774caf66b8a354c09b3271108676e4009955d454b"
+    },
+    "scripts/run_host_tests_q3.py": {
+      "bytes": 1072,
+      "sha256": "2f2cdf6aeec62acde54d3338a9c05f63c25928dbde1674d13e1123e8da3a2b92"
+    }
+  },
+  "outputs": {
+    "click-counter-Q3-oled.elf": {
+      "bytes": 16376,
+      "sha256": "953169cd3b0b0eec37e43c150530148bdbc00dafabb90ea326252ff03af4a515"
+    },
+    "click-counter-Q3-oled.hex": {
+      "bytes": 14247,
+      "sha256": "b19f9e62fe9833ebb61fa75e94a7adef5664e51c7bcb7ffaa619a7c00bf910bf"
+    },
+    "click-counter-Q3-oled.lst": {
+      "bytes": 77103,
+      "sha256": "6af3b7487a8fea6e5519ed8faf5b9ca3a78cdb14f8056e74f1891e378ef503a0"
+    },
+    "click-counter-Q3-oled.map": {
+      "bytes": 75206,
+      "sha256": "d18a968feebfc7599f56976a812b0ab7ecedc859db3de3f2366b278bc9840756"
+    },
+    "factory-blank-info-Q3.hex": {
+      "bytes": 116,
+      "sha256": "35aabbf3a9f286a738c37eb72772794fb0e7462fb0d2e396b67c1d30c25cf1bd"
+    },
+    "host-tests.txt": {
+      "bytes": 1180,
+      "sha256": "22dcde93fae6164e20c9ff04ca44895996e011e486ae0aa55a25b63608923cb6"
+    },
+    "stack-usage.txt": {
+      "bytes": 1215,
+      "sha256": "6159e3e3a1c18d634a62d44357484a736f60808b743168c29afc95601c9035db"
+    }
+  },
+  "preserved_baselines": {
+    "firmware/click-counter-Q1.elf": {
+      "bytes": 10380,
+      "sha256": "f0b097a8ada422daa1f2760f866c7d3d97dbafa786782e333109e910620a819a"
+    },
+    "firmware/click-counter-Q1.hex": {
+      "bytes": 6656,
+      "sha256": "98e775d027c6de064d5f0e2c25695ad2b998d30e9aae37ea2704a56c85b46b18"
+    },
+    "firmware/click-counter-Q1.map": {
+      "bytes": 78895,
+      "sha256": "ea9168b62cce7ac14ee9e46066e327ceac8e4581f86ad3204945d25e5f453830"
+    },
+    "firmware/q2-lcd-check/build-manifest.json": {
+      "bytes": 10986,
+      "sha256": "c1bcb9466c7dbdbb6b9a7b7a2354931e0ca1ca3691526873cd441ea8a1f81ce3"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.elf": {
+      "bytes": 10376,
+      "sha256": "c0bcc80eb388957fdf445f392e36c233bebb9822cd08a99dc4b339cae0d38ed8"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.hex": {
+      "bytes": 6656,
+      "sha256": "ede21ce66a43bf40929522c9839521c5b1b94b2c458bb4a5411a1d6222cbcfe7"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.lst": {
+      "bytes": 35951,
+      "sha256": "7bea565bafe771d68b2585835c8ca724c9c20af4a7d75356e6ed60a7bb850112"
+    },
+    "firmware/q2-lcd-check/click-counter-Q2-lcd-check.map": {
+      "bytes": 71754,
+      "sha256": "c82f60bb3e98eab19e8d25aaa6973b36ace7bb1ca75c26065ef9b7160a3d8e7a"
+    }
+  },
+  "provenance": {
+    "compiler_package": "version=9.3.1.11\nvendor=Mitto Systems Limited",
+    "support_revision": "Build 1.212 (GCC)",
+    "support_tree": {
+      "algorithm": "SHA256 of sorted relative-path + NUL + file-SHA256 + LF",
+      "files": 1969,
+      "sha256": "0912991d8d75889b78ecd77a93f8052c1910e43e8330810e18372256dd0e06e6"
+    },
+    "toolchain_tree": {
+      "algorithm": "SHA256 of sorted relative-path + NUL + file-SHA256 + LF",
+      "files": 5216,
+      "sha256": "3a0ad9e16b48b9ccefb6e9f18d0a1ab6f368580bf8b960d9a9ac3ca9c83753f1"
+    },
+    "tools": {
+      "gcc": {
+        "bytes": 1248368,
+        "sha256": "bbabccf10f0b2e90bca557823421cfdf676adffa76889cd4a265f4dc8bfb1a4e",
+        "version": "msp430-elf-gcc (Mitto Systems Limited - msp430-gcc 9.3.1.11) 9.3.1"
+      },
+      "objcopy": {
+        "bytes": 1129696,
+        "sha256": "a597a04e45ef61aa1bbc9cc5c6a78bd98ec7d0603f6534cae38f1120654b511f",
+        "version": "GNU objcopy (Mitto Systems Limited - msp430-gcc 9.3.1.11) 2.34"
+      },
+      "objdump": {
+        "bytes": 1536512,
+        "sha256": "1df0692ef03a4ff3b148cb89e7411f763164655bb3d450b0321b53246ac11630",
+        "version": "GNU objdump (Mitto Systems Limited - msp430-gcc 9.3.1.11) 2.34"
+      },
+      "size": {
+        "bytes": 961248,
+        "sha256": "dd16d2d41e94354762b2740364f7dee3cda6197b5766999f4d03eed1c91afa33",
+        "version": "GNU size (Mitto Systems Limited - msp430-gcc 9.3.1.11) 2.34"
+      }
+    }
+  },
+  "schema": 1,
+  "size": "text\t   data\t    bss\t    dec\t    hex\tfilename\n   4935\t     98\t    546\t   5579\t   15cb\tclick-counter-Q3-oled.elf",
+  "status": "Q3 OLED candidate; hardware and manufacture hold",
+  "target": "MSP430FR4133IG48R",
+  "validation": {
+    "addressed_load_hash_encoding": "sorted little-endian uint32 address + uint8 byte",
+    "addressed_load_sha256": "012e82279cc2da517488a0abfda48980ace2a4e15ae1ff067d3f1f91ee61be0d",
+    "elf_hex_load_bytes_equal": true,
+    "factory_only_information_initializer": "factory-blank-info-Q3.hex",
+    "hardware_tested": false,
+    "information_fram_0x1800_0x19ff_excluded": true,
+    "load_bytes": 5033,
+    "manufacturing_released": false,
+    "security_signatures_0xff80_0xff87_excluded": true,
+    "static_ram_bytes": 546,
+    "vectors": {
+      "_start": {
+        "target": "0xc4d4",
+        "vector": "0xfffe"
+      },
+      "i2c_isr": {
+        "target": "0xc668",
+        "vector": "0xffea"
+      },
+      "port1_isr": {
+        "target": "0xc6e2",
+        "vector": "0xffe6"
+      },
+      "timer0_isr": {
+        "target": "0xc732",
+        "vector": "0xfff8"
+      }
+    }
+  }
+}

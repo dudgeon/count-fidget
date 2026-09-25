@@ -1,0 +1,122 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-24T20:54:57",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b",
+            "violations": []
+        },
+        {
+            "path": "/STM32 and USB boot controls/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/8db98ddd-4f79-52e1-aa2c-718f60aa82b1",
+            "violations": []
+        },
+        {
+            "path": "/STM32 and USB boot controls / 2/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/65296259-dd5f-5a14-9a8f-7d9ad113dc71",
+            "violations": []
+        },
+        {
+            "path": "/STM32 and USB boot controls / 3/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/3a2a16ec-fe3d-5e3d-bdf4-09f390f34ff5",
+            "violations": []
+        },
+        {
+            "path": "/STM32 and USB boot controls / 4/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/36946b39-cac8-5eca-94ee-8016dc780752",
+            "violations": []
+        },
+        {
+            "path": "/STM32 and USB boot controls / 5/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/c767b7d7-67d9-55e4-9a5b-3e4bfbd1908a",
+            "violations": []
+        },
+        {
+            "path": "/STM32 and USB boot controls / 6/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/2334d2e0-1a71-5a3a-866c-a229a06d80c2",
+            "violations": []
+        },
+        {
+            "path": "/SPI OLED module and power control / 1/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/158fe10e-a9ae-54da-aae0-7fa0fe5276b9",
+            "violations": []
+        },
+        {
+            "path": "/SPI OLED module and power control / 2/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/0bf9e16c-4ad7-50b1-9f90-8709f0656055",
+            "violations": []
+        },
+        {
+            "path": "/Independent SPI retained-count memory / 1/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/505881f4-f0da-59da-8cd1-c5f5429914ea",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging and common supply / 1/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/d12e6568-9a2c-5375-b795-d05058fecebb",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging and common supply / 2/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/551c0394-4b62-5a40-9ad8-7348ac50a7ec",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging and common supply / 3/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/ccef81b5-b40d-5a91-98d8-be2d68adcf3b",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging and common supply / 4/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/175f7f0b-96a0-561f-a466-7c14f898c110",
+            "violations": []
+        },
+        {
+            "path": "/Battery connection and protection / 1/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/db3c2f50-7c0c-5c98-859b-79e4b0ef357f",
+            "violations": []
+        },
+        {
+            "path": "/Battery connection and protection / 2/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/8e592d01-8cfb-5e1f-abc1-b2071b4c3075",
+            "violations": []
+        },
+        {
+            "path": "/Independent charge-temperature window / 1/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/4c222db0-e0db-5b92-ab1d-dfd8a9a17f06",
+            "violations": []
+        },
+        {
+            "path": "/Independent charge-temperature window / 2/",
+            "uuid_path": "/ca98d975-e428-5466-ae98-3022ac58a96b/025f3b70-958d-5ff4-8f85-435d7792877c",
+            "violations": []
+        }
+    ],
+    "source": "click-counter-Q4.kicad_sch"
+}

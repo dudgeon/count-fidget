@@ -8,8 +8,25 @@ private/
 !.env.example
 /tooling/
 build/
+!/firmware/q3-oled/build/
+/firmware/q3-oled/build/*
+!/firmware/q3-oled/build/build-manifest.json
+!/firmware/q3-oled/build/click-counter-Q3-oled.elf
+!/firmware/q3-oled/build/click-counter-Q3-oled.hex
+!/firmware/q3-oled/build/click-counter-Q3-oled.lst
+!/firmware/q3-oled/build/click-counter-Q3-oled.map
+!/firmware/q3-oled/build/factory-blank-info-Q3.hex
+!/firmware/q3-oled/build/host-tests.txt
+!/firmware/q3-oled/build/stack-usage.txt
+# Local router exchange inputs retain original path-bound provenance.
+/electronics/q3/*.dsn
+/electronics/q3/*.ses
 *.kicad_prl
 *.lck
 *-backups/
 firmware/test_counter
 firmware/test_lcd
+
+# Q4 local router inputs contain local paths.
+/electronics/q4/*.dsn
+/electronics/q4/*.ses

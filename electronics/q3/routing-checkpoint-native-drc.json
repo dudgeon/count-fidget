@@ -1,0 +1,61 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-15T09:29:57",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "click-counter-Q3.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "PTH inside courtyard",
+            "items": [
+                {
+                    "description": "PTH pad SH [GND] of J1",
+                    "pos": {
+                        "x": 35.795,
+                        "y": 19.62
+                    },
+                    "uuid": "0f8e645e-7bc1-4813-a865-8937f378b8ad"
+                },
+                {
+                    "description": "Footprint SW2",
+                    "pos": {
+                        "x": 33.065,
+                        "y": 22.92
+                    },
+                    "uuid": "bd72eaff-b653-4b41-8a04-10369b9143df"
+                }
+            ],
+            "severity": "error",
+            "type": "pth_inside_courtyard"
+        }
+    ]
+}

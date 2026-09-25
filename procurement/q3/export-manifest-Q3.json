@@ -1,0 +1,195 @@
+{
+  "revision": "Q3 engineering quotation candidate",
+  "manufacturing_released": false,
+  "source_board_sha256": "b33b1e1d0c9e4d58c5642fc3f63faaa4e190092601f26103376537a5b12621fd",
+  "inputs_sha256": {
+    "electronics/q3/click-counter-Q3.kicad_pcb": "b33b1e1d0c9e4d58c5642fc3f63faaa4e190092601f26103376537a5b12621fd",
+    "electronics/q3/netlist-Q3.json": "6f3dbc9d34e34576b680ad77fb27a0f70313f038b3d74dab6b434705e55d1c79",
+    "verification/q3-validation.json": "24b481675d8c1588095b8e64f3010c3e54c4bb8ee7546cb55ee012fab5564584",
+    "procurement/q3/live-stock-2026-09-15.json": "f13c860e27d3c015cae2984383d82721a3c398562276c0ebdeaa9d91bd8a1bee",
+    "procurement/OFFBOARD-items-Q1.csv": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66",
+    "scripts/export_q3.py": "29da7b688dfcb135eb5d8913a6157e01225bb360affdc579345b48fb8182f8f8"
+  },
+  "kicad_cli": {
+    "version": "10.0.6",
+    "sha256": "bc9966f4a3c24db726aaac04856debf5dae8c2cc43eee6a482182c0f5df14aa8"
+  },
+  "commands": [
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "gerbers",
+      "--output",
+      "<output>/gerbers",
+      "--layers",
+      "F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,F.Paste,B.Paste,Edge.Cuts",
+      "--subtract-soldermask",
+      "electronics/q3/click-counter-Q3.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "drill",
+      "--output",
+      "<output>/gerbers",
+      "--excellon-separate-th",
+      "--excellon-units",
+      "mm",
+      "--excellon-oval-format",
+      "route",
+      "--generate-report",
+      "--report-path",
+      "<output>/drill-report-Q3.txt",
+      "electronics/q3/click-counter-Q3.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "pos",
+      "--output",
+      "<output>/placements-KiCad-Q3.csv",
+      "--format",
+      "csv",
+      "--units",
+      "mm",
+      "--side",
+      "both",
+      "--exclude-dnp",
+      "electronics/q3/click-counter-Q3.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "svg",
+      "--output",
+      "<output>/assembly-top-Q3.svg",
+      "--mode-single",
+      "--layers",
+      "F.Cu,F.Fab,F.SilkS,Edge.Cuts",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "--sketch-pads-on-fab-layers",
+      "electronics/q3/click-counter-Q3.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "svg",
+      "--output",
+      "<output>/assembly-bottom-Q3.svg",
+      "--mode-single",
+      "--layers",
+      "B.Cu,B.Fab,B.SilkS,Edge.Cuts",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "--sketch-pads-on-fab-layers",
+      "--mirror",
+      "electronics/q3/click-counter-Q3.kicad_pcb"
+    ]
+  ],
+  "export_checks": {
+    "fitted_references": 70,
+    "distinct_exact_mpns": 43,
+    "offboard_physical_items": 3,
+    "cpl_references": 70,
+    "copper_layers": 2,
+    "gerber_and_drill_files": 12,
+    "top_paste_geometry": false,
+    "archive_members_equal_exports": true
+  },
+  "files": {
+    "procurement/q3/BOM-JLCPCB-Q3.csv": {
+      "bytes": 12462,
+      "sha256": "9879447d009bcdbf246e59c9848e2826d83422312eefcb78f645d9eb97d4a82d"
+    },
+    "procurement/q3/BOM-PCBA-Q3.csv": {
+      "bytes": 10761,
+      "sha256": "30f9d8c3cc300add54f8ec5c2a6b9bd4eb4d62f4e96805a16408fc64f712e370"
+    },
+    "procurement/q3/BOM-Q3.csv": {
+      "bytes": 11218,
+      "sha256": "4f4a386ac5c831a5c47ea0e1b0c7eff19afd37e4b9de13c3165d45f1dae9575e"
+    },
+    "procurement/q3/CPL-JLCPCB-Q3.csv": {
+      "bytes": 3234,
+      "sha256": "d2768e31377fc93c050f1b03f5af1b3bb1e8d388b5d2be37f444a6d241f925c8"
+    },
+    "procurement/q3/OFFBOARD-items-Q3.csv": {
+      "bytes": 549,
+      "sha256": "aabe0de6205c07928fc7e0d4d429973d088282996920b3c702a5ea1adc115f66"
+    },
+    "procurement/q3/assembly-bottom-Q3.svg": {
+      "bytes": 789021,
+      "sha256": "65b3b7e0b561d6108f2562c3f93c440f92268e9b0ddd71a9920e0cf9ca2cd1bc"
+    },
+    "procurement/q3/assembly-top-Q3.svg": {
+      "bytes": 152660,
+      "sha256": "4e9cbda55d6b16b44e453c30641753885324b607ee220b17b14243800a41eba1"
+    },
+    "procurement/q3/click-counter-Q3-Gerbers.zip": {
+      "bytes": 106301,
+      "sha256": "ad3941a76d1c610792a9a38ed9eee54366379bdfb047c5e9a2a5d695628c6c85"
+    },
+    "procurement/q3/drill-report-Q3.txt": {
+      "bytes": 837,
+      "sha256": "3ac960a4db8be06fdbaf95a10aea3f6e58ccbf84ea36440985f648f51518af99"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Cu.gbl": {
+      "bytes": 258225,
+      "sha256": "53d0fe73e59651a5520cb3e828bc200e034151c8adff654c10eb5864cb1f7a85"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Mask.gbs": {
+      "bytes": 11891,
+      "sha256": "0cb785a89bf98e5bb56dd525518c6eb9d4f1f5cee29aab2969dc2c7a50a1bfe5"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Paste.gbp": {
+      "bytes": 11035,
+      "sha256": "a1fefba8a87541b852a97376d1a0b0a033f45c2380724c1d54d47ecb6f6583c1"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-B_Silkscreen.gbo": {
+      "bytes": 17062,
+      "sha256": "30ec735bea4154b5fd0094c6bc2ccd048106144f7bc4814ae35b63f4b9e8276e"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-Edge_Cuts.gm1": {
+      "bytes": 909,
+      "sha256": "e89e24c68f0479e78146228973441285d73ee00fc2c44e5b651b6eb9cea353e8"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Cu.gtl": {
+      "bytes": 91665,
+      "sha256": "caba88166820d7a747e010ca440364bdadebc2615a8a1b9dd31974fc33054f8d"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Mask.gts": {
+      "bytes": 2040,
+      "sha256": "5e5cbb628c2dfc31148ac4c400f90bc5fed09037f310fb39e26fc02d547c6dfd"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Paste.gtp": {
+      "bytes": 461,
+      "sha256": "694bff0e9d2a4abff243168f12c9b464bfde5a7d6b0a270b3e8d094b2e7a8708"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-F_Silkscreen.gto": {
+      "bytes": 5688,
+      "sha256": "1e598a3203f6f1912b3f1368ac7a45513b0557a96ca9aa60d599b61358e6a946"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-NPTH.drl": {
+      "bytes": 537,
+      "sha256": "09b111ace3261056f297997b3cbe9c2800d1f3c99bef4659f7e3760ff47486d6"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-PTH.drl": {
+      "bytes": 1839,
+      "sha256": "0d64f498d61765dd45dace7e182c05a14420e40b6414600dc9c3c5c4b8015cfb"
+    },
+    "procurement/q3/gerbers/click-counter-Q3-job.gbrjob": {
+      "bytes": 2891,
+      "sha256": "119fe18778791f4c9831fa2efa50424e09db0a4d05c1575d4c303083b48395dd"
+    },
+    "procurement/q3/placements-KiCad-Q3.csv": {
+      "bytes": 6086,
+      "sha256": "7b8e111963147735ca82ae0f3042115b3dcb7cc64b22d5cc91b0c0c26fa205ba"
+    }
+  }
+}

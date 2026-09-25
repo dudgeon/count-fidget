@@ -1,0 +1,140 @@
+{
+  "revision": "Q3",
+  "observation_date": "2026-09-15",
+  "currency": "USD",
+  "hardware_tested": false,
+  "paid_procurement": false,
+  "manufacturing_released": false,
+  "pcbway": {
+    "status": "Historical 15 September calculator only; Q3 submission not completed. Superseded agreement question is inactive during quote pause.",
+    "website": "https://www.pcbway.com/quotesmt.aspx",
+    "construction": {
+      "layers": 2,
+      "finished_mm": [
+        42,
+        40,
+        1
+      ],
+      "copper_oz": 1,
+      "finish": "ENIG1microinch",
+      "mask": "green",
+      "min_track_spacing_mil": [
+        5,
+        5
+      ],
+      "min_drill_mm": 0.3,
+      "via_covering": "tented",
+      "material": "TG130-140 selected; site states free upgrade to TG150"
+    },
+    "assembly": {
+      "sides_form": "both",
+      "unique_mpns": 43,
+      "surface_attached_parts": 68,
+      "bottom_reflow_parts": 67,
+      "top_localized_fpc_parts": 1,
+      "through_hole_parts_including_hybrid_usb": 3,
+      "fitted_ref_union": 70
+    },
+    "estimates": {
+      "5": {
+        "pcb": 43.62,
+        "assembly": 88,
+        "freight": 27.27,
+        "freight_discount": -27.27,
+        "partial_total": 131.62
+      },
+      "10": {
+        "pcb": 43.62,
+        "assembly": 133.38,
+        "freight": 27.27,
+        "freight_discount": -27.27,
+        "partial_total": 177
+      }
+    },
+    "excluded_or_unpriced": [
+      "all components and attrition",
+      "programming/test/fixture work",
+      "custom battery/NTC harness",
+      "loose caps",
+      "confirmed lithium shipment and duties/tax"
+    ],
+    "full_quote": false,
+    "ten_units_submitted": false,
+    "calculator_reliability": "On17September PCBWay said online calculator amounts are not correct final prices or a pricing reference while engineering questions remain; historical figures must not drive savings claims."
+  },
+  "jlcpcb": {
+    "status": "Historical 15 September five-unit automatic Quote & Order reached; no final order, full-unit quote or payment. Quote workflow now paused.",
+    "observed_utc": "2026-09-15T13:58:26Z",
+    "quantity": 5,
+    "pcb_refs": 70,
+    "distinct_mpns": 43,
+    "all_required_pcb_parts_selected": true,
+    "pcb_price": 22.04,
+    "pcba_price": 233.82,
+    "automatic_total": 255.86,
+    "breakdown": {
+      "setup": 51.12,
+      "stencil": 8.21,
+      "panel": 0,
+      "large_size": 0,
+      "components_43_items": 83.77,
+      "feeders": 62.73,
+      "smt_assembly": 3.13,
+      "placement_confirmation": 0.45,
+      "hand_soldering": 3.58,
+      "manual_assembly": 1.48,
+      "assembly_fixture": 16.42,
+      "packaging": 0.49,
+      "special_components": 2.45
+    },
+    "separately_displayed_depaneling": 3.28,
+    "earlier_shipping_estimate": 27.63,
+    "shipping_estimate_limit": "Earlier PCB configuration only, before final 563.85g assembly weight; not a final assembled or lithium shipment price.",
+    "build_time": "PCB24hours; assembly4-5days plus2days for advanced options; historical estimate",
+    "excluded_or_unpriced": [
+      "Function test: quote after review",
+      "Assembly remark/programming scope: quote after review",
+      "Custom battery/NTC harness",
+      "Loose keycaps",
+      "Final shipping, duties and tax"
+    ],
+    "full_quote": false,
+    "ten_unit_quote_observed": false,
+    "construction": {
+      "finished_mm": [
+        42,
+        40,
+        1
+      ],
+      "support_panel_mm": [
+        70,
+        70
+      ],
+      "layers": 2,
+      "finish": "ENIG1microinch",
+      "via_covering": "tented",
+      "assembly": "Standard/both sides"
+    },
+    "production_auto_approval": false,
+    "placement_auto_approval": false,
+    "accepted_files": [
+      "click-counter-Q3-Gerbers.zip",
+      "click-counter-Q3-RFQ.zip",
+      "BOM-JLCPCB-Q3-minimal.csv",
+      "CPL-JLCPCB-Q3.csv"
+    ],
+    "placement_state": "Preview only, not manufacturing-approved. DS1 model rotated90deg and visually translated to horizontal glass/contact-row target; U5 preview rotated90deg. Original CPL remains unchanged. Full numbered-pad review, model offsets and definitive vendor DFM remain open."
+  },
+  "last_record_updated": "2026-09-22",
+  "quote_activity_authorized": false,
+  "pause_reason": "User explicitly paused all new quote submissions until fresh instruction; engineering review and commit only.",
+  "vendor_replies_read_2026_09_22": {
+    "jlcpcb_2026_09_15_173145_utc": {
+      "oled": "C18723015 normally treated as a standard assembly component; Wave Soldering catalog classification reportedly incorrect; exact pads/heat/support not approved.",
+      "programming": "StandardPCBA only,afterSMT;8.15USD engineering+8.15USD/hour; exact price after file review."
+    },
+    "pcbway_2026_09_16_025825_utc": "Requestsonefinalversion; repeateddraftmanualreviewswastework. No exactQ3OLEDacceptanceprovided.",
+    "pcbway_2026_09_17_032124_utc": "Everyuploadtriggersmanualreview; finalpricecannotbeprovideduntilquestionsresolved; onlineamountnotcorrectpricingreference.",
+    "new_vendor_messages_sent": false
+  }
+}

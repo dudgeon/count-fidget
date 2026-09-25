@@ -1,0 +1,666 @@
+{
+  "schema": 1,
+  "revision": "Q3 OLED power design candidate",
+  "status": "Implementation candidate; not qualified, allocated, purchased or released to manufacture",
+  "as_of": "2026-09-15",
+  "changes_from_Q2": {
+    "preserve": [
+      "Q1/Q2 frozen files",
+      "existing U1 MCU, U2 charger, U3 3.0V LDO and protection circuit",
+      "existing 3.3ohm battery protection sense resistor and protection thresholds"
+    ],
+    "remove_in_new_Q3_only": [
+      "DS1 DE188 replaced by X087",
+      "C8",
+      "C14",
+      "C15",
+      "C16"
+    ],
+    "disconnect_old_LCD_U1_pins": [
+      "6",
+      "5",
+      "4",
+      "3",
+      "10",
+      "11",
+      "2",
+      "1",
+      "48",
+      "47",
+      "46",
+      "45",
+      "44",
+      "43",
+      "42",
+      "41",
+      "40",
+      "39",
+      "38",
+      "37",
+      "36",
+      "35",
+      "7",
+      "8",
+      "9"
+    ]
+  },
+  "rails": {
+    "input": {
+      "net": "SYS",
+      "planned_operating_V": [
+        3.0,
+        4.5
+      ],
+      "converter_allowed_V": [
+        1.8,
+        5.5
+      ]
+    },
+    "logic": {
+      "net": "V3",
+      "nominal_V": 3.0,
+      "always_on": true
+    },
+    "pump_input": {
+      "net": "OLED_VBAT",
+      "nominal_V": 4.0,
+      "required_V": [
+        3.8,
+        4.2
+      ],
+      "static_converter_tolerance_V": [
+        3.94,
+        4.06
+      ],
+      "requires_measured_transient_validation": true
+    },
+    "panel": {
+      "net": "OLED_VCC",
+      "nominal_V": 9.0,
+      "internal_charge_pump_command": [
+        "8D",
+        "72"
+      ],
+      "no_external_9V_source": true
+    }
+  },
+  "controls": {
+    "OLED_ENABLE": {
+      "U1_pin": "24",
+      "gpio": "P1.2",
+      "active_high": true,
+      "default": "R24 pulldown; firmware low before enabling GPIO outputs"
+    },
+    "OLED_RESET_N": {
+      "U1_pin": "23",
+      "gpio": "P1.3",
+      "active_low": true,
+      "default": "R25 pulldown"
+    },
+    "OLED_SDA": {
+      "U1_pin": "28",
+      "gpio": "P5.2/UCB0SDA",
+      "pullup_net": "V3"
+    },
+    "OLED_SCL": {
+      "U1_pin": "27",
+      "gpio": "P5.3/UCB0SCL",
+      "pullup_net": "V3"
+    }
+  },
+  "display": {
+    "ref": "DS1",
+    "manufacturer": "Newvisio / Wisevision",
+    "mpn": "X087-2832TSWIG02-H14",
+    "lcsc": "C18723015",
+    "pins": {
+      "1": "OLED_C2P",
+      "2": "OLED_C2N",
+      "3": "OLED_C1P",
+      "4": "OLED_C1N",
+      "5": "OLED_VBAT",
+      "6": null,
+      "7": "GND",
+      "8": "V3",
+      "9": "OLED_RESET_N",
+      "10": "OLED_SCL",
+      "11": "OLED_SDA",
+      "12": "OLED_IREF",
+      "13": "OLED_VCOMH",
+      "14": "OLED_VCC"
+    },
+    "NC_pin_names": {
+      "6": "VBREF/NC"
+    },
+    "footprint": "ClickCounterQ3:X087_2832TSWIG02_H14",
+    "value": "X087-2832TSWIG02-H14",
+    "side": "top",
+    "quantity": 1,
+    "notes": "Exact panel retained; pin6 NC. Tail footprint owned by mechanical agent; full vendor assembly acceptance pending."
+  },
+  "parts": [
+    {
+      "ref": "U6",
+      "value": "4.0V OLED buck-boost",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TPS63900DSKR",
+      "lcsc": "C1518762",
+      "package": "WSON-10-EP DSK 2.5x2.5mm",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_ENABLE",
+        "2": "SYS",
+        "3": "OLED_CFG1",
+        "4": "OLED_CFG2",
+        "5": "OLED_CFG3",
+        "6": "OLED_4V",
+        "7": "OLED_LX2",
+        "8": "GND",
+        "9": "OLED_LX1",
+        "10": "SYS",
+        "11": "GND"
+      },
+      "notes": "10mA average input setting; pad11 is exposed pad. SEL tied SYS. No guaranteed peak clamp.",
+      "procurement_status": "Parent verified native JLC 2026-09-15 approximately12:14 UTC: stock21624, available21370, MOQ1, SMT Economic/Standard; no allocation or purchase",
+      "side": "bottom",
+      "footprint": "ClickCounterQ3:TPS63900_DSK0010A_TI",
+      "catalog_url": "https://www.lcsc.com/product-detail/C1518762.html"
+    },
+    {
+      "ref": "L1",
+      "value": "2.2u",
+      "manufacturer": "Murata",
+      "mpn": "DFE201612E-2R2M=P2",
+      "lcsc": "C337893",
+      "package": "0806 2.0x1.6x1.2mm",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_LX1",
+        "2": "OLED_LX2"
+      },
+      "notes": "2.2uH +/-20%; saturation2.4A, rated1.8A; TI recommended family; use manufacturer land pattern; exact custom footprint required: similarly named DFE201610P is not automatically equivalent.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "ClickCounterQ3:DFE201612E_2R2M_Murata",
+      "catalog_url": "https://www.lcsc.com/product-detail/C337893.html"
+    },
+    {
+      "ref": "Q5",
+      "value": "OLED VBAT disconnect",
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "DMP2035U-7",
+      "lcsc": "C110499",
+      "package": "SOT-23",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_SWITCH_GATE",
+        "2": "OLED_4V",
+        "3": "OLED_VBAT"
+      },
+      "notes": "PMOS:1G2S3D; off body diode conducts from OLED_VBAT toward OLED_4V, not forward feed. Not bidirectional isolation.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "catalog_url": "https://www.lcsc.com/product-detail/C110499.html"
+    },
+    {
+      "ref": "Q6",
+      "value": "OLED switch gate",
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "DMN2056U-7",
+      "lcsc": "C332302",
+      "package": "SOT-23",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_ENABLE",
+        "2": "GND",
+        "3": "OLED_SWITCH_GATE"
+      },
+      "notes": "NMOS:1G2S3D; exact existing Q2 Q1/Q2 type; guaranteed Rds at1.5V, suitable3V GPIO.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "catalog_url": "https://www.lcsc.com/product-detail/C332302.html"
+    },
+    {
+      "ref": "R20",
+      "value": "5.11k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-075K11L",
+      "lcsc": "C112314",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_CFG1",
+        "2": "GND"
+      },
+      "notes": "1%,100mW,<=100ppm/C. CFG resistors total RMS error must remain<3% including temperature and aging.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C112314.html"
+    },
+    {
+      "ref": "R21",
+      "value": "20.5k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-0720K5L",
+      "lcsc": "C273789",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_CFG2",
+        "2": "GND"
+      },
+      "notes": "1%,100mW,<=100ppm/C. CFG resistors total RMS error must remain<3% including temperature and aging.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C273789.html"
+    },
+    {
+      "ref": "R22",
+      "value": "24.9k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-0724K9L",
+      "lcsc": "C137761",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_CFG3",
+        "2": "GND"
+      },
+      "notes": "1%,100mW,<=100ppm/C. CFG resistors total RMS error must remain<3% including temperature and aging.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C137761.html"
+    },
+    {
+      "ref": "R23",
+      "value": "47k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-0747KL",
+      "lcsc": "C105579",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_4V",
+        "2": "OLED_SWITCH_GATE"
+      },
+      "notes": "1%,100mW",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C105579.html"
+    },
+    {
+      "ref": "R24",
+      "value": "100k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-07100KL",
+      "lcsc": "C14675",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_ENABLE",
+        "2": "GND"
+      },
+      "notes": "1%,100mW",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C14675.html"
+    },
+    {
+      "ref": "R25",
+      "value": "100k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-07100KL",
+      "lcsc": "C14675",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_RESET_N",
+        "2": "GND"
+      },
+      "notes": "1%,100mW",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C14675.html"
+    },
+    {
+      "ref": "R26",
+      "value": "4.7k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-074K7L",
+      "lcsc": "C99782",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "V3",
+        "2": "OLED_SCL"
+      },
+      "notes": "1%,100mW",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C99782.html"
+    },
+    {
+      "ref": "R27",
+      "value": "4.7k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-074K7L",
+      "lcsc": "C99782",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "V3",
+        "2": "OLED_SDA"
+      },
+      "notes": "1%,100mW",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C99782.html"
+    },
+    {
+      "ref": "R28",
+      "value": "750k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-07750KL",
+      "lcsc": "C137684",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_IREF",
+        "2": "GND"
+      },
+      "notes": "1%,100mW; external IREF mode AD40 required.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C137684.html"
+    },
+    {
+      "ref": "C17",
+      "value": "22u",
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61E226ME44L",
+      "lcsc": "C86816",
+      "package": "0805",
+      "quantity": 1,
+      "pins": {
+        "1": "SYS",
+        "2": "GND"
+      },
+      "notes": "25V X5R +/-20%; converter input, require>=5uF effective over voltage/temperature/tolerance.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C86816.html"
+    },
+    {
+      "ref": "C18",
+      "value": "22u",
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61E226ME44L",
+      "lcsc": "C86816",
+      "package": "0805",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_4V",
+        "2": "GND"
+      },
+      "notes": "25V X5R +/-20%; C18+C19 parallel44uF nominal, require>=10uF effective combined at4V.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C86816.html"
+    },
+    {
+      "ref": "C19",
+      "value": "22u",
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61E226ME44L",
+      "lcsc": "C86816",
+      "package": "0805",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_4V",
+        "2": "GND"
+      },
+      "notes": "Parallel converter output capacitor; no active discharge.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C86816.html"
+    },
+    {
+      "ref": "C20",
+      "value": "100n",
+      "manufacturer": "Murata",
+      "mpn": "GRM188R71H104KA93D",
+      "lcsc": "C77055",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "V3",
+        "2": "GND"
+      },
+      "notes": "50V X7R +/-10%; at DS1.VDD.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C77055.html"
+    },
+    {
+      "ref": "C21",
+      "value": "10u",
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61E106KA73L",
+      "lcsc": "C84416",
+      "package": "0805",
+      "quantity": 1,
+      "pins": {
+        "1": "V3",
+        "2": "GND"
+      },
+      "notes": "25V X5R +/-10%; OLED logic bulk, require>=4.7uF effective at3V; existingQ2 C2/C6 MPN.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C84416.html"
+    },
+    {
+      "ref": "C22",
+      "value": "2.2u",
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR71E225KE11L",
+      "lcsc": "C77081",
+      "package": "0805",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_VCOMH",
+        "2": "GND"
+      },
+      "notes": "25V X7R +/-10%; module recommends2.2uF16V X7R.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C77081.html"
+    },
+    {
+      "ref": "C23",
+      "value": "4.7u",
+      "manufacturer": "Murata",
+      "mpn": "GRM21BZ71H475KE15L",
+      "lcsc": "C437557",
+      "package": "0805",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_VCC",
+        "2": "GND"
+      },
+      "notes": "50V X7R +/-10%; module recommends4.7uF16V X7R. Verify effective capacitance at9V.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C437557.html"
+    },
+    {
+      "ref": "C24",
+      "value": "100n",
+      "manufacturer": "Murata",
+      "mpn": "GRM188R71H104KA93D",
+      "lcsc": "C77055",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_VCC",
+        "2": "GND"
+      },
+      "notes": "50V X7R +/-10%; no forced discharge/clamp on OLED_VCC.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C77055.html"
+    },
+    {
+      "ref": "C25",
+      "value": "1u",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "mpn": "CL10B105KA8NNNC",
+      "lcsc": "C29936",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_C2P",
+        "2": "OLED_C2N"
+      },
+      "notes": "25V X7R +/-10%; flying capacitor, short direct traces and no ground connection.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C29936.html"
+    },
+    {
+      "ref": "C26",
+      "value": "1u",
+      "manufacturer": "Samsung Electro-Mechanics",
+      "mpn": "CL10B105KA8NNNC",
+      "lcsc": "C29936",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_C1P",
+        "2": "OLED_C1N"
+      },
+      "notes": "25V X7R +/-10%; flying capacitor, short direct traces and no ground connection.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C29936.html"
+    },
+    {
+      "ref": "C27",
+      "value": "100n",
+      "manufacturer": "Murata",
+      "mpn": "GRM188R71H104KA93D",
+      "lcsc": "C77055",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_VBAT",
+        "2": "GND"
+      },
+      "notes": "50V X7R +/-10%; local switched pump-input bypass; include in measured startup surge.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C77055.html"
+    }
+  ],
+  "firmware_contract": {
+    "startup": [
+      "ENlow; RESETlow; VDD remains V3",
+      "After VDDstable>=20ms, resetlow>=3us (candidate2ms), then release",
+      "AE; initialize module mapping, externalIREF AD40,contrast10h,clear RAM",
+      "ENhigh; nonblocking startup settle>=100ms candidate then8D72/AF per tested command ordering"
+    ],
+    "shutdown": [
+      "AE",
+      "8D10 disables pump",
+      "Wait100ms nonblocking",
+      "ENlow disconnects VBAT and disables converter",
+      "RESETlow; retain V3 logic and I2C pullups"
+    ],
+    "contrast_initial_hex": "10",
+    "contrast_candidate_max_hex": "30",
+    "updates": "Dirty numeric pages only; I2C timeouts; preserve1msbuttons and FRAMcommit before visiblecount; no all-on screen except controlled bench test",
+    "qualification_note": "Timing is candidate implementation, not measured rail qualification; abrupt SYS loss/reset must be tested"
+  },
+  "current_limit": {
+    "nominal_average_input_mA": 10,
+    "guaranteed_min_max_mA": null,
+    "peak_current_clamp": false,
+    "short_circuit_typical_mA": 12,
+    "does_not_limit": [
+      "SYS input capacitor charging surge",
+      "MCU/logic loads bypassing converter",
+      "unbounded instantaneous switching peaks"
+    ],
+    "battery_protection_unchanged": true
+  },
+  "catalog_observations": [
+    {
+      "mpn": "TPS63900DSKR",
+      "source": "https://jlcpcb.com/partdetail/TexasInstruments-TPS63900DSKR/C1518762",
+      "observed_by": "root native browser",
+      "observed_at_UTC": "2026-09-15 approximately12:14",
+      "in_stock": 21624,
+      "available": 21370,
+      "MOQ": 1,
+      "price_USD_qty1": 1.1245,
+      "price_USD_qty10": 0.9797,
+      "reservation": false
+    },
+    {
+      "mpn": "GRM21BR61E226ME44L",
+      "source": "https://www.lcsc.com/product-detail/C86816.html",
+      "observation": "Exact current LCSC catalog identity, not JLC allocation. Historic Chinese JLC page reported0; root must check live quote matching before finalizing this exact part."
+    }
+  ],
+  "primary_sources": {
+    "converter": "https://www.ti.com/lit/ds/symlink/tps63900.pdf",
+    "panel": "https://atta.szlcsc.com/upload/public/pdf/source/20231103/222F0746A2795BBD5263EDDBD3E1B824.pdf",
+    "controller": "https://admin.osptek.com/uploads/SSD_1312_1_2_6a7ea26d1f.pdf",
+    "pmos": "https://www.diodes.com/datasheet/download/DMP2035U.pdf",
+    "nmos": "https://www.diodes.com/datasheet/download/DMN2056U.pdf",
+    "IREF_resistor": "https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07750KL",
+    "flying_cap": "https://product.samsungsem.com/cn/mlcc/CL10B105KA8NNN.do",
+    "VCC_cap": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BZ71H475KE15-01A.pdf"
+  },
+  "qualification_gates": [
+    "Live matching/stock for every exact line and PCBWay assembly acceptance",
+    "Native schematic/PCB parity, DRC/ERC and independent adversarial review",
+    "MLCC effective capacitance including DC bias, tolerance, temperature and aging",
+    "Measure SYS/cell/V3/VBAT/VCC during startup,max digits,brightness,sleep,wake,lowbattery,USB changes,reset and protector opening",
+    "10mA average limiter has no guaranteed min/max or peak bound; prove wholepack current margin against minimum protector trip across temperature",
+    "Measure I2C rise time <=300ns at400kHz or use slower qualified clock",
+    "Verify correct OLED mapping,9V command and contrast/luminance/current on exact purchasedpanel",
+    "Confirm FPC solder temperature/contact orientation/Z support and mechanical fit",
+    "Existing battery,charger,protection,FRAM power-fall and manufacture-release gates remain open"
+  ],
+  "U1_pin_net_updates": {
+    "24": "OLED_ENABLE",
+    "23": "OLED_RESET_N",
+    "28": "OLED_SDA",
+    "27": "OLED_SCL"
+  },
+  "primary_source_file_sha256": {
+    "SSD1312-osptek.pdf": "849d17833fa81c0ebd8a5c6e142470a5b0cbeb3056c2c7cf38c694d8a50eb526"
+  }
+}

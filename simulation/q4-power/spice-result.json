@@ -1,0 +1,34 @@
+{
+  "analytic": {
+    "cold_upstream_scc_exposure_us": 198.69204835400583,
+    "fram_fall_fastest_us_per_v": 129.91086757427368,
+    "fram_rise_fastest_us_per_v": 137.80921212121214,
+    "usb_first_c3_scc_exposure_us": 35.82971363760761
+  },
+  "engine": "ngspice-45.2 shared library",
+  "engine_library_sha256": "501e9b4981fe810571fe349000112590db4379377887ace04b2aa38d529d1e9a",
+  "input_sha256": {
+    "ideal-envelope.cir": "da20b55f18048c7363621f98e520213182adcc29f5f20921db20d7cd7205b292",
+    "run_spice.py": "b8b9b33630e7f395682646e1e3cd1f2ed02bed3210d24a9c47226b9123b52978"
+  },
+  "sample_count": 50011,
+  "scope": [
+    "Ideal R/C/voltage and current sources only; no semiconductor model.",
+    "Series resistance maximizes an analytical capacitor envelope, not an actual cell ESR.",
+    "C3-only USB case requires upstream SYS already powered and downstream loads settled.",
+    "Separate check.py adds the conservative BAT_SENSE branch current.",
+    "Memory3mA sink at all voltages and effective6.8uF are unverified qualification conditions.",
+    "No charger/protector recovery, connector bounce, regulator dropout or OLED current behavior.",
+    "No extracted PCB parasitics, physical qualification or manufacturing approval."
+  ],
+  "spice": {
+    "cold_upstream_scc_exposure_us": 198.6920483590844,
+    "fram_fall_fastest_us_per_v": 129.91092470107404,
+    "fram_rise_fastest_us_per_v": 137.80927272727936,
+    "usb_first_c3_scc_exposure_us": 35.82971342679516
+  },
+  "status": "IDEAL_ENVELOPES_ONLY_NOT_HARDWARE_PASS",
+  "warnings": [
+    "stderr Warning: can't find the initialization file spinit."
+  ]
+}

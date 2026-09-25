@@ -1,0 +1,3069 @@
+<?xml version='1.0' encoding='utf-8'?>
+<export version="E">
+  <design>
+    <source>electronics/q2/click-counter-Q2.kicad_sch</source>
+    <date>2026-09-15T06:48:58</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Count Fidget - Q2 engineering candidate</title>
+        <company>Count Fidget</company>
+        <rev>Q2 candidate</rev>
+        <date />
+        <source>click-counter-Q2.kicad_sch</source>
+        <comment number="1" value="ENGINEERING CANDIDATE - NOT RELEASED FOR MANUFACTURE" />
+        <comment number="2" value="" />
+        <comment number="3" value="" />
+        <comment number="4" value="" />
+        <comment number="5" value="" />
+        <comment number="6" value="" />
+        <comment number="7" value="" />
+        <comment number="8" value="" />
+        <comment number="9" value="" />
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/">
+      <title_block>
+        <title>MCU, LCD bias and programming</title>
+        <company>Count Fidget</company>
+        <rev>Q2 candidate</rev>
+        <date />
+        <source>mcu-lcd.kicad_sch</source>
+        <comment number="1" value="ENGINEERING CANDIDATE - NOT RELEASED FOR MANUFACTURE" />
+        <comment number="2" value="" />
+        <comment number="3" value="" />
+        <comment number="4" value="" />
+        <comment number="5" value="" />
+        <comment number="6" value="" />
+        <comment number="7" value="" />
+        <comment number="8" value="" />
+        <comment number="9" value="" />
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/">
+      <title_block>
+        <title>USB input, charging and 3 V supply</title>
+        <company>Count Fidget</company>
+        <rev>Q2 candidate</rev>
+        <date />
+        <source>usb-power.kicad_sch</source>
+        <comment number="1" value="ENGINEERING CANDIDATE - NOT RELEASED FOR MANUFACTURE" />
+        <comment number="2" value="" />
+        <comment number="3" value="" />
+        <comment number="4" value="" />
+        <comment number="5" value="" />
+        <comment number="6" value="" />
+        <comment number="7" value="" />
+        <comment number="8" value="" />
+        <comment number="9" value="" />
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/">
+      <title_block>
+        <title>Battery connector and independent cell protection</title>
+        <company>Count Fidget</company>
+        <rev>Q2 candidate</rev>
+        <date />
+        <source>battery-protection.kicad_sch</source>
+        <comment number="1" value="ENGINEERING CANDIDATE - NOT RELEASED FOR MANUFACTURE" />
+        <comment number="2" value="" />
+        <comment number="3" value="" />
+        <comment number="4" value="" />
+        <comment number="5" value="" />
+        <comment number="6" value="" />
+        <comment number="7" value="" />
+        <comment number="8" value="" />
+        <comment number="9" value="" />
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/">
+      <title_block>
+        <title>Independent temperature window and charge inhibit</title>
+        <company>Count Fidget</company>
+        <rev>Q2 candidate</rev>
+        <date />
+        <source>thermal.kicad_sch</source>
+        <comment number="1" value="ENGINEERING CANDIDATE - NOT RELEASED FOR MANUFACTURE" />
+        <comment number="2" value="" />
+        <comment number="3" value="" />
+        <comment number="4" value="" />
+        <comment number="5" value="" />
+        <comment number="6" value="" />
+        <comment number="7" value="" />
+        <comment number="8" value="" />
+        <comment number="9" value="" />
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/">
+      <title_block>
+        <title>Count/reset keys, filtering and fixture access</title>
+        <company>Count Fidget</company>
+        <rev>Q2 candidate</rev>
+        <date />
+        <source>buttons.kicad_sch</source>
+        <comment number="1" value="ENGINEERING CANDIDATE - NOT RELEASED FOR MANUFACTURE" />
+        <comment number="2" value="" />
+        <comment number="3" value="" />
+        <comment number="4" value="" />
+        <comment number="5" value="" />
+        <comment number="6" value="" />
+        <comment number="7" value="" />
+        <comment number="8" value="" />
+        <comment number="9" value="" />
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required</description>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C7" description="" />
+      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>996dd63a-0f7d-5cff-a0cf-0351acb58ed5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>LCD charge-pump capacitor; short direct routing to U1 LCDCAP1/0</description>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">LCD charge-pump capacitor; short direct routing to U1 LCDCAP1/0</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C8" description="" />
+      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>90cf2d9e-4afa-5768-8733-bbbd2311f9b5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>1n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>1 nF, 50 V, C0G</description>
+      <fields>
+        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1 nF, 50 V, C0G</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C10" description="" />
+      <property name="MPN" value="GRM1885C1H102JA01D" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>84be7de2-5a77-58c0-a665-522716da28f2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>100n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin</description>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C14" description="" />
+      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>8396a23b-4f19-5967-b004-d3a08cf0d61a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>100n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin</description>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C15" description="" />
+      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>5d1b9a03-1a6a-518c-a8a4-5929c96c2f34</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>100n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin</description>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C16" description="" />
+      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>4683e7da-4b9e-5b33-b9e6-6c6fdface515</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="DS1">
+      <value>DE188-RU-30/7,5/V(3V)</value>
+      <footprint>ClickCounterQ2:DE188_20P_rows13.0mm</footprint>
+      <description>THT hand solder; glass rear 4.0 mm above PCB top; 260 C / 5 s maximum; quote-only display, sample qualification required; Q2 nominal lead rows 13.0 mm; retained 1.7 mm drills pending assembler/tolerance review</description>
+      <fields>
+        <field name="MPN">DE188-RU-30/7,5/V(3V)</field>
+        <field name="Footprint">ClickCounterQ2:DE188_20P_rows13.0mm</field>
+        <field name="Datasheet" />
+        <field name="Description">THT hand solder; glass rear 4.0 mm above PCB top; 260 C / 5 s maximum; quote-only display, sample qualification required; Q2 nominal lead rows 13.0 mm; retained 1.7 mm drills pending assembler/tolerance review</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="DS1" description="" />
+      <property name="MPN" value="DE188-RU-30/7,5/V(3V)" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>d30394f3-feb2-5361-a4a3-064f22ad4c91</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="5" />
+            <pin num="6" />
+            <pin num="7" />
+            <pin num="8" />
+            <pin num="9" />
+            <pin num="10" />
+            <pin num="11" />
+            <pin num="12" />
+            <pin num="13" />
+            <pin num="14" />
+            <pin num="15" />
+            <pin num="16" />
+            <pin num="17" />
+            <pin num="18" />
+            <pin num="19" />
+            <pin num="20" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>47k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0747KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R16" description="" />
+      <property name="MPN" value="RC0603FR-0747KL" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>c4c2542a-7d55-5add-8b3e-7bf842fb85da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>GND</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP1" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>9dd1c7e0-862b-5bc6-86df-9731d880e171</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>V3</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP2" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>553a387d-8163-5e2b-ac55-02fcb1395dfb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>SBWTDIO</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP3" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>e3718d6b-8866-5649-977e-393d1f7eb31c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>SBWTCK</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP4" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>4f18e343-27e4-518c-a30f-4b6ab50e3af0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>MSP430FR4133</value>
+      <footprint>ClickCounterQ2:Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm</footprint>
+      <description>48-pin TSSOP, not the earlier 64-pin draft; SBW program and verify</description>
+      <fields>
+        <field name="MPN">MSP430FR4133IG48R</field>
+        <field name="Footprint">ClickCounterQ2:Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">48-pin TSSOP, not the earlier 64-pin draft; SBW program and verify</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="U1" description="" />
+      <property name="MPN" value="MSP430FR4133IG48R" />
+      <property name="Sheetname" value="MCU, LCD bias and programming" />
+      <property name="Sheetfile" value="mcu-lcd.kicad_sch" />
+      <sheetpath names="/MCU, LCD bias and programming/" tstamps="/27e61a01-cf91-5da9-849f-5e40deed1e14/" />
+      <tstamps>c7103c50-6b81-5fb5-9a41-15fb737768c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="5" />
+            <pin num="6" />
+            <pin num="7" />
+            <pin num="8" />
+            <pin num="9" />
+            <pin num="10" />
+            <pin num="11" />
+            <pin num="12" />
+            <pin num="13" />
+            <pin num="14" />
+            <pin num="15" />
+            <pin num="16" />
+            <pin num="17" />
+            <pin num="18" />
+            <pin num="19" />
+            <pin num="20" />
+            <pin num="21" />
+            <pin num="22" />
+            <pin num="23" />
+            <pin num="24" />
+            <pin num="25" />
+            <pin num="26" />
+            <pin num="27" />
+            <pin num="28" />
+            <pin num="29" />
+            <pin num="30" />
+            <pin num="31" />
+            <pin num="32" />
+            <pin num="33" />
+            <pin num="34" />
+            <pin num="35" />
+            <pin num="36" />
+            <pin num="37" />
+            <pin num="38" />
+            <pin num="39" />
+            <pin num="40" />
+            <pin num="41" />
+            <pin num="42" />
+            <pin num="43" />
+            <pin num="44" />
+            <pin num="45" />
+            <pin num="46" />
+            <pin num="47" />
+            <pin num="48" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1">
+      <value>2.2u</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <description>2.2 uF, 25 V, X7R; effective &gt;=1 uF at 5 V</description>
+      <fields>
+        <field name="MPN">GRM21BR71E225KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">2.2 uF, 25 V, X7R; effective &gt;=1 uF at 5 V</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C1" description="" />
+      <property name="MPN" value="GRM21BR71E225KA73L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>2bde0bbb-dfce-5ee4-a8b3-47441a82a43f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>10u</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <description>10 uF, 25 V, X5R; effective &gt;=1 uF at 4.5 V</description>
+      <fields>
+        <field name="MPN">GRM21BR61E106KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">10 uF, 25 V, X5R; effective &gt;=1 uF at 4.5 V</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C2" description="" />
+      <property name="MPN" value="GRM21BR61E106KA73L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>ad3e7847-4e07-583b-aff7-8369c9cda9d3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>2.2u</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <description>2.2 uF, 25 V, X7R</description>
+      <fields>
+        <field name="MPN">GRM21BR71E225KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">2.2 uF, 25 V, X7R</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C3" description="" />
+      <property name="MPN" value="GRM21BR71E225KA73L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>f844f315-df80-5600-ad5e-ce55bb7b161a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>2.2u</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">GRM21BR71E225KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C5" description="" />
+      <property name="MPN" value="GRM21BR71E225KA73L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>7212a7e9-56c1-557e-a340-6e9928a61cd0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>10u</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <description>10 uF 25 V X5R, nominal +/-10%; MCU V3 bulk correction E19; require &gt;=4.7 uF effective at 3 V after bias/temperature/tolerance; rail startup and reverse-current qualification required</description>
+      <fields>
+        <field name="MPN">GRM21BR61E106KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">10 uF 25 V X5R, nominal +/-10%; MCU V3 bulk correction E19; require &gt;=4.7 uF effective at 3 V after bias/temperature/tolerance; rail startup and reverse-current qualification required</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C6" description="" />
+      <property name="MPN" value="GRM21BR61E106KA73L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>0392bb76-f313-5bc2-9fb6-6eb46ba8a6a1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>100n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>100 nF local VBUS decoupler beside U5; nearby plane return</description>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">100 nF local VBUS decoupler beside U5; nearby plane return</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C9" description="" />
+      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>8d5abbdf-6005-5c74-ab6b-0ccff19dc0e8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>4.7n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>TI EVM low-current series compensation: ISET -&gt; 2k -&gt; 4.7n -&gt; GND</description>
+      <fields>
+        <field name="MPN">C0603C472J5RACTU</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">TI EVM low-current series compensation: ISET -&gt; 2k -&gt; 4.7n -&gt; GND</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C13" description="" />
+      <property name="MPN" value="C0603C472J5RACTU" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>9d3e54c5-c87a-5d68-b8e7-cbf4d2fca3b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>USB ESD</value>
+      <footprint>ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-6</footprint>
+      <fields>
+        <field name="MPN">USBLC6-2SC6</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-6</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <libsource lib="CountFidgetQ2" part="D1" description="" />
+      <property name="MPN" value="USBLC6-2SC6" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>635230c9-d1f7-5e61-a2f7-da4b506bedeb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="5" />
+            <pin num="6" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>USB-C charge</value>
+      <footprint>ClickCounterQ2:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</footprint>
+      <description>0.95 mm standard stakes; D+/D-/SBU unconnected; shell grounded</description>
+      <fields>
+        <field name="MPN">USB4105-GF-A</field>
+        <field name="Footprint">ClickCounterQ2:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</field>
+        <field name="Datasheet" />
+        <field name="Description">0.95 mm standard stakes; D+/D-/SBU unconnected; shell grounded</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="J1" description="" />
+      <property name="MPN" value="USB4105-GF-A" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>fdf21c6f-b9b1-5e81-bdc8-79282bb75bd4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="A1" />
+            <pin num="A4" />
+            <pin num="A5" />
+            <pin num="A6" />
+            <pin num="A7" />
+            <pin num="A8" />
+            <pin num="A9" />
+            <pin num="A12" />
+            <pin num="B1" />
+            <pin num="B4" />
+            <pin num="B5" />
+            <pin num="B6" />
+            <pin num="B7" />
+            <pin num="B8" />
+            <pin num="B9" />
+            <pin num="B12" />
+            <pin num="SH" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>5.1k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R1" description="" />
+      <property name="MPN" value="RC0603FR-075K1L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>e761c9e8-8731-5dd4-8817-7f148c9e125d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>5.1k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R2" description="" />
+      <property name="MPN" value="RC0603FR-075K1L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>882db68c-cf5c-5eb9-8ffe-7a63d6e47af3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>24k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0724KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R3" description="" />
+      <property name="MPN" value="RC0603FR-0724KL" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>0cf56f60-bdb3-5dce-8ecd-035d6101874a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>16.5k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0716K5L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R4" description="" />
+      <property name="MPN" value="RC0603FR-0716K5L" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>fe3852ea-6592-50f2-aa6c-1441c5634086</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R5" description="" />
+      <property name="MPN" value="RC0603FR-0710KL" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>36c77426-16be-523e-bd09-b37ce6b579a5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>100k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R6" description="" />
+      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>e219de0a-b9ba-5f48-bf6c-b44b8dbe5c75</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>2k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-072KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R19" description="" />
+      <property name="MPN" value="RC0603FR-072KL" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>8275a4f2-0d30-528a-b770-58e2946d7dd4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>VBUS</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP5" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>edc95d66-e7f5-5a91-89be-fb89065b5bf4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>SYS</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP6" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>916827c5-727c-5730-a777-0b5c0ff122db</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>Li-ion charger</value>
+      <footprint>ClickCounterQ2:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm</footprint>
+      <description>4.2 V; 100 mA input limit; 18.2 mA nominal battery charge</description>
+      <fields>
+        <field name="MPN">BQ25185DLHR</field>
+        <field name="Footprint">ClickCounterQ2:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">4.2 V; 100 mA input limit; 18.2 mA nominal battery charge</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="U2" description="" />
+      <property name="MPN" value="BQ25185DLHR" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>e407639b-2d96-59bb-8122-2186ea60e339</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="5" />
+            <pin num="6" />
+            <pin num="7" />
+            <pin num="8" />
+            <pin num="9" />
+            <pin num="10" />
+            <pin num="11" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>3.0 V LDO</value>
+      <footprint>ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-5</footprint>
+      <description>3.0 V; active output discharge variant; EN tied to SYS; power-fall/FRAM validation required</description>
+      <fields>
+        <field name="MPN">TPS7A0230PDBVR</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-5</field>
+        <field name="Datasheet" />
+        <field name="Description">3.0 V; active output discharge variant; EN tied to SYS; power-fall/FRAM validation required</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="U3" description="" />
+      <property name="MPN" value="TPS7A0230PDBVR" />
+      <property name="Sheetname" value="USB input, charging and 3 V supply" />
+      <property name="Sheetfile" value="usb-power.kicad_sch" />
+      <sheetpath names="/USB input, charging and 3 V supply/" tstamps="/92542c10-fb3d-5186-a375-05cc6c8241fb/" />
+      <tstamps>69f58e8c-d28a-5c82-9df6-be70e5a2713a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="5" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>100 nF, 50 V, X7R</description>
+      <fields>
+        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">100 nF, 50 V, X7R</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C4" description="" />
+      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>615e6145-07ad-586f-b4f8-6be884fda792</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H1">
+      <value>M2 clearance</value>
+      <footprint>ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2</footprint>
+      <description>Unplated mechanical hole; not fitted</description>
+      <fields>
+        <field name="MPN">NPTH</field>
+        <field name="Footprint">ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2</field>
+        <field name="Datasheet" />
+        <field name="Description">Unplated mechanical hole; not fitted</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="H1" description="" />
+      <property name="MPN" value="NPTH" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>df9ba337-dca9-53b8-8f69-a3fb04623f63</tstamps>
+      <units>
+        <unit name="A">
+          <pins />
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H2">
+      <value>M2 clearance</value>
+      <footprint>ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2</footprint>
+      <description>Unplated mechanical hole; not fitted</description>
+      <fields>
+        <field name="MPN">NPTH</field>
+        <field name="Footprint">ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2</field>
+        <field name="Datasheet" />
+        <field name="Description">Unplated mechanical hole; not fitted</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="H2" description="" />
+      <property name="MPN" value="NPTH" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>8c510d4a-b8d7-5571-b554-55d97f508259</tstamps>
+      <units>
+        <unit name="A">
+          <pins />
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>Battery + NTC</value>
+      <footprint>ClickCounterQ2:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal</footprint>
+      <description>Mating keyed custom pack CC-BAT-001; no bare coin-cell holder</description>
+      <fields>
+        <field name="MPN">SM04B-SRSS-TB(LF)(SN)</field>
+        <field name="Footprint">ClickCounterQ2:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal</field>
+        <field name="Datasheet" />
+        <field name="Description">Mating keyed custom pack CC-BAT-001; no bare coin-cell holder</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="J2" description="" />
+      <property name="MPN" value="SM04B-SRSS-TB(LF)(SN)" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>099327f2-f623-59b4-b291-92048f498872</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="MP1" />
+            <pin num="MP2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>Discharge FET</value>
+      <footprint>ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</footprint>
+      <fields>
+        <field name="MPN">DMN2056U-7</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <libsource lib="CountFidgetQ2" part="Q1" description="" />
+      <property name="MPN" value="DMN2056U-7" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>bcd1f6fd-35b6-593a-be25-4ca05f2f3f75</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>Charge FET</value>
+      <footprint>ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</footprint>
+      <fields>
+        <field name="MPN">DMN2056U-7</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <libsource lib="CountFidgetQ2" part="Q2" description="" />
+      <property name="MPN" value="DMN2056U-7" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>52c80cdd-6d96-5da2-a87b-f1824e267719</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>330</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-07330RL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R7" description="" />
+      <property name="MPN" value="RC0603FR-07330RL" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>090105dc-eb8f-5377-a1a9-ae180c133486</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>2.2k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-072K2L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R8" description="" />
+      <property name="MPN" value="RC0603FR-072K2L" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>e04214c4-e479-56bd-9017-0e9140d77e8d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>3.3</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-073R3L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R9" description="" />
+      <property name="MPN" value="RC0603FR-073R3L" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>982dc2c8-56c6-5507-98c4-7c35e749a67b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP7">
+      <value>CELL_P</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP7" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>10eb12c8-1221-5f4b-91c5-26056ea116ba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP8">
+      <value>CELL_N_RAW</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP8" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>a2812e28-742b-564a-8144-60e52aaa094a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>Cell protector</value>
+      <footprint>ClickCounterQ2:Package_SON_WSON-6_1.5x1.5mm_P0.5mm</footprint>
+      <fields>
+        <field name="MPN">BQ29700DSER</field>
+        <field name="Footprint">ClickCounterQ2:Package_SON_WSON-6_1.5x1.5mm_P0.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <libsource lib="CountFidgetQ2" part="U4" description="" />
+      <property name="MPN" value="BQ29700DSER" />
+      <property name="Sheetname" value="Battery connector and independent cell protection" />
+      <property name="Sheetfile" value="battery-protection.kicad_sch" />
+      <sheetpath names="/Battery connector and independent cell protection/" tstamps="/8895bcf9-bb65-5fd3-a0d3-e3993da62791/" />
+      <tstamps>3b096fe5-a422-511b-b663-e0b2bd34f7dd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="5" />
+            <pin num="6" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q3">
+      <value>Charge enable</value>
+      <footprint>ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</footprint>
+      <description>Upper series charge-enable N-MOSFET; gate has ground pulldown</description>
+      <fields>
+        <field name="MPN">2N7002,215</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description">Upper series charge-enable N-MOSFET; gate has ground pulldown</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="Q3" description="" />
+      <property name="MPN" value="2N7002,215" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>1d7383fe-8bed-59ed-be64-8890ad689a77</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q4">
+      <value>Charge enable hot gate</value>
+      <footprint>ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</footprint>
+      <description>Lower series charge-enable N-MOSFET; gate has ground pulldown</description>
+      <fields>
+        <field name="MPN">2N7002,215</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description">Lower series charge-enable N-MOSFET; gate has ground pulldown</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="Q4" description="" />
+      <property name="MPN" value="2N7002,215" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>18c05c27-7c85-5cd7-8af2-afc77fdeb05b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>57.6k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0757K6L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R10" description="" />
+      <property name="MPN" value="RC0603FR-0757K6L" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>78009be0-ae13-5141-9881-b3eedaaad651</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>115k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-07115KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R11" description="" />
+      <property name="MPN" value="RC0603FR-07115KL" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>7023f555-9959-577f-aa48-37ee5828936f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>24.3k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0724K3L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R12" description="" />
+      <property name="MPN" value="RC0603FR-0724K3L" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>177e1862-b489-574f-8919-86e5f84d4338</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>16.2k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0716K2L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R13" description="" />
+      <property name="MPN" value="RC0603FR-0716K2L" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>ce5db6d5-533e-5208-9c15-e0da884bb236</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>100k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>Local upper charge-enable gate pulldown; keep connected close to Q3 gate</description>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">Local upper charge-enable gate pulldown; keep connected close to Q3 gate</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R14" description="" />
+      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>446a539e-f13c-50f1-871e-2ec9f8a7514b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>100k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>Local lower charge-enable gate pulldown; keep connected close to Q4 gate</description>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">Local lower charge-enable gate pulldown; keep connected close to Q4 gate</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R15" description="" />
+      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>ffeaa6dd-4ae0-59f3-86b6-68c133069305</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>Push-pull temperature window</value>
+      <footprint>ClickCounterQ2:TLV7032_DGK0008A_TI</footprint>
+      <description>Separate push-pull outputs; charge enable requires both in-window indications; POR/supply-loss tests required</description>
+      <fields>
+        <field name="MPN">TLV7032DGKR</field>
+        <field name="Footprint">ClickCounterQ2:TLV7032_DGK0008A_TI</field>
+        <field name="Datasheet" />
+        <field name="Description">Separate push-pull outputs; charge enable requires both in-window indications; POR/supply-loss tests required</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="U5" description="" />
+      <property name="MPN" value="TLV7032DGKR" />
+      <property name="Sheetname" value="Independent temperature window and charge inhibit" />
+      <property name="Sheetfile" value="thermal.kicad_sch" />
+      <sheetpath names="/Independent temperature window and charge inhibit/" tstamps="/248bcdd7-85e3-5240-8b9f-f19e2480d14f/" />
+      <tstamps>af5f7d25-1614-59b2-be8a-a298c7ab943b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+            <pin num="3" />
+            <pin num="4" />
+            <pin num="5" />
+            <pin num="6" />
+            <pin num="7" />
+            <pin num="8" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>1n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>1 nF, 50 V, C0G</description>
+      <fields>
+        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1 nF, 50 V, C0G</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C11" description="" />
+      <property name="MPN" value="GRM1885C1H102JA01D" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>dd4d66c7-528e-5b72-ae10-322dc071c8f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>1n</value>
+      <footprint>ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>1 nF, 50 V, C0G</description>
+      <fields>
+        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1 nF, 50 V, C0G</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="C12" description="" />
+      <property name="MPN" value="GRM1885C1H102JA01D" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>642c8c23-8bc0-5af4-92fd-488397d5e3e3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>470k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-07470KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R17" description="" />
+      <property name="MPN" value="RC0603FR-07470KL" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>657abc52-8db2-5527-b66f-47ce969de023</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>470k</value>
+      <footprint>ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-07470KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="R18" description="" />
+      <property name="MPN" value="RC0603FR-07470KL" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>28c5106b-5d55-5f15-a213-949b5be5608b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>COUNT</value>
+      <footprint>ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB</footprint>
+      <description>Clicky blue; PCB-mount 5-pin solder version; full hand solder</description>
+      <fields>
+        <field name="MPN">MX1A-E1NW</field>
+        <field name="Footprint">ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB</field>
+        <field name="Datasheet" />
+        <field name="Description">Clicky blue; PCB-mount 5-pin solder version; full hand solder</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="SW1" description="" />
+      <property name="MPN" value="MX1A-E1NW" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>8902a04c-d0ef-53c3-b399-a9c72392e175</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW2">
+      <value>RESET</value>
+      <footprint>ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB</footprint>
+      <description>Same switch as SW1</description>
+      <fields>
+        <field name="MPN">MX1A-E1NW</field>
+        <field name="Footprint">ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB</field>
+        <field name="Datasheet" />
+        <field name="Description">Same switch as SW1</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="SW2" description="" />
+      <property name="MPN" value="MX1A-E1NW" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>4b30e141-1316-5c31-b5ff-59186a74974e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP9">
+      <value>COUNT_N</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP9" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>9f996658-631d-51aa-ba97-d9d63f3515d4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP10">
+      <value>RESET_N</value>
+      <footprint>ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <description>Not a fitted component; pogo contact after assembly</description>
+      <fields>
+        <field name="MPN">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description">Not a fitted component; pogo contact after assembly</field>
+      </fields>
+      <libsource lib="CountFidgetQ2" part="TP10" description="" />
+      <property name="MPN" value="PCB LAND" />
+      <property name="Sheetname" value="Count/reset keys, filtering and fixture access" />
+      <property name="Sheetfile" value="buttons.kicad_sch" />
+      <property name="exclude_from_bom" />
+      <sheetpath names="/Count/reset keys, filtering and fixture access/" tstamps="/fe6cd9ca-c46f-5421-8b20-e13ea1daf001/" />
+      <tstamps>a4c60353-8a32-527f-a107-6fc52d7ec29d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CountFidgetQ2" part="C1">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM21BR71E225KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C10">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM1885C1H102JA01D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C11">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM1885C1H102JA01D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C12">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM1885C1H102JA01D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C13">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C0603C472J5RACTU</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C14">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C15">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C16">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C2">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM21BR61E106KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C3">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM21BR71E225KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C4">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C5">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM21BR71E225KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C6">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM21BR61E106KA73L</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C7">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C8">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="C9">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Footprint">ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="D1">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-6</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="I/O1" type="passive" />
+        <pin num="2" name="GND" type="power_in" />
+        <pin num="3" name="I/O2" type="passive" />
+        <pin num="4" name="I/O2" type="passive" />
+        <pin num="5" name="VBUS" type="power_in" />
+        <pin num="6" name="I/O1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="DS1">
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">DE188-RU-30/7,5/V(3V)</field>
+        <field name="Footprint">ClickCounterQ2:DE188_20P_rows13.0mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="COM2" type="passive" />
+        <pin num="2" name="SEGMENT" type="passive" />
+        <pin num="3" name="SEGMENT" type="passive" />
+        <pin num="4" name="SEGMENT" type="passive" />
+        <pin num="5" name="SEGMENT" type="passive" />
+        <pin num="6" name="SEGMENT" type="passive" />
+        <pin num="7" name="SEGMENT" type="passive" />
+        <pin num="8" name="SEGMENT" type="passive" />
+        <pin num="9" name="SEGMENT" type="passive" />
+        <pin num="10" name="COM4" type="passive" />
+        <pin num="11" name="COM3" type="passive" />
+        <pin num="12" name="SEGMENT" type="passive" />
+        <pin num="13" name="SEGMENT" type="passive" />
+        <pin num="14" name="SEGMENT" type="passive" />
+        <pin num="15" name="SEGMENT" type="passive" />
+        <pin num="16" name="SEGMENT" type="passive" />
+        <pin num="17" name="SEGMENT" type="passive" />
+        <pin num="18" name="SEGMENT" type="passive" />
+        <pin num="19" name="SEGMENT" type="passive" />
+        <pin num="20" name="COM1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="H1">
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">NPTH</field>
+        <field name="Footprint">ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="H2">
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">NPTH</field>
+        <field name="Footprint">ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="J1">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB4105-GF-A</field>
+        <field name="Footprint">ClickCounterQ2:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive" />
+        <pin num="A4" name="VBUS" type="passive" />
+        <pin num="A5" name="CCA" type="passive" />
+        <pin num="A6" name="D+" type="passive" />
+        <pin num="A7" name="D-" type="passive" />
+        <pin num="A8" name="SBUA" type="passive" />
+        <pin num="A9" name="VBUS" type="passive" />
+        <pin num="A12" name="GND" type="passive" />
+        <pin num="B1" name="GND" type="passive" />
+        <pin num="B4" name="VBUS" type="passive" />
+        <pin num="B5" name="CCB" type="passive" />
+        <pin num="B6" name="D+" type="passive" />
+        <pin num="B7" name="D-" type="passive" />
+        <pin num="B8" name="SBUB" type="passive" />
+        <pin num="B9" name="VBUS" type="passive" />
+        <pin num="B12" name="GND" type="passive" />
+        <pin num="SH" name="SHIELD" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="J2">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SM04B-SRSS-TB(LF)(SN)</field>
+        <field name="Footprint">ClickCounterQ2:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="CELL+" type="passive" />
+        <pin num="2" name="CELL-RAW" type="passive" />
+        <pin num="3" name="NTC" type="passive" />
+        <pin num="4" name="NTC-RETURN" type="passive" />
+        <pin num="MP1" name="ANCHOR1" type="passive" />
+        <pin num="MP2" name="ANCHOR2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="Q1">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">DMN2056U-7</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input" />
+        <pin num="2" name="S" type="passive" />
+        <pin num="3" name="D" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="Q2">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">DMN2056U-7</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input" />
+        <pin num="2" name="S" type="passive" />
+        <pin num="3" name="D" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="Q3">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N7002,215</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input" />
+        <pin num="2" name="S" type="passive" />
+        <pin num="3" name="D" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="Q4">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N7002,215</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input" />
+        <pin num="2" name="S" type="passive" />
+        <pin num="3" name="D" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R1">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-075K1L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R10">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-0757K6L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R11">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07115KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R12">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-0724K3L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R13">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-0716K2L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R14">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R15">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R16">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-0747KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R17">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07470KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R18">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07470KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R19">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-072KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R2">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-075K1L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R3">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-0724KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R4">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-0716K5L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R5">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-0710KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R6">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R7">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07330RL</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R8">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-072K2L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="R9">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-073R3L</field>
+        <field name="Footprint">ClickCounterQ2:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="SW1">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">MX1A-E1NW</field>
+        <field name="Footprint">ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="SW2">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">MX1A-E1NW</field>
+        <field name="Footprint">ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP1">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP10">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP2">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP3">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP4">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP5">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP6">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP7">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP8">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="TP9">
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">PCB LAND</field>
+        <field name="Footprint">ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="U1">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MSP430FR4133IG48R</field>
+        <field name="Footprint">ClickCounterQ2:Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="P3.1/L9" type="bidirectional" />
+        <pin num="2" name="P3.0/L8" type="bidirectional" />
+        <pin num="3" name="P7.3/L3" type="bidirectional" />
+        <pin num="4" name="P7.2/L2" type="bidirectional" />
+        <pin num="5" name="P7.1/L1" type="bidirectional" />
+        <pin num="6" name="P7.0/L0" type="bidirectional" />
+        <pin num="7" name="P4.7/R13" type="bidirectional" />
+        <pin num="8" name="P4.6/R23" type="bidirectional" />
+        <pin num="9" name="P4.5/R33" type="bidirectional" />
+        <pin num="10" name="P4.4/LCDCAP1" type="bidirectional" />
+        <pin num="11" name="P4.3/LCDCAP0" type="bidirectional" />
+        <pin num="12" name="P4.2/XOUT" type="bidirectional" />
+        <pin num="13" name="P4.1/XIN" type="bidirectional" />
+        <pin num="14" name="DVSS" type="power_in" />
+        <pin num="15" name="DVCC" type="power_in" />
+        <pin num="16" name="RST/NMI/SBWTDIO" type="bidirectional" />
+        <pin num="17" name="TEST/SBWTCK" type="input" />
+        <pin num="18" name="P4.0/TA1.1" type="bidirectional" />
+        <pin num="19" name="P1.7/TA0.1/TDO/A7" type="bidirectional" />
+        <pin num="20" name="P1.6/TA0.2/TDI/TCLK/A6" type="bidirectional" />
+        <pin num="21" name="P1.5/TA0CLK/TMS/A5" type="bidirectional" />
+        <pin num="22" name="P1.4/MCLK/TCK/A4/VREF+" type="bidirectional" />
+        <pin num="23" name="P1.3/UCA0STE/A3" type="bidirectional" />
+        <pin num="24" name="P1.2/UCA0CLK/A2" type="bidirectional" />
+        <pin num="25" name="P1.1/UCA0RXD/UCA0SOMI/A1/Veref+" type="bidirectional" />
+        <pin num="26" name="P1.0/UCA0TXD/UCA0SIMO/A0/Veref-" type="bidirectional" />
+        <pin num="27" name="P5.3/UCB0SOMI/UCB0SCL/L35" type="bidirectional" />
+        <pin num="28" name="P5.2/UCB0SIMO/UCB0SDA/L34" type="bidirectional" />
+        <pin num="29" name="P5.1/UCB0CLK/L33" type="bidirectional" />
+        <pin num="30" name="P5.0/UCB0STE/L32" type="bidirectional" />
+        <pin num="31" name="P2.7/L31" type="bidirectional" />
+        <pin num="32" name="P2.6/L30" type="bidirectional" />
+        <pin num="33" name="P2.5/L29" type="bidirectional" />
+        <pin num="34" name="P2.4/L28" type="bidirectional" />
+        <pin num="35" name="P2.3/L27" type="bidirectional" />
+        <pin num="36" name="P2.2/L26" type="bidirectional" />
+        <pin num="37" name="P2.1/L25" type="bidirectional" />
+        <pin num="38" name="P2.0/L24" type="bidirectional" />
+        <pin num="39" name="P6.3/L19" type="bidirectional" />
+        <pin num="40" name="P6.2/L18" type="bidirectional" />
+        <pin num="41" name="P6.1/L17" type="bidirectional" />
+        <pin num="42" name="P6.0/L16" type="bidirectional" />
+        <pin num="43" name="P3.7/L15" type="bidirectional" />
+        <pin num="44" name="P3.6/L14" type="bidirectional" />
+        <pin num="45" name="P3.5/L13" type="bidirectional" />
+        <pin num="46" name="P3.4/L12" type="bidirectional" />
+        <pin num="47" name="P3.3/L11" type="bidirectional" />
+        <pin num="48" name="P3.2/L10" type="bidirectional" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="U2">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ25185DLHR</field>
+        <field name="Footprint">ClickCounterQ2:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="SYS" type="power_out" />
+        <pin num="2" name="BAT" type="passive" />
+        <pin num="3" name="STAT2" type="open_collector" />
+        <pin num="4" name="~{CE}" type="input" />
+        <pin num="5" name="GND" type="power_in" />
+        <pin num="6" name="TS/MR" type="input" />
+        <pin num="7" name="ILIM/VSET" type="input" />
+        <pin num="8" name="ISET" type="input" />
+        <pin num="9" name="STAT1" type="open_collector" />
+        <pin num="10" name="IN" type="power_in" />
+        <pin num="11" name="EP/GND" type="power_in" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="U3">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS7A0230PDBVR</field>
+        <field name="Footprint">ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-5</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in" />
+        <pin num="2" name="GND" type="power_in" />
+        <pin num="3" name="EN" type="input" />
+        <pin num="4" name="NC/GND-permitted" type="passive" />
+        <pin num="5" name="OUT" type="power_out" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="U4">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ29700DSER</field>
+        <field name="Footprint">ClickCounterQ2:Package_SON_WSON-6_1.5x1.5mm_P0.5mm</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect" />
+        <pin num="2" name="COUT" type="output" />
+        <pin num="3" name="DOUT" type="output" />
+        <pin num="4" name="VSS" type="power_in" />
+        <pin num="5" name="BAT" type="power_in" />
+        <pin num="6" name="V-" type="input" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ2" part="U5">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV7032DGKR</field>
+        <field name="Footprint">ClickCounterQ2:TLV7032_DGK0008A_TI</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="OUTA" type="output" />
+        <pin num="2" name="INA-" type="input" />
+        <pin num="3" name="INA+" type="input" />
+        <pin num="4" name="VEE" type="power_in" />
+        <pin num="5" name="INB+" type="input" />
+        <pin num="6" name="INB-" type="input" />
+        <pin num="7" name="OUTB" type="output" />
+        <pin num="8" name="VCC" type="power_in" />
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CountFidgetQ2">
+      <uri>${KIPRJMOD}/CountFidgetQ2.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="BAT_SENSE" class="Default">
+      <node ref="C4" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R7" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="U4" pin="5" pinfunction="BAT_5" pintype="power_in" />
+    </net>
+    <net code="2" name="CC1" class="Default">
+      <node ref="D1" pin="1" pinfunction="I/O1_1" pintype="passive" />
+      <node ref="D1" pin="6" pinfunction="I/O1_6" pintype="passive" />
+      <node ref="J1" pin="A5" pinfunction="CCA_A5" pintype="passive" />
+      <node ref="R1" pin="1" pinfunction="1_1" pintype="passive" />
+    </net>
+    <net code="3" name="CC2" class="Default">
+      <node ref="D1" pin="3" pinfunction="I/O2_3" pintype="passive" />
+      <node ref="D1" pin="4" pinfunction="I/O2_4" pintype="passive" />
+      <node ref="J1" pin="B5" pinfunction="CCB_B5" pintype="passive" />
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive" />
+    </net>
+    <net code="4" name="CELL_N_RAW" class="Default">
+      <node ref="C4" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="J2" pin="2" pinfunction="CELL-RAW_2" pintype="passive" />
+      <node ref="Q1" pin="2" pinfunction="S_2" pintype="passive" />
+      <node ref="TP8" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U4" pin="4" pinfunction="VSS_4" pintype="power_in" />
+    </net>
+    <net code="5" name="CELL_P" class="Default">
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="J2" pin="1" pinfunction="CELL+_1" pintype="passive" />
+      <node ref="R7" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="TP7" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U2" pin="2" pinfunction="BAT_2" pintype="passive" />
+    </net>
+    <net code="6" name="CE_MID" class="Default">
+      <node ref="Q3" pin="2" pinfunction="S_2" pintype="passive" />
+      <node ref="Q4" pin="3" pinfunction="D_3" pintype="passive" />
+    </net>
+    <net code="7" name="CE_N" class="Default">
+      <node ref="Q3" pin="3" pinfunction="D_3" pintype="passive" />
+      <node ref="R6" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="U2" pin="4" pinfunction="~{CE}_4" pintype="input" />
+    </net>
+    <net code="8" name="COM0" class="Default">
+      <node ref="DS1" pin="20" pinfunction="COM1_20" pintype="passive" />
+      <node ref="U1" pin="6" pinfunction="P7.0/L0_6" pintype="bidirectional" />
+    </net>
+    <net code="9" name="COM1" class="Default">
+      <node ref="DS1" pin="1" pinfunction="COM2_1" pintype="passive" />
+      <node ref="U1" pin="5" pinfunction="P7.1/L1_5" pintype="bidirectional" />
+    </net>
+    <net code="10" name="COM2" class="Default">
+      <node ref="DS1" pin="11" pinfunction="COM3_11" pintype="passive" />
+      <node ref="U1" pin="4" pinfunction="P7.2/L2_4" pintype="bidirectional" />
+    </net>
+    <net code="11" name="COM3" class="Default">
+      <node ref="DS1" pin="10" pinfunction="COM4_10" pintype="passive" />
+      <node ref="U1" pin="3" pinfunction="P7.3/L3_3" pintype="bidirectional" />
+    </net>
+    <net code="12" name="COUNT_N" class="Default">
+      <node ref="C11" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R17" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="SW1" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="TP9" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="26" pinfunction="P1.0/UCA0TXD/UCA0SIMO/A0/Veref-_26" pintype="bidirectional" />
+    </net>
+    <net code="13" name="COUT" class="Default">
+      <node ref="Q2" pin="1" pinfunction="G_1" pintype="input" />
+      <node ref="U4" pin="2" pinfunction="COUT_2" pintype="output" />
+    </net>
+    <net code="14" name="DOUT" class="Default">
+      <node ref="Q1" pin="1" pinfunction="G_1" pintype="input" />
+      <node ref="U4" pin="3" pinfunction="DOUT_3" pintype="output" />
+    </net>
+    <net code="15" name="FET_DRAIN" class="Default">
+      <node ref="Q1" pin="3" pinfunction="D_3" pintype="passive" />
+      <node ref="Q2" pin="3" pinfunction="D_3" pintype="passive" />
+    </net>
+    <net code="16" name="GND" class="Default">
+      <node ref="C1" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C10" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C11" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C12" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C13" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C14" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C15" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C16" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C5" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C6" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C7" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C9" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="D1" pin="2" pinfunction="GND_2" pintype="power_in" />
+      <node ref="J1" pin="A1" pinfunction="GND_A1" pintype="passive" />
+      <node ref="J1" pin="A12" pinfunction="GND_A12" pintype="passive" />
+      <node ref="J1" pin="B1" pinfunction="GND_B1" pintype="passive" />
+      <node ref="J1" pin="B12" pinfunction="GND_B12" pintype="passive" />
+      <node ref="J1" pin="SH" pinfunction="SHIELD_SH" pintype="passive" />
+      <node ref="J2" pin="4" pinfunction="NTC-RETURN_4" pintype="passive" />
+      <node ref="Q4" pin="2" pinfunction="S_2" pintype="passive" />
+      <node ref="R1" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R13" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R14" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R15" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R2" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R3" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R4" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R5" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R8" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R9" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="SW2" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="14" pinfunction="DVSS_14" pintype="power_in" />
+      <node ref="U2" pin="11" pinfunction="EP/GND_11" pintype="power_in" />
+      <node ref="U2" pin="5" pinfunction="GND_5" pintype="power_in" />
+      <node ref="U3" pin="2" pinfunction="GND_2" pintype="power_in" />
+      <node ref="U3" pin="4" pinfunction="NC/GND-permitted_4" pintype="passive" />
+      <node ref="U5" pin="4" pinfunction="VEE_4" pintype="power_in" />
+    </net>
+    <net code="17" name="ISET" class="Default">
+      <node ref="R19" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R4" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U2" pin="8" pinfunction="ISET_8" pintype="input" />
+    </net>
+    <net code="18" name="LCDCAP0" class="Default">
+      <node ref="C8" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="U1" pin="11" pinfunction="P4.3/LCDCAP0_11" pintype="bidirectional" />
+    </net>
+    <net code="19" name="LCDCAP1" class="Default">
+      <node ref="C8" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="10" pinfunction="P4.4/LCDCAP1_10" pintype="bidirectional" />
+    </net>
+    <net code="20" name="LCD_R13" class="Default">
+      <node ref="C14" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="7" pinfunction="P4.7/R13_7" pintype="bidirectional" />
+    </net>
+    <net code="21" name="LCD_R23" class="Default">
+      <node ref="C15" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="8" pinfunction="P4.6/R23_8" pintype="bidirectional" />
+    </net>
+    <net code="22" name="LCD_R33" class="Default">
+      <node ref="C16" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="9" pinfunction="P4.5/R33_9" pintype="bidirectional" />
+    </net>
+    <net code="23" name="RC_COMP" class="Default">
+      <node ref="C13" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R19" pin="2" pinfunction="2_2" pintype="passive" />
+    </net>
+    <net code="24" name="RESET_N" class="Default">
+      <node ref="C12" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R18" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="SW2" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="TP10" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="25" pinfunction="P1.1/UCA0RXD/UCA0SOMI/A1/Veref+_25" pintype="bidirectional" />
+    </net>
+    <net code="25" name="SBWTCK" class="Default">
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="17" pinfunction="TEST/SBWTCK_17" pintype="input" />
+    </net>
+    <net code="26" name="SBWTDIO" class="Default">
+      <node ref="C10" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R16" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="16" pinfunction="RST/NMI/SBWTDIO_16" pintype="bidirectional" />
+    </net>
+    <net code="27" name="SEG0" class="Default">
+      <node ref="DS1" pin="2" pinfunction="SEGMENT_2" pintype="passive" />
+      <node ref="U1" pin="2" pinfunction="P3.0/L8_2" pintype="bidirectional" />
+    </net>
+    <net code="28" name="SEG1" class="Default">
+      <node ref="DS1" pin="3" pinfunction="SEGMENT_3" pintype="passive" />
+      <node ref="U1" pin="1" pinfunction="P3.1/L9_1" pintype="bidirectional" />
+    </net>
+    <net code="29" name="SEG2" class="Default">
+      <node ref="DS1" pin="4" pinfunction="SEGMENT_4" pintype="passive" />
+      <node ref="U1" pin="48" pinfunction="P3.2/L10_48" pintype="bidirectional" />
+    </net>
+    <net code="30" name="SEG3" class="Default">
+      <node ref="DS1" pin="5" pinfunction="SEGMENT_5" pintype="passive" />
+      <node ref="U1" pin="47" pinfunction="P3.3/L11_47" pintype="bidirectional" />
+    </net>
+    <net code="31" name="SEG4" class="Default">
+      <node ref="DS1" pin="6" pinfunction="SEGMENT_6" pintype="passive" />
+      <node ref="U1" pin="46" pinfunction="P3.4/L12_46" pintype="bidirectional" />
+    </net>
+    <net code="32" name="SEG5" class="Default">
+      <node ref="DS1" pin="7" pinfunction="SEGMENT_7" pintype="passive" />
+      <node ref="U1" pin="45" pinfunction="P3.5/L13_45" pintype="bidirectional" />
+    </net>
+    <net code="33" name="SEG6" class="Default">
+      <node ref="DS1" pin="8" pinfunction="SEGMENT_8" pintype="passive" />
+      <node ref="U1" pin="44" pinfunction="P3.6/L14_44" pintype="bidirectional" />
+    </net>
+    <net code="34" name="SEG7" class="Default">
+      <node ref="DS1" pin="9" pinfunction="SEGMENT_9" pintype="passive" />
+      <node ref="U1" pin="43" pinfunction="P3.7/L15_43" pintype="bidirectional" />
+    </net>
+    <net code="35" name="SEG8" class="Default">
+      <node ref="DS1" pin="12" pinfunction="SEGMENT_12" pintype="passive" />
+      <node ref="U1" pin="42" pinfunction="P6.0/L16_42" pintype="bidirectional" />
+    </net>
+    <net code="36" name="SEG9" class="Default">
+      <node ref="DS1" pin="13" pinfunction="SEGMENT_13" pintype="passive" />
+      <node ref="U1" pin="41" pinfunction="P6.1/L17_41" pintype="bidirectional" />
+    </net>
+    <net code="37" name="SEG10" class="Default">
+      <node ref="DS1" pin="14" pinfunction="SEGMENT_14" pintype="passive" />
+      <node ref="U1" pin="40" pinfunction="P6.2/L18_40" pintype="bidirectional" />
+    </net>
+    <net code="38" name="SEG11" class="Default">
+      <node ref="DS1" pin="15" pinfunction="SEGMENT_15" pintype="passive" />
+      <node ref="U1" pin="39" pinfunction="P6.3/L19_39" pintype="bidirectional" />
+    </net>
+    <net code="39" name="SEG12" class="Default">
+      <node ref="DS1" pin="16" pinfunction="SEGMENT_16" pintype="passive" />
+      <node ref="U1" pin="38" pinfunction="P2.0/L24_38" pintype="bidirectional" />
+    </net>
+    <net code="40" name="SEG13" class="Default">
+      <node ref="DS1" pin="17" pinfunction="SEGMENT_17" pintype="passive" />
+      <node ref="U1" pin="37" pinfunction="P2.1/L25_37" pintype="bidirectional" />
+    </net>
+    <net code="41" name="SEG14" class="Default">
+      <node ref="DS1" pin="18" pinfunction="SEGMENT_18" pintype="passive" />
+      <node ref="U1" pin="36" pinfunction="P2.2/L26_36" pintype="bidirectional" />
+    </net>
+    <net code="42" name="SEG15" class="Default">
+      <node ref="DS1" pin="19" pinfunction="SEGMENT_19" pintype="passive" />
+      <node ref="U1" pin="35" pinfunction="P2.3/L27_35" pintype="bidirectional" />
+    </net>
+    <net code="43" name="SENSE_FET" class="Default">
+      <node ref="Q2" pin="2" pinfunction="S_2" pintype="passive" />
+      <node ref="R9" pin="1" pinfunction="1_1" pintype="passive" />
+    </net>
+    <net code="44" name="SYS" class="Default">
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="C5" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U2" pin="1" pinfunction="SYS_1" pintype="power_out" />
+      <node ref="U3" pin="1" pinfunction="IN_1" pintype="power_in" />
+      <node ref="U3" pin="3" pinfunction="EN_3" pintype="input" />
+    </net>
+    <net code="45" name="TEMP_COLD" class="Default">
+      <node ref="R11" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R12" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U5" pin="3" pinfunction="INA+_3" pintype="input" />
+    </net>
+    <net code="46" name="TEMP_COLD_OK" class="Default">
+      <node ref="Q3" pin="1" pinfunction="G_1" pintype="input" />
+      <node ref="R14" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U5" pin="1" pinfunction="OUTA_1" pintype="output" />
+    </net>
+    <net code="47" name="TEMP_HOT" class="Default">
+      <node ref="R12" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="R13" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U5" pin="6" pinfunction="INB-_6" pintype="input" />
+    </net>
+    <net code="48" name="TEMP_HOT_OK" class="Default">
+      <node ref="Q4" pin="1" pinfunction="G_1" pintype="input" />
+      <node ref="R15" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U5" pin="7" pinfunction="OUTB_7" pintype="output" />
+    </net>
+    <net code="49" name="TEMP_SENSE" class="Default">
+      <node ref="J2" pin="3" pinfunction="NTC_3" pintype="passive" />
+      <node ref="R10" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="U5" pin="2" pinfunction="INA-_2" pintype="input" />
+      <node ref="U5" pin="5" pinfunction="INB+_5" pintype="input" />
+    </net>
+    <net code="50" name="TS_FIXED" class="Default">
+      <node ref="R5" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U2" pin="6" pinfunction="TS/MR_6" pintype="input" />
+    </net>
+    <net code="51" name="V3" class="Default">
+      <node ref="C6" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="C7" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R16" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R17" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R18" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U1" pin="15" pinfunction="DVCC_15" pintype="power_in" />
+      <node ref="U3" pin="5" pinfunction="OUT_5" pintype="power_out" />
+    </net>
+    <net code="52" name="VBUS" class="Default">
+      <node ref="C1" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="C9" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="D1" pin="5" pinfunction="VBUS_5" pintype="power_in" />
+      <node ref="J1" pin="A4" pinfunction="VBUS_A4" pintype="passive" />
+      <node ref="J1" pin="A9" pinfunction="VBUS_A9" pintype="passive" />
+      <node ref="J1" pin="B4" pinfunction="VBUS_B4" pintype="passive" />
+      <node ref="J1" pin="B9" pinfunction="VBUS_B9" pintype="passive" />
+      <node ref="R10" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R11" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R6" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U2" pin="10" pinfunction="IN_10" pintype="power_in" />
+      <node ref="U5" pin="8" pinfunction="VCC_8" pintype="power_in" />
+    </net>
+    <net code="53" name="VMINUS" class="Default">
+      <node ref="R8" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="U4" pin="6" pinfunction="V-_6" pintype="input" />
+    </net>
+    <net code="54" name="VSET" class="Default">
+      <node ref="R3" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="U2" pin="7" pinfunction="ILIM/VSET_7" pintype="input" />
+    </net>
+    <net code="55" name="unconnected-(J1-D+-PadA6)" class="Default">
+      <node ref="J1" pin="A6" pinfunction="D+_A6" pintype="passive+no_connect" />
+    </net>
+    <net code="56" name="unconnected-(J1-D+-PadB6)" class="Default">
+      <node ref="J1" pin="B6" pinfunction="D+_B6" pintype="passive+no_connect" />
+    </net>
+    <net code="57" name="unconnected-(J1-D--PadA7)" class="Default">
+      <node ref="J1" pin="A7" pinfunction="D-_A7" pintype="passive+no_connect" />
+    </net>
+    <net code="58" name="unconnected-(J1-D--PadB7)" class="Default">
+      <node ref="J1" pin="B7" pinfunction="D-_B7" pintype="passive+no_connect" />
+    </net>
+    <net code="59" name="unconnected-(J1-SBUA-PadA8)" class="Default">
+      <node ref="J1" pin="A8" pinfunction="SBUA_A8" pintype="passive+no_connect" />
+    </net>
+    <net code="60" name="unconnected-(J1-SBUB-PadB8)" class="Default">
+      <node ref="J1" pin="B8" pinfunction="SBUB_B8" pintype="passive+no_connect" />
+    </net>
+    <net code="61" name="unconnected-(J2-ANCHOR1-PadMP1)" class="Default">
+      <node ref="J2" pin="MP1" pinfunction="ANCHOR1_MP1" pintype="passive+no_connect" />
+    </net>
+    <net code="62" name="unconnected-(J2-ANCHOR2-PadMP2)" class="Default">
+      <node ref="J2" pin="MP2" pinfunction="ANCHOR2_MP2" pintype="passive+no_connect" />
+    </net>
+    <net code="63" name="unconnected-(U1-P1.2/UCA0CLK/A2-Pad24)" class="Default">
+      <node ref="U1" pin="24" pinfunction="P1.2/UCA0CLK/A2_24" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="64" name="unconnected-(U1-P1.3/UCA0STE/A3-Pad23)" class="Default">
+      <node ref="U1" pin="23" pinfunction="P1.3/UCA0STE/A3_23" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="65" name="unconnected-(U1-P1.4/MCLK/TCK/A4/VREF+-Pad22)" class="Default">
+      <node ref="U1" pin="22" pinfunction="P1.4/MCLK/TCK/A4/VREF+_22" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="66" name="unconnected-(U1-P1.5/TA0CLK/TMS/A5-Pad21)" class="Default">
+      <node ref="U1" pin="21" pinfunction="P1.5/TA0CLK/TMS/A5_21" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="67" name="unconnected-(U1-P1.6/TA0.2/TDI/TCLK/A6-Pad20)" class="Default">
+      <node ref="U1" pin="20" pinfunction="P1.6/TA0.2/TDI/TCLK/A6_20" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="68" name="unconnected-(U1-P1.7/TA0.1/TDO/A7-Pad19)" class="Default">
+      <node ref="U1" pin="19" pinfunction="P1.7/TA0.1/TDO/A7_19" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="69" name="unconnected-(U1-P2.4/L28-Pad34)" class="Default">
+      <node ref="U1" pin="34" pinfunction="P2.4/L28_34" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="70" name="unconnected-(U1-P2.5/L29-Pad33)" class="Default">
+      <node ref="U1" pin="33" pinfunction="P2.5/L29_33" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="71" name="unconnected-(U1-P2.6/L30-Pad32)" class="Default">
+      <node ref="U1" pin="32" pinfunction="P2.6/L30_32" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="72" name="unconnected-(U1-P2.7/L31-Pad31)" class="Default">
+      <node ref="U1" pin="31" pinfunction="P2.7/L31_31" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="73" name="unconnected-(U1-P4.0/TA1.1-Pad18)" class="Default">
+      <node ref="U1" pin="18" pinfunction="P4.0/TA1.1_18" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="74" name="unconnected-(U1-P4.1/XIN-Pad13)" class="Default">
+      <node ref="U1" pin="13" pinfunction="P4.1/XIN_13" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="75" name="unconnected-(U1-P4.2/XOUT-Pad12)" class="Default">
+      <node ref="U1" pin="12" pinfunction="P4.2/XOUT_12" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="76" name="unconnected-(U1-P5.0/UCB0STE/L32-Pad30)" class="Default">
+      <node ref="U1" pin="30" pinfunction="P5.0/UCB0STE/L32_30" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="77" name="unconnected-(U1-P5.1/UCB0CLK/L33-Pad29)" class="Default">
+      <node ref="U1" pin="29" pinfunction="P5.1/UCB0CLK/L33_29" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="78" name="unconnected-(U1-P5.2/UCB0SIMO/UCB0SDA/L34-Pad28)" class="Default">
+      <node ref="U1" pin="28" pinfunction="P5.2/UCB0SIMO/UCB0SDA/L34_28" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="79" name="unconnected-(U1-P5.3/UCB0SOMI/UCB0SCL/L35-Pad27)" class="Default">
+      <node ref="U1" pin="27" pinfunction="P5.3/UCB0SOMI/UCB0SCL/L35_27" pintype="bidirectional+no_connect" />
+    </net>
+    <net code="80" name="unconnected-(U2-STAT1-Pad9)" class="Default">
+      <node ref="U2" pin="9" pinfunction="STAT1_9" pintype="open_collector+no_connect" />
+    </net>
+    <net code="81" name="unconnected-(U2-STAT2-Pad3)" class="Default">
+      <node ref="U2" pin="3" pinfunction="STAT2_3" pintype="open_collector+no_connect" />
+    </net>
+    <net code="82" name="unconnected-(U4-NC-Pad1)" class="Default">
+      <node ref="U4" pin="1" pinfunction="NC_1" pintype="no_connect" />
+    </net>
+  </nets>
+</export>

@@ -1,0 +1,75 @@
+{
+  "baseline_manifest": {
+    "bytes": 23066,
+    "sha256": "0a13a0fa67e7d0b133e14a5d5962544ff726fec8cbbbd78bafaa52b9e0049958"
+  },
+  "image_outputs": {
+    "count-fidget-Q4-stm32.bin": {
+      "bytes": 8004,
+      "sha256": "6bc7a2d4b19540e0318d6767eab0da48d0767146c97562b6e19de8b01374041f"
+    },
+    "count-fidget-Q4-stm32.elf": {
+      "bytes": 18440,
+      "sha256": "9a982e4322120769f108ffac44afaba64b9b09f7f665c50e08c2f34d6745a097"
+    },
+    "count-fidget-Q4-stm32.hex": {
+      "bytes": 22566,
+      "sha256": "029e9b61124739e721b528aeefbcd4645d6bf9575d762553e4af092029066a16"
+    },
+    "count-fidget-Q4-stm32.lst": {
+      "bytes": 146512,
+      "sha256": "d12576a5e3a9a903315cbe32e50d6524d0bd97dce532d69949df41864db82e01"
+    },
+    "count-fidget-Q4-stm32.map": {
+      "bytes": 18093,
+      "sha256": "bbbec6a545b9a880aa68ce7b9e4a361063129ba95a92620dddaf2dccf87eac2d"
+    },
+    "host-tests.json": {
+      "bytes": 1151,
+      "sha256": "57f3354f87c94a28182f1462c2556ac4462d93ee1503b30d05baf7b44be2edf1"
+    },
+    "stack-usage.txt": {
+      "bytes": 2302,
+      "sha256": "2a64b4907391416bed1c02ad749a63ec3032c426c188e9ad57c721f8ea75b1f5"
+    }
+  },
+  "passed": true,
+  "ram_stop_instruction_check": {
+    "bank1_load_address": "0x8001f0c",
+    "bytes": 56,
+    "copied_ram_span": [
+      "0x20000000",
+      "0x20000038"
+    ],
+    "execution_address": "0x20000000",
+    "no_calls_or_flash_literals": true,
+    "scope": "Bounded actual-instruction check; not hardware timing emulation",
+    "trace": [
+      "key1",
+      "key2",
+      "powerdown",
+      "dsb",
+      "isb",
+      "wfi",
+      "powerup",
+      "dsb",
+      "isb",
+      "return"
+    ]
+  },
+  "rejected": [
+    "BIN payload changed",
+    "Wrong MCU ELF architecture",
+    "EEPROM PT_LOAD introduced",
+    "Code moved to Flash Bank2",
+    "Reset vector removed consistently from ELF HEX BIN",
+    "Source manifest tampered",
+    "RAM Stop WFI removed",
+    "RAM Stop RUN_PD never cleared",
+    "RAM Stop literal fetch escapes SRAM",
+    "RAM Stop unlock key corrupted",
+    "Stop function linked back into Flash",
+    "Startup copy omits Stop literal pool",
+    "Startup copy load becomes unaligned"
+  ]
+}

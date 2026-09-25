@@ -1,0 +1,403 @@
+{
+  "recorded_utc": "2026-09-15T12:45:24.992394+00:00",
+  "observed_window_utc": "2026-09-15 12:40\u201312:45",
+  "scope": "Exact PCB part identities selected in Q3; availability only, not reservation or complete quote",
+  "records": [
+    {
+      "lcsc": "C105576",
+      "mpn": "RC0603FR-072KL",
+      "stock": 670458,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.11,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C105580",
+      "mpn": "RC0603FR-075K1L",
+      "stock": 776311,
+      "sample_recommended_qty": 30,
+      "sample_lot_usd": 0.093,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C105881",
+      "mpn": "RC0603FR-07330RL",
+      "stock": 734413,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.122,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C110499",
+      "mpn": "DMP2035U-7",
+      "stock": 116713,
+      "sample_recommended_qty": 14,
+      "sample_lot_usd": 1.8158,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C112314",
+      "mpn": "RC0603FR-075K11L",
+      "stock": 1181,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.058,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C114662",
+      "mpn": "RC0603FR-072K2L",
+      "stock": 253060,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.086,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C137684",
+      "mpn": "RC0603FR-07750KL",
+      "stock": 89963,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.1,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C137761",
+      "mpn": "RC0603FR-0724K9L",
+      "stock": 296470,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.122,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C137790",
+      "mpn": "RC0603FR-0716K2L",
+      "stock": 535,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.072,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C14675",
+      "mpn": "RC0603FR-07100KL",
+      "stock": 8569886,
+      "sample_recommended_qty": 60,
+      "sample_lot_usd": 0.216,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C1518762",
+      "mpn": "TPS63900DSKR",
+      "stock": 21624,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 9.797,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C160404",
+      "mpn": "SM04B-SRSS-TB(LF)(SN)",
+      "stock": 56528,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 2.136,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C183096",
+      "mpn": "BQ29700DSER",
+      "stock": 2917,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 5.175,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C18723015",
+      "mpn": "X087-2832TSWIG02-H14",
+      "stock": 1075,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 14.842,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C19725033",
+      "mpn": "BQ25185DLHR",
+      "stock": 466,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 14.679,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C2053877",
+      "mpn": "MSP430FR4133IG48R",
+      "stock": 23,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 35.347,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C22783",
+      "mpn": "0603WAF1153T5E",
+      "stock": 109076,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.058,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C22961",
+      "mpn": "0603WAF2203T5E",
+      "stock": 1595390,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.032,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C22979",
+      "mpn": "0603WAF330KT5E",
+      "stock": 371398,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.074,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C23352",
+      "mpn": "0603WAF2402T5E",
+      "stock": 1132835,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.054,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C245983",
+      "mpn": "RC0603FR-0757K6L",
+      "stock": 6327,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.12,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C25819",
+      "mpn": "0603WAF4702T5E",
+      "stock": 2444046,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.076,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C273769",
+      "mpn": "RC0603FR-0716K5L",
+      "stock": 9348,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.118,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C273789",
+      "mpn": "RC0603FR-0720K5L",
+      "stock": 3327,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.122,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C276290",
+      "mpn": "RC0603FR-0724K3L",
+      "stock": 7944,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.116,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C29936",
+      "mpn": "CL10B105KA8NNNC",
+      "stock": 737727,
+      "sample_recommended_qty": 30,
+      "sample_lot_usd": 0.636,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C332302",
+      "mpn": "DMN2056U-7",
+      "stock": 38724,
+      "sample_recommended_qty": 34,
+      "sample_lot_usd": 2.3698,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C337893",
+      "mpn": "DFE201612E-2R2M=P2",
+      "stock": 31598,
+      "sample_recommended_qty": 12,
+      "sample_lot_usd": 1.86,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C3747031",
+      "mpn": "TPS7A0230PDBVR",
+      "stock": 41873,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 3.678,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C437557",
+      "mpn": "GRM21BZ71H475KE15L",
+      "stock": 25451,
+      "sample_recommended_qty": 12,
+      "sample_lot_usd": 1.9704,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C602037",
+      "mpn": "CL21A226MAYNNNE",
+      "stock": 352428,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 3.348,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C65189",
+      "mpn": "2N7002,215",
+      "stock": 330025,
+      "sample_recommended_qty": 25,
+      "sample_lot_usd": 0.4725,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C7519",
+      "mpn": "USBLC6-2SC6",
+      "stock": 38339,
+      "sample_recommended_qty": 12,
+      "sample_lot_usd": 2.1936,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C77026",
+      "mpn": "GRM1885C1H102JA01D",
+      "stock": 135873,
+      "sample_recommended_qty": 40,
+      "sample_lot_usd": 1.044,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C77055",
+      "mpn": "GRM188R71H104KA93D",
+      "stock": 1279942,
+      "sample_recommended_qty": 66,
+      "sample_lot_usd": 1.1088,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C77081",
+      "mpn": "GRM21BR71E225KE11L",
+      "stock": 115774,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 1.12,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C84416",
+      "mpn": "GRM21BR61E106KA73L",
+      "stock": 77963,
+      "sample_recommended_qty": 38,
+      "sample_lot_usd": 6.6348,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C98220",
+      "mpn": "RC0603FR-0710KL",
+      "stock": 14218563,
+      "sample_recommended_qty": 20,
+      "sample_lot_usd": 0.07,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C99782",
+      "mpn": "RC0603FR-074K7L",
+      "stock": 7298529,
+      "sample_recommended_qty": 30,
+      "sample_lot_usd": 0.129,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C3020560",
+      "mpn": "USB4105-GF-A",
+      "stock": 1366,
+      "sample_recommended_qty": 10,
+      "sample_lot_usd": 10.822,
+      "source": "https://jlcpcb.com/parts/bom-tool",
+      "kind": "Native Chrome live BOM availability result"
+    },
+    {
+      "lcsc": "C2859969",
+      "mpn": "TLV7012DGKR",
+      "stock": 22,
+      "available_order_qty": 21,
+      "minimum": 1,
+      "unit_price_1_usd": 1.1734,
+      "source": "https://jlcpcb.com/partdetail/C2859969",
+      "kind": "Native Chrome live exact part page"
+    },
+    {
+      "lcsc": "C49234235",
+      "mpn": "CPG151101D13",
+      "stock": 14501,
+      "available_order_qty": 14160,
+      "minimum": 1,
+      "unit_price_1_usd": 0.107,
+      "source": "https://jlcpcb.com/partdetail/C49234235",
+      "kind": "Native Chrome live exact part page"
+    },
+    {
+      "lcsc": "C85980",
+      "mpn": "GRM1885C1H472JA01D",
+      "stock": 7690,
+      "available_order_qty": 3183,
+      "minimum": 1,
+      "unit_price_1_usd": 0.0279,
+      "source": "https://jlcpcb.com/partdetail/C85980",
+      "kind": "Native Chrome live exact part page"
+    }
+  ],
+  "limitations": [
+    "Sample quantities/prices come from a mixed baseline-and-alternatives availability file with PCB quantity10; they are not final Q3 BOM totals.",
+    "Stock is not allocated and may change. Native final assembly matching and attrition remain to check.",
+    "Offboard battery/harness/keycaps and programming/test scope are additional.",
+    "Exact PCBWay display/FPC sourcing acceptance remains pending. No purchases or manufacture."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "generator": "896d9ecaa392db3d6c942dbdec4499bb3f28c7f0e1b6d627d04789e4545ec7b3",
+  "board": "b33b1e1d0c9e4d58c5642fc3f63faaa4e190092601f26103376537a5b12621fd",
+  "model": "6f3dbc9d34e34576b680ad77fb27a0f70313f038b3d74dab6b434705e55d1c79",
+  "outputs": {
+    "base-Q3.stl": "1c6fe0d77ba80a417a9ed1e29221aa9e60495a340766c4dc5f0f5bd2289c3ed9",
+    "battery-keeper-Q3.stl": "6b5685a2b3b981aae28316d3392496edbae56e7106fe9c52c18572632bb4a928",
+    "lid-front-Q3.stl": "5bcf4bc45ca9e4e6e210bcca1f289d8cc26c882e9327f899797a97a04acc7a19",
+    "lid-rear-Q3.stl": "24c882dc20fce18c959696453cc08a05e90dc016c74e3be753ed6c8fea9dab5c",
+    "enclosure-Q3.step": "8216bd83e34c5f4dd797ca1bbf89bee6118f414fa21024622a63cdc2ddc41be8",
+    "board-geometry.json": "fdd982c49b9c13b2abc40b1a5d4d232116faf99a96fa239fbda5a7115506e023",
+    "fit-report.json": "6e08155f61778c9fa9c3597968e91514302efe1b65c21c816b1b58c6987bb01b",
+    "assembled-Q3.png": "b2860b56ecef1f6177386ec4018b825198ff501552dab04e9876181b554a97be",
+    "exploded-Q3.png": "2348bbed7d9ac146f4927d0f2f815b3bf528169f9bf984181da01607cc6adbf4",
+    "interior-Q3.png": "5d175812e6e4e7f910d63e2adab2b1db850009df56e7f511802ca660789bd540",
+    "battery-bay-Q3.png": "56244c47caf37854983019d1aa63905166b5d2dc44884f3820e75e203d1a6f0d"
+  }
+}

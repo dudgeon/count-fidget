@@ -1,0 +1,302 @@
+{
+  "commands": [
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "gerbers",
+      "--output",
+      "<output>/gerbers",
+      "--layers",
+      "F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,F.Paste,B.Paste,Edge.Cuts",
+      "--subtract-soldermask",
+      "electronics/q4/click-counter-Q4.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "drill",
+      "--output",
+      "<output>/gerbers",
+      "--excellon-separate-th",
+      "--excellon-units",
+      "mm",
+      "--excellon-oval-format",
+      "route",
+      "--generate-report",
+      "--report-path",
+      "<output>/drill-report-Q4.txt",
+      "electronics/q4/click-counter-Q4.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "pos",
+      "--output",
+      "<output>/placements-KiCad-Q4.csv",
+      "--format",
+      "csv",
+      "--units",
+      "mm",
+      "--side",
+      "both",
+      "--exclude-dnp",
+      "electronics/q4/click-counter-Q4.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "svg",
+      "--output",
+      "<output>/assembly-top-Q4.svg",
+      "--mode-single",
+      "--layers",
+      "F.Cu,F.Fab,F.SilkS,Edge.Cuts",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "--sketch-pads-on-fab-layers",
+      "electronics/q4/click-counter-Q4.kicad_pcb"
+    ],
+    [
+      "<kicad-cli>",
+      "pcb",
+      "export",
+      "svg",
+      "--output",
+      "<output>/assembly-bottom-Q4.svg",
+      "--mode-single",
+      "--layers",
+      "B.Cu,B.Fab,B.SilkS,Edge.Cuts",
+      "--fit-page-to-board",
+      "--exclude-drawing-sheet",
+      "--sketch-pads-on-fab-layers",
+      "--mirror",
+      "electronics/q4/click-counter-Q4.kicad_pcb"
+    ]
+  ],
+  "export_checks": {
+    "archive_members_equal_native_exports": true,
+    "bottom_paste_geometry": true,
+    "copper_layers": 2,
+    "engineering_complete_bom_rows": 73,
+    "engineering_pcb_bom_rows": 70,
+    "full_board_simulation_or_hardware_qualification": false,
+    "gerber_and_drill_files": 12,
+    "home_completion_rows": 3,
+    "home_solder_joints_per_board": 18,
+    "jlc_smt_bom_and_cpl_rows": 67,
+    "native_placement_rows": 70,
+    "offboard_pack_and_caps_unqualified": true,
+    "offboard_rows": 2,
+    "separate_header_rows": 1,
+    "top_paste_geometry": false
+  },
+  "files": {
+    "procurement/q4/BOM-JLCPCB-Q4.csv": {
+      "bytes": 5013,
+      "sha256": "58256aad45e03f357a4f1b704b8b987b6680bc825010e07220a510379dad2672"
+    },
+    "procurement/q4/BOM-PCBA-Q4.csv": {
+      "bytes": 15696,
+      "sha256": "635576979931b083562335ce089fe425808b3eb575a672237854528cc2ca1044"
+    },
+    "procurement/q4/BOM-Q4.csv": {
+      "bytes": 17093,
+      "sha256": "dd04e1b4433018f445d1b914b9c056c12aaad2b0a67fa0819c4c65798ae212cd"
+    },
+    "procurement/q4/CPL-JLCPCB-Q4.csv": {
+      "bytes": 3037,
+      "sha256": "746a2d198e998099df288c43b15f444f93364b1f32c2bf8dd7b5cbeb9ac4c314"
+    },
+    "procurement/q4/HOME-COMPLETION-Q4.csv": {
+      "bytes": 2051,
+      "sha256": "b9c7457edbdfa9a8fabd7b6c23f790f11e80982a33587d10afb1bb22f46cdf11"
+    },
+    "procurement/q4/OFFBOARD-items-Q4.csv": {
+      "bytes": 829,
+      "sha256": "539ade93b78d8808c97ce78f4683a6a4d38bd76507f9bcfa5afca773399203b4"
+    },
+    "procurement/q4/REVIEW-EXPORTS-Q4.md": {
+      "bytes": 2467,
+      "sha256": "f4a20abb6f5e69991a0989043971da70dfaf11d7c5abc69c7ce1ecdaeb6d369c"
+    },
+    "procurement/q4/SEPARATE-HARDWARE-Q4.csv": {
+      "bytes": 822,
+      "sha256": "ff4b7316eef1ecd9120fb9e851b87287b74611b87222cc63e5bf474fa83f7959"
+    },
+    "procurement/q4/assembly-bottom-Q4.svg": {
+      "bytes": 844911,
+      "sha256": "3ea6a610351951932215f718d2e2e8749c53243e63c13f5ba6adacb64e44d42d"
+    },
+    "procurement/q4/assembly-top-Q4.svg": {
+      "bytes": 88499,
+      "sha256": "8c8bbbb420aaddf2b7008911f7bc7de996cc41ded86b40053c913c879b61c1df"
+    },
+    "procurement/q4/click-counter-Q4-Gerbers.zip": {
+      "bytes": 106007,
+      "sha256": "64c5d51c2831c90eb6d7dbda017c0a23288b2583559978ec1ad858991bbfc873"
+    },
+    "procurement/q4/drill-report-Q4.txt": {
+      "bytes": 874,
+      "sha256": "50471f39f53a9c445eaacf877609808133a0bcaec1e96f7df6ccc43051b8863c"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-B_Cu.gbl": {
+      "bytes": 274130,
+      "sha256": "693a400abf65dd034412779d003e251344415f481937b073518ca46a76b3133f"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-B_Mask.gbs": {
+      "bytes": 12829,
+      "sha256": "ad417c736f1a4702cc6dfee30de158d5c6c27b32fd9d1115a585692303d494d9"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-B_Paste.gbp": {
+      "bytes": 11705,
+      "sha256": "79818b7b10559670958154335c8a7de6703d02e3d9d23f53818f9b2f276cb10f"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-B_Silkscreen.gbo": {
+      "bytes": 14279,
+      "sha256": "746ebe4a50f18d7fd0faefc00c60a59c6ffda3079ef5a3519cde7bd1da2f0651"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-Edge_Cuts.gm1": {
+      "bytes": 623,
+      "sha256": "5a4fdf8990243828e4635211cb159288feb9fed161cf86276dae1cdeddd4f494"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-F_Cu.gtl": {
+      "bytes": 83188,
+      "sha256": "09aef2c6bd0f846710ec391c1e994c2dd01f2c6e901711c091fa5cafd1f18bf7"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-F_Mask.gts": {
+      "bytes": 1365,
+      "sha256": "868c0c2592b334533e3adb6c92458871beee7de14bc224054cc36bb36e498d56"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-F_Paste.gtp": {
+      "bytes": 461,
+      "sha256": "1da76858313b90b0783a7a18fed3b1393d4b21b3c2164a72cb76d30725c91566"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-F_Silkscreen.gto": {
+      "bytes": 1375,
+      "sha256": "efc7e6bbe3d674a6a2be3bd3238ed42be984fbc307dbe79006dcf9132badaaa4"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-NPTH.drl": {
+      "bytes": 558,
+      "sha256": "bc9219c62f82964cc5c81a7b754ccccbe896a7a2ca8509190eb1ffe9c90292fd"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-PTH.drl": {
+      "bytes": 1974,
+      "sha256": "fe2c2f02d9a1d145a9e64982647001a98c1ec883a4bf30148d65af4585b9d85d"
+    },
+    "procurement/q4/gerbers/click-counter-Q4-job.gbrjob": {
+      "bytes": 2891,
+      "sha256": "93ff93b18aa73e594a66e0a5db4dbd87ee21b15b1725c9a6a5c99e8ef119bd0b"
+    },
+    "procurement/q4/placements-KiCad-Q4.csv": {
+      "bytes": 6160,
+      "sha256": "fdaa1f4d7bb5fd0f55da375392c71578db9d0e4aaf00326fe1ec4f734fb85237"
+    }
+  },
+  "hardware_tested": false,
+  "inputs_sha256": {
+    "electronics/q3/netlist-Q3.json": "6f3dbc9d34e34576b680ad77fb27a0f70313f038b3d74dab6b434705e55d1c79",
+    "electronics/q4/CountFidgetQ4.kicad_sym": "8383caf57b539de5fcc641d8d644e785073a8e18b2d63cb5cd76039b2c2ab7e0",
+    "electronics/q4/CountFidgetQ4.pretty/Capacitor_SMD_C_0603_1608Metric.kicad_mod": "17877a5fef658fdf5b737d8315d75ff1c46214553ef2ff05f107442fc584bd1e",
+    "electronics/q4/CountFidgetQ4.pretty/Capacitor_SMD_C_0805_2012Metric.kicad_mod": "2bf5abdba5044a3374af2e9aab575101b6d343e97a8f36e1956ec6699cb12348",
+    "electronics/q4/CountFidgetQ4.pretty/Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal.kicad_mod": "1a9eadea3cfe496757704fc37694085e6f38122664b33a43872a973a8da69926",
+    "electronics/q4/CountFidgetQ4.pretty/Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.kicad_mod": "a2617d52a4e9b6ab2729406cc8d3c5520c8b3355eb4d1846ca9240b144a2829a",
+    "electronics/q4/CountFidgetQ4.pretty/HS96L01W4S03_Module_7Pin.kicad_mod": "fa4f5330e96535492b3181720ccfd4127dfa726f1bcb95c01ea0b9350db22a99",
+    "electronics/q4/CountFidgetQ4.pretty/HanElectricity_CPG151101D13_MX_Plate.kicad_mod": "19d0cd0554b2256ce454de48420549d5d7809795c548d8e4552a844bcfeb755e",
+    "electronics/q4/CountFidgetQ4.pretty/Inductor_SMD_L_Murata_DFE201612E_2.0x1.6mm.kicad_mod": "84f22ea6b66cfc8b126b20c97d3fe8b820cc4d8a450bfb30eb3fdb0432903c02",
+    "electronics/q4/CountFidgetQ4.pretty/MountingHole_MountingHole_2.2mm_M2.kicad_mod": "bcc8a7c1efe5c59463d539bd786e8e14f2e90f30130fe894b1d04e358bce4710",
+    "electronics/q4/CountFidgetQ4.pretty/Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm.kicad_mod": "2199e528764ad21497f8b71404146d00b4203519c7fcfbf1ed1fd92ecc614728",
+    "electronics/q4/CountFidgetQ4.pretty/Package_QFP_LQFP-48_7x7mm_P0.5mm.kicad_mod": "4d488548460d2dc2e2d67b6452e3e669b40a4c1a9f784b774aaaf286c98cde1a",
+    "electronics/q4/CountFidgetQ4.pretty/Package_SON_WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm.kicad_mod": "85fff9945fbfcd814ead420adc5af9edd910a6fd814fdd54b09f47e493f05a29",
+    "electronics/q4/CountFidgetQ4.pretty/Package_SON_WSON-6_1.5x1.5mm_P0.5mm.kicad_mod": "e036eb44c0a1e856cd610e82391afd6061ff69ddc4bba6c3fb360a7ba63352b9",
+    "electronics/q4/CountFidgetQ4.pretty/Package_SO_SOIC-8_3.9x4.9mm_P1.27mm.kicad_mod": "567051a38f2918cca9c2a4ff0cc9914760575f6dfe3db989f0ee8d2c887a9116",
+    "electronics/q4/CountFidgetQ4.pretty/Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm.kicad_mod": "4dbdffd726bba11e5aa1385088f43251318433d9452bf230ed432a5ce8e11926",
+    "electronics/q4/CountFidgetQ4.pretty/Package_TO_SOT_SMD_SOT-23-5.kicad_mod": "0ed633c9b02477b6b2782351882eac81bb78cb735dfa30f43e64a7a7673ee262",
+    "electronics/q4/CountFidgetQ4.pretty/Package_TO_SOT_SMD_SOT-23-6.kicad_mod": "12aef0095926303e22872b7966a7249266ddf7c04b1569177a7de029b3eca6aa",
+    "electronics/q4/CountFidgetQ4.pretty/Package_TO_SOT_SMD_SOT-23.kicad_mod": "27e4b7f0574acd3b773024f9fa8cd87b2b7099e1d0d9053ae27084e853134853",
+    "electronics/q4/CountFidgetQ4.pretty/Resistor_SMD_R_0603_1608Metric.kicad_mod": "f6a36ee2b44dbad84910754eaf46b0732a61cca0d34aee97e1cd5513e0dee705",
+    "electronics/q4/CountFidgetQ4.pretty/TLV7032_DGK0008A_TI.kicad_mod": "27f5b299dd099fdc794929e1b6206f7af1e81c9096ef6df6b97832502adcc0d6",
+    "electronics/q4/CountFidgetQ4.pretty/TPS63900_DSK0010A_TI.kicad_mod": "41389f403705039987a5ffc6399b223076abbbe7df8d422dba83e89342ed421a",
+    "electronics/q4/CountFidgetQ4.pretty/TestPoint_TestPoint_Pad_D1.5mm.kicad_mod": "3323cabc242552f1c7eecb74381ad5510b00a89824374ae13f3c637bf721e1af",
+    "electronics/q4/CountFidgetQ4.pretty/X087-2832TSWIG02-H14.kicad_mod": "c9b51c67ed4b2264a06bc883f71d73743ef5213e8ca488b4d0010892c94f9626",
+    "electronics/q4/CountFidgetQ4.pretty/XUNPU_TS-1088-AR02016_SMD.kicad_mod": "3362a6a9015fb0c38f81c291f6d44018349129a9686e16079572383c9a9f0efb",
+    "electronics/q4/battery-1.kicad_sch": "ccfcd0059cfd616c5af4e5a14a335b5a4aa2bb25f26ce6fc60c63c5c695297ae",
+    "electronics/q4/battery-2.kicad_sch": "cf887d8ae44edf9d7507a297ac7e8ac46471c33cde54852088694d3b36b014fb",
+    "electronics/q4/circuit-contract.json": "0b1b3606817f5f2fee15ec5c6228b06d1b35f83c0d7f05f99e9809bb1c1f9a14",
+    "electronics/q4/click-counter-Q4.kicad_pcb": "2b073a519171d1632d67138ff7be2bf7271f6a5f8a328d8e9e5b5cff7cc47780",
+    "electronics/q4/click-counter-Q4.kicad_pro": "0cb545420f35444f6031edffea9b1779811b28033762419e2074dd3813140b42",
+    "electronics/q4/click-counter-Q4.kicad_sch": "70408d7c6585a864a98367ebe636a4a61c9bd9786a9f4945321b4b10248eff15",
+    "electronics/q4/display-1.kicad_sch": "6782253c5ecdfadd1d4cd842eee9689018043787edf412ff5982ca82edae6964",
+    "electronics/q4/display-2.kicad_sch": "7fcb63619b517ce3ed956a88db631156cc1498702bcd912b6e4c67e94fc883f9",
+    "electronics/q4/fp-lib-table": "580fbdc27e3eb3509bfcdf96209193eb5741e89aa22ebfba49880015c13ed3bb",
+    "electronics/q4/locked-route-seed.json": "2c42cf9630aef09b6f2ba1cd13f26f238e926bedc7e02dce589a1d7bb3166b55",
+    "electronics/q4/mcu-1.kicad_sch": "47b62e746f6dc0046fa742289abf5c810e3c80245052473a47cab7d5b7e4e463",
+    "electronics/q4/mcu-2.kicad_sch": "239f040b9f0ab9b18609cd087b6edd31700a4a8f69e8a29ac54b190e5087dca2",
+    "electronics/q4/mcu-3.kicad_sch": "3e915c0a2d5e0848d03538d65949bcd00ca4bdcfa6450ebd4df3c421eb07bcf5",
+    "electronics/q4/mcu-4.kicad_sch": "ef4785855381cc093856c125a4f3e80cb8e866af1585446515dac9792545d4c4",
+    "electronics/q4/mcu-5.kicad_sch": "3f3eacc867b1ac1a0b34583add5d9793de2e3961912eb0a004968f84cb3894a6",
+    "electronics/q4/mcu-6.kicad_sch": "ce7b649a1688380b1b593c7eda5d8849b06739a298653eef60a2c311219171ed",
+    "electronics/q4/memory-1.kicad_sch": "c0208054c3e1c73ef2507c27cecbb0f0dc54ba8772f010a7f1d4f2e795e63aab",
+    "electronics/q4/netlist-Q4.json": "2ee9be24459e83c13af9585f1d83def47617b98fce6547d9f5a6a5c42dd06763",
+    "electronics/q4/placement.json": "742a7164129648d44f9773db11625df71706ced5791079917b4ae14efe83dfb7",
+    "electronics/q4/schematic-netlist-Q4.xml": "d5192c3d927e060a2c9ce6ce1565a0ce1fbf03559997e832a604493a8750c853",
+    "electronics/q4/schematic-paths-Q4.json": "4b4610bf10d7de822334f16bac77f13088d45b911393f131f60f001cdb47166f",
+    "electronics/q4/sym-lib-table": "dc2f7a13ccb32d3488b86fc9982b488ff97c4d0196b7aec14a715f23ffe2d947",
+    "electronics/q4/thermal-1.kicad_sch": "dd5613ffc34b1ec4bfccfb8357f7a4522d858b3e33993f76d76e5df36142ca9e",
+    "electronics/q4/thermal-2.kicad_sch": "e4d30a6dd90750fc118b62960ad15d78f36b9c1114888d2769f536037b5e9c4b",
+    "electronics/q4/usb-power-1.kicad_sch": "a63104a5a405dfb959f122512306e77d218053a0a31882905d3fff587ca9817e",
+    "electronics/q4/usb-power-2.kicad_sch": "5888a6f625d1fe7c8726a6d9bc385be5744cf1166a9e394461a5c1fdb6c4fd4a",
+    "electronics/q4/usb-power-3.kicad_sch": "34bb8a56e6ed5f4fa9e2ac8d34f9556b79dd1dbe7a747aa7f31b94b4d9cdd418",
+    "electronics/q4/usb-power-4.kicad_sch": "8a0b6f41aa610f5a3587af7401ca9e134e502055a7babf5f48ddcdf230c461ca",
+    "procurement/q4/hardware-bom.json": "aefa9c450587ca9ed4feafec825b5645ae924374e7b5ceb6e6d9cc528b493b0b",
+    "procurement/q4/stock.json": "44cab3ab062b3fc9da38167ce967b54ed33c84e0eb55b9b1eccae4d7c9985566",
+    "scripts/build_q4_board.py": "7dc2a3c25e6898187cdba7dbc7869cd1b2603985a19ed546afa436b9646329ca",
+    "scripts/build_q4_model.py": "8c056308457bb7ed36d6982fb8e4986f94bfdf79b2d7978bb699cd1f0eeed297",
+    "scripts/build_q4_schematic.py": "b66d68718b736b0824eb843a5fd1f4e839cee2b6455c9d25d7a3bec673ffbaef",
+    "scripts/export_q4.py": "6adb240bf906b4607f0a22b112d5e81ee8f594d524b6a3547fec2ccacc86834d",
+    "scripts/finish_q4_board.py": "c171178862dd2db68cba53d57bcd1a103a9a0a52033862c7f4deeb6dadb9ce02",
+    "scripts/kicad_sexpr.py": "4a6c547f7f5bb0fcc7160da24c04e918c1d146026b4f990db624482fb8eacfeb",
+    "scripts/measure_q4_routes.py": "ace3e7264e40190811f693e7d9dcbf7979aacc121ad3de323f7d44a6514351e2",
+    "scripts/prepare_q4_route.py": "5437244fe6205175ae1cacbb630591043796b454ebef3736c1083c601d0732a8",
+    "scripts/preroute_q4.py": "e9818fdc642ddffb60f51f36548753c6a8c3fbf3a727fb8f353f35d65718b76d",
+    "scripts/sync_q4_board.py": "b3307e342b170380cc405d3d92af3c0fa4b7a4a098ce0b556089c718bec709a1",
+    "scripts/verify_q4.py": "b23da90a762d3e0462ad1c2ba54945f2c32073138032252c8b8799412c63a54b",
+    "verification/q4-native-drc.json": "f50c64ac52ddaa3473b9bd3d630b0c77d7f6022673cbefdf838f03b14dce8b71",
+    "verification/q4-native-erc.json": "61bbe4fc094d936f2fdd754177a27beb4ba9fcb41293cbdf2b651c727613f752",
+    "verification/q4-native-netlist.xml": "122f8fe7d9719f6cdd94a8178e0a126095ecddd5b7a389812bc093c9ce03dd39",
+    "verification/q4-validation.json": "e6f1b8971f4f5e2e694a50080af3ab60f015ba81d08ca3962aa66b6b146417f4"
+  },
+  "kicad_cli": {
+    "sha256": "bc9966f4a3c24db726aaac04856debf5dae8c2cc43eee6a482182c0f5df14aa8",
+    "version": "10.0.6"
+  },
+  "manufacturing_released": false,
+  "quote_pause": true,
+  "revision": "Q4 engineering review candidate",
+  "schema_version": 1,
+  "source_board_sha256": "2b073a519171d1632d67138ff7be2bf7271f6a5f8a328d8e9e5b5cff7cc47780",
+  "source_checks": {
+    "catalog_observation_range_utc": [
+      "2026-09-24T23:36:11.752Z",
+      "2026-09-25T00:17:08.316Z"
+    ],
+    "distinct_exact_mpns": 38,
+    "fitted_references": 70,
+    "home_through_hole_references": [
+      "DS1",
+      "SW1",
+      "SW2"
+    ],
+    "jlc_smt_exact_mpns": 36,
+    "jlc_smt_references": 67,
+    "model_references": 86,
+    "screened_boards": 10,
+    "separate_header_quantity_per_board": 1,
+    "stock_is_unreserved_observation_not_qualification": true
+  },
+  "status": "PASS_REVIEW_EXPORT_CHECKS_ONLY",
+  "vendor_upload_authorized": false
+}

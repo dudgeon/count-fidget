@@ -1,0 +1,413 @@
+Archive member included to satisfy reference by file (symbol)
+
+<TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
+                              oled.c.o (__gnu_thumb1_case_shi)
+<TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+                              main_stm32.c.o (__gnu_thumb1_case_uhi)
+<TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                              oled.c.o (__aeabi_uidiv)
+<TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                              <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 startup.c.o
+ .data          0x00000000        0x0 startup.c.o
+ .bss           0x00000000        0x0 startup.c.o
+ .comment       0x00000000       0x47 startup.c.o
+ .text          0x00000000        0x0 main_stm32.c.o
+ .data          0x00000000        0x0 main_stm32.c.o
+ .bss           0x00000000        0x0 main_stm32.c.o
+ .data.SystemCoreClock
+                0x00000000        0x4 main_stm32.c.o
+ .comment       0x00000000       0x47 main_stm32.c.o
+ .text          0x00000000        0x0 runtime.c.o
+ .data          0x00000000        0x0 runtime.c.o
+ .bss           0x00000000        0x0 runtime.c.o
+ .text.memcpy   0x00000000       0x12 runtime.c.o
+ .text.memmove  0x00000000       0x20 runtime.c.o
+ .text.__aeabi_memcpy
+                0x00000000        0x8 runtime.c.o
+ .text.__aeabi_memcpy4
+                0x00000000        0x8 runtime.c.o
+ .text.__aeabi_memclr
+                0x00000000        0xc runtime.c.o
+ .text.__aeabi_memclr4
+                0x00000000        0x8 runtime.c.o
+ .comment       0x00000000       0x47 runtime.c.o
+ .text          0x00000000        0x0 counter.c.o
+ .data          0x00000000        0x0 counter.c.o
+ .bss           0x00000000        0x0 counter.c.o
+ .comment       0x00000000       0x47 counter.c.o
+ .text          0x00000000        0x0 input.c.o
+ .data          0x00000000        0x0 input.c.o
+ .bss           0x00000000        0x0 input.c.o
+ .comment       0x00000000       0x47 input.c.o
+ .text          0x00000000        0x0 journal.c.o
+ .data          0x00000000        0x0 journal.c.o
+ .bss           0x00000000        0x0 journal.c.o
+ .comment       0x00000000       0x47 journal.c.o
+ .text          0x00000000        0x0 app.c.o
+ .data          0x00000000        0x0 app.c.o
+ .bss           0x00000000        0x0 app.c.o
+ .comment       0x00000000       0x47 app.c.o
+ .text          0x00000000        0x0 fram.c.o
+ .data          0x00000000        0x0 fram.c.o
+ .bss           0x00000000        0x0 fram.c.o
+ .comment       0x00000000       0x47 fram.c.o
+ .text          0x00000000        0x0 oled.c.o
+ .data          0x00000000        0x0 oled.c.o
+ .bss           0x00000000        0x0 oled.c.o
+ .text.oled_status_byte
+                0x00000000       0x64 oled.c.o
+ .text.oled_pixel_byte
+                0x00000000        0xe oled.c.o
+ .comment       0x00000000       0x47 oled.c.o
+ .text          0x00000000        0x0 rail.c.o
+ .data          0x00000000        0x0 rail.c.o
+ .bss           0x00000000        0x0 rail.c.o
+ .comment       0x00000000       0x47 rail.c.o
+ .data          0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
+ .bss           0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
+ .data          0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .bss           0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .data          0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00010000         xr
+RAM              0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD startup.c.o
+LOAD main_stm32.c.o
+LOAD runtime.c.o
+LOAD counter.c.o
+LOAD input.c.o
+LOAD journal.c.o
+LOAD app.c.o
+LOAD fram.c.o
+LOAD oled.c.o
+LOAD rail.c.o
+LOAD <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a
+                0x20005000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+
+.isr_vector     0x08000000       0xc0
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xc0 startup.c.o
+                0x08000000                vector_table
+
+.text           0x080000c0     0x1e49
+ *(.text*)
+ .text.Reset_Handler
+                0x080000c0       0x40 startup.c.o
+                0x080000c0                Reset_Handler
+ .text.Default_Handler
+                0x08000100        0x8 startup.c.o
+                0x08000100                Default_Handler
+ .text.now      0x08000108        0xc main_stm32.c.o
+ .text.power    0x08000114       0x50 main_stm32.c.o
+ .text.reset    0x08000164       0x2c main_stm32.c.o
+ .text.power_good
+                0x08000190       0x20 main_stm32.c.o
+ .text.spi1_wait
+                0x080001b0       0x34 main_stm32.c.o
+ .text.bus_abort
+                0x080001e4       0x48 main_stm32.c.o
+ .text.bus_poll
+                0x0800022c       0x64 main_stm32.c.o
+ .text.fram_exchange
+                0x08000290       0xc4 main_stm32.c.o
+ .text.bus_start
+                0x08000354       0xec main_stm32.c.o
+ .text.storage_init
+                0x08000440      0x110 main_stm32.c.o
+ .text.panic    0x08000550       0x68 main_stm32.c.o
+                0x08000550                panic
+ .text.I2C1_IRQHandler
+                0x080005b8       0x74 main_stm32.c.o
+                0x080005b8                I2C1_IRQHandler
+ .text.SPI2_IRQHandler
+                0x0800062c       0x60 main_stm32.c.o
+                0x0800062c                SPI2_IRQHandler
+ .text.SysTick_Handler
+                0x0800068c       0x2c main_stm32.c.o
+                0x0800068c                SysTick_Handler
+ .text.EXTI0_1_IRQHandler
+                0x080006b8       0x50 main_stm32.c.o
+                0x080006b8                EXTI0_1_IRQHandler
+ .text.startup.main
+                0x08000708      0x770 main_stm32.c.o
+                0x08000708                main
+ .text.memset   0x08000e78       0x10 runtime.c.o
+                0x08000e78                memset
+ .text.counter_init
+                0x08000e88       0x2c counter.c.o
+                0x08000e88                counter_init
+ .text.counter_sample
+                0x08000eb4       0x88 counter.c.o
+                0x08000eb4                counter_sample
+ .text.input_push
+                0x08000f3c       0x68 input.c.o
+                0x08000f3c                input_push
+ .text.input_take
+                0x08000fa4       0x64 input.c.o
+                0x08000fa4                input_take
+ .text.input_apply
+                0x08001008       0x7e input.c.o
+                0x08001008                input_apply
+ *fill*         0x08001086        0x2 
+ .text.journal_crc
+                0x08001088       0x50 journal.c.o
+                0x08001088                journal_crc
+ .text.journal_record_valid
+                0x080010d8       0x54 journal.c.o
+                0x080010d8                journal_record_valid
+ .text.journal_load
+                0x0800112c       0xd0 journal.c.o
+                0x0800112c                journal_load
+ .text.journal_begin
+                0x080011fc       0x64 journal.c.o
+                0x080011fc                journal_begin
+ .text.journal_service
+                0x08001260       0xf2 journal.c.o
+                0x08001260                journal_service
+ .text.app_input
+                0x08001352       0x2e app.c.o
+                0x08001352                app_input
+ .text.app_fault
+                0x08001380        0xe app.c.o
+                0x08001380                app_fault
+ .text.app_settled
+                0x0800138e       0x38 app.c.o
+                0x0800138e                app_settled
+ .text.app_can_idle
+                0x080013c6       0x24 app.c.o
+                0x080013c6                app_can_idle
+ .text.app_storage_error
+                0x080013ea       0x1a app.c.o
+                0x080013ea                app_storage_error
+ .text.app_init
+                0x08001404       0x3e app.c.o
+                0x08001404                app_init
+ .text.app_service
+                0x08001442       0xb2 app.c.o
+                0x08001442                app_service
+ .text.exchange
+                0x080014f4       0x26 fram.c.o
+ .text.status   0x0800151a       0x2a fram.c.o
+ .text.read_word
+                0x08001544       0x9e fram.c.o
+ .text.start_word
+                0x080015e2       0x9c fram.c.o
+ .text.complete
+                0x0800167e       0x2e fram.c.o
+ .text.fram_init
+                0x080016ac       0x9a fram.c.o
+                0x080016ac                fram_init
+ *fill*         0x08001746        0x2 
+ .text.fram_storage
+                0x08001748       0x1c fram.c.o
+                0x08001748                fram_storage
+ .text.fram_available
+                0x08001764       0x16 fram.c.o
+                0x08001764                fram_available
+ .text.fram_sleep
+                0x0800177a       0x4e fram.c.o
+                0x0800177a                fram_sleep
+ .text.fram_wake
+                0x080017c8       0x5a fram.c.o
+                0x080017c8                fram_wake
+ .text.fail     0x08001822       0x2a oled.c.o
+ .text.glyph_byte
+                0x0800184c       0xcc oled.c.o
+ .text.send.isra.0
+                0x08001918       0x2a oled.c.o
+ .text.oled_init
+                0x08001942       0x24 oled.c.o
+                0x08001942                oled_init
+ .text.oled_is_off
+                0x08001966       0x12 oled.c.o
+                0x08001966                oled_is_off
+ .text.oled_service
+                0x08001978      0x318 oled.c.o
+                0x08001978                oled_service
+ .text.rail_invalid
+                0x08001c90        0x8 rail.c.o
+                0x08001c90                rail_invalid
+ .text.rail_sample
+                0x08001c98       0x8c rail.c.o
+                0x08001c98                rail_sample
+ .text.rail_display_allowed
+                0x08001d24       0x1c rail.c.o
+                0x08001d24                rail_display_allowed
+ .text          0x08001d40       0x14 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
+                0x08001d40                __gnu_thumb1_case_shi
+ .text          0x08001d54       0x14 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+                0x08001d54                __gnu_thumb1_case_uhi
+ .text          0x08001d68      0x114 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x08001d68                __udivsi3
+                0x08001d68                __aeabi_uidiv
+                0x08001e74                __aeabi_uidivmod
+ .text          0x08001e7c        0x4 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x08001e7c                __aeabi_ldiv0
+                0x08001e7c                __aeabi_idiv0
+ .text.__stub   0x08001e80       0x10 linker stubs
+ *(.rodata*)
+ .rodata.oled_hal
+                0x08001e90       0x18 main_stm32.c.o
+ .rodata.err_label
+                0x08001ea8        0xb oled.c.o
+ .rodata.max_label
+                0x08001eb3        0xb oled.c.o
+ .rodata.digits
+                0x08001ebe       0x32 oled.c.o
+ .rodata.initialization
+                0x08001ef0       0x19 oled.c.o
+ *(.init)
+ *(.fini)
+
+.glue_7         0x08001f0c        0x0
+ .glue_7        0x08001f0c        0x0 linker stubs
+
+.glue_7t        0x08001f0c        0x0
+ .glue_7t       0x08001f0c        0x0 linker stubs
+
+.vfp11_veneer   0x08001f0c        0x0
+ .vfp11_veneer  0x08001f0c        0x0 linker stubs
+
+.v4_bx          0x08001f0c        0x0
+ .v4_bx         0x08001f0c        0x0 linker stubs
+
+.iplt           0x08001f0c        0x0
+ .iplt          0x08001f0c        0x0 startup.c.o
+
+.ARM.extab
+ *(.ARM.extab*)
+
+.ARM.exidx      0x08001f09        0x0
+                0x08001f09                        __exidx_start = .
+ *(.ARM.exidx*)
+                0x08001f09                        __exidx_end = .
+
+.data           0x20000000       0x38 load address 0x08001f0c
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sramfunc = .
+ *(.ramfunc*)
+ .ramfunc.stop  0x20000000       0x38 main_stm32.c.o
+                0x20000000                stop_from_ram
+                0x20000038                        _eramfunc = .
+                0x20000038                        . = ALIGN (0x4)
+                0x20000038                        _edata = .
+                0x08001f0c                        _sidata = LOADADDR (.data)
+                0x00000001                        ASSERT (((_sidata & 0x3) == 0x0), Initialized RAM load source must be word aligned)
+
+.igot.plt       0x20000038        0x0 load address 0x08001f44
+ .igot.plt      0x20000038        0x0 startup.c.o
+
+.rel.dyn        0x20000038        0x0 load address 0x08001f44
+ .rel.iplt      0x20000038        0x0 startup.c.o
+
+.bss            0x20000038      0x938 load address 0x08001f44
+                0x20000038                        . = ALIGN (0x4)
+                0x20000038                        _sbss = .
+ *(.bss*)
+ .bss.storage_idle_attempted
+                0x20000038        0x1 main_stm32.c.o
+ *fill*         0x20000039        0x3 
+ .bss.memory    0x2000003c       0x38 main_stm32.c.o
+ .bss.nv        0x20000074       0x10 main_stm32.c.o
+ .bss.configuration_ok
+                0x20000084        0x1 main_stm32.c.o
+ *fill*         0x20000085        0x3 
+ .bss.bus_started
+                0x20000088        0x4 main_stm32.c.o
+ .bss.bus_status
+                0x2000008c        0x1 main_stm32.c.o
+ .bss.tx_position
+                0x2000008d        0x1 main_stm32.c.o
+ .bss.tx_length
+                0x2000008e        0x1 main_stm32.c.o
+ .bss.tx        0x2000008f       0x20 main_stm32.c.o
+ .bss.tick_running
+                0x200000af        0x1 main_stm32.c.o
+ .bss.milliseconds
+                0x200000b0        0x4 main_stm32.c.o
+ .bss.adc_deadline
+                0x200000b4        0x4 main_stm32.c.o
+ .bss.adc_state
+                0x200000b8        0x1 main_stm32.c.o
+ *fill*         0x200000b9        0x3 
+ .bss.rail      0x200000bc        0xc main_stm32.c.o
+ .bss.display   0x200000c8       0x2c main_stm32.c.o
+ .bss.inputs    0x200000f4      0x810 main_stm32.c.o
+ .bss.app       0x20000904       0x6c main_stm32.c.o
+ *(COMMON)
+                0x20000970                        . = ALIGN (0x4)
+                0x20000970                        _ebss = .
+
+.noinit         0x20000970        0x0 load address 0x08001f44
+                0x20000970                        . = ALIGN (0x4)
+ *(.noinit*)
+                0x20000970                        . = ALIGN (0x4)
+
+/DISCARD/
+ *(.comment)
+ *(.note*)
+                0x00000001                        ASSERT ((_ebss <= (_estack - 0x1000)), Q4 requires at least4KiB unallocated stack margin)
+OUTPUT(count-fidget-Q4-stm32.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x2c
+ .ARM.attributes
+                0x00000000       0x2c startup.c.o
+ .ARM.attributes
+                0x0000002c       0x2c main_stm32.c.o
+ .ARM.attributes
+                0x00000058       0x2c runtime.c.o
+ .ARM.attributes
+                0x00000084       0x2c counter.c.o
+ .ARM.attributes
+                0x000000b0       0x2c input.c.o
+ .ARM.attributes
+                0x000000dc       0x2c journal.c.o
+ .ARM.attributes
+                0x00000108       0x2c app.c.o
+ .ARM.attributes
+                0x00000134       0x2c fram.c.o
+ .ARM.attributes
+                0x00000160       0x2c oled.c.o
+ .ARM.attributes
+                0x0000018c       0x2c rail.c.o
+ .ARM.attributes
+                0x000001b8       0x1e <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
+ .ARM.attributes
+                0x000001d6       0x1e <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .ARM.attributes
+                0x000001f4       0x1e <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000212       0x1e <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+
+.debug_line_str
+                0x00000000       0xd2
+ .debug_line_str
+                0x00000000       0xd2 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_shi.o)
+ .debug_line_str
+                0x000000d2       0xd2 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_thumb1_case_uhi.o)
+ .debug_line_str
+                0x000000d2       0xd2 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_line_str
+                0x000000d2       0xd2 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+
+.debug_frame    0x00000000       0x20
+ .debug_frame   0x00000000       0x20 <TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)

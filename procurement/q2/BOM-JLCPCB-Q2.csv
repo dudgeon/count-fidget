@@ -1,0 +1,51 @@
+Comment,Designator,Footprint,Quantity,Manufacturer,Manufacturer Part Number,Assembly,Notes,Source Label,LCSC Part #
+"DE188-RU-30/7,5/V(3V)",DS1,ClickCounterQ2:DE188_20P_rows13.0mm,1,Display Elektronik,"DE188-RU-30/7,5/V(3V)",top,"THT hand solder; glass rear 4.0 mm above PCB top; 260 C / 5 s maximum; quote-only display, sample qualification required; Q2 nominal lead rows 13.0 mm; retained 1.7 mm drills pending assembler/tolerance review","DE188-RU-30/7,5/V(3V)",
+MX1A-E1NW,SW1,ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB,1,Cherry,MX1A-E1NW,top,Clicky blue; PCB-mount 5-pin solder version; full hand solder,COUNT,C5120587
+MX1A-E1NW,SW2,ClickCounterQ2:Button_Switch_Keyboard_SW_Cherry_MX_1.00u_PCB,1,Cherry,MX1A-E1NW,top,Same switch as SW1,RESET,C5120587
+USB4105-GF-A,J1,ClickCounterQ2:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,1,GCT,USB4105-GF-A,top,0.95 mm standard stakes; D+/D-/SBU unconnected; shell grounded,USB-C charge,C3020560
+SM04B-SRSS-TB(LF)(SN),J2,ClickCounterQ2:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal,1,JST,SM04B-SRSS-TB(LF)(SN),top,Mating keyed custom pack CC-BAT-001; no bare coin-cell holder,Battery + NTC,C160404
+MSP430FR4133IG48R,U1,ClickCounterQ2:Package_SO_TSSOP-48_6.1x12.5mm_P0.5mm,1,Texas Instruments,MSP430FR4133IG48R,top,"48-pin TSSOP, not the earlier 64-pin draft; SBW program and verify",MSP430FR4133,C2053877
+BQ25185DLHR,U2,ClickCounterQ2:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm,1,Texas Instruments,BQ25185DLHR,bottom,4.2 V; 100 mA input limit; 18.2 mA nominal battery charge,Li-ion charger,C19725033
+TPS7A0230PDBVR,U3,ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-5,1,Texas Instruments,TPS7A0230PDBVR,bottom,3.0 V; active output discharge variant; EN tied to SYS; power-fall/FRAM validation required,3.0 V LDO,C3747031
+BQ29700DSER,U4,ClickCounterQ2:Package_SON_WSON-6_1.5x1.5mm_P0.5mm,1,Texas Instruments,BQ29700DSER,bottom,,Cell protector,C183096
+DMN2056U-7,Q1,ClickCounterQ2:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMN2056U-7,bottom,,Discharge FET,C332302
+DMN2056U-7,Q2,ClickCounterQ2:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMN2056U-7,bottom,,Charge FET,C332302
+TLV7032DGKR,U5,ClickCounterQ2:TLV7032_DGK0008A_TI,1,Texas Instruments,TLV7032DGKR,bottom,Separate push-pull outputs; charge enable requires both in-window indications; POR/supply-loss tests required,Push-pull temperature window,C2863894
+"2N7002,215",Q3,ClickCounterQ2:Package_TO_SOT_SMD_SOT-23,1,Nexperia,"2N7002,215",bottom,Upper series charge-enable N-MOSFET; gate has ground pulldown,Charge enable,
+USBLC6-2SC6,D1,ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-6,1,STMicroelectronics,USBLC6-2SC6,bottom,,USB ESD,C7519
+RC0603FR-075K1L,R1,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-075K1L,bottom,"1%, 0603, 0.1 W",5.1k,
+RC0603FR-075K1L,R2,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-075K1L,bottom,"1%, 0603, 0.1 W",5.1k,
+RC0603FR-0724KL,R3,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0724KL,bottom,"1%, 0603, 0.1 W",24k,
+RC0603FR-0716K5L,R4,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0716K5L,bottom,"1%, 0603, 0.1 W",16.5k,
+RC0603FR-0710KL,R5,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0710KL,bottom,"1%, 0603, 0.1 W",10k,
+RC0603FR-07100KL,R6,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,"1%, 0603, 0.1 W",100k,
+RC0603FR-07330RL,R7,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07330RL,bottom,"1%, 0603, 0.1 W",330,
+RC0603FR-072K2L,R8,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-072K2L,bottom,"1%, 0603, 0.1 W",2.2k,
+RC0603FR-073R3L,R9,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-073R3L,bottom,"1%, 0603, 0.1 W",3.3,
+RC0603FR-0757K6L,R10,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0757K6L,bottom,"1%, 0603, 0.1 W",57.6k,
+RC0603FR-07115KL,R11,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07115KL,bottom,"1%, 0603, 0.1 W",115k,
+RC0603FR-0724K3L,R12,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0724K3L,bottom,"1%, 0603, 0.1 W",24.3k,
+RC0603FR-0716K2L,R13,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0716K2L,bottom,"1%, 0603, 0.1 W",16.2k,
+RC0603FR-07100KL,R14,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,Local upper charge-enable gate pulldown; keep connected close to Q3 gate,100k,
+RC0603FR-07100KL,R15,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07100KL,bottom,Local lower charge-enable gate pulldown; keep connected close to Q4 gate,100k,
+RC0603FR-0747KL,R16,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0747KL,bottom,"1%, 0603, 0.1 W",47k,
+RC0603FR-07470KL,R17,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07470KL,bottom,"1%, 0603, 0.1 W",470k,
+RC0603FR-07470KL,R18,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-07470KL,bottom,"1%, 0603, 0.1 W",470k,
+RC0603FR-072KL,R19,ClickCounterQ2:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-072KL,bottom,"1%, 0603, 0.1 W",2k,
+GRM188R71H104KA93D,C4,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,"100 nF, 50 V, X7R",100n,
+GRM188R71H104KA93D,C7,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required,100n,
+GRM188R71H104KA93D,C8,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,LCD charge-pump capacitor; short direct routing to U1 LCDCAP1/0,100n,
+GRM188R71H104KA93D,C9,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,100 nF local VBUS decoupler beside U5; nearby plane return,100n,
+GRM21BR71E225KA73L,C1,ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KA73L,bottom,"2.2 uF, 25 V, X7R; effective >=1 uF at 5 V",2.2u,
+GRM21BR61E106KA73L,C2,ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,bottom,"10 uF, 25 V, X5R; effective >=1 uF at 4.5 V",10u,
+GRM21BR71E225KA73L,C3,ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KA73L,bottom,"2.2 uF, 25 V, X7R",2.2u,
+GRM21BR71E225KA73L,C5,ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KA73L,bottom,,2.2u,
+GRM21BR61E106KA73L,C6,ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,bottom,"10 uF 25 V X5R, nominal +/-10%; MCU V3 bulk correction E19; require >=4.7 uF effective at 3 V after bias/temperature/tolerance; rail startup and reverse-current qualification required",10u,
+GRM1885C1H102JA01D,C10,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,
+GRM1885C1H102JA01D,C11,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,
+GRM1885C1H102JA01D,C12,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM1885C1H102JA01D,bottom,"1 nF, 50 V, C0G",1n,
+C0603C472J5RACTU,C13,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,KEMET,C0603C472J5RACTU,bottom,TI EVM low-current series compensation: ISET -> 2k -> 4.7n -> GND,4.7n,
+GRM188R71H104KA93D,C14,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin,100n,
+GRM188R71H104KA93D,C15,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin,100n,
+GRM188R71H104KA93D,C16,ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric,1,Murata,GRM188R71H104KA93D,bottom,Required LCD Mode-2 bias reservoir; 100 nF X7R; place near corresponding U1 bias pin,100n,
+"2N7002,215",Q4,ClickCounterQ2:Package_TO_SOT_SMD_SOT-23,1,Nexperia,"2N7002,215",bottom,Lower series charge-enable N-MOSFET; gate has ground pulldown,Charge enable hot gate,
