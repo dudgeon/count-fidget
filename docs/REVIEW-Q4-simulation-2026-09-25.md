@@ -19,6 +19,34 @@ The electrical architecture is sound. The native design data reproduce independe
 
 Items 1–3 are cheap fixes (a few firmware lines, one enclosure parameter pair, a documentation order). After them, the remaining risks are the physical gates the Q4 review already lists.
 
+## Follow-up: power switch, sleep, battery life and the BOM rule
+
+The owner asked whether the device has a power switch, whether the existing keys can control power, and how long the battery lasts. The owner also restated the BOM rule: every part is standard JLCPCB inventory, SMT is vendor-soldered, and home through-hole soldering is allowed only for a material saving.
+
+- **No power switch exists.** The device already sleeps 30 s after the last press (OLED off, FRAM asleep, MCU in Stop), and a key wakes it. However, that sleep still draws ~83 µA.
+- **The COUNT key can become the power button** by latching the existing U7 load switch ([#12](https://github.com/dudgeon/count-fidget/issues/12)):
+  - one dual Schottky, one small diode, one NMOS and two resistors, all JLC-stocked SMT;
+  - no new through-hole parts and no enclosure change;
+  - firmware auto-powers-off after the display times out, and USB keeps the board on for charging and DFU;
+  - off current is ~8 µA.
+- **Regulator options** ([#5](https://github.com/dudgeon/count-fidget/issues/5), updated): JLC stocks no 3.2 V nano-IQ regulator. It does stock 3.3 V options: TPS7A0233PDBVR (C2887324) and XC6206P332MR-G (C5446, a Basic part).
+- **BOM gaps** ([#13](https://github.com/dudgeon/count-fidget/issues/13)):
+  - The custom battery pack with its NTC harness and the keycaps are not inventory parts.
+  - Home through-hole parts come from LCSC, because JLC library stock cannot ship loose.
+  - U5 has 22 in stock.
+
+Battery life, from `energy.py`:
+- Emulated session charge × typical datasheet currents.
+- LIR2032 usable capacity 0.9 × 40–45 mAh.
+- Worst-case self-discharge of 3 %/month included.
+
+| Use | As built | 3.3 V nano-IQ LDO | Key power-off ([#12](https://github.com/dudgeon/count-fidget/issues/12)) |
+|---|---:|---:|---:|
+| Idle / on a shelf | 18–20 days | 80–90 days | 149–167 days |
+| Light: 10 sessions × 10 presses | 16–18 days | 56–63 days | 81–91 days |
+| Moderate: 30 sessions × 10 presses | 14–16 days | 35–39 days | 42–47 days |
+| Heavy: 20 × 30 presses + 1 h continuous | 9–10 days | 14–15 days | 14–16 days |
+
 ## What was checked, and how
 
 | Check | Result |

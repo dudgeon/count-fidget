@@ -29,7 +29,10 @@ I = dict(
     ldo_tlv767=0.050,  # TLV767 IQ typ (80 max)
     divider=0.016,     # 150k + 49.9k at 3.205 V
     bq29700=0.004, bq25185=0.004, u7=0.0005)
-NANO_LDO = 0.000025   # TPS7A02-class fixed regulator IQ, no external divider
+NANO_LDO = 0.000025   # TPS7A0233 fixed regulator IQ typ, no external divider
+U7_OFF_AND_LEAKAGE = 0.0002   # TPS22917 ISD 10 nA + Schottky/diode leakage allowance (issue #12 latch)
+BOOT_FROM_OFF_MAS = 0.5       # ~0.35 s boot at ~1.3 mA when powering on from off (issue #12)
+SELF_DISCHARGE_MAH_PER_DAY = 0.03 * 45 / 30   # LIR2032 worst-case 3 %/month (EEMB spec 5.2.6)
 
 
 def integrate(sim, t0, t1):
@@ -91,34 +94,41 @@ def main():
         out[f'session_{n}'] = r
         print(f"session {n:3d} presses: window {r['window_s']:.0f} s, MCU/OLED/FRAM/ADC charge {r['charge_mAs']:.1f} mAs "
               f"({r['charge_mAs']/3.6:.2f} uAh) count={r['final_count']}  breakdown={ {k: round(v,1) for k,v in r['breakdown_mAs'].items()} }")
-    # standby (asleep) current, per regulator option
-    common_sleep = I['mcu_stop'] + I['fram_sleep'] + I['bq29700'] + I['bq25185'] + I['u7']
-    standby = {'TLV76701 + 150k/49.9k (as built)': common_sleep + I['ldo_tlv767'] + I['divider'],
-               'nano-IQ fixed LDO (TPS7A02-class)': common_sleep + NANO_LDO}
-    out['standby_mA'] = standby
-    # extra charge per session above standby: session charge minus asleep MCU/FRAM over the same window
-    def extra(n):
-        r = out[f'session_{n}']
-        return r['charge_mAs'] - (I['mcu_stop'] + I['fram_sleep']) * r['window_s']
-    profiles = {'shelf (no use)': [], 'light: 10 sessions x 10 presses': [(10, 10)],
+    # Idle-current options.  "Always" loads stay on while awake too; "asleep only" loads
+    # replace the MCU/FRAM awake loads that the emulator already integrated.
+    always = I['bq29700'] + I['bq25185']
+    asleep_only = I['mcu_stop'] + I['fram_sleep'] + I['u7']
+    options = {  # name: (idle mA outside sessions, regulator mA while powered, boot overhead mAs)
+        'as built (TLV76701 + 150k/49.9k)': (always + asleep_only + I['ldo_tlv767'] + I['divider'],
+                                             I['ldo_tlv767'] + I['divider'], 0.0),
+        '3.3 V nano-IQ LDO (TPS7A0233)': (always + asleep_only + NANO_LDO, NANO_LDO, 0.0),
+        'key power-off via U7 latch (#12)': (always + U7_OFF_AND_LEAKAGE, I['ldo_tlv767'] + I['divider'], BOOT_FROM_OFF_MAS)}
+    out['idle_mA'] = {k: v[0] for k, v in options.items()}
+    profiles = {'idle / on a shelf': [], 'light: 10 sessions x 10 presses': [(10, 10)],
                 'moderate: 30 sessions x 10 presses': [(30, 10)], 'heavy: 20 x 30 presses + 1 h continuous': [(20, 30), ('hour', 1)]}
     capacity = {'40 mAh min x 0.9 usable': 36.0, '45 mAh nominal x 0.9 usable': 40.5}
     res = {}
-    print('\nstandby current:', {k: round(v * 1000, 1) for k, v in standby.items()}, 'uA')
-    for reg, isb in standby.items():
+    print('\nidle current:', {k: round(v[0] * 1000, 1) for k, v in options.items()}, 'uA; self-discharge allowance',
+          round(SELF_DISCHARGE_MAH_PER_DAY, 3), 'mAh/day')
+    for name, (idle, reg, boot) in options.items():
         for pname, spec in profiles.items():
-            daily = isb * 24  # mAh baseline
+            awake_h, charge_mAh = 0.0, 0.0
             for item in spec:
                 if item[0] == 'hour':
                     # continuous fidgeting: display on, MCU mostly sleeping, FRAM standby, ADC on
                     awake_mA = I['oled'] + 0.45 + I['fram_standby'] + I['adc']
-                    daily += awake_mA * item[1]
+                    charge_mAh += item[1] * (awake_mA + reg + always + I['u7'])
+                    awake_h += item[1]
                 else:
                     sessions, presses = item
-                    daily += sessions * extra(presses) / 3600.0
-            days = {c: round(cap / daily, 1) for c, cap in capacity.items()}
-            res[f'{reg} | {pname}'] = dict(mAh_per_day=round(daily, 3), days=days)
-            print(f'{reg:38s} {pname:40s} {daily:6.3f} mAh/day -> {days}')
+                    r = out[f'session_{presses}']
+                    w = r['window_s']
+                    charge_mAh += sessions * (r['charge_mAs'] + (reg + always + I['u7']) * w + boot) / 3600.0
+                    awake_h += sessions * w / 3600.0
+            daily = idle * (24 - awake_h) + charge_mAh
+            days = {c: round(cap / (daily + SELF_DISCHARGE_MAH_PER_DAY), 1) for c, cap in capacity.items()}
+            res[f'{name} | {pname}'] = dict(mAh_per_day=round(daily, 3), days=days)
+            print(f'{name:36s} {pname:42s} {daily:6.3f} mAh/day -> {days}')
     out['profiles'] = res
     out['currents_mA'] = I
     if a.output:

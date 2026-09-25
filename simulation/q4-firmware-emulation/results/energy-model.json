@@ -45,65 +45,94 @@
   "final_count": 30,
   "stops": 3
  },
- "standby_mA": {
-  "TLV76701 + 150k/49.9k (as built)": 0.0828,
-  "nano-IQ fixed LDO (TPS7A02-class)": 0.016825000000000003
+ "idle_mA": {
+  "as built (TLV76701 + 150k/49.9k)": 0.0828,
+  "3.3 V nano-IQ LDO (TPS7A0233)": 0.016825000000000003,
+  "key power-off via U7 latch (#12)": 0.0082
  },
  "profiles": {
-  "TLV76701 + 150k/49.9k (as built) | shelf (no use)": {
+  "as built (TLV76701 + 150k/49.9k) | idle / on a shelf": {
    "mAh_per_day": 1.987,
    "days": {
-    "40 mAh min x 0.9 usable": 18.1,
-    "45 mAh nominal x 0.9 usable": 20.4
+    "40 mAh min x 0.9 usable": 17.7,
+    "45 mAh nominal x 0.9 usable": 19.9
    }
   },
-  "TLV76701 + 150k/49.9k (as built) | light: 10 sessions x 10 presses": {
+  "as built (TLV76701 + 150k/49.9k) | light: 10 sessions x 10 presses": {
    "mAh_per_day": 2.181,
    "days": {
-    "40 mAh min x 0.9 usable": 16.5,
-    "45 mAh nominal x 0.9 usable": 18.6
+    "40 mAh min x 0.9 usable": 16.2,
+    "45 mAh nominal x 0.9 usable": 18.2
    }
   },
-  "TLV76701 + 150k/49.9k (as built) | moderate: 30 sessions x 10 presses": {
+  "as built (TLV76701 + 150k/49.9k) | moderate: 30 sessions x 10 presses": {
    "mAh_per_day": 2.569,
    "days": {
-    "40 mAh min x 0.9 usable": 14.0,
-    "45 mAh nominal x 0.9 usable": 15.8
+    "40 mAh min x 0.9 usable": 13.8,
+    "45 mAh nominal x 0.9 usable": 15.5
    }
   },
-  "TLV76701 + 150k/49.9k (as built) | heavy: 20 x 30 presses + 1 h continuous": {
-   "mAh_per_day": 4.174,
+  "as built (TLV76701 + 150k/49.9k) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 4.166,
    "days": {
-    "40 mAh min x 0.9 usable": 8.6,
-    "45 mAh nominal x 0.9 usable": 9.7
+    "40 mAh min x 0.9 usable": 8.5,
+    "45 mAh nominal x 0.9 usable": 9.6
    }
   },
-  "nano-IQ fixed LDO (TPS7A02-class) | shelf (no use)": {
+  "3.3 V nano-IQ LDO (TPS7A0233) | idle / on a shelf": {
    "mAh_per_day": 0.404,
    "days": {
-    "40 mAh min x 0.9 usable": 89.2,
-    "45 mAh nominal x 0.9 usable": 100.3
+    "40 mAh min x 0.9 usable": 80.2,
+    "45 mAh nominal x 0.9 usable": 90.2
    }
   },
-  "nano-IQ fixed LDO (TPS7A02-class) | light: 10 sessions x 10 presses": {
+  "3.3 V nano-IQ LDO (TPS7A0233) | light: 10 sessions x 10 presses": {
    "mAh_per_day": 0.598,
    "days": {
-    "40 mAh min x 0.9 usable": 60.2,
-    "45 mAh nominal x 0.9 usable": 67.7
+    "40 mAh min x 0.9 usable": 56.0,
+    "45 mAh nominal x 0.9 usable": 63.0
    }
   },
-  "nano-IQ fixed LDO (TPS7A02-class) | moderate: 30 sessions x 10 presses": {
+  "3.3 V nano-IQ LDO (TPS7A0233) | moderate: 30 sessions x 10 presses": {
    "mAh_per_day": 0.986,
    "days": {
-    "40 mAh min x 0.9 usable": 36.5,
-    "45 mAh nominal x 0.9 usable": 41.1
+    "40 mAh min x 0.9 usable": 34.9,
+    "45 mAh nominal x 0.9 usable": 39.3
    }
   },
-  "nano-IQ fixed LDO (TPS7A02-class) | heavy: 20 x 30 presses + 1 h continuous": {
-   "mAh_per_day": 2.591,
+  "3.3 V nano-IQ LDO (TPS7A0233) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 2.582,
    "days": {
-    "40 mAh min x 0.9 usable": 13.9,
-    "45 mAh nominal x 0.9 usable": 15.6
+    "40 mAh min x 0.9 usable": 13.7,
+    "45 mAh nominal x 0.9 usable": 15.4
+   }
+  },
+  "key power-off via U7 latch (#12) | idle / on a shelf": {
+   "mAh_per_day": 0.197,
+   "days": {
+    "40 mAh min x 0.9 usable": 148.9,
+    "45 mAh nominal x 0.9 usable": 167.5
+   }
+  },
+  "key power-off via U7 latch (#12) | light: 10 sessions x 10 presses": {
+   "mAh_per_day": 0.402,
+   "days": {
+    "40 mAh min x 0.9 usable": 80.6,
+    "45 mAh nominal x 0.9 usable": 90.7
+   }
+  },
+  "key power-off via U7 latch (#12) | moderate: 30 sessions x 10 presses": {
+   "mAh_per_day": 0.811,
+   "days": {
+    "40 mAh min x 0.9 usable": 42.0,
+    "45 mAh nominal x 0.9 usable": 47.3
+   }
+  },
+  "key power-off via U7 latch (#12) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 2.48,
+   "days": {
+    "40 mAh min x 0.9 usable": 14.3,
+    "45 mAh nominal x 0.9 usable": 16.0
    }
   }
  },
