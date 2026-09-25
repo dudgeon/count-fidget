@@ -1,0 +1,204 @@
+{
+  "status": "Q5 engineering fit candidate; physical qualification pending",
+  "body_mm": [
+    47.2,
+    59.2,
+    16.2
+  ],
+  "keycap_envelope_height_mm": 27.0,
+  "pcb_bottom_z_mm": 7.699999999999999,
+  "pcb_mm": [
+    42,
+    54,
+    1
+  ],
+  "mounts_board_xy_mm": [
+    [
+      2.5,
+      52.0
+    ],
+    [
+      39.5,
+      52.0
+    ],
+    [
+      2.5,
+      2.5
+    ],
+    [
+      39.5,
+      2.5
+    ]
+  ],
+  "key_centers_board_xy_mm": [
+    [
+      11.475,
+      40.8
+    ],
+    [
+      30.525,
+      40.8
+    ]
+  ],
+  "load_supports_board_xy_mm": [
+    [
+      5.5,
+      42.8
+    ],
+    [
+      34.0,
+      44.0
+    ]
+  ],
+  "board_side_clearance_mm": 1.0,
+  "cell": "User-supplied LIR2032 in the vendor-soldered BT1 holder; no pack, keeper or harness",
+  "holder_envelope_mm": [
+    31.4,
+    20.3,
+    5.52
+  ],
+  "oled_support_mm": 2.5,
+  "oled_nominal_module_pcb_mm": [
+    27.3,
+    27.8,
+    1.2
+  ],
+  "oled_nominal_glass_mm": [
+    24.74,
+    16.9,
+    1.4
+  ],
+  "oled_checked_max_mm": [
+    27.7,
+    28.2,
+    3.4
+  ],
+  "oled_aperture_mm": [
+    23.2,
+    12.4
+  ],
+  "oled_roof_z_mm": 16.2,
+  "oled_max_top_gap_mm": 0.3,
+  "key_plate_top_above_pcb_mm": 5,
+  "key_plate_thickness_mm": 1.5,
+  "key_plate_hole_mm": 14.05,
+  "usb_opening_y_mm": 27.0,
+  "usb_opening_mm": [
+    13.4,
+    7.2
+  ],
+  "usb_axis_z_mm": 6.045,
+  "usb_plug_reservation_mm": [
+    12.55,
+    6.7
+  ],
+  "fasteners": "Four M2 x 12 board/cover screws; pilots stop 0.8 mm above the outer floor",
+  "valid_solids": {
+    "base": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 8757.663
+    },
+    "lid-front": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 2072.544
+    },
+    "lid-rear": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 1186.814
+    },
+    "keycap-count": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 884.262
+    },
+    "keycap-reset": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 880.388
+    }
+  },
+  "shell_intersections_mm3": {
+    "lid_front_rear": 0.0,
+    "base_lid": 0
+  },
+  "reported_intersections": [],
+  "assembly_path_checks": {
+    "poses": 162,
+    "sampled_intersection_tests": 18063,
+    "step_mm": 0.5,
+    "max_lift_mm": 40,
+    "collisions": [],
+    "limitations": "Sampled straight vertical assembly/removal; excludes soldering, screw insertion, cell insertion and print distortion."
+  },
+  "minimum_modeled_distances_mm": {
+    "holder_to_floor": 0.58,
+    "holder_to_bottom_components": 0.05088,
+    "holder_to_switch_tails": 9.83799,
+    "max_oled_to_mcu": 3.3,
+    "max_oled_to_usb": 3.32124,
+    "pressed_keycap_to_rear_screw": 1.20416,
+    "usb_mouth_to_outer_wall": 2.025
+  },
+  "source_board_sha256": "e796f5be743cc093f827b137a9b6b9fe90b22e3b3154b0d552f8eb761abdce48",
+  "source_model_sha256": "8598a77c4b34369b52f8bd8a0aa6ded701d959ed5214a3d3bf2009282282df61",
+  "generator_sha256": "5bdb839e9be3b7f038fd567e64f9f7fe071600c6ad29a600cea4dfa429ac6872",
+  "rendered_count": 12345678,
+  "firmware_renderer_sha256": {
+    "oled.c": "b8f1c564e4333955055e6c1cd9cf4243f7f3ff7ba335008e6a197e8178b47635",
+    "oled.h": "75236a39b5b63b17194a9c13bda7021371588085364df0b05487962ce6da9743",
+    "counter.h": "148e36a53a77e648da2be0f95188686e5a1a44850444160c492b728114d4ad8e"
+  },
+  "cadquery_version": "2.8.0",
+  "python_version": "3.11.15",
+  "limitations": [
+    "Component bodies, pins and screws are simplified envelopes; no exact assembled vendor CAD claim.",
+    "Native footprint bounding boxes conservatively bound bottom components; heights are stated family allowances.",
+    "BT1 envelope uses the supplier 3D model extents plus the full 20 mm cell cylinder at holder height; cell retention and insertion force are untested.",
+    "Printed MX keycaps: cross-socket fit, travel and legend durability require a print sample.",
+    "Module drawing controls27.30x27.80mm geometry; summary26x26mm conflicts. Header centering is nominal; verify exact sample, clamp-free support lands, trimmedpins and+/-0.4mm lateral fit.",
+    "Rear key plate must be fitted before soldering the four switch leads; the removable front cover exposes the separately soldered display header.",
+    "USB opening is checked against a USB-IF maximum overmold envelope only; real cable fit in both orientations is a first-article check.",
+    "Screw thread strength, print tolerances, 1.0 mm side clearance, USB strain and drop behavior remain untested."
+  ],
+  "cad_coordinate_transform": "X = PCB_X - 21; Y = 27 - PCB_Y; Z above base floor",
+  "stl_mesh_checks": {
+    "base-Q5.stl": {
+      "triangles": 6668,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 14.7
+    },
+    "lid-front-Q5.stl": {
+      "triangles": 3336,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 7.5
+    },
+    "lid-rear-Q5.stl": {
+      "triangles": 3340,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 5.0
+    },
+    "keycap-count-Q5.stl": {
+      "triangles": 1140,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 7.0
+    },
+    "keycap-reset-Q5.stl": {
+      "triangles": 2100,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 7.0
+    }
+  }
+}

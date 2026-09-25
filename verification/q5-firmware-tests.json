@@ -1,0 +1,123 @@
+{
+  "hardware_executed": false,
+  "host_compiler": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+  "inputs": {
+    "firmware/q5-stm32/app.c": {
+      "bytes": 2181,
+      "sha256": "10d0576a30dd5e2f05acb6721a8c0127b96bbf48eae6919a31dc545fea49e28e"
+    },
+    "firmware/q5-stm32/app.h": {
+      "bytes": 979,
+      "sha256": "cf88de42b1c2b4e4f6fa5e09c393a03cb7709c47e2c08c6adb73c5d236042663"
+    },
+    "firmware/q5-stm32/battery.c": {
+      "bytes": 1976,
+      "sha256": "23f984a69e7e0ac4d15dbb52eb1b6781dcb53e7783d5b5d5e14223c68600293c"
+    },
+    "firmware/q5-stm32/battery.h": {
+      "bytes": 1661,
+      "sha256": "071185222585c7e536eb11fadfc636f136e9e5d6e1a2a87390d27be7fb3dff35"
+    },
+    "firmware/q5-stm32/board.h": {
+      "bytes": 1472,
+      "sha256": "1b7b7f0a8997f7970e8edcad1f56792bb9fa46a7475d1ba3ec13cd232359d4ba"
+    },
+    "firmware/q5-stm32/counter.c": {
+      "bytes": 2584,
+      "sha256": "4561b2eeee36e6b4672a1fd2bb1882a8ee5249399ee9ba02526940ac0423244f"
+    },
+    "firmware/q5-stm32/counter.h": {
+      "bytes": 1695,
+      "sha256": "148e36a53a77e648da2be0f95188686e5a1a44850444160c492b728114d4ad8e"
+    },
+    "firmware/q5-stm32/fram.c": {
+      "bytes": 3292,
+      "sha256": "e85aebd6a1d5d691af182b7be5cd6ef027a9ba94e0ffabdfd6b597d1735f992c"
+    },
+    "firmware/q5-stm32/fram.h": {
+      "bytes": 656,
+      "sha256": "0b7f1dd4fbd068f8bf6b9bea28c9f9b4638e9087eb79e9789ba697da563f35cc"
+    },
+    "firmware/q5-stm32/input.c": {
+      "bytes": 2285,
+      "sha256": "672636f2ebeb8a2768c2f558b45c11a3acd6aab937ac17bd4939b7f66b12f53b"
+    },
+    "firmware/q5-stm32/input.h": {
+      "bytes": 946,
+      "sha256": "d7c8f58f256ac14a70dcdde15d2499432758e605186111d06bc8baf05a807547"
+    },
+    "firmware/q5-stm32/journal.c": {
+      "bytes": 3720,
+      "sha256": "9c84be9248fc546f9d068d6e4484e2fb1906b85e59200a72903994e75450b431"
+    },
+    "firmware/q5-stm32/journal.h": {
+      "bytes": 1088,
+      "sha256": "0c6691beca633d18d5eaba0aab5d092acff73bb7a3da5c62f3916a82c3edaa01"
+    },
+    "firmware/q5-stm32/main_stm32.c": {
+      "bytes": 21258,
+      "sha256": "fe85fcad73badf2e95231cc90a5fb17e82ae9787447701cc58426a129b72ead8"
+    },
+    "firmware/q5-stm32/oled.c": {
+      "bytes": 11355,
+      "sha256": "b8f1c564e4333955055e6c1cd9cf4243f7f3ff7ba335008e6a197e8178b47635"
+    },
+    "firmware/q5-stm32/oled.h": {
+      "bytes": 3238,
+      "sha256": "75236a39b5b63b17194a9c13bda7021371588085364df0b05487962ce6da9743"
+    },
+    "firmware/q5-stm32/rail.c": {
+      "bytes": 710,
+      "sha256": "b6bc53ad4799d1f8741bccfca1758f8a81e52477387bc7f862fb7df92b53d917"
+    },
+    "firmware/q5-stm32/rail.h": {
+      "bytes": 421,
+      "sha256": "89082031f115abafe247c43aabbbd6d63b79e480dd77e2fa00e15c25020d6968"
+    },
+    "firmware/q5-stm32/runtime.c": {
+      "bytes": 673,
+      "sha256": "d96d5feff5b7dd0582e10fc35997a9ae89485ac6ccac44d36fd72760159c511b"
+    },
+    "firmware/q5-stm32/startup.c": {
+      "bytes": 1986,
+      "sha256": "f2cc746dbdf85a5fce5e1ba009959612603efae926ccc7194d16d02cd2c63425"
+    },
+    "firmware/q5-stm32/test_battery.c": {
+      "bytes": 2530,
+      "sha256": "1bc046b3746a7338e71fcc40e88cdcd631d08bc2da5978f4363fd23d5a31326e"
+    },
+    "firmware/q5-stm32/test_behavior.c": {
+      "bytes": 17492,
+      "sha256": "c13ff02bed3a309bd7ca908554a211335ee5c93f07746917b31462e8e22d4fe2"
+    },
+    "firmware/q5-stm32/test_fram.c": {
+      "bytes": 4419,
+      "sha256": "60b58be4acbddcb6b0e34a6db571799f1e7f3677773d843e38c8c3831768a500"
+    },
+    "firmware/q5-stm32/test_oled.c": {
+      "bytes": 9086,
+      "sha256": "dc2a802e70fef27f66dc6ed4fe82cd6d00d29dc5cc6e9e8d376261ee20af656a"
+    },
+    "firmware/q5-stm32/test_rail.c": {
+      "bytes": 1617,
+      "sha256": "776b3e16632d1d6e71d72cd3b591579b7fe24a34c4a47222a4755559d29bce67"
+    }
+  },
+  "models": "Production portable code; memory/bus/input models, not MCU or whole-board emulation",
+  "passed": true,
+  "results": {
+    "battery": "PASS: 1301 steady battery readings, bar hysteresis, cut-off debounce, USB/STAT decoding; policy only, no cell model\n",
+    "behavior": "{\"key_hold_cases\":826,\"torn_word_reboots\":1179648,\"single_bit_corruptions\":256,\"button_waveforms\":7072,\"queue_storage_schedules\":2295,\"recovery_interleavings\":200,\"fault_idle_recovery_scenarios\":8,\"hardware_executed\":false}\n",
+    "fram": "PASS: two permanent sleep/wake failures stop bus retries; explicit reinitialization recovers\nPASS: 350 SPI FRAM transaction/byte-prefix failures, stuck MISO0/1, ignored writes, protected-device refusal,1000 sleep/wake guards across wrap; no MCU execution\n",
+    "oled": "PASS: HS96 SPI startup, first frame in GDDRAM before 8Dh/AFh, partial digit/label/icon redraw, MAX/labels/bars, shutdown guard\nPASS: injected mid-frame transport error discards display state and recovers the latest committed count\nPASS: deadline wrap and sleep during every early startup tick\nPASS: module held in reset until the rail is measured; rail loss shuts down and waits for recovery\nPASS: transport failure at each of80 startup/frame packet positions\nHost model only; target ISR timing, rail sequencing, pixels and current require hardware tests.\n",
+    "rail": "PASS: 1527742 voltage/error/initial-state corners, hysteresis, invalid calibration/ADC, stale samples and timestamp wrap;2% bounded error model, no analog execution\n"
+  },
+  "runner": {
+    "bytes": 7046,
+    "sha256": "98ba1fac3a597ac9f41f2d25dbc652ec020b7c0d43ac42120a1523149bb3e15c"
+  },
+  "sanitized": false,
+  "sanitizer": null,
+  "schema": 1,
+  "target": "STM32L072CBT6 Q5"
+}

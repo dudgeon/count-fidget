@@ -1,6 +1,33 @@
 # Local continuation handoff
 
-## Active Q4 checkpoint — 24 September 2026
+## Active Q5 checkpoint — 25 September 2026
+
+The user asked for all findings from the Q4 simulation review to be resolved, plus a soft power key, a battery gauge with low warning and storage cut-off, charge status, a reachable hardware reset, new key logic (**both keys: increment wins; reset only after a deliberate 2 s hold and release**), a smaller enclosure and a BOM of standard JLC inventory parts only. **Q5 implements this as a coordinated revision of Q4:**
+- same STM32L072CBT6 / ROM USB DFU, FM25V02A FRAM journal (Q4-compatible), HS96L01W4S03 SPI OLED module and 42 × 54 × 1 mm two-layer board;
+- adds a COUNT-key soft power latch on U7 (~8 µA off), a vendor-soldered LIR2032 holder (BT1) with an onboard NTC in place of the pack harness, SYS/2 battery sense and BQ25185 STAT inputs;
+- 93 references: 79 fitted (76 vendor SMT + 3 home through-hole), 41 exact MPNs, all passing a read-only 10-board JLC stock screen;
+- five-part printed enclosure (base, front cover, rear key plate, two keycaps), 47.2 × 59.2 × 16.2 mm.
+
+Start at `docs/REVIEW-Q5-2026-09-25.md`, then `docs/q5-power-design.md` and `docs/q5-firmware.md`. Q5 lives in `electronics/q5/`, `firmware/q5-stm32/`, `mechanical/q5/`, `procurement/q5/`, `simulation/q5-*` and `scripts/*q5*`. Q1–Q4 artifacts are frozen; never run a Q4 builder against Q5.
+
+Evidence:
+- fresh KiCad 10.0.6 ERC/DRC/unconnected/parity all zero;
+- 42/42 verifier corruptions rejected;
+- full and UBSan firmware suites plus 13 image negatives passed;
+- 35 instruction-level emulator scenarios on the final ELF with zero failures;
+- five valid/manifold enclosure parts with zero modelled collisions.
+
+**None of it is a measurement.** Preserve the Q5 physical gates:
+- latch timing with a real contact and clean release;
+- ADC/gauge accuracy and STAT behaviour;
+- holder contact/retention and USB-first cell insertion (the cold-insertion counterexample remains);
+- the display module power tree and repeated hard resets;
+- USB cable fit, printed keycaps, pinhole access;
+- solder process.
+
+**The quote pause remains in force:** no uploads, quote-draft changes, vendor messages, paid sourcing, purchases or manufacturing release. Read-only public stock research is allowed. Commit/push Q5 work to `claude/loving-noether-4qogm0` and its draft PR #10; do not merge.
+
+## Previous Q4 checkpoint — 24 September 2026 (superseded by Q5 where inconsistent)
 
 The user authorized choosing and implementing the best product architecture, prioritizing reliability, simple integration and easy home bootloading over small price differences. **Q4 is implemented with STM32L072CBT6, factory ROM USB DFU, a complete SPI OLED module and external SPI FRAM.** It has a 42 × 54 × 1 mm two-layer PCB, 70 fitted parts (67 factory SMT plus three home through-hole placements) and four PCB mounting holes. The USB-C port supports the intended home programming workflow through a data cable; physical enumeration remains untested.
 
@@ -10,7 +37,7 @@ Start at `docs/REVIEW-Q4-2026-09-24.md` and `docs/Q4-implementation.md`. Native 
 
 Preserve the explicit physical gates in the Q4 review: regulator/transient and memory-rail behavior, real USB/MCU operation, battery/protection/temperature and insertion/recovery, qualified pack/NTC harness, display current/runtime, solder process and enclosure fit. Cold insertion still has a conditional counterexample. USB-first commissioning is a proposed testable workflow, not a demonstrated guarantee. Native checks, host firmware tests and ideal ngspice subcircuits are not whole-board simulation or physical qualification. The selected PCB MPNs have timestamped positive stock evidence; stock is unallocated, and the offboard pack/keycaps/process are not qualified.
 
-## Historical checkpoints — superseded where inconsistent with Q4
+## Historical checkpoints — superseded where inconsistent with Q5
 
 ## Continue here — 23 September 2026: USB-programmable candidate
 

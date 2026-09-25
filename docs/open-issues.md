@@ -1,5 +1,20 @@
 # Open issues
 
+## Q5 status — 25 September 2026
+
+GitHub issues #2–#9, #12 and #13 from the Q4 simulation review are resolved in the Q5 design files. See the per-issue table in [REVIEW-Q5](REVIEW-Q5-2026-09-25.md). The following remain open as physical gates. They are not closed by any file in this repository:
+
+| ID | Q5 open item | Required closure |
+|---|---|---|
+| E28 | Soft power latch: minimum press to latch, U7 release, USB unplug during Stop | Scope SYS_ON/SYS_LOAD with a real MX contact; confirm the board never half-powers |
+| E29 | Battery sense and gauge | Calibrate PA4 through the 75 kΩ source; check the 3.95/3.80/3.70/3.55/3.35 V thresholds against a real LIR2032 under display load; measure ~8 µA off current |
+| E30 | Cell holder and first connection | Holder contact resistance and retention; cell insertion with USB present; the retained cold-insertion counterexample (E25) on real cells; TH1 coupling to the cell |
+| E31 | Display module supply (#8) | Module power tree; VBAT/pump/current at 3.15–3.26 V; 200 × NRST with the display on |
+| E32 | Enclosure | USB-C plugs in both orientations; printed keycap fit/travel; pinhole reach to SW3; load supports |
+| P06 | Through-hole route | Home solder vs JLC THT cost comparison when quoting is reauthorised |
+
+Q4 design choices addressed E26 (the common regulated rail) and E27 (superseded by external FRAM); their physical verification remains among the Q4 gates in `REVIEW-Q4-2026-09-24.md`, which still apply to Q5 wherever the circuit is unchanged.
+
 ## MCU follow-up — 23 September 2026
 
 [The options study](mcu-options-2026-09-23.md) recommends STM32L072CBT6 for the next candidate. It does not alter Q3 or close any issue below. New ngspice subcircuits reproduce E21/E25 under explicitly hypothetical parameters; a whole-board simulation has not been performed.

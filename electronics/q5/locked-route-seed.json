@@ -1,0 +1,97 @@
+{
+  "revision": "Q5",
+  "tracks_and_vias": [
+    {
+      "net": "SYS",
+      "layer": "B.Cu",
+      "width_mm": 0.2,
+      "points": [
+        [
+          33.9,
+          9.8
+        ],
+        [
+          33.4,
+          10.3
+        ],
+        [
+          33.4,
+          11.3
+        ]
+      ]
+    },
+    {
+      "net": "SYS",
+      "via": [
+        33.4,
+        11.3
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width_mm": 0.3,
+      "points": [
+        [
+          33.4,
+          11.3
+        ],
+        [
+          36.9,
+          14.8
+        ],
+        [
+          36.9,
+          21.0
+        ],
+        [
+          37.9,
+          22.0
+        ],
+        [
+          37.9,
+          32.0
+        ],
+        [
+          37.4,
+          32.5
+        ]
+      ]
+    },
+    {
+      "net": "SYS",
+      "via": [
+        37.4,
+        32.5
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "SYS",
+      "layer": "B.Cu",
+      "width_mm": 0.3,
+      "points": [
+        [
+          37.4,
+          32.5
+        ],
+        [
+          35.3,
+          32.9
+        ],
+        [
+          35.3,
+          35.55
+        ],
+        [
+          36.4625,
+          35.55
+        ]
+      ]
+    }
+  ],
+  "qualification": "Geometric seed only; fresh native DRC and completed-path review required."
+}

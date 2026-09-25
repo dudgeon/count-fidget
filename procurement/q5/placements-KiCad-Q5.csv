@@ -1,0 +1,80 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"BT1","LIR2032 holder","BatteryHolder_QJ_CR2032-BS-6-1",21.000000,-16.300000,0.000000,bottom
+"C1","2.2u","Capacitor_SMD_C_0805_2012Metric",35.600000,-3.600000,90.000000,bottom
+"C2","10u","Capacitor_SMD_C_0805_2012Metric",33.300000,-3.300000,90.000000,bottom
+"C3","2.2u","Capacitor_SMD_C_0805_2012Metric",40.400000,-15.200000,90.000000,bottom
+"C4","100n","Capacitor_SMD_C_0603_1608Metric",2.300000,-11.900000,0.000000,bottom
+"C5","2.2u","Capacitor_SMD_C_0805_2012Metric",37.600000,-44.600000,0.000000,bottom
+"C6","10u","Capacitor_SMD_C_0805_2012Metric",34.900000,-40.600000,90.000000,bottom
+"C7","100n","Capacitor_SMD_C_0603_1608Metric",27.400000,-28.600000,0.000000,bottom
+"C9","100n","Capacitor_SMD_C_0603_1608Metric",10.800000,-44.400000,0.000000,bottom
+"C10","100n","Capacitor_SMD_C_0603_1608Metric",11.400000,-33.800000,0.000000,bottom
+"C11","1n","Capacitor_SMD_C_0603_1608Metric",7.500000,-31.300000,0.000000,bottom
+"C12","1n","Capacitor_SMD_C_0603_1608Metric",3.800000,-32.900000,0.000000,bottom
+"C13","4.7n","Capacitor_SMD_C_0603_1608Metric",40.800000,-9.400000,90.000000,bottom
+"C20","100n","Capacitor_SMD_C_0603_1608Metric",11.700000,-1.200000,0.000000,bottom
+"C28","4.7n","Capacitor_SMD_C_0603_1608Metric",11.600000,-7.000000,0.000000,bottom
+"C29","4.7n","Capacitor_SMD_C_0603_1608Metric",40.800000,-35.000000,90.000000,bottom
+"C30","10u","Capacitor_SMD_C_0805_2012Metric",25.800000,-47.600000,90.000000,bottom
+"C31","100n","Capacitor_SMD_C_0603_1608Metric",17.000000,-38.200000,0.000000,bottom
+"C32","100n","Capacitor_SMD_C_0603_1608Metric",20.200000,-38.200000,0.000000,bottom
+"C33","100n","Capacitor_SMD_C_0603_1608Metric",27.300000,-34.600000,0.000000,bottom
+"C34","100n","Capacitor_SMD_C_0603_1608Metric",27.400000,-27.000000,0.000000,bottom
+"C35","100n","Capacitor_SMD_C_0603_1608Metric",14.200000,-28.200000,90.000000,bottom
+"C36","100n","Capacitor_SMD_C_0603_1608Metric",24.600000,-41.200000,0.000000,bottom
+"C37","100n","Capacitor_SMD_C_0603_1608Metric",3.800000,-29.600000,0.000000,bottom
+"C38","100n","Capacitor_SMD_C_0603_1608Metric",33.400000,-23.300000,90.000000,bottom
+"C39","100n","Capacitor_SMD_C_0603_1608Metric",30.200000,-35.400000,90.000000,bottom
+"D1","USB ESD","Package_TO_SOT_SMD_SOT-23-6",30.800000,-27.200000,90.000000,bottom
+"D2","USB ESD","Package_TO_SOT_SMD_SOT-23-6",30.800000,-31.500000,90.000000,bottom
+"D3","BAT54C","Package_TO_SOT_SMD_SOT-23",7.500000,-26.800000,0.000000,bottom
+"D4","1N4148WS","Diode_SMD_D_SOD-323",37.200000,-37.800000,0.000000,bottom
+"J1","USB-C power and DFU","Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",38.900000,-27.000000,-90.000000,bottom
+"Q1","Discharge FET","Package_TO_SOT_SMD_SOT-23",2.300000,-16.300000,90.000000,bottom
+"Q2","Charge FET","Package_TO_SOT_SMD_SOT-23",2.300000,-21.400000,90.000000,bottom
+"Q3","Charge enable","Package_TO_SOT_SMD_SOT-23",9.400000,-52.000000,0.000000,bottom
+"Q4","Charge enable hot gate","Package_TO_SOT_SMD_SOT-23",13.400000,-51.900000,0.000000,bottom
+"Q5","COUNT key level shift","Package_TO_SOT_SMD_SOT-23",11.500000,-28.000000,0.000000,bottom
+"R1","5.1k","Resistor_SMD_R_0603_1608Metric",33.400000,-26.900000,90.000000,bottom
+"R2","5.1k","Resistor_SMD_R_0603_1608Metric",33.400000,-30.300000,90.000000,bottom
+"R3","24k","Resistor_SMD_R_0603_1608Metric",38.400000,-7.000000,0.000000,bottom
+"R4","16.5k","Resistor_SMD_R_0603_1608Metric",38.400000,-8.600000,0.000000,bottom
+"R5","10k","Resistor_SMD_R_0603_1608Metric",38.400000,-11.800000,0.000000,bottom
+"R6","100k","Resistor_SMD_R_0603_1608Metric",30.600000,-2.900000,90.000000,bottom
+"R7","330","Resistor_SMD_R_0603_1608Metric",5.400000,-9.800000,90.000000,bottom
+"R8","2.2k","Resistor_SMD_R_0603_1608Metric",7.800000,-9.800000,90.000000,bottom
+"R9","3.3","Resistor_SMD_R_0603_1608Metric",6.000000,-22.200000,90.000000,bottom
+"R10","57.6k","Resistor_SMD_R_0603_1608Metric",7.200000,-46.400000,90.000000,bottom
+"R11","115k","Resistor_SMD_R_0603_1608Metric",6.600000,-49.400000,90.000000,bottom
+"R12","24.3k","Resistor_SMD_R_0603_1608Metric",14.400000,-45.400000,90.000000,bottom
+"R13","16.2k","Resistor_SMD_R_0603_1608Metric",14.400000,-48.600000,90.000000,bottom
+"R14","100k","Resistor_SMD_R_0603_1608Metric",17.200000,-52.600000,0.000000,bottom
+"R15","100k","Resistor_SMD_R_0603_1608Metric",17.200000,-51.000000,0.000000,bottom
+"R16","10k","Resistor_SMD_R_0603_1608Metric",11.400000,-32.200000,0.000000,bottom
+"R17","220k","Resistor_SMD_R_0603_1608Metric",7.500000,-29.700000,0.000000,bottom
+"R18","100k","Resistor_SMD_R_0603_1608Metric",3.800000,-31.300000,0.000000,bottom
+"R19","2k","Resistor_SMD_R_0603_1608Metric",38.400000,-10.200000,0.000000,bottom
+"R24","100k","Resistor_SMD_R_0603_1608Metric",5.200000,-6.500000,0.000000,bottom
+"R25","100k","Resistor_SMD_R_0603_1608Metric",8.400000,-6.500000,0.000000,bottom
+"R29","100k","Resistor_SMD_R_0603_1608Metric",11.000000,-4.400000,90.000000,bottom
+"R30","150k","Resistor_SMD_R_0603_1608Metric",40.800000,-42.200000,90.000000,bottom
+"R31","49.9k","Resistor_SMD_R_0603_1608Metric",40.800000,-45.400000,90.000000,bottom
+"R32","68","Resistor_SMD_R_0603_1608Metric",17.000000,-41.200000,0.000000,bottom
+"R33","100k","Resistor_SMD_R_0603_1608Metric",21.000000,-41.200000,0.000000,bottom
+"R34","100k","Resistor_SMD_R_0603_1608Metric",11.400000,-30.600000,0.000000,bottom
+"R35","1M","Resistor_SMD_R_0603_1608Metric",40.800000,-38.600000,90.000000,bottom
+"R36","150k","Resistor_SMD_R_0603_1608Metric",3.800000,-26.400000,0.000000,bottom
+"R37","150k","Resistor_SMD_R_0603_1608Metric",3.800000,-28.000000,0.000000,bottom
+"SW3","MCU RESET","XUNPU_TS-1088-AR02016_SMD",31.400000,-47.600000,0.000000,bottom
+"TH1","10k NTC B3380","Resistor_SMD_R_0603_1608Metric",13.700000,-25.450000,0.000000,bottom
+"U1","STM32L072CBT6","Package_QFP_LQFP-48_7x7mm_P0.5mm",20.600000,-31.800000,0.000000,bottom
+"U2","Li-ion charger","Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm",35.000000,-9.000000,0.000000,bottom
+"U3","3.20481V adjustable LDO","Package_SON_WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm",37.600000,-40.600000,0.000000,bottom
+"U4","Cell protector","Package_SON_WSON-6_1.5x1.5mm_P0.5mm",2.300000,-9.300000,0.000000,bottom
+"U5","Push-pull temperature window","Package_TO_SOT_SMD_SOT-23-8",10.800000,-47.600000,90.000000,bottom
+"U6","OLED power slew switch","Package_TO_SOT_SMD_SOT-23-6",7.900000,-2.200000,0.000000,bottom
+"U7","System soft-power latch switch","Package_TO_SOT_SMD_SOT-23-6",37.600000,-34.600000,0.000000,bottom
+"U8","SPI F-RAM 32KiB","Package_SO_SOIC-8_3.9x4.9mm_P1.27mm",21.000000,-47.600000,0.000000,bottom
+"DS1","SPI OLED module 128x64","HS96L01W4S03_Module_7Pin",21.000000,-16.700000,0.000000,top
+"SW1","COUNT / POWER","HanElectricity_CPG151101D13_MX_Plate",14.015000,-35.720000,0.000000,top
+"SW2","RESET COUNT / BOOT","HanElectricity_CPG151101D13_MX_Plate",33.065000,-35.720000,0.000000,top

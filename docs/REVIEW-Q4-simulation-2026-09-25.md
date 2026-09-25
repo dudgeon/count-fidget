@@ -1,5 +1,7 @@
 # Q4 simulation review — 25 September 2026
 
+> **Follow-up:** every issue raised here is resolved in the Q5 design. See [REVIEW-Q5-2026-09-25.md](REVIEW-Q5-2026-09-25.md). This review is kept as the Q4 record.
+
 Independent review of commit `5fa88f7` (Q4 STM32L072 / SPI OLED module / FM25V02A FRAM). It asks whether the design would work as a product, measures how well it would work, and lists improvements. **Nothing here is a hardware measurement.** The quote pause and every physical gate in `REVIEW-Q4-2026-09-24.md` remain in force; no vendor activity took place.
 
 ## Verdict

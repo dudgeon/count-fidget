@@ -1,0 +1,49 @@
+{
+  "ARM": {
+    "repository": "https://github.com/ARM-software/CMSIS_5",
+    "revision": "5.9.0"
+  },
+  "ST": {
+    "repository": "https://github.com/STMicroelectronics/cmsis-device-l0",
+    "revision": "7b7ae8cd71437331e1d7824f157d00c7bb4a5044"
+  },
+  "files": {
+    "arm/LICENSE.txt": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "arm/cmsis_compiler.h": {
+      "bytes": 9481,
+      "sha256": "b51963d271c1571ca3463654c76aa7ea50c4eac5d0a2710df10414ac64d9e0f8"
+    },
+    "arm/cmsis_gcc.h": {
+      "bytes": 63374,
+      "sha256": "43bfd1fe69fbbc2ca70aaf7d43cc3e20f16e0c7f66e1bdef9b51af6dc14b2617"
+    },
+    "arm/cmsis_version.h": {
+      "bytes": 1680,
+      "sha256": "184c19fd3ee73632edf35a0b4d49cd48be75fbf49e6ccb19d9db05fa83bea4b3"
+    },
+    "arm/core_cm0plus.h": {
+      "bytes": 49877,
+      "sha256": "a09fa9c6b8b21d1920bce15b98aa56182b027e9278cca0b154812bac2aea3cfa"
+    },
+    "arm/mpu_armv7.h": {
+      "bytes": 11731,
+      "sha256": "29206b52ee02290ed6f5a5415ebd4187de802cf176d9b3cb844390d8e5571372"
+    },
+    "st/LICENSE.md": {
+      "bytes": 9757,
+      "sha256": "dadb755f51d36614173b28c5790cb4a991e8f4cc822e5b634fd66a4f4145824d"
+    },
+    "st/stm32l072xx.h": {
+      "bytes": 596920,
+      "sha256": "d153a55736b25edcb291dc3e5706a2a1721b7ea0de40992eb7246e4e8e43082a"
+    },
+    "st/system_stm32l0xx.h": {
+      "bytes": 2327,
+      "sha256": "92bee36c2803ae8632e1da98b8297343f099a83c49b62539c7f66e0bc8af5fb0"
+    }
+  },
+  "schema": 1
+}

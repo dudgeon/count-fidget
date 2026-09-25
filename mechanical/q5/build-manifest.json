@@ -1,0 +1,18 @@
+{
+  "generator": "5bdb839e9be3b7f038fd567e64f9f7fe071600c6ad29a600cea4dfa429ac6872",
+  "board": "e796f5be743cc093f827b137a9b6b9fe90b22e3b3154b0d552f8eb761abdce48",
+  "model": "8598a77c4b34369b52f8bd8a0aa6ded701d959ed5214a3d3bf2009282282df61",
+  "outputs": {
+    "base-Q5.stl": "3524e7db477b7602b65a8b54ad3e5dcb766ba0c5074f4f41952505974f304662",
+    "lid-front-Q5.stl": "003a02cda96922e88c18dd90e188d819ca5bacdc8be5097abe2d508f17f82be8",
+    "lid-rear-Q5.stl": "c1a7665cc6e0f677233f49223dcf6dde3cf690a7ac80a1133ad1af67c9006851",
+    "keycap-count-Q5.stl": "18956c8ce33104455d29de4959e5e45c4db3d1ff83161700eccdf3f1bd240cf6",
+    "keycap-reset-Q5.stl": "c9ce00623c20d12faa7bfbe6dad07dc1bcf9d669ada46b2b5796294ac13928a2",
+    "enclosure-Q5.step": "03213c91e37e85fb441ff7adbea1fc5f60c5f8f03acca5499a09cab44c5a3e2d",
+    "board-geometry.json": "796441f5c3e3207875409cfcc4cd4f1ee728142f88d93cda6ef4381c676ad879",
+    "fit-report.json": "ee99cfefbd8421ad8c25e79c22245b77e3ac52109bafdfc654aa0d6dcde40727",
+    "assembled-Q5.png": "c41ffa79a17e27a56c798873c59741966aecd990f99177d7cb5bca6adc30a8c1",
+    "exploded-Q5.png": "8fb4a5cd642c82061d6fdfb6cd5ade97e7d8fab7e1f418c987bc093cf31c67a4",
+    "interior-Q5.png": "c103252e8485f617829f7db9ce2d2afb7169021397cf10792ae42874a2f5ca97"
+  }
+}
