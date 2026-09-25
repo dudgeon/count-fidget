@@ -72,15 +72,22 @@ def make_model():
     parts['U7']['notes'] = ('ON driven by D3/D4 OR and pulled down by R35; QOD NC. Off state removes every '
                             'load downstream of SYS. Does not limit upstream charger SYS/BAT capacitors.')
     parts['SW1'].update(value='COUNT / POWER', pins={'1': 'PWR_KEY', '2': 'SYS'})
-    parts['SW1']['notes'] = ('Exact clicky switch closing SYS to PWR_KEY: powers the board on and, through Q5, '
-                             'drives COUNT_N low. Home through-hole soldering after the rear key plate is fitted.')
+    # Design lock: vendor-placed MX hot-swap sockets replace soldered switches, so the
+    # clicky plate-mount switches (clipped into the printed plate) press in without
+    # soldering and JLC can assemble every soldered part. Needs the 1.6 mm board.
+    for ref, role in (('SW1', 'COUNT / POWER: closes SYS to PWR_KEY, powering the board on and, through Q5, driving COUNT_N low'),
+                      ('SW2', 'RESET COUNT / BOOT0')):
+        parts[ref].update(mpn='CPG151101S11-16', manufacturer='HanElectricity', lcsc='C41430893',
+                          footprint='CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11', side='bottom',
+                          notes=f'MX hot-swap socket, vendor SMT on the bottom side. {role}. The user presses a clicky '
+                                'MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.')
     add('D3', 'BAT54C', 'BAT54C,215', 'Nexperia', 'Package_TO_SOT_SMD_SOT-23',
         {'1': 'PWR_KEY', '2': 'PWR_HOLD', '3': 'SYS_ON'},
         'Common-cathode Schottky OR into U7 ON: A1 from the COUNT key, A2 from MCU PB2 PWR_HOLD.',
         'C37704', 'usb-power', symbol=pinmeta(['A1', 'A2', 'K'], {'1': 'passive', '2': 'passive', '3': 'passive'}))
     add('D4', '1N4148WS', '1N4148WS', 'Changjiang', 'Diode_SMD_D_SOD-323',
-        {'1': 'SYS_ON', '2': 'VBUS'},
-        'VBUS into U7 ON: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.',
+        {'1': 'VBUS_WAKE', '2': 'VBUS'},
+        'VBUS into U7 ON through R38: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.',
         'C2128', 'usb-power', symbol=pinmeta(['K', 'A'], {'1': 'passive', '2': 'passive'}))
     clone('Q5', 'Q3', {'1': 'PWR_KEY', '2': 'GND', '3': 'COUNT_N'}, 'mcu',
           'Mirrors the SYS-referenced COUNT key onto the unchanged active-low COUNT_N (R17/C11) input.')
@@ -90,6 +97,15 @@ def make_model():
         {'1': 'SYS_ON', '2': 'GND'},
         '1M U7 ON pull-down: the TPS22917 smart pull-down disconnects after ON is driven high (datasheet 7.3).',
         'C22935', 'usb-power')
+    # Review: limit and filter the VBUS path into the ON pin (6 V abs max) and hold ON
+    # through key bounce. R38 100k + C40 4.7nF: ON >= 3.2 V from 4.4 V VBUS, hot-plug
+    # spikes filtered (tau 0.47 ms), bounce gaps up to ~4.7 ms bridged (tau R35*C40).
+    clone('R38', 'R6', {'1': 'VBUS_WAKE', '2': 'SYS_ON'}, 'usb-power',
+          '100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.')
+    add('C40', '4.7n', 'GRM1885C1H472JA01D', 'Murata', 'Capacitor_SMD_C_0603_1608Metric',
+        {'1': 'SYS_ON', '2': 'GND'},
+        '4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); '
+        'U7 turns off ~10 ms after the last source is released.', 'C85980', 'usb-power')
     # Slew capacitors reduced so a normal key press latches (tON 3.8us/pF x 4.7nF = 17.9ms typ).
     for ref in ('C28', 'C29'):
         parts[ref].update(value='4.7n', mpn='GRM1885C1H472JA01D', lcsc='C85980',
@@ -114,8 +130,6 @@ def make_model():
         del parts[ref]
     clone('TP13', 'TP1', {'1': 'SYS_ON'}, 'usb-power', 'Bring-up: bridge to TP6 SYS to hold the board on without firmware')
     parts['TP13']['value'] = 'SYS_ON'
-    for ref in ('SW1', 'SW2'):
-        parts[ref]['assembly'] = 'home_through_hole'
     for p in parts.values():
         p.setdefault('assembly', 'jlc_smt')
     overrides_path = OUT / 'placement.json'
@@ -134,9 +148,13 @@ def make_model():
     model.update(revision='Q5 STM32 soft-power, on-board cell engineering candidate - NOT RELEASED',
         source_baseline='Frozen Q4 JSON; Q1/Q2/Q3/Q4 artifacts unchanged',
         source_baseline_sha256=hashlib.sha256(BASE.read_bytes()).hexdigest(),
-        board_mm=[42, 54, 1], layers=2, hardware_tested=False, manufacturing_released=False,
+        board_mm=[42, 54, 1.6], layers=2, hardware_tested=False, manufacturing_released=False,
         placement_status='Root-owned placement overrides; single-sided (bottom) factory SMT',
-        cost_intent='Standard JLC inventory only; no custom pack/harness; home through-hole limited to display/header and keys',
+        cost_intent='Standard JLC inventory only; no custom pack/harness; the only through-hole part is the display module on its header (home or JLC THT); switches press into vendor-placed hot-swap sockets',
+        loose_parts=[dict(ref='K1', mpn='CPG151101D13', manufacturer='HanElectricity', lcsc='C49234235', quantity=1,
+                          role='COUNT / POWER clicky MX switch; clips into the printed key plate, pins press into SW1'),
+                     dict(ref='K2', mpn='CPG151101D13', manufacturer='HanElectricity', lcsc='C49234235', quantity=1,
+                          role='RESET COUNT clicky MX switch; clips into the printed key plate, pins press into SW2')],
         parts=sorted(parts.values(), key=lambda p: p['ref']))
     model['symbol_pins'] = {r: copy.deepcopy(p['symbol_pins']) for r, p in parts.items() if 'symbol_pins' in p}
     model['fitted_components'] = sum(not p['ref'].startswith(('TP', 'H')) for p in parts.values())
@@ -146,6 +164,8 @@ def make_model():
         'Battery gauge thresholds are loaded-cell engineering choices; confirm on the qualified LIR2032 and holder contact resistance.',
         'Board-mounted NTC senses holder/board temperature, not the cell core; validate the 8-36 C window lag during charge.',
         'Holder accepts primary CR2032/ML2032 cells mechanically; charging one is hazardous. Labelling and user instructions are mandatory.',
+        'Hot-swap sockets need the 1.6 mm board and a fully seated switch; verify retention, 5,000-cycle rating and plate/socket alignment on the first article.',
+        'BT1 has a 180-degree-symmetric land pattern: confirm the + contact lands on pad 1 (CELL_P) in the JLC placement preview and with a meter before inserting a cell.',
         'Common rail tolerance, transients, reverse current, module effective capacitance and OLED low-voltage operation remain unmeasured.',
         'FRAM RC bounds assume effective C30>=6.8uF, maximum rail 3.3V, current<=3mA; review BOR4, PVD5, sleep/wake and off-state behavior.']
     return model

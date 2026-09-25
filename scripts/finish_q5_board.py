@@ -145,7 +145,8 @@ def main():
     p.SaveBoard(str(path),board)
     # Explicit requested construction. Fabricator material and tolerances are
     # unqualified; this is a two-layer quotation candidate, not fabrication
-    # authorization. 35+930+35 micrometres totals the requested1.0mm.
+    # authorization. 35+1530+35 micrometres totals the standard 1.6 mm that the
+    # MX hot-swap sockets require (switch pin length).
     source=path.read_text()
     if '(stackup' not in source:
         stack='''
@@ -154,7 +155,7 @@ def main():
             (layer "F.Paste" (type "Top Solder Paste"))
             (layer "F.Mask" (type "Top Solder Mask") (color "Green"))
             (layer "F.Cu" (type "copper") (thickness 0.035))
-            (layer "dielectric 1" (type "core") (thickness 0.93) (material "FR4 Tg150+ requested") (epsilon_r 4.5) (loss_tangent 0.02))
+            (layer "dielectric 1" (type "core") (thickness 1.53) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
             (layer "B.Cu" (type "copper") (thickness 0.035))
             (layer "B.Mask" (type "Bottom Solder Mask") (color "Green"))
             (layer "B.Paste" (type "Bottom Solder Paste"))

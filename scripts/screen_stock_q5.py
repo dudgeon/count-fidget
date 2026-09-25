@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MODEL = ROOT / 'electronics/q5/netlist-Q5.json'
 OUT = ROOT / 'procurement/q5/stock.json'
 HEADER = dict(mpn='PZ254V-11-07P', jlc_part='C492406', manufacturer='XFCN')
+SCREW = dict(mpn='PA2X6nie', lcsc='C357360', description='M2 x 6 cross pan-head self-tapping screw, nickel')
 JLC = 'https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList'
 
 
@@ -95,12 +96,26 @@ def main():
                      quantity_for_10=10, screening_attrition=2, screening_required_quantity=12,
                      available_order_quantity=h['available_order_quantity'], minimum_order=h['minimum_order'],
                      passes_stock_screen=h['available_order_quantity'] >= 12)]
+    # Variant B (JLC assembles everything): the display module is also a JLC library part.
+    tht_b = []
+    for p in fitted:
+        if p['assembly'] == 'home_through_hole':
+            o = jlc(p['lcsc']); observations.append(o)
+            tht_b.append(dict(mpn=p['mpn'], jlc_part=p['lcsc'], references=[p['ref']], quantity_for_10=10, screening_attrition=2,
+                              screening_required_quantity=12, available_order_quantity=o['available_order_quantity'],
+                              minimum_order=o['minimum_order'], library_type=o['library_type'], observed_at=o['observed_at'],
+                              passes_stock_screen=o['available_order_quantity'] >= 12))
     retail = []
     home = defaultdict(list)
     for p in fitted:
         if p['assembly'] == 'home_through_hole':
             home[(p['mpn'], p['lcsc'])].append(p['ref'])
     home[(HEADER['mpn'], HEADER['jlc_part'])] = ['DS1-INTERPOSER']
+    # Loose parts the user fits without soldering: clicky switches (into the plate and
+    # hot-swap sockets) and the four enclosure screws.
+    for item in model.get('loose_parts', []):
+        home[(item['mpn'], item['lcsc'])].append(item['ref'])
+    home[(SCREW['mpn'], SCREW['lcsc'])] = ['SCREW1', 'SCREW2', 'SCREW3', 'SCREW4']
     for (mpn, code), refs in sorted(home.items()):
         r = lcsc(code)
         need = 10 * len(refs); spares = max(2, math.ceil(need / 10))
@@ -118,13 +133,15 @@ def main():
                                       model_path='electronics/q5/netlist-Q5.json', fitted_identity_sha256=fitted_identity_digest(fitted),
                                       fitted_positions=len(fitted), exact_fitted_types=len(groups), assembly_role_positions=dict(roles),
                                       native_layout_binding_pending=False),
-                  observations=observations, fitted_bom_screen=screen, separate_hardware_screen=separate, retail_home_parts=retail,
+                  observations=observations, fitted_bom_screen=screen, separate_hardware_screen=separate,
+                  variant_b_jlc_through_hole_screen=tht_b, retail_home_parts=retail,
                   user_supplied=[dict(item='LIR2032 rechargeable Li-ion coin cell', quantity_per_board=1,
                                       note='Consumable inserted by the user into BT1; not a JLC/LCSC assembly part; never a primary CR2032/ML2032.')])
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(record, indent=2) + '\n')
-    fails = [s['mpn'] for s in screen if not s['passes_stock_screen']] + [r['mpn'] for r in retail if not r['passes_retail_stock_screen']]
-    print(f'{len(screen)} fitted MPNs screened; {len(retail)} retail home parts; failures: {fails or "none"}')
+    fails = ([s['mpn'] for s in screen + tht_b if not s['passes_stock_screen']] +
+             [r['mpn'] for r in retail if not r['passes_retail_stock_screen']])
+    print(f'{len(screen)} fitted MPNs screened; {len(tht_b)} variant-B THT; {len(retail)} retail/loose parts; failures: {fails or "none"}')
     for s in sorted(screen, key=lambda s: s['available_order_quantity'])[:6]:
         print('  lowest', s['mpn'], s['jlc_part'], s['available_order_quantity'], s['library_type'])
 

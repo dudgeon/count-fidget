@@ -1,9 +1,12 @@
 """Export Q5 engineering review files from current, saved native validation.
 
 No uploads, quotation changes, purchases or manufacturing release are performed.
-The factory list contains every jlc_smt placement (76 in Q5, all on the bottom);
-DS1/SW1/SW2 and their separate header are home-completion scope. The only
-offboard item is the user-supplied LIR2032 cell; keycaps are printed enclosure parts.
+The factory list contains every jlc_smt placement (80 in Q5, all on the bottom,
+including the two MX hot-swap sockets). Two quotation variants are exported:
+  A: JLC SMT only; the user solders DS1 and its separate seven-pin header (14 joints);
+  B: JLC SMT plus JLC through-hole assembly of DS1 and the header (no home soldering).
+In both, the user presses the two loose clicky switches into the printed key plate and
+the sockets, fits four M2 x 6 screws and inserts the user-supplied LIR2032 cell.
 """
 import argparse
 from collections import Counter, defaultdict
@@ -35,8 +38,8 @@ GERBER_SUFFIXES = {
 }
 EXPORT_NAMES = {
     'BOM-PCBA-Q5.csv', 'BOM-JLCPCB-Q5.csv', 'BOM-Q5.csv',
-    'OFFBOARD-items-Q5.csv', 'HOME-COMPLETION-Q5.csv', 'SEPARATE-HARDWARE-Q5.csv',
-    'CPL-JLCPCB-Q5.csv', 'placements-KiCad-Q5.csv',
+    'OFFBOARD-items-Q5.csv', 'HOME-COMPLETION-Q5.csv', 'SEPARATE-HARDWARE-Q5.csv', 'LOOSE-PARTS-Q5.csv',
+    'CPL-JLCPCB-Q5.csv', 'BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv', 'CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv', 'placements-KiCad-Q5.csv',
     'assembly-top-Q5.svg', 'assembly-bottom-Q5.svg',
     'click-counter-Q5-Gerbers.zip', 'drill-report-Q5.txt', 'REVIEW-EXPORTS-Q5.md',
 } | {'gerbers/click-counter-Q5-' + suffix for suffix in GERBER_SUFFIXES}
@@ -97,13 +100,16 @@ def groups(parts):
     return result
 
 
-EXPECTED = dict(references=93, fitted=79, smt=76, home=3, features=14, types=41)
+EXPECTED = dict(references=95, fitted=81, smt=80, home=1, features=14, types=41)
+SCREW = dict(mpn='PA2X6nie', lcsc='C357360', manufacturer='Guangdong Yuanhao', quantity=4,
+             description='M2 x 6 cross pan-head self-tapping screw (nickel)')
+DS1_FOOTPRINT = ROOT / 'electronics/q5/CountFidgetQ5.pretty/HS96L01W4S03_Module_7Pin.kicad_mod'
 
 
 def selected_parts(model):
     parts = model['parts']
     require(len(parts) == len({p['ref'] for p in parts}) == EXPECTED['references'], 'Unexpected native reference count')
-    require(model['layers'] == 2 and model['board_mm'] == [42, 54, 1], 'Wrong Q5 board stack or outline')
+    require(model['layers'] == 2 and model['board_mm'] == [42, 54, 1.6], 'Wrong Q5 board stack or outline')
     require(model.get('hardware_tested') is False and model.get('manufacturing_released') is False,
             'Model must preserve unqualified engineering status')
     require(Counter(p.get('assembly') for p in parts) ==
@@ -111,7 +117,9 @@ def selected_parts(model):
     fitted = sorted((p for p in parts if p['assembly'] != 'pcb_feature'), key=lambda p: ref_key(p['ref']))
     smt = [p for p in fitted if p['assembly'] == 'jlc_smt']
     home = [p for p in fitted if p['assembly'] == 'home_through_hole']
-    require({p['ref'] for p in home} == {'DS1', 'SW1', 'SW2'}, 'Home completion reference set differs')
+    require({p['ref'] for p in home} == {'DS1'}, 'Home completion reference set differs')
+    require([(q['ref'], q['mpn'], q['lcsc']) for q in model.get('loose_parts', [])] ==
+            [('K1', 'CPG151101D13', 'C49234235'), ('K2', 'CPG151101D13', 'C49234235')], 'Loose switch contract differs')
     require(all(p['side'] == 'bottom' for p in smt) and all(p['side'] == 'top' for p in home),
             'Single-sided (bottom) factory SMT contract changed')
     require(len(groups(fitted)) == len({p['mpn'] for p in fitted}) == EXPECTED['types'],
@@ -194,16 +202,23 @@ def validate_sources(model, stock, hardware, model_hash):
             separate[0]['screening_required_quantity'] == 12 and separate[0]['passes_stock_screen'] is True,
             'Separate header screen differs')
     retail = {(r['mpn'], r['lcsc_part']): r for r in stock['retail_home_parts']}
-    expected_retail = set(groups(home)) | {(header['mpn'], header['jlc_part'])}
-    require(len(retail) == len(stock['retail_home_parts']) == 3 and set(retail) == expected_retail,
-            'Retail screen must cover exact home components and separate header')
+    expected_retail = set(groups(home)) | {(header['mpn'], header['jlc_part']), ('CPG151101D13', 'C49234235'),
+                                           (SCREW['mpn'], SCREW['lcsc'])}
+    require(len(retail) == len(stock['retail_home_parts']) == 4 and set(retail) == expected_retail,
+            'Retail screen must cover the home display, header, loose switches and screws')
     for key, matching in groups(home).items():
         check_retail(retail[key], [p['ref'] for p in matching], *key, len(matching))
     check_retail(retail[(header['mpn'], header['jlc_part'])], ['DS1-INTERPOSER'],
                  header['mpn'], header['jlc_part'], 1)
+    check_retail(retail[('CPG151101D13', 'C49234235')], ['K1', 'K2'], 'CPG151101D13', 'C49234235', 2)
+    check_retail(retail[(SCREW['mpn'], SCREW['lcsc'])], ['SCREW1', 'SCREW2', 'SCREW3', 'SCREW4'],
+                 SCREW['mpn'], SCREW['lcsc'], 4)
+    tht = stock['variant_b_jlc_through_hole_screen']
+    require(len(tht) == 1 and (tht[0]['mpn'], tht[0]['jlc_part'], tht[0]['references']) == ('HS96L01W4S03', 'C5139758', ['DS1'])
+            and tht[0]['passes_stock_screen'] is True, 'Variant B JLC display screen missing or failing')
     return {'model_references': EXPECTED['references'], 'fitted_references': EXPECTED['fitted'], 'distinct_exact_mpns': EXPECTED['types'],
             'jlc_smt_references': EXPECTED['smt'], 'jlc_smt_exact_mpns': len(groups(smt)),
-            'home_through_hole_references': ['DS1', 'SW1', 'SW2'],
+            'home_through_hole_references': ['DS1'], 'loose_switches': ['K1', 'K2'], 'screws_per_board': 4,
             'separate_header_quantity_per_board': 1, 'screened_boards': 10,
             'minimum_observed_jlc_stock': min((s['available_order_quantity'], s['mpn']) for s in screen),
             'catalog_observation_range_utc': [min(o['observed_at'] for o in selected_observations),
@@ -226,6 +241,15 @@ def table_rows(model, stock, hardware):
                  'Catalog screened; stack/solder fit unqualified',
                  'One header at DS1; no separate placement. Fourteen joints: seven module and seven host. '
                  'Loose header inclusion with module is unconfirmed; account once. ' + header['assembly_status']]]
+    loose = [['Clicky MX switch, plate mount (COUNT / POWER)', 'K1', 'LOOSE_PART', 1, 'HanElectricity', 'CPG151101D13', 'C49234235',
+              'user_presses_into_plate_and_SW1_socket', 'top', 'Catalog screened; retention in the printed plate/socket unqualified',
+              'Clip into the rear key plate, then press the plate and switches into the hot-swap sockets. No soldering.'],
+             ['Clicky MX switch, plate mount (RESET COUNT)', 'K2', 'LOOSE_PART', 1, 'HanElectricity', 'CPG151101D13', 'C49234235',
+              'user_presses_into_plate_and_SW2_socket', 'top', 'Catalog screened; retention in the printed plate/socket unqualified',
+              'Clip into the rear key plate, then press the plate and switches into the hot-swap sockets. No soldering.'],
+             [SCREW['description'], 'SCREW1-SCREW4', 'LOOSE_PART', SCREW['quantity'], SCREW['manufacturer'], SCREW['mpn'], SCREW['lcsc'],
+              'user_fits_enclosure', '', 'Catalog screened; thread strength in printed bosses unqualified',
+              'Through the lid-boss floor and PCB mounting holes into 1.7 mm base pilots. LCSC retail (not a JLC placement).']]
     offboard = [
         ['LIR2032 rechargeable Li-ion coin cell (user supplied)', 'BAT1', 'OFFBOARD', 1, 'USER_SUPPLIED', 'LIR2032', '',
          'user_inserts_into_BT1', '', 'Consumable; exact cell brand and holder contact resistance unqualified',
@@ -237,22 +261,25 @@ def table_rows(model, stock, hardware):
     shown_retail_groups = set()
     for part in home:
         r = retail[(part['mpn'], part['lcsc'])]
-        sequence = ('Solder separate seven-pin header to module and host with front cover removed; '
-                    '14 joints total counted once with DS1, trim to mechanical envelope.' if part['ref'] == 'DS1' else
-                    'Seat switch in rear key plate BEFORE soldering its two electrical leads to host PCB.')
+        sequence = ('Variant A only: solder the separate seven-pin header to module and host (front cover removed); '
+                    '14 joints, trim to the mechanical envelope. Variant B: JLC through-hole assembly.')
         key = (part['mpn'], part['lcsc'])
         grouped_quantity = r['rounded_screening_quantity'] if key not in shown_retail_groups else ''
         shown_retail_groups.add(key)
         home_rows.append(bom_row(part) + [r['source'], r['observed_at'], r['in_stock'], r['minimum_order'],
                          r['order_multiple'], 10, ','.join(r['references']), grouped_quantity,
-                         14 if part['ref'] == 'DS1' else 2, sequence])
+                         14, sequence])
+    full = jlc + [[p['mpn'], p['ref'], p['footprint'], p['lcsc']] for p in home] + \
+        [[header['mpn'], 'DS1H', 'PinHeader_1x07_P2.54mm (stacked under DS1)', header['jlc_part']]]
     return {
         'BOM-PCBA-Q5.csv': (BOM_HEADER, pcb),
         'BOM-JLCPCB-Q5.csv': (JLC_HEADER, jlc),
+        'BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv': (JLC_HEADER, full),
         'HOME-COMPLETION-Q5.csv': (HOME_HEADER, home_rows),
         'SEPARATE-HARDWARE-Q5.csv': (BOM_HEADER, separate),
+        'LOOSE-PARTS-Q5.csv': (BOM_HEADER, loose),
         'OFFBOARD-items-Q5.csv': (BOM_HEADER, offboard),
-        'BOM-Q5.csv': (BOM_HEADER, pcb + separate + offboard),
+        'BOM-Q5.csv': (BOM_HEADER, pcb + separate + loose + offboard),
     }
 
 
@@ -278,10 +305,20 @@ def native_positions(directory, model):
     return data
 
 
-def cpl_rows(positions, model):
-    smt_refs = {p['ref'] for p in selected_parts(model)[1]}
-    return [[r['Ref'], r['PosX'] + 'mm', r['PosY'] + 'mm', r['Side'].title(), r['Rot']]
-            for r in sorted(positions, key=lambda r: ref_key(r['Ref'])) if r['Ref'] in smt_refs]
+def cpl_rows(positions, model, full=False):
+    _, smt, home = selected_parts(model)
+    refs = {p['ref'] for p in smt} | ({p['ref'] for p in home} if full else set())
+    rows = [[r['Ref'], r['PosX'] + 'mm', r['PosY'] + 'mm', r['Side'].title(), r['Rot']]
+            for r in sorted(positions, key=lambda r: ref_key(r['Ref'])) if r['Ref'] in refs]
+    if full:
+        # The stacked header sits on DS1's seven host holes: its centre is the pad-row centroid.
+        pads = [tuple(map(float, m)) for m in re.findall(r'\(pad "\d" thru_hole \w+ \(at (-?[\d.]+) (-?[\d.]+)', DS1_FOOTPRINT.read_text())]
+        require(len(pads) == 7, 'DS1 footprint pad row not found')
+        ds1 = next(r for r in positions if r['Ref'] == 'DS1')
+        require(float(ds1['Rot']) % 360 == 0, 'DS1 header position assumes an unrotated module')
+        cx = float(ds1['PosX']) + sum(x for x, _ in pads) / 7; cy = float(ds1['PosY']) - sum(y for _, y in pads) / 7
+        rows.append(['DS1H', f'{cx:.4f}mm', f'{cy:.4f}mm', 'Top', '0'])
+    return rows
 
 
 def deterministic_zip(directory):
@@ -301,11 +338,15 @@ def validate_exports(directory, model, stock, hardware):
     cpl = cpl_rows(positions, model)
     require(len(cpl) == EXPECTED['smt'], 'Factory CPL count differs')
     check_csv(directory, 'CPL-JLCPCB-Q5.csv', CPL_HEADER, cpl)
+    full = cpl_rows(positions, model, full=True)
+    require(len(full) == EXPECTED['smt'] + 2 and {r[0] for r in full} - {r[0] for r in cpl} == {'DS1', 'DS1H'},
+            'Full-assembly CPL must add exactly DS1 and its header')
+    check_csv(directory, 'CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv', CPL_HEADER, full)
     fabrication = directory / 'gerbers'
     expected = {'click-counter-Q5-' + suffix for suffix in GERBER_SUFFIXES}
     require({p.name for p in fabrication.iterdir()} == expected, 'Missing/unexpected fabrication file or inner copper layer')
     job = json.loads((fabrication / 'click-counter-Q5-job.gbrjob').read_text())
-    require(job['GeneralSpecs']['LayerNumber'] == 2 and job['GeneralSpecs']['BoardThickness'] == 1.0 and
+    require(job['GeneralSpecs']['LayerNumber'] == 2 and job['GeneralSpecs']['BoardThickness'] == 1.6 and
             job['GeneralSpecs']['ProjectId']['Name'] == 'click-counter-Q5', 'Wrong Gerber project/stack')
     require({x['Name'] for x in job['MaterialStackup'] if x['Type'] == 'Copper'} == {'F.Cu', 'B.Cu'},
             'Gerber job copper stack differs')
@@ -316,7 +357,7 @@ def validate_exports(directory, model, stock, hardware):
             {'Copper,L1,Top', 'Copper,L2,Bot'}, 'Gerber copper functions differ')
     geometry = r'(?:D01|D03|G36|G37)\*'
     require(not re.search(geometry, (fabrication / 'click-counter-Q5-F_Paste.gtp').read_text()),
-            'Top paste must be empty for the home-fitted display and switches')
+            'Top paste must be empty: the only top-side part is the through-hole display')
     require(re.search(geometry, (fabrication / 'click-counter-Q5-B_Paste.gbp').read_text()),
             'Bottom SMT paste geometry missing')
     for layer in ('F_Cu.gtl', 'B_Cu.gbl', 'Edge_Cuts.gm1'):
@@ -338,9 +379,10 @@ def validate_exports(directory, model, stock, hardware):
             data = path.read_text(encoding='utf-8')
             require(not re.search(r'/Users/|/private/|file://|(?:[A-Z]:\\Users\\)', data),
                     f'Private local path in public export: {path.name}')
-    return {'engineering_pcb_bom_rows': EXPECTED['fitted'], 'engineering_complete_bom_rows': EXPECTED['fitted'] + 2,
-            'jlc_smt_bom_and_cpl_rows': EXPECTED['smt'], 'native_placement_rows': EXPECTED['fitted'], 'home_completion_rows': 3,
-            'separate_header_rows': 1, 'home_solder_joints_per_board': 18,
+    return {'engineering_pcb_bom_rows': EXPECTED['fitted'], 'engineering_complete_bom_rows': EXPECTED['fitted'] + 1 + 3 + 1,
+            'jlc_smt_bom_and_cpl_rows': EXPECTED['smt'], 'full_assembly_bom_and_cpl_rows': EXPECTED['smt'] + 2,
+            'native_placement_rows': EXPECTED['fitted'], 'home_completion_rows': 1, 'loose_part_rows': 3,
+            'separate_header_rows': 1, 'home_solder_joints_per_board_variant_a': 14, 'home_solder_joints_per_board_variant_b': 0,
             'offboard_rows': 1, 'offboard_user_supplied_cell_only': True,
             'copper_layers': 2, 'gerber_and_drill_files': len(expected), 'top_paste_geometry': False,
             'bottom_paste_geometry': True, 'archive_members_equal_native_exports': True,
@@ -369,30 +411,34 @@ def input_hashes(validation):
 
 
 def review_readme():
-    return '''# Q5 engineering review exports
+    return '''# Q5 fabrication and assembly exports
 
-These files are for engineering review only. Hardware has not been physically
-qualified. No upload, quotation, purchase or manufacturing release is authorized.
+Engineering outputs for JLCPCB quotation. The hardware has not been physically
+qualified. A quote is not an order: no purchase or manufacturing release is authorized.
 
-- `BOM-JLCPCB-Q5.csv` has four unambiguous import columns and exactly 76 SMT
-  references, all standard JLC inventory parts; `CPL-JLCPCB-Q5.csv` contains the
-  same 76 references. All factory SMT is on the bottom side (single-sided assembly),
-  including the BT1 LIR2032 holder and the onboard NTC TH1.
-- `BOM-PCBA-Q5.csv` and `placements-KiCad-Q5.csv` describe all 79 fitted parts.
-- `HOME-COMPLETION-Q5.csv` lists DS1 and the two key switches (loose LCSC retail
-  parts). Fit the rear key plate BEFORE soldering the four switch leads; solder the
-  seven-pin display header with the front cover removed (14 joints). 18 joints total.
-- `SEPARATE-HARDWARE-Q5.csv` accounts for one PZ254V-11-07P interposer header.
-- `OFFBOARD-items-Q5.csv` lists only the user-supplied LIR2032 cell. Keycaps are
-  printed enclosure parts (`mechanical/q5`). The 14 test/mounting features are
-  neither purchased parts nor DNP parts.
-- The native two-layer Gerbers/drills, their exact ZIP and assembly SVGs are review
-  outputs. No top stencil paste is present.
+Board: 42 x 54 mm, 2 layers, 1.6 mm FR-4, 1 oz, ENIG, green mask / white silk.
+All factory SMT is on the BOTTOM side (single-sided assembly).
 
-CPL X/Y, rotations and sides come from KiCad's native placement export (negative
-Y). No manufacturer-specific rotation correction is assumed; the importer's
-orientation handling needs authorized assembly review. Stock counts are
-timestamped, unreserved public catalog observations in `stock.json`.
+Two quotation variants:
+
+| Variant | BOM | CPL | Who solders what |
+|---|---|---|---|
+| A | `BOM-JLCPCB-Q5.csv` (80 rows) | `CPL-JLCPCB-Q5.csv` | JLC: all 80 SMT parts. User: DS1 display on its 7-pin header (14 joints) |
+| B | `BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv` (82 rows) | `CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv` | JLC: all SMT plus through-hole DS1 (C5139758) stacked on header DS1H (C492406), module PCB 2.5 mm above the host, pins trimmed <= 1 mm |
+
+Both variants: the two clicky switches (K1/K2, C49234235) clip into the printed key
+plate and press into the vendor-placed hot-swap sockets SW1/SW2 (no soldering); four
+M2 x 6 self-tapping screws (C357360) close the printed enclosure; the user inserts a
+rechargeable LIR2032 (never a primary CR2032). See `LOOSE-PARTS-Q5.csv`,
+`HOME-COMPLETION-Q5.csv`, `SEPARATE-HARDWARE-Q5.csv` and `OFFBOARD-items-Q5.csv`.
+
+Placement review items for the JLC DFM preview (bottom side, KiCad rotations, no
+manufacturer correction applied): polarity/pin 1 of U1-U8, Q1-Q5, D1-D4, J1, the
+BT1 holder (+ contact on pad 1 / CELL_P, marked + on the silkscreen) and the two
+hot-swap sockets (pads beside the 3.0 mm switch-pin holes).
+
+`BOM-PCBA-Q5.csv` / `placements-KiCad-Q5.csv` describe all 81 fitted parts. Stock
+counts are timestamped, unreserved public catalogue observations in `stock.json`.
 See `export-manifest-Q5.json` for exact source/output hashes and checks.
 '''
 
@@ -428,6 +474,7 @@ def export(args, output):
     cli('pos', '--output', output / 'placements-KiCad-Q5.csv', '--format', 'csv', '--units', 'mm', '--side', 'both', '--exclude-dnp')
     positions = native_positions(output, model)
     write_csv(output / 'CPL-JLCPCB-Q5.csv', CPL_HEADER, cpl_rows(positions, model))
+    write_csv(output / 'CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv', CPL_HEADER, cpl_rows(positions, model, full=True))
     for side, layer in [('top', 'F'), ('bottom', 'B')]:
         options = ['svg', '--output', output / f'assembly-{side}-Q5.svg', '--mode-single', '--layers',
                    f'{layer}.Cu,{layer}.Fab,{layer}.SilkS,Edge.Cuts', '--fit-page-to-board',
@@ -443,8 +490,8 @@ def export(args, output):
     products = [p for p in sorted(output.rglob('*')) if p.is_file()]
     manifest = {
         'schema_version': 1, 'revision': 'Q5 engineering review candidate', 'status': 'PASS_REVIEW_EXPORT_CHECKS_ONLY',
-        'hardware_tested': False, 'manufacturing_released': False, 'vendor_upload_authorized': False,
-        'quote_pause': True, 'source_board_sha256': initial[BOARD.relative_to(ROOT).as_posix()],
+        'hardware_tested': False, 'manufacturing_released': False,
+        'quote_authorization': 'JLCPCB quotes for variants A and B only (user, 25 Sep 2026); no order, payment or release', 'source_board_sha256': initial[BOARD.relative_to(ROOT).as_posix()],
         'inputs_sha256': initial, 'kicad_cli': tool, 'commands': commands,
         'source_checks': source_checks, 'export_checks': checks,
         'files': {str((DEST / p.relative_to(output)).relative_to(ROOT)):
@@ -462,7 +509,7 @@ def export(args, output):
                 'Published output copy differs: ' + name)
     require(input_hashes(validation) == initial, 'Sources changed while publishing staged exports')
     MANIFEST.write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
-    print('Q5 review exports checked: 79 board parts, 76 SMT BOM/CPL, 3 home THT parts and separate header. Hardware unqualified; quote pause remains.')
+    print('Q5 exports checked: 81 board parts; variant A 80 SMT BOM/CPL (DS1 home-soldered); variant B 82 rows incl. DS1 + header THT. Hardware unqualified.')
 
 
 def main():

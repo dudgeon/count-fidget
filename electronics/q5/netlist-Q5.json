@@ -2,7 +2,7 @@
   "board_mm": [
     42,
     54,
-    1
+    1.6
   ],
   "layers": 2,
   "revision": "Q5 STM32 soft-power, on-board cell engineering candidate - NOT RELEASED",
@@ -477,6 +477,25 @@
       "assembly": "jlc_smt"
     },
     {
+      "ref": "C40",
+      "value": "4.7n",
+      "mpn": "GRM1885C1H472JA01D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
+      "pins": {
+        "1": "SYS_ON",
+        "2": "GND"
+      },
+      "notes": "4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.",
+      "x": 40.8,
+      "y": 31.5,
+      "rotation": 90,
+      "side": "bottom",
+      "sheet": "usb-power",
+      "lcsc": "C85980",
+      "assembly": "jlc_smt"
+    },
+    {
       "ref": "C5",
       "value": "2.2u",
       "mpn": "GRM21BR71E225KE11L",
@@ -677,10 +696,10 @@
       "manufacturer": "Changjiang",
       "footprint": "CountFidgetQ5:Diode_SMD_D_SOD-323",
       "pins": {
-        "1": "SYS_ON",
+        "1": "VBUS_WAKE",
         "2": "VBUS"
       },
-      "notes": "VBUS into U7 ON: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.",
+      "notes": "VBUS into U7 ON through R38: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.",
       "x": 37.2,
       "y": 37.8,
       "rotation": 0,
@@ -1464,6 +1483,27 @@
       "assembly": "jlc_smt"
     },
     {
+      "ref": "R38",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
+      "x": 37.2,
+      "y": 30.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS_WAKE",
+        "2": "SYS_ON"
+      },
+      "notes": "100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C14675",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
       "ref": "R4",
       "value": "16.5k",
       "mpn": "RC0603FR-0716K5L",
@@ -1592,40 +1632,40 @@
     {
       "ref": "SW1",
       "value": "COUNT / POWER",
-      "mpn": "CPG151101D13",
+      "mpn": "CPG151101S11-16",
       "manufacturer": "HanElectricity",
-      "footprint": "CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate",
-      "x": 14.015,
-      "y": 35.72,
+      "footprint": "CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11",
+      "x": 11.475,
+      "y": 40.8,
       "rotation": 0,
-      "side": "top",
+      "side": "bottom",
       "pins": {
         "1": "PWR_KEY",
         "2": "SYS"
       },
-      "notes": "Exact clicky switch closing SYS to PWR_KEY: powers the board on and, through Q5, drives COUNT_N low. Home through-hole soldering after the rear key plate is fitted.",
+      "notes": "MX hot-swap socket, vendor SMT on the bottom side. COUNT / POWER: closes SYS to PWR_KEY, powering the board on and, through Q5, driving COUNT_N low. The user presses a clicky MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.",
       "source_footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
-      "lcsc": "C49234235",
+      "lcsc": "C41430893",
       "sheet": "mcu",
       "assembly": "home_through_hole"
     },
     {
       "ref": "SW2",
       "value": "RESET COUNT / BOOT",
-      "mpn": "CPG151101D13",
+      "mpn": "CPG151101S11-16",
       "manufacturer": "HanElectricity",
-      "footprint": "CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate",
-      "x": 33.065,
-      "y": 35.72,
+      "footprint": "CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11",
+      "x": 30.525,
+      "y": 40.8,
       "rotation": 0,
-      "side": "top",
+      "side": "bottom",
       "pins": {
         "1": "BOOT_COUNT_RESET",
         "2": "VLOGIC"
       },
-      "notes": "Exact clicky switch; home through-hole soldering after rear key plate is fitted. Verify body/plate/lead fit before soldering; vendor SMT assembly excludes this part.",
+      "notes": "MX hot-swap socket, vendor SMT on the bottom side. RESET COUNT / BOOT0. The user presses a clicky MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.",
       "source_footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
-      "lcsc": "C49234235",
+      "lcsc": "C41430893",
       "sheet": "mcu",
       "assembly": "home_through_hole"
     },
@@ -2402,9 +2442,9 @@
   "source_baseline": "Frozen Q4 JSON; Q1/Q2/Q3/Q4 artifacts unchanged",
   "hardware_tested": false,
   "manufacturing_released": false,
-  "fitted_components": 79,
+  "fitted_components": 81,
   "placement_status": "Root-owned placement overrides; single-sided (bottom) factory SMT",
-  "cost_intent": "Standard JLC inventory only; no custom pack/harness; home through-hole limited to display/header and keys",
+  "cost_intent": "Standard JLC inventory only; no custom pack/harness; the only through-hole part is the display module on its header (home or JLC THT); switches press into vendor-placed hot-swap sockets",
   "source_baseline_sha256": "2ee9be24459e83c13af9585f1d83def47617b98fce6547d9f5a6a5c42dd06763",
   "symbol_pins": {
     "DS1": {
@@ -2832,7 +2872,27 @@
     "Battery gauge thresholds are loaded-cell engineering choices; confirm on the qualified LIR2032 and holder contact resistance.",
     "Board-mounted NTC senses holder/board temperature, not the cell core; validate the 8-36 C window lag during charge.",
     "Holder accepts primary CR2032/ML2032 cells mechanically; charging one is hazardous. Labelling and user instructions are mandatory.",
+    "Hot-swap sockets need the 1.6 mm board and a fully seated switch; verify retention, 5,000-cycle rating and plate/socket alignment on the first article.",
+    "BT1 has a 180-degree-symmetric land pattern: confirm the + contact lands on pad 1 (CELL_P) in the JLC placement preview and with a meter before inserting a cell.",
     "Common rail tolerance, transients, reverse current, module effective capacitance and OLED low-voltage operation remain unmeasured.",
     "FRAM RC bounds assume effective C30>=6.8uF, maximum rail 3.3V, current<=3mA; review BOR4, PVD5, sleep/wake and off-state behavior."
+  ],
+  "loose_parts": [
+    {
+      "ref": "K1",
+      "mpn": "CPG151101D13",
+      "manufacturer": "HanElectricity",
+      "lcsc": "C49234235",
+      "quantity": 1,
+      "role": "COUNT / POWER clicky MX switch; clips into the printed key plate, pins press into SW1"
+    },
+    {
+      "ref": "K2",
+      "mpn": "CPG151101D13",
+      "manufacturer": "HanElectricity",
+      "lcsc": "C49234235",
+      "quantity": 1,
+      "role": "RESET COUNT clicky MX switch; clips into the printed key plate, pins press into SW2"
+    }
   ]
 }

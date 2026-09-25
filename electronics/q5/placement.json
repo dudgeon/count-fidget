@@ -6,16 +6,16 @@
   "side": "top"
  },
  "SW1": {
-  "x": 14.015,
-  "y": 35.72,
-  "rotation": 0,
-  "side": "top"
+  "x": 11.475,
+  "y": 40.8,
+  "rotation": 90,
+  "side": "bottom"
  },
  "SW2": {
-  "x": 33.065,
-  "y": 35.72,
-  "rotation": 0,
-  "side": "top"
+  "x": 30.525,
+  "y": 40.8,
+  "rotation": 270,
+  "side": "bottom"
  },
  "H1": {
   "x": 2.5,
@@ -55,7 +55,7 @@
  },
  "J1": {
   "x": 38.9,
-  "y": 27,
+  "y": 26.6,
   "rotation": 270,
   "side": "bottom"
  },
@@ -555,6 +555,18 @@
   "x": 2.2,
   "y": 38.4,
   "rotation": 0,
+  "side": "bottom"
+ },
+ "R38": {
+  "x": 39.6,
+  "y": 33.0,
+  "rotation": 90,
+  "side": "bottom"
+ },
+ "C40": {
+  "x": 41.0,
+  "y": 36.0,
+  "rotation": 90,
   "side": "bottom"
  }
 }
