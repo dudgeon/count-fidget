@@ -23,8 +23,8 @@
       "sha256": "1b7b7f0a8997f7970e8edcad1f56792bb9fa46a7475d1ba3ec13cd232359d4ba"
     },
     "firmware/q5-stm32/counter.c": {
-      "bytes": 2584,
-      "sha256": "4561b2eeee36e6b4672a1fd2bb1882a8ee5249399ee9ba02526940ac0423244f"
+      "bytes": 2736,
+      "sha256": "76b3854fac058e4c9c10bfb963b484a8a24215019d497352767868a0163e8eff"
     },
     "firmware/q5-stm32/counter.h": {
       "bytes": 1695,
@@ -55,8 +55,8 @@
       "sha256": "0c6691beca633d18d5eaba0aab5d092acff73bb7a3da5c62f3916a82c3edaa01"
     },
     "firmware/q5-stm32/main_stm32.c": {
-      "bytes": 21258,
-      "sha256": "fe85fcad73badf2e95231cc90a5fb17e82ae9787447701cc58426a129b72ead8"
+      "bytes": 23277,
+      "sha256": "99863e8555f0d00f11226cb693de881501bb7655b4eede01eaf335944732f52b"
     },
     "firmware/q5-stm32/oled.c": {
       "bytes": 11355,
@@ -79,8 +79,8 @@
       "sha256": "d96d5feff5b7dd0582e10fc35997a9ae89485ac6ccac44d36fd72760159c511b"
     },
     "firmware/q5-stm32/startup.c": {
-      "bytes": 1986,
-      "sha256": "f2cc746dbdf85a5fce5e1ba009959612603efae926ccc7194d16d02cd2c63425"
+      "bytes": 3343,
+      "sha256": "487f2ab030316938cc6f076318fcfa59de5f8d42326eb0f7b6bc1d216dea3eb8"
     },
     "firmware/q5-stm32/test_battery.c": {
       "bytes": 2530,

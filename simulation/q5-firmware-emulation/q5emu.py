@@ -40,6 +40,9 @@ HZ = 4_000_000          # HSI16 / AHB prescaler 4, set by setup()
 OLED_TON = 3.8e-6 * 4700        # TPS22917 tON 3.8 us/pF (VIN 3.3-3.6 V) x C28 4.7 nF
 U7_TON = 3.8e-6 * 4700          # system switch, C29 4.7 nF
 BOOT_TEMPO = 0.002              # regulator soft start + STM32 POR temporization allowance
+# SYS_ON node: C40 4.7 nF discharging through R35 1 MOhm (tau 4.7 ms) from ~2.7-2.85 V.
+ON_HOLD_HIGH = 0.0047 * 0.99    # ON certainly still above VIH (1.0 V) for ln(2.7/1.0)*tau = 4.67 ms
+ON_HOLD_OFF = 0.0047 * 2.10     # ON certainly below VIL (0.35 V) after ln(2.85/0.35)*tau = 9.9 ms
 COLLAPSE_RUN = 0.005            # latch released while running: ~1.3 mA from ~15 uF to BOR
 COLLAPSE_STOP = 0.080           # latch released in Stop: ~80 uA from ~15 uF to BOR
 USB_SYS_V = 4.50                # BQ25185 VSYS_REG with valid input (VBATREG <= 4.3 V)
@@ -369,6 +372,10 @@ class Adc:
         if v & bit(0) and not self.cr & bit(0):
             self.cr |= bit(0); self.rdy_at = t + 40; self.sim.schedule(self.rdy_at)
         if v & bit(2) and self.cr & bit(0):   # ADSTART
+            if self.adc_clock() < 3.5e6 and not self.sim.adc_ccr & bit(25):
+                self.sim.violation('ADC', f'conversion at {self.adc_clock() / 1e6:g} MHz without LFMEN (RM0376: mandatory below 3.5 MHz)')
+            if (self.chselr & bit(17)) and not self.sim.syscfg_cfgr3 & bit(8):
+                self.sim.note('VREFINT converted without SYSCFG_CFGR3.ENBUF_VREFINT_ADC')
             self.cr |= bit(2)
             smp = [1.5, 3.5, 7.5, 12.5, 19.5, 39.5, 79.5, 160.5][self.smpr & 7]
             self.done_at = t + (smp + 12.5) * HZ / self.adc_clock(); self.sim.schedule(self.done_at)
@@ -438,6 +445,7 @@ class Sim:
         self.charge = charge              # 'charging' | 'done' | 'fault' (BQ25185 Table 6-2)
         self.board_state = 'off'
         self.collapse_token = 0
+        self.start_lost_at = None
         self.power_events = []
         self.csr_flags = 0
         self.pecr = 0x7; self.pe_unlock = 0; self.opt_unlock = 0; self.ob_word = None
@@ -522,6 +530,8 @@ class Sim:
         if self.sw2:
             self.dfu = True
             self.halted = f'ROM bootloader (BOOT0 high at {cause})'
+        elif self.dfu:
+            self.dfu = False; self.halted = None      # BOOT0 low at this reset: boot the application
         self.ev('mcu', 'run')
         self.rcc = dict(CR=0x300, CFGR=0, IOPENR=0, AHBENR=0x100, APB2ENR=0, APB1ENR=0,
                         APB2RSTR=0, APB1RSTR=0, CSR=self.csr_flags)
@@ -539,7 +549,7 @@ class Sim:
         self.i2c1_cr1 = 0
         self.nvic_en = 0; self.nvic_pend = 0; self.nvic_pri = [0] * 32
         self.st_ctrl = 0; self.st_load = 0; self.st_next = None; self.st_pend = False; self.st_pri = 0
-        self.scr = 0
+        self.scr = 0; self.vtor = 0; self.syscfg_cfgr3 = 0; self.syscfg_cfgr1 = 0; self.rom_left = False
         self.active = []          # stack of (exception number, priority)
         self.want = None
         self.prev_levels = self.pin_levels()
@@ -552,6 +562,22 @@ class Sim:
         self.pc = pc & ~1
         self.in_stop = False
         self.pins_changed()
+
+    def rom_leave(self):
+        """DfuSe 'leave': the ROM jumps to the application vector table WITHOUT a
+        reset. Model the state it leaves behind: HSI16 system clock, USB clock
+        enabled, VTOR pointing at system memory, USB interrupt enabled."""
+        if not self.dfu:
+            self.note('leave requested outside DFU'); return
+        self.trace.append((round(self.now_s(), 6), 'ROM DFU leave: jump to application (no reset)'))
+        self.dfu = False; self.halted = None
+        self.rcc['CR'] |= 1; self.rcc['CFGR'] = (self.rcc['CFGR'] & ~3) | 1     # SYSCLK not MSI
+        self.rcc['APB1ENR'] |= bit(23); self.vtor = 0x1FF00000; self.rom_left = True; self.syscfg_cfgr1 = 1
+        self.nvic_en |= bit(31); self.nvic_pend |= bit(31)     # USB IRQ still enabled, SOF pending
+        sp, pc = struct.unpack_from('<II', self.flash, 0)
+        self.uc.reg_write(UC_ARM_REG_SP, sp); self.uc.reg_write(UC_ARM_REG_PRIMASK, 0)
+        self.uc.reg_write(UC_ARM_REG_XPSR, 0x01000000)
+        self.pc = pc & ~1
 
     def oled_reset_pins(self):
         # all GPIO return to reset (analog) state while NRST is low; PB2 releases the latch
@@ -569,7 +595,9 @@ class Sim:
 
     # ---------------- Q5 board power (U7 soft latch) ----------------
     def hold_level(self):
-        return self.board_state == 'on' and self.drives('B', 2) == 1
+        # PB2 counts whenever the MCU is running, including while the supply is
+        # still decaying: a PB2 drive during the decay re-enables U7.
+        return self.board_state in ('on', 'collapsing') and self.drives('B', 2) == 1
 
     def sources(self):
         """U7 ON = VBUS diode OR COUNT key (SYS) OR PWR_HOLD (only while powered)."""
@@ -603,15 +631,21 @@ class Sim:
         if self.board_state == 'on' and not src:
             self.collapse_token += 1
             self.board_state = 'collapsing'
-            delay = COLLAPSE_STOP if self.in_stop else COLLAPSE_RUN
+            delay = ON_HOLD_OFF + (COLLAPSE_STOP if self.in_stop else COLLAPSE_RUN)
             self.at(self.now_s() + delay, 'collapse', self.collapse_token)
         elif self.board_state == 'collapsing' and src and (self.usb or self.sw1 or self.drives('B', 2) == 1):
             self.collapse_token += 1; self.board_state = 'on'           # U7 re-enabled before BOR
         elif self.board_state == 'off' and (self.usb or self.sw1):
-            self.collapse_token += 1; self.board_state = 'starting'
+            self.collapse_token += 1; self.board_state = 'starting'; self.start_lost_at = None
             self.at(self.now_s() + U7_TON + BOOT_TEMPO, 'start', self.collapse_token)
         elif self.board_state == 'starting' and not (self.usb or self.sw1):
-            self.collapse_token += 1; self.board_state = 'off'          # press too short: U7 never latched
+            # The SYS_ON capacitor holds ON through contact bounce; only a gap
+            # longer than ON_HOLD_HIGH aborts the start (press too short).
+            if self.start_lost_at is None:
+                self.start_lost_at = self.now_s()
+                self.at(self.now_s() + ON_HOLD_HIGH, 'start_abort', self.collapse_token)
+        elif self.board_state == 'starting' and (self.usb or self.sw1):
+            self.start_lost_at = None
 
     # ---------------- scenario ----------------
     def at(self, t, action, *args):
@@ -680,6 +714,12 @@ class Sim:
             elif action == 'collapse':
                 if args[0] == self.collapse_token and self.board_state == 'collapsing':
                     self.board_off(); raise _Restart()
+            elif action == 'start_abort':
+                if (args[0] == self.collapse_token and self.board_state == 'starting' and self.start_lost_at is not None
+                        and self.now_s() - self.start_lost_at >= ON_HOLD_HIGH - 1e-9):
+                    self.collapse_token += 1; self.board_state = 'off'   # press too short: U7 never latched
+            elif action == 'leave':
+                self.rom_leave(); raise _Restart()
             elif action == 'start':
                 if args[0] == self.collapse_token and self.board_state == 'starting':
                     self.board_on('USB' if self.usb else 'COUNT key'); raise _Restart()
@@ -948,7 +988,10 @@ class Sim:
         if addr == self.panic_addr:
             self.violation('CPU', 'panic() entered')
         if addr == self.default_addr:
-            self.violation('CPU', 'Default_Handler (unexpected exception)')
+            if getattr(self, 'rom_left', False):
+                self.note('Default_Handler entered with ROM bootloader state still present')
+            else:
+                self.violation('CPU', 'Default_Handler (unexpected exception)')
         if self.cyc >= self.next_event:
             self.service_timers()
         if self.nvic_pend or self.st_pend:
@@ -1072,13 +1115,17 @@ class Sim:
                 pc = self.enter_exception(self.want, pc)
             elif self.stop_reason == 'excret':
                 pc = self.exception_return()
-        # ROM DFU does not drive PB2: without USB or a held COUNT key the supply collapses.
-        while self.dfu and self.board_state == 'collapsing' and self.next_scenario_cyc() <= until:
+        # While the ROM bootloader runs, scenario events still happen: the supply may
+        # collapse (the ROM does not drive PB2), keys move, and a DFU 'leave' or an
+        # NRST with BOOT0 low hands control back to the application.
+        while self.dfu and self.next_scenario_cyc() <= until:
             self.cyc = max(self.cyc, self.next_scenario_cyc())
             try:
                 self.run_scenario_events()
             except _Restart:
                 pass
+            if not self.dfu and self.halted is None and self.board_state in ('on', 'collapsing'):
+                return self.run(until_s)
         self.pc = pc
         return self
 
@@ -1107,6 +1154,9 @@ class Sim:
                 if self.vlogic < thr: v |= bit(2)
             return v
         if 0x40010008 <= a < 0x40010018: return self.syscfg_exticr[(a - 0x40010008) // 4]
+        if a == 0x40010000: return self.syscfg_cfgr1 if (self.rcc['APB2ENR'] & 1) or self.rom_left else 0
+        if a == 0x40010020:   # SYSCFG_CFGR3: VREFINT_RDYF once the ADC buffer is enabled (start-up modelled as instant)
+            return self.syscfg_cfgr3 | (bit(30) if self.syscfg_cfgr3 & bit(8) else 0)
         if 0x40010400 <= a < 0x40010418:
             return self.exti[['IMR', 'EMR', 'RTSR', 'FTSR', 'SWIER', 'PR'][(a - 0x40010400) // 4]]
         if 0x40012400 <= a < 0x40012800: return self.adc_read(a - 0x40012400)
@@ -1136,6 +1186,9 @@ class Sim:
         if a == 0x40007004: return
         if 0x40010008 <= a < 0x40010018:
             self.syscfg_exticr[(a - 0x40010008) // 4] = v; return
+        if a == 0x40010020:
+            if not self.clk('APB2ENR', 0, 'SYSCFG'): return
+            self.syscfg_cfgr3 = v & 0x0000333F; return
         if 0x40010400 <= a < 0x40010418:
             k = ['IMR', 'EMR', 'RTSR', 'FTSR', 'SWIER', 'PR'][(a - 0x40010400) // 4]
             if k == 'PR': self.exti['PR'] &= ~v
@@ -1367,6 +1420,7 @@ class Sim:
             return sum((self.nvic_pri[i + k] & 0xC0) << (8 * k) for k in range(4))
         if a == 0xE000ED00: return 0x410CC601
         if a == 0xE000ED04: return bit(26) if self.st_pend else 0
+        if a == 0xE000ED08: return self.vtor
         if a == 0xE000ED10: return self.scr
         if a == 0xE000ED20: return (self.st_pri & 0xC0) << 24
         return 0
@@ -1403,8 +1457,9 @@ class Sim:
         if a == 0xE000ED0C:
             if (v >> 16) == 0x05FA and v & bit(2):
                 self.trace.append((round(self.now_s(), 6), 'SYSRESETREQ'))
-                self.mcu_reset('software'); self._restart = True; uc.emu_stop()
+                self.oled_reset_pins(); self.mcu_reset('software'); self._restart = True; uc.emu_stop()
             return
+        if a == 0xE000ED08: self.vtor = v & 0xFFFFFF80; return
         if a == 0xE000ED10: self.scr = v; return
         if a == 0xE000ED20: self.st_pri = (v >> 24) & 0xC0; return
         if 0xE000ED1C <= a < 0xE000ED24: return

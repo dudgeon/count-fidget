@@ -30,6 +30,12 @@ static volatile bool tick_running;
 /* Button capture starts only once the foreground loop can drain the queue:
  * the boot-time journal scan can exceed the queue's 255 ms of samples. */
 static volatile bool capture_enabled;
+/* During the boot journal scan only level changes (plus one settle sample per
+ * change) are queued, so presses made while storage loads are kept without
+ * filling the queue with identical samples. */
+static volatile bool early_capture,early_pending;
+static volatile uint8_t early_raw;
+static volatile uint32_t early_settle;
 static volatile uint8_t tx[OLED_TX_MAX],tx_length,tx_position,bus_status;
 static uint32_t bus_started;
 static bool configuration_ok,wake_key;
@@ -111,7 +117,8 @@ static void charger_inputs(bool enabled){
         if(enabled){pull(GPIOA,pin,1);mode(GPIOA,pin,0);}else{mode(GPIOA,pin,3);pull(GPIOA,pin,0);}
     }
 }
-/* ADC is polled without waiting. HCLK/2=2MHz,160.5-cycle acquisition exceeds
+/* ADC is polled without waiting. HCLK/2=2MHz (LFMEN set: RM0376 requires it
+ * below 3.5MHz), 160.5-cycle acquisition exceeds
  * VREFINT 10us and settles the 75k-source SYS divider held by its 100nF
  * capacitor. Conversions alternate VREFINT (rail) and IN4 (SYS_LOAD/2). */
 static void adc_service(bool awake,uint32_t t){
@@ -125,15 +132,21 @@ static void adc_service(bool awake,uint32_t t){
         }
         if(ADC1->CR&ADC_CR_ADSTART){ADC1->CR|=ADC_CR_ADSTP;return;}
         if(ADC1->CR&ADC_CR_ADEN){ADC1->CR|=ADC_CR_ADDIS;return;}
-        ADC1->CR&=~ADC_CR_ADVREGEN;ADC->CCR&=~ADC_CCR_VREFEN;adc_state=0;charger_inputs(false);return;
+        ADC1->CR&=~ADC_CR_ADVREGEN;ADC->CCR&=~ADC_CCR_VREFEN;SYSCFG->CFGR3&=~SYSCFG_CFGR3_ENBUF_VREFINT_ADC;
+        adc_state=0;charger_inputs(false);return;
     }
     if(!adc_state){
         rail_invalid(&rail);ADC1->CFGR1=0;ADC1->CFGR2=ADC_CFGR2_CKMODE_0;
         ADC1->SMPR=ADC_SMPR_SMP;adc_channel=17;vref_raw=0;ADC1->CHSELR=ADC_CHSELR_CHSEL17;
-        ADC->CCR|=ADC_CCR_VREFEN;ADC1->CR|=ADC_CR_ADVREGEN;charger_inputs(true);
+        SYSCFG->CFGR3|=SYSCFG_CFGR3_ENBUF_VREFINT_ADC;
+        ADC->CCR|=ADC_CCR_VREFEN|ADC_CCR_LFMEN;ADC1->CR|=ADC_CR_ADVREGEN;charger_inputs(true);
         adc_deadline=t+5;adc_state=1;return;
     }
-    if(adc_state==1){if((int32_t)(t-adc_deadline)>=0){ADC1->CR|=ADC_CR_ADCAL;adc_deadline=t+5;adc_state=2;}return;}
+    if(adc_state==1){
+        if((int32_t)(t-adc_deadline)<0)return;
+        if(!(SYSCFG->CFGR3&SYSCFG_CFGR3_VREFINT_RDYF)){if((int32_t)(t-adc_deadline)>=10){rail_invalid(&rail);adc_state=7;}return;}
+        ADC1->CR|=ADC_CR_ADCAL;adc_deadline=t+5;adc_state=2;return;
+    }
     if(adc_state==2){
         if(!(ADC1->CR&ADC_CR_ADCAL)){adc_deadline=t+1;adc_state=3;return;}
     }else if(adc_state==3){
@@ -207,9 +220,18 @@ static OledBusResult bus_poll(uint32_t t) {
 }
 static const OledHal oled_hal={power,reset,bus_start,bus_poll,bus_abort,now};
 static void tick_start(void){SysTick->LOAD=CORE_HZ/1000UL-1U;SysTick->VAL=0;tick_running=true;SysTick->CTRL=SysTick_CTRL_CLKSOURCE_Msk|SysTick_CTRL_TICKINT_Msk|SysTick_CTRL_ENABLE_Msk;}
-void SysTick_Handler(void){++milliseconds;if(capture_enabled)input_push(&inputs,raw_buttons(),milliseconds);}
+void SysTick_Handler(void){
+    ++milliseconds;
+    if(capture_enabled){input_push(&inputs,raw_buttons(),milliseconds);return;}
+    if(!early_capture)return;
+    uint8_t raw=raw_buttons();
+    if(raw!=early_raw){early_raw=raw;early_settle=milliseconds+DEBOUNCE_MS+1U;early_pending=true;input_push(&inputs,raw,milliseconds);}
+    else if(early_pending && (int32_t)(milliseconds-early_settle)>=0){early_pending=false;input_push(&inputs,raw,milliseconds);}
+}
 void EXTI0_1_IRQHandler(void) {
-    hold_power(true); /* a key woke the MCU from the USB-held Stop fallback */
+    /* A press re-latches the supply; a bare release (e.g. a key that was held
+     * through the power-off) must not, or the board would stay on. */
+    if(raw_buttons())hold_power(true);
     EXTI->PR=BUTTONS;if(capture_enabled)input_push(&inputs,raw_buttons(),milliseconds);
     if(!tick_running){tick_start();shutdown_latched=false;}
 }
@@ -222,15 +244,24 @@ static bool options_ok(uint32_t optr){
 }
 static void provision_options(void){
     uint32_t optr=FLASH->OPTR;
-    if(options_ok(optr) || (optr&0xffU)!=0xaaU || (reset_flags&RCC_CSR_OBLRSTF) || !supply_good())return;
+    if(options_ok(optr) || (optr&0xffU)!=0xaaU || (reset_flags&RCC_CSR_OBLRSTF))return;
+    /* PVDO is meaningful only once VREFINT is ready and the PVD has settled. */
+    uint32_t begin=now();
+    while(!(PWR->CSR&PWR_CSR_VREFINTRDYF) && (uint32_t)(now()-begin)<5U){}
+    begin=now();while((uint32_t)(now()-begin)<2U)__WFI();
+    if(!(PWR->CSR&PWR_CSR_VREFINTRDYF) || !supply_good())return;
     uint32_t user=(optr>>16)&0xffffU;
     user=(user&~0x008fU&0xffffU)|BIT(15)|BOARD_BOR_REQUIRED; /* BOR_LEV=0xC, BFB2=0, nBOOT1=1 */
     if(user!=BOARD_OPTR_USER)return; /* unexpected WDG/STOP/STDBY choices: do not guess */
+    uint32_t word=((~user&0xffffU)<<16)|user;
+    /* Already stored but still not loaded as expected: show OPT rather than
+     * rewriting the option word on every power-on. */
+    if(*(volatile const uint32_t*)(OB_BASE+4U)==word)return;
     FLASH->SR=FLASH_ERRORS|FLASH_SR_EOP;
     if(FLASH->PECR&FLASH_PECR_PELOCK){FLASH->PEKEYR=0x89abcdefUL;FLASH->PEKEYR=0x02030405UL;}
     if(FLASH->PECR&FLASH_PECR_OPTLOCK){FLASH->OPTKEYR=0xfbead9c8UL;FLASH->OPTKEYR=0x24252627UL;}
     if(FLASH->PECR&(FLASH_PECR_PELOCK|FLASH_PECR_OPTLOCK))return;
-    *(volatile uint32_t*)(OB_BASE+4U)=((~user&0xffffU)<<16)|user;
+    *(volatile uint32_t*)(OB_BASE+4U)=word;
     for(unsigned t=0;t<200000U && (FLASH->SR&FLASH_SR_BSY);t++){}
     if((FLASH->SR&(FLASH_SR_BSY|FLASH_ERRORS))){FLASH->PECR|=FLASH_PECR_OPTLOCK|FLASH_PECR_PELOCK;return;}
     FLASH->PECR|=FLASH_PECR_OBL_LAUNCH; /* system reset reloading option bytes */
@@ -244,7 +275,10 @@ static void setup(void) {
     reset_flags=RCC->CSR;RCC->CSR|=RCC_CSR_RMVF;
     GPIOA->PUPDR&=~15UL;mode(GPIOA,0,0);mode(GPIOA,1,0);
     /* A COUNT press that powered the board is still closing its contact now. */
-    wake_key=(reset_flags&RCC_CSR_PORRSTF) && !(GPIOA->IDR&BIT(BOARD_INC_PIN));
+    for(volatile unsigned i=0;i<8U;i++){}
+    bool first=!(GPIOA->IDR&BIT(BOARD_INC_PIN));
+    for(volatile unsigned i=0;i<8U;i++){}
+    wake_key=(reset_flags&RCC_CSR_PORRSTF) && first && !(GPIOA->IDR&BIT(BOARD_INC_PIN));
     RCC->APB1ENR|=RCC_APB1ENR_PWREN|RCC_APB1ENR_SPI2EN;
     RCC->APB2ENR|=RCC_APB2ENR_SYSCFGEN|RCC_APB2ENR_SPI1EN|RCC_APB2ENR_ADC1EN;(void)RCC->APB2ENR;
     GPIOB->PUPDR&=~(15UL|(255UL<<24));
@@ -300,10 +334,12 @@ int main(void) {
     OledView view={0,OLED_LABEL_NONE,OLED_BARS_HIDDEN,true};
     oled_init(&display,&oled_hal);
     oled_service(&display,&oled_hal,supply_good(),false,&view,now());
-    storage_init();app_init(&app,&nv,now(),raw_buttons());
-    if(wake_key)app_wake_press(&app,now());
+    __disable_irq();uint8_t boot_keys=raw_buttons();uint32_t boot_ms=milliseconds;
+    early_raw=boot_keys;early_capture=true;__enable_irq();
+    storage_init();app_init(&app,&nv,boot_ms,boot_keys);
+    if(wake_key)app_wake_press(&app,boot_ms);
     if(!configuration_ok)app_storage_error(&app);
-    __disable_irq();input_push(&inputs,raw_buttons(),milliseconds);capture_enabled=true;__enable_irq();
+    __disable_irq();early_capture=false;input_push(&inputs,raw_buttons(),milliseconds);capture_enabled=true;__enable_irq();
     for(;;) {
         for(unsigned n=0;n<8;n++) {
             InputSample sample;uint32_t mask=__get_PRIMASK();__disable_irq();
@@ -317,6 +353,7 @@ int main(void) {
         if(battery.usb)shutdown_latched=false; /* USB arrived during the LO notice: keep running and charge */
         bool shutdown=shutdown_latched && (int32_t)(now()-shutdown_at)>=0;
         bool run=app.counter.awake && !shutdown;
+        if(run)hold_power(true);
         OledState prior_display=display.state;bool prior_bus=display.pending;
         unsigned prior_step=app.journal.step;bool prior_pending=app.journal.pending,prior_nv=app.journal.busy;
         uint8_t prior_adc=adc_state;
@@ -347,14 +384,15 @@ int main(void) {
         if(quiet && backend_idle && !battery.usb && !release_tried) {
             /* Battery only: release the latch. Supply collapse ends execution.
              * Still running afterwards means USB or a held COUNT key keeps U7
-             * on: re-latch, drain the queued samples, then use the Stop path. */
+             * on: leave the latch released, drain the queued samples, then use
+             * the Stop path, so letting go of the key switches the board off. */
             release_tried=true;hold_power(false);
             uint32_t begin=now();
             while((uint32_t)(now()-begin)<POWER_RELEASE_MS && !raw_buttons())__WFI();
-            hold_power(true);continue;
+            continue;
         }
         __disable_irq();
-        if(inputs.gap || inputs.head!=inputs.tail || (EXTI->PR&BUTTONS)){__enable_irq();hold_power(true);continue;}
+        if(inputs.gap || inputs.head!=inputs.tail || (EXTI->PR&BUTTONS)){__enable_irq();continue;}
         if(quiet && backend_idle) {
             /* USB-held (or key-held) fallback: Stop with the latch released, so
              * unplugging USB then switches the board off cleanly. */
@@ -365,7 +403,7 @@ int main(void) {
             SCB->SCR|=SCB_SCR_SLEEPDEEP_Msk;
             /* WFI with PRIMASK set closes the test/sleep race: a newly pending
              * EXTI wakes the core, then is serviced when interrupts unmask. */
-            stop_from_ram();SCB->SCR&=~SCB_SCR_SLEEPDEEP_Msk;hold_power(true);__enable_irq();
+            stop_from_ram();SCB->SCR&=~SCB_SCR_SLEEPDEEP_Msk;if(raw_buttons())hold_power(true);__enable_irq();
             battery_reset(&battery);
         } else {if(!made_progress && !display.pending){__DSB();__WFI();}__enable_irq();}
     }

@@ -207,12 +207,22 @@ class Suite:
         r = self.record('B4 10 ms tap from off is too short to latch U7', s)
         self.expect('B4', r['board'] == 'off' and r['fram']['journal']['latest']['count'] == 502, 'no power-on, no count')
         s.at(90.0, 'key', 'inc', True); s.at(135.0, 'key', 'inc', False)
+        s.run(136.0)
+        r = self.record('B5 COUNT held 45 s from off: one count, then off right after release', s)
+        self.expect('B5', r['board'] == 'off' and r['fram']['journal']['latest']['count'] == 503,
+                    'held key counts once; releasing it switches the board off within 1 s (no re-latch, no second display session)')
         s.run(140.0)
-        r = self.record('B5 COUNT held 45 s from off: one count, then off after release', s)
-        self.expect('B5', r['board'] == 'off' and r['fram']['journal']['latest']['count'] == 503, 'held key counts once and the board still powers off')
         s.at(141.0, 'nrst')
         s.run(141.5)
         self.expect('B5', s.board_state == 'off', 'pinhole reset of an off board does nothing')
+
+    def boot_press(self):
+        s = self.sim(mem=full_journal(count=500), start='key', usb=False, vbat=3.90)
+        s.press(0.120, 'inc', 0.050, bounce_ms=2.0, bounces=4)     # second press while the journal is still loading
+        s.run(1.2)
+        r = self.record('B6 second press during the boot journal scan', s)
+        self.expect('B6', r['display'] == {'digits': '502', 'status': ''} and r['ram']['queue_dropped'] == 0,
+                    'the power-on press and a press made during the scan both count; no ERR')
 
     def dfu(self):
         base = full_journal(count=77)
@@ -228,6 +238,15 @@ class Suite:
             s.run(9.0)
             r = self.record(name, s)
             self.expect(name, r['dfu'] and r['fram']['journal']['latest']['count'] == 77, 'ROM DFU entered and saved count preserved')
+        s = self.sim(mem=base)
+        s.run(1.5)
+        s.at(2.0, 'key', 'rst', True); s.at(3.5, 'nrst'); s.at(4.0, 'key', 'rst', False)
+        s.at(5.0, 'leave')
+        s.run(7.0)
+        r = self.record('D5 USB: DFU leave jump (no reset) restarts cleanly into the application', s)
+        self.expect('D5', not r['dfu'] and any('SYSRESETREQ' in t[1] for t in s.trace if t[0] >= 5.0)
+                    and r['display'] == {'digits': '77', 'status': ''} and r['fram']['journal']['latest']['count'] == 77,
+                    'the application detects the non-reset entry, takes a system reset and shows the preserved count')
         s = self.sim(mem=base, start='key', usb=False)
         s.run(1.5)
         s.at(2.0, 'key', 'rst', True); s.at(3.0, 'nrst')
@@ -326,6 +345,7 @@ def main():
     suite.usb_sleep_and_nrst(base)
     suite.boot_drain()
     suite.battery_power()
+    suite.boot_press()
     suite.dfu()
     suite.option_bytes()
     suite.fast_fidget()

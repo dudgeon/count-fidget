@@ -31,7 +31,9 @@ unsigned counter_wake_press(Counter *c, uint32_t now) {
 unsigned counter_sample(Counter *c, bool inc, bool rst, uint32_t now) {
     unsigned events = 0;
     int ie = update(&c->increment,inc,now), re = update(&c->reset,rst,now);
-    if (ie || re) { c->awake = true; c->last_activity = now; }
+    /* Only presses are activity: a release (for example of a key held
+     * through the power-off timeout) must not wake the device again. */
+    if (ie > 0 || re > 0) { c->awake = true; c->last_activity = now; }
     if (re > 0) {
         c->reset_holding = true; c->reset_armed = false;
         c->reset_pressed_at = now; c->reset_cancelled = c->increment.stable;

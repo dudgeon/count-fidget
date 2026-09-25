@@ -402,8 +402,8 @@
       "sha256": "1b7b7f0a8997f7970e8edcad1f56792bb9fa46a7475d1ba3ec13cd232359d4ba"
     },
     "<BUILD>/counter.c": {
-      "bytes": 2584,
-      "sha256": "4561b2eeee36e6b4672a1fd2bb1882a8ee5249399ee9ba02526940ac0423244f"
+      "bytes": 2736,
+      "sha256": "76b3854fac058e4c9c10bfb963b484a8a24215019d497352767868a0163e8eff"
     },
     "<BUILD>/counter.h": {
       "bytes": 1695,
@@ -434,8 +434,8 @@
       "sha256": "0c6691beca633d18d5eaba0aab5d092acff73bb7a3da5c62f3916a82c3edaa01"
     },
     "<BUILD>/main_stm32.c": {
-      "bytes": 21258,
-      "sha256": "fe85fcad73badf2e95231cc90a5fb17e82ae9787447701cc58426a129b72ead8"
+      "bytes": 23277,
+      "sha256": "99863e8555f0d00f11226cb693de881501bb7655b4eede01eaf335944732f52b"
     },
     "<BUILD>/oled.c": {
       "bytes": 11355,
@@ -458,8 +458,8 @@
       "sha256": "d96d5feff5b7dd0582e10fc35997a9ae89485ac6ccac44d36fd72760159c511b"
     },
     "<BUILD>/startup.c": {
-      "bytes": 1986,
-      "sha256": "f2cc746dbdf85a5fce5e1ba009959612603efae926ccc7194d16d02cd2c63425"
+      "bytes": 3343,
+      "sha256": "487f2ab030316938cc6f076318fcfa59de5f8d42326eb0f7b6bc1d216dea3eb8"
     },
     "<BUILD>/vendor/arm/cmsis_compiler.h": {
       "bytes": 9481,
@@ -609,8 +609,8 @@
       "sha256": "1b7b7f0a8997f7970e8edcad1f56792bb9fa46a7475d1ba3ec13cd232359d4ba"
     },
     "firmware/q5-stm32/counter.c": {
-      "bytes": 2584,
-      "sha256": "4561b2eeee36e6b4672a1fd2bb1882a8ee5249399ee9ba02526940ac0423244f"
+      "bytes": 2736,
+      "sha256": "76b3854fac058e4c9c10bfb963b484a8a24215019d497352767868a0163e8eff"
     },
     "firmware/q5-stm32/counter.h": {
       "bytes": 1695,
@@ -645,8 +645,8 @@
       "sha256": "291306d6a73cb4e469eeb5524208b1b4a2a2a796476edfbda5deb8a6a7993e2a"
     },
     "firmware/q5-stm32/main_stm32.c": {
-      "bytes": 21258,
-      "sha256": "fe85fcad73badf2e95231cc90a5fb17e82ae9787447701cc58426a129b72ead8"
+      "bytes": 23277,
+      "sha256": "99863e8555f0d00f11226cb693de881501bb7655b4eede01eaf335944732f52b"
     },
     "firmware/q5-stm32/oled.c": {
       "bytes": 11355,
@@ -673,8 +673,8 @@
       "sha256": "3b8f2a1d2a1d4499a1181c096f192275a01032113829b25b17712a0aac21cc86"
     },
     "firmware/q5-stm32/startup.c": {
-      "bytes": 1986,
-      "sha256": "f2cc746dbdf85a5fce5e1ba009959612603efae926ccc7194d16d02cd2c63425"
+      "bytes": 3343,
+      "sha256": "487f2ab030316938cc6f076318fcfa59de5f8d42326eb0f7b6bc1d216dea3eb8"
     },
     "firmware/q5-stm32/test_battery.c": {
       "bytes": 2530,
@@ -743,52 +743,52 @@
   },
   "outputs": {
     "count-fidget-Q5-stm32.bin": {
-      "bytes": 10196,
-      "sha256": "41c588d159303a1a6f056ecf959c335e27418fa568c5ae3cc6be756b8bfe0b98"
+      "bytes": 10652,
+      "sha256": "17eac86b0454cdcc91e9ffb5f0bb0152f4844f3c5b08ee19bc0781b5d88dc502"
     },
     "count-fidget-Q5-stm32.elf": {
-      "bytes": 23252,
-      "sha256": "9626fb6602e87e05377770453776d5725e06c6492187add5715d2110767d2570"
+      "bytes": 23552,
+      "sha256": "bb5a4a38aeeb41213e5f46c07e4a361e69b22f9b96742ebbff875b6083f58b03"
     },
     "count-fidget-Q5-stm32.hex": {
-      "bytes": 28737,
-      "sha256": "7eb58ee5deddce50d5f3d0b78bae55e62f3c0e866c44698bef8ef75992c4320a"
+      "bytes": 30026,
+      "sha256": "d0d0607b8e574d7bb47918b8be3bb913baaf373c998a4881a8c716712d131372"
     },
     "count-fidget-Q5-stm32.lst": {
-      "bytes": 185962,
-      "sha256": "9d2f342e1d175fbe13ab9a5c33c78101ca126ac2608b482f35e159b5267d45b0"
+      "bytes": 194670,
+      "sha256": "ad56dddd5f13b36ddc282e13f447c33ee89c58e3d297da821f33230672c0e45b"
     },
     "count-fidget-Q5-stm32.map": {
-      "bytes": 19082,
-      "sha256": "ccbdd4f858462bcabaa1f6c01a64c4d5762a59fb59379e865ae694aa62d8ffae"
+      "bytes": 19512,
+      "sha256": "3c3a439e50d5551d2288b5497b83776765d7dd4556f15eae84aec6cedaf9af36"
     },
     "host-tests.json": {
       "bytes": 1423,
       "sha256": "81b6908e97d856ddd0f8598462cb77860f5d883205bcb1f34406272cf4a8dabd"
     },
     "stack-usage.txt": {
-      "bytes": 2527,
-      "sha256": "ff5298c06cd905246718f0331f9406c6af2ee4c1eccfad3a6d20b516c9e0c5a5"
+      "bytes": 2609,
+      "sha256": "90165a45e385b9e4a7aad3f091ba0878131fbf7fd6afe5d01150a119685274f8"
     }
   },
   "power": "U7 soft latch on PB2; auto power-off on battery",
   "schema": 1,
-  "size": "text\t   data\t    bss\t    dec\t    hex\tfilename\n  10196\t      0\t   2424\t  12620\t   314c\tcount-fidget-Q5-stm32.elf",
+  "size": "text\t   data\t    bss\t    dec\t    hex\tfilename\n  10652\t      0\t   2432\t  13084\t   331c\tcount-fidget-Q5-stm32.elf",
   "status": "Q5 engineering target; physical qualification pending",
   "storage": "FM25V02A-GTR SPI1 FRAM",
   "target": "STM32L072CBT6",
   "validation": {
     "all_eeprom_excluded": true,
     "bank1_only": true,
-    "bin_bytes": 10196,
+    "bin_bytes": 10652,
     "elf_hex_bin_equal": true,
     "hardware_executed": false,
-    "load_bytes": 10196,
+    "load_bytes": 10652,
     "manufacturing_released": false,
     "option_bytes_excluded": true,
-    "static_ram_bytes": 2480,
+    "static_ram_bytes": 2488,
     "stop_ram_workaround": {
-      "bank1_load_address": "0x800279c",
+      "bank1_load_address": "0x8002964",
       "bytes": 56,
       "copied_ram_span": [
         "0x20000000",
@@ -811,10 +811,10 @@
       ]
     },
     "vectors": {
-      "EXTI0_1_IRQHandler": "0x80006a5",
-      "Reset_Handler": "0x80000c1",
-      "SPI2_IRQHandler": "0x800060d",
-      "SysTick_Handler": "0x800066d"
+      "EXTI0_1_IRQHandler": "0x80007a9",
+      "Reset_Handler": "0x80000ed",
+      "SPI2_IRQHandler": "0x80006bd",
+      "SysTick_Handler": "0x800071d"
     }
   }
 }

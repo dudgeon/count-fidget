@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "elf": "firmware/q5-stm32/build/count-fidget-Q5-stm32.elf",
- "elf_sha256": "9626fb6602e87e05377770453776d5725e06c6492187add5715d2110767d2570",
+ "elf_sha256": "bb5a4a38aeeb41213e5f46c07e4a361e69b22f9b96742ebbff875b6083f58b03",
  "model": "Instruction-level emulation with modelled peripherals and board power latch; not hardware execution",
  "expectation_failures": [],
  "scenarios": {
@@ -155,7 +155,7 @@
     "queue_dropped": 0
    },
    "latency_ms": {
-    "hold_to_RST_prompt": 2020.0,
+    "hold_to_RST_prompt": 2016.0,
     "release_to_clean_zero": 52.0
    }
   },
@@ -210,7 +210,7 @@
    },
    "latency_ms": {
     "press_to_display": [
-     60.0,
+     56.0,
      58.0,
      58.0,
      58.0,
@@ -396,7 +396,7 @@
     }
    },
    "stop_entries": 1,
-   "stop_time_s": 9.855,
+   "stop_time_s": 9.878,
    "boots": 1,
    "dfu": false,
    "board": "on",
@@ -446,7 +446,7 @@
     }
    },
    "stop_entries": 2,
-   "stop_time_s": 10.856,
+   "stop_time_s": 10.879,
    "boots": 1,
    "dfu": false,
    "board": "on",
@@ -465,7 +465,7 @@
     "queue_dropped": 0
    },
    "latency_ms": {
-    "wake_press_to_AF": 206.0
+    "wake_press_to_AF": 208.0
    }
   },
   "U3 NRST on USB returns the saved count without ERR": {
@@ -499,7 +499,7 @@
     }
    },
    "stop_entries": 2,
-   "stop_time_s": 10.856,
+   "stop_time_s": 10.879,
    "boots": 2,
    "dfu": false,
    "board": "on",
@@ -549,7 +549,7 @@
     }
    },
    "stop_entries": 2,
-   "stop_time_s": 10.856,
+   "stop_time_s": 10.879,
    "boots": 2,
    "dfu": false,
    "board": "on",
@@ -596,7 +596,7 @@
     }
    },
    "stop_entries": 2,
-   "stop_time_s": 10.856,
+   "stop_time_s": 10.879,
    "boots": 2,
    "dfu": false,
    "board": "off",
@@ -608,7 +608,7 @@
      "power-on"
     ],
     [
-     73.149802,
+     73.136749,
      "off",
      "supply collapsed"
     ]
@@ -619,40 +619,40 @@
   },
   "boot_drain": {
    "96 valid records, USB, flash penalty +0.0": {
-    "first_drain_ms": 206.5,
+    "first_drain_ms": 208.0,
     "queue_dropped": 0,
     "display": [
      "1234",
      ""
     ],
-    "to_AF_ms": 332.0
+    "to_AF_ms": 334.0
    },
    "96 valid records, COUNT key on battery, flash penalty +0.0": {
-    "first_drain_ms": 206.5,
+    "first_drain_ms": 208.0,
     "queue_dropped": 0,
     "display": [
      "1235",
      ""
     ],
-    "to_AF_ms": 350.0
+    "to_AF_ms": 352.0
    },
    "96 valid records, USB, flash penalty +0.5": {
-    "first_drain_ms": 250.9,
+    "first_drain_ms": 254.5,
     "queue_dropped": 0,
     "display": [
      "1234",
      ""
     ],
-    "to_AF_ms": 408.0
+    "to_AF_ms": 412.0
    },
    "96 valid records, COUNT key on battery, flash penalty +0.5": {
-    "first_drain_ms": 250.9,
+    "first_drain_ms": 254.6,
     "queue_dropped": 0,
     "display": [
      "1235",
      ""
     ],
-    "to_AF_ms": 432.0
+    "to_AF_ms": 436.0
    }
   },
   "B1 COUNT from off on battery: powers on and counts the press": {
@@ -745,7 +745,7 @@
      "power-on"
     ],
     [
-     30.339803,
+     30.136751,
      "off",
      "supply collapsed"
     ]
@@ -756,7 +756,7 @@
   },
   "B3 next press powers on and counts": {
    "label": "B3 next press powers on and counts",
-   "t": 46.2,
+   "t": 46.2004,
    "halted": null,
    "display": {
     "digits": "502",
@@ -797,12 +797,12 @@
      "power-on"
     ],
     [
-     30.339803,
+     30.136751,
      "off",
      "supply collapsed"
     ],
     [
-     45.02296,
+     45.021496,
      "on",
      "COUNT key"
     ]
@@ -814,7 +814,7 @@
     "queue_dropped": 0
    },
    "latency_ms": {
-    "press_to_AF": 370.0
+    "press_to_AF": 372.0
    }
   },
   "B4 10 ms tap from off is too short to latch U7": {
@@ -857,17 +857,17 @@
      "power-on"
     ],
     [
-     30.339803,
+     30.136751,
      "off",
      "supply collapsed"
     ],
     [
-     45.02296,
+     45.021496,
      "on",
      "COUNT key"
     ],
     [
-     75.362763,
+     75.158247,
      "off",
      "supply collapsed"
     ]
@@ -876,9 +876,9 @@
    "optr": "0x807c00aa",
    "violations": []
   },
-  "B5 COUNT held 45 s from off: one count, then off after release": {
-   "label": "B5 COUNT held 45 s from off: one count, then off after release",
-   "t": 140.0,
+  "B5 COUNT held 45 s from off: one count, then off right after release": {
+   "label": "B5 COUNT held 45 s from off: one count, then off right after release",
+   "t": 136.0,
    "halted": null,
    "display": null,
    "oled": {
@@ -886,13 +886,13 @@
     "on": false,
     "pump": false,
     "contrast": 127,
-    "power_cycles": 4
+    "power_cycles": 3
    },
    "fram": {
-    "asleep": false,
+    "asleep": true,
     "writes": 108,
     "sleeps": 3,
-    "wakes": 1,
+    "wakes": 0,
     "journal": {
      "valid_slots": 96,
      "latest": {
@@ -903,8 +903,8 @@
      }
     }
    },
-   "stop_entries": 1,
-   "stop_time_s": 14.654,
+   "stop_entries": 2,
+   "stop_time_s": 14.858,
    "boots": 3,
    "dfu": false,
    "board": "off",
@@ -916,17 +916,17 @@
      "power-on"
     ],
     [
-     30.339803,
+     30.136751,
      "off",
      "supply collapsed"
     ],
     [
-     45.02296,
+     45.021496,
      "on",
      "COUNT key"
     ],
     [
-     75.362763,
+     75.158247,
      "off",
      "supply collapsed"
     ],
@@ -936,7 +936,7 @@
      "COUNT key"
     ],
     [
-     135.08,
+     135.08987,
      "off",
      "supply collapsed"
     ]
@@ -944,6 +944,56 @@
    "option_writes": 0,
    "optr": "0x807c00aa",
    "violations": []
+  },
+  "B6 second press during the boot journal scan": {
+   "label": "B6 second press during the boot journal scan",
+   "t": 1.2,
+   "halted": null,
+   "display": {
+    "digits": "502",
+    "status": ""
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 36,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 96,
+     "latest": {
+      "sequence": 1096,
+      "count": 502,
+      "fault": 0,
+      "slot": 0
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "board": "on",
+   "battery_bars": 3,
+   "power_events": [
+    [
+     0.0,
+     "on",
+     "power-on"
+    ]
+   ],
+   "option_writes": 0,
+   "optr": "0x807c00aa",
+   "violations": [],
+   "ram": {
+    "queue_dropped": 0
+   }
   },
   "D1 USB: hold RESET COUNT, then NRST pulse": {
    "label": "D1 USB: hold RESET COUNT, then NRST pulse",
@@ -1086,9 +1136,59 @@
     "queue_dropped": 0
    }
   },
+  "D5 USB: DFU leave jump (no reset) restarts cleanly into the application": {
+   "label": "D5 USB: DFU leave jump (no reset) restarts cleanly into the application",
+   "t": 7.0,
+   "halted": null,
+   "display": {
+    "digits": "77",
+    "status": ""
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 96,
+     "latest": {
+      "sequence": 1095,
+      "count": 77,
+      "fault": 0,
+      "slot": 95
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 3,
+   "dfu": false,
+   "board": "on",
+   "battery_bars": 4,
+   "power_events": [
+    [
+     0.0,
+     "on",
+     "power-on"
+    ]
+   ],
+   "option_writes": 0,
+   "optr": "0x807c00aa",
+   "violations": [],
+   "ram": {
+    "queue_dropped": 0
+   }
+  },
   "D4 battery only: NRST during a reset hold powers the board off": {
    "label": "D4 battery only: NRST during a reset hold powers the board off",
-   "t": 3.005,
+   "t": 3.0149,
    "halted": "ROM bootloader (BOOT0 high at NRST)",
    "display": null,
    "oled": {
@@ -1126,7 +1226,7 @@
      "power-on"
     ],
     [
-     3.005,
+     3.01487,
      "off",
      "supply collapsed"
     ]
@@ -1237,7 +1337,7 @@
   },
   "F1 100 bouncy presses at 12 Hz": {
    "label": "F1 100 bouncy presses at 12 Hz",
-   "t": 11.3338,
+   "t": 11.3334,
    "halted": null,
    "display": {
     "digits": "1100",
@@ -1375,7 +1475,7 @@
      "power-on"
     ],
     [
-     4.167795,
+     4.178746,
      "off",
      "supply collapsed"
     ]
@@ -1424,17 +1524,17 @@
      "power-on"
     ],
     [
-     4.167795,
+     4.178746,
      "off",
      "supply collapsed"
     ],
     [
-     7.02296,
+     7.020216,
      "on",
      "COUNT key"
     ],
     [
-     9.454756,
+     9.463962,
      "off",
      "supply collapsed"
     ]
@@ -1671,7 +1771,7 @@
     }
    },
    "stop_entries": 1,
-   "stop_time_s": 9.855,
+   "stop_time_s": 9.878,
    "boots": 1,
    "dfu": false,
    "board": "off",
@@ -1683,7 +1783,7 @@
      "power-on"
     ],
     [
-     41.08,
+     41.08987,
      "off",
      "supply collapsed"
     ]
@@ -1769,8 +1869,8 @@
      }
     }
    },
-   "stop_entries": 1,
-   "stop_time_s": 8.872,
+   "stop_entries": 3,
+   "stop_time_s": 10.648,
    "boots": 1,
    "dfu": false,
    "board": "on",
@@ -1790,5 +1890,5 @@
    }
   }
  },
- "wall_s": 385.5
+ "wall_s": 279.2
 }
