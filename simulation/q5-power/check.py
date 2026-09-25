@@ -24,14 +24,26 @@ def check_latch(model):
     tempo_max = 3.3e-3                # DS10689 Table 27 TRSTTEMPO, VDD rising, BOR enabled
     ldo = 0.5e-3                      # TLV767 soft start typical
     firmware = 0.1e-3                 # Reset_Handler -> setup(): PB2 driven high (emulated ~20 us, allowance)
-    typ = ton + ldo + 2e-3 + firmware
-    worst = 1.25 * ton + ldo + tempo_max + firmware   # +25% allowance on the typical-only slew
+    # C40 keeps ON above VIH for ~4.7 ms after the key opens, so the press may end that much
+    # before PWR_HOLD is driven (Reset_Handler drives PB2 before RAM initialisation).
+    hold = 4.7e-9 * 1e6 * math.log(2.7 / 1.0)
+    typ = ton + ldo + 2e-3 + firmware - hold
+    worst = 1.25 * ton + ldo + tempo_max + firmware - hold   # +25% allowance on the typical-only slew
     # ON-node levels: VIH(ON) min 1.0 V; BAT54C VF at a few uA ~0.25 V; 1N4148WS ~0.6 V at uA levels.
-    levels = dict(pwr_hold_min=3.151 - 0.3, key_min_battery=3.0 - 0.3, vbus_min=4.4 - 0.7, vbus_max=5.25 - 0.4)
+    # VBUS reaches ON through D4 and R38 100k into R35 1M (divider 1/1.1); C40 4.7 nF filters it.
+    levels = dict(pwr_hold_min=3.151 - 0.3, key_min_battery=3.0 - 0.3, vbus_min=round((4.4 - 0.7) / 1.1, 3),
+                  vbus_max=round((5.25 - 0.4) / 1.1, 3))
     ok = all(v >= 1.0 for v in levels.values()) and levels['vbus_max'] <= 5.5
+    c40, r35 = 4.7e-9, 1e6
+    tau = c40 * r35
+    bounce_bridge = tau * math.log(2.7 / 1.0)        # ON stays above VIH(max) 1.0 V through a gap this long
+    turn_off = tau * math.log(2.85 / 0.35)           # after the last source releases, ON is below VIL 0.35 V
+    spike_tau = c40 * (100e3 * 1e6 / 1.1e6)           # R38 || R35 Thevenin with C40: hot-plug ringing filter
     return dict(ton_typ_ms=round(ton * 1e3, 2), tr_typ_ms=round(tr * 1e3, 2), press_needed_typ_ms=round(typ * 1e3, 1),
                 press_needed_allowance_ms=round(worst * 1e3, 1), deliberate_press_ms=50,
                 margin_factor_at_50ms=round(0.050 / worst, 2), on_node_levels_V=levels, on_levels_within_VIH_and_abs_max=ok,
+                c40_bounce_bridge_ms=round(bounce_bridge * 1e3, 2), c40_turn_off_ms=round(turn_off * 1e3, 2),
+                vbus_spike_filter_tau_ms=round(spike_tau * 1e3, 3),
                 note='TPS22917 slew figures are typical only; the press-duration bound is an allowance, not a guarantee.')
 
 
@@ -40,11 +52,16 @@ def check_inrush(model):
     total = sum(caps_uF.values()) * 1.10                               # +10% capacitance tolerance
     tr = 1.6e-6 * 4.7e-9 * 1e12
     i = total * 1e-6 * 3.3 / tr * 1e3 + 1.5                            # plus MCU start-up current
-    ocd_min_mA = 0.09 / 3.3 * 1e3                                     # BQ29700 VOCD lower bound / R9 (see q4 power doc)
+    # BQ2970 VOCD 100 +/-15 mV over temperature (SLUSBU9I 6.6); sense path R9 3.3 ohm +1 % plus 2 x DMN2056U RDS(on) ~50 mohm.
+    ocd_min_mA = 0.085 / (3.3 * 1.01 + 2 * 0.05) * 1e3
     half = total * 1e-6 * 3.3 / (tr / 2) * 1e3 + 1.5
+    tocdd_min_ms = 20 * 0.8                                            # BQ29700 tOCDD 20 ms -20 %
     return dict(downstream_capacitance_uF_plus10pct=round(total, 2), inrush_typ_slew_mA=round(i, 1),
-                inrush_if_slew_twice_as_fast_mA=round(half, 1), bq29700_ocd_min_mA=round(ocd_min_mA, 1),
-                passes_typical=i < ocd_min_mA, note='X5R/X7R DC-bias derating lowers effective C; measure inrush at first article.')
+                inrush_if_slew_twice_as_fast_mA=round(half, 1), bq29700_ocd_min_mA_over_temperature=round(ocd_min_mA, 1),
+                bq29700_tocdd_min_ms=tocdd_min_ms, inrush_duration_ms=round(tr * 1e3, 2),
+                passes_typical=i < ocd_min_mA, passes_by_duration=tr * 1e3 < tocdd_min_ms,
+                note='OCD cannot trip on the inrush: the pulse (tR) is shorter than the minimum OCD delay; SCD needs >=117 mA. '
+                     'X5R/X7R DC-bias derating lowers effective C; measure inrush at first article.')
 
 
 def check_off_current():
@@ -102,6 +119,7 @@ def main():
                   latch=check_latch(model), inrush=check_inrush(model), off_current=check_off_current(),
                   battery_adc=check_battery_adc(), cold_insertion=check_cold_insertion(), storage=check_storage())
     expected_pass = [result['latch']['on_levels_within_VIH_and_abs_max'], result['inrush']['passes_typical'],
+                     result['inrush']['passes_by_duration'],
                      result['battery_adc']['separation_ok'], result['cold_insertion']['usb_first_passes']]
     result['bounded_checks_pass'] = all(expected_pass)
     result['retained_counterexample'] = 'Unrestricted cold insertion (upstream C2+C3) still exceeds the 125 us minimum SCC delay.'

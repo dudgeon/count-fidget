@@ -1,133 +1,133 @@
 {
-  "elf": "firmware/q5-stm32/build/count-fidget-Q5-stm32.elf",
-  "elf_sha256": "9626fb6602e87e05377770453776d5725e06c6492187add5715d2110767d2570",
-  "currents_mA": {
-    "mcu_run": 1.1,
-    "mcu_sleep": 0.35,
-    "mcu_stop": 0.0033,
-    "adc": 0.05,
-    "fram_standby": 0.09,
-    "fram_sleep": 0.005,
-    "oled": 1.0,
-    "ldo": 0.05,
-    "feedback": 0.016,
-    "vbat_divider": 0.012,
-    "u7_on": 0.0005,
-    "stat_pullups": 0.0,
-    "protector": 0.004,
-    "charger_bat": 0.004
+ "elf": "firmware/q5-stm32/build/count-fidget-Q5-stm32.elf",
+ "elf_sha256": "bb5a4a38aeeb41213e5f46c07e4a361e69b22f9b96742ebbff875b6083f58b03",
+ "currents_mA": {
+  "mcu_run": 1.1,
+  "mcu_sleep": 0.35,
+  "mcu_stop": 0.0033,
+  "adc": 0.05,
+  "fram_standby": 0.09,
+  "fram_sleep": 0.005,
+  "oled": 1.0,
+  "ldo": 0.05,
+  "feedback": 0.016,
+  "vbat_divider": 0.012,
+  "u7_on": 0.0005,
+  "stat_pullups": 0.0,
+  "protector": 0.004,
+  "charger_bat": 0.004
+ },
+ "off_mA": 0.0081,
+ "session_1": {
+  "presses": 1,
+  "window_s": 41.0,
+  "charge_mAs": 56.54540042208074,
+  "breakdown_mAs": {
+   "always": 0.32799999999996815,
+   "board_rails": 2.3657349535006578,
+   "mcu": 19.547755600003644,
+   "oled": 30.1021595,
+   "fram": 2.7110136562497265,
+   "adc": 1.4896503874994849,
+   "off_leakage": 0.0010863249000000004
   },
-  "off_mA": 0.0081,
-  "session_1": {
-    "presses": 1,
-    "window_s": 41.0,
-    "charge_mAs": 56.8690931372549,
-    "breakdown_mAs": {
-      "always": 0.32799999999996615,
-      "board_rails": 2.381674555125646,
-      "mcu": 19.612688700005375,
-      "oled": 30.3151545,
-      "fram": 2.730127500000446,
-      "adc": 1.5003818624994663,
-      "off_leakage": 0.001066019675
-    },
-    "power_events": [
-      [
-        1.02296,
-        "on",
-        "COUNT key"
-      ],
-      [
-        31.362763,
-        "off",
-        "supply collapsed"
-      ]
-    ],
-    "extra_mAs": 56.5369931372549
+  "power_events": [
+   [
+    1.020263,
+    "on",
+    "COUNT key"
+   ],
+   [
+    31.157014,
+    "off",
+    "supply collapsed"
+   ]
+  ],
+  "extra_mAs": 56.21330042208074
+ },
+ "session_10": {
+  "presses": 10,
+  "window_s": 50.0,
+  "charge_mAs": 73.57591220959159,
+  "breakdown_mAs": {
+   "always": 0.40000000000011093,
+   "board_rails": 3.0713714535017935,
+   "mcu": 25.5531697874911,
+   "oled": 39.09115950000001,
+   "fram": 3.520023656250164,
+   "adc": 1.9391003874991335,
+   "off_leakage": 0.0010874249000000001
   },
-  "session_10": {
-    "presses": 10,
-    "window_s": 50.0,
-    "charge_mAs": 73.6624772372696,
-    "breakdown_mAs": {
-      "always": 0.39999999999979224,
-      "board_rails": 3.0782835551267387,
-      "mcu": 25.52109120000173,
-      "oled": 39.1891545,
-      "fram": 3.5287875000020748,
-      "adc": 1.944081862499122,
-      "off_leakage": 0.0010786196749999998
-    },
-    "power_events": [
-      [
-        1.02296,
-        "on",
-        "COUNT key"
-      ],
-      [
-        40.236763,
-        "off",
-        "supply collapsed"
-      ]
-    ],
-    "extra_mAs": 73.2574772372696
+  "power_events": [
+   [
+    1.020263,
+    "on",
+    "COUNT key"
+   ],
+   [
+    40.146014,
+    "off",
+    "supply collapsed"
+   ]
+  ],
+  "extra_mAs": 73.17091220959159
+ },
+ "session_30": {
+  "presses": 30,
+  "window_s": 70.0,
+  "charge_mAs": 111.46697252219218,
+  "breakdown_mAs": {
+   "always": 0.5600000000004818,
+   "board_rails": 4.641371453502482,
+   "mcu": 38.91423009999393,
+   "oled": 59.09115950000001,
+   "fram": 5.3200236562472485,
+   "adc": 2.939100387499586,
+   "off_leakage": 0.0010874249000000001
   },
-  "session_30": {
-    "presses": 30,
-    "window_s": 70.0,
-    "charge_mAs": 111.49991423738743,
-    "breakdown_mAs": {
-      "always": 0.5599999999993617,
-      "board_rails": 4.648283555127357,
-      "mcu": 38.828528199999624,
-      "oled": 59.18915450000001,
-      "fram": 5.328787499998837,
-      "adc": 2.944081862499591,
-      "off_leakage": 0.0010786196749999998
-    },
-    "power_events": [
-      [
-        1.02296,
-        "on",
-        "COUNT key"
-      ],
-      [
-        60.236763,
-        "off",
-        "supply collapsed"
-      ]
-    ],
-    "extra_mAs": 110.93291423738744
+  "power_events": [
+   [
+    1.020263,
+    "on",
+    "COUNT key"
+   ],
+   [
+    60.146014,
+    "off",
+    "supply collapsed"
+   ]
+  ],
+  "extra_mAs": 110.89997252219219
+ },
+ "profiles": {
+  "idle / on a shelf": {
+   "mAh_per_day": 0.1944,
+   "days": {
+    "40 mAh min x 0.9 usable": 150.4,
+    "45 mAh nominal x 0.9 usable": 169.2
+   }
   },
-  "profiles": {
-    "idle / on a shelf": {
-      "mAh_per_day": 0.1944,
-      "days": {
-        "40 mAh min x 0.9 usable": 150.4,
-        "45 mAh nominal x 0.9 usable": 169.2
-      }
-    },
-    "light: 10 sessions x 10 presses": {
-      "mAh_per_day": 0.3979,
-      "days": {
-        "40 mAh min x 0.9 usable": 81.3,
-        "45 mAh nominal x 0.9 usable": 91.4
-      }
-    },
-    "moderate: 30 sessions x 10 presses": {
-      "mAh_per_day": 0.8049,
-      "days": {
-        "40 mAh min x 0.9 usable": 42.4,
-        "45 mAh nominal x 0.9 usable": 47.7
-      }
-    },
-    "heavy: 20 x 30 presses + 1 h continuous": {
-      "mAh_per_day": 2.4792,
-      "days": {
-        "40 mAh min x 0.9 usable": 14.3,
-        "45 mAh nominal x 0.9 usable": 16.0
-      }
-    }
+  "light: 10 sessions x 10 presses": {
+   "mAh_per_day": 0.3977,
+   "days": {
+    "40 mAh min x 0.9 usable": 81.3,
+    "45 mAh nominal x 0.9 usable": 91.5
+   }
   },
-  "storage_note": "Off drain ~8.1 uA (protector + charger battery quiescent) plus up to 3 %/month self-discharge. After the BQ29700 disconnects at 2.8 V only its ~0.1 uA and self-discharge remain."
+  "moderate: 30 sessions x 10 presses": {
+   "mAh_per_day": 0.8042,
+   "days": {
+    "40 mAh min x 0.9 usable": 42.4,
+    "45 mAh nominal x 0.9 usable": 47.7
+   }
+  },
+  "heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 2.479,
+   "days": {
+    "40 mAh min x 0.9 usable": 14.3,
+    "45 mAh nominal x 0.9 usable": 16.0
+   }
+  }
+ },
+ "storage_note": "Off drain ~8.1 uA (protector + charger battery quiescent) plus up to 3 %/month self-discharge. After the BQ29700 disconnects at 2.8 V only its ~0.1 uA and self-discharge remain."
 }
