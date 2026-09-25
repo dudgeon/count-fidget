@@ -3,7 +3,7 @@
   "tool_sha256": "e097aaf4d5d4bc049a29f45b71c468b508e5024f3c564b0ee118aa5093b5a8a2",
   "mock_sha256": "90f9dfabfeba64d2da3131d3bf24983fb2c59cd2d34b3ca6915cf75402c620be",
   "test_sha256": "820b48360b985a2deac71ceb737d57c2cbf184e1d2896215c4f259963c57f94c",
-  "image_sha256": "41c588d159303a1a6f056ecf959c335e27418fa568c5ae3cc6be756b8bfe0b98",
+  "image_sha256": "17eac86b0454cdcc91e9ffb5f0bb0152f4844f3c5b08ee19bc0781b5d88dc502",
   "passed": [
     "happy_path",
     "corrupted_write_is_rejected_and_logged",

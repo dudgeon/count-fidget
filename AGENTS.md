@@ -3,10 +3,10 @@
 ## Active Q5 checkpoint — 25 September 2026
 
 The user asked for all findings from the Q4 simulation review to be resolved, plus a soft power key, a battery gauge with low warning and storage cut-off, charge status, a reachable hardware reset, new key logic (**both keys: increment wins; reset only after a deliberate 2 s hold and release**), a smaller enclosure and a BOM of standard JLC inventory parts only. **Q5 implements this as a coordinated revision of Q4:**
-- same STM32L072CBT6 / ROM USB DFU, FM25V02A FRAM journal (Q4-compatible), HS96L01W4S03 SPI OLED module and 42 × 54 × 1 mm two-layer board;
+- same STM32L072CBT6 / ROM USB DFU, FM25V02A FRAM journal (Q4-compatible), HS96L01W4S03 SPI OLED module and 42 × 54 mm two-layer board (now 1.6 mm);
 - adds a COUNT-key soft power latch on U7 (~8 µA off), a vendor-soldered LIR2032 holder (BT1) with an onboard NTC in place of the pack harness, SYS/2 battery sense and BQ25185 STAT inputs;
-- 93 references: 79 fitted (76 vendor SMT + 3 home through-hole), 41 exact MPNs, all passing a read-only 10-board JLC stock screen;
-- five-part printed enclosure (base, front cover, rear key plate, two keycaps), 47.2 × 59.2 × 16.2 mm.
+- 95 references: 81 fitted (80 vendor SMT + the DS1 display, home-soldered in variant A or JLC-fitted in variant B), 41 exact MPNs, all passing a read-only 10-board JLC stock screen;
+- five-part printed enclosure (base, front cover, rear key plate, two keycaps), 47.2 × 59.2 × 16.8 mm.
 
 Start at `docs/REVIEW-Q5-2026-09-25.md`, then `docs/q5-power-design.md` and `docs/q5-firmware.md`. Q5 lives in `electronics/q5/`, `firmware/q5-stm32/`, `mechanical/q5/`, `procurement/q5/`, `simulation/q5-*` and `scripts/*q5*`. Q1–Q4 artifacts are frozen; never run a Q4 builder against Q5.
 
@@ -14,7 +14,7 @@ Evidence:
 - fresh KiCad 10.0.6 ERC/DRC/unconnected/parity all zero;
 - 42/42 verifier corruptions rejected;
 - full and UBSan firmware suites plus 13 image negatives passed;
-- 35 instruction-level emulator scenarios on the final ELF with zero failures;
+- 37 instruction-level emulator scenario records on the final ELF with zero failures;
 - five valid/manifold enclosure parts with zero modelled collisions.
 
 **None of it is a measurement.** Preserve the Q5 physical gates:
@@ -30,6 +30,12 @@ Evidence:
 - (B) JLC assembles everything, including the through-hole parts.
 
 This lifts the quote pause for JLCPCB quoting only. Uploading the locked design files to JLCPCB's quote tools is allowed. Placing an order, paying, allocating or preordering stock, releasing manufacturing, or contacting other vendors remains unauthorized. Record quote results in `procurement/q5/` and the quote tracker, without account IDs, personal data or private screenshots. Read-only public stock research is allowed. Commit/push Q5 work to `claude/loving-noether-4qogm0` and its draft PR #10; do not merge.
+
+**Design locked (25 September evening).** SW1/SW2 are vendor-SMT MX hot-swap sockets on a 1.6 mm PCB; the clicky switches K1/K2 press in without soldering. Ten passives/FETs moved to JLC Basic parts. Quote status is in `procurement/q5/JLC-QUOTE-Q5.md`:
+- the public quote page gave PCB $22.10 and DHL $29.45 for 10 boards;
+- the parts-matched PCBA step needs the user's JLCPCB sign-in;
+- the estimate from published fees is A ≈ $246 and B ≈ $277 before shipping.
+The macOS flashing tool is `tools/clicker-flash/` (skill `flash-clickers`). The first-article plan is `docs/q5-first-article-test-plan.md`.
 
 ## Previous Q4 checkpoint — 24 September 2026 (superseded by Q5 where inconsistent)
 

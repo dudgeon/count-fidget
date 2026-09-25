@@ -2,7 +2,7 @@
 
 ## Active Q5 engineering workflow
 
-Q5 is derived from the frozen Q4 sources and changes only what the [Q5 review](REVIEW-Q5-2026-09-25.md) lists. Q1–Q4 remain frozen; never run a Q4 builder against Q5. **Vendor quote activity, purchases and manufacture remain paused.** Tools used for the recorded evidence: KiCad 10.0.6, Freerouting 2.4.1 (same jar SHA-256 as Q4) on a Temurin JRE with telemetry off, Arm GNU 14.3.Rel1 (x86_64 Linux build), CadQuery 2.8.
+Q5 is derived from the frozen Q4 sources and changes only what the [Q5 review](REVIEW-Q5-2026-09-25.md) lists. Q1–Q4 remain frozen; never run a Q4 builder against Q5. **JLCPCB quoting of the locked design is authorized; purchases and manufacture are not.** Tools used for the recorded evidence: KiCad 10.0.6, Freerouting 2.4.1 (same jar SHA-256 as Q4) on a Temurin JRE with telemetry off, Arm GNU 14.3.Rel1 (x86_64 Linux build), CadQuery 2.8.
 
 1. `build_q5_model.py` derives the Q5 model from `electronics/q4/netlist-Q4.json` plus the recorded Q5 deltas and `electronics/q5/placement.json`. `build_q5_schematic.py --kicad-cli ...` regenerates the sheets and deletes stale sheets. It must report ERC zero.
 2. `build_q5_board.py` **discards routing**. After it: `sync_q5_board.py`, `preroute_q5.py` (locked SYS seed), `prepare_q5_route.py`, Freerouting on the DSN, `finish_q5_board.py --import-route` (SES import, collision-checked via nudge, the recorded `gnd-stitch.json` vias from `plan_q5_stitching.py`, two GND pours). DSN/SES are local exchange files and gitignored.
@@ -10,7 +10,14 @@ Q5 is derived from the frozen Q4 sources and changes only what the [Q5 review](R
 4. `build_firmware_q5.py --toolchain ...`, then `--verify-only`. `test_firmware_q5.py` runs the portable suites (`--sanitize` for UBSan; `--cc gcc` where clang's UBSan runtime is missing; `--image-only` for 13 image corruptions).
 5. `simulation/q5-firmware-emulation/scenarios.py --check` runs the actual ELF on the instruction-level board model; `energy.py` produces the battery-life table. `simulation/q5-power/check.py` records the bounded latch/inrush/ADC/insertion/storage calculations.
 6. `build_q5_enclosure.py --kicad-python ...` requires five valid solids, manifold STLs, zero static intersections and zero sampled assembly-path collisions.
-7. `screen_stock_q5.py` (read-only public JLC/LCSC catalogue lookups) binds the final model hash. Then `export_q5.py --kicad-cli ...` writes the SMT BOM/CPL, home and offboard lists and Gerbers to `procurement/q5/`. No Q5 exporter negative test exists yet. The exporter checks its inputs itself.
+7. `screen_stock_q5.py` (read-only public JLC/LCSC catalogue lookups) binds the final model hash. Then `export_q5.py --kicad-cli ...` writes the variant A (SMT) and variant B (`-FULL-ASSEMBLY`) BOM/CPL, loose-part, home and offboard lists and Gerbers to `procurement/q5/`. No Q5 exporter negative test exists yet. The exporter checks its inputs itself.
+8. `estimate_q5_jlc_cost.py` (KiCad Python) prices both variants from JLC's published fee schedule, `stock.json` and the observed PCB quote, and writes `procurement/q5/jlc-cost-estimate.json`. `build_q5_coupon.py` writes the print-tolerance coupon STL.
+9. `tools/clicker-flash/test_clicker_flash.py --output verification/q5-flasher-tests.json` tests the macOS flasher against the dfu-util emulator.
+
+Routing notes from the design lock:
+- `preroute_q5.py --no-seed` routes without the locked SYS seed, which the re-placed board no longer uses.
+- Freerouting 2.4.1 is deterministic. A knot that stays unrouted is fixed by nudging placement (for example R10 at 270°, C39 at x −0.3), not by editing the SES.
+- After any re-placement, re-plan `gnd-stitch.json` with `plan_q5_stitching.py` before `finish_q5_board.py`.
 
 ## Historical Q4 engineering workflow
 
