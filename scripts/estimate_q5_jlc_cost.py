@@ -5,17 +5,21 @@ Basic/Extended library type), the routed board (SMT and hand-solder joint counts
 JLC's published PCBA fee schedule (dated below) and the PCB-only price and shipping
 estimate observed on JLC's public quote page for the locked Gerbers. This is an
 ESTIMATE: JLC's binding PCBA price appears only after the signed-in BOM/CPL step.
-Writes procurement/q5/jlc-cost-estimate.json.
+Writes procurement/q5/jlc-cost-estimate.json (10 boards) or, with --qty 5,
+procurement/q5/jlc-cost-estimate-5.json.
 """
 import hashlib
 import json
+import sys
 from pathlib import Path
 import pcbnew as p
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL, STOCK = ROOT / 'electronics/q5/netlist-Q5.json', ROOT / 'procurement/q5/stock.json'
 BOARD, OUT = ROOT / 'electronics/q5/click-counter-Q5.kicad_pcb', ROOT / 'procurement/q5/jlc-cost-estimate.json'
-N = 10
+N = 5 if '--qty' in sys.argv and sys.argv[sys.argv.index('--qty') + 1] == '5' else 10
+if N == 5:
+    OUT = OUT.with_name('jlc-cost-estimate-5.json')
 # https://jlcpcb.com/help/article/pcb-assembly-price (read 25 Sep 2026)
 FEES = dict(
     economic=dict(setup=8.18, stencil=1.53, per_joint=0.0016, feeder_extended=3.07, feeder_basic=0.0),
@@ -26,6 +30,11 @@ FEES = dict(
 OBSERVED = dict(pcb_10_pcs_usd=22.10, pcb_breakdown=dict(board=5.00, enig=17.10),
                 build_time_with_pcba='24 hours (PCBA only) at $0.00', shipping_dhl_ddp_usd=29.45,
                 shipping_weight_kg=0.20, observed_utc='2026-09-25T20:05Z')
+if N == 5:
+    # Same page and options, PCB Qty 5 (25 Sep 2026); PCBA qty offered 2 or 5.
+    OBSERVED = dict(pcb_5_pcs_usd=20.90, pcb_breakdown=dict(board=4.00, enig=16.90),
+                    build_time_with_pcba='24 hours (PCBA only) at $0.00', shipping_dhl_ddp_usd=29.45,
+                    shipping_weight_kg=0.16, observed_utc='2026-09-25T21:10Z')
 
 
 def price(o):
@@ -56,7 +65,7 @@ def main():
 
     def order(kind, variant):
         f = FEES[kind]
-        c = dict(pcb=OBSERVED['pcb_10_pcs_usd'], setup=f['setup'], stencil=f['stencil'],
+        c = dict(pcb=OBSERVED[f'pcb_{N}_pcs_usd'], setup=f['setup'], stencil=f['stencil'],
                  smt_joints=round(smt_joints * N * f['per_joint'], 2),
                  feeder_loading=round(extended * f['feeder_extended'] + basic * f['feeder_basic'], 2),
                  components=round(components, 2))

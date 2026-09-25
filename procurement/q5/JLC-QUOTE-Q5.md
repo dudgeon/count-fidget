@@ -65,6 +65,27 @@ Caveats:
 - The estimate excludes coupons (JLC advertises setup-fee coupons), attrition extras JLC adds per part, and any extended-part price change after 20:21 UTC.
 - Whether Economic PCBA accepts the through-hole DS1 stacked on header DS1H, or requires Standard, is a quote question for variant B.
 
+## 5-board variant (observed 25 Sep 2026, same page and options)
+
+On the public quote page, PCB Qty 5 gave:
+- Special Offer $4.00 + ENIG $16.90 = **$20.90**;
+- DHL DDP shipping $29.45 (0.16 kg).
+
+PCBA qty 5 is offered (the minimum is 2). The estimate is in `jlc-cost-estimate-5.json`, from `estimate_q5_jlc_cost.py --qty 5`:
+
+| USD, 5 boards | A Economic | B Economic |
+|---|---|---|
+| PCB (observed) | 20.90 | 20.90 |
+| Setup + stencil + joints | 11.92 | 11.92 |
+| Feeder loading (25 Extended types) | 76.75 | 76.75 |
+| SMT components | 66.48 | 66.48 |
+| DS1 + header, THT feeders, hand joints, labor | — | 20.23 |
+| **Subtotal** | **176.05** | **196.28** |
+| **With DHL** | **205.50** | **225.73** |
+| **Per board, shipped** | **41.10** | **45.15** |
+
+The feeder fee is per part type, not per board. That is why 5 boards cost about 75 % of the price of 10. Component prices use the 10-piece price break, so 5-piece breaks may add a few dollars. Standard PCBA adds about $8.50 (A) or $5.40 (B).
+
 ## Steps for the binding quote (user, signed in; stop at the cart)
 
 1. Open https://cart.jlcpcb.com/quote and sign in.
