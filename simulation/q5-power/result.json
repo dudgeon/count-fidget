@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "scope": "Analytical bounds from stated datasheet values; not a simulation or measurement",
-  "model_sha256": "f1842f210c990246e7c4e123123c62935a2c8c7311f2e137b9a9fc1104a2ef6b",
+  "model_sha256": "67c816161594167ef4e57a1a50c7155c2c48ef49607775825cd9701b768cb62f",
   "script_sha256": "a7797759756690934512e4906dcf6b4daf0a820b7edb7b57b5ca3b07b2563f6c",
   "latch": {
     "ton_typ_ms": 17.86,

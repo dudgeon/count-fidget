@@ -168,8 +168,8 @@
     "pressed_keycap_to_rear_screw": 3.0,
     "usb_mouth_to_outer_wall": 2.025
   },
-  "source_board_sha256": "69acc36fadd4f51ff3f32192c2d27d8a914eacf024aeb27651487a67c8f6cc2d",
-  "source_model_sha256": "0b24338cc0e2f7874e67bfa04d436558a8a44ddf0637fca329cbec23213737c7",
+  "source_board_sha256": "e78629ed361ff9f38c8ead58770e2dd60fc865461600456b503f6015345428df",
+  "source_model_sha256": "67c816161594167ef4e57a1a50c7155c2c48ef49607775825cd9701b768cb62f",
   "generator_sha256": "38601c310ccb4d42ca1908a6400a72a7102c27d7fb9fa37cb63401b3f73f0003",
   "rendered_count": 12345678,
   "firmware_renderer_sha256": {
