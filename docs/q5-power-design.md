@@ -8,6 +8,7 @@ Status: implemented engineering candidate, 25 September 2026. Every number below
 |---|---|---|---|
 | **Soft power latch** on the existing U7 load switch | U7 ON now on SYS_ON; D3 BAT54C, D4 1N4148WS, Q5 2N7002, R34 100k, R35 1M, TP13 | #12, #5 | Q4 slept at ~80 µA, most of it the TLV767 IQ plus its feedback divider, giving 2–3 weeks of battery. Switching everything below SYS off removes that drain without replacing the reviewed regulator. |
 | **Faster U7 slew** | C28, C29 22 nF → 4.7 nF (C0G) | #12 | A short, deliberate press must be able to latch power. |
+| **ON-node protection and hold** (design lock) | R38 100k in series from D4, C40 4.7 nF on SYS_ON | review | VBUS hot-plug ringing is filtered below U7 ON's 6 V absolute maximum (τ 0.43 ms). C40 bridges contact bounce up to about 4.7 ms and turns U7 off about 10 ms after the last source releases. |
 | **Cell holder and onboard NTC** replace the J2 pack harness | BT1 CR2032-BS-6-1 (C70377), TH1 NCP18XH103F03RB; J2 removed | #13 | The Q4 pack/NTC harness was not a JLC inventory part and was unqualified. The holder is vendor-soldered SMT. The cell is a user-supplied LIR2032. |
 | **Battery sense** | R36/R37 150k 0.1 %, C37 100 nF, PA4 | #9.4, #12 | Low-battery warning, a gauge and a storage cut-off. |
 | **Charger status** | BQ25185 STAT1 → PA5, STAT2 → PA6 | new | CHG, done and fault indication. It also detects USB independently of the ADC. |
@@ -21,16 +22,19 @@ The regulator (TLV767), its divider and the rail monitor are unchanged. They now
 ```
 SYS ──SW1(COUNT)──► PWR_KEY ──D3.A1─┐
                      │  R34 100k    ├─► SYS_ON ──► U7 ON   (R35 1M to GND)
-PB2 PWR_HOLD ──────────────D3.A2────┤
-VBUS ──────────────────────D4───────┘
+PB2 PWR_HOLD ──────────────D3.A2────┤   C40 4.7n to GND
+VBUS ──────D4──R38 100k─────────────┘
 PWR_KEY ──► Q5 gate: Q5 pulls COUNT_N (PA0) low while COUNT is pressed
 ```
 
 - **Off:** U7 is off, and the TLV767, MCU, FRAM, OLED, dividers and pull-ups are unpowered. Off current is the BQ29700 (4 µA) plus the BQ25185 battery quiescent current (4 µA): **8.0 µA typical, 11.1 µA maximum**.
-- **Power-on by COUNT:** the key puts SYS on U7 ON through D3. tON is 17.9 ms typical, and the MCU drives PB2 high within about 0.1 ms of reset release. The press must last about **20.5 ms typical, 26.2 ms with a 25 % slew allowance**; a deliberate press is ≥ 50 ms. A shorter tap simply does not latch. The ON node stays ≥ 2.7 V on a 3.0 V cell, above VIH 1.0 V. The power-on press is counted once (firmware sees the POR flag and COUNT still low).
-- **USB:** VBUS through D4 always holds U7 on, so the ROM DFU and charging work with the application unloaded. The ON node reaches at most 4.85 V, inside the check's 5.5 V limit.
+- **Power-on by COUNT:** the key puts SYS on U7 ON through D3. tON is 17.9 ms typical. `Reset_Handler` drives PB2 before RAM initialisation, and C40 keeps ON high for about 4.7 ms after the key opens. The press must last about **15.8 ms typical, 21.6 ms with a 25 % slew allowance**; a deliberate press is ≥ 50 ms. A shorter tap simply does not latch. The ON node stays ≥ 2.7 V on a 3.0 V cell, above VIH 1.0 V. The power-on press is counted once (firmware sees the POR flag and COUNT still low).
+- **USB:** VBUS through D4 and R38 always holds U7 on, so the ROM DFU and charging work with the application unloaded. The ON node sits at 3.36–4.41 V (R38/R35 divider), above VIH and inside the check's 5.5 V limit.
 - **Power-off:** firmware releases PB2 after 30 s of inactivity on battery, following display power-down and FRAM sleep. If the board is still powered after 200 ms (USB present, or the COUNT key held), firmware falls back to Q4-style Stop with PB2 low. Then unplugging USB or releasing the key turns the board off.
-- **Inrush at switch-on:** 25.3 µF downstream (with +10 %) over the 7.5 ms tR gives **12.6 mA**. That is below the BQ29700's 27.3 mA minimum overcurrent threshold, and 23.7 mA even if the slew were twice as fast. DC-bias derating lowers the real value. Measure it on a first article.
+- **Inrush at switch-on:** 25.3 µF downstream (with +10 %) over the 7.5 ms tR gives **12.6 mA** (23.7 mA if the slew were twice as fast).
+  - The BQ29700 overcurrent threshold over temperature is at least **24.8 mA**: VOCD 100 ±15 mV into R9 3.3 Ω +1 % plus two DMN2056U RDS(on). This corrects the review's finding that the earlier 27.3 mA figure was optimistic.
+  - More importantly, OCD cannot trip on inrush at all: the pulse (7.5 ms) is shorter than the minimum OCD delay tOCDD (20 ms −20 % = 16 ms), and the short-circuit threshold needs ≥ 117 mA.
+  - DC-bias derating lowers the real value. Measure it on a first article.
 - **NRST pinhole on battery** releases PB2, so it acts as a full power cycle. The count is safe because a reset commits only on a completed hold-and-release (issue #3).
 
 ## Display supply (issue #8)
