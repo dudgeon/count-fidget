@@ -1177,6 +1177,24 @@
         }
       }
     },
+    "C40": {
+      "sheet": "usb-power-2",
+      "sheet_file": "usb-power-2.kicad_sch",
+      "symbol_uuid": "9c4c697e-6982-5833-a4a4-e74ee5c0dac9",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/9c4c697e-6982-5833-a4a4-e74ee5c0dac9",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS_ON"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
     "C5": {
       "sheet": "usb-power-2",
       "sheet_file": "usb-power-2.kicad_sch",
@@ -1295,15 +1313,15 @@
       }
     },
     "D4": {
-      "sheet": "usb-power-2",
-      "sheet_file": "usb-power-2.kicad_sch",
+      "sheet": "usb-power-3",
+      "sheet_file": "usb-power-3.kicad_sch",
       "symbol_uuid": "ec485278-a550-5bc5-b803-a8f0e3b06555",
-      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/ec485278-a550-5bc5-b803-a8f0e3b06555",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/ec485278-a550-5bc5-b803-a8f0e3b06555",
       "pins": {
         "1": {
           "name": "K",
           "type": "passive",
-          "net": "SYS_ON"
+          "net": "VBUS_WAKE"
         },
         "2": {
           "name": "A",
@@ -1478,10 +1496,10 @@
       }
     },
     "R30": {
-      "sheet": "usb-power-3",
-      "sheet_file": "usb-power-3.kicad_sch",
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
       "symbol_uuid": "5568ca25-ccb6-594e-b3c7-df18034f79bb",
-      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/5568ca25-ccb6-594e-b3c7-df18034f79bb",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/5568ca25-ccb6-594e-b3c7-df18034f79bb",
       "pins": {
         "1": {
           "name": "1",
@@ -1549,6 +1567,24 @@
         }
       }
     },
+    "R38": {
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
+      "symbol_uuid": "199f5b4f-6022-53e6-8380-09526c64739b",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/199f5b4f-6022-53e6-8380-09526c64739b",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS_WAKE"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "SYS_ON"
+        }
+      }
+    },
     "R4": {
       "sheet": "usb-power-4",
       "sheet_file": "usb-power-4.kicad_sch",
@@ -1568,10 +1604,10 @@
       }
     },
     "R5": {
-      "sheet": "usb-power-4",
-      "sheet_file": "usb-power-4.kicad_sch",
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
       "symbol_uuid": "d1fb8646-66b4-518e-a4f8-6b2fe2c3bf6a",
-      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/d1fb8646-66b4-518e-a4f8-6b2fe2c3bf6a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/d1fb8646-66b4-518e-a4f8-6b2fe2c3bf6a",
       "pins": {
         "1": {
           "name": "1",
@@ -1586,10 +1622,10 @@
       }
     },
     "R6": {
-      "sheet": "usb-power-4",
-      "sheet_file": "usb-power-4.kicad_sch",
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
       "symbol_uuid": "9bc5fed5-ec02-5846-a314-ec8447ccc755",
-      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/9bc5fed5-ec02-5846-a314-ec8447ccc755",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/9bc5fed5-ec02-5846-a314-ec8447ccc755",
       "pins": {
         "1": {
           "name": "1",

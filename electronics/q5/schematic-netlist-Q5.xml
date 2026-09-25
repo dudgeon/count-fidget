@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>electronics/q5/click-counter-Q5.kicad_sch</source>
-    <date>2026-09-25T11:20:42</date>
+    <date>2026-09-25T18:58:21</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -939,16 +939,16 @@
     </comp>
     <comp ref="SW1">
       <value>COUNT / POWER</value>
-      <footprint>CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate</footprint>
-      <description>Exact clicky switch closing SYS to PWR_KEY: powers the board on and, through Q5, drives COUNT_N low. Home through-hole soldering after the rear key plate is fitted.</description>
+      <footprint>CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11</footprint>
+      <description>MX hot-swap socket, vendor SMT on the bottom side. COUNT / POWER: closes SYS to PWR_KEY, powering the board on and, through Q5, driving COUNT_N low. The user presses a clicky MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.</description>
       <fields>
-        <field name="MPN">CPG151101D13</field>
-        <field name="Footprint">CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate</field>
+        <field name="MPN">CPG151101S11-16</field>
+        <field name="Footprint">CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11</field>
         <field name="Datasheet" />
-        <field name="Description">Exact clicky switch closing SYS to PWR_KEY: powers the board on and, through Q5, drives COUNT_N low. Home through-hole soldering after the rear key plate is fitted.</field>
+        <field name="Description">MX hot-swap socket, vendor SMT on the bottom side. COUNT / POWER: closes SYS to PWR_KEY, powering the board on and, through Q5, driving COUNT_N low. The user presses a clicky MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="SW1" description="" />
-      <property name="MPN" value="CPG151101D13" />
+      <property name="MPN" value="CPG151101S11-16" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 4" />
       <property name="Sheetfile" value="mcu-4.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 4/" tstamps="/5b560024-5f43-580a-88a1-035a458454bd/" />
@@ -964,16 +964,16 @@
     </comp>
     <comp ref="SW2">
       <value>RESET COUNT / BOOT</value>
-      <footprint>CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate</footprint>
-      <description>Exact clicky switch; home through-hole soldering after rear key plate is fitted. Verify body/plate/lead fit before soldering; vendor SMT assembly excludes this part.</description>
+      <footprint>CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11</footprint>
+      <description>MX hot-swap socket, vendor SMT on the bottom side. RESET COUNT / BOOT0. The user presses a clicky MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.</description>
       <fields>
-        <field name="MPN">CPG151101D13</field>
-        <field name="Footprint">CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate</field>
+        <field name="MPN">CPG151101S11-16</field>
+        <field name="Footprint">CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11</field>
         <field name="Datasheet" />
-        <field name="Description">Exact clicky switch; home through-hole soldering after rear key plate is fitted. Verify body/plate/lead fit before soldering; vendor SMT assembly excludes this part.</field>
+        <field name="Description">MX hot-swap socket, vendor SMT on the bottom side. RESET COUNT / BOOT0. The user presses a clicky MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="SW2" description="" />
-      <property name="MPN" value="CPG151101D13" />
+      <property name="MPN" value="CPG151101S11-16" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 5" />
       <property name="Sheetfile" value="mcu-5.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 5/" tstamps="/2f9dfd4f-ef26-5940-ad4a-519e367606ec/" />
@@ -1751,6 +1751,31 @@
         </unit>
       </units>
     </comp>
+    <comp ref="C40">
+      <value>4.7n</value>
+      <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <description>4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</description>
+      <fields>
+        <field name="MPN">GRM1885C1H472JA01D</field>
+        <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</field>
+      </fields>
+      <libsource lib="CountFidgetQ5" part="C40" description="" />
+      <property name="MPN" value="GRM1885C1H472JA01D" />
+      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 2" />
+      <property name="Sheetfile" value="usb-power-2.kicad_sch" />
+      <sheetpath names="/USB, charging, soft power latch and common supply / 2/" tstamps="/212a85d9-b47b-5df6-8d9b-ffcc17a81200/" />
+      <tstamps>9c4c697e-6982-5833-a4a4-e74ee5c0dac9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="D1">
       <value>USB ESD</value>
       <footprint>CountFidgetQ5:Package_TO_SOT_SMD_SOT-23-6</footprint>
@@ -1837,18 +1862,18 @@
     <comp ref="D4">
       <value>1N4148WS</value>
       <footprint>CountFidgetQ5:Diode_SMD_D_SOD-323</footprint>
-      <description>VBUS into U7 ON: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.</description>
+      <description>VBUS into U7 ON through R38: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.</description>
       <fields>
         <field name="MPN">1N4148WS</field>
         <field name="Footprint">CountFidgetQ5:Diode_SMD_D_SOD-323</field>
         <field name="Datasheet" />
-        <field name="Description">VBUS into U7 ON: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.</field>
+        <field name="Description">VBUS into U7 ON through R38: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="D4" description="" />
       <property name="MPN" value="1N4148WS" />
-      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 2" />
-      <property name="Sheetfile" value="usb-power-2.kicad_sch" />
-      <sheetpath names="/USB, charging, soft power latch and common supply / 2/" tstamps="/212a85d9-b47b-5df6-8d9b-ffcc17a81200/" />
+      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 3" />
+      <property name="Sheetfile" value="usb-power-3.kicad_sch" />
+      <sheetpath names="/USB, charging, soft power latch and common supply / 3/" tstamps="/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/" />
       <tstamps>ec485278-a550-5bc5-b803-a8f0e3b06555</tstamps>
       <units>
         <unit name="A">
@@ -1999,31 +2024,6 @@
         </unit>
       </units>
     </comp>
-    <comp ref="R30">
-      <value>150k</value>
-      <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
-      <description>0.1%,25ppm/C; feedback upper resistor</description>
-      <fields>
-        <field name="MPN">RT0603BRD07150KL</field>
-        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
-        <field name="Datasheet" />
-        <field name="Description">0.1%,25ppm/C; feedback upper resistor</field>
-      </fields>
-      <libsource lib="CountFidgetQ5" part="R30" description="" />
-      <property name="MPN" value="RT0603BRD07150KL" />
-      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 3" />
-      <property name="Sheetfile" value="usb-power-3.kicad_sch" />
-      <sheetpath names="/USB, charging, soft power latch and common supply / 3/" tstamps="/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/" />
-      <tstamps>5568ca25-ccb6-594e-b3c7-df18034f79bb</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1" />
-            <pin num="2" />
-          </pins>
-        </unit>
-      </units>
-    </comp>
     <comp ref="R4">
       <value>16.5k</value>
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
@@ -2049,47 +2049,22 @@
         </unit>
       </units>
     </comp>
-    <comp ref="R5">
-      <value>10k</value>
+    <comp ref="R30">
+      <value>150k</value>
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
-      <description>1%, 0603, 0.1 W</description>
+      <description>0.1%,25ppm/C; feedback upper resistor</description>
       <fields>
-        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="MPN">RT0603BRD07150KL</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">1%, 0603, 0.1 W</field>
+        <field name="Description">0.1%,25ppm/C; feedback upper resistor</field>
       </fields>
-      <libsource lib="CountFidgetQ5" part="R5" description="" />
-      <property name="MPN" value="RC0603FR-0710KL" />
+      <libsource lib="CountFidgetQ5" part="R30" description="" />
+      <property name="MPN" value="RT0603BRD07150KL" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 4" />
       <property name="Sheetfile" value="usb-power-4.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 4/" tstamps="/f230856b-0764-5f2a-9868-fada72ac48fa/" />
-      <tstamps>d1fb8646-66b4-518e-a4f8-6b2fe2c3bf6a</tstamps>
-      <units>
-        <unit name="A">
-          <pins>
-            <pin num="1" />
-            <pin num="2" />
-          </pins>
-        </unit>
-      </units>
-    </comp>
-    <comp ref="R6">
-      <value>100k</value>
-      <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
-      <description>1%, 0603, 0.1 W</description>
-      <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
-        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
-        <field name="Datasheet" />
-        <field name="Description">1%, 0603, 0.1 W</field>
-      </fields>
-      <libsource lib="CountFidgetQ5" part="R6" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
-      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 4" />
-      <property name="Sheetfile" value="usb-power-4.kicad_sch" />
-      <sheetpath names="/USB, charging, soft power latch and common supply / 4/" tstamps="/f230856b-0764-5f2a-9868-fada72ac48fa/" />
-      <tstamps>9bc5fed5-ec02-5846-a314-ec8447ccc755</tstamps>
+      <tstamps>5568ca25-ccb6-594e-b3c7-df18034f79bb</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -2165,6 +2140,81 @@
       <property name="Sheetfile" value="usb-power-4.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 4/" tstamps="/f230856b-0764-5f2a-9868-fada72ac48fa/" />
       <tstamps>5e22faed-1db5-5ece-abf4-1ec7c0e23b85</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R38">
+      <value>100k</value>
+      <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.</description>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.</field>
+      </fields>
+      <libsource lib="CountFidgetQ5" part="R38" description="" />
+      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 4" />
+      <property name="Sheetfile" value="usb-power-4.kicad_sch" />
+      <sheetpath names="/USB, charging, soft power latch and common supply / 4/" tstamps="/f230856b-0764-5f2a-9868-fada72ac48fa/" />
+      <tstamps>199f5b4f-6022-53e6-8380-09526c64739b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ5" part="R5" description="" />
+      <property name="MPN" value="RC0603FR-0710KL" />
+      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 5" />
+      <property name="Sheetfile" value="usb-power-5.kicad_sch" />
+      <sheetpath names="/USB, charging, soft power latch and common supply / 5/" tstamps="/c582cfd8-dc71-5908-af2d-68ea1ca76624/" />
+      <tstamps>d1fb8646-66b4-518e-a4f8-6b2fe2c3bf6a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>100k</value>
+      <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1%, 0603, 0.1 W</description>
+      <fields>
+        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1%, 0603, 0.1 W</field>
+      </fields>
+      <libsource lib="CountFidgetQ5" part="R6" description="" />
+      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="Sheetname" value="USB, charging, soft power latch and common supply / 5" />
+      <property name="Sheetfile" value="usb-power-5.kicad_sch" />
+      <sheetpath names="/USB, charging, soft power latch and common supply / 5/" tstamps="/c582cfd8-dc71-5908-af2d-68ea1ca76624/" />
+      <tstamps>9bc5fed5-ec02-5846-a314-ec8447ccc755</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3068,6 +3118,19 @@
         <pin num="2" name="2" type="passive" />
       </pins>
     </libpart>
+    <libpart lib="CountFidgetQ5" part="C40">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">GRM1885C1H472JA01D</field>
+        <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
     <libpart lib="CountFidgetQ5" part="C5">
       <fields>
         <field name="Reference">C</field>
@@ -3645,6 +3708,19 @@
         <pin num="2" name="2" type="passive" />
       </pins>
     </libpart>
+    <libpart lib="CountFidgetQ5" part="R38">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
     <libpart lib="CountFidgetQ5" part="R4">
       <fields>
         <field name="Reference">R</field>
@@ -3726,8 +3802,8 @@
     <libpart lib="CountFidgetQ5" part="SW1">
       <fields>
         <field name="Reference">SW</field>
-        <field name="Value">CPG151101D13</field>
-        <field name="Footprint">CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate</field>
+        <field name="Value">CPG151101S11-16</field>
+        <field name="Footprint">CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11</field>
         <field name="Datasheet" />
         <field name="Description" />
       </fields>
@@ -3739,8 +3815,8 @@
     <libpart lib="CountFidgetQ5" part="SW2">
       <fields>
         <field name="Reference">SW</field>
-        <field name="Value">CPG151101D13</field>
-        <field name="Footprint">CountFidgetQ5:HanElectricity_CPG151101D13_MX_Plate</field>
+        <field name="Value">CPG151101S11-16</field>
+        <field name="Footprint">CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11</field>
         <field name="Datasheet" />
         <field name="Description" />
       </fields>
@@ -4199,6 +4275,7 @@
       <node ref="C37" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="C38" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="C39" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="C40" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="C5" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="C6" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="C7" pin="2" pinfunction="2_2" pintype="passive" />
@@ -4341,9 +4418,10 @@
       <node ref="U7" pin="6" pinfunction="VOUT_6" pintype="power_out" />
     </net>
     <net code="39" name="SYS_ON" class="Default">
+      <node ref="C40" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="D3" pin="3" pinfunction="K_3" pintype="passive" />
-      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive" />
       <node ref="R35" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R38" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="TP13" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U7" pin="3" pinfunction="ON_3" pintype="input" />
     </net>
@@ -4416,7 +4494,11 @@
       <node ref="U2" pin="10" pinfunction="IN_10" pintype="power_in" />
       <node ref="U5" pin="8" pinfunction="VCC_8" pintype="power_in" />
     </net>
-    <net code="50" name="VFRAM" class="Default">
+    <net code="50" name="VBUS_WAKE" class="Default">
+      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive" />
+      <node ref="R38" pin="1" pinfunction="1_1" pintype="passive" />
+    </net>
+    <net code="51" name="VFRAM" class="Default">
       <node ref="C30" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C36" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="R32" pin="2" pinfunction="2_2" pintype="passive" />
@@ -4425,7 +4507,7 @@
       <node ref="U8" pin="7" pinfunction="HOLD#_7" pintype="input" />
       <node ref="U8" pin="8" pinfunction="VDD_8" pintype="power_in" />
     </net>
-    <net code="51" name="VLOGIC" class="Default">
+    <net code="52" name="VLOGIC" class="Default">
       <node ref="C20" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C28" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C31" pin="1" pinfunction="1_1" pintype="passive" />
@@ -4449,83 +4531,83 @@
       <node ref="U3" pin="1" pinfunction="OUT_1" pintype="power_out" />
       <node ref="U6" pin="1" pinfunction="VIN_1" pintype="power_in" />
     </net>
-    <net code="52" name="VLOGIC_FB" class="Default">
+    <net code="53" name="VLOGIC_FB" class="Default">
       <node ref="R30" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="R31" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U3" pin="2" pinfunction="FB_2" pintype="input" />
     </net>
-    <net code="53" name="VMINUS" class="Default">
+    <net code="54" name="VMINUS" class="Default">
       <node ref="R8" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="U4" pin="6" pinfunction="V-_6" pintype="input" />
     </net>
-    <net code="54" name="VSET" class="Default">
+    <net code="55" name="VSET" class="Default">
       <node ref="R3" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U2" pin="7" pinfunction="ILIM/VSET_7" pintype="input" />
     </net>
-    <net code="55" name="unconnected-(J1-SBUA-PadA8)" class="Default">
+    <net code="56" name="unconnected-(J1-SBUA-PadA8)" class="Default">
       <node ref="J1" pin="A8" pinfunction="SBUA_A8" pintype="passive+no_connect" />
     </net>
-    <net code="56" name="unconnected-(J1-SBUB-PadB8)" class="Default">
+    <net code="57" name="unconnected-(J1-SBUB-PadB8)" class="Default">
       <node ref="J1" pin="B8" pinfunction="SBUB_B8" pintype="passive+no_connect" />
     </net>
-    <net code="57" name="unconnected-(U1-PA2-Pad12)" class="Default">
+    <net code="58" name="unconnected-(U1-PA2-Pad12)" class="Default">
       <node ref="U1" pin="12" pinfunction="PA2_12" pintype="bidirectional+no_connect" />
     </net>
-    <net code="58" name="unconnected-(U1-PA3-Pad13)" class="Default">
+    <net code="59" name="unconnected-(U1-PA3-Pad13)" class="Default">
       <node ref="U1" pin="13" pinfunction="PA3_13" pintype="bidirectional+no_connect" />
     </net>
-    <net code="59" name="unconnected-(U1-PA7-Pad17)" class="Default">
+    <net code="60" name="unconnected-(U1-PA7-Pad17)" class="Default">
       <node ref="U1" pin="17" pinfunction="PA7_17" pintype="bidirectional+no_connect" />
     </net>
-    <net code="60" name="unconnected-(U1-PA8-Pad29)" class="Default">
+    <net code="61" name="unconnected-(U1-PA8-Pad29)" class="Default">
       <node ref="U1" pin="29" pinfunction="PA8_29" pintype="bidirectional+no_connect" />
     </net>
-    <net code="61" name="unconnected-(U1-PA9-Pad30)" class="Default">
+    <net code="62" name="unconnected-(U1-PA9-Pad30)" class="Default">
       <node ref="U1" pin="30" pinfunction="PA9_30" pintype="bidirectional+no_connect" />
     </net>
-    <net code="62" name="unconnected-(U1-PA10-Pad31)" class="Default">
+    <net code="63" name="unconnected-(U1-PA10-Pad31)" class="Default">
       <node ref="U1" pin="31" pinfunction="PA10_31" pintype="bidirectional+no_connect" />
     </net>
-    <net code="63" name="unconnected-(U1-PA15-Pad38)" class="Default">
+    <net code="64" name="unconnected-(U1-PA15-Pad38)" class="Default">
       <node ref="U1" pin="38" pinfunction="PA15_38" pintype="bidirectional+no_connect" />
     </net>
-    <net code="64" name="unconnected-(U1-PB6-Pad42)" class="Default">
+    <net code="65" name="unconnected-(U1-PB6-Pad42)" class="Default">
       <node ref="U1" pin="42" pinfunction="PB6_42" pintype="bidirectional+no_connect" />
     </net>
-    <net code="65" name="unconnected-(U1-PB7-Pad43)" class="Default">
+    <net code="66" name="unconnected-(U1-PB7-Pad43)" class="Default">
       <node ref="U1" pin="43" pinfunction="PB7_43" pintype="bidirectional+no_connect" />
     </net>
-    <net code="66" name="unconnected-(U1-PB9-Pad46)" class="Default">
+    <net code="67" name="unconnected-(U1-PB9-Pad46)" class="Default">
       <node ref="U1" pin="46" pinfunction="PB9_46" pintype="bidirectional+no_connect" />
     </net>
-    <net code="67" name="unconnected-(U1-PB10-Pad21)" class="Default">
+    <net code="68" name="unconnected-(U1-PB10-Pad21)" class="Default">
       <node ref="U1" pin="21" pinfunction="PB10_21" pintype="bidirectional+no_connect" />
     </net>
-    <net code="68" name="unconnected-(U1-PB11-Pad22)" class="Default">
+    <net code="69" name="unconnected-(U1-PB11-Pad22)" class="Default">
       <node ref="U1" pin="22" pinfunction="PB11_22" pintype="bidirectional+no_connect" />
     </net>
-    <net code="69" name="unconnected-(U1-PC13-Pad2)" class="Default">
+    <net code="70" name="unconnected-(U1-PC13-Pad2)" class="Default">
       <node ref="U1" pin="2" pinfunction="PC13_2" pintype="bidirectional+no_connect" />
     </net>
-    <net code="70" name="unconnected-(U1-PC14-Pad3)" class="Default">
+    <net code="71" name="unconnected-(U1-PC14-Pad3)" class="Default">
       <node ref="U1" pin="3" pinfunction="PC14_3" pintype="bidirectional+no_connect" />
     </net>
-    <net code="71" name="unconnected-(U1-PC15-Pad4)" class="Default">
+    <net code="72" name="unconnected-(U1-PC15-Pad4)" class="Default">
       <node ref="U1" pin="4" pinfunction="PC15_4" pintype="bidirectional+no_connect" />
     </net>
-    <net code="72" name="unconnected-(U1-PH0-Pad5)" class="Default">
+    <net code="73" name="unconnected-(U1-PH0-Pad5)" class="Default">
       <node ref="U1" pin="5" pinfunction="PH0_5" pintype="bidirectional+no_connect" />
     </net>
-    <net code="73" name="unconnected-(U1-PH1-Pad6)" class="Default">
+    <net code="74" name="unconnected-(U1-PH1-Pad6)" class="Default">
       <node ref="U1" pin="6" pinfunction="PH1_6" pintype="bidirectional+no_connect" />
     </net>
-    <net code="74" name="unconnected-(U4-NC-Pad1)" class="Default">
+    <net code="75" name="unconnected-(U4-NC-Pad1)" class="Default">
       <node ref="U4" pin="1" pinfunction="NC_1" pintype="no_connect" />
     </net>
-    <net code="75" name="unconnected-(U6-QOD-Pad5)" class="Default">
+    <net code="76" name="unconnected-(U6-QOD-Pad5)" class="Default">
       <node ref="U6" pin="5" pinfunction="QOD_5" pintype="passive+no_connect" />
     </net>
-    <net code="76" name="unconnected-(U7-QOD-Pad5)" class="Default">
+    <net code="77" name="unconnected-(U7-QOD-Pad5)" class="Default">
       <node ref="U7" pin="5" pinfunction="QOD_5" pintype="passive+no_connect" />
     </net>
   </nets>
