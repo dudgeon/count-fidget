@@ -25,7 +25,11 @@ Evidence:
 - USB cable fit, printed keycaps, pinhole access;
 - solder process.
 
-**The quote pause remains in force:** no uploads, quote-draft changes, vendor messages, paid sourcing, purchases or manufacturing release. Read-only public stock research is allowed. Commit/push Q5 work to `claude/loving-noether-4qogm0` and its draft PR #10; do not merge.
+**Quote authorization (user, 25 September 2026):** once the Q5 hardware design is locked, obtain **JLCPCB quotes** for two variants:
+- (A) JLC performs SMT and the user solders the through-hole parts;
+- (B) JLC assembles everything, including the through-hole parts.
+
+This lifts the quote pause for JLCPCB quoting only. Uploading the locked design files to JLCPCB's quote tools is allowed. Placing an order, paying, allocating or preordering stock, releasing manufacturing, or contacting other vendors remains unauthorized. Record quote results in `procurement/q5/` and the quote tracker, without account IDs, personal data or private screenshots. Read-only public stock research is allowed. Commit/push Q5 work to `claude/loving-noether-4qogm0` and its draft PR #10; do not merge.
 
 ## Previous Q4 checkpoint — 24 September 2026 (superseded by Q5 where inconsistent)
 
