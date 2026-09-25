@@ -61,7 +61,7 @@ LOAD_SUPPORTS = [(15.5 - 21, 44.0 - 27), (26.5 - 21, 44.0 - 27)]   # board (15.5
 # LCSC C357360 PA2X6nie: M2 x 6 cross pan-head self-tapping screw (in stock); head ~3.8 x 1.6 mm.
 SCREW_LEN, SCREW_HEAD_R, SCREW_HEAD_H = 6.0, 1.9, 1.6
 BOSS_FLOOR = 1.0                 # lid boss floor clamped on the PCB top; head seats on it
-BORE_R, LID_BOSS_R, PILOT_R, PILOT_DEPTH = 2.3, 3.2, 0.85, 4.2
+BORE_R, LID_BOSS_R, PILOT_R, PILOT_DEPTH, BASE_BOSS_R = 2.3, 3.2, 0.85, 4.2, 2.2
 
 
 def sha(path):
@@ -251,7 +251,7 @@ def main():
     base = base.cut(block(70,80,20,SEAM-WALL_RELIEF,0,FRONT_STEP_Y+40))
     for x,y in MOUNTS:
         # Boss top carries the PCB; a 1.7 mm pilot takes the M2x6 self-tapping thread.
-        base = base.union(cyl(2.6,PCB_Z-FLOOR,FLOOR,x,y)).cut(cyl(PILOT_R,PILOT_DEPTH+.01,PCB_Z-PILOT_DEPTH,x,y))
+        base = base.union(cyl(BASE_BOSS_R,PCB_Z-FLOOR,FLOOR,x,y)).cut(cyl(PILOT_R,PILOT_DEPTH+.01,PCB_Z-PILOT_DEPTH,x,y))
     for x,y in LOAD_SUPPORTS:
         base = base.union(cyl(1.3,PCB_Z-FLOOR,FLOOR,x,y))
     # Issue #4: pass a USB-IF maximum 12.35 x 6.5 mm overmold to the receptacle face.
@@ -271,7 +271,9 @@ def main():
     for x,y in MOUNTS:
         mount_seam,mount_top=(FRONT_SEAM,FRONT_TOP) if y<0 else (SEAM,TOP)
         # Boss clamps the PCB top; the screw head seats on its 1.0 mm floor, reached through a 4.6 mm bore.
-        lid = lid.union(cyl(LID_BOSS_R,mount_top-PCB_TOP,PCB_TOP,x,y))
+        # Clip the boss to the base cavity (0.15 mm clear of the inner wall) so the lid still drops in.
+        boss = cyl(LID_BOSS_R,mount_top-PCB_TOP,PCB_TOP,x,y).intersect(block(W-2*WALL-.3,D-2*WALL-.3,mount_top-PCB_TOP,PCB_TOP))
+        lid = lid.union(boss)
         lid = lid.cut(cyl(1.2,BOSS_FLOOR+.2,PCB_TOP-.1,x,y))
         lid = lid.cut(cyl(BORE_R,mount_top-(PCB_TOP+BOSS_FLOOR)+1,PCB_TOP+BOSS_FLOOR,x,y))
     lid = lid.cut(usb_cut)
@@ -429,7 +431,7 @@ def main():
             if vv>1e-5:results.append(dict(a=name,b=other,intersection_mm3=round(vv,6)))
     for name,shape in [(n,q) for n,q,_ in tails if n.startswith(('OLED-host','SW'))]:
         for other,obj in bottom+[('USB',usb),('MCU',mcu),('holder',holder)]:
-            if name.startswith(other+'-pin'): continue      # a switch pin enters its own socket by design
+            if name.startswith((other+'-pin',other+'-post')): continue   # pins enter the socket; the post passes its centre cut-out
             vv=overlap(shape,obj)
             if vv>1e-5:results.append(dict(a=name,b=other,intersection_mm3=round(vv,6)))
     # Straight assembly paths with covers/fasteners removed: the assembled PCB,

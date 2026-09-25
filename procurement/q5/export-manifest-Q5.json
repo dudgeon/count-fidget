@@ -111,8 +111,8 @@
       "sha256": "0c7d708affff44bf742070d07c348a8f9d7e68c6abb2ea54408c38d26f7fb189"
     },
     "procurement/q5/BOM-Q5.csv": {
-      "bytes": 20577,
-      "sha256": "386d4c7618d26fa0eef7514597dec9b02cf538dcf2273c6c1afeb63ec934b19b"
+      "bytes": 20568,
+      "sha256": "ea1da56b9c158c315a463f2153d7ca24f8a182cd4a045b995f8ccedafb8876e8"
     },
     "procurement/q5/CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv": {
       "bytes": 3683,
@@ -127,8 +127,8 @@
       "sha256": "a8c48765053b8851302221fb2515773f2889181e49a7fbae975e77f24addfd42"
     },
     "procurement/q5/LOOSE-PARTS-Q5.csv": {
-      "bytes": 1072,
-      "sha256": "37e96fd7ca9bd837e8126c6fa39815ed4e63846c2fde491e6eed80a184ef7ded"
+      "bytes": 1063,
+      "sha256": "29a979ae00baf9e2d1bcbb188fac5c2837b94782dc5b1c53d689d9c1ac7cac7a"
     },
     "procurement/q5/OFFBOARD-items-Q5.csv": {
       "bytes": 510,
@@ -144,67 +144,67 @@
     },
     "procurement/q5/assembly-bottom-Q5.svg": {
       "bytes": 942275,
-      "sha256": "a86b0ac18c4ee47fbe812e1281a22e8c97942afd3c32987380500118633e29ae"
+      "sha256": "b134ceb26b1307b1556bbf9377ce8cae4368ca9e8ec9b63241a4ac321937fbb5"
     },
     "procurement/q5/assembly-top-Q5.svg": {
       "bytes": 121243,
-      "sha256": "b309d6c2d435cc28053ab1a8c552b12dafec32b0557125cf9715baedefdafd4f"
+      "sha256": "b54c31353173df784e7aa46778f507d5c3c052058be2309efbdb8c1831de8837"
     },
     "procurement/q5/click-counter-Q5-Gerbers.zip": {
-      "bytes": 134523,
-      "sha256": "02f7ab2bda460d28a81fb7e6f51ea5217b30752dea2168c592cbc5b4398bb2ea"
+      "bytes": 134522,
+      "sha256": "26f4eb5f7ac45b0d7ae55192bf72ff3467ee3805ce2388030f01caaa1f6f1c6f"
     },
     "procurement/q5/drill-report-Q5.txt": {
       "bytes": 877,
-      "sha256": "ff0a57bf583f3839c865935f17f359fc5d04b0386857068c5bcce27363de6ca7"
+      "sha256": "84f2b694f9d300e1d32f42bfc78a8441c83dff26f8dc8477701b43a3a77ba9e5"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Cu.gbl": {
       "bytes": 318968,
-      "sha256": "6af3c99be05e6458ae46f25dd6d99410c2204566607b9333199b356be611bbe4"
+      "sha256": "ccfe433464bc688dd29024ba1f4d50efa33b7f03b78d6340b7ab0174405e73c7"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Mask.gbs": {
       "bytes": 13108,
-      "sha256": "631439a9e6d64418e17a87d86291aa085e9feb5a691e5611235ea632585db1b6"
+      "sha256": "ff51cb38c35eac67fd07dde85a608148e095d8be683822cd10e62f2961fdd148"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Paste.gbp": {
       "bytes": 12094,
-      "sha256": "fc7c17a7f2f7b1f442b80cd31f299b8a7a347573639d4908b01eb3da514da778"
+      "sha256": "fff3a766b3f7127ab36c3e63c156fc09da6d77d388fb0208cf1e4f2f729da6da"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Silkscreen.gbo": {
       "bytes": 15861,
-      "sha256": "857bd69fbd1fdac6db905005b13b4438efa61187bdb5263b78b1ccfd50d7e8a9"
+      "sha256": "9d81de7624a08315f5e21267052bdac0e2254b27b1ad0bb903f3e7620c543c1b"
     },
     "procurement/q5/gerbers/click-counter-Q5-Edge_Cuts.gm1": {
       "bytes": 665,
-      "sha256": "b55a8b7325486384ba231ebe67452313795db38c127871f62255c12cff313f80"
+      "sha256": "43832ac2e724a8d1023e37315bd01f4e7b7f370a70ae4e139e17342f35d500a6"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Cu.gtl": {
       "bytes": 133340,
-      "sha256": "1d2e0cffb601541c928612ea9ea1e2199488e3956b9ad4d4939ed2df1c2827be"
+      "sha256": "ef71624e50cc00798a7daa1370d784642cfc342295047dd14065069b73a7b2be"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Mask.gts": {
       "bytes": 1435,
-      "sha256": "a9f287e4992e82aeb4ddafb85c8f5dccd4ba10a32cf85fdad9169a2596cb3c56"
+      "sha256": "21b404d2beb4c5d3641b91ffd8f07baa0e406834d1ceeaa1818498a231717b5a"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Paste.gtp": {
       "bytes": 503,
-      "sha256": "f8b4154f7a4312a3a59eaeec24e83daec269b9fdbeaa355a9d60689f8e6e30e2"
+      "sha256": "2948da0e7c4cafef656eda557031f8d1d3847678d781a829223605df205cebf8"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Silkscreen.gto": {
       "bytes": 1445,
-      "sha256": "b55e78de0be0eb72d5c8913f184fd108df6a900fae6e30701916fa42f4bbb2cc"
+      "sha256": "6857980a4443e64d7db77272c6bb85284358cb44f766f28ccf14e9b70214db12"
     },
     "procurement/q5/gerbers/click-counter-Q5-NPTH.drl": {
       "bytes": 722,
-      "sha256": "6ba5fb9d1e814e67391b3d95bbb22aded7b13b11b99982902fe0019ef582b201"
+      "sha256": "e3ac33a617fc6af5c33cf3583acbca5f29740c3652eeff5cb93c99d4504e656c"
     },
     "procurement/q5/gerbers/click-counter-Q5-PTH.drl": {
       "bytes": 2593,
-      "sha256": "8590272fe551633f9324553032381613f4c0fed5d954d8167fd4fba18d36f9fb"
+      "sha256": "8c0f13f01d6b445ecda66c4738f7edb4727c5c46b8406f25351fc85225b62978"
     },
     "procurement/q5/gerbers/click-counter-Q5-job.gbrjob": {
       "bytes": 2895,
-      "sha256": "07996a1541389c42b1f506b10b28b6ac480bd0f73df83bcef49e45b378802c94"
+      "sha256": "b3bbab0c75feb743edbb6ab0ad57559f12f6d1afa6fb237c3ffa3e6a20ff57a4"
     },
     "procurement/q5/placements-KiCad-Q5.csv": {
       "bytes": 7061,
@@ -269,7 +269,7 @@
     "scripts/build_q5_board.py": "baa1653a67060b9d3a3a8d02035988747371ff28c6885f43d77486dca7c55e22",
     "scripts/build_q5_model.py": "62a8876c523fd8d635c389ca78096be003760470d775f90709cb42f3f340bcbe",
     "scripts/build_q5_schematic.py": "2f00202667b9612207af14e8927a3f4bebaed8372d6a50007c9781036e729a0a",
-    "scripts/export_q5.py": "0ebd64967316f22fef1b4c3af8bbe31bf6837dc7a8696947f4da47ea5a88f51c",
+    "scripts/export_q5.py": "a72c2d8c5cc00a5147d0fb1460ed3489bf83602d76d35755c501cda75990815e",
     "scripts/finish_q5_board.py": "d6ba5179ed4d922beccd69a232076ea560360a6f4c8d0106733365deb7628d1e",
     "scripts/kicad_sexpr.py": "4a6c547f7f5bb0fcc7160da24c04e918c1d146026b4f990db624482fb8eacfeb",
     "scripts/measure_q5_routes.py": "9a103462bde70721f9a675581a48c9bfb4793495c42b37cf25223d003cb81f11",
