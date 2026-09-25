@@ -1,6 +1,23 @@
-# Build, verify and preserve the submitted Q1 baseline
+# Build and verify Count Fidget
 
-The first local-session task is website quoting. It needs the existing files, not a CAD/compiler installation. No Linux binaries or old scratch tool paths are required to upload them.
+## Active Q4 engineering workflow
+
+Q4 uses STM32L072CBT6, a complete SPI OLED module and external SPI FRAM. Q1/Q2/Q3 remain frozen. **All vendor quote activity, purchases and manufacture are paused.** These are local engineering operations.
+
+1. Read `Q4-implementation.md`, `q4-power-design.md`, `q4-firmware.md` and the current review entry point before editing.
+2. `build_q4_model.py` combines exact circuit identities with `electronics/q4/placement.json`. `build_q4_schematic.py` generates the native sheets, symbols, XML, PDF and local provenance using KiCad10. `build_q4_board.py` **discards existing routing**; use it only for an intentional new layout. `sync_q4_board.py` synchronizes native fields, paths and explicit NCs.
+3. The routing pipeline is `preroute_q4.py`, `prepare_q4_route.py`, local Freerouting2.4.1 with analytics disabled, then `finish_q4_board.py`. Preserve the USB and supply seed routes. DSN/SES are private exchange files and excluded from Git; a saved session must match its exact source DSN. Review footprint geometry and mechanical solder envelopes as well as electrical clearances.
+4. Run `python3 scripts/verify_q4.py --kicad-cli /path/to/kicad-cli` against stable final sources. It runs fresh native XML export, ERC and DRC with schematic parity and binds reports to the inputs. No electrical or courtyard exception is accepted. Running without `--kicad-cli` validates a saved binding; it is **not a fresh native check**. Some macOS hosts require permission for KiCad's local GUI-service initialization even for command-line DRC.
+5. Run `python3 scripts/test_verify_q4.py --output verification/q4-negative-tests.json`. It first requires a clean real baseline, then corrupts temporary copies to test rejection. `test_export_q4.py` separately checks the exporter; synthetic exporter tests do not validate the routed board.
+6. Firmware uses official Arm GNU14.3 and pinned ST/CMSIS headers. `build_firmware_q4.py --toolchain /path/to/toolchain` builds the default FRAM product. `--verify-only` checks committed source, compiler provenance and actual loaded image bytes. `test_firmware_q4.py` runs bounded portable behavior/fault cases; `--image-only` checks image corruption. The optional EEPROM backend is a separate test build. Follow `q4-firmware.md` for home USB programming and preservation rules.
+7. Run `python3 simulation/q4-power/check.py` and the documented `run_spice.py --library /path/to/libngspice` command. They bind conditional equations and ideal subcircuit results, including the retained cold-insertion counterexample. They do not simulate every semiconductor or prove physical operation.
+8. Run `build_q4_enclosure.py` with CadQuery2.8 and `--kicad-python /path/to/KiCad/Python`. Final outputs must use the actual final board/model, exit successfully, have four valid single solids and manifold bed-aligned STL meshes, and pass modeled static and sampled assembly-path intersections. Private snapshot overrides are for experiments, not final evidence. Inspect the rendered images and complete the separate physical fit checks.
+9. Refresh the final stock/model binding, then run `export_q4.py --kicad-cli /path/to/kicad-cli`. It requires current native evidence and exports the factory SMT split separately from home completion and unqualified offboard items. This generates local engineering files and does not submit anything to a vendor.
+10. Preserve historical package hashes with `verify_project.py`; commit a coherent final Q4 review candidate to the existing branch/draft PR. Hardware validation, actual battery/harness qualification and explicit order approval remain separate.
+
+## Historical Q1/Q2 workflow
+
+The following records the older revisions. It does not authorize quoting or rebuilding their frozen packages.
 
 ## Quick integrity and portable firmware checks
 

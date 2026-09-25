@@ -1,0 +1,10 @@
+!build/
+build/*
+!build/build-manifest.json
+!build/count-fidget-Q4-stm32.elf
+!build/count-fidget-Q4-stm32.hex
+!build/count-fidget-Q4-stm32.bin
+!build/count-fidget-Q4-stm32.map
+!build/count-fidget-Q4-stm32.lst
+!build/stack-usage.txt
+!build/host-tests.json

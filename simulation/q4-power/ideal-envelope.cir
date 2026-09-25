@@ -1,0 +1,19 @@
+Q4 conditional RC subcircuits; NO manufacturer semiconductor model
+* Total unknown seriesR selected analytically to maximize SCC exposure.
+.param rs=3.333 vs=0.4 cell=4.2 rt={cell*rs/(exp(1)*vs)}
+Vcell cell 0 4.2
+Rsource_u cell u_sense {rt-rs}
+Rsense_u u_sense u_cap {rs}
+Cusb u_cap 0 2.783u IC=0
+Rsource_c cell c_sense {rt-rs}
+Rsense_c c_sense c_cap {rs}
+Ccold c_cap 0 15.433u IC=0
+* Memory worst resistance/minimum effectiveC, ideal source edge.
+Vrise rise_source 0 3.3
+Rrise rise_source fram_rise 66.878
+Crise fram_rise 0 6.8u IC=0
+Rfall fram_fall 0 66.878
+Cfall fram_fall 0 6.8u IC=3.3
+* Declared3mA all-voltage sink envelope, not measured undervoltage behavior.
+Ifall fram_fall 0 3m
+.end

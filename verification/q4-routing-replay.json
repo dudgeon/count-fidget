@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "claim": "Replay of the saved incremental SES from a copy of the final board preserves the recorded original seed and reproduces every track/via net, coordinate, layer, width, drill and lock flag; post-import repairs do not accumulate.",
+  "excluded_claims": [
+    "Byte-for-byte native file identity (new cleanup items receive fresh UUIDs)",
+    "Physical qualification",
+    "A new autorouter run"
+  ],
+  "copper_items": 885,
+  "geometry_sha256": "dd086ec4d1ca5fb8bf9def64ab605f2046d883a47ae6ee31360a8068154377c2",
+  "sources": {
+    "scripts/preroute_q4.py": "e9818fdc642ddffb60f51f36548753c6a8c3fbf3a727fb8f353f35d65718b76d",
+    "scripts/finish_q4_board.py": "c171178862dd2db68cba53d57bcd1a103a9a0a52033862c7f4deeb6dadb9ce02",
+    "electronics/q4/placement.json": "742a7164129648d44f9773db11625df71706ced5791079917b4ae14efe83dfb7",
+    "electronics/q4/netlist-Q4.json": "2ee9be24459e83c13af9585f1d83def47617b98fce6547d9f5a6a5c42dd06763",
+    "electronics/q4/locked-route-seed.json": "2c42cf9630aef09b6f2ba1cd13f26f238e926bedc7e02dce589a1d7bb3166b55",
+    "electronics/q4/click-counter-Q4.dsn": "3602e04aa6fe5015858e09145f1d85b0f1af268de2409a862b543781f5f0e735",
+    "electronics/q4/click-counter-Q4.ses": "0508c452b84816fafccac6edb0cc62824630e52032ee40e6881f4be01d7245ea",
+    "electronics/q4/click-counter-Q4.kicad_pcb": "2b073a519171d1632d67138ff7be2bf7271f6a5f8a328d8e9e5b5cff7cc47780"
+  }
+}

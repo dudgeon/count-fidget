@@ -1,0 +1,2626 @@
+{
+  "board_mm": [
+    42,
+    54,
+    1
+  ],
+  "layers": 2,
+  "revision": "Q4 STM32 SPI module engineering candidate - NOT RELEASED",
+  "parts": [
+    {
+      "ref": "DS1",
+      "value": "SPI OLED module 128x64",
+      "mpn": "HS96L01W4S03",
+      "manufacturer": "HS",
+      "footprint": "CountFidgetQ4:HS96L01W4S03_Module_7Pin",
+      "pins": {
+        "1": "GND",
+        "2": "OLED_SUPPLY",
+        "3": "OLED_SCK",
+        "4": "OLED_MOSI",
+        "5": "OLED_RESET_N",
+        "6": "OLED_DC",
+        "7": "OLED_CS_N"
+      },
+      "notes": "Drawing controls: PCB27.30x27.80mm, SSD1315, supplied 4-wire SPI. External supply rated3\u20135V; logic inputs<=3.3V. Exact header height/internal capacitance/current and assembly mounting remain first-article gates; no custom glass/FPC soldering.",
+      "x": 21,
+      "y": 16.7,
+      "rotation": 0,
+      "side": "top",
+      "sheet": "display",
+      "lcsc": "C5139758",
+      "symbol_pins": {
+        "1": {
+          "name": "GND",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "VCC",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "SCL/SCK",
+          "type": "input"
+        },
+        "4": {
+          "name": "SDA/MOSI",
+          "type": "input"
+        },
+        "5": {
+          "name": "RES#",
+          "type": "input"
+        },
+        "6": {
+          "name": "D/C#",
+          "type": "input"
+        },
+        "7": {
+          "name": "CS#",
+          "type": "input"
+        }
+      },
+      "assembly": "home_through_hole"
+    },
+    {
+      "ref": "SW1",
+      "value": "COUNT",
+      "mpn": "CPG151101D13",
+      "manufacturer": "HanElectricity",
+      "footprint": "CountFidgetQ4:HanElectricity_CPG151101D13_MX_Plate",
+      "x": 14.015,
+      "y": 35.72,
+      "rotation": 0,
+      "side": "top",
+      "pins": {
+        "1": "COUNT_N",
+        "2": "GND"
+      },
+      "notes": "Exact clicky switch; home through-hole soldering after rear key plate is fitted. Verify body/plate/lead fit before soldering; vendor SMT assembly excludes this part.",
+      "source_footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+      "lcsc": "C49234235",
+      "sheet": "mcu",
+      "assembly": "home_through_hole"
+    },
+    {
+      "ref": "SW2",
+      "value": "RESET COUNT / BOOT",
+      "mpn": "CPG151101D13",
+      "manufacturer": "HanElectricity",
+      "footprint": "CountFidgetQ4:HanElectricity_CPG151101D13_MX_Plate",
+      "x": 33.065,
+      "y": 35.72,
+      "rotation": 0,
+      "side": "top",
+      "pins": {
+        "1": "BOOT_COUNT_RESET",
+        "2": "VLOGIC"
+      },
+      "notes": "Exact clicky switch; home through-hole soldering after rear key plate is fitted. Verify body/plate/lead fit before soldering; vendor SMT assembly excludes this part.",
+      "source_footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
+      "lcsc": "C49234235",
+      "sheet": "mcu",
+      "assembly": "home_through_hole"
+    },
+    {
+      "ref": "J1",
+      "value": "USB-C power and DFU",
+      "mpn": "USB4105-GF-A-120",
+      "manufacturer": "GCT",
+      "footprint": "CountFidgetQ4:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "x": 38.9,
+      "y": 27,
+      "rotation": 270,
+      "side": "bottom",
+      "pins": {
+        "A1": "GND",
+        "A12": "GND",
+        "B1": "GND",
+        "B12": "GND",
+        "A4": "VBUS",
+        "A9": "VBUS",
+        "B4": "VBUS",
+        "B9": "VBUS",
+        "A5": "CC1",
+        "B5": "CC2",
+        "SH": "GND",
+        "A6": "USB_DP",
+        "B6": "USB_DP",
+        "A7": "USB_DM",
+        "B7": "USB_DM"
+      },
+      "notes": "1.20+/-0.15mm shell-stake suffix on1mmPCB; nominal0.20mm protrusion; joint/fillet and tolerance inspection required. USB FS differential routing, shield and ESD validation required.",
+      "source_footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "lcsc": "C5184243",
+      "source_footprint_Q3": "ClickCounterQ2:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "J2",
+      "value": "Battery + NTC",
+      "mpn": "SM04B-SRSS-TB(LF)(SN)",
+      "manufacturer": "JST",
+      "footprint": "CountFidgetQ4:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "x": 4,
+      "y": 23,
+      "rotation": 270,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_P",
+        "2": "CELL_N_RAW",
+        "3": "TEMP_SENSE",
+        "4": "GND"
+      },
+      "notes": "Mating keyed custom pack CC-BAT-001; no bare coin-cell holder",
+      "source_footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "lcsc": "C160404",
+      "source_footprint_Q3": "ClickCounterQ2:Connector_JST_JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U1",
+      "value": "STM32L072CBT6",
+      "mpn": "STM32L072CBT6",
+      "manufacturer": "STMicroelectronics",
+      "footprint": "CountFidgetQ4:Package_QFP_LQFP-48_7x7mm_P0.5mm",
+      "pins": {
+        "1": "VLOGIC",
+        "7": "NRST",
+        "8": "GND",
+        "9": "VLOGIC",
+        "10": "COUNT_N",
+        "11": "BOOT_COUNT_RESET",
+        "18": "OLED_RESET_N",
+        "19": "OLED_ENABLE",
+        "23": "GND",
+        "24": "VLOGIC",
+        "25": "OLED_CS_N",
+        "26": "OLED_SCK",
+        "27": "OLED_DC",
+        "28": "OLED_MOSI",
+        "32": "USB_DM",
+        "33": "USB_DP",
+        "34": "SWDIO",
+        "35": "GND",
+        "36": "VLOGIC",
+        "37": "SWCLK",
+        "39": "FRAM_SCK",
+        "40": "FRAM_MISO",
+        "41": "FRAM_MOSI",
+        "44": "BOOT_COUNT_RESET",
+        "45": "FRAM_CS_N",
+        "47": "GND",
+        "48": "VLOGIC"
+      },
+      "notes": "LQFP48; all supply domains common; ROM USB DFU with BOOT0/nBOOT1; PA2/PA3/PA9/PA10 forbidden for load-enable or memory-CS controls. Unused physical pins explicitly NC. All connected GPIO modes are firmware contract.",
+      "x": 23.5,
+      "y": 27,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "mcu",
+      "lcsc": "C465977",
+      "symbol_pins": {
+        "1": {
+          "name": "VDD",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "PC13",
+          "type": "bidirectional"
+        },
+        "3": {
+          "name": "PC14",
+          "type": "bidirectional"
+        },
+        "4": {
+          "name": "PC15",
+          "type": "bidirectional"
+        },
+        "5": {
+          "name": "PH0",
+          "type": "bidirectional"
+        },
+        "6": {
+          "name": "PH1",
+          "type": "bidirectional"
+        },
+        "7": {
+          "name": "NRST",
+          "type": "input"
+        },
+        "8": {
+          "name": "VSSA",
+          "type": "power_in"
+        },
+        "9": {
+          "name": "VDDA",
+          "type": "power_in"
+        },
+        "10": {
+          "name": "PA0",
+          "type": "bidirectional"
+        },
+        "11": {
+          "name": "PA1",
+          "type": "bidirectional"
+        },
+        "12": {
+          "name": "PA2",
+          "type": "bidirectional"
+        },
+        "13": {
+          "name": "PA3",
+          "type": "bidirectional"
+        },
+        "14": {
+          "name": "PA4",
+          "type": "bidirectional"
+        },
+        "15": {
+          "name": "PA5",
+          "type": "bidirectional"
+        },
+        "16": {
+          "name": "PA6",
+          "type": "bidirectional"
+        },
+        "17": {
+          "name": "PA7",
+          "type": "bidirectional"
+        },
+        "18": {
+          "name": "PB0",
+          "type": "bidirectional"
+        },
+        "19": {
+          "name": "PB1",
+          "type": "bidirectional"
+        },
+        "20": {
+          "name": "PB2",
+          "type": "bidirectional"
+        },
+        "21": {
+          "name": "PB10",
+          "type": "bidirectional"
+        },
+        "22": {
+          "name": "PB11",
+          "type": "bidirectional"
+        },
+        "23": {
+          "name": "VSS",
+          "type": "power_in"
+        },
+        "24": {
+          "name": "VDD",
+          "type": "power_in"
+        },
+        "25": {
+          "name": "PB12",
+          "type": "bidirectional"
+        },
+        "26": {
+          "name": "PB13",
+          "type": "bidirectional"
+        },
+        "27": {
+          "name": "PB14",
+          "type": "bidirectional"
+        },
+        "28": {
+          "name": "PB15",
+          "type": "bidirectional"
+        },
+        "29": {
+          "name": "PA8",
+          "type": "bidirectional"
+        },
+        "30": {
+          "name": "PA9",
+          "type": "bidirectional"
+        },
+        "31": {
+          "name": "PA10",
+          "type": "bidirectional"
+        },
+        "32": {
+          "name": "PA11",
+          "type": "bidirectional"
+        },
+        "33": {
+          "name": "PA12",
+          "type": "bidirectional"
+        },
+        "34": {
+          "name": "PA13",
+          "type": "bidirectional"
+        },
+        "35": {
+          "name": "VSS",
+          "type": "power_in"
+        },
+        "36": {
+          "name": "VDD_USB",
+          "type": "power_in"
+        },
+        "37": {
+          "name": "PA14",
+          "type": "bidirectional"
+        },
+        "38": {
+          "name": "PA15",
+          "type": "bidirectional"
+        },
+        "39": {
+          "name": "PB3",
+          "type": "bidirectional"
+        },
+        "40": {
+          "name": "PB4",
+          "type": "bidirectional"
+        },
+        "41": {
+          "name": "PB5",
+          "type": "bidirectional"
+        },
+        "42": {
+          "name": "PB6",
+          "type": "bidirectional"
+        },
+        "43": {
+          "name": "PB7",
+          "type": "bidirectional"
+        },
+        "44": {
+          "name": "BOOT0",
+          "type": "input"
+        },
+        "45": {
+          "name": "PB8",
+          "type": "bidirectional"
+        },
+        "46": {
+          "name": "PB9",
+          "type": "bidirectional"
+        },
+        "47": {
+          "name": "VSS",
+          "type": "power_in"
+        },
+        "48": {
+          "name": "VDD",
+          "type": "power_in"
+        }
+      },
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U2",
+      "value": "Li-ion charger",
+      "mpn": "BQ25185DLHR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "CountFidgetQ4:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm",
+      "x": 28.0,
+      "y": 12.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS",
+        "2": "CELL_P",
+        "4": "CE_N",
+        "5": "GND",
+        "6": "TS_FIXED",
+        "7": "VSET",
+        "8": "ISET",
+        "10": "VBUS",
+        "11": "GND"
+      },
+      "notes": "4.2 V; 100 mA input limit; 18.2 mA nominal battery charge",
+      "source_footprint": "Package_DFN_QFN:Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm",
+      "lcsc": "C19725033",
+      "source_footprint_Q3": "ClickCounterQ2:Package_DFN_QFN_Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U3",
+      "value": "3.20481V adjustable LDO",
+      "mpn": "TLV76701DRVR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "CountFidgetQ4:Package_SON_WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "VLOGIC_FB",
+        "3": "GND",
+        "4": "SYS_LOAD",
+        "5": "GND",
+        "6": "SYS_LOAD",
+        "7": "GND"
+      },
+      "notes": "Shared MCU/USB/display-logic rail; 150k/49.9k 0.1%25ppm feedback. Transient, feedback-bias, effective-capacitance and reverse-current bounds must be validated; this is not a guaranteed end-to-end rail proof.",
+      "x": 29.0,
+      "y": 7.3,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "usb-power",
+      "lcsc": "C2863998",
+      "symbol_pins": {
+        "1": {
+          "name": "OUT",
+          "type": "power_out"
+        },
+        "2": {
+          "name": "FB",
+          "type": "input"
+        },
+        "3": {
+          "name": "GND",
+          "type": "power_in"
+        },
+        "4": {
+          "name": "EN",
+          "type": "input"
+        },
+        "5": {
+          "name": "GND",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "IN",
+          "type": "power_in"
+        },
+        "7": {
+          "name": "EP",
+          "type": "power_in"
+        }
+      },
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U4",
+      "value": "Cell protector",
+      "mpn": "BQ29700DSER",
+      "manufacturer": "Texas Instruments",
+      "footprint": "CountFidgetQ4:Package_SON_WSON-6_1.5x1.5mm_P0.5mm",
+      "x": 7.0,
+      "y": 12.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "2": "COUT",
+        "3": "DOUT",
+        "4": "CELL_N_RAW",
+        "5": "BAT_SENSE",
+        "6": "VMINUS"
+      },
+      "notes": "",
+      "source_footprint": "Package_SON:WSON-6_1.5x1.5mm_P0.5mm",
+      "lcsc": "C183096",
+      "source_footprint_Q3": "ClickCounterQ2:Package_SON_WSON-6_1.5x1.5mm_P0.5mm",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "Q1",
+      "value": "Discharge FET",
+      "mpn": "DMN2056U-13",
+      "manufacturer": "Diodes Incorporated",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23",
+      "x": 5.5,
+      "y": 17.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "DOUT",
+        "2": "CELL_N_RAW",
+        "3": "FET_DRAIN"
+      },
+      "notes": "; exact same-device reel suffix -13; no electrical polarity change",
+      "source_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "lcsc": "C5208862",
+      "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "Q2",
+      "value": "Charge FET",
+      "mpn": "DMN2056U-13",
+      "manufacturer": "Diodes Incorporated",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23",
+      "x": 9.5,
+      "y": 17.0,
+      "rotation": 180,
+      "side": "bottom",
+      "pins": {
+        "1": "COUT",
+        "2": "SENSE_FET",
+        "3": "FET_DRAIN"
+      },
+      "notes": "; exact same-device reel suffix -13; no electrical polarity change",
+      "source_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "lcsc": "C5208862",
+      "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U5",
+      "value": "Push-pull temperature window",
+      "mpn": "TLV7012DGKR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "CountFidgetQ4:TLV7032_DGK0008A_TI",
+      "x": 16.0,
+      "y": 9.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_COLD_OK",
+        "2": "TEMP_SENSE",
+        "3": "TEMP_COLD",
+        "4": "GND",
+        "5": "TEMP_SENSE",
+        "6": "TEMP_HOT",
+        "7": "TEMP_HOT_OK",
+        "8": "VBUS"
+      },
+      "notes": "Separate push-pull outputs; charge enable requires both in-window indications; POR/supply-loss tests required; TLV7012 same DGK pins/POR; USB-powered; conditional thermal error budget retained",
+      "lcsc": "C2859969",
+      "source_footprint_Q3": "ClickCounterQ2:TLV7032_DGK0008A_TI",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "Q3",
+      "value": "Charge enable",
+      "mpn": "2N7002,215",
+      "manufacturer": "Nexperia",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23",
+      "x": 15.0,
+      "y": 18.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_COLD_OK",
+        "2": "CE_MID",
+        "3": "CE_N"
+      },
+      "notes": "Upper series charge-enable N-MOSFET; gate has ground pulldown",
+      "source_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "lcsc": "C65189",
+      "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "D1",
+      "value": "USB ESD",
+      "mpn": "USBLC6-2SC6",
+      "manufacturer": "STMicroelectronics",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23-6",
+      "x": 36.0,
+      "y": 19.6,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CC1",
+        "2": "GND",
+        "3": "CC2",
+        "4": "CC2",
+        "5": "VBUS",
+        "6": "CC1"
+      },
+      "notes": "",
+      "source_footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "lcsc": "C7519",
+      "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-6",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R1",
+      "value": "5.1k",
+      "mpn": "RC0603FR-075K1L",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 35.0,
+      "y": 16.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CC1",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C105580",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R2",
+      "value": "5.1k",
+      "mpn": "RC0603FR-075K1L",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 38.5,
+      "y": 16.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CC2",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C105580",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R3",
+      "value": "24k",
+      "mpn": "0603WAF2402T5E",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 31.5,
+      "y": 10.9,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VSET",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C23352",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R4",
+      "value": "16.5k",
+      "mpn": "RC0603FR-0716K5L",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 35.2,
+      "y": 14.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "ISET",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C273769",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R5",
+      "value": "10k",
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 34.8,
+      "y": 10.8,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TS_FIXED",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C98220",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R6",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 29.6,
+      "y": 23.3,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "CE_N"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C14675",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R7",
+      "value": "330",
+      "mpn": "RC0603FR-07330RL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 4.0,
+      "y": 12.0,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_P",
+        "2": "BAT_SENSE"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C105881",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R8",
+      "value": "2.2k",
+      "mpn": "RC0603FR-072K2L",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 10.0,
+      "y": 12.0,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "GND",
+        "2": "VMINUS"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C114662",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R9",
+      "value": "3.3",
+      "mpn": "0603WAF330KT5E",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 12.4,
+      "y": 14.6,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "SENSE_FET",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C22979",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R10",
+      "value": "57.6k",
+      "mpn": "RC0603FR-0757K6L",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 11.6,
+      "y": 7.0,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "TEMP_SENSE"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C245983",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R11",
+      "value": "115k",
+      "mpn": "0603WAF1153T5E",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 12.0,
+      "y": 2.2,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "TEMP_COLD"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C22783",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R12",
+      "value": "24.3k",
+      "mpn": "RC0603FR-0724K3L",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 16.0,
+      "y": 6.2,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_COLD",
+        "2": "TEMP_HOT"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C276290",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R13",
+      "value": "16.2k",
+      "mpn": "0603WAF1622T5E",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 20.0,
+      "y": 2.2,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_HOT",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C22885",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R14",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 14.0,
+      "y": 21.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_COLD_OK",
+        "2": "GND"
+      },
+      "notes": "Local upper charge-enable gate pulldown; keep connected close to Q3 gate",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C14675",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R15",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 18.0,
+      "y": 20.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_HOT_OK",
+        "2": "GND"
+      },
+      "notes": "Local lower charge-enable gate pulldown; keep connected close to Q4 gate",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C14675",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R16",
+      "value": "10k",
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 15.0,
+      "y": 24.0,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "NRST"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C98220",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R17",
+      "value": "220k",
+      "mpn": "0603WAF2203T5E",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 6.0,
+      "y": 35.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "COUNT_N"
+      },
+      "notes": "1%, 0603, 0.1 W; >=13.4 uA held-contact current at 2.97 V, above switch 10 uA minimum",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C22961",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R18",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 34.2,
+      "y": 33.6,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "BOOT_COUNT_RESET",
+        "2": "GND"
+      },
+      "notes": "1%, 0603, 0.1 W; >=13.4 uA held-contact current at 2.97 V, above switch 10 uA minimum",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C14675",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R19",
+      "value": "2k",
+      "mpn": "RC0603FR-072KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 35.0,
+      "y": 8.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "ISET",
+        "2": "RC_COMP"
+      },
+      "notes": "1%, 0603, 0.1 W",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C105576",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C4",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 7.0,
+      "y": 9.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "BAT_SENSE",
+        "2": "CELL_N_RAW"
+      },
+      "notes": "100 nF, 50 V, X7R",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "battery",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C7",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 31.3,
+      "y": 31.5,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C9",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 20.2,
+      "y": 10.3,
+      "rotation": 270,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "notes": "100 nF local VBUS decoupler beside U5; nearby plane return",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C1",
+      "value": "2.2u",
+      "mpn": "GRM21BR71E225KE11L",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0805_2012Metric",
+      "x": 31.7,
+      "y": 13.2,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "notes": "2.2 uF, 25 V, X7R; effective >=1 uF at 5 V",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lcsc": "C77081",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C2",
+      "value": "10u",
+      "mpn": "GRM21BR61E106KA73L",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0805_2012Metric",
+      "x": 24.7,
+      "y": 13.6,
+      "rotation": 270,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS",
+        "2": "GND"
+      },
+      "notes": "10 uF, 25 V, X5R; effective >=1 uF at 4.5 V",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lcsc": "C84416",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C3",
+      "value": "2.2u",
+      "mpn": "GRM21BR71E225KE11L",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0805_2012Metric",
+      "x": 28.0,
+      "y": 15.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_P",
+        "2": "GND"
+      },
+      "notes": "2.2 uF, 25 V, X7R",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lcsc": "C77081",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C5",
+      "value": "2.2u",
+      "mpn": "GRM21BR71E225KE11L",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0805_2012Metric",
+      "x": 31.4,
+      "y": 7.3,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS_LOAD",
+        "2": "GND"
+      },
+      "notes": "",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lcsc": "C77081",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C6",
+      "value": "10u",
+      "mpn": "GRM21BR61E106KA73L",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0805_2012Metric",
+      "x": 24.3,
+      "y": 9.75,
+      "rotation": 180,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "10uF package rail bulk; include all MCU/FRAM/module capacitance in regulator stability and startup review; effective capacitance unmeasured",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lcsc": "C84416",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C10",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 17.3,
+      "y": 26.7,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "NRST",
+        "2": "GND"
+      },
+      "notes": "100nF NRST bypass; recovery switch/test pad access required",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C11",
+      "value": "1n",
+      "mpn": "GRM1885C1H102JA01D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 6.0,
+      "y": 32.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "COUNT_N",
+        "2": "GND"
+      },
+      "notes": "1 nF, 50 V, C0G",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77026",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C12",
+      "value": "1n",
+      "mpn": "GRM1885C1H102JA01D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 37.0,
+      "y": 36.5,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "BOOT_COUNT_RESET",
+        "2": "GND"
+      },
+      "notes": "1 nF, 50 V, C0G",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77026",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C13",
+      "value": "4.7n",
+      "mpn": "GRM1885C1H472JA01D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 32.0,
+      "y": 4.7,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "RC_COMP",
+        "2": "GND"
+      },
+      "notes": "4.7 nF, 50 V, C0G, 5%; same nominal TI EVM compensation ISET -> 2k -> 4.7n -> GND; low-current stability still requires measurement",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C85980",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "TP1",
+      "value": "GND",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 4.0,
+      "y": 46.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "GND"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP2",
+      "value": "VLOGIC",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 7.0,
+      "y": 46.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP3",
+      "value": "SWDIO",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 10.0,
+      "y": 46.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SWDIO"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP4",
+      "value": "SWCLK",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 13.0,
+      "y": 48.8,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SWCLK"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP5",
+      "value": "VBUS",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 39.0,
+      "y": 12.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP6",
+      "value": "SYS",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 27.0,
+      "y": 35.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "SYS"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP7",
+      "value": "CELL_P",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 4.0,
+      "y": 29.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_P"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP8",
+      "value": "CELL_N_RAW",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 6.8,
+      "y": 28.4,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "CELL_N_RAW"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP9",
+      "value": "COUNT_N",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 2.8,
+      "y": 35.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "COUNT_N"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP10",
+      "value": "BOOT_COUNT_RESET",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 37.0,
+      "y": 40.8,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "BOOT_COUNT_RESET"
+      },
+      "notes": "Not a fitted component; pogo contact after assembly",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "H1",
+      "value": "M2 clearance",
+      "mpn": "NPTH",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:MountingHole_MountingHole_2.2mm_M2",
+      "x": 2.5,
+      "y": 52,
+      "rotation": 0,
+      "side": "top",
+      "pins": {},
+      "notes": "Unplated mechanical hole; not fitted",
+      "source_footprint": "MountingHole:MountingHole_2.2mm_M2",
+      "source_footprint_Q3": "ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "H2",
+      "value": "M2 clearance",
+      "mpn": "NPTH",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:MountingHole_MountingHole_2.2mm_M2",
+      "x": 39.5,
+      "y": 52,
+      "rotation": 0,
+      "side": "top",
+      "pins": {},
+      "notes": "Unplated mechanical hole; not fitted",
+      "source_footprint": "MountingHole:MountingHole_2.2mm_M2",
+      "source_footprint_Q3": "ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "Q4",
+      "value": "Charge enable hot gate",
+      "mpn": "2N7002,215",
+      "manufacturer": "Nexperia",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23",
+      "x": 19.0,
+      "y": 18.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "TEMP_HOT_OK",
+        "2": "GND",
+        "3": "CE_MID"
+      },
+      "notes": "Lower series charge-enable N-MOSFET; gate has ground pulldown",
+      "source_footprint": "Package_TO_SOT_SMD:SOT-23",
+      "lcsc": "C65189",
+      "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
+      "sheet": "thermal",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U6",
+      "value": "OLED power slew switch",
+      "mpn": "TPS22917DBVR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23-6",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND",
+        "3": "OLED_ENABLE",
+        "4": "OLED_CT",
+        "5": "OLED_SUPPLY",
+        "6": "OLED_SUPPLY"
+      },
+      "notes": "CT capacitor connects to VIN, not GND. QOD connected to OUT. Module fully off during ROM DFU; all five display signal pins high impedance before removing power. Slew is typical-only, not a safety current limit.",
+      "x": 19.5,
+      "y": 14.0,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "display",
+      "lcsc": "C2681320",
+      "symbol_pins": {
+        "1": {
+          "name": "VIN",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "ON",
+          "type": "input"
+        },
+        "4": {
+          "name": "CT",
+          "type": "passive"
+        },
+        "5": {
+          "name": "QOD",
+          "type": "passive"
+        },
+        "6": {
+          "name": "VOUT",
+          "type": "power_out"
+        }
+      },
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R24",
+      "value": "100k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-07100KL",
+      "lcsc": "C14675",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_ENABLE",
+        "2": "GND"
+      },
+      "notes": "1%,100mW",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C14675.html",
+      "x": 15.7,
+      "y": 12.1,
+      "rotation": 0,
+      "source_footprint_Q3": "Resistor_SMD:R_0603_1608Metric",
+      "sheet": "display",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R25",
+      "value": "100k",
+      "manufacturer": "Yageo",
+      "mpn": "RC0603FR-07100KL",
+      "lcsc": "C14675",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "OLED_RESET_N",
+        "2": "GND"
+      },
+      "notes": "1%,100mW",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C14675.html",
+      "x": 22.2,
+      "y": 6.7,
+      "rotation": 90,
+      "source_footprint_Q3": "Resistor_SMD:R_0603_1608Metric",
+      "sheet": "display",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C20",
+      "value": "100n",
+      "manufacturer": "Murata",
+      "mpn": "GRM188R71H104KA93D",
+      "lcsc": "C77055",
+      "package": "0603",
+      "quantity": 1,
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "50V X7R +/-10%; at DS1.VDD.",
+      "procurement_status": "catalog identity; live JLC allocation must be checked",
+      "side": "bottom",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "catalog_url": "https://www.lcsc.com/product-detail/C77055.html",
+      "x": 15.7,
+      "y": 15.2,
+      "rotation": 180,
+      "source_footprint_Q3": "Capacitor_SMD:C_0603_1608Metric",
+      "sheet": "display",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U7",
+      "value": "System startup slew switch",
+      "mpn": "TPS22917DBVR",
+      "manufacturer": "Texas Instruments",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23-6",
+      "pins": {
+        "1": "SYS",
+        "2": "GND",
+        "3": "SYS",
+        "4": "SYS_CT",
+        "6": "SYS_LOAD"
+      },
+      "notes": "Always-enabled downstream startup slew; QOD explicitly NC. Does not limit mandatory upstream charger SYS/BAT capacitors. Battery insertion remains unqualified; do not label this as complete protection proof.",
+      "x": 27.0,
+      "y": 18.0,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "usb-power",
+      "lcsc": "C2681320",
+      "symbol_pins": {
+        "1": {
+          "name": "VIN",
+          "type": "power_in"
+        },
+        "2": {
+          "name": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "ON",
+          "type": "input"
+        },
+        "4": {
+          "name": "CT",
+          "type": "passive"
+        },
+        "5": {
+          "name": "QOD",
+          "type": "passive"
+        },
+        "6": {
+          "name": "VOUT",
+          "type": "power_out"
+        }
+      },
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "U8",
+      "value": "SPI F-RAM 32KiB",
+      "mpn": "FM25V02A-GTR",
+      "manufacturer": "Infineon",
+      "footprint": "CountFidgetQ4:Package_SO_SOIC-8_3.9x4.9mm_P1.27mm",
+      "pins": {
+        "1": "FRAM_CS_N",
+        "2": "FRAM_MISO",
+        "3": "VFRAM",
+        "4": "GND",
+        "5": "FRAM_MOSI",
+        "6": "FRAM_SCK",
+        "7": "VFRAM",
+        "8": "VFRAM"
+      },
+      "notes": "Dedicated SPI1; /WP and /HOLD high. CS pull-up to VFRAM, MCU open-drain. Sleep B9 before Stop; wake guard>=400us. RC bound conditional on >=6.8uF effective; never waive 50us/V rising and100us/V falling at any point.",
+      "x": 21,
+      "y": 46,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "memory",
+      "lcsc": "C66029",
+      "symbol_pins": {
+        "1": {
+          "name": "CS#",
+          "type": "input"
+        },
+        "2": {
+          "name": "SO",
+          "type": "tri_state"
+        },
+        "3": {
+          "name": "WP#",
+          "type": "input"
+        },
+        "4": {
+          "name": "VSS",
+          "type": "power_in"
+        },
+        "5": {
+          "name": "SI",
+          "type": "input"
+        },
+        "6": {
+          "name": "SCK",
+          "type": "input"
+        },
+        "7": {
+          "name": "HOLD#",
+          "type": "input"
+        },
+        "8": {
+          "name": "VDD",
+          "type": "power_in"
+        }
+      },
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "SW3",
+      "value": "MCU RESET",
+      "mpn": "TS-1088-AR02016",
+      "manufacturer": "XUNPU",
+      "footprint": "CountFidgetQ4:XUNPU_TS-1088-AR02016_SMD",
+      "pins": {
+        "1": "NRST",
+        "2": "GND"
+      },
+      "notes": "Normally-open two-terminal pinhole recovery button; hold SW2 during reset for ROM DFU.",
+      "x": 35,
+      "y": 48,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "mcu",
+      "lcsc": "C720477",
+      "symbol_pins": {
+        "1": {
+          "name": "1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive"
+        }
+      },
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "TP11",
+      "value": "NRST",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 15.6,
+      "y": 46.0,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "NRST"
+      },
+      "notes": "NRST recovery contact; short to adjacent GND contact to reset",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "TP12",
+      "value": "BOOT_COUNT_RESET",
+      "mpn": "PCB LAND",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:TestPoint_TestPoint_Pad_D1.5mm",
+      "x": 15.4,
+      "y": 43.2,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "BOOT_COUNT_RESET"
+      },
+      "notes": "BOOT0/count-reset high contact; SW2 supplies VLOGIC",
+      "source_footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "source_footprint_Q3": "ClickCounterQ2:TestPoint_TestPoint_Pad_D1.5mm",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "R29",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 23,
+      "y": 17,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "OLED_SUPPLY",
+        "2": "OLED_CS_N"
+      },
+      "notes": "100k CS pull-up to switched module supply; never to always-on rail",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C14675",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "display",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R30",
+      "value": "150k",
+      "mpn": "RT0603BRD07150KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "VLOGIC_FB"
+      },
+      "notes": "0.1%,25ppm/C; feedback upper resistor",
+      "x": 26.1,
+      "y": 7.85,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "usb-power",
+      "lcsc": "C326734",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R31",
+      "value": "49.9k",
+      "mpn": "RT0603BRD0749K9L",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "pins": {
+        "1": "VLOGIC_FB",
+        "2": "GND"
+      },
+      "notes": "0.1%,25ppm/C; feedback lower resistor",
+      "x": 26.1,
+      "y": 6.2,
+      "rotation": 180,
+      "side": "bottom",
+      "sheet": "usb-power",
+      "lcsc": "C705780",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R32",
+      "value": "68",
+      "mpn": "0603WAF680JT5E",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "VFRAM"
+      },
+      "notes": "1%; controlled memory rail RC",
+      "x": 18.0,
+      "y": 49.9,
+      "rotation": 0,
+      "side": "bottom",
+      "sheet": "memory",
+      "lcsc": "C27592",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "R33",
+      "value": "100k",
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "Yageo",
+      "footprint": "CountFidgetQ4:Resistor_SMD_R_0603_1608Metric",
+      "x": 21.5,
+      "y": 49.9,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VFRAM",
+        "2": "FRAM_CS_N"
+      },
+      "notes": "100k external pull-up; MCU CS must be open-drain",
+      "source_footprint": "Resistor_SMD:R_0603_1608Metric",
+      "lcsc": "C14675",
+      "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
+      "sheet": "memory",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C28",
+      "value": "22n",
+      "mpn": "GRM188R71H223KA01D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "OLED_CT"
+      },
+      "notes": "22nF50V X7R; slew timing capacitor to VIN; typical slew only",
+      "x": 22.5,
+      "y": 13.5,
+      "rotation": 90,
+      "side": "bottom",
+      "sheet": "display",
+      "lcsc": "C77056",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C29",
+      "value": "22n",
+      "mpn": "GRM188R71H223KA01D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "pins": {
+        "1": "SYS",
+        "2": "SYS_CT"
+      },
+      "notes": "22nF50V X7R; slew timing capacitor to VIN; typical slew only",
+      "x": 30.8,
+      "y": 17.1,
+      "rotation": 180,
+      "side": "bottom",
+      "sheet": "usb-power",
+      "lcsc": "C77056",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C30",
+      "value": "10u",
+      "mpn": "GRM21BR61E106KA73L",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0805_2012Metric",
+      "x": 25.7,
+      "y": 50.5,
+      "rotation": 270,
+      "side": "bottom",
+      "pins": {
+        "1": "VFRAM",
+        "2": "GND"
+      },
+      "notes": "10uF25V X5R; require>=6.8uF effective for proposed memory ramp budget",
+      "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "lcsc": "C84416",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
+      "sheet": "memory",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C31",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 17.3,
+      "y": 29.8,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C32",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 22.5,
+      "y": 33.4,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C33",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 29.6,
+      "y": 30.6,
+      "rotation": 270,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C34",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 27.5,
+      "y": 20.6,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C35",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 17.3,
+      "y": 23.6,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VLOGIC",
+        "2": "GND"
+      },
+      "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "mcu",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C36",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 25.7,
+      "y": 47.3,
+      "rotation": 90,
+      "side": "bottom",
+      "pins": {
+        "1": "VFRAM",
+        "2": "GND"
+      },
+      "notes": "100nF local FRAM bypass, in addition to C30",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "memory",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C38",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 39.8,
+      "y": 18.4,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "notes": "100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "C39",
+      "value": "100n",
+      "mpn": "GRM188R71H104KA93D",
+      "manufacturer": "Murata",
+      "footprint": "CountFidgetQ4:Capacitor_SMD_C_0603_1608Metric",
+      "x": 32.0,
+      "y": 23.3,
+      "rotation": 0,
+      "side": "bottom",
+      "pins": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "notes": "100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2",
+      "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "lcsc": "C77055",
+      "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
+      "sheet": "usb-power",
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "D2",
+      "value": "USB ESD",
+      "mpn": "USBLC6-2SC6",
+      "manufacturer": "STMicroelectronics",
+      "footprint": "CountFidgetQ4:Package_TO_SOT_SMD_SOT-23-6",
+      "x": 31.8,
+      "y": 27,
+      "rotation": 180,
+      "side": "bottom",
+      "pins": {
+        "1": "USB_DM",
+        "2": "GND",
+        "3": "USB_DP",
+        "4": "USB_DP",
+        "5": "VBUS",
+        "6": "USB_DM"
+      },
+      "notes": "USB FS data ESD; exact routing and system ESD tests required",
+      "source_footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "lcsc": "C7519",
+      "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23-6",
+      "sheet": "usb-power",
+      "symbol_pins": {
+        "1": {
+          "name": "I/O1",
+          "type": "passive"
+        },
+        "2": {
+          "name": "GND",
+          "type": "power_in"
+        },
+        "3": {
+          "name": "I/O2",
+          "type": "passive"
+        },
+        "4": {
+          "name": "I/O2",
+          "type": "passive"
+        },
+        "5": {
+          "name": "VBUS",
+          "type": "power_in"
+        },
+        "6": {
+          "name": "I/O1",
+          "type": "passive"
+        }
+      },
+      "assembly": "jlc_smt"
+    },
+    {
+      "ref": "H3",
+      "value": "M2 clearance",
+      "mpn": "NPTH",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:MountingHole_MountingHole_2.2mm_M2",
+      "x": 2.5,
+      "y": 2.5,
+      "rotation": 0,
+      "side": "top",
+      "pins": {},
+      "notes": "Front M2 clearance2.2mm NPTH; PCB support and separately removable OLED cover",
+      "source_footprint": "MountingHole:MountingHole_2.2mm_M2",
+      "source_footprint_Q3": "ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    },
+    {
+      "ref": "H4",
+      "value": "M2 clearance",
+      "mpn": "NPTH",
+      "manufacturer": "PCB",
+      "footprint": "CountFidgetQ4:MountingHole_MountingHole_2.2mm_M2",
+      "x": 39.5,
+      "y": 2.5,
+      "rotation": 0,
+      "side": "top",
+      "pins": {},
+      "notes": "Front M2 clearance2.2mm NPTH; PCB support and separately removable OLED cover",
+      "source_footprint": "MountingHole:MountingHole_2.2mm_M2",
+      "source_footprint_Q3": "ClickCounterQ2:MountingHole_MountingHole_2.2mm_M2",
+      "sheet": "mcu",
+      "assembly": "pcb_feature"
+    }
+  ],
+  "source_baseline": "Frozen Q3 JSON; Q1/Q2/Q3 artifacts unchanged",
+  "hardware_tested": false,
+  "manufacturing_released": false,
+  "fitted_components": 70,
+  "placement_status": "Unrouted circuit model; root-owned placement overrides; module may require larger outline",
+  "cost_intent": "Complete SPI module, home ROM USB DFU, retained SWD, simple common rail",
+  "source_baseline_sha256": "6f3dbc9d34e34576b680ad77fb27a0f70313f038b3d74dab6b434705e55d1c79",
+  "symbol_pins": {
+    "DS1": {
+      "1": {
+        "name": "GND",
+        "type": "power_in"
+      },
+      "2": {
+        "name": "VCC",
+        "type": "power_in"
+      },
+      "3": {
+        "name": "SCL/SCK",
+        "type": "input"
+      },
+      "4": {
+        "name": "SDA/MOSI",
+        "type": "input"
+      },
+      "5": {
+        "name": "RES#",
+        "type": "input"
+      },
+      "6": {
+        "name": "D/C#",
+        "type": "input"
+      },
+      "7": {
+        "name": "CS#",
+        "type": "input"
+      }
+    },
+    "U1": {
+      "1": {
+        "name": "VDD",
+        "type": "power_in"
+      },
+      "2": {
+        "name": "PC13",
+        "type": "bidirectional"
+      },
+      "3": {
+        "name": "PC14",
+        "type": "bidirectional"
+      },
+      "4": {
+        "name": "PC15",
+        "type": "bidirectional"
+      },
+      "5": {
+        "name": "PH0",
+        "type": "bidirectional"
+      },
+      "6": {
+        "name": "PH1",
+        "type": "bidirectional"
+      },
+      "7": {
+        "name": "NRST",
+        "type": "input"
+      },
+      "8": {
+        "name": "VSSA",
+        "type": "power_in"
+      },
+      "9": {
+        "name": "VDDA",
+        "type": "power_in"
+      },
+      "10": {
+        "name": "PA0",
+        "type": "bidirectional"
+      },
+      "11": {
+        "name": "PA1",
+        "type": "bidirectional"
+      },
+      "12": {
+        "name": "PA2",
+        "type": "bidirectional"
+      },
+      "13": {
+        "name": "PA3",
+        "type": "bidirectional"
+      },
+      "14": {
+        "name": "PA4",
+        "type": "bidirectional"
+      },
+      "15": {
+        "name": "PA5",
+        "type": "bidirectional"
+      },
+      "16": {
+        "name": "PA6",
+        "type": "bidirectional"
+      },
+      "17": {
+        "name": "PA7",
+        "type": "bidirectional"
+      },
+      "18": {
+        "name": "PB0",
+        "type": "bidirectional"
+      },
+      "19": {
+        "name": "PB1",
+        "type": "bidirectional"
+      },
+      "20": {
+        "name": "PB2",
+        "type": "bidirectional"
+      },
+      "21": {
+        "name": "PB10",
+        "type": "bidirectional"
+      },
+      "22": {
+        "name": "PB11",
+        "type": "bidirectional"
+      },
+      "23": {
+        "name": "VSS",
+        "type": "power_in"
+      },
+      "24": {
+        "name": "VDD",
+        "type": "power_in"
+      },
+      "25": {
+        "name": "PB12",
+        "type": "bidirectional"
+      },
+      "26": {
+        "name": "PB13",
+        "type": "bidirectional"
+      },
+      "27": {
+        "name": "PB14",
+        "type": "bidirectional"
+      },
+      "28": {
+        "name": "PB15",
+        "type": "bidirectional"
+      },
+      "29": {
+        "name": "PA8",
+        "type": "bidirectional"
+      },
+      "30": {
+        "name": "PA9",
+        "type": "bidirectional"
+      },
+      "31": {
+        "name": "PA10",
+        "type": "bidirectional"
+      },
+      "32": {
+        "name": "PA11",
+        "type": "bidirectional"
+      },
+      "33": {
+        "name": "PA12",
+        "type": "bidirectional"
+      },
+      "34": {
+        "name": "PA13",
+        "type": "bidirectional"
+      },
+      "35": {
+        "name": "VSS",
+        "type": "power_in"
+      },
+      "36": {
+        "name": "VDD_USB",
+        "type": "power_in"
+      },
+      "37": {
+        "name": "PA14",
+        "type": "bidirectional"
+      },
+      "38": {
+        "name": "PA15",
+        "type": "bidirectional"
+      },
+      "39": {
+        "name": "PB3",
+        "type": "bidirectional"
+      },
+      "40": {
+        "name": "PB4",
+        "type": "bidirectional"
+      },
+      "41": {
+        "name": "PB5",
+        "type": "bidirectional"
+      },
+      "42": {
+        "name": "PB6",
+        "type": "bidirectional"
+      },
+      "43": {
+        "name": "PB7",
+        "type": "bidirectional"
+      },
+      "44": {
+        "name": "BOOT0",
+        "type": "input"
+      },
+      "45": {
+        "name": "PB8",
+        "type": "bidirectional"
+      },
+      "46": {
+        "name": "PB9",
+        "type": "bidirectional"
+      },
+      "47": {
+        "name": "VSS",
+        "type": "power_in"
+      },
+      "48": {
+        "name": "VDD",
+        "type": "power_in"
+      }
+    },
+    "U3": {
+      "1": {
+        "name": "OUT",
+        "type": "power_out"
+      },
+      "2": {
+        "name": "FB",
+        "type": "input"
+      },
+      "3": {
+        "name": "GND",
+        "type": "power_in"
+      },
+      "4": {
+        "name": "EN",
+        "type": "input"
+      },
+      "5": {
+        "name": "GND",
+        "type": "power_in"
+      },
+      "6": {
+        "name": "IN",
+        "type": "power_in"
+      },
+      "7": {
+        "name": "EP",
+        "type": "power_in"
+      }
+    },
+    "U6": {
+      "1": {
+        "name": "VIN",
+        "type": "power_in"
+      },
+      "2": {
+        "name": "GND",
+        "type": "power_in"
+      },
+      "3": {
+        "name": "ON",
+        "type": "input"
+      },
+      "4": {
+        "name": "CT",
+        "type": "passive"
+      },
+      "5": {
+        "name": "QOD",
+        "type": "passive"
+      },
+      "6": {
+        "name": "VOUT",
+        "type": "power_out"
+      }
+    },
+    "U7": {
+      "1": {
+        "name": "VIN",
+        "type": "power_in"
+      },
+      "2": {
+        "name": "GND",
+        "type": "power_in"
+      },
+      "3": {
+        "name": "ON",
+        "type": "input"
+      },
+      "4": {
+        "name": "CT",
+        "type": "passive"
+      },
+      "5": {
+        "name": "QOD",
+        "type": "passive"
+      },
+      "6": {
+        "name": "VOUT",
+        "type": "power_out"
+      }
+    },
+    "U8": {
+      "1": {
+        "name": "CS#",
+        "type": "input"
+      },
+      "2": {
+        "name": "SO",
+        "type": "tri_state"
+      },
+      "3": {
+        "name": "WP#",
+        "type": "input"
+      },
+      "4": {
+        "name": "VSS",
+        "type": "power_in"
+      },
+      "5": {
+        "name": "SI",
+        "type": "input"
+      },
+      "6": {
+        "name": "SCK",
+        "type": "input"
+      },
+      "7": {
+        "name": "HOLD#",
+        "type": "input"
+      },
+      "8": {
+        "name": "VDD",
+        "type": "power_in"
+      }
+    },
+    "SW3": {
+      "1": {
+        "name": "1",
+        "type": "passive"
+      },
+      "2": {
+        "name": "2",
+        "type": "passive"
+      }
+    },
+    "D2": {
+      "1": {
+        "name": "I/O1",
+        "type": "passive"
+      },
+      "2": {
+        "name": "GND",
+        "type": "power_in"
+      },
+      "3": {
+        "name": "I/O2",
+        "type": "passive"
+      },
+      "4": {
+        "name": "I/O2",
+        "type": "passive"
+      },
+      "5": {
+        "name": "VBUS",
+        "type": "power_in"
+      },
+      "6": {
+        "name": "I/O1",
+        "type": "passive"
+      }
+    }
+  },
+  "sheets": [
+    "mcu",
+    "display",
+    "memory",
+    "usb-power",
+    "battery",
+    "thermal"
+  ],
+  "release_gates": [
+    "Upstream BQ25185 SYS/BAT capacitor insertion transient versus BQ29700 remains unresolved; SYS slew switch only mitigates downstream bulk.",
+    "Common rail tolerance, feedback bias, transient droop/overshoot, reverse current and module effective capacitance unmeasured.",
+    "FRAM RC bounds assume effective C30>=6.8uF, verified maximum rail3.3V, current<=3mA and no capacitor bypass; review BOR4, PVD5, sleep/wake and signal off-state behavior.",
+    "Exact OLED module current/low-voltage operation, mechanical header/retention and assembly process unqualified.",
+    "All inherited battery, charge-temperature, low-current charger stability, protection and first-article gates remain."
+  ]
+}

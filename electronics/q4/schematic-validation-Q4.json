@@ -1,0 +1,172 @@
+{
+  "status": "Schematic generation checkpoint before final placement refinements; current native evidence is verification/q4-validation.json",
+  "kicad_version": "10.0.6",
+  "sheets": 18,
+  "components_and_pcb_features": 86,
+  "fitted_components": 70,
+  "connected_pins_matched": 243,
+  "explicit_unused_pins": 29,
+  "erc_violations": 0,
+  "nc_nets": {
+    "U1.2": "unconnected-(U1-PC13-Pad2)",
+    "U1.3": "unconnected-(U1-PC14-Pad3)",
+    "U1.4": "unconnected-(U1-PC15-Pad4)",
+    "U1.5": "unconnected-(U1-PH0-Pad5)",
+    "U1.6": "unconnected-(U1-PH1-Pad6)",
+    "U1.12": "unconnected-(U1-PA2-Pad12)",
+    "U1.13": "unconnected-(U1-PA3-Pad13)",
+    "U1.14": "unconnected-(U1-PA4-Pad14)",
+    "U1.15": "unconnected-(U1-PA5-Pad15)",
+    "U1.16": "unconnected-(U1-PA6-Pad16)",
+    "U1.17": "unconnected-(U1-PA7-Pad17)",
+    "U1.20": "unconnected-(U1-PB2-Pad20)",
+    "U1.21": "unconnected-(U1-PB10-Pad21)",
+    "U1.22": "unconnected-(U1-PB11-Pad22)",
+    "U1.29": "unconnected-(U1-PA8-Pad29)",
+    "U1.30": "unconnected-(U1-PA9-Pad30)",
+    "U1.31": "unconnected-(U1-PA10-Pad31)",
+    "U1.38": "unconnected-(U1-PA15-Pad38)",
+    "U1.42": "unconnected-(U1-PB6-Pad42)",
+    "U1.43": "unconnected-(U1-PB7-Pad43)",
+    "U1.46": "unconnected-(U1-PB9-Pad46)",
+    "J1.A8": "unconnected-(J1-SBUA-PadA8)",
+    "J1.B8": "unconnected-(J1-SBUB-PadB8)",
+    "U2.3": "unconnected-(U2-STAT2-Pad3)",
+    "U2.9": "unconnected-(U2-STAT1-Pad9)",
+    "U7.5": "unconnected-(U7-QOD-Pad5)",
+    "J2.MP1": "unconnected-(J2-ANCHOR1-PadMP1)",
+    "J2.MP2": "unconnected-(J2-ANCHOR2-PadMP2)",
+    "U4.1": "unconnected-(U4-NC-Pad1)"
+  },
+  "erc_ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "commands": [
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "electronics/q4/schematic-netlist-Q4.xml",
+      "electronics/q4/click-counter-Q4.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "electronics/q4/erc-Q4.json",
+      "electronics/q4/click-counter-Q4.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "pdf",
+      "-o",
+      "electronics/q4/schematic-Q4.pdf",
+      "electronics/q4/click-counter-Q4.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "svg",
+      "-o",
+      "electronics/q4/schematic-svg/",
+      "electronics/q4/click-counter-Q4.kicad_sch"
+    ]
+  ],
+  "supply_assertions": {
+    "VBUS": "External USB source",
+    "GND": "System return via reviewed power topology",
+    "CELL_N_RAW": "External cell return",
+    "BAT_SENSE": "Cell supply through R7",
+    "OLED_VBAT": "Regulated OLED_4V through Q5 switch"
+  },
+  "limitations": [
+    "ERC does not verify analog thresholds, startup, protection bypass or battery safety.",
+    "Supply assertions describe external/passive power paths; they are not extra fitted parts.",
+    "The drawing uses global labels between functional sheets; pin names/types are explicit.",
+    "All existing first-article, mechanical, firmware and purchase approval gates remain."
+  ],
+  "artifacts_sha256": {
+    "electronics/q4/click-counter-Q4.kicad_sch": "70408d7c6585a864a98367ebe636a4a61c9bd9786a9f4945321b4b10248eff15",
+    "electronics/q4/mcu-1.kicad_sch": "47b62e746f6dc0046fa742289abf5c810e3c80245052473a47cab7d5b7e4e463",
+    "electronics/q4/mcu-2.kicad_sch": "239f040b9f0ab9b18609cd087b6edd31700a4a8f69e8a29ac54b190e5087dca2",
+    "electronics/q4/mcu-3.kicad_sch": "3e915c0a2d5e0848d03538d65949bcd00ca4bdcfa6450ebd4df3c421eb07bcf5",
+    "electronics/q4/mcu-4.kicad_sch": "ef4785855381cc093856c125a4f3e80cb8e866af1585446515dac9792545d4c4",
+    "electronics/q4/mcu-5.kicad_sch": "3f3eacc867b1ac1a0b34583add5d9793de2e3961912eb0a004968f84cb3894a6",
+    "electronics/q4/mcu-6.kicad_sch": "ce7b649a1688380b1b593c7eda5d8849b06739a298653eef60a2c311219171ed",
+    "electronics/q4/display-1.kicad_sch": "6782253c5ecdfadd1d4cd842eee9689018043787edf412ff5982ca82edae6964",
+    "electronics/q4/display-2.kicad_sch": "7fcb63619b517ce3ed956a88db631156cc1498702bcd912b6e4c67e94fc883f9",
+    "electronics/q4/memory-1.kicad_sch": "c0208054c3e1c73ef2507c27cecbb0f0dc54ba8772f010a7f1d4f2e795e63aab",
+    "electronics/q4/usb-power-1.kicad_sch": "a63104a5a405dfb959f122512306e77d218053a0a31882905d3fff587ca9817e",
+    "electronics/q4/usb-power-2.kicad_sch": "5888a6f625d1fe7c8726a6d9bc385be5744cf1166a9e394461a5c1fdb6c4fd4a",
+    "electronics/q4/usb-power-3.kicad_sch": "34bb8a56e6ed5f4fa9e2ac8d34f9556b79dd1dbe7a747aa7f31b94b4d9cdd418",
+    "electronics/q4/usb-power-4.kicad_sch": "8a0b6f41aa610f5a3587af7401ca9e134e502055a7babf5f48ddcdf230c461ca",
+    "electronics/q4/battery-1.kicad_sch": "ccfcd0059cfd616c5af4e5a14a335b5a4aa2bb25f26ce6fc60c63c5c695297ae",
+    "electronics/q4/battery-2.kicad_sch": "cf887d8ae44edf9d7507a297ac7e8ac46471c33cde54852088694d3b36b014fb",
+    "electronics/q4/thermal-1.kicad_sch": "dd5613ffc34b1ec4bfccfb8357f7a4522d858b3e33993f76d76e5df36142ca9e",
+    "electronics/q4/thermal-2.kicad_sch": "e4d30a6dd90750fc118b62960ad15d78f36b9c1114888d2769f536037b5e9c4b",
+    "electronics/q4/CountFidgetQ4.kicad_sym": "8383caf57b539de5fcc641d8d644e785073a8e18b2d63cb5cd76039b2c2ab7e0",
+    "electronics/q4/sym-lib-table": "dc2f7a13ccb32d3488b86fc9982b488ff97c4d0196b7aec14a715f23ffe2d947",
+    "electronics/q4/schematic-paths-Q4.json": "4b4610bf10d7de822334f16bac77f13088d45b911393f131f60f001cdb47166f",
+    "electronics/q4/schematic-netlist-Q4.xml": "d5192c3d927e060a2c9ce6ce1565a0ce1fbf03559997e832a604493a8750c853",
+    "electronics/q4/erc-Q4.json": "9600f2e120ade6819ab5d9b5d2423d72c771bded9c0913912b3c2a37db4f4073",
+    "electronics/q4/schematic-Q4.pdf": "7eec07e762f1d6ff6650793f58ecb4ec1cc6ba34fe3cfe373dc632dabeb64419",
+    "electronics/q4/schematic-svg/click-counter-Q4-Battery connection and protection _ 1.svg": "98e7987eb06dda53e9dfca6d8c384ad470bcc6359480ba5f5c53a513a1b14537",
+    "electronics/q4/schematic-svg/click-counter-Q4-Battery connection and protection _ 2.svg": "b06e5271597c887625229b75c72172fcf70adeafcbc7bb50a567103c9b46e953",
+    "electronics/q4/schematic-svg/click-counter-Q4-Independent SPI retained-count memory _ 1.svg": "89a4304178207e4ff4d624ed3d02e039ce2e4fe8fd8a2a630f04abf76320f529",
+    "electronics/q4/schematic-svg/click-counter-Q4-Independent charge-temperature window _ 1.svg": "5db0e04b4e9cac3a71ba9ab1ad84fbdaca57b30b4679e9d83a00645e048badb9",
+    "electronics/q4/schematic-svg/click-counter-Q4-Independent charge-temperature window _ 2.svg": "27b86b2ee498e902b57d3739bab78299b521b0f3f215271b83c2b0a3c1d87423",
+    "electronics/q4/schematic-svg/click-counter-Q4-SPI OLED module and power control _ 1.svg": "a86a919b48d6c36e07eb3d6b4717aa9f8d7354cd21f8d3232b68e7d2126be58d",
+    "electronics/q4/schematic-svg/click-counter-Q4-SPI OLED module and power control _ 2.svg": "a58a3ae4dbe79e6a186e89b7803943a3206e5d0bed30f1bd0339e9c02c075dff",
+    "electronics/q4/schematic-svg/click-counter-Q4-STM32 and USB boot controls _ 2.svg": "0f9dcf1b715825b52c5280020d7d3a3b23fc14ce16345b5104b920f029c17eb4",
+    "electronics/q4/schematic-svg/click-counter-Q4-STM32 and USB boot controls _ 3.svg": "9eff6c611cc50a1d05a9e9208ce6874ac6ce23cd1f05b6245dca6987e7067423",
+    "electronics/q4/schematic-svg/click-counter-Q4-STM32 and USB boot controls _ 4.svg": "09357b5ebb0b875f42f7dffc5ef2b78b4fed82f671ba39045b2dc23a4ca414b5",
+    "electronics/q4/schematic-svg/click-counter-Q4-STM32 and USB boot controls _ 5.svg": "1831810f7c07c1a5590fde561255ccf238f5561895735ba6927ee0558fc82218",
+    "electronics/q4/schematic-svg/click-counter-Q4-STM32 and USB boot controls _ 6.svg": "2903d845a2ea20aa8f08e982cbc5b018a936f162e5b1120da73f26b6b3765a62",
+    "electronics/q4/schematic-svg/click-counter-Q4-STM32 and USB boot controls.svg": "f62a4951c997aacb2f049ee951e43f3c01f6be25a7b105a878ad60c53dd31ca1",
+    "electronics/q4/schematic-svg/click-counter-Q4-USB, charging and common supply _ 1.svg": "e49d2d127f10608f5ac42829cf0875f82b6c1aa90f97a7611257371972ccd832",
+    "electronics/q4/schematic-svg/click-counter-Q4-USB, charging and common supply _ 2.svg": "eb45c25aa72311eb17f577cf35d35fc1e2d77a03c1f6153729fa8e646e5b30cc",
+    "electronics/q4/schematic-svg/click-counter-Q4-USB, charging and common supply _ 3.svg": "28254db4f108266012ac18e83721f2f875f9ceef09d45bd32a6a8c658cdf74ef",
+    "electronics/q4/schematic-svg/click-counter-Q4-USB, charging and common supply _ 4.svg": "24b5746a548e02cea478cd8fc84fbbbb36fbd84ba98baae75c00587161916565",
+    "electronics/q4/schematic-svg/click-counter-Q4.svg": "7355e87f224e29391d1128a431ab8ab30d21527640b5d2e6c6ca27c537c2b87b"
+  },
+  "generation_inputs_sha256": {
+    "scripts/build_q4_schematic.py": "b66d68718b736b0824eb843a5fd1f4e839cee2b6455c9d25d7a3bec673ffbaef",
+    "scripts/build_q4_model.py": "8c056308457bb7ed36d6982fb8e4986f94bfdf79b2d7978bb699cd1f0eeed297",
+    "electronics/q4/netlist-Q4.json": "f9f6e98d78d2c87317b49a6525fbab6792a360589e4919cee0182260274559e5",
+    "electronics/q4/placement.json": "00ec5c0d24dca1c2e7a9830a009e8324d01562cd459f13df1b19042422aba841"
+  },
+  "final_native_revalidation": {
+    "report": "verification/q4-validation.json",
+    "report_sha256": "e6f1b8971f4f5e2e694a50080af3ab60f015ba81d08ca3962aa66b6b146417f4",
+    "checked_utc": "2026-09-25T00:54:59.338201+00:00",
+    "status": "PASS_NATIVE_DESIGN_CHECKS_ONLY",
+    "scope": "Final native XML/ERC/DRC and model/schematic/PCB semantic checks supersede this earlier generation checkpoint. Circuit sheets and their artifact hashes are unchanged; final placement/model hashes are in the bound final report. This does not claim a new schematic-generator run."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "status": "CONDITIONAL ANALYTICAL CHECKS PASS; HARDWARE NOT QUALIFIED",
+  "coverage": "Linear RC/current envelopes and stacked data-sheet corners, not SPICE or a whole-board simulator.",
+  "limitations": [
+    "No verified below-2V FRAM current model;3mA all-voltage bound is a test condition.",
+    "Effective MLCC capacitance>=6.8uF requires vendor curve or measurement at bias/temperature/aging.",
+    "TLV767 line-regulation test is atVOUT+1.5V or higher; the added slope allowance below that headroom is conditional, not a low-headroom guarantee.",
+    "TLV767 accuracy row starts at1mA; very-light-load accuracy, dropout/overshoot,reverse current and complete module capacitance remain unverified.",
+    "Module switch voltage loss, ADC sampling latency, abrupt supply collapse and USB signal integrity are not simulated.",
+    "Charger/protector recovery state machines and real cell impedance are not simulated.",
+    "USB-first commissioning is a testable proposed service workflow, not a validated recovery guarantee."
+  ],
+  "model_checks": {
+    "references": 86,
+    "fitted": 70,
+    "full_mcu_pins": 48,
+    "circuit_contract_checks": "PASS; native footprint/ERC/routing validation separate"
+  },
+  "results": {
+    "rail_corner_cases": 64,
+    "vlogic_nominal_v": 3.204809619238477,
+    "vlogic_min_before_transients_v": 3.1513646416486214,
+    "vlogic_max_before_transients_v": 3.2586607614640406,
+    "feedback_current_nominal_uA": 16.03206412825651,
+    "lowest_adc_estimate_on_regulated_corner_v": 3.088337348815649,
+    "display_enable_margin_at_regulated_corner_mv": 8.337348815648848,
+    "regulator_iq_typ_uA": 50,
+    "regulator_iq_max_uA": 80,
+    "regulator_alone_cell45mAh_ideal_days_at_max_iq_and_divider": 19.524728714524205,
+    "memory_r_min_ohm": 66.878,
+    "memory_r_max_ohm": 69.122,
+    "memory_c_effective_min_uF": 6.8,
+    "memory_rise_min_us_per_v": 137.80921212121214,
+    "memory_fall_min_us_per_v": 129.91086757427368,
+    "memory_active_dc_drop_max_v": 0.01866294,
+    "memory_miso_margin_at_pvd5_min_v": 0.61233706,
+    "cs_100us_voltage_at_vfram2_v": 1.8989048125704264,
+    "cs_required_vih_at_vfram2_v": 1.4,
+    "upstream_c_max_uF": 15.432999999999996,
+    "upstream_scc_exposure_max_us": 198.69204835400578,
+    "usb_first_c3_max_uF": 2.7830000000000004,
+    "usb_first_scc_exposure_max_us": 35.82971363760761,
+    "bat_sense_branch_max_mA": 12.85583103764922,
+    "usb_first_with_sense_branch_scc_exposure_max_us": 40.12830646669103,
+    "scc_min_delay_us": 125,
+    "cold_insertion_bound_passes": false,
+    "adc_error_terms_fraction": {
+      "factory_supply": 0.0033444816053511705,
+      "factory_reference": 0.00415973377703827,
+      "temperature_65C": 0.006500000000000001,
+      "aging_1000h": 0.001,
+      "line_0p3V": 0.0006,
+      "adc_tue_and_quantization": 0.003016949772357426
+    },
+    "adc_stacked_error_fraction": 0.018621165154746867,
+    "adc_budget_fraction": 0.02,
+    "oled_off_estimate_mv": 3070,
+    "oled_on_estimate_mv": 3080,
+    "oled_off_actual_min_v_before_latency_drop": 3.0098039215686274,
+    "oled_off_actual_min_v_after_15mA_175mohm_switch_envelope": 3.0071789215686273
+  },
+  "negative_checks": 3,
+  "source_sha256": {
+    "simulation/q4-power/check.py": "13bcda817e4eaf2c1788240e4e83a90de45cc84453f2913c9148934d679a7b65",
+    "scripts/build_q4_model.py": "8c056308457bb7ed36d6982fb8e4986f94bfdf79b2d7978bb699cd1f0eeed297",
+    "electronics/q4/netlist-Q4.json": "2ee9be24459e83c13af9585f1d83def47617b98fce6547d9f5a6a5c42dd06763",
+    "electronics/q4/circuit-contract.json": "0b1b3606817f5f2fee15ec5c6228b06d1b35f83c0d7f05f99e9809bb1c1f9a14"
+  }
+}

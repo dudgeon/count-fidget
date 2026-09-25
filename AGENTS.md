@@ -1,5 +1,17 @@
 # Instructions for agents
 
+## Active Q4 checkpoint — 24 September 2026
+
+The user authorized choosing and implementing the best product architecture, prioritizing reliability, simple integration and easy home bootloading over small price differences. **Q4 is implemented with STM32L072CBT6, factory ROM USB DFU, a complete SPI OLED module and external SPI FRAM.** It has a 42 × 54 × 1 mm two-layer PCB, 70 fitted parts (67 factory SMT plus three home through-hole placements) and four PCB mounting holes. The USB-C port supports the intended home programming workflow through a data cable; physical enumeration remains untested.
+
+Start at `docs/REVIEW-Q4-2026-09-24.md` and `docs/Q4-implementation.md`. Native Q4 schematic/board, target firmware, stock evidence and four-part enclosure are separate from all historical Q1/Q2/Q3 artifacts. Independent review corrected firmware sleep/recovery faults, supply margin, display/header geometry and enclosure retention/clearances. Final native, firmware, inventory, routing, CAD and export evidence is bound to the frozen sources. Fresh native checks are zero ERC/DRC/unconnected/parity; all 42 verifier corruptions were rejected. Full/UBSan firmware tests, 13 image/protocol negatives, two identical builds and four valid/manifold enclosure parts passed. Use the linked review entry point for the exact scope and physical limits.
+
+**The quote pause remains in force:** no uploads, quote-draft changes, vendor messages, paid sourcing, purchases or manufacturing release. Read-only public stock research is allowed. Commit/push coherent engineering work to `codex/q2-engineering-audit` and the existing draft PR #1; do not merge.
+
+Preserve the explicit physical gates in the Q4 review: regulator/transient and memory-rail behavior, real USB/MCU operation, battery/protection/temperature and insertion/recovery, qualified pack/NTC harness, display current/runtime, solder process and enclosure fit. Cold insertion still has a conditional counterexample. USB-first commissioning is a proposed testable workflow, not a demonstrated guarantee. Native checks, host firmware tests and ideal ngspice subcircuits are not whole-board simulation or physical qualification. The selected PCB MPNs have timestamped positive stock evidence; stock is unallocated, and the offboard pack/keycaps/process are not qualified.
+
+## Historical checkpoints — superseded where inconsistent with Q4
+
 ## Current task and authorization — 23 September 2026
 
 Continue the Q3 engineering review on `codex/q2-engineering-audit` and the existing draft PR #1. Read `PROJECT.md`, `HANDOFF.md`, `docs/REVIEW-Q3-2026-09-22.md`, `docs/product-spec.md`, `docs/user-research.md`, `docs/decisions.md`, `docs/open-issues.md`, and `procurement/vendor-status.md`. The user's current instructions override historical checkpoints.

@@ -26,3 +26,7 @@ build/
 *-backups/
 firmware/test_counter
 firmware/test_lcd
+
+# Q4 local router inputs contain local paths.
+/electronics/q4/*.dsn
+/electronics/q4/*.ses
