@@ -1,0 +1,124 @@
+{
+ "elf": "/home/user/count-fidget/firmware/q4-stm32/build/count-fidget-Q4-stm32.elf",
+ "session_1": {
+  "presses": 1,
+  "window_s": 36.0,
+  "charge_mAs": 53.30105008291191,
+  "breakdown_mAs": {
+   "mcu_stop": 0.019099541586906157,
+   "oled": 30.05814762499999,
+   "fram": 2.747105697498527,
+   "adc": 1.4999657687501233,
+   "mcu_run": 12.32357926249961,
+   "mcu_sleep": 6.653152187563922
+  },
+  "final_count": 1,
+  "stops": 3
+ },
+ "session_10": {
+  "presses": 10,
+  "window_s": 45.0,
+  "charge_mAs": 70.24388391417338,
+  "breakdown_mAs": {
+   "mcu_stop": 0.019102841586906127,
+   "oled": 39.057144125,
+   "fram": 3.557020697496271,
+   "adc": 1.9499157687503328,
+   "mcu_run": 17.507247174998188,
+   "mcu_sleep": 8.153453306314493
+  },
+  "final_count": 10,
+  "stops": 3
+ },
+ "session_30": {
+  "presses": 30,
+  "window_s": 65.0,
+  "charge_mAs": 107.96340382041168,
+  "breakdown_mAs": {
+   "mcu_stop": 0.019102841586906127,
+   "oled": 59.057148250000004,
+   "fram": 5.357020697493391,
+   "adc": 2.9499157687508437,
+   "mcu_run": 29.12253698749631,
+   "mcu_sleep": 11.45767927506184
+  },
+  "final_count": 30,
+  "stops": 3
+ },
+ "standby_mA": {
+  "TLV76701 + 150k/49.9k (as built)": 0.0828,
+  "nano-IQ fixed LDO (TPS7A02-class)": 0.016825000000000003
+ },
+ "profiles": {
+  "TLV76701 + 150k/49.9k (as built) | shelf (no use)": {
+   "mAh_per_day": 1.987,
+   "days": {
+    "40 mAh min x 0.9 usable": 18.1,
+    "45 mAh nominal x 0.9 usable": 20.4
+   }
+  },
+  "TLV76701 + 150k/49.9k (as built) | light: 10 sessions x 10 presses": {
+   "mAh_per_day": 2.181,
+   "days": {
+    "40 mAh min x 0.9 usable": 16.5,
+    "45 mAh nominal x 0.9 usable": 18.6
+   }
+  },
+  "TLV76701 + 150k/49.9k (as built) | moderate: 30 sessions x 10 presses": {
+   "mAh_per_day": 2.569,
+   "days": {
+    "40 mAh min x 0.9 usable": 14.0,
+    "45 mAh nominal x 0.9 usable": 15.8
+   }
+  },
+  "TLV76701 + 150k/49.9k (as built) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 4.174,
+   "days": {
+    "40 mAh min x 0.9 usable": 8.6,
+    "45 mAh nominal x 0.9 usable": 9.7
+   }
+  },
+  "nano-IQ fixed LDO (TPS7A02-class) | shelf (no use)": {
+   "mAh_per_day": 0.404,
+   "days": {
+    "40 mAh min x 0.9 usable": 89.2,
+    "45 mAh nominal x 0.9 usable": 100.3
+   }
+  },
+  "nano-IQ fixed LDO (TPS7A02-class) | light: 10 sessions x 10 presses": {
+   "mAh_per_day": 0.598,
+   "days": {
+    "40 mAh min x 0.9 usable": 60.2,
+    "45 mAh nominal x 0.9 usable": 67.7
+   }
+  },
+  "nano-IQ fixed LDO (TPS7A02-class) | moderate: 30 sessions x 10 presses": {
+   "mAh_per_day": 0.986,
+   "days": {
+    "40 mAh min x 0.9 usable": 36.5,
+    "45 mAh nominal x 0.9 usable": 41.1
+   }
+  },
+  "nano-IQ fixed LDO (TPS7A02-class) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 2.591,
+   "days": {
+    "40 mAh min x 0.9 usable": 13.9,
+    "45 mAh nominal x 0.9 usable": 15.6
+   }
+  }
+ },
+ "currents_mA": {
+  "mcu_run": 1.1,
+  "mcu_sleep": 0.35,
+  "mcu_stop": 0.0033,
+  "adc": 0.05,
+  "fram_standby": 0.09,
+  "fram_sleep": 0.005,
+  "oled": 1.0,
+  "ldo_tlv767": 0.05,
+  "divider": 0.016,
+  "bq29700": 0.004,
+  "bq25185": 0.004,
+  "u7": 0.0005
+ }
+}

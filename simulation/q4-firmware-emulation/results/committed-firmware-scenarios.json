@@ -1,0 +1,855 @@
+{
+ "schema": 1,
+ "elf": "firmware/q4-stm32/build/count-fidget-Q4-stm32.elf",
+ "elf_sha256": "9a982e4322120769f108ffac44afaba64b9b09f7f665c50e08c2f34d6745a097",
+ "model": "Instruction-level emulation with modelled peripherals; not hardware execution",
+ "expectation_failures": [
+  "S3: saved count must return without ERR after NRST",
+  "boot: few records, flash penalty +0.5 cycle/instr: boot must not overflow the input queue / latch ERR",
+  "boot: 96 valid records (wrapped), flash penalty +0.0 cycle/instr: boot must not overflow the input queue / latch ERR",
+  "boot: 96 valid records (wrapped), flash penalty +0.5 cycle/instr: boot must not overflow the input queue / latch ERR",
+  "S7: expected 106",
+  "S8b: count persists with display off",
+  "S8c: display returns with count 7",
+  "S9a: one count, then sleep while held",
+  "S9c: release adds nothing; next press counts"
+ ],
+ "scenarios": {
+  "S1a blank FRAM first boot": {
+   "label": "S1a blank FRAM first boot",
+   "t": 1.4,
+   "halted": null,
+   "display": {
+    "digits": "0",
+    "status": "ERR"
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 36,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 1,
+     "latest": {
+      "sequence": 1,
+      "count": 0,
+      "fault": 1,
+      "slot": 0
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 49,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 0
+   },
+   "informational": false
+  },
+  "S1b count reset then 5 presses": {
+   "label": "S1b count reset then 5 presses",
+   "t": 8.5002,
+   "halted": null,
+   "display": {
+    "digits": "5",
+    "status": ""
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 252,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 7,
+     "latest": {
+      "sequence": 7,
+      "count": 5,
+      "fault": 0,
+      "slot": 6
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 49,
+    "input_fault": false,
+    "journal_fault": false,
+    "counter": 5
+   },
+   "informational": false,
+   "latency_ms": {
+    "reset_to_clean_zero": 255.0,
+    "press_to_display": [
+     200.0,
+     225.0,
+     225.0,
+     225.0,
+     225.0
+    ]
+   }
+  },
+  "S2a 30 s inactivity -> display off, FRAM sleep, Stop": {
+   "label": "S2a 30 s inactivity -> display off, FRAM sleep, Stop",
+   "t": 45.0,
+   "halted": null,
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": true,
+    "writes": 252,
+    "sleeps": 1,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 7,
+     "latest": {
+      "sequence": 7,
+      "count": 5,
+      "fault": 0,
+      "slot": 6
+     }
+    }
+   },
+   "stop_entries": 1,
+   "stop_time_s": 7.787,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 49,
+    "input_fault": false,
+    "journal_fault": false,
+    "counter": 5
+   },
+   "informational": false
+  },
+  "S2b press from Stop": {
+   "label": "S2b press from Stop",
+   "t": 53.0,
+   "halted": null,
+   "display": {
+    "digits": "6",
+    "status": ""
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 288,
+    "sleeps": 1,
+    "wakes": 1,
+    "journal": {
+     "valid_slots": 8,
+     "latest": {
+      "sequence": 8,
+      "count": 6,
+      "fault": 0,
+      "slot": 7
+     }
+    }
+   },
+   "stop_entries": 2,
+   "stop_time_s": 12.788,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 49,
+    "input_fault": false,
+    "journal_fault": false,
+    "counter": 6
+   },
+   "informational": false,
+   "latency_ms": {
+    "wake_press_to_display": 755.0
+   }
+  },
+  "S2c asleep again": {
+   "label": "S2c asleep again",
+   "t": 90.0,
+   "halted": null,
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 2
+   },
+   "fram": {
+    "asleep": true,
+    "writes": 288,
+    "sleeps": 2,
+    "wakes": 1,
+    "journal": {
+     "valid_slots": 8,
+     "latest": {
+      "sequence": 8,
+      "count": 6,
+      "fault": 0,
+      "slot": 7
+     }
+    }
+   },
+   "stop_entries": 3,
+   "stop_time_s": 22.574,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 49,
+    "input_fault": false,
+    "journal_fault": false,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S3 NRST while FRAM sleeps (warm reset)": {
+   "label": "S3 NRST while FRAM sleeps (warm reset)",
+   "t": 97.5,
+   "halted": null,
+   "display": {
+    "digits": "6",
+    "status": "ERR"
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 2
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 324,
+    "sleeps": 2,
+    "wakes": 2,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 3,
+   "stop_time_s": 22.574,
+   "boots": 2,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 58,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false,
+   "latency_ms": {
+    "nrst_to_display": 1060.0
+   }
+  },
+  "boot_drain": {
+   "few records, flash penalty +0.0 cycle/instr": {
+    "first_drain_ms": 245.3,
+    "queue_dropped": 0,
+    "input_fault": false,
+    "journal_fault": false,
+    "display": [
+     "0",
+     ""
+    ]
+   },
+   "few records, flash penalty +0.5 cycle/instr": {
+    "first_drain_ms": 307.6,
+    "queue_dropped": 52,
+    "input_fault": true,
+    "journal_fault": true,
+    "display": [
+     "0",
+     "ERR"
+    ]
+   },
+   "96 valid records (wrapped), flash penalty +0.0 cycle/instr": {
+    "first_drain_ms": 315.9,
+    "queue_dropped": 60,
+    "input_fault": true,
+    "journal_fault": true,
+    "display": [
+     "1234",
+     "ERR"
+    ]
+   },
+   "96 valid records (wrapped), flash penalty +0.5 cycle/instr": {
+    "first_drain_ms": 409.0,
+    "queue_dropped": 153,
+    "input_fault": true,
+    "journal_fault": true,
+    "display": [
+     "1234",
+     "ERR"
+    ]
+   }
+  },
+  "S4 DFU as documented: hold count-reset, then NRST": {
+   "label": "S4 DFU as documented: hold count-reset, then NRST",
+   "t": 3.7,
+   "halted": "ROM bootloader (BOOT0 high at NRST)",
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 36,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 10,
+     "latest": {
+      "sequence": 10,
+      "count": 0,
+      "fault": 0,
+      "slot": 9
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 2,
+   "dfu": true,
+   "violations": [
+    [
+     3.5,
+     "OLED",
+     "module supply removed without AEh/8Dh10h and >=100 ms tOFF (display_on=True, pump=True)"
+    ]
+   ],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": false,
+    "journal_fault": false,
+    "counter": 0
+   },
+   "informational": true,
+   "journal_before": {
+    "sequence": 9,
+    "count": 6,
+    "fault": 1,
+    "slot": 8
+   }
+  },
+  "S4b hold count-reset while plugging USB, battery attached (no MCU reset)": {
+   "label": "S4b hold count-reset while plugging USB, battery attached (no MCU reset)",
+   "t": 6.0,
+   "halted": null,
+   "display": {
+    "digits": "0",
+    "status": ""
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 36,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 10,
+     "latest": {
+      "sequence": 10,
+      "count": 0,
+      "fault": 0,
+      "slot": 9
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": false,
+    "journal_fault": false,
+    "counter": 0
+   },
+   "informational": true,
+   "journal_before": {
+    "sequence": 9,
+    "count": 6,
+    "fault": 1,
+    "slot": 8
+   }
+  },
+  "S5 DFU with NRST held first, then count-reset, then release NRST": {
+   "label": "S5 DFU with NRST held first, then count-reset, then release NRST",
+   "t": 3.0,
+   "halted": "ROM bootloader (BOOT0 high at NRST)",
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 2,
+   "dfu": true,
+   "violations": [
+    [
+     2.0,
+     "OLED",
+     "module supply removed without AEh/8Dh10h and >=100 ms tOFF (display_on=True, pump=True)"
+    ]
+   ],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false,
+   "journal_before": {
+    "sequence": 9,
+    "count": 6,
+    "fault": 1,
+    "slot": 8
+   }
+  },
+  "S6 RM0376 factory option bytes (BOR_LEV not provisioned)": {
+   "label": "S6 RM0376 factory option bytes (BOR_LEV not provisioned)",
+   "t": 6.0,
+   "halted": null,
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 0,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 0
+   },
+   "informational": true
+  },
+  "S7 100 bouncy presses at 12 Hz": {
+   "label": "S7 100 bouncy presses at 12 Hz",
+   "t": 11.8333,
+   "halted": null,
+   "display": {
+    "digits": "6",
+    "status": "ERR"
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S8a VLOGIC 3.05 V (below 3.08 V enable)": {
+   "label": "S8a VLOGIC 3.05 V (below 3.08 V enable)",
+   "t": 2.0,
+   "halted": null,
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S8b press at 3.05 V": {
+   "label": "S8b press at 3.05 V",
+   "t": 3.0,
+   "halted": null,
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S8c rail restored to 3.20 V": {
+   "label": "S8c rail restored to 3.20 V",
+   "t": 5.0,
+   "halted": null,
+   "display": {
+    "digits": "6",
+    "status": "ERR"
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S9a increment held 38 s": {
+   "label": "S9a increment held 38 s",
+   "t": 40.0,
+   "halted": null,
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": true,
+    "writes": 0,
+    "sleeps": 1,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 1,
+   "stop_time_s": 7.79,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S9b released while asleep": {
+   "label": "S9b released while asleep",
+   "t": 42.0,
+   "halted": null,
+   "display": null,
+   "oled": {
+    "powered": false,
+    "on": false,
+    "pump": false,
+    "contrast": 127,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": true,
+    "writes": 0,
+    "sleeps": 1,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 2,
+   "stop_time_s": 9.782,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S9c next press": {
+   "label": "S9c next press",
+   "t": 45.0,
+   "halted": null,
+   "display": {
+    "digits": "6",
+    "status": "ERR"
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 1
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 0,
+    "sleeps": 1,
+    "wakes": 1,
+    "journal": {
+     "valid_slots": 9,
+     "latest": {
+      "sequence": 9,
+      "count": 6,
+      "fault": 1,
+      "slot": 8
+     }
+    }
+   },
+   "stop_entries": 3,
+   "stop_time_s": 10.782,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": true,
+    "journal_fault": true,
+    "counter": 6
+   },
+   "informational": false
+  },
+  "S10 both keys together": {
+   "label": "S10 both keys together",
+   "t": 4.0002,
+   "halted": null,
+   "display": {
+    "digits": "0",
+    "status": ""
+   },
+   "oled": {
+    "powered": true,
+    "on": true,
+    "pump": true,
+    "contrast": 16,
+    "power_cycles": 0
+   },
+   "fram": {
+    "asleep": false,
+    "writes": 36,
+    "sleeps": 0,
+    "wakes": 0,
+    "journal": {
+     "valid_slots": 10,
+     "latest": {
+      "sequence": 10,
+      "count": 0,
+      "fault": 0,
+      "slot": 9
+     }
+    }
+   },
+   "stop_entries": 0,
+   "stop_time_s": 0.0,
+   "boots": 1,
+   "dfu": false,
+   "violations": [],
+   "ram": {
+    "queue_dropped": 59,
+    "input_fault": false,
+    "journal_fault": false,
+    "counter": 0
+   },
+   "informational": false
+  }
+ },
+ "wall_s": 134.6
+}
