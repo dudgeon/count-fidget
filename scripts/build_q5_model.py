@@ -132,6 +132,29 @@ def make_model():
     parts['TP13']['value'] = 'SYS_ON'
     for p in parts.values():
         p.setdefault('assembly', 'jlc_smt')
+    # Cost review (JLC charges a feeder fee per EXTENDED part type): exact-spec JLC Basic
+    # equivalents for generic passives/transistors. Same package, value, tolerance,
+    # voltage and TCR; X7R replaces C0G only for the 1 nF key filters and 4.7 nF slew
+    # capacitors (typical-only timing). Precision 0.1 % dividers and the 10 uF parts
+    # (C30 effective-capacitance bound) are deliberately unchanged.
+    BASIC = {
+        'GRM188R71H104KA93D': ('CC0603KRX7R9BB104', 'YAGEO', 'C14663'),
+        'RC0603FR-07100KL': ('0603WAF1003T5E', 'UNI-ROYAL', 'C25803'),
+        'RC0603FR-0710KL': ('0603WAF1002T5E', 'UNI-ROYAL', 'C25804'),
+        'RC0603FR-072K2L': ('0603WAF2201T5E', 'UNI-ROYAL', 'C4190'),
+        'RC0603FR-072KL': ('0603WAF2001T5E', 'UNI-ROYAL', 'C22975'),
+        'RC0603FR-07330RL': ('0603WAF3300T5E', 'UNI-ROYAL', 'C23138'),
+        'RC0603FR-075K1L': ('0603WAF5101T5E', 'UNI-ROYAL', 'C23186'),
+        '2N7002,215': ('2N7002', 'CJ', 'C8545'),
+        'GRM1885C1H472JA01D': ('0603B472K500NT', 'FH', 'C53987'),
+        'GRM1885C1H102JA01D': ('CL10B102KB8NNNC', 'Samsung', 'C1588'),
+    }
+    for part in parts.values():
+        if part['mpn'] in BASIC:
+            mpn, maker, code = BASIC[part['mpn']]
+            part.update(mpn=mpn, manufacturer=maker, lcsc=code)
+            if part['value'] in ('4.7n', '1n'):
+                part['notes'] = part['notes'].replace('C0G', 'X7R').replace('c0g', 'X7R')
     overrides_path = OUT / 'placement.json'
     if overrides_path.exists():
         overrides = json.loads(overrides_path.read_text())

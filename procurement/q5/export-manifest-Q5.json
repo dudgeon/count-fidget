@@ -99,20 +99,20 @@
   },
   "files": {
     "procurement/q5/BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv": {
-      "bytes": 6037,
-      "sha256": "39bbd804a73f8e9c09c565cde78989df76833d42fe7d39748d7e02d42717b9ae"
+      "bytes": 5945,
+      "sha256": "57d4a813a3ef3234eea0fea650731b00ac641a01e4d3d657daab73c4b1275db0"
     },
     "procurement/q5/BOM-JLCPCB-Q5.csv": {
-      "bytes": 5902,
-      "sha256": "92d376bec033853d60dd495e2c9ecae4349a1043d79676b95b52fac8752cae56"
+      "bytes": 5810,
+      "sha256": "c0d1c44fdad0d6e1873c7c46a70b4db8e857058a476a4faf7e129ff1d83e8b40"
     },
     "procurement/q5/BOM-PCBA-Q5.csv": {
-      "bytes": 18554,
-      "sha256": "0c7d708affff44bf742070d07c348a8f9d7e68c6abb2ea54408c38d26f7fb189"
+      "bytes": 18476,
+      "sha256": "e2fb404c5d1bc94585e256627590b0f2ffa4bbfb28437efa7384d7263d2307bd"
     },
     "procurement/q5/BOM-Q5.csv": {
-      "bytes": 20568,
-      "sha256": "ea1da56b9c158c315a463f2153d7ca24f8a182cd4a045b995f8ccedafb8876e8"
+      "bytes": 20490,
+      "sha256": "d20b48c4f49ca4abb2b424797293bea089ede2c144850a7a922fc36b5d98fcf3"
     },
     "procurement/q5/CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv": {
       "bytes": 3683,
@@ -124,7 +124,7 @@
     },
     "procurement/q5/HOME-COMPLETION-Q5.csv": {
       "bytes": 1023,
-      "sha256": "a8c48765053b8851302221fb2515773f2889181e49a7fbae975e77f24addfd42"
+      "sha256": "a211681fbf8ebaac7a6127b46442acc2e5a99fce10b5a14e3b3e183f2720201c"
     },
     "procurement/q5/LOOSE-PARTS-Q5.csv": {
       "bytes": 1063,
@@ -144,67 +144,67 @@
     },
     "procurement/q5/assembly-bottom-Q5.svg": {
       "bytes": 942275,
-      "sha256": "b134ceb26b1307b1556bbf9377ce8cae4368ca9e8ec9b63241a4ac321937fbb5"
+      "sha256": "5a9d20839852b41a28096dec93f13cd24abf0b066bf71c17d447329e5460383e"
     },
     "procurement/q5/assembly-top-Q5.svg": {
       "bytes": 121243,
-      "sha256": "b54c31353173df784e7aa46778f507d5c3c052058be2309efbdb8c1831de8837"
+      "sha256": "76848d9497b2034c656df7328c2e95c54f3c2b51702a0fbb64d0b9e5ed7809ba"
     },
     "procurement/q5/click-counter-Q5-Gerbers.zip": {
       "bytes": 134522,
-      "sha256": "26f4eb5f7ac45b0d7ae55192bf72ff3467ee3805ce2388030f01caaa1f6f1c6f"
+      "sha256": "f9b9afe4ead8ebe9c9f7066926ef95a16f03e42750d92ad6f939462d12864230"
     },
     "procurement/q5/drill-report-Q5.txt": {
       "bytes": 877,
-      "sha256": "84f2b694f9d300e1d32f42bfc78a8441c83dff26f8dc8477701b43a3a77ba9e5"
+      "sha256": "9bd5886d6d2faf871d0c7e515d37aec9c4f1868541736a054703b1746a611cef"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Cu.gbl": {
       "bytes": 318968,
-      "sha256": "ccfe433464bc688dd29024ba1f4d50efa33b7f03b78d6340b7ab0174405e73c7"
+      "sha256": "c5b0d74eab48e3689e00b0217efa747b5a8cba557463a42ab0f0949b88e9b6c6"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Mask.gbs": {
       "bytes": 13108,
-      "sha256": "ff51cb38c35eac67fd07dde85a608148e095d8be683822cd10e62f2961fdd148"
+      "sha256": "a1b075df7878eb105bdec2d389f016bf3c72c675a273a388549972d878bc2e2b"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Paste.gbp": {
       "bytes": 12094,
-      "sha256": "fff3a766b3f7127ab36c3e63c156fc09da6d77d388fb0208cf1e4f2f729da6da"
+      "sha256": "549eeed10f37a6d475824f5a99d23c3ad608d5a24939e1e3d7f3af7623843149"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Silkscreen.gbo": {
       "bytes": 15861,
-      "sha256": "9d81de7624a08315f5e21267052bdac0e2254b27b1ad0bb903f3e7620c543c1b"
+      "sha256": "34d07fb186ab9cf7ca92f3f5ca502a23b2479804a35d72847de9ba824fe97cab"
     },
     "procurement/q5/gerbers/click-counter-Q5-Edge_Cuts.gm1": {
       "bytes": 665,
-      "sha256": "43832ac2e724a8d1023e37315bd01f4e7b7f370a70ae4e139e17342f35d500a6"
+      "sha256": "d3f3ec49c5af2e123a8896915ee84f10c7210acb9b668b2077e000637ada023e"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Cu.gtl": {
       "bytes": 133340,
-      "sha256": "ef71624e50cc00798a7daa1370d784642cfc342295047dd14065069b73a7b2be"
+      "sha256": "4164ea24edf96f5de4bf2f10c423e040383a5b082a2c4f885c170e19b43845fd"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Mask.gts": {
       "bytes": 1435,
-      "sha256": "21b404d2beb4c5d3641b91ffd8f07baa0e406834d1ceeaa1818498a231717b5a"
+      "sha256": "e95c50fb57619fb4f06a1eb33cb50dc1cab9ad211bc094d98357824c3f43f66a"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Paste.gtp": {
       "bytes": 503,
-      "sha256": "2948da0e7c4cafef656eda557031f8d1d3847678d781a829223605df205cebf8"
+      "sha256": "b8a35d803161d996744ec64d5195702d0023a1396385583e59cc88773dd5b2a5"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Silkscreen.gto": {
       "bytes": 1445,
-      "sha256": "6857980a4443e64d7db77272c6bb85284358cb44f766f28ccf14e9b70214db12"
+      "sha256": "3c6b201616c9b4fea7de91063ccd7e243e529f6a11ab19fcbe51f8273d923989"
     },
     "procurement/q5/gerbers/click-counter-Q5-NPTH.drl": {
       "bytes": 722,
-      "sha256": "e3ac33a617fc6af5c33cf3583acbca5f29740c3652eeff5cb93c99d4504e656c"
+      "sha256": "6e2b0c5c0b3f89d89f0c0eac8a285410d583809d2f913cb79bc1eed5e76ef8a0"
     },
     "procurement/q5/gerbers/click-counter-Q5-PTH.drl": {
       "bytes": 2593,
-      "sha256": "8c0f13f01d6b445ecda66c4738f7edb4727c5c46b8406f25351fc85225b62978"
+      "sha256": "b8026c0a49530a7b359f1204a57ffcbae27bfa053c6de6f171665a657156508a"
     },
     "procurement/q5/gerbers/click-counter-Q5-job.gbrjob": {
       "bytes": 2895,
-      "sha256": "b3bbab0c75feb743edbb6ab0ad57559f12f6d1afa6fb237c3ffa3e6a20ff57a4"
+      "sha256": "b6b4b9faecee7545ab7cdf5a322dd842e033e5178e75134a588884f54c337fd4"
     },
     "procurement/q5/placements-KiCad-Q5.csv": {
       "bytes": 7061,
@@ -214,7 +214,7 @@
   "hardware_tested": false,
   "inputs_sha256": {
     "electronics/q4/netlist-Q4.json": "2ee9be24459e83c13af9585f1d83def47617b98fce6547d9f5a6a5c42dd06763",
-    "electronics/q5/CountFidgetQ5.kicad_sym": "3d57f4f2c2c1379b4a12c0d92e4a1affff955fac41d2072e77eefd7aa50d28f2",
+    "electronics/q5/CountFidgetQ5.kicad_sym": "d8bc4ad6f6c502f83b09797722fa48332139592f24f79cfc8edf57b9fdbc63cb",
     "electronics/q5/CountFidgetQ5.pretty/BatteryHolder_QJ_CR2032-BS-6-1.kicad_mod": "ed28eba83485199b423dc3925a354044f94324d429e34a6ddd7467544080b195",
     "electronics/q5/CountFidgetQ5.pretty/Capacitor_SMD_C_0603_1608Metric.kicad_mod": "17877a5fef658fdf5b737d8315d75ff1c46214553ef2ff05f107442fc584bd1e",
     "electronics/q5/CountFidgetQ5.pretty/Capacitor_SMD_C_0805_2012Metric.kicad_mod": "2bf5abdba5044a3374af2e9aab575101b6d343e97a8f36e1956ec6699cb12348",
@@ -235,39 +235,39 @@
     "electronics/q5/CountFidgetQ5.pretty/SW_Hotswap_Kailh_MX_CPG151101S11.kicad_mod": "01843cfbabbdf147c3ccaf7dd5814e2bccc86edaaf8e45304993a95010ce8f36",
     "electronics/q5/CountFidgetQ5.pretty/TestPoint_TestPoint_Pad_D1.5mm.kicad_mod": "3323cabc242552f1c7eecb74381ad5510b00a89824374ae13f3c637bf721e1af",
     "electronics/q5/CountFidgetQ5.pretty/XUNPU_TS-1088-AR02016_SMD.kicad_mod": "3362a6a9015fb0c38f81c291f6d44018349129a9686e16079572383c9a9f0efb",
-    "electronics/q5/battery-1.kicad_sch": "ac87ceecd5f521e33c701f960a119a6210f4d0ef88d2b9c343b74bd0a7afadd3",
+    "electronics/q5/battery-1.kicad_sch": "9612852686b7891f20257c1b297715819a94bf88c314b66ffc9b5c637cc6c2b6",
     "electronics/q5/battery-2.kicad_sch": "e1aa4536e646e75e3e656c131a9c0092791cb5d3b08212b6794cbd099ab4d988",
-    "electronics/q5/circuit-contract.json": "582efe56ba7c49a83f59733652c7a8e211cd6c2ea420b0fdb0da3a2e842f598a",
-    "electronics/q5/click-counter-Q5.kicad_pcb": "69acc36fadd4f51ff3f32192c2d27d8a914eacf024aeb27651487a67c8f6cc2d",
+    "electronics/q5/circuit-contract.json": "431fb4f302b26c316470867bb3327946d33e56e24c65e6e0395f06762b90a93e",
+    "electronics/q5/click-counter-Q5.kicad_pcb": "e78629ed361ff9f38c8ead58770e2dd60fc865461600456b503f6015345428df",
     "electronics/q5/click-counter-Q5.kicad_pro": "04c9bdd754ab845b28f246c4c378d3db0a6e2033a4060626fa0a277c3ad0fe5b",
     "electronics/q5/click-counter-Q5.kicad_sch": "9ac8247279dff88dd9e641aa3c49268d5ccde660ef9f76fcb50ecaf42ccb4b1f",
-    "electronics/q5/display-1.kicad_sch": "9aef754ebba42410220b3b22317ad9b328802718e39c61c4074d9eda920e59b2",
+    "electronics/q5/display-1.kicad_sch": "6d02f6d76c44d883a7d9cf0bc3b39c24337fe2383c287e29fb34115236a6af02",
     "electronics/q5/display-2.kicad_sch": "7eac6c32626f0c0c7d62af0a99bb880c5a26b8581c26daa62b565982df4c8be7",
     "electronics/q5/fp-lib-table": "e02fa6180ad823b4036cc1de029665923d581495314e0ee2139056d48d5f3365",
     "electronics/q5/locked-route-seed.json": "66aeceaed6338854321ee6423ad29d35f3f016db59d5ab97174ef5533d3a0148",
-    "electronics/q5/mcu-1.kicad_sch": "ac488c7c7eaf5365c0c0c45495d52a105a05e18588677b6e7e1375134e962d2d",
-    "electronics/q5/mcu-2.kicad_sch": "2b885e82b5a4be620327342904e2b3f711b798d9462b839d0c02cc1c54bfbbed",
-    "electronics/q5/mcu-3.kicad_sch": "4dc5a33ff739d6707de990b23998ad54a8a15f325cd26e5a0086cb9517e4b9da",
-    "electronics/q5/mcu-4.kicad_sch": "477604a0aa4491148548c71243732a755be8b0ceb820fa4d564fa0a502d8719d",
+    "electronics/q5/mcu-1.kicad_sch": "d7ed494cc0648e473351ff84a35f25dacdc9b52cc28a2da90da923cdb609e1e7",
+    "electronics/q5/mcu-2.kicad_sch": "3844368b46f15bfa1557626a688f2e4288fa60c6399e4b0c7f0414a2fc21bf15",
+    "electronics/q5/mcu-3.kicad_sch": "5222526eb82396ed28ae828303081de9829ffef88a030d1492212a7c9a14c81c",
+    "electronics/q5/mcu-4.kicad_sch": "a73ca06c03ceffa7c6f506b4b044f6a37cac324d73d4c8e020416a5fc1b926c8",
     "electronics/q5/mcu-5.kicad_sch": "a91e50e6709f78fa9f8f552433d0f66ee4e1166f2355027ba16585d6c933d085",
     "electronics/q5/mcu-6.kicad_sch": "6e5561165cd52b504c99ef5e370130e78b0edfd7399b886f08120253ff108c7f",
-    "electronics/q5/memory-1.kicad_sch": "6bc03405dfad866a0ae9a43246f60c9f6e05eeffc011a79c86aa2bf2354818c0",
-    "electronics/q5/netlist-Q5.json": "0b24338cc0e2f7874e67bfa04d436558a8a44ddf0637fca329cbec23213737c7",
+    "electronics/q5/memory-1.kicad_sch": "fe36905e7e610b3d4d84e36b20b7359d1e09295589aaa6779ccb573eed3499ee",
+    "electronics/q5/netlist-Q5.json": "67c816161594167ef4e57a1a50c7155c2c48ef49607775825cd9701b768cb62f",
     "electronics/q5/placement.json": "bbaa9c24a493bcfaffafcec1375b06e72302deb43f0b79658f99502bb4302587",
-    "electronics/q5/schematic-netlist-Q5.xml": "b4396467d9614fd6cc76fb5a3f39111a4984f8e5b721704c8a003b487d88354e",
+    "electronics/q5/schematic-netlist-Q5.xml": "067162fbc40778490f519636bb5e47da78222e71966ca8f678a4d18b6a060708",
     "electronics/q5/schematic-paths-Q5.json": "f50675ee0cd830e3a5b12f0e54060a48cf7864ca26663f296f43bd193e94aff8",
     "electronics/q5/sym-lib-table": "dc35b02d39bb80dbfc0ccd628e4feedfe4eaad38b75139e79c5e12b6eba92e78",
-    "electronics/q5/thermal-1.kicad_sch": "1c60acbdcf9a50456db3d50f98278cc7201f8f75816c40dd587d1e3eb65e8cc4",
-    "electronics/q5/thermal-2.kicad_sch": "ba9022a66b656fc73e1741c9e4899aca7d06bf76813da3573e03da28f9545d14",
-    "electronics/q5/usb-power-1.kicad_sch": "62d9fd537399b8d5b126c8b6f3bbe48779efe8e9c29603769098bce9a1b4aa32",
-    "electronics/q5/usb-power-2.kicad_sch": "1ce1eaca921ebc04bc0c12fa87626a696f3d1c5f575d1c80c1999792854abf59",
-    "electronics/q5/usb-power-3.kicad_sch": "df87f12f60e2d179594331b077aaa3fa39cd45efcee891653b94fa5a6d805f75",
-    "electronics/q5/usb-power-4.kicad_sch": "dfef28ce30b54e922088d7123c493a2bf4cffa7577467810f34a13e13894b8d5",
-    "electronics/q5/usb-power-5.kicad_sch": "40fb692cee338579bf759382f0bfb4bbde595fd95c00dcce0a4e8b16366f9bb6",
+    "electronics/q5/thermal-1.kicad_sch": "2015e379dca17b2c94c02e33724565ffd23a798db2aee91fa28cff79412a75fb",
+    "electronics/q5/thermal-2.kicad_sch": "0c2f8c60853cc34c1b55817fe037fa1223ba903416ffefdd19b3c8e3acf3bad8",
+    "electronics/q5/usb-power-1.kicad_sch": "070458e4c981c38a85210bf931bdaaf675305d63546084b5f080696a1d3236cc",
+    "electronics/q5/usb-power-2.kicad_sch": "803cc6a688bcfffccdcc55119affbdea4ae2e3f9bf1d0604412db88f1b96c3a6",
+    "electronics/q5/usb-power-3.kicad_sch": "5f598d9affa6061dada2ae117bb917c802a993c7c8de3e448990c0b672b50e19",
+    "electronics/q5/usb-power-4.kicad_sch": "0f66ad5735a50f65e0df31f9b82b747e5990ef2d3624a75dac7855ad68ef1b39",
+    "electronics/q5/usb-power-5.kicad_sch": "0c0025b7a4ce009a4be116ef49f8990643ea1f41b488b259ded239a961a892d4",
     "procurement/q5/hardware-bom.json": "15e661b875a925ee999ffaa7cd91bf98c3287036610d330a364f79e59dce38a7",
-    "procurement/q5/stock.json": "4b7ad316a4672b8403f85a976224c751998be16185bf70ee2052d453ab4a2ce8",
+    "procurement/q5/stock.json": "c9a8a2d8636422c804c3e57cd42572de5f1ca2a7a66ff58e59578167e9ec22d2",
     "scripts/build_q5_board.py": "baa1653a67060b9d3a3a8d02035988747371ff28c6885f43d77486dca7c55e22",
-    "scripts/build_q5_model.py": "62a8876c523fd8d635c389ca78096be003760470d775f90709cb42f3f340bcbe",
+    "scripts/build_q5_model.py": "9380385fd77f6811017e96340fff8eb7dcaa5a312cc4e4be2d5c955655dcbadd",
     "scripts/build_q5_schematic.py": "2f00202667b9612207af14e8927a3f4bebaed8372d6a50007c9781036e729a0a",
     "scripts/export_q5.py": "a72c2d8c5cc00a5147d0fb1460ed3489bf83602d76d35755c501cda75990815e",
     "scripts/finish_q5_board.py": "d6ba5179ed4d922beccd69a232076ea560360a6f4c8d0106733365deb7628d1e",
@@ -278,10 +278,10 @@
     "scripts/preroute_q5.py": "c7b3b374d016af414febac41171358ebd7bfcbb9d3ec1935378d91603486f430",
     "scripts/sync_q5_board.py": "74e5ef807d8a92a249edd2e319a1ef171b63d4dfe42c1bfb4583d8ad642e9fb7",
     "scripts/verify_q5.py": "bd17ede2d39999cda30e542d293167808fcb889ffa1c566af3483327d0830bec",
-    "verification/q5-native-drc.json": "2b138d11b22cea02365973debf9182a04c0ea93c26bf68202d54a2e4229f2b3f",
-    "verification/q5-native-erc.json": "a8571b7ee4ad76d42f671cb64c331436dcbb0da819c1ee11396124cf998463f0",
-    "verification/q5-native-netlist.xml": "9d9491e9e670b32e1c68a621e985b8378ac546f2c3c37e5e901b80bb53b19533",
-    "verification/q5-validation.json": "0c5af9afa9d75606b51160aa108ea94a8a43bbc8beac726efa371ab1286f49a9"
+    "verification/q5-native-drc.json": "5f819c5f036ee78b608d5d020b19fea370d3ffb321555ec3423cd7883319b2e5",
+    "verification/q5-native-erc.json": "3ca780a65a312cc39c1291b9cfa07fe68be08ac655246d762804b050ebacf3cd",
+    "verification/q5-native-netlist.xml": "5c2b00c10886c1f9dd32f692f80eca34ea34a7268ef728487d481e6e22dc7d83",
+    "verification/q5-validation.json": "0f5439959bb9636caf3283e2b25bb9330f359010d8e29938749b26184d06cc50"
   },
   "kicad_cli": {
     "sha256": "03d0a691514fa384d4e4a81331c2ba5a872c8493fa78f54032aec011eeb22402",
@@ -291,11 +291,11 @@
   "quote_authorization": "JLCPCB quotes for variants A and B only (user, 25 Sep 2026); no order, payment or release",
   "revision": "Q5 engineering review candidate",
   "schema_version": 1,
-  "source_board_sha256": "69acc36fadd4f51ff3f32192c2d27d8a914eacf024aeb27651487a67c8f6cc2d",
+  "source_board_sha256": "e78629ed361ff9f38c8ead58770e2dd60fc865461600456b503f6015345428df",
   "source_checks": {
     "catalog_observation_range_utc": [
-      "2026-09-25T19:30:43.589Z",
-      "2026-09-25T19:31:06.435Z"
+      "2026-09-25T20:21:28.108Z",
+      "2026-09-25T20:21:51.445Z"
     ],
     "distinct_exact_mpns": 41,
     "fitted_references": 81,

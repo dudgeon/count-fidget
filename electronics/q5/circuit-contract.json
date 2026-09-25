@@ -243,7 +243,7 @@
       "physical_pin_count": 2
     },
     "R38": {
-      "mpn": "RC0603FR-07100KL",
+      "mpn": "0603WAF1003T5E",
       "pins": {
         "1": "VBUS_WAKE",
         "2": "SYS_ON"
@@ -252,7 +252,7 @@
       "note": "100k series limit VBUS->U7 ON (6 V abs max); with C40 a 0.43 ms hot-plug filter."
     },
     "C40": {
-      "mpn": "GRM1885C1H472JA01D",
+      "mpn": "0603B472K500NT",
       "pins": {
         "1": "SYS_ON",
         "2": "GND"

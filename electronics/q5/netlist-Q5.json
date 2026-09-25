@@ -60,8 +60,8 @@
     {
       "ref": "C10",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 13.02,
       "y": 34.58,
@@ -73,7 +73,7 @@
       },
       "notes": "100nF NRST bypass; recovery switch/test pad access required",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -81,8 +81,8 @@
     {
       "ref": "C11",
       "value": "1n",
-      "mpn": "GRM1885C1H102JA01D",
-      "manufacturer": "Murata",
+      "mpn": "CL10B102KB8NNNC",
+      "manufacturer": "Samsung",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 7.5,
       "y": 31.3,
@@ -92,9 +92,9 @@
         "1": "COUNT_N",
         "2": "GND"
       },
-      "notes": "1 nF, 50 V, C0G",
+      "notes": "1 nF, 50 V, X7R",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77026",
+      "lcsc": "C1588",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -102,8 +102,8 @@
     {
       "ref": "C12",
       "value": "1n",
-      "mpn": "GRM1885C1H102JA01D",
-      "manufacturer": "Murata",
+      "mpn": "CL10B102KB8NNNC",
+      "manufacturer": "Samsung",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 2.64,
       "y": 33.2,
@@ -113,9 +113,9 @@
         "1": "BOOT_COUNT_RESET",
         "2": "GND"
       },
-      "notes": "1 nF, 50 V, C0G",
+      "notes": "1 nF, 50 V, X7R",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77026",
+      "lcsc": "C1588",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -123,8 +123,8 @@
     {
       "ref": "C13",
       "value": "4.7n",
-      "mpn": "GRM1885C1H472JA01D",
-      "manufacturer": "Murata",
+      "mpn": "0603B472K500NT",
+      "manufacturer": "FH",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 40.8,
       "y": 9.4,
@@ -134,9 +134,9 @@
         "1": "RC_COMP",
         "2": "GND"
       },
-      "notes": "4.7 nF, 50 V, C0G, 5%; same nominal TI EVM compensation ISET -> 2k -> 4.7n -> GND; low-current stability still requires measurement",
+      "notes": "4.7 nF, 50 V, X7R, 5%; same nominal TI EVM compensation ISET -> 2k -> 4.7n -> GND; low-current stability still requires measurement",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C85980",
+      "lcsc": "C53987",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -165,9 +165,9 @@
     {
       "ref": "C20",
       "value": "100n",
-      "manufacturer": "Murata",
-      "mpn": "GRM188R71H104KA93D",
-      "lcsc": "C77055",
+      "manufacturer": "YAGEO",
+      "mpn": "CC0603KRX7R9BB104",
+      "lcsc": "C14663",
       "package": "0603",
       "quantity": 1,
       "pins": {
@@ -189,39 +189,39 @@
     {
       "ref": "C28",
       "value": "4.7n",
-      "mpn": "GRM1885C1H472JA01D",
-      "manufacturer": "Murata",
+      "mpn": "0603B472K500NT",
+      "manufacturer": "FH",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "pins": {
         "1": "VLOGIC",
         "2": "OLED_CT"
       },
-      "notes": "4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only",
+      "notes": "4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only",
       "x": 11.6,
       "y": 7.0,
       "rotation": 0,
       "side": "bottom",
       "sheet": "display",
-      "lcsc": "C85980",
+      "lcsc": "C53987",
       "assembly": "jlc_smt"
     },
     {
       "ref": "C29",
       "value": "4.7n",
-      "mpn": "GRM1885C1H472JA01D",
-      "manufacturer": "Murata",
+      "mpn": "0603B472K500NT",
+      "manufacturer": "FH",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "pins": {
         "1": "SYS",
         "2": "SYS_CT"
       },
-      "notes": "4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only",
+      "notes": "4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only",
       "x": 28.95,
       "y": 44.2,
       "rotation": 90,
       "side": "bottom",
       "sheet": "usb-power",
-      "lcsc": "C85980",
+      "lcsc": "C53987",
       "assembly": "jlc_smt"
     },
     {
@@ -269,8 +269,8 @@
     {
       "ref": "C31",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 17.0,
       "y": 38.2,
@@ -282,7 +282,7 @@
       },
       "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -290,8 +290,8 @@
     {
       "ref": "C32",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 20.2,
       "y": 38.2,
@@ -303,7 +303,7 @@
       },
       "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -311,8 +311,8 @@
     {
       "ref": "C33",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 27.3,
       "y": 34.6,
@@ -324,7 +324,7 @@
       },
       "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -332,8 +332,8 @@
     {
       "ref": "C34",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 27.4,
       "y": 27.0,
@@ -345,7 +345,7 @@
       },
       "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -353,8 +353,8 @@
     {
       "ref": "C35",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 14.2,
       "y": 28.2,
@@ -366,7 +366,7 @@
       },
       "notes": "100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -374,8 +374,8 @@
     {
       "ref": "C36",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 24.6,
       "y": 41.2,
@@ -387,7 +387,7 @@
       },
       "notes": "100nF local FRAM bypass, in addition to C30",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "memory",
       "assembly": "jlc_smt"
@@ -395,8 +395,8 @@
     {
       "ref": "C37",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 3.8,
       "y": 29.6,
@@ -408,7 +408,7 @@
       },
       "notes": "100nF charge reservoir for the 75k-source ADC input",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -416,8 +416,8 @@
     {
       "ref": "C38",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 33.4,
       "y": 23.3,
@@ -429,7 +429,7 @@
       },
       "notes": "100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -437,8 +437,8 @@
     {
       "ref": "C39",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 25.79,
       "y": 36.97,
@@ -450,7 +450,7 @@
       },
       "notes": "100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -458,8 +458,8 @@
     {
       "ref": "C4",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 2.3,
       "y": 11.9,
@@ -471,7 +471,7 @@
       },
       "notes": "100 nF, 50 V, X7R",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "battery",
       "assembly": "jlc_smt"
@@ -479,20 +479,20 @@
     {
       "ref": "C40",
       "value": "4.7n",
-      "mpn": "GRM1885C1H472JA01D",
-      "manufacturer": "Murata",
+      "mpn": "0603B472K500NT",
+      "manufacturer": "FH",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "pins": {
         "1": "SYS_ON",
         "2": "GND"
       },
-      "notes": "4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.",
+      "notes": "4.7nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.",
       "x": 29.04,
       "y": 37.0,
       "rotation": 90,
       "side": "bottom",
       "sheet": "usb-power",
-      "lcsc": "C85980",
+      "lcsc": "C53987",
       "assembly": "jlc_smt"
     },
     {
@@ -540,8 +540,8 @@
     {
       "ref": "C7",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 27.4,
       "y": 28.6,
@@ -553,7 +553,7 @@
       },
       "notes": "100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -561,8 +561,8 @@
     {
       "ref": "C9",
       "value": "100n",
-      "mpn": "GRM188R71H104KA93D",
-      "manufacturer": "Murata",
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "x": 13.0,
       "y": 44.4,
@@ -574,7 +574,7 @@
       },
       "notes": "100 nF local VBUS decoupler beside U5; nearby plane return",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
-      "lcsc": "C77055",
+      "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
       "sheet": "thermal",
       "assembly": "jlc_smt"
@@ -921,8 +921,8 @@
     {
       "ref": "Q3",
       "value": "Charge enable",
-      "mpn": "2N7002,215",
-      "manufacturer": "Nexperia",
+      "mpn": "2N7002",
+      "manufacturer": "CJ",
       "footprint": "CountFidgetQ5:Package_TO_SOT_SMD_SOT-23",
       "x": 2.29,
       "y": 47.53,
@@ -935,7 +935,7 @@
       },
       "notes": "Upper series charge-enable N-MOSFET; gate has ground pulldown",
       "source_footprint": "Package_TO_SOT_SMD:SOT-23",
-      "lcsc": "C65189",
+      "lcsc": "C8545",
       "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
       "sheet": "thermal",
       "assembly": "jlc_smt"
@@ -943,8 +943,8 @@
     {
       "ref": "Q4",
       "value": "Charge enable hot gate",
-      "mpn": "2N7002,215",
-      "manufacturer": "Nexperia",
+      "mpn": "2N7002",
+      "manufacturer": "CJ",
       "footprint": "CountFidgetQ5:Package_TO_SOT_SMD_SOT-23",
       "x": 13.4,
       "y": 51.9,
@@ -957,7 +957,7 @@
       },
       "notes": "Lower series charge-enable N-MOSFET; gate has ground pulldown",
       "source_footprint": "Package_TO_SOT_SMD:SOT-23",
-      "lcsc": "C65189",
+      "lcsc": "C8545",
       "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
       "sheet": "thermal",
       "assembly": "jlc_smt"
@@ -965,8 +965,8 @@
     {
       "ref": "Q5",
       "value": "COUNT key level shift",
-      "mpn": "2N7002,215",
-      "manufacturer": "Nexperia",
+      "mpn": "2N7002",
+      "manufacturer": "CJ",
       "footprint": "CountFidgetQ5:Package_TO_SOT_SMD_SOT-23",
       "x": 11.5,
       "y": 28.0,
@@ -979,7 +979,7 @@
       },
       "notes": "Mirrors the SYS-referenced COUNT key onto the unchanged active-low COUNT_N (R17/C11) input.",
       "source_footprint": "Package_TO_SOT_SMD:SOT-23",
-      "lcsc": "C65189",
+      "lcsc": "C8545",
       "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -987,8 +987,8 @@
     {
       "ref": "R1",
       "value": "5.1k",
-      "mpn": "RC0603FR-075K1L",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF5101T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 33.4,
       "y": 26.9,
@@ -1000,7 +1000,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C105580",
+      "lcsc": "C23186",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -1092,8 +1092,8 @@
     {
       "ref": "R14",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 17.2,
       "y": 52.6,
@@ -1105,7 +1105,7 @@
       },
       "notes": "Local upper charge-enable gate pulldown; keep connected close to Q3 gate",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "thermal",
       "assembly": "jlc_smt"
@@ -1113,8 +1113,8 @@
     {
       "ref": "R15",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 17.2,
       "y": 51.0,
@@ -1126,7 +1126,7 @@
       },
       "notes": "Local lower charge-enable gate pulldown; keep connected close to Q4 gate",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "thermal",
       "assembly": "jlc_smt"
@@ -1134,7 +1134,7 @@
     {
       "ref": "R16",
       "value": "10k",
-      "mpn": "RC0603FR-0710KL",
+      "mpn": "0603WAF1002T5E",
       "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 11.4,
@@ -1147,7 +1147,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C98220",
+      "lcsc": "C25804",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -1176,7 +1176,7 @@
     {
       "ref": "R18",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
+      "mpn": "0603WAF1003T5E",
       "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 3.8,
@@ -1189,7 +1189,7 @@
       },
       "notes": "1%, 0603, 0.1 W; >=13.4 uA held-contact current at 2.97 V, above switch 10 uA minimum",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -1197,8 +1197,8 @@
     {
       "ref": "R19",
       "value": "2k",
-      "mpn": "RC0603FR-072KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF2001T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 38.4,
       "y": 10.2,
@@ -1210,7 +1210,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C105576",
+      "lcsc": "C22975",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -1218,8 +1218,8 @@
     {
       "ref": "R2",
       "value": "5.1k",
-      "mpn": "RC0603FR-075K1L",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF5101T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 33.4,
       "y": 30.3,
@@ -1231,7 +1231,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C105580",
+      "lcsc": "C23186",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -1239,9 +1239,9 @@
     {
       "ref": "R24",
       "value": "100k",
-      "manufacturer": "Yageo",
-      "mpn": "RC0603FR-07100KL",
-      "lcsc": "C14675",
+      "manufacturer": "UNI-ROYAL",
+      "mpn": "0603WAF1003T5E",
+      "lcsc": "C25803",
       "package": "0603",
       "quantity": 1,
       "pins": {
@@ -1263,9 +1263,9 @@
     {
       "ref": "R25",
       "value": "100k",
-      "manufacturer": "Yageo",
-      "mpn": "RC0603FR-07100KL",
-      "lcsc": "C14675",
+      "manufacturer": "UNI-ROYAL",
+      "mpn": "0603WAF1003T5E",
+      "lcsc": "C25803",
       "package": "0603",
       "quantity": 1,
       "pins": {
@@ -1287,8 +1287,8 @@
     {
       "ref": "R29",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 11.0,
       "y": 4.4,
@@ -1300,7 +1300,7 @@
       },
       "notes": "100k CS pull-up to switched module supply; never to always-on rail",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "display",
       "assembly": "jlc_smt"
@@ -1386,8 +1386,8 @@
     {
       "ref": "R33",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 21.0,
       "y": 41.2,
@@ -1399,7 +1399,7 @@
       },
       "notes": "100k external pull-up; MCU CS must be open-drain",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "memory",
       "assembly": "jlc_smt"
@@ -1407,8 +1407,8 @@
     {
       "ref": "R34",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 11.4,
       "y": 30.6,
@@ -1420,7 +1420,7 @@
       },
       "notes": "100k PWR_KEY pull-down; draws current only while COUNT is held.",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -1485,8 +1485,8 @@
     {
       "ref": "R38",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 27.55,
       "y": 37.32,
@@ -1498,7 +1498,7 @@
       },
       "notes": "100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -1527,8 +1527,8 @@
     {
       "ref": "R5",
       "value": "10k",
-      "mpn": "RC0603FR-0710KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1002T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 38.4,
       "y": 11.8,
@@ -1540,7 +1540,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C98220",
+      "lcsc": "C25804",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -1548,8 +1548,8 @@
     {
       "ref": "R6",
       "value": "100k",
-      "mpn": "RC0603FR-07100KL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF1003T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 30.6,
       "y": 2.9,
@@ -1561,7 +1561,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C14675",
+      "lcsc": "C25803",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -1569,8 +1569,8 @@
     {
       "ref": "R7",
       "value": "330",
-      "mpn": "RC0603FR-07330RL",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF3300T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 5.4,
       "y": 9.8,
@@ -1582,7 +1582,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C105881",
+      "lcsc": "C23138",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "battery",
       "assembly": "jlc_smt"
@@ -1590,8 +1590,8 @@
     {
       "ref": "R8",
       "value": "2.2k",
-      "mpn": "RC0603FR-072K2L",
-      "manufacturer": "Yageo",
+      "mpn": "0603WAF2201T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 7.8,
       "y": 9.8,
@@ -1603,7 +1603,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C114662",
+      "lcsc": "C4190",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "battery",
       "assembly": "jlc_smt"

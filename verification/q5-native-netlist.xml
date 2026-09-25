@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>electronics/q5/click-counter-Q5.kicad_sch</source>
-    <date>2026-09-25T19:30:41</date>
+    <date>2026-09-25T20:21:25</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -353,13 +353,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C31" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls" />
       <property name="Sheetfile" value="mcu-1.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls/" tstamps="/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/" />
@@ -378,13 +378,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C32" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls" />
       <property name="Sheetfile" value="mcu-1.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls/" tstamps="/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/" />
@@ -403,13 +403,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C33" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls" />
       <property name="Sheetfile" value="mcu-1.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls/" tstamps="/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/" />
@@ -428,13 +428,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C34" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls" />
       <property name="Sheetfile" value="mcu-1.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls/" tstamps="/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/" />
@@ -549,13 +549,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF NRST bypass; recovery switch/test pad access required</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF NRST bypass; recovery switch/test pad access required</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C10" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 2" />
       <property name="Sheetfile" value="mcu-2.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 2/" tstamps="/25c8a497-d064-5849-8b98-8381803a397d/" />
@@ -572,15 +572,15 @@
     <comp ref="C11">
       <value>1n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>1 nF, 50 V, C0G</description>
+      <description>1 nF, 50 V, X7R</description>
       <fields>
-        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="MPN">CL10B102KB8NNNC</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">1 nF, 50 V, C0G</field>
+        <field name="Description">1 nF, 50 V, X7R</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C11" description="" />
-      <property name="MPN" value="GRM1885C1H102JA01D" />
+      <property name="MPN" value="CL10B102KB8NNNC" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 2" />
       <property name="Sheetfile" value="mcu-2.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 2/" tstamps="/25c8a497-d064-5849-8b98-8381803a397d/" />
@@ -597,15 +597,15 @@
     <comp ref="C12">
       <value>1n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>1 nF, 50 V, C0G</description>
+      <description>1 nF, 50 V, X7R</description>
       <fields>
-        <field name="MPN">GRM1885C1H102JA01D</field>
+        <field name="MPN">CL10B102KB8NNNC</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">1 nF, 50 V, C0G</field>
+        <field name="Description">1 nF, 50 V, X7R</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C12" description="" />
-      <property name="MPN" value="GRM1885C1H102JA01D" />
+      <property name="MPN" value="CL10B102KB8NNNC" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 2" />
       <property name="Sheetfile" value="mcu-2.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 2/" tstamps="/25c8a497-d064-5849-8b98-8381803a397d/" />
@@ -624,13 +624,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C35" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 2" />
       <property name="Sheetfile" value="mcu-2.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 2/" tstamps="/25c8a497-d064-5849-8b98-8381803a397d/" />
@@ -649,13 +649,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF charge reservoir for the 75k-source ADC input</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF charge reservoir for the 75k-source ADC input</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C37" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 2" />
       <property name="Sheetfile" value="mcu-2.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 2/" tstamps="/25c8a497-d064-5849-8b98-8381803a397d/" />
@@ -674,13 +674,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C7" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 3" />
       <property name="Sheetfile" value="mcu-3.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 3/" tstamps="/c95d9573-76d3-535d-a7a6-1eff788ec11a/" />
@@ -791,13 +791,13 @@
       <footprint>CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</footprint>
       <description>Mirrors the SYS-referenced COUNT key onto the unchanged active-low COUNT_N (R17/C11) input.</description>
       <fields>
-        <field name="MPN">2N7002,215</field>
+        <field name="MPN">2N7002</field>
         <field name="Footprint">CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</field>
         <field name="Datasheet" />
         <field name="Description">Mirrors the SYS-referenced COUNT key onto the unchanged active-low COUNT_N (R17/C11) input.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="Q5" description="" />
-      <property name="MPN" value="2N7002,215" />
+      <property name="MPN" value="2N7002" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 3" />
       <property name="Sheetfile" value="mcu-3.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 3/" tstamps="/c95d9573-76d3-535d-a7a6-1eff788ec11a/" />
@@ -817,13 +817,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="MPN">0603WAF1002T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R16" description="" />
-      <property name="MPN" value="RC0603FR-0710KL" />
+      <property name="MPN" value="0603WAF1002T5E" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 4" />
       <property name="Sheetfile" value="mcu-4.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 4/" tstamps="/5b560024-5f43-580a-88a1-035a458454bd/" />
@@ -867,13 +867,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W; &gt;=13.4 uA held-contact current at 2.97 V, above switch 10 uA minimum</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W; &gt;=13.4 uA held-contact current at 2.97 V, above switch 10 uA minimum</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R18" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="STM32, keys and USB boot controls / 4" />
       <property name="Sheetfile" value="mcu-4.kicad_sch" />
       <sheetpath names="/STM32, keys and USB boot controls / 4/" tstamps="/5b560024-5f43-580a-88a1-035a458454bd/" />
@@ -1242,13 +1242,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>50V X7R +/-10%; at DS1.VDD.</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">50V X7R +/-10%; at DS1.VDD.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C20" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="SPI OLED module and power control / 1" />
       <property name="Sheetfile" value="display-1.kicad_sch" />
       <sheetpath names="/SPI OLED module and power control / 1/" tstamps="/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/" />
@@ -1265,15 +1265,15 @@
     <comp ref="C28">
       <value>4.7n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only</description>
+      <description>4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only</description>
       <fields>
-        <field name="MPN">GRM1885C1H472JA01D</field>
+        <field name="MPN">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only</field>
+        <field name="Description">4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C28" description="" />
-      <property name="MPN" value="GRM1885C1H472JA01D" />
+      <property name="MPN" value="0603B472K500NT" />
       <property name="Sheetname" value="SPI OLED module and power control / 1" />
       <property name="Sheetfile" value="display-1.kicad_sch" />
       <sheetpath names="/SPI OLED module and power control / 1/" tstamps="/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/" />
@@ -1322,13 +1322,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%,100mW</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%,100mW</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R24" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="SPI OLED module and power control / 1" />
       <property name="Sheetfile" value="display-1.kicad_sch" />
       <sheetpath names="/SPI OLED module and power control / 1/" tstamps="/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/" />
@@ -1347,13 +1347,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%,100mW</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%,100mW</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R25" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="SPI OLED module and power control / 1" />
       <property name="Sheetfile" value="display-1.kicad_sch" />
       <sheetpath names="/SPI OLED module and power control / 1/" tstamps="/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/" />
@@ -1372,13 +1372,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>100k CS pull-up to switched module supply; never to always-on rail</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100k CS pull-up to switched module supply; never to always-on rail</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R29" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="SPI OLED module and power control / 1" />
       <property name="Sheetfile" value="display-1.kicad_sch" />
       <sheetpath names="/SPI OLED module and power control / 1/" tstamps="/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/" />
@@ -1451,13 +1451,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local FRAM bypass, in addition to C30</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local FRAM bypass, in addition to C30</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C36" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="Independent SPI retained-count memory / 1" />
       <property name="Sheetfile" value="memory-1.kicad_sch" />
       <sheetpath names="/Independent SPI retained-count memory / 1/" tstamps="/dfe44b2e-dca8-55dc-a058-ba49538b1523/" />
@@ -1501,13 +1501,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>100k external pull-up; MCU CS must be open-drain</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100k external pull-up; MCU CS must be open-drain</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R33" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="Independent SPI retained-count memory / 1" />
       <property name="Sheetfile" value="memory-1.kicad_sch" />
       <sheetpath names="/Independent SPI retained-count memory / 1/" tstamps="/dfe44b2e-dca8-55dc-a058-ba49538b1523/" />
@@ -1630,15 +1630,15 @@
     <comp ref="C13">
       <value>4.7n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>4.7 nF, 50 V, C0G, 5%; same nominal TI EVM compensation ISET -&gt; 2k -&gt; 4.7n -&gt; GND; low-current stability still requires measurement</description>
+      <description>4.7 nF, 50 V, X7R, 5%; same nominal TI EVM compensation ISET -&gt; 2k -&gt; 4.7n -&gt; GND; low-current stability still requires measurement</description>
       <fields>
-        <field name="MPN">GRM1885C1H472JA01D</field>
+        <field name="MPN">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">4.7 nF, 50 V, C0G, 5%; same nominal TI EVM compensation ISET -&gt; 2k -&gt; 4.7n -&gt; GND; low-current stability still requires measurement</field>
+        <field name="Description">4.7 nF, 50 V, X7R, 5%; same nominal TI EVM compensation ISET -&gt; 2k -&gt; 4.7n -&gt; GND; low-current stability still requires measurement</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C13" description="" />
-      <property name="MPN" value="GRM1885C1H472JA01D" />
+      <property name="MPN" value="0603B472K500NT" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 1" />
       <property name="Sheetfile" value="usb-power-1.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 1/" tstamps="/81d32175-1402-5eb1-8389-0a5fb2a4f6de/" />
@@ -1655,15 +1655,15 @@
     <comp ref="C29">
       <value>4.7n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only</description>
+      <description>4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only</description>
       <fields>
-        <field name="MPN">GRM1885C1H472JA01D</field>
+        <field name="MPN">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only</field>
+        <field name="Description">4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C29" description="" />
-      <property name="MPN" value="GRM1885C1H472JA01D" />
+      <property name="MPN" value="0603B472K500NT" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 1" />
       <property name="Sheetfile" value="usb-power-1.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 1/" tstamps="/81d32175-1402-5eb1-8389-0a5fb2a4f6de/" />
@@ -1682,13 +1682,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C38" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 1" />
       <property name="Sheetfile" value="usb-power-1.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 1/" tstamps="/81d32175-1402-5eb1-8389-0a5fb2a4f6de/" />
@@ -1731,13 +1731,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100nF local USBLC6 clamp-rail bypass, adjacent to D1/D2</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C39" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 2" />
       <property name="Sheetfile" value="usb-power-2.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 2/" tstamps="/212a85d9-b47b-5df6-8d9b-ffcc17a81200/" />
@@ -1754,15 +1754,15 @@
     <comp ref="C40">
       <value>4.7n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</description>
+      <description>4.7nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</description>
       <fields>
-        <field name="MPN">GRM1885C1H472JA01D</field>
+        <field name="MPN">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</field>
+        <field name="Description">4.7nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C40" description="" />
-      <property name="MPN" value="GRM1885C1H472JA01D" />
+      <property name="MPN" value="0603B472K500NT" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 2" />
       <property name="Sheetfile" value="usb-power-2.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 2/" tstamps="/212a85d9-b47b-5df6-8d9b-ffcc17a81200/" />
@@ -1929,13 +1929,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="MPN">0603WAF5101T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R1" description="" />
-      <property name="MPN" value="RC0603FR-075K1L" />
+      <property name="MPN" value="0603WAF5101T5E" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 3" />
       <property name="Sheetfile" value="usb-power-3.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 3/" tstamps="/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/" />
@@ -1954,13 +1954,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-075K1L</field>
+        <field name="MPN">0603WAF5101T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R2" description="" />
-      <property name="MPN" value="RC0603FR-075K1L" />
+      <property name="MPN" value="0603WAF5101T5E" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 3" />
       <property name="Sheetfile" value="usb-power-3.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 3/" tstamps="/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/" />
@@ -2004,13 +2004,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-072KL</field>
+        <field name="MPN">0603WAF2001T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R19" description="" />
-      <property name="MPN" value="RC0603FR-072KL" />
+      <property name="MPN" value="0603WAF2001T5E" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 3" />
       <property name="Sheetfile" value="usb-power-3.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 3/" tstamps="/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/" />
@@ -2104,13 +2104,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>100k PWR_KEY pull-down; draws current only while COUNT is held.</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100k PWR_KEY pull-down; draws current only while COUNT is held.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R34" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 4" />
       <property name="Sheetfile" value="usb-power-4.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 4/" tstamps="/f230856b-0764-5f2a-9868-fada72ac48fa/" />
@@ -2154,13 +2154,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R38" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 4" />
       <property name="Sheetfile" value="usb-power-4.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 4/" tstamps="/f230856b-0764-5f2a-9868-fada72ac48fa/" />
@@ -2179,13 +2179,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-0710KL</field>
+        <field name="MPN">0603WAF1002T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R5" description="" />
-      <property name="MPN" value="RC0603FR-0710KL" />
+      <property name="MPN" value="0603WAF1002T5E" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 5" />
       <property name="Sheetfile" value="usb-power-5.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 5/" tstamps="/c582cfd8-dc71-5908-af2d-68ea1ca76624/" />
@@ -2204,13 +2204,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R6" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 5" />
       <property name="Sheetfile" value="usb-power-5.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 5/" tstamps="/c582cfd8-dc71-5908-af2d-68ea1ca76624/" />
@@ -2372,13 +2372,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100 nF, 50 V, X7R</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100 nF, 50 V, X7R</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C4" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="On-board LIR2032 holder and protection / 1" />
       <property name="Sheetfile" value="battery-1.kicad_sch" />
       <sheetpath names="/On-board LIR2032 holder and protection / 1/" tstamps="/a2b4a664-6944-5f42-8858-eb265e415837/" />
@@ -2449,13 +2449,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-07330RL</field>
+        <field name="MPN">0603WAF3300T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R7" description="" />
-      <property name="MPN" value="RC0603FR-07330RL" />
+      <property name="MPN" value="0603WAF3300T5E" />
       <property name="Sheetname" value="On-board LIR2032 holder and protection / 1" />
       <property name="Sheetfile" value="battery-1.kicad_sch" />
       <sheetpath names="/On-board LIR2032 holder and protection / 1/" tstamps="/a2b4a664-6944-5f42-8858-eb265e415837/" />
@@ -2474,13 +2474,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>1%, 0603, 0.1 W</description>
       <fields>
-        <field name="MPN">RC0603FR-072K2L</field>
+        <field name="MPN">0603WAF2201T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">1%, 0603, 0.1 W</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R8" description="" />
-      <property name="MPN" value="RC0603FR-072K2L" />
+      <property name="MPN" value="0603WAF2201T5E" />
       <property name="Sheetname" value="On-board LIR2032 holder and protection / 1" />
       <property name="Sheetfile" value="battery-1.kicad_sch" />
       <sheetpath names="/On-board LIR2032 holder and protection / 1/" tstamps="/a2b4a664-6944-5f42-8858-eb265e415837/" />
@@ -2552,13 +2552,13 @@
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
       <description>100 nF local VBUS decoupler beside U5; nearby plane return</description>
       <fields>
-        <field name="MPN">GRM188R71H104KA93D</field>
+        <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">100 nF local VBUS decoupler beside U5; nearby plane return</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C9" description="" />
-      <property name="MPN" value="GRM188R71H104KA93D" />
+      <property name="MPN" value="CC0603KRX7R9BB104" />
       <property name="Sheetname" value="Independent charge-temperature window / 1" />
       <property name="Sheetfile" value="thermal-1.kicad_sch" />
       <sheetpath names="/Independent charge-temperature window / 1/" tstamps="/aadedfde-0ecd-5e28-8d03-06e68f385e72/" />
@@ -2577,13 +2577,13 @@
       <footprint>CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</footprint>
       <description>Upper series charge-enable N-MOSFET; gate has ground pulldown</description>
       <fields>
-        <field name="MPN">2N7002,215</field>
+        <field name="MPN">2N7002</field>
         <field name="Footprint">CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</field>
         <field name="Datasheet" />
         <field name="Description">Upper series charge-enable N-MOSFET; gate has ground pulldown</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="Q3" description="" />
-      <property name="MPN" value="2N7002,215" />
+      <property name="MPN" value="2N7002" />
       <property name="Sheetname" value="Independent charge-temperature window / 1" />
       <property name="Sheetfile" value="thermal-1.kicad_sch" />
       <sheetpath names="/Independent charge-temperature window / 1/" tstamps="/aadedfde-0ecd-5e28-8d03-06e68f385e72/" />
@@ -2603,13 +2603,13 @@
       <footprint>CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</footprint>
       <description>Lower series charge-enable N-MOSFET; gate has ground pulldown</description>
       <fields>
-        <field name="MPN">2N7002,215</field>
+        <field name="MPN">2N7002</field>
         <field name="Footprint">CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</field>
         <field name="Datasheet" />
         <field name="Description">Lower series charge-enable N-MOSFET; gate has ground pulldown</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="Q4" description="" />
-      <property name="MPN" value="2N7002,215" />
+      <property name="MPN" value="2N7002" />
       <property name="Sheetname" value="Independent charge-temperature window / 1" />
       <property name="Sheetfile" value="thermal-1.kicad_sch" />
       <sheetpath names="/Independent charge-temperature window / 1/" tstamps="/aadedfde-0ecd-5e28-8d03-06e68f385e72/" />
@@ -2729,13 +2729,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>Local upper charge-enable gate pulldown; keep connected close to Q3 gate</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">Local upper charge-enable gate pulldown; keep connected close to Q3 gate</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R14" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="Independent charge-temperature window / 2" />
       <property name="Sheetfile" value="thermal-2.kicad_sch" />
       <sheetpath names="/Independent charge-temperature window / 2/" tstamps="/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/" />
@@ -2754,13 +2754,13 @@
       <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
       <description>Local lower charge-enable gate pulldown; keep connected close to Q4 gate</description>
       <fields>
-        <field name="MPN">RC0603FR-07100KL</field>
+        <field name="MPN">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description">Local lower charge-enable gate pulldown; keep connected close to Q4 gate</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="R15" description="" />
-      <property name="MPN" value="RC0603FR-07100KL" />
+      <property name="MPN" value="0603WAF1003T5E" />
       <property name="Sheetname" value="Independent charge-temperature window / 2" />
       <property name="Sheetfile" value="thermal-2.kicad_sch" />
       <sheetpath names="/Independent charge-temperature window / 2/" tstamps="/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/" />
@@ -2861,7 +2861,7 @@
     <libpart lib="CountFidgetQ5" part="C10">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -2874,7 +2874,7 @@
     <libpart lib="CountFidgetQ5" part="C11">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM1885C1H102JA01D</field>
+        <field name="Value">CL10B102KB8NNNC</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -2887,7 +2887,7 @@
     <libpart lib="CountFidgetQ5" part="C12">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM1885C1H102JA01D</field>
+        <field name="Value">CL10B102KB8NNNC</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -2900,7 +2900,7 @@
     <libpart lib="CountFidgetQ5" part="C13">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM1885C1H472JA01D</field>
+        <field name="Value">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -2926,7 +2926,7 @@
     <libpart lib="CountFidgetQ5" part="C20">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -2939,7 +2939,7 @@
     <libpart lib="CountFidgetQ5" part="C28">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM1885C1H472JA01D</field>
+        <field name="Value">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -2952,7 +2952,7 @@
     <libpart lib="CountFidgetQ5" part="C29">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM1885C1H472JA01D</field>
+        <field name="Value">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -2991,7 +2991,7 @@
     <libpart lib="CountFidgetQ5" part="C31">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3004,7 +3004,7 @@
     <libpart lib="CountFidgetQ5" part="C32">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3017,7 +3017,7 @@
     <libpart lib="CountFidgetQ5" part="C33">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3030,7 +3030,7 @@
     <libpart lib="CountFidgetQ5" part="C34">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3043,7 +3043,7 @@
     <libpart lib="CountFidgetQ5" part="C35">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3056,7 +3056,7 @@
     <libpart lib="CountFidgetQ5" part="C36">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3069,7 +3069,7 @@
     <libpart lib="CountFidgetQ5" part="C37">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3082,7 +3082,7 @@
     <libpart lib="CountFidgetQ5" part="C38">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3095,7 +3095,7 @@
     <libpart lib="CountFidgetQ5" part="C39">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3108,7 +3108,7 @@
     <libpart lib="CountFidgetQ5" part="C4">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3121,7 +3121,7 @@
     <libpart lib="CountFidgetQ5" part="C40">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM1885C1H472JA01D</field>
+        <field name="Value">0603B472K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3160,7 +3160,7 @@
     <libpart lib="CountFidgetQ5" part="C7">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3173,7 +3173,7 @@
     <libpart lib="CountFidgetQ5" part="C9">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">GRM188R71H104KA93D</field>
+        <field name="Value">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3357,7 +3357,7 @@
     <libpart lib="CountFidgetQ5" part="Q3">
       <fields>
         <field name="Reference">Q</field>
-        <field name="Value">2N7002,215</field>
+        <field name="Value">2N7002</field>
         <field name="Footprint">CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3371,7 +3371,7 @@
     <libpart lib="CountFidgetQ5" part="Q4">
       <fields>
         <field name="Reference">Q</field>
-        <field name="Value">2N7002,215</field>
+        <field name="Value">2N7002</field>
         <field name="Footprint">CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3385,7 +3385,7 @@
     <libpart lib="CountFidgetQ5" part="Q5">
       <fields>
         <field name="Reference">Q</field>
-        <field name="Value">2N7002,215</field>
+        <field name="Value">2N7002</field>
         <field name="Footprint">CountFidgetQ5:Package_TO_SOT_SMD_SOT-23</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3399,7 +3399,7 @@
     <libpart lib="CountFidgetQ5" part="R1">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-075K1L</field>
+        <field name="Value">0603WAF5101T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3464,7 +3464,7 @@
     <libpart lib="CountFidgetQ5" part="R14">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3477,7 +3477,7 @@
     <libpart lib="CountFidgetQ5" part="R15">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3490,7 +3490,7 @@
     <libpart lib="CountFidgetQ5" part="R16">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-0710KL</field>
+        <field name="Value">0603WAF1002T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3516,7 +3516,7 @@
     <libpart lib="CountFidgetQ5" part="R18">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3529,7 +3529,7 @@
     <libpart lib="CountFidgetQ5" part="R19">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-072KL</field>
+        <field name="Value">0603WAF2001T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3542,7 +3542,7 @@
     <libpart lib="CountFidgetQ5" part="R2">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-075K1L</field>
+        <field name="Value">0603WAF5101T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3555,7 +3555,7 @@
     <libpart lib="CountFidgetQ5" part="R24">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3568,7 +3568,7 @@
     <libpart lib="CountFidgetQ5" part="R25">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3581,7 +3581,7 @@
     <libpart lib="CountFidgetQ5" part="R29">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3646,7 +3646,7 @@
     <libpart lib="CountFidgetQ5" part="R33">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3659,7 +3659,7 @@
     <libpart lib="CountFidgetQ5" part="R34">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3711,7 +3711,7 @@
     <libpart lib="CountFidgetQ5" part="R38">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3737,7 +3737,7 @@
     <libpart lib="CountFidgetQ5" part="R5">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-0710KL</field>
+        <field name="Value">0603WAF1002T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3750,7 +3750,7 @@
     <libpart lib="CountFidgetQ5" part="R6">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07100KL</field>
+        <field name="Value">0603WAF1003T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3763,7 +3763,7 @@
     <libpart lib="CountFidgetQ5" part="R7">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-07330RL</field>
+        <field name="Value">0603WAF3300T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3776,7 +3776,7 @@
     <libpart lib="CountFidgetQ5" part="R8">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RC0603FR-072K2L</field>
+        <field name="Value">0603WAF2201T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />

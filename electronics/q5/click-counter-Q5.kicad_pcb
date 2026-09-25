@@ -1254,7 +1254,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "2N7002,215"
+		(property "MPN" "2N7002"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -1691,7 +1691,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "1 nF, 50 V, C0G"
+		(property "Description" "1 nF, 50 V, X7R"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -1716,7 +1716,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM1885C1H102JA01D"
+		(property "MPN" "CL10B102KB8NNNC"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -1867,7 +1867,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -2018,7 +2018,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -2144,7 +2144,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "1 nF, 50 V, C0G"
+		(property "Description" "1 nF, 50 V, X7R"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -2169,7 +2169,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM1885C1H102JA01D"
+		(property "MPN" "CL10B102KB8NNNC"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -3775,7 +3775,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -3901,7 +3901,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only"
+		(property "Description" "4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -3926,7 +3926,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM1885C1H472JA01D"
+		(property "MPN" "0603B472K500NT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -4077,7 +4077,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -4228,7 +4228,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "2N7002,215"
+		(property "MPN" "2N7002"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -5143,7 +5143,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -5476,7 +5476,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -5887,7 +5887,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -6700,7 +6700,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -6977,7 +6977,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "4.7 nF, 50 V, C0G, 5%; same nominal TI EVM compensation ISET -> 2k -> 4.7n -> GND; low-current stability still requires measurement"
+		(property "Description" "4.7 nF, 50 V, X7R, 5%; same nominal TI EVM compensation ISET -> 2k -> 4.7n -> GND; low-current stability still requires measurement"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -7002,7 +7002,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM1885C1H472JA01D"
+		(property "MPN" "0603B472K500NT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7403,7 +7403,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-075K1L"
+		(property "MPN" "0603WAF5101T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7814,7 +7814,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -8267,7 +8267,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -8418,7 +8418,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -9113,7 +9113,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -9749,7 +9749,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-0710KL"
+		(property "MPN" "0603WAF1002T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -9900,7 +9900,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -11081,7 +11081,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -11341,7 +11341,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -11492,7 +11492,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -11643,7 +11643,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-0710KL"
+		(property "MPN" "0603WAF1002T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -12898,7 +12898,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -13049,7 +13049,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -13502,7 +13502,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-072KL"
+		(property "MPN" "0603WAF2001T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -14073,7 +14073,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -14199,7 +14199,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "4.7nF 50V C0G slew capacitor to VIN; tON 17.9ms typical; typical slew only"
+		(property "Description" "4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -14224,7 +14224,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM1885C1H472JA01D"
+		(property "MPN" "0603B472K500NT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -14677,7 +14677,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-072K2L"
+		(property "MPN" "0603WAF2201T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -15570,7 +15570,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "2N7002,215"
+		(property "MPN" "2N7002"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -15856,7 +15856,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released."
+		(property "Description" "4.7nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released."
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -15881,7 +15881,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM1885C1H472JA01D"
+		(property "MPN" "0603B472K500NT"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -16494,7 +16494,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07330RL"
+		(property "MPN" "0603WAF3300T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -16796,7 +16796,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17098,7 +17098,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17249,7 +17249,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17400,7 +17400,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-07100KL"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17551,7 +17551,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-075K1L"
+		(property "MPN" "0603WAF5101T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17702,7 +17702,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM188R71H104KA93D"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)

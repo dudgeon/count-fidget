@@ -9,10 +9,10 @@
   "screening_plan": {
     "boards": 10,
     "attrition": "max(2, ceil(10% of fitted quantity)) extra per exact MPN, for screening only",
-    "final_model_sha256": "0b24338cc0e2f7874e67bfa04d436558a8a44ddf0637fca329cbec23213737c7",
+    "final_model_sha256": "67c816161594167ef4e57a1a50c7155c2c48ef49607775825cd9701b768cb62f",
     "final_bom_screen_complete": true,
     "model_path": "electronics/q5/netlist-Q5.json",
-    "fitted_identity_sha256": "09546d840d5023c33c87733ec6781114f265dafb4dec324b8cd0b6ec97fb54af",
+    "fitted_identity_sha256": "3929a06b8fd66001b95de550ffd2188c5d1dcb3ba09f66e14414b5ce1d66ba47",
     "fitted_positions": 81,
     "exact_fitted_types": 41,
     "assembly_role_positions": {
@@ -24,14 +24,53 @@
   },
   "observations": [
     {
+      "jlc_part": "C53987",
+      "mpn": "0603B472K500NT",
+      "observed_at": "2026-09-25T20:21:28.108Z",
+      "source": "https://jlcpcb.com/partdetail/C53987",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 950377,
+      "available_order_quantity": 950377,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0092,
+      "unit_price_usd_at_10": 0.0092
+    },
+    {
+      "jlc_part": "C25804",
+      "mpn": "0603WAF1002T5E",
+      "observed_at": "2026-09-25T20:21:28.672Z",
+      "source": "https://jlcpcb.com/partdetail/C25804",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 23140281,
+      "available_order_quantity": 23140281,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0018,
+      "unit_price_usd_at_10": 0.0018
+    },
+    {
+      "jlc_part": "C25803",
+      "mpn": "0603WAF1003T5E",
+      "observed_at": "2026-09-25T20:21:29.206Z",
+      "source": "https://jlcpcb.com/partdetail/C25803",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 22876468,
+      "available_order_quantity": 22876468,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0031,
+      "unit_price_usd_at_10": 0.0031
+    },
+    {
       "jlc_part": "C22935",
       "mpn": "0603WAF1004T5E",
-      "observed_at": "2026-09-25T19:30:43.589Z",
+      "observed_at": "2026-09-25T20:21:29.673Z",
       "source": "https://jlcpcb.com/partdetail/C22935",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "base",
-      "in_stock": 6861627,
-      "available_order_quantity": 6861627,
+      "in_stock": 6861059,
+      "available_order_quantity": 6861059,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.0019,
       "unit_price_usd_at_10": 0.0019
@@ -39,7 +78,7 @@
     {
       "jlc_part": "C22783",
       "mpn": "0603WAF1153T5E",
-      "observed_at": "2026-09-25T19:30:44.189Z",
+      "observed_at": "2026-09-25T20:21:30.100Z",
       "source": "https://jlcpcb.com/partdetail/C22783",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -52,7 +91,7 @@
     {
       "jlc_part": "C22885",
       "mpn": "0603WAF1622T5E",
-      "observed_at": "2026-09-25T19:30:44.578Z",
+      "observed_at": "2026-09-25T20:21:30.494Z",
       "source": "https://jlcpcb.com/partdetail/C22885",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -63,14 +102,40 @@
       "unit_price_usd_at_10": 0.0014
     },
     {
+      "jlc_part": "C22975",
+      "mpn": "0603WAF2001T5E",
+      "observed_at": "2026-09-25T20:21:30.901Z",
+      "source": "https://jlcpcb.com/partdetail/C22975",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 14128384,
+      "available_order_quantity": 14128384,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0024,
+      "unit_price_usd_at_10": 0.0024
+    },
+    {
+      "jlc_part": "C4190",
+      "mpn": "0603WAF2201T5E",
+      "observed_at": "2026-09-25T20:21:31.447Z",
+      "source": "https://jlcpcb.com/partdetail/C4190",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 7947356,
+      "available_order_quantity": 7947356,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0018,
+      "unit_price_usd_at_10": 0.0018
+    },
+    {
       "jlc_part": "C22961",
       "mpn": "0603WAF2203T5E",
-      "observed_at": "2026-09-25T19:30:45.840Z",
+      "observed_at": "2026-09-25T20:21:31.864Z",
       "source": "https://jlcpcb.com/partdetail/C22961",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "base",
-      "in_stock": 1494987,
-      "available_order_quantity": 1494987,
+      "in_stock": 1494845,
+      "available_order_quantity": 1494845,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.0015,
       "unit_price_usd_at_10": 0.0015
@@ -78,20 +143,33 @@
     {
       "jlc_part": "C23352",
       "mpn": "0603WAF2402T5E",
-      "observed_at": "2026-09-25T19:30:46.444Z",
+      "observed_at": "2026-09-25T20:21:33.178Z",
       "source": "https://jlcpcb.com/partdetail/C23352",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "base",
-      "in_stock": 1057179,
-      "available_order_quantity": 1057179,
+      "in_stock": 1057159,
+      "available_order_quantity": 1057159,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.0024,
       "unit_price_usd_at_10": 0.0024
     },
     {
+      "jlc_part": "C23138",
+      "mpn": "0603WAF3300T5E",
+      "observed_at": "2026-09-25T20:21:33.733Z",
+      "source": "https://jlcpcb.com/partdetail/C23138",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 3492451,
+      "available_order_quantity": 3492451,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0026,
+      "unit_price_usd_at_10": 0.0026
+    },
+    {
       "jlc_part": "C22979",
       "mpn": "0603WAF330KT5E",
-      "observed_at": "2026-09-25T19:30:46.819Z",
+      "observed_at": "2026-09-25T20:21:35.088Z",
       "source": "https://jlcpcb.com/partdetail/C22979",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -102,9 +180,22 @@
       "unit_price_usd_at_10": 0.0026
     },
     {
+      "jlc_part": "C23186",
+      "mpn": "0603WAF5101T5E",
+      "observed_at": "2026-09-25T20:21:35.811Z",
+      "source": "https://jlcpcb.com/partdetail/C23186",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 26212856,
+      "available_order_quantity": 26212856,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0015,
+      "unit_price_usd_at_10": 0.0015
+    },
+    {
       "jlc_part": "C27592",
       "mpn": "0603WAF680JT5E",
-      "observed_at": "2026-09-25T19:30:47.194Z",
+      "observed_at": "2026-09-25T20:21:36.653Z",
       "source": "https://jlcpcb.com/partdetail/C27592",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -117,38 +208,38 @@
     {
       "jlc_part": "C2128",
       "mpn": "1N4148WS",
-      "observed_at": "2026-09-25T19:30:47.820Z",
+      "observed_at": "2026-09-25T20:21:37.325Z",
       "source": "https://jlcpcb.com/partdetail/C2128",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "base",
-      "in_stock": 2248889,
-      "available_order_quantity": 2248889,
+      "in_stock": 2248887,
+      "available_order_quantity": 2248887,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.0159,
       "unit_price_usd_at_10": 0.0159
     },
     {
-      "jlc_part": "C65189",
-      "mpn": "2N7002,215",
-      "observed_at": "2026-09-25T19:30:49.067Z",
-      "source": "https://jlcpcb.com/partdetail/C65189",
+      "jlc_part": "C8545",
+      "mpn": "2N7002",
+      "observed_at": "2026-09-25T20:21:37.807Z",
+      "source": "https://jlcpcb.com/partdetail/C8545",
       "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 394282,
-      "available_order_quantity": 394282,
+      "library_type": "base",
+      "in_stock": 1698867,
+      "available_order_quantity": 1698867,
       "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0181,
-      "unit_price_usd_at_10": 0.0181
+      "unit_price_usd_at_1": 0.0178,
+      "unit_price_usd_at_10": 0.0178
     },
     {
       "jlc_part": "C37704",
       "mpn": "BAT54C,215",
-      "observed_at": "2026-09-25T19:30:49.716Z",
+      "observed_at": "2026-09-25T20:21:38.175Z",
       "source": "https://jlcpcb.com/partdetail/C37704",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
-      "in_stock": 377789,
-      "available_order_quantity": 377789,
+      "in_stock": 377754,
+      "available_order_quantity": 377754,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.0178,
       "unit_price_usd_at_10": 0.0178
@@ -156,12 +247,12 @@
     {
       "jlc_part": "C19725033",
       "mpn": "BQ25185DLHR",
-      "observed_at": "2026-09-25T19:30:50.284Z",
+      "observed_at": "2026-09-25T20:21:38.580Z",
       "source": "https://jlcpcb.com/partdetail/C19725033",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
-      "in_stock": 4093,
-      "available_order_quantity": 4093,
+      "in_stock": 4091,
+      "available_order_quantity": 4091,
       "minimum_order": 1,
       "unit_price_usd_at_1": 1.7279,
       "unit_price_usd_at_10": 1.4648
@@ -169,7 +260,7 @@
     {
       "jlc_part": "C183096",
       "mpn": "BQ29700DSER",
-      "observed_at": "2026-09-25T19:30:50.644Z",
+      "observed_at": "2026-09-25T20:21:39.242Z",
       "source": "https://jlcpcb.com/partdetail/C183096",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -180,14 +271,40 @@
       "unit_price_usd_at_10": 0.5165
     },
     {
+      "jlc_part": "C14663",
+      "mpn": "CC0603KRX7R9BB104",
+      "observed_at": "2026-09-25T20:21:39.792Z",
+      "source": "https://jlcpcb.com/partdetail/C14663",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 51395651,
+      "available_order_quantity": 51395651,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0122,
+      "unit_price_usd_at_10": 0.0122
+    },
+    {
+      "jlc_part": "C1588",
+      "mpn": "CL10B102KB8NNNC",
+      "observed_at": "2026-09-25T20:21:40.333Z",
+      "source": "https://jlcpcb.com/partdetail/C1588",
+      "method": "JLCPCB public parts-search API (read-only)",
+      "library_type": "base",
+      "in_stock": 8260917,
+      "available_order_quantity": 8260917,
+      "minimum_order": 1,
+      "unit_price_usd_at_1": 0.0089,
+      "unit_price_usd_at_10": 0.0089
+    },
+    {
       "jlc_part": "C41430893",
       "mpn": "CPG151101S11-16",
-      "observed_at": "2026-09-25T19:30:51.250Z",
+      "observed_at": "2026-09-25T20:21:40.714Z",
       "source": "https://jlcpcb.com/partdetail/C41430893",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
-      "in_stock": 329807,
-      "available_order_quantity": 329807,
+      "in_stock": 329787,
+      "available_order_quantity": 329787,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.0445,
       "unit_price_usd_at_10": 0.0445
@@ -195,7 +312,7 @@
     {
       "jlc_part": "C70377",
       "mpn": "CR2032-BS-6-1",
-      "observed_at": "2026-09-25T19:30:51.629Z",
+      "observed_at": "2026-09-25T20:21:41.142Z",
       "source": "https://jlcpcb.com/partdetail/C70377",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -208,7 +325,7 @@
     {
       "jlc_part": "C5208862",
       "mpn": "DMN2056U-13",
-      "observed_at": "2026-09-25T19:30:52.226Z",
+      "observed_at": "2026-09-25T20:21:41.523Z",
       "source": "https://jlcpcb.com/partdetail/C5208862",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -221,7 +338,7 @@
     {
       "jlc_part": "C66029",
       "mpn": "FM25V02A-GTR",
-      "observed_at": "2026-09-25T19:30:52.819Z",
+      "observed_at": "2026-09-25T20:21:41.893Z",
       "source": "https://jlcpcb.com/partdetail/C66029",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -232,48 +349,9 @@
       "unit_price_usd_at_10": 3.4899
     },
     {
-      "jlc_part": "C77026",
-      "mpn": "GRM1885C1H102JA01D",
-      "observed_at": "2026-09-25T19:30:53.402Z",
-      "source": "https://jlcpcb.com/partdetail/C77026",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 146248,
-      "available_order_quantity": 146248,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.026,
-      "unit_price_usd_at_10": 0.026
-    },
-    {
-      "jlc_part": "C85980",
-      "mpn": "GRM1885C1H472JA01D",
-      "observed_at": "2026-09-25T19:30:54.002Z",
-      "source": "https://jlcpcb.com/partdetail/C85980",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 103286,
-      "available_order_quantity": 103286,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0278,
-      "unit_price_usd_at_10": 0.0278
-    },
-    {
-      "jlc_part": "C77055",
-      "mpn": "GRM188R71H104KA93D",
-      "observed_at": "2026-09-25T19:30:54.608Z",
-      "source": "https://jlcpcb.com/partdetail/C77055",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 1388680,
-      "available_order_quantity": 1388680,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0168,
-      "unit_price_usd_at_10": 0.0168
-    },
-    {
       "jlc_part": "C84416",
       "mpn": "GRM21BR61E106KA73L",
-      "observed_at": "2026-09-25T19:30:54.970Z",
+      "observed_at": "2026-09-25T20:21:42.263Z",
       "source": "https://jlcpcb.com/partdetail/C84416",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -286,7 +364,7 @@
     {
       "jlc_part": "C77081",
       "mpn": "GRM21BR71E225KE11L",
-      "observed_at": "2026-09-25T19:30:55.335Z",
+      "observed_at": "2026-09-25T20:21:42.655Z",
       "source": "https://jlcpcb.com/partdetail/C77081",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -299,7 +377,7 @@
     {
       "jlc_part": "C5139758",
       "mpn": "HS96L01W4S03",
-      "observed_at": "2026-09-25T19:30:55.721Z",
+      "observed_at": "2026-09-25T20:21:43.051Z",
       "source": "https://jlcpcb.com/partdetail/C5139758",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -312,7 +390,7 @@
     {
       "jlc_part": "C13564",
       "mpn": "NCP18XH103F03RB",
-      "observed_at": "2026-09-25T19:30:56.326Z",
+      "observed_at": "2026-09-25T20:21:43.687Z",
       "source": "https://jlcpcb.com/partdetail/C13564",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -323,35 +401,9 @@
       "unit_price_usd_at_10": 0.0463
     },
     {
-      "jlc_part": "C14675",
-      "mpn": "RC0603FR-07100KL",
-      "observed_at": "2026-09-25T19:30:56.747Z",
-      "source": "https://jlcpcb.com/partdetail/C14675",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 8598402,
-      "available_order_quantity": 8598402,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0023,
-      "unit_price_usd_at_10": 0.0023
-    },
-    {
-      "jlc_part": "C98220",
-      "mpn": "RC0603FR-0710KL",
-      "observed_at": "2026-09-25T19:30:57.352Z",
-      "source": "https://jlcpcb.com/partdetail/C98220",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 13327960,
-      "available_order_quantity": 13327960,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0034,
-      "unit_price_usd_at_10": 0.0034
-    },
-    {
       "jlc_part": "C273769",
       "mpn": "RC0603FR-0716K5L",
-      "observed_at": "2026-09-25T19:30:57.725Z",
+      "observed_at": "2026-09-25T20:21:45.001Z",
       "source": "https://jlcpcb.com/partdetail/C273769",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -364,7 +416,7 @@
     {
       "jlc_part": "C276290",
       "mpn": "RC0603FR-0724K3L",
-      "observed_at": "2026-09-25T19:30:58.319Z",
+      "observed_at": "2026-09-25T20:21:45.635Z",
       "source": "https://jlcpcb.com/partdetail/C276290",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -375,48 +427,9 @@
       "unit_price_usd_at_10": 0.0058
     },
     {
-      "jlc_part": "C114662",
-      "mpn": "RC0603FR-072K2L",
-      "observed_at": "2026-09-25T19:30:58.917Z",
-      "source": "https://jlcpcb.com/partdetail/C114662",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 3190514,
-      "available_order_quantity": 3190514,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0018,
-      "unit_price_usd_at_10": 0.0018
-    },
-    {
-      "jlc_part": "C105576",
-      "mpn": "RC0603FR-072KL",
-      "observed_at": "2026-09-25T19:30:59.525Z",
-      "source": "https://jlcpcb.com/partdetail/C105576",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 748000,
-      "available_order_quantity": 748000,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0042,
-      "unit_price_usd_at_10": 0.0042
-    },
-    {
-      "jlc_part": "C105881",
-      "mpn": "RC0603FR-07330RL",
-      "observed_at": "2026-09-25T19:31:00.282Z",
-      "source": "https://jlcpcb.com/partdetail/C105881",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 629510,
-      "available_order_quantity": 629510,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0045,
-      "unit_price_usd_at_10": 0.0045
-    },
-    {
       "jlc_part": "C245983",
       "mpn": "RC0603FR-0757K6L",
-      "observed_at": "2026-09-25T19:31:00.645Z",
+      "observed_at": "2026-09-25T20:21:46.030Z",
       "source": "https://jlcpcb.com/partdetail/C245983",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -427,22 +440,9 @@
       "unit_price_usd_at_10": 0.006
     },
     {
-      "jlc_part": "C105580",
-      "mpn": "RC0603FR-075K1L",
-      "observed_at": "2026-09-25T19:31:01.014Z",
-      "source": "https://jlcpcb.com/partdetail/C105580",
-      "method": "JLCPCB public parts-search API (read-only)",
-      "library_type": "expand",
-      "in_stock": 6381918,
-      "available_order_quantity": 6381918,
-      "minimum_order": 1,
-      "unit_price_usd_at_1": 0.0023,
-      "unit_price_usd_at_10": 0.0023
-    },
-    {
       "jlc_part": "C326734",
       "mpn": "RT0603BRD07150KL",
-      "observed_at": "2026-09-25T19:31:02.244Z",
+      "observed_at": "2026-09-25T20:21:46.406Z",
       "source": "https://jlcpcb.com/partdetail/C326734",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -455,7 +455,7 @@
     {
       "jlc_part": "C705780",
       "mpn": "RT0603BRD0749K9L",
-      "observed_at": "2026-09-25T19:31:03.071Z",
+      "observed_at": "2026-09-25T20:21:46.828Z",
       "source": "https://jlcpcb.com/partdetail/C705780",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -468,7 +468,7 @@
     {
       "jlc_part": "C465977",
       "mpn": "STM32L072CBT6",
-      "observed_at": "2026-09-25T19:31:03.670Z",
+      "observed_at": "2026-09-25T20:21:47.205Z",
       "source": "https://jlcpcb.com/partdetail/C465977",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -481,7 +481,7 @@
     {
       "jlc_part": "C2871502",
       "mpn": "TLV7012DDFR",
-      "observed_at": "2026-09-25T19:31:04.040Z",
+      "observed_at": "2026-09-25T20:21:47.590Z",
       "source": "https://jlcpcb.com/partdetail/C2871502",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -494,7 +494,7 @@
     {
       "jlc_part": "C2863998",
       "mpn": "TLV76701DRVR",
-      "observed_at": "2026-09-25T19:31:04.631Z",
+      "observed_at": "2026-09-25T20:21:48.826Z",
       "source": "https://jlcpcb.com/partdetail/C2863998",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -507,12 +507,12 @@
     {
       "jlc_part": "C2681320",
       "mpn": "TPS22917DBVR",
-      "observed_at": "2026-09-25T19:31:05.016Z",
+      "observed_at": "2026-09-25T20:21:50.150Z",
       "source": "https://jlcpcb.com/partdetail/C2681320",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
-      "in_stock": 15843,
-      "available_order_quantity": 15843,
+      "in_stock": 15838,
+      "available_order_quantity": 15838,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.3537,
       "unit_price_usd_at_10": 0.3537
@@ -520,12 +520,12 @@
     {
       "jlc_part": "C720477",
       "mpn": "TS-1088-AR02016",
-      "observed_at": "2026-09-25T19:31:05.424Z",
+      "observed_at": "2026-09-25T20:21:50.585Z",
       "source": "https://jlcpcb.com/partdetail/C720477",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "base",
-      "in_stock": 941528,
-      "available_order_quantity": 941528,
+      "in_stock": 941520,
+      "available_order_quantity": 941520,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.0536,
       "unit_price_usd_at_10": 0.0536
@@ -533,7 +533,7 @@
     {
       "jlc_part": "C5184243",
       "mpn": "USB4105-GF-A-120",
-      "observed_at": "2026-09-25T19:31:05.803Z",
+      "observed_at": "2026-09-25T20:21:50.985Z",
       "source": "https://jlcpcb.com/partdetail/C5184243",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -546,12 +546,12 @@
     {
       "jlc_part": "C7519",
       "mpn": "USBLC6-2SC6",
-      "observed_at": "2026-09-25T19:31:06.435Z",
+      "observed_at": "2026-09-25T20:21:51.445Z",
       "source": "https://jlcpcb.com/partdetail/C7519",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
-      "in_stock": 45743,
-      "available_order_quantity": 45743,
+      "in_stock": 45729,
+      "available_order_quantity": 45729,
       "minimum_order": 1,
       "unit_price_usd_at_1": 0.1759,
       "unit_price_usd_at_10": 0.1759
@@ -559,7 +559,7 @@
     {
       "jlc_part": "C492406",
       "mpn": "PZ254V-11-07P",
-      "observed_at": "2026-09-25T19:31:06.813Z",
+      "observed_at": "2026-09-25T20:21:51.832Z",
       "source": "https://jlcpcb.com/partdetail/C492406",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -572,7 +572,7 @@
     {
       "jlc_part": "C5139758",
       "mpn": "HS96L01W4S03",
-      "observed_at": "2026-09-25T19:31:07.163Z",
+      "observed_at": "2026-09-25T20:21:52.471Z",
       "source": "https://jlcpcb.com/partdetail/C5139758",
       "method": "JLCPCB public parts-search API (read-only)",
       "library_type": "expand",
@@ -584,6 +584,76 @@
     }
   ],
   "fitted_bom_screen": [
+    {
+      "mpn": "0603B472K500NT",
+      "jlc_part": "C53987",
+      "references": [
+        "C13",
+        "C28",
+        "C29",
+        "C40"
+      ],
+      "fitted_per_board": 4,
+      "assembly_roles": {
+        "jlc_smt": 4
+      },
+      "quantity_for_10": 40,
+      "screening_attrition": 4,
+      "screening_required_quantity": 44,
+      "available_order_quantity": 950377,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:28.108Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "0603WAF1002T5E",
+      "jlc_part": "C25804",
+      "references": [
+        "R16",
+        "R5"
+      ],
+      "fitted_per_board": 2,
+      "assembly_roles": {
+        "jlc_smt": 2
+      },
+      "quantity_for_10": 20,
+      "screening_attrition": 2,
+      "screening_required_quantity": 22,
+      "available_order_quantity": 23140281,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:28.672Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "0603WAF1003T5E",
+      "jlc_part": "C25803",
+      "references": [
+        "R14",
+        "R15",
+        "R18",
+        "R24",
+        "R25",
+        "R29",
+        "R33",
+        "R34",
+        "R38",
+        "R6"
+      ],
+      "fitted_per_board": 10,
+      "assembly_roles": {
+        "jlc_smt": 10
+      },
+      "quantity_for_10": 100,
+      "screening_attrition": 10,
+      "screening_required_quantity": 110,
+      "available_order_quantity": 22876468,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:29.206Z",
+      "passes_stock_screen": true
+    },
     {
       "mpn": "0603WAF1004T5E",
       "jlc_part": "C22935",
@@ -597,10 +667,10 @@
       "quantity_for_10": 10,
       "screening_attrition": 2,
       "screening_required_quantity": 12,
-      "available_order_quantity": 6861627,
+      "available_order_quantity": 6861059,
       "minimum_order": 1,
       "library_type": "base",
-      "observed_at": "2026-09-25T19:30:43.589Z",
+      "observed_at": "2026-09-25T20:21:29.673Z",
       "passes_stock_screen": true
     },
     {
@@ -619,7 +689,7 @@
       "available_order_quantity": 97688,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:44.189Z",
+      "observed_at": "2026-09-25T20:21:30.100Z",
       "passes_stock_screen": true
     },
     {
@@ -638,7 +708,45 @@
       "available_order_quantity": 93928,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:44.578Z",
+      "observed_at": "2026-09-25T20:21:30.494Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "0603WAF2001T5E",
+      "jlc_part": "C22975",
+      "references": [
+        "R19"
+      ],
+      "fitted_per_board": 1,
+      "assembly_roles": {
+        "jlc_smt": 1
+      },
+      "quantity_for_10": 10,
+      "screening_attrition": 2,
+      "screening_required_quantity": 12,
+      "available_order_quantity": 14128384,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:30.901Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "0603WAF2201T5E",
+      "jlc_part": "C4190",
+      "references": [
+        "R8"
+      ],
+      "fitted_per_board": 1,
+      "assembly_roles": {
+        "jlc_smt": 1
+      },
+      "quantity_for_10": 10,
+      "screening_attrition": 2,
+      "screening_required_quantity": 12,
+      "available_order_quantity": 7947356,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:31.447Z",
       "passes_stock_screen": true
     },
     {
@@ -654,10 +762,10 @@
       "quantity_for_10": 10,
       "screening_attrition": 2,
       "screening_required_quantity": 12,
-      "available_order_quantity": 1494987,
+      "available_order_quantity": 1494845,
       "minimum_order": 1,
       "library_type": "base",
-      "observed_at": "2026-09-25T19:30:45.840Z",
+      "observed_at": "2026-09-25T20:21:31.864Z",
       "passes_stock_screen": true
     },
     {
@@ -673,10 +781,29 @@
       "quantity_for_10": 10,
       "screening_attrition": 2,
       "screening_required_quantity": 12,
-      "available_order_quantity": 1057179,
+      "available_order_quantity": 1057159,
       "minimum_order": 1,
       "library_type": "base",
-      "observed_at": "2026-09-25T19:30:46.444Z",
+      "observed_at": "2026-09-25T20:21:33.178Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "0603WAF3300T5E",
+      "jlc_part": "C23138",
+      "references": [
+        "R7"
+      ],
+      "fitted_per_board": 1,
+      "assembly_roles": {
+        "jlc_smt": 1
+      },
+      "quantity_for_10": 10,
+      "screening_attrition": 2,
+      "screening_required_quantity": 12,
+      "available_order_quantity": 3492451,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:33.733Z",
       "passes_stock_screen": true
     },
     {
@@ -695,7 +822,27 @@
       "available_order_quantity": 347183,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:46.819Z",
+      "observed_at": "2026-09-25T20:21:35.088Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "0603WAF5101T5E",
+      "jlc_part": "C23186",
+      "references": [
+        "R1",
+        "R2"
+      ],
+      "fitted_per_board": 2,
+      "assembly_roles": {
+        "jlc_smt": 2
+      },
+      "quantity_for_10": 20,
+      "screening_attrition": 2,
+      "screening_required_quantity": 22,
+      "available_order_quantity": 26212856,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:35.811Z",
       "passes_stock_screen": true
     },
     {
@@ -714,7 +861,7 @@
       "available_order_quantity": 2073722,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:47.194Z",
+      "observed_at": "2026-09-25T20:21:36.653Z",
       "passes_stock_screen": true
     },
     {
@@ -730,15 +877,15 @@
       "quantity_for_10": 10,
       "screening_attrition": 2,
       "screening_required_quantity": 12,
-      "available_order_quantity": 2248889,
+      "available_order_quantity": 2248887,
       "minimum_order": 1,
       "library_type": "base",
-      "observed_at": "2026-09-25T19:30:47.820Z",
+      "observed_at": "2026-09-25T20:21:37.325Z",
       "passes_stock_screen": true
     },
     {
-      "mpn": "2N7002,215",
-      "jlc_part": "C65189",
+      "mpn": "2N7002",
+      "jlc_part": "C8545",
       "references": [
         "Q3",
         "Q4",
@@ -751,10 +898,10 @@
       "quantity_for_10": 30,
       "screening_attrition": 3,
       "screening_required_quantity": 33,
-      "available_order_quantity": 394282,
+      "available_order_quantity": 1698867,
       "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:49.067Z",
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:37.807Z",
       "passes_stock_screen": true
     },
     {
@@ -770,10 +917,10 @@
       "quantity_for_10": 10,
       "screening_attrition": 2,
       "screening_required_quantity": 12,
-      "available_order_quantity": 377789,
+      "available_order_quantity": 377754,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:49.716Z",
+      "observed_at": "2026-09-25T20:21:38.175Z",
       "passes_stock_screen": true
     },
     {
@@ -789,10 +936,10 @@
       "quantity_for_10": 10,
       "screening_attrition": 2,
       "screening_required_quantity": 12,
-      "available_order_quantity": 4093,
+      "available_order_quantity": 4091,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:50.284Z",
+      "observed_at": "2026-09-25T20:21:38.580Z",
       "passes_stock_screen": true
     },
     {
@@ -811,132 +958,12 @@
       "available_order_quantity": 2537,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:50.644Z",
+      "observed_at": "2026-09-25T20:21:39.242Z",
       "passes_stock_screen": true
     },
     {
-      "mpn": "CPG151101S11-16",
-      "jlc_part": "C41430893",
-      "references": [
-        "SW1",
-        "SW2"
-      ],
-      "fitted_per_board": 2,
-      "assembly_roles": {
-        "jlc_smt": 2
-      },
-      "quantity_for_10": 20,
-      "screening_attrition": 2,
-      "screening_required_quantity": 22,
-      "available_order_quantity": 329807,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:51.250Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "CR2032-BS-6-1",
-      "jlc_part": "C70377",
-      "references": [
-        "BT1"
-      ],
-      "fitted_per_board": 1,
-      "assembly_roles": {
-        "jlc_smt": 1
-      },
-      "quantity_for_10": 10,
-      "screening_attrition": 2,
-      "screening_required_quantity": 12,
-      "available_order_quantity": 39963,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:51.629Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "DMN2056U-13",
-      "jlc_part": "C5208862",
-      "references": [
-        "Q1",
-        "Q2"
-      ],
-      "fitted_per_board": 2,
-      "assembly_roles": {
-        "jlc_smt": 2
-      },
-      "quantity_for_10": 20,
-      "screening_attrition": 2,
-      "screening_required_quantity": 22,
-      "available_order_quantity": 189,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:52.226Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "FM25V02A-GTR",
-      "jlc_part": "C66029",
-      "references": [
-        "U8"
-      ],
-      "fitted_per_board": 1,
-      "assembly_roles": {
-        "jlc_smt": 1
-      },
-      "quantity_for_10": 10,
-      "screening_attrition": 2,
-      "screening_required_quantity": 12,
-      "available_order_quantity": 19292,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:52.819Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "GRM1885C1H102JA01D",
-      "jlc_part": "C77026",
-      "references": [
-        "C11",
-        "C12"
-      ],
-      "fitted_per_board": 2,
-      "assembly_roles": {
-        "jlc_smt": 2
-      },
-      "quantity_for_10": 20,
-      "screening_attrition": 2,
-      "screening_required_quantity": 22,
-      "available_order_quantity": 146248,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:53.402Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "GRM1885C1H472JA01D",
-      "jlc_part": "C85980",
-      "references": [
-        "C13",
-        "C28",
-        "C29",
-        "C40"
-      ],
-      "fitted_per_board": 4,
-      "assembly_roles": {
-        "jlc_smt": 4
-      },
-      "quantity_for_10": 40,
-      "screening_attrition": 4,
-      "screening_required_quantity": 44,
-      "available_order_quantity": 103286,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:54.002Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "GRM188R71H104KA93D",
-      "jlc_part": "C77055",
+      "mpn": "CC0603KRX7R9BB104",
+      "jlc_part": "C14663",
       "references": [
         "C10",
         "C20",
@@ -960,10 +987,108 @@
       "quantity_for_10": 140,
       "screening_attrition": 14,
       "screening_required_quantity": 154,
-      "available_order_quantity": 1388680,
+      "available_order_quantity": 51395651,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:39.792Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "CL10B102KB8NNNC",
+      "jlc_part": "C1588",
+      "references": [
+        "C11",
+        "C12"
+      ],
+      "fitted_per_board": 2,
+      "assembly_roles": {
+        "jlc_smt": 2
+      },
+      "quantity_for_10": 20,
+      "screening_attrition": 2,
+      "screening_required_quantity": 22,
+      "available_order_quantity": 8260917,
+      "minimum_order": 1,
+      "library_type": "base",
+      "observed_at": "2026-09-25T20:21:40.333Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "CPG151101S11-16",
+      "jlc_part": "C41430893",
+      "references": [
+        "SW1",
+        "SW2"
+      ],
+      "fitted_per_board": 2,
+      "assembly_roles": {
+        "jlc_smt": 2
+      },
+      "quantity_for_10": 20,
+      "screening_attrition": 2,
+      "screening_required_quantity": 22,
+      "available_order_quantity": 329787,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:54.608Z",
+      "observed_at": "2026-09-25T20:21:40.714Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "CR2032-BS-6-1",
+      "jlc_part": "C70377",
+      "references": [
+        "BT1"
+      ],
+      "fitted_per_board": 1,
+      "assembly_roles": {
+        "jlc_smt": 1
+      },
+      "quantity_for_10": 10,
+      "screening_attrition": 2,
+      "screening_required_quantity": 12,
+      "available_order_quantity": 39963,
+      "minimum_order": 1,
+      "library_type": "expand",
+      "observed_at": "2026-09-25T20:21:41.142Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "DMN2056U-13",
+      "jlc_part": "C5208862",
+      "references": [
+        "Q1",
+        "Q2"
+      ],
+      "fitted_per_board": 2,
+      "assembly_roles": {
+        "jlc_smt": 2
+      },
+      "quantity_for_10": 20,
+      "screening_attrition": 2,
+      "screening_required_quantity": 22,
+      "available_order_quantity": 189,
+      "minimum_order": 1,
+      "library_type": "expand",
+      "observed_at": "2026-09-25T20:21:41.523Z",
+      "passes_stock_screen": true
+    },
+    {
+      "mpn": "FM25V02A-GTR",
+      "jlc_part": "C66029",
+      "references": [
+        "U8"
+      ],
+      "fitted_per_board": 1,
+      "assembly_roles": {
+        "jlc_smt": 1
+      },
+      "quantity_for_10": 10,
+      "screening_attrition": 2,
+      "screening_required_quantity": 12,
+      "available_order_quantity": 19292,
+      "minimum_order": 1,
+      "library_type": "expand",
+      "observed_at": "2026-09-25T20:21:41.893Z",
       "passes_stock_screen": true
     },
     {
@@ -984,7 +1109,7 @@
       "available_order_quantity": 57782,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:54.970Z",
+      "observed_at": "2026-09-25T20:21:42.263Z",
       "passes_stock_screen": true
     },
     {
@@ -1005,7 +1130,7 @@
       "available_order_quantity": 155752,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:55.335Z",
+      "observed_at": "2026-09-25T20:21:42.655Z",
       "passes_stock_screen": true
     },
     {
@@ -1024,7 +1149,7 @@
       "available_order_quantity": 524,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:55.721Z",
+      "observed_at": "2026-09-25T20:21:43.051Z",
       "passes_stock_screen": true
     },
     {
@@ -1043,55 +1168,7 @@
       "available_order_quantity": 206983,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:56.326Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "RC0603FR-07100KL",
-      "jlc_part": "C14675",
-      "references": [
-        "R14",
-        "R15",
-        "R18",
-        "R24",
-        "R25",
-        "R29",
-        "R33",
-        "R34",
-        "R38",
-        "R6"
-      ],
-      "fitted_per_board": 10,
-      "assembly_roles": {
-        "jlc_smt": 10
-      },
-      "quantity_for_10": 100,
-      "screening_attrition": 10,
-      "screening_required_quantity": 110,
-      "available_order_quantity": 8598402,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:56.747Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "RC0603FR-0710KL",
-      "jlc_part": "C98220",
-      "references": [
-        "R16",
-        "R5"
-      ],
-      "fitted_per_board": 2,
-      "assembly_roles": {
-        "jlc_smt": 2
-      },
-      "quantity_for_10": 20,
-      "screening_attrition": 2,
-      "screening_required_quantity": 22,
-      "available_order_quantity": 13327960,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:57.352Z",
+      "observed_at": "2026-09-25T20:21:43.687Z",
       "passes_stock_screen": true
     },
     {
@@ -1110,7 +1187,7 @@
       "available_order_quantity": 7768,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:57.725Z",
+      "observed_at": "2026-09-25T20:21:45.001Z",
       "passes_stock_screen": true
     },
     {
@@ -1129,64 +1206,7 @@
       "available_order_quantity": 12217,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:58.319Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "RC0603FR-072K2L",
-      "jlc_part": "C114662",
-      "references": [
-        "R8"
-      ],
-      "fitted_per_board": 1,
-      "assembly_roles": {
-        "jlc_smt": 1
-      },
-      "quantity_for_10": 10,
-      "screening_attrition": 2,
-      "screening_required_quantity": 12,
-      "available_order_quantity": 3190514,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:58.917Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "RC0603FR-072KL",
-      "jlc_part": "C105576",
-      "references": [
-        "R19"
-      ],
-      "fitted_per_board": 1,
-      "assembly_roles": {
-        "jlc_smt": 1
-      },
-      "quantity_for_10": 10,
-      "screening_attrition": 2,
-      "screening_required_quantity": 12,
-      "available_order_quantity": 748000,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:30:59.525Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "RC0603FR-07330RL",
-      "jlc_part": "C105881",
-      "references": [
-        "R7"
-      ],
-      "fitted_per_board": 1,
-      "assembly_roles": {
-        "jlc_smt": 1
-      },
-      "quantity_for_10": 10,
-      "screening_attrition": 2,
-      "screening_required_quantity": 12,
-      "available_order_quantity": 629510,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:00.282Z",
+      "observed_at": "2026-09-25T20:21:45.635Z",
       "passes_stock_screen": true
     },
     {
@@ -1205,27 +1225,7 @@
       "available_order_quantity": 4939,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:00.645Z",
-      "passes_stock_screen": true
-    },
-    {
-      "mpn": "RC0603FR-075K1L",
-      "jlc_part": "C105580",
-      "references": [
-        "R1",
-        "R2"
-      ],
-      "fitted_per_board": 2,
-      "assembly_roles": {
-        "jlc_smt": 2
-      },
-      "quantity_for_10": 20,
-      "screening_attrition": 2,
-      "screening_required_quantity": 22,
-      "available_order_quantity": 6381918,
-      "minimum_order": 1,
-      "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:01.014Z",
+      "observed_at": "2026-09-25T20:21:46.030Z",
       "passes_stock_screen": true
     },
     {
@@ -1246,7 +1246,7 @@
       "available_order_quantity": 20688,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:02.244Z",
+      "observed_at": "2026-09-25T20:21:46.406Z",
       "passes_stock_screen": true
     },
     {
@@ -1265,7 +1265,7 @@
       "available_order_quantity": 107298,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:03.071Z",
+      "observed_at": "2026-09-25T20:21:46.828Z",
       "passes_stock_screen": true
     },
     {
@@ -1284,7 +1284,7 @@
       "available_order_quantity": 3099,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:03.670Z",
+      "observed_at": "2026-09-25T20:21:47.205Z",
       "passes_stock_screen": true
     },
     {
@@ -1303,7 +1303,7 @@
       "available_order_quantity": 881,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:04.040Z",
+      "observed_at": "2026-09-25T20:21:47.590Z",
       "passes_stock_screen": true
     },
     {
@@ -1322,7 +1322,7 @@
       "available_order_quantity": 12917,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:04.631Z",
+      "observed_at": "2026-09-25T20:21:48.826Z",
       "passes_stock_screen": true
     },
     {
@@ -1339,10 +1339,10 @@
       "quantity_for_10": 20,
       "screening_attrition": 2,
       "screening_required_quantity": 22,
-      "available_order_quantity": 15843,
+      "available_order_quantity": 15838,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:05.016Z",
+      "observed_at": "2026-09-25T20:21:50.150Z",
       "passes_stock_screen": true
     },
     {
@@ -1358,10 +1358,10 @@
       "quantity_for_10": 10,
       "screening_attrition": 2,
       "screening_required_quantity": 12,
-      "available_order_quantity": 941528,
+      "available_order_quantity": 941520,
       "minimum_order": 1,
       "library_type": "base",
-      "observed_at": "2026-09-25T19:31:05.424Z",
+      "observed_at": "2026-09-25T20:21:50.585Z",
       "passes_stock_screen": true
     },
     {
@@ -1380,7 +1380,7 @@
       "available_order_quantity": 5001,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:05.803Z",
+      "observed_at": "2026-09-25T20:21:50.985Z",
       "passes_stock_screen": true
     },
     {
@@ -1397,10 +1397,10 @@
       "quantity_for_10": 20,
       "screening_attrition": 2,
       "screening_required_quantity": 22,
-      "available_order_quantity": 45743,
+      "available_order_quantity": 45729,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:06.435Z",
+      "observed_at": "2026-09-25T20:21:51.445Z",
       "passes_stock_screen": true
     }
   ],
@@ -1430,7 +1430,7 @@
       "available_order_quantity": 524,
       "minimum_order": 1,
       "library_type": "expand",
-      "observed_at": "2026-09-25T19:31:07.163Z",
+      "observed_at": "2026-09-25T20:21:52.471Z",
       "passes_stock_screen": true
     }
   ],
@@ -1438,10 +1438,10 @@
     {
       "lcsc_part": "C49234235",
       "mpn": "CPG151101D13",
-      "observed_at": "2026-09-25T19:31:07.623Z",
+      "observed_at": "2026-09-25T20:21:53.188Z",
       "source": "https://www.lcsc.com/product-detail/C49234235.html",
       "method": "LCSC public product API (read-only)",
-      "in_stock": 13620,
+      "in_stock": 13600,
       "minimum_order": 5,
       "order_multiple": 5,
       "package_quantity": 500,
@@ -1460,7 +1460,7 @@
     {
       "lcsc_part": "C5139758",
       "mpn": "HS96L01W4S03",
-      "observed_at": "2026-09-25T19:31:07.940Z",
+      "observed_at": "2026-09-25T20:21:53.667Z",
       "source": "https://www.lcsc.com/product-detail/C5139758.html",
       "method": "LCSC public product API (read-only)",
       "in_stock": 524,
@@ -1481,7 +1481,7 @@
     {
       "lcsc_part": "C357360",
       "mpn": "PA2X6nie",
-      "observed_at": "2026-09-25T19:31:08.406Z",
+      "observed_at": "2026-09-25T20:21:54.315Z",
       "source": "https://www.lcsc.com/product-detail/C357360.html",
       "method": "LCSC public product API (read-only)",
       "in_stock": 6500,
@@ -1505,7 +1505,7 @@
     {
       "lcsc_part": "C492406",
       "mpn": "PZ254V-11-07P",
-      "observed_at": "2026-09-25T19:31:08.775Z",
+      "observed_at": "2026-09-25T20:21:54.627Z",
       "source": "https://www.lcsc.com/product-detail/C492406.html",
       "method": "LCSC public product API (read-only)",
       "in_stock": 50500,
