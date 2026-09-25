@@ -101,7 +101,7 @@ def groups(parts):
 
 
 EXPECTED = dict(references=95, fitted=81, smt=80, home=1, features=14, types=41)
-SCREW = dict(mpn='PA2X6nie', lcsc='C357360', manufacturer='Guangdong Yuanhao', quantity=4,
+SCREW = dict(mpn='PA2X6nie', lcsc='C357360', manufacturer='Shuntian', quantity=4,
              description='M2 x 6 cross pan-head self-tapping screw (nickel)')
 DS1_FOOTPRINT = ROOT / 'electronics/q5/CountFidgetQ5.pretty/HS96L01W4S03_Module_7Pin.kicad_mod'
 

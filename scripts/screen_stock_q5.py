@@ -61,7 +61,8 @@ def lcsc(code):
         return rows[-1]['usdPrice'] if rows else None
     return dict(lcsc_part=code, mpn=r['productModel'], observed_at=now(), source=f'https://www.lcsc.com/product-detail/{code}.html',
                 method='LCSC public product API (read-only)', in_stock=r['stockNumber'],
-                minimum_order=r.get('minBuyNumber') or 1, order_multiple=r.get('minPacketNumber') or 1,
+                minimum_order=r.get('minBuyNumber') or 1, order_multiple=r.get('split') or r.get('minBuyNumber') or 1,
+                package_quantity=r.get('minPacketNumber'),
                 unit_price_usd_at_1=price(1) if (r.get('minBuyNumber') or 1) <= 1 else None, unit_price_usd_at_10=price(10))
 
 

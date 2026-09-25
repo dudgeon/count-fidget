@@ -22,9 +22,11 @@ Test points: TP1 GND, TP2 VLOGIC, TP5 VBUS, TP6 SYS, TP9 COUNT_N, TP11 NRST, TP1
 |---|---|---|
 | A1 | Visual/X-ray from JLC: BT1, J1 stakes, QFN/WSON joints | No bridges; J1 stakes wetted |
 | A2 | Unpowered: resistance VBUS–GND, SYS–GND, VLOGIC–GND | > 1 kΩ each (no shorts) |
+| A2b | **BT1 polarity before any cell:** meter from the holder's spring contact that meets the cell's + (can) face to TP pad CELL_P (BT1 pad 1, marked +) | < 1 Ω to CELL_P. **Stop** if the + contact reads to CELL_N_RAW (the holder is placed 180° wrong; a cell would be reverse-connected) |
 | A3 | USB only, no cell, current limit 100 mA | Board powers (VBUS via D4). VLOGIC 3.15–3.26 V. Current < 30 mA |
 | A4 | DFU entry and `clicker_flash.py flash --check` | PASS, and all four commissioning answers pass. **Stop** if DFU never enumerates on two cables |
 | A5 | Unplug/replug, pinhole restart | Count returns without ERR |
+| A6 | After the flasher's automatic DFU leave, the display comes up without pressing the pinhole | Digits appear within 1 s. The firmware's ROM-leftover reset path has worked |
 
 ## B. Power latch (5 units)
 
@@ -68,6 +70,7 @@ Test points: TP1 GND, TP2 VLOGIC, TP5 VBUS, TP6 SYS, TP9 COUNT_N, TP11 NRST, TP1
 | E2 | Display current, all digits 8, contrast as shipped | Record. The energy model assumes 1.0 mA module current at contrast 0x10 with ~20 % of pixels lit (estimate 0.6–2.0 mA): update battery-life figures with the measured value |
 | E3 | 200 × NRST pulses with the display on (script with USB + a relay, or by hand) | No latch-up; display recovers every time |
 | E4 | Response: high-speed phone video of 20 presses | New digits visible ≤ 100 ms after the click |
+| E5 | Display-on droop: scope SYS_LOAD and VLOGIC at a 3.40 V dummy cell while the display turns on | VLOGIC stays ≥ 3.15 V; no brown-out or gauge step |
 
 ## F. Count integrity (3 units)
 
@@ -84,9 +87,11 @@ Test points: TP1 GND, TP2 VLOGIC, TP5 VBUS, TP6 SYS, TP9 COUNT_N, TP11 NRST, TP1
 |---|---|---|
 | G1 | Home assembly per `mechanical/q5/README.md`; record time and any rework | ≤ 30 min per unit after the first; no lifted pads |
 | G2 | USB-C plug fit: 3 cable brands, both orientations | Fully mates and charges with the enclosure closed |
-| G3 | Keycaps: travel, wobble, return; 1,000 presses each | Full travel, no binding or cracking |
+| G0 | Print the tolerance coupon first (plate holes 13.95/14.05/14.15 mm; cross sockets ±0.05 mm) | Choose the hole and socket that give a firm switch clip and a snug keycap; update the generator |
+| G2b | Hot-swap: clip both switches into the plate, press plate + switches into SW1/SW2 | Both switches seat fully (housing flush on the PCB) and click; 20 remove/insert cycles with no loose socket |
+| G3 | Keycaps: travel, wobble, return; 1,000 presses each | Full travel, no binding or cracking; the pressed keycap clears the plate and screw bores |
 | G4 | Pinhole reaches SW3 with a standard paper clip | Clean click; no need to open the case |
-| G5 | Screws: 5 open/close cycles | Threads hold (or specify heat-set inserts in the next print) |
+| G5 | Self-tapping M2 × 6 screws (C357360): 5 open/close cycles | Threads hold in the 1.7 mm pilots (or specify heat-set inserts in the next print) |
 | G6 | Cell replacement by a non-technical person following the README | Succeeds without tools other than a screwdriver |
 
 ## Exit criteria for a production quote

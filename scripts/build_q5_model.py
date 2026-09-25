@@ -77,7 +77,7 @@ def make_model():
     # soldering and JLC can assemble every soldered part. Needs the 1.6 mm board.
     for ref, role in (('SW1', 'COUNT / POWER: closes SYS to PWR_KEY, powering the board on and, through Q5, driving COUNT_N low'),
                       ('SW2', 'RESET COUNT / BOOT0')):
-        parts[ref].update(mpn='CPG151101S11-16', manufacturer='HanElectricity', lcsc='C41430893',
+        parts[ref].update(mpn='CPG151101S11-16', manufacturer='HanElectricity', lcsc='C41430893', assembly='jlc_smt',
                           footprint='CountFidgetQ5:SW_Hotswap_Kailh_MX_CPG151101S11', side='bottom',
                           notes=f'MX hot-swap socket, vendor SMT on the bottom side. {role}. The user presses a clicky '
                                 'MX switch (CPG151101D13, clipped into the printed key plate) into it: no switch soldering.')

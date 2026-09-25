@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "10.0.6-10.0.6~ubuntu24.04.1"
     },
-    "CreationDate": "2026-09-25T11:34:31+00:00"
+    "CreationDate": "2026-09-25T19:31:47+00:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -18,7 +18,7 @@
       "Y": 54.05
     },
     "LayerNumber": 2,
-    "BoardThickness": 1.0,
+    "BoardThickness": 1.6,
     "Finish": "ENIG"
   },
   "DesignRules": [
@@ -102,8 +102,8 @@
     },
     {
       "Type": "Dielectric",
-      "Thickness": 0.93,
-      "Material": "FR4 Tg150+ requested",
+      "Thickness": 1.53,
+      "Material": "FR4",
       "Name": "F.Cu/B.Cu",
       "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
     },

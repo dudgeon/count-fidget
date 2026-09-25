@@ -378,7 +378,7 @@
   "side": "bottom"
  },
  "C39": {
-  "x": 26.09,
+  "x": 25.79,
   "y": 36.97,
   "rotation": 90,
   "side": "bottom"
@@ -446,7 +446,7 @@
  "R10": {
   "x": 6.4,
   "y": 50.93,
-  "rotation": 90,
+  "rotation": 270,
   "side": "bottom"
  },
  "R11": {

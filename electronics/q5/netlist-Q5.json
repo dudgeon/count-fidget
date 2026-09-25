@@ -440,7 +440,7 @@
       "mpn": "GRM188R71H104KA93D",
       "manufacturer": "Murata",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
-      "x": 26.09,
+      "x": 25.79,
       "y": 36.97,
       "rotation": 90,
       "side": "bottom",
@@ -1013,7 +1013,7 @@
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 6.4,
       "y": 50.93,
-      "rotation": 90,
+      "rotation": 270,
       "side": "bottom",
       "pins": {
         "1": "VBUS",
@@ -1647,7 +1647,7 @@
       "source_footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
       "lcsc": "C41430893",
       "sheet": "mcu",
-      "assembly": "home_through_hole"
+      "assembly": "jlc_smt"
     },
     {
       "ref": "SW2",
@@ -1667,7 +1667,7 @@
       "source_footprint": "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB",
       "lcsc": "C41430893",
       "sheet": "mcu",
-      "assembly": "home_through_hole"
+      "assembly": "jlc_smt"
     },
     {
       "ref": "SW3",
