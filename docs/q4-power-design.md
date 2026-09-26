@@ -32,7 +32,7 @@ STM32L072CBT6 supply pins1/24/48, VDDA9 and VDD_USB36 share VLOGIC; grounds8/23/
 
 Unused PA8 is explicitly NC; no VBUS-present divider is fitted. USB recovery does not require application USB detection.
 
-SW2 drives BOOT0 high only while held; it does not directly reset the MCU. Hold SW2 while pressing SW3 or applying USB power for recovery, with the reviewed nBOOT1 option. Firmware must load persistence before interpreting the held count-reset key. Keep SWD pads. ROM UART pins PA2/PA3/PA9/PA10 must not control display power or memory chip select. The exact option-byte/ROM proof belongs to the Q4 programming report.
+SW2 drives BOOT0 high only while held; it does not directly reset the MCU. BOOT0 must be high when reset is released, with the reviewed nBOOT1 option. With a battery attached, press and hold SW3 first, then SW2, then release SW3: pressing SW2 while the application runs is a count reset, and applying USB power does not reset a battery-powered MCU. Holding SW2 while applying USB power works only for an unpowered board (USB-first commissioning). See `q4-firmware.md` step 2 and [#3](https://github.com/dudgeon/count-fidget/issues/3). Firmware must load persistence before interpreting the held count-reset key. Keep SWD pads. ROM UART pins PA2/PA3/PA9/PA10 must not control display power or memory chip select. The exact option-byte/ROM proof belongs to the Q4 programming report.
 
 ## Display module and power switch
 
