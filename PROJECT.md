@@ -29,7 +29,7 @@ Evidence:
 - (A) JLC performs SMT and the user solders the through-hole parts;
 - (B) JLC assembles everything, including the through-hole parts.
 
-This lifts the quote pause for JLCPCB quoting only. Uploading the locked design files to JLCPCB's quote tools is allowed. Placing an order, paying, allocating or preordering stock, releasing manufacturing, or contacting other vendors remains unauthorized. Record quote results in `procurement/q5/` and the quote tracker, without account IDs, personal data or private screenshots. Read-only public stock research is allowed. Commit/push Q5 work to `claude/loving-noether-4qogm0` and its draft PR #10; do not merge.
+This lifts the quote pause for JLCPCB quoting only. Uploading the locked design files to JLCPCB's quote tools is allowed. Placing an order, paying, allocating or preordering stock, releasing manufacturing, or contacting other vendors remains unauthorized. Record quote results in `procurement/q5/` and the quote tracker, without account IDs, personal data or private screenshots. Read-only public stock research is allowed. PR #10 was merged by the owner's request on 26 Sep 2026. Commit follow-up Q5 work to `claude/loving-noether-4qogm0` (restarted from `main`) and a new draft PR; do not merge without the owner's request.
 
 **Design locked (25 September evening).** SW1/SW2 are vendor-SMT MX hot-swap sockets on a 1.6 mm PCB; the clicky switches K1/K2 press in without soldering. Ten passives/FETs moved to JLC Basic parts. Quote status is in `procurement/q5/JLC-QUOTE-Q5.md`:
 - the public quote page gave PCB $22.10 and DHL $29.45 for 10 boards;
@@ -38,6 +38,17 @@ This lifts the quote pause for JLCPCB quoting only. Uploading the locked design 
 The macOS flashing tool is `tools/clicker-flash/` (skill `flash-clickers`). The first-article plan is `docs/q5-first-article-test-plan.md`.
 
 **First-order de-risking (26 September).** The owner decided on variant B (JLC assembles everything) and a small first batch. Three independent checks found no pinout, footprint or dead-on-arrival defect: a datasheet pinout audit, a fit against JLC's EasyEDA footprints and a DOA review. The resulting changes are the R39/C9 filter on U5's supply, C40 raised to 10 nF, the JLC-corrected CPLs with a preview checklist, and a flasher rule to press the pinhole before unplugging a unit in DFU; see the REVIEW-Q5 section. The owner may bring this session to their Mac and sign in to JLCPCB themselves; the agent may then drive the signed-in quote flow up to the order summary. **Payment or order placement needs the owner's explicit go-ahead at that moment.**
+
+**First-article order placed (26 September 2026).** The owner signed in, reviewed JLC's binding quote and paid **$298.08**:
+- 10 bare PCBs and **5 assembled boards**;
+- variant B, Standard PCBA (BT1 and J1 are Standard-only parts), both sides so JLC fits the display;
+- DHL Express, duties included.
+
+The agent drove the signed-in browser flow and verified the parts matching and the placement preview; the owner confirmed the price and checked out. Production waits for the owner's approval of JLC's parts-placement photos (auto-confirm disabled). Details are in `procurement/q5/JLC-QUOTE-Q5.md`; order and account identifiers are deliberately not recorded. This is a first-article batch, not a production release. Any further order, or approval of a design change, needs the owner's explicit go-ahead. Next steps:
+- approve the placement photos;
+- buy the switches, screws and LIR2032 cells;
+- print the tolerance coupon and enclosure;
+- on arrival, snap off the edge rails and run `docs/q5-first-article-test-plan.md`.
 
 ## Previous Q4 checkpoint — 24 September 2026 (superseded by Q5 where inconsistent)
 

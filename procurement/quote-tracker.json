@@ -7,8 +7,8 @@
   ],
   "currency": "USD",
   "complete_quotes_received": false,
-  "paid_procurement": false,
-  "order_placed": false,
+  "paid_procurement": true,
+  "order_placed": true,
   "manufacturing_released": false,
   "vendors": [
     {
@@ -1290,7 +1290,7 @@
     "condition": "Material cost reduction; exact split and savings remain to be demonstrated."
   },
   "q5_jlc_quote": {
-    "snapshot_utc": "2026-09-25T20:40Z",
+    "snapshot_utc": "2026-09-26T08:30Z",
     "authorization": "JLCPCB quotes only, variants A (JLC SMT, user solders DS1) and B (JLC full assembly); no order, payment, allocation, release or other-vendor contact",
     "gerber_zip_sha256": "f9b9afe4ead8ebe9c9f7066926ef95a16f03e42750d92ad6f939462d12864230",
     "observed_public_quote": {
@@ -1299,7 +1299,7 @@
       "pcb_usd": 22.1,
       "shipping_dhl_ddp_usd": 29.45
     },
-    "pcba_binding_quote": "not obtained: BOM/CPL step requires the user's JLCPCB sign-in; no credentials requested or used",
+    "pcba_binding_quote": "obtained 26 Sep 2026 in the owner's signed-in session (owner signed in; agent drove the browser)",
     "estimate_usd_10_boards_before_shipping": {
       "A_economic": 245.94,
       "A_standard": 254.45,
@@ -1308,10 +1308,30 @@
     },
     "estimate_source": "procurement/q5/jlc-cost-estimate.json",
     "record": "procurement/q5/JLC-QUOTE-Q5.md",
-    "complete_quote_received": false,
-    "cart_saved": false,
-    "order_placed": false,
-    "paid": false,
-    "manufacturing_released": false
+    "complete_quote_received": true,
+    "cart_saved": true,
+    "order_placed": true,
+    "paid": true,
+    "manufacturing_released": false,
+    "signed_in_quote_6_boards_both_sides_usd": {
+      "pcb": 22.7,
+      "pcba": 259.96,
+      "shipping_dhl_ddp": 29.94,
+      "total": 312.6
+    },
+    "standard_pcba_required": "BT1 C70377 and J1 C5184243 are Standard-only parts",
+    "order": {
+      "date": "2026-09-26",
+      "boards_assembled": 5,
+      "bare_pcbs": 10,
+      "variant": "B (JLC assembles everything, both sides, Standard PCBA)",
+      "cpl": "CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv",
+      "pcb_usd": 22.8,
+      "pcba_usd": 242.83,
+      "shipping_usd": 32.45,
+      "total_paid_usd": 298.08,
+      "status_at_record": "file review; parts-placement photos await owner approval (auto-confirm disabled)",
+      "note": "Order and account identifiers intentionally not recorded (public repository)."
+    }
   }
 }
