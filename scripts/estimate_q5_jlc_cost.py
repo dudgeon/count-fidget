@@ -17,9 +17,10 @@ import pcbnew as p
 ROOT = Path(__file__).resolve().parents[1]
 MODEL, STOCK = ROOT / 'electronics/q5/netlist-Q5.json', ROOT / 'procurement/q5/stock.json'
 BOARD, OUT = ROOT / 'electronics/q5/click-counter-Q5.kicad_pcb', ROOT / 'procurement/q5/jlc-cost-estimate.json'
-N = 5 if '--qty' in sys.argv and sys.argv[sys.argv.index('--qty') + 1] == '5' else 10
-if N == 5:
-    OUT = OUT.with_name('jlc-cost-estimate-5.json')
+N = int(sys.argv[sys.argv.index('--qty') + 1]) if '--qty' in sys.argv else 10
+assert N in (2, 5, 10), 'observed PCB prices exist for 2 (5 bare PCBs), 5 and 10 boards'
+if N != 10:
+    OUT = OUT.with_name(f'jlc-cost-estimate-{N}.json')
 # https://jlcpcb.com/help/article/pcb-assembly-price (read 25 Sep 2026)
 FEES = dict(
     economic=dict(setup=8.18, stencil=1.53, per_joint=0.0016, feeder_extended=3.07, feeder_basic=0.0),
@@ -27,18 +28,20 @@ FEES = dict(
     manual_per_joint=0.0164, hand_soldering_labor_per_order=3.58)
 # Observed on https://cart.jlcpcb.com/quote with procurement/q5/click-counter-Q5-Gerbers.zip (25 Sep 2026):
 # 2 layers, 42 x 54 mm, 1.6 mm FR-4 TG135, green/white, ENIG 1U", 10 pcs, 3-day build.
-OBSERVED = dict(pcb_10_pcs_usd=22.10, pcb_breakdown=dict(board=5.00, enig=17.10),
+OBSERVED = dict(pcb_usd=22.10, pcb_quantity=10, pcb_breakdown=dict(board=5.00, enig=17.10),
                 build_time_with_pcba='24 hours (PCBA only) at $0.00', shipping_dhl_ddp_usd=29.45,
                 shipping_weight_kg=0.20, observed_utc='2026-09-25T20:05Z')
-if N == 5:
+if N in (2, 5):
     # Same page and options, PCB Qty 5 (25 Sep 2026); PCBA qty offered 2 or 5.
-    OBSERVED = dict(pcb_5_pcs_usd=20.90, pcb_breakdown=dict(board=4.00, enig=16.90),
+    OBSERVED = dict(pcb_usd=20.90, pcb_quantity=5, pcb_breakdown=dict(board=4.00, enig=16.90),
                     build_time_with_pcba='24 hours (PCBA only) at $0.00', shipping_dhl_ddp_usd=29.45,
                     shipping_weight_kg=0.16, observed_utc='2026-09-25T21:10Z')
 
 
 def price(o):
-    return o.get('unit_price_usd_at_10') or o.get('unit_price_usd_at_1') or 0.0
+    # Below 10 boards most lines are bought below the 10-piece break: use the 1-piece price when known.
+    first = ('unit_price_usd_at_1', 'unit_price_usd_at_10') if N < 5 else ('unit_price_usd_at_10', 'unit_price_usd_at_1')
+    return o.get(first[0]) or o.get(first[1]) or 0.0
 
 
 def main():
@@ -65,7 +68,7 @@ def main():
 
     def order(kind, variant):
         f = FEES[kind]
-        c = dict(pcb=OBSERVED[f'pcb_{N}_pcs_usd'], setup=f['setup'], stencil=f['stencil'],
+        c = dict(pcb=OBSERVED['pcb_usd'], setup=f['setup'], stencil=f['stencil'],
                  smt_joints=round(smt_joints * N * f['per_joint'], 2),
                  feeder_loading=round(extended * f['feeder_extended'] + basic * f['feeder_basic'], 2),
                  components=round(components, 2))

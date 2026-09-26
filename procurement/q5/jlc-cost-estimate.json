@@ -25,7 +25,8 @@
  },
  "fee_source": "https://jlcpcb.com/help/article/pcb-assembly-price (read 2026-09-25)",
  "observed_jlc_quote_page": {
-  "pcb_10_pcs_usd": 22.1,
+  "pcb_usd": 22.1,
+  "pcb_quantity": 10,
   "pcb_breakdown": {
    "board": 5.0,
    "enig": 17.1

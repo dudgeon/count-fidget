@@ -86,6 +86,18 @@ PCBA qty 5 is offered (the minimum is 2). The estimate is in `jlc-cost-estimate-
 
 The feeder fee is per part type, not per board. That is why 5 boards cost about 75 % of the price of 10. Component prices use the 10-piece price break, so 5-piece breaks may add a few dollars. Standard PCBA adds about $8.50 (A) or $5.40 (B).
 
+## Cost per board at 2, 5 and 10 (estimate, Economic PCBA, DHL included)
+
+The 2-board case is 5 bare PCBs with 2 assembled; JLC's PCBA minimum is 2, and `--qty 2` prices parts at the 1-piece break.
+
+| Assembled boards | A (user solders DS1) | B (JLC fits everything) | B − A per board | A also needs from LCSC per board |
+|---|---|---|---|---|
+| 2 | $167.74 → **$83.87** | $182.60 → **$91.30** | $7.43 | ~$2.3 display + header, plus LCSC shipping |
+| 5 | $205.50 → **$41.10** | $225.73 → **$45.15** | $4.05 | ~$1.9 |
+| 10 | $275.39 → **$27.54** | $306.13 → **$30.61** | $3.07 | ~$1.9 |
+
+At every quantity, soldering the display yourself saves less than $10 per board: about $1–5 net after buying the display yourself. **Owner decision (26 Sep 2026): variant B**, because self-soldering is only wanted when it saves more than $10 per board.
+
 ## Steps for the binding quote (user, signed in; stop at the cart)
 
 1. Open https://cart.jlcpcb.com/quote and sign in.
