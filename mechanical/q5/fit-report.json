@@ -148,7 +148,7 @@
   "reported_intersections": [],
   "assembly_path_checks": {
     "poses": 162,
-    "sampled_intersection_tests": 18387,
+    "sampled_intersection_tests": 18549,
     "step_mm": 0.5,
     "max_lift_mm": 40,
     "collisions": [],
@@ -168,8 +168,8 @@
     "pressed_keycap_to_rear_screw": 3.0,
     "usb_mouth_to_outer_wall": 2.025
   },
-  "source_board_sha256": "e78629ed361ff9f38c8ead58770e2dd60fc865461600456b503f6015345428df",
-  "source_model_sha256": "67c816161594167ef4e57a1a50c7155c2c48ef49607775825cd9701b768cb62f",
+  "source_board_sha256": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+  "source_model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
   "generator_sha256": "38601c310ccb4d42ca1908a6400a72a7102c27d7fb9fa37cb63401b3f73f0003",
   "rendered_count": 12345678,
   "firmware_renderer_sha256": {
