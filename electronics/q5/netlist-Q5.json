@@ -39,8 +39,8 @@
     {
       "ref": "C1",
       "value": "2.2u",
-      "mpn": "GRM21BR71E225KE11L",
-      "manufacturer": "Murata",
+      "mpn": "CL21A225KBQNNNE",
+      "manufacturer": "Samsung",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric",
       "x": 35.6,
       "y": 3.6,
@@ -50,9 +50,9 @@
         "1": "VBUS",
         "2": "GND"
       },
-      "notes": "2.2 uF, 25 V, X7R; effective >=1 uF at 5 V",
+      "notes": "2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V",
       "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
-      "lcsc": "C77081",
+      "lcsc": "C377773",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -144,7 +144,7 @@
     {
       "ref": "C2",
       "value": "10u",
-      "mpn": "GRM21BR61E106KA73L",
+      "mpn": "GRM21BR61H106KE43L",
       "manufacturer": "Murata",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric",
       "x": 33.3,
@@ -155,9 +155,9 @@
         "1": "SYS",
         "2": "GND"
       },
-      "notes": "10 uF, 25 V, X5R; effective >=1 uF at 4.5 V",
+      "notes": "10 uF, 50 V, X5R, 0805; effective >=1 uF at 4.5 V",
       "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
-      "lcsc": "C84416",
+      "lcsc": "C440198",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -227,8 +227,8 @@
     {
       "ref": "C3",
       "value": "2.2u",
-      "mpn": "GRM21BR71E225KE11L",
-      "manufacturer": "Murata",
+      "mpn": "CL21A225KBQNNNE",
+      "manufacturer": "Samsung",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric",
       "x": 40.4,
       "y": 15.2,
@@ -238,9 +238,9 @@
         "1": "CELL_P",
         "2": "GND"
       },
-      "notes": "2.2 uF, 25 V, X7R",
+      "notes": "2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V",
       "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
-      "lcsc": "C77081",
+      "lcsc": "C377773",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -248,7 +248,7 @@
     {
       "ref": "C30",
       "value": "10u",
-      "mpn": "GRM21BR61E106KA73L",
+      "mpn": "GRM21BR61H106KE43L",
       "manufacturer": "Murata",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric",
       "x": 25.8,
@@ -259,9 +259,9 @@
         "1": "VFRAM",
         "2": "GND"
       },
-      "notes": "10uF25V X5R; require>=6.8uF effective for proposed memory ramp budget",
+      "notes": "10 uF 50 V X5R; require >=6.8 uF effective at the memory rail (measure on the first article)",
       "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
-      "lcsc": "C84416",
+      "lcsc": "C440198",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
       "sheet": "memory",
       "assembly": "jlc_smt"
@@ -498,8 +498,8 @@
     {
       "ref": "C5",
       "value": "2.2u",
-      "mpn": "GRM21BR71E225KE11L",
-      "manufacturer": "Murata",
+      "mpn": "CL21A225KBQNNNE",
+      "manufacturer": "Samsung",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric",
       "x": 39.0,
       "y": 44.6,
@@ -509,9 +509,9 @@
         "1": "SYS_LOAD",
         "2": "GND"
       },
-      "notes": "",
+      "notes": "2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V",
       "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
-      "lcsc": "C77081",
+      "lcsc": "C377773",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"
@@ -519,7 +519,7 @@
     {
       "ref": "C6",
       "value": "10u",
-      "mpn": "GRM21BR61E106KA73L",
+      "mpn": "GRM21BR61H106KE43L",
       "manufacturer": "Murata",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric",
       "x": 38.9,
@@ -530,9 +530,9 @@
         "1": "VLOGIC",
         "2": "GND"
       },
-      "notes": "10uF package rail bulk; include all MCU/FRAM/module capacitance in regulator stability and startup review; effective capacitance unmeasured",
+      "notes": "10 uF, 50 V, X5R, 0805; effective >=1 uF at 4.5 V",
       "source_footprint": "Capacitor_SMD:C_0805_2012Metric",
-      "lcsc": "C84416",
+      "lcsc": "C440198",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0805_2012Metric",
       "sheet": "mcu",
       "assembly": "jlc_smt"
@@ -877,8 +877,8 @@
     {
       "ref": "Q1",
       "value": "Discharge FET",
-      "mpn": "DMN2056U-13",
-      "manufacturer": "Diodes Incorporated",
+      "mpn": "AO3400A",
+      "manufacturer": "AOS",
       "footprint": "CountFidgetQ5:Package_TO_SOT_SMD_SOT-23",
       "x": 2.3,
       "y": 16.3,
@@ -889,9 +889,9 @@
         "2": "CELL_N_RAW",
         "3": "FET_DRAIN"
       },
-      "notes": "; exact same-device reel suffix -13; no electrical polarity change",
+      "notes": "AO3400A: SOT-23 1 G / 2 S / 3 D, 30 V, 48 mOhm max at VGS 2.5 V; BQ29700 FET per TI Fig. 9-1",
       "source_footprint": "Package_TO_SOT_SMD:SOT-23",
-      "lcsc": "C5208862",
+      "lcsc": "C20917",
       "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
       "sheet": "battery",
       "assembly": "jlc_smt"
@@ -899,8 +899,8 @@
     {
       "ref": "Q2",
       "value": "Charge FET",
-      "mpn": "DMN2056U-13",
-      "manufacturer": "Diodes Incorporated",
+      "mpn": "AO3400A",
+      "manufacturer": "AOS",
       "footprint": "CountFidgetQ5:Package_TO_SOT_SMD_SOT-23",
       "x": 2.3,
       "y": 21.4,
@@ -911,9 +911,9 @@
         "2": "SENSE_FET",
         "3": "FET_DRAIN"
       },
-      "notes": "; exact same-device reel suffix -13; no electrical polarity change",
+      "notes": "AO3400A: SOT-23 1 G / 2 S / 3 D, 30 V, 48 mOhm max at VGS 2.5 V; BQ29700 FET per TI Fig. 9-1",
       "source_footprint": "Package_TO_SOT_SMD:SOT-23",
-      "lcsc": "C5208862",
+      "lcsc": "C20917",
       "source_footprint_Q3": "ClickCounterQ2:Package_TO_SOT_SMD_SOT-23",
       "sheet": "battery",
       "assembly": "jlc_smt"
@@ -1007,9 +1007,9 @@
     },
     {
       "ref": "R10",
-      "value": "57.6k",
-      "mpn": "RC0603FR-0757K6L",
-      "manufacturer": "Yageo",
+      "value": "56k",
+      "mpn": "0603WAF5602T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 6.4,
       "y": 50.93,
@@ -1021,15 +1021,15 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C245983",
+      "lcsc": "C23206",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "thermal",
       "assembly": "jlc_smt"
     },
     {
       "ref": "R11",
-      "value": "115k",
-      "mpn": "0603WAF1153T5E",
+      "value": "82k",
+      "mpn": "0603WAF8202T5E",
       "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 2.47,
@@ -1042,16 +1042,16 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C22783",
+      "lcsc": "C23254",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "thermal",
       "assembly": "jlc_smt"
     },
     {
       "ref": "R12",
-      "value": "24.3k",
-      "mpn": "RC0603FR-0724K3L",
-      "manufacturer": "Yageo",
+      "value": "18k",
+      "mpn": "0603WAF1802T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 16.01,
       "y": 47.18,
@@ -1063,15 +1063,15 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C276290",
+      "lcsc": "C25810",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "thermal",
       "assembly": "jlc_smt"
     },
     {
       "ref": "R13",
-      "value": "16.2k",
-      "mpn": "0603WAF1622T5E",
+      "value": "12k",
+      "mpn": "0603WAF1202T5E",
       "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 14.4,
@@ -1084,7 +1084,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C22885",
+      "lcsc": "C22790",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "thermal",
       "assembly": "jlc_smt"
@@ -1366,21 +1366,21 @@
     },
     {
       "ref": "R32",
-      "value": "68",
-      "mpn": "0603WAF680JT5E",
+      "value": "75",
+      "mpn": "0603WAF750JT5E",
       "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "pins": {
         "1": "VLOGIC",
         "2": "VFRAM"
       },
-      "notes": "1%; controlled memory rail RC",
+      "notes": "1%; controlled memory rail RC (75 ohm with C30)",
       "x": 17.0,
       "y": 41.2,
       "rotation": 0,
       "side": "bottom",
       "sheet": "memory",
-      "lcsc": "C27592",
+      "lcsc": "C4275",
       "assembly": "jlc_smt"
     },
     {
@@ -1524,9 +1524,9 @@
     },
     {
       "ref": "R4",
-      "value": "16.5k",
-      "mpn": "RC0603FR-0716K5L",
-      "manufacturer": "Yageo",
+      "value": "18k",
+      "mpn": "0603WAF1802T5E",
+      "manufacturer": "UNI-ROYAL",
       "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
       "x": 38.4,
       "y": 8.6,
@@ -1538,7 +1538,7 @@
       },
       "notes": "1%, 0603, 0.1 W",
       "source_footprint": "Resistor_SMD:R_0603_1608Metric",
-      "lcsc": "C273769",
+      "lcsc": "C25810",
       "source_footprint_Q3": "ClickCounterQ2:Resistor_SMD_R_0603_1608Metric",
       "sheet": "usb-power",
       "assembly": "jlc_smt"

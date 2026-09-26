@@ -53,7 +53,7 @@ def check_inrush(model):
     total = sum(caps_uF.values()) * 1.10                               # +10% capacitance tolerance
     tr = 1.6e-6 * 4.7e-9 * 1e12
     i = total * 1e-6 * 3.3 / tr * 1e3 + 1.5                            # plus MCU start-up current
-    # BQ2970 VOCD 100 +/-15 mV over temperature (SLUSBU9I 6.6); sense path R9 3.3 ohm +1 % plus 2 x DMN2056U RDS(on) ~50 mohm.
+    # BQ2970 VOCD 100 +/-15 mV over temperature (SLUSBU9I 6.6); sense path R9 3.3 ohm +1 % plus 2 x AO3400A RDS(on) <=48 mohm at VGS 2.5 V.
     ocd_min_mA = 0.085 / (3.3 * 1.01 + 2 * 0.05) * 1e3
     half = total * 1e-6 * 3.3 / (tr / 2) * 1e3 + 1.5
     tocdd_min_ms = 20 * 0.8                                            # BQ29700 tOCDD 20 ms -20 %

@@ -166,6 +166,42 @@ def make_model():
             part.update(mpn=mpn, manufacturer=maker, lcsc=code)
             if part['value'] in ('4.7n', '1n'):
                 part['notes'] = part['notes'].replace('C0G', 'X7R').replace('c0g', 'X7R')
+    # Owner request 26 Sep: every Extended type costs a $3.07 feeder fee per order, so each
+    # must earn its place. These nine move to JLC Basic parts with the circuit re-derived:
+    #  - R4 ISET 18k: charge 300/18k = 16.7 mA (0.37C of 45 mAh; termination 1.67 mA < 0.05C).
+    #  - Charge-temperature window R10/R11/R12/R13 = 56k/82k/18k/12k: NTC (B3380) enable window
+    #    7.26-35.83 C nominal versus 7.49-35.92 C before (scripts/q5 window check in REVIEW-Q5).
+    #  - R32 75R: slower VFRAM ramps (more margin on the FM25V02A slew minima); 0.225 V drop at 3 mA.
+    #  - Q1/Q2 AO3400A: same SOT-23 G/S/D, 30 V, 48 mOhm at VGS 2.5 V (OCD bound unchanged).
+    #  - C1/C3/C5 2.2 uF 50 V X5R and C2/C6/C30 Murata 10 uF 50 V X5R: same 0805 land; the higher
+    #    rating retains more effective capacitance at 3.3-5 V.
+    BASIC_SWAP = {
+        'R4': ('18k', '0603WAF1802T5E', 'UNI-ROYAL', 'C25810'),
+        'R10': ('56k', '0603WAF5602T5E', 'UNI-ROYAL', 'C23206'),
+        'R11': ('82k', '0603WAF8202T5E', 'UNI-ROYAL', 'C23254'),
+        'R12': ('18k', '0603WAF1802T5E', 'UNI-ROYAL', 'C25810'),
+        'R13': ('12k', '0603WAF1202T5E', 'UNI-ROYAL', 'C22790'),
+        'R32': ('75', '0603WAF750JT5E', 'UNI-ROYAL', 'C4275'),
+        'Q1': (None, 'AO3400A', 'AOS', 'C20917'),
+        'Q2': (None, 'AO3400A', 'AOS', 'C20917'),
+    }
+    for ref in ('C1', 'C3', 'C5'):
+        BASIC_SWAP[ref] = (None, 'CL21A225KBQNNNE', 'Samsung', 'C377773')
+    for ref in ('C2', 'C6', 'C30'):
+        BASIC_SWAP[ref] = (None, 'GRM21BR61H106KE43L', 'Murata', 'C440198')
+    for ref, (value, mpn, maker, code) in BASIC_SWAP.items():
+        part = parts[ref]
+        if value:
+            part['value'] = value
+        part.update(mpn=mpn, manufacturer=maker, lcsc=code)
+    for ref in ('Q1', 'Q2'):
+        parts[ref]['notes'] = 'AO3400A: SOT-23 1 G / 2 S / 3 D, 30 V, 48 mOhm max at VGS 2.5 V; BQ29700 FET per TI Fig. 9-1'
+    for ref in ('C1', 'C3', 'C5'):
+        parts[ref]['notes'] = '2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V'
+    for ref in ('C2', 'C6'):
+        parts[ref]['notes'] = '10 uF, 50 V, X5R, 0805; effective >=1 uF at 4.5 V'
+    parts['C30']['notes'] = '10 uF 50 V X5R; require >=6.8 uF effective at the memory rail (measure on the first article)'
+    parts['R32']['notes'] = '1%; controlled memory rail RC (75 ohm with C30)'
     overrides_path = OUT / 'placement.json'
     if overrides_path.exists():
         overrides = json.loads(overrides_path.read_text())

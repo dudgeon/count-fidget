@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "status": "Behavioural ngspice transient; not a measurement or transistor-level simulation",
- "model_sha256": "f38fbe34969f2a5969b465973295a14b7b04c13d15475f9faad9497ad3a91e5b",
+ "model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
  "script_sha256": "a102376da3cf1a858d903f498be6617d2fddebdf0566d1ad6ac7b66a17f4bd79",
  "ngspice": "** ngspice-42 : Circuit level simulation program",
  "corners": {

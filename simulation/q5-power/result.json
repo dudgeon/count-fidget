@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "scope": "Analytical bounds from stated datasheet values; not a simulation or measurement",
-  "model_sha256": "f38fbe34969f2a5969b465973295a14b7b04c13d15475f9faad9497ad3a91e5b",
-  "script_sha256": "4c13a0a2c6d787411d2193a0adc218519444f2536f160f372375b88ddeaf38b7",
+  "model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+  "script_sha256": "bae28081be1b02c81b7a73f2ae252844d0ee8221beab473be18c525e76cbb2b5",
   "latch": {
     "ton_typ_ms": 17.86,
     "tr_typ_ms": 7.52,

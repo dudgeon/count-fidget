@@ -1,11 +1,11 @@
 Comment,Designator,Footprint,Quantity,Manufacturer,Manufacturer Part Number,LCSC Part #,Assembly Role,Side,Qualification,Notes
 LIR2032 holder,BT1,CountFidgetQ5:BatteryHolder_QJ_CR2032-BS-6-1,1,Q&J,CR2032-BS-6-1,C70377,jlc_smt,bottom,Engineering candidate; physically unqualified,"SMD 2032 coin-cell holder, pad1 + (frame) / pad2 -; accepts the user-supplied rechargeable LIR2032 only (never a primary CR2032/ML2032); every insertion is a cold insertion - see USB-first procedure."
-2.2u,C1,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KE11L,C77081,jlc_smt,bottom,Engineering candidate; physically unqualified,"2.2 uF, 25 V, X7R; effective >=1 uF at 5 V"
-10u,C2,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,C84416,jlc_smt,bottom,Engineering candidate; physically unqualified,"10 uF, 25 V, X5R; effective >=1 uF at 4.5 V"
-2.2u,C3,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KE11L,C77081,jlc_smt,bottom,Engineering candidate; physically unqualified,"2.2 uF, 25 V, X7R"
+2.2u,C1,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Samsung,CL21A225KBQNNNE,C377773,jlc_smt,bottom,Engineering candidate; physically unqualified,"2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V"
+10u,C2,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61H106KE43L,C440198,jlc_smt,bottom,Engineering candidate; physically unqualified,"10 uF, 50 V, X5R, 0805; effective >=1 uF at 4.5 V"
+2.2u,C3,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Samsung,CL21A225KBQNNNE,C377773,jlc_smt,bottom,Engineering candidate; physically unqualified,"2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V"
 100n,C4,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,"100 nF, 50 V, X7R"
-2.2u,C5,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR71E225KE11L,C77081,jlc_smt,bottom,Engineering candidate; physically unqualified,
-10u,C6,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,C84416,jlc_smt,bottom,Engineering candidate; physically unqualified,10uF package rail bulk; include all MCU/FRAM/module capacitance in regulator stability and startup review; effective capacitance unmeasured
+2.2u,C5,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Samsung,CL21A225KBQNNNE,C377773,jlc_smt,bottom,Engineering candidate; physically unqualified,"2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V"
+10u,C6,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61H106KE43L,C440198,jlc_smt,bottom,Engineering candidate; physically unqualified,"10 uF, 50 V, X5R, 0805; effective >=1 uF at 4.5 V"
 100n,C7,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,100 nF MCU decoupler beside U1 DVCC/DVSS; short via connections required
 100n,C9,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,100 nF U5 supply decoupler after the R39 1k filter; nearby plane return
 100n,C10,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,100nF NRST bypass; recovery switch/test pad access required
@@ -15,7 +15,7 @@ LIR2032 holder,BT1,CountFidgetQ5:BatteryHolder_QJ_CR2032-BS-6-1,1,Q&J,CR2032-BS-
 100n,C20,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,50V X7R +/-10%; at DS1.VDD.
 4.7n,C28,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,FH,0603B472K500NT,C53987,jlc_smt,bottom,Engineering candidate; physically unqualified,4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only
 4.7n,C29,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,FH,0603B472K500NT,C53987,jlc_smt,bottom,Engineering candidate; physically unqualified,4.7nF 50V X7R slew capacitor to VIN; tON 17.9ms typical; typical slew only
-10u,C30,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61E106KA73L,C84416,jlc_smt,bottom,Engineering candidate; physically unqualified,10uF25V X5R; require>=6.8uF effective for proposed memory ramp budget
+10u,C30,CountFidgetQ5:Capacitor_SMD_C_0805_2012Metric,1,Murata,GRM21BR61H106KE43L,C440198,jlc_smt,bottom,Engineering candidate; physically unqualified,10 uF 50 V X5R; require >=6.8 uF effective at the memory rail (measure on the first article)
 100n,C31,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group
 100n,C32,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group
 100n,C33,CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric,1,YAGEO,CC0603KRX7R9BB104,C14663,jlc_smt,bottom,Engineering candidate; physically unqualified,100nF local STM32 supply bypass; one per VDD/VDDA/USB supply group
@@ -32,24 +32,24 @@ BAT54C,D3,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,Nexperia,"BAT54C,215",C37704
 1N4148WS,D4,CountFidgetQ5:Diode_SMD_D_SOD-323,1,Changjiang,1N4148WS,C2128,jlc_smt,bottom,Engineering candidate; physically unqualified,VBUS into U7 ON through R38: valid USB always powers the board for charging and ROM DFU. Pad1 cathode.
 SPI OLED module 128x64,DS1,CountFidgetQ5:HS96L01W4S03_Module_7Pin,1,HS,HS96L01W4S03,C5139758,home_through_hole,top,Engineering candidate; physically unqualified,"Drawing controls: PCB27.30x27.80mm, SSD1315, supplied 4-wire SPI. External supply rated3–5V; logic inputs<=3.3V. Exact header height/internal capacitance/current and assembly mounting remain first-article gates; no custom glass/FPC soldering."
 USB-C power and DFU,J1,CountFidgetQ5:Connector_USB_USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,1,GCT,USB4105-GF-A-120,C5184243,jlc_smt,bottom,Engineering candidate; physically unqualified,"1.20+/-0.15mm shell-stake suffix on1mmPCB; nominal0.20mm protrusion; joint/fillet and tolerance inspection required. USB FS differential routing, shield and ESD validation required."
-Discharge FET,Q1,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMN2056U-13,C5208862,jlc_smt,bottom,Engineering candidate; physically unqualified,; exact same-device reel suffix -13; no electrical polarity change
-Charge FET,Q2,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,Diodes Incorporated,DMN2056U-13,C5208862,jlc_smt,bottom,Engineering candidate; physically unqualified,; exact same-device reel suffix -13; no electrical polarity change
+Discharge FET,Q1,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,AOS,AO3400A,C20917,jlc_smt,bottom,Engineering candidate; physically unqualified,"AO3400A: SOT-23 1 G / 2 S / 3 D, 30 V, 48 mOhm max at VGS 2.5 V; BQ29700 FET per TI Fig. 9-1"
+Charge FET,Q2,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,AOS,AO3400A,C20917,jlc_smt,bottom,Engineering candidate; physically unqualified,"AO3400A: SOT-23 1 G / 2 S / 3 D, 30 V, 48 mOhm max at VGS 2.5 V; BQ29700 FET per TI Fig. 9-1"
 Charge enable,Q3,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,CJ,2N7002,C8545,jlc_smt,bottom,Engineering candidate; physically unqualified,Upper series charge-enable N-MOSFET; gate has ground pulldown
 Charge enable hot gate,Q4,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,CJ,2N7002,C8545,jlc_smt,bottom,Engineering candidate; physically unqualified,Lower series charge-enable N-MOSFET; gate has ground pulldown
 COUNT key level shift,Q5,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,CJ,2N7002,C8545,jlc_smt,bottom,Engineering candidate; physically unqualified,Mirrors the SYS-referenced COUNT key onto the unchanged active-low COUNT_N (R17/C11) input.
 5.1k,R1,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF5101T5E,C23186,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 5.1k,R2,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF5101T5E,C23186,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 24k,R3,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF2402T5E,C23352,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
-16.5k,R4,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0716K5L,C273769,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
+18k,R4,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1802T5E,C25810,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 10k,R5,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1002T5E,C25804,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 100k,R6,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1003T5E,C25803,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 330,R7,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF3300T5E,C23138,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 2.2k,R8,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF2201T5E,C4190,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 3.3,R9,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF330KT5E,C22979,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
-57.6k,R10,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0757K6L,C245983,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
-115k,R11,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1153T5E,C22783,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
-24.3k,R12,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,Yageo,RC0603FR-0724K3L,C276290,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
-16.2k,R13,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1622T5E,C22885,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
+56k,R10,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF5602T5E,C23206,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
+82k,R11,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF8202T5E,C23254,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
+18k,R12,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1802T5E,C25810,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
+12k,R13,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1202T5E,C22790,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
 100k,R14,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1003T5E,C25803,jlc_smt,bottom,Engineering candidate; physically unqualified,Local upper charge-enable gate pulldown; keep connected close to Q3 gate
 100k,R15,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1003T5E,C25803,jlc_smt,bottom,Engineering candidate; physically unqualified,Local lower charge-enable gate pulldown; keep connected close to Q4 gate
 10k,R16,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1002T5E,C25804,jlc_smt,bottom,Engineering candidate; physically unqualified,"1%, 0603, 0.1 W"
@@ -61,7 +61,7 @@ COUNT key level shift,Q5,CountFidgetQ5:Package_TO_SOT_SMD_SOT-23,1,CJ,2N7002,C85
 100k,R29,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1003T5E,C25803,jlc_smt,bottom,Engineering candidate; physically unqualified,100k CS pull-up to switched module supply; never to always-on rail
 150k,R30,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,Yageo,RT0603BRD07150KL,C326734,jlc_smt,bottom,Engineering candidate; physically unqualified,"0.1%,25ppm/C; feedback upper resistor"
 49.9k,R31,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,Yageo,RT0603BRD0749K9L,C705780,jlc_smt,bottom,Engineering candidate; physically unqualified,"0.1%,25ppm/C; feedback lower resistor"
-68,R32,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF680JT5E,C27592,jlc_smt,bottom,Engineering candidate; physically unqualified,1%; controlled memory rail RC
+75,R32,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF750JT5E,C4275,jlc_smt,bottom,Engineering candidate; physically unqualified,1%; controlled memory rail RC (75 ohm with C30)
 100k,R33,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1003T5E,C25803,jlc_smt,bottom,Engineering candidate; physically unqualified,100k external pull-up; MCU CS must be open-drain
 100k,R34,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1003T5E,C25803,jlc_smt,bottom,Engineering candidate; physically unqualified,100k PWR_KEY pull-down; draws current only while COUNT is held.
 1M,R35,CountFidgetQ5:Resistor_SMD_R_0603_1608Metric,1,UNI-ROYAL,0603WAF1004T5E,C22935,jlc_smt,bottom,Engineering candidate; physically unqualified,1M U7 ON pull-down: the TPS22917 smart pull-down disconnects after ON is driven high (datasheet 7.3).

@@ -15,6 +15,8 @@
 | Printed MX keycaps; enclosure shrunk and USB opening corrected (#4) | No unsourced keycaps; standard USB-C plugs can mate | Implemented; print and cable fit are gates |
 | Hot-swap MX sockets (CPG151101S11-16, vendor SMT) + loose clicky CPG151101D13 switches; PCB 1.6 mm | JLC stocks no clicky 5-pin MX switch it can place. A soft-tactile switch was rejected because the audible click is central to the product (user research). The sockets make the keys solder-free and need a 1.6 mm board. | Implemented, design lock; socket seating and retention are first-article gate G2b |
 | Ten generic passives/FETs moved to JLC Basic parts | Each Extended type costs a $3.07 feeder fee; ~$31 saved per order. Precision dividers and the specified MLCC/diode parts are unchanged. | Implemented, re-verified |
+| Basic parts wherever the circuit allows (26 Sep) | Each Extended type costs $3.07 per order. Nine types were moved to Basic with re-derived values (charge 16.7 mA, window 7.3–35.8 °C). The 16 remaining Extended types are justified in REVIEW-Q5 | Implemented, re-verified |
+| First-order de-risking (26 Sep) | Independent pinout, footprint and dead-on-arrival checks; R39 filter on U5's supply; C40 10 nF; JLC-corrected CPLs | Implemented, re-verified |
 | Two JLCPCB variants: A = user solders the display header; B = JLC fits the display | Owner request. B costs ~$30 more at JLC (estimate) and removes all home soldering. | PCB price observed; parts-matched PCBA quote needs the owner's signed-in upload ([JLC-QUOTE-Q5](../procurement/q5/JLC-QUOTE-Q5.md)) |
 
 ## Previous decisions — 23 September 2026

@@ -117,9 +117,9 @@
  },
  "C1": {
   "ref": "C1",
-  "lcsc": "C77081",
+  "lcsc": "C377773",
   "package": "C0805",
-  "mpn": "GRM21BR71E225KE11L",
+  "mpn": "CL21A225KBQNNNE",
   "fp": "Capacitor_SMD_C_0805_2012Metric",
   "local": {
    "deg": 0,
@@ -233,9 +233,9 @@
  },
  "C2": {
   "ref": "C2",
-  "lcsc": "C84416",
+  "lcsc": "C440198",
   "package": "C0805",
-  "mpn": "GRM21BR61E106KA73L",
+  "mpn": "GRM21BR61H106KE43L",
   "fp": "Capacitor_SMD_C_0805_2012Metric",
   "local": {
    "deg": 0,
@@ -349,9 +349,9 @@
  },
  "C3": {
   "ref": "C3",
-  "lcsc": "C77081",
+  "lcsc": "C377773",
   "package": "C0805",
-  "mpn": "GRM21BR71E225KE11L",
+  "mpn": "CL21A225KBQNNNE",
   "fp": "Capacitor_SMD_C_0805_2012Metric",
   "local": {
    "deg": 0,
@@ -581,9 +581,9 @@
  },
  "C5": {
   "ref": "C5",
-  "lcsc": "C77081",
+  "lcsc": "C377773",
   "package": "C0805",
-  "mpn": "GRM21BR71E225KE11L",
+  "mpn": "CL21A225KBQNNNE",
   "fp": "Capacitor_SMD_C_0805_2012Metric",
   "local": {
    "deg": 0,
@@ -697,9 +697,9 @@
  },
  "C6": {
   "ref": "C6",
-  "lcsc": "C84416",
+  "lcsc": "C440198",
   "package": "C0805",
-  "mpn": "GRM21BR61E106KA73L",
+  "mpn": "GRM21BR61H106KE43L",
   "fp": "Capacitor_SMD_C_0805_2012Metric",
   "local": {
    "deg": 0,
@@ -1857,9 +1857,9 @@
  },
  "C30": {
   "ref": "C30",
-  "lcsc": "C84416",
+  "lcsc": "C440198",
   "package": "C0805",
-  "mpn": "GRM21BR61E106KA73L",
+  "mpn": "GRM21BR61H106KE43L",
   "fp": "Capacitor_SMD_C_0805_2012Metric",
   "local": {
    "deg": 0,
@@ -3920,9 +3920,9 @@
  },
  "Q1": {
   "ref": "Q1",
-  "lcsc": "C5208862",
+  "lcsc": "C20917",
   "package": "SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR",
-  "mpn": "DMN2056U-13",
+  "mpn": "AO3400A",
   "fp": "Package_TO_SOT_SMD_SOT-23",
   "local": {
    "deg": 180,
@@ -4036,9 +4036,9 @@
  },
  "Q2": {
   "ref": "Q2",
-  "lcsc": "C5208862",
+  "lcsc": "C20917",
   "package": "SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR",
-  "mpn": "DMN2056U-13",
+  "mpn": "AO3400A",
   "fp": "Package_TO_SOT_SMD_SOT-23",
   "local": {
    "deg": 180,
@@ -4848,9 +4848,9 @@
  },
  "R4": {
   "ref": "R4",
-  "lcsc": "C273769",
+  "lcsc": "C25810",
   "package": "R0603",
-  "mpn": "RC0603FR-0716K5L",
+  "mpn": "0603WAF1802T5E",
   "fp": "Resistor_SMD_R_0603_1608Metric",
   "local": {
    "deg": 0,
@@ -5544,9 +5544,9 @@
  },
  "R10": {
   "ref": "R10",
-  "lcsc": "C245983",
+  "lcsc": "C23206",
   "package": "R0603",
-  "mpn": "RC0603FR-0757K6L",
+  "mpn": "0603WAF5602T5E",
   "fp": "Resistor_SMD_R_0603_1608Metric",
   "local": {
    "deg": 0,
@@ -5660,9 +5660,9 @@
  },
  "R11": {
   "ref": "R11",
-  "lcsc": "C22783",
+  "lcsc": "C23254",
   "package": "R0603",
-  "mpn": "0603WAF1153T5E",
+  "mpn": "0603WAF8202T5E",
   "fp": "Resistor_SMD_R_0603_1608Metric",
   "local": {
    "deg": 0,
@@ -5776,9 +5776,9 @@
  },
  "R12": {
   "ref": "R12",
-  "lcsc": "C276290",
+  "lcsc": "C25810",
   "package": "R0603",
-  "mpn": "RC0603FR-0724K3L",
+  "mpn": "0603WAF1802T5E",
   "fp": "Resistor_SMD_R_0603_1608Metric",
   "local": {
    "deg": 0,
@@ -5892,9 +5892,9 @@
  },
  "R13": {
   "ref": "R13",
-  "lcsc": "C22885",
+  "lcsc": "C22790",
   "package": "R0603",
-  "mpn": "0603WAF1622T5E",
+  "mpn": "0603WAF1202T5E",
   "fp": "Resistor_SMD_R_0603_1608Metric",
   "local": {
    "deg": 0,
@@ -7284,9 +7284,9 @@
  },
  "R32": {
   "ref": "R32",
-  "lcsc": "C27592",
+  "lcsc": "C4275",
   "package": "R0603",
-  "mpn": "0603WAF680JT5E",
+  "mpn": "0603WAF750JT5E",
   "fp": "Resistor_SMD_R_0603_1608Metric",
   "local": {
    "deg": 0,

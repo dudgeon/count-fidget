@@ -100,7 +100,7 @@ def groups(parts):
     return result
 
 
-EXPECTED = dict(references=96, fitted=82, smt=81, home=1, features=14, types=43)
+EXPECTED = dict(references=96, fitted=82, smt=81, home=1, features=14, types=42)
 SCREW = dict(mpn='PA2X6nie', lcsc='C357360', manufacturer='Shuntian', quantity=4,
              description='M2 x 6 cross pan-head self-tapping screw (nickel)')
 DS1_FOOTPRINT = ROOT / 'electronics/q5/CountFidgetQ5.pretty/HS96L01W4S03_Module_7Pin.kicad_mod'

@@ -30,7 +30,7 @@ The estimates come from `scripts/estimate_q5_jlc_cost.py --qty {2,5,10}` and are
 - the joint counts of the routed board;
 - the observed PCB and shipping figures.
 
-The board has 278 SMT joints and 42 SMT part types, of which 17 are Basic (no feeder fee) and 25 are Extended at $3.07 each.
+The board has 278 SMT joints and 41 SMT part types. 25 are Basic (no feeder fee) and **16 are Extended** at $3.07 each; this was 25 Extended before the 26 Sep Basic-part review.
 
 The 5-bare-PCB page price ($4.00 + ENIG $16.90 = **$20.90**, DHL $29.45, 0.16 kg) was observed the same way. The 2-board case is 5 bare PCBs with 2 assembled; JLC's PCBA minimum is 2.
 
@@ -38,14 +38,14 @@ The 5-bare-PCB page price ($4.00 + ENIG $16.90 = **$20.90**, DHL $29.45, 0.16 kg
 |---|---|---|---|
 | PCB (observed) | 20.90 / 20.90 | 20.90 / 20.90 | 22.10 / 22.10 |
 | Setup + stencil + joints | 10.60 / 10.60 | 11.93 / 11.93 | 14.16 / 14.16 |
-| Feeder loading (25 Extended types) | 76.75 / 76.75 | 76.75 / 76.75 | 76.75 / 76.75 |
-| SMT components | 30.83 / 30.83 | 68.12 / 68.12 | 136.24 / 136.24 |
+| Feeder loading (16 Extended types) | 49.12 / 49.12 | 49.12 / 49.12 | 49.12 / 49.12 |
+| SMT components | 30.75 / 30.75 | 67.91 / 67.91 | 135.81 / 135.81 |
 | DS1 + header, THT feeders, hand joints, labor | — / 14.86 | — / 20.23 | — / 30.74 |
-| **Subtotal** | **139.08 / 153.94** | **177.70 / 197.93** | **249.25 / 279.99** |
-| **With DHL DDP** | **168.53 / 183.39** | **207.15 / 227.38** | **278.70 / 309.44** |
-| **Per board, shipped** | **84.27 / 91.69** | **41.43 / 45.48** | **27.87 / 30.94** |
+| **Subtotal** | **111.37 / 126.23** | **149.86 / 170.09** | **221.19 / 251.93** |
+| **With DHL DDP** | **140.82 / 155.68** | **179.31 / 199.54** | **250.64 / 281.38** |
+| **Per board, shipped** | **70.41 / 77.84** | **35.86 / 39.91** | **25.06 / 28.14** |
 
-- Standard PCBA adds about $8–12 per order.
+- Standard PCBA adds about $35 per order.
 - Soldering the display yourself (variant A) saves $3–7.40 per board at JLC, but you then buy the display and header from LCSC, about $1.9–2.3 per board plus LCSC shipping.
 - **Owner decision (26 Sep 2026): variant B.** Self-soldering is only wanted when it saves more than $10 per board.
 
@@ -61,7 +61,7 @@ Caveats:
 
 ## Placement file: use the JLC-corrected CPL
 
-The 26 Sep footprint check (`scripts/q5_jlc_footprint_check/REPORT.md`) fitted JLC's own EasyEDA footprint for every part onto our pads. All 43 LCSC parts match: no pad-order or mirror error. Our raw KiCad CPL would still show many parts rotated wrong in JLC's preview, and SW1/SW2, J1 and DS1 offset by 1.3–12.4 mm.
+The 26 Sep footprint check (`scripts/q5_jlc_footprint_check/REPORT.md`) fitted JLC's own EasyEDA footprint for every part onto our pads. All LCSC parts match (re-run after every BOM change): no pad-order or mirror error. Our raw KiCad CPL would still show many parts rotated wrong in JLC's preview, and SW1/SW2, J1 and DS1 offset by 1.3–12.4 mm.
 
 Upload the corrected file:
 - variant A: `CPL-JLCPCB-Q5-JLC-CORRECTED.csv`;

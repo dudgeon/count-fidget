@@ -27,7 +27,7 @@
  },
  {
   "ref": "C1",
-  "lcsc": "C77081",
+  "lcsc": "C377773",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -53,7 +53,7 @@
  },
  {
   "ref": "C2",
-  "lcsc": "C84416",
+  "lcsc": "C440198",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -79,7 +79,7 @@
  },
  {
   "ref": "C3",
-  "lcsc": "C77081",
+  "lcsc": "C377773",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -131,7 +131,7 @@
  },
  {
   "ref": "C5",
-  "lcsc": "C77081",
+  "lcsc": "C377773",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -157,7 +157,7 @@
  },
  {
   "ref": "C6",
-  "lcsc": "C84416",
+  "lcsc": "C440198",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -417,7 +417,7 @@
  },
  {
   "ref": "C30",
-  "lcsc": "C84416",
+  "lcsc": "C440198",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -885,7 +885,7 @@
  },
  {
   "ref": "Q1",
-  "lcsc": "C5208862",
+  "lcsc": "C20917",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -911,7 +911,7 @@
  },
  {
   "ref": "Q2",
-  "lcsc": "C5208862",
+  "lcsc": "C20917",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -1093,7 +1093,7 @@
  },
  {
   "ref": "R4",
-  "lcsc": "C273769",
+  "lcsc": "C25810",
   "layer": "Bottom",
   "cpl_rot": 0.0,
   "predicted_ok_rot": [
@@ -1249,7 +1249,7 @@
  },
  {
   "ref": "R10",
-  "lcsc": "C245983",
+  "lcsc": "C23206",
   "layer": "Bottom",
   "cpl_rot": -90.0,
   "predicted_ok_rot": [
@@ -1275,7 +1275,7 @@
  },
  {
   "ref": "R11",
-  "lcsc": "C22783",
+  "lcsc": "C23254",
   "layer": "Bottom",
   "cpl_rot": 180.0,
   "predicted_ok_rot": [
@@ -1301,7 +1301,7 @@
  },
  {
   "ref": "R12",
-  "lcsc": "C276290",
+  "lcsc": "C25810",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -1327,7 +1327,7 @@
  },
  {
   "ref": "R13",
-  "lcsc": "C22885",
+  "lcsc": "C22790",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -1639,7 +1639,7 @@
  },
  {
   "ref": "R32",
-  "lcsc": "C27592",
+  "lcsc": "C4275",
   "layer": "Bottom",
   "cpl_rot": 0.0,
   "predicted_ok_rot": [

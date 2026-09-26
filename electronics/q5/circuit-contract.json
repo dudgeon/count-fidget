@@ -1,5 +1,5 @@
 {
-  "revision": "Q5 soft-power latch / on-board LIR2032 holder / STM32 SPI module circuit contract | design lock 25 Sep 2026: hot-swap sockets, R38/C40, 1.6 mm board | first-order review 26 Sep 2026: R39/U5_VCC filter, C40 10 nF",
+  "revision": "Q5 soft-power latch / on-board LIR2032 holder / STM32 SPI module circuit contract | design lock 25 Sep 2026: hot-swap sockets, R38/C40, 1.6 mm board | first-order review 26 Sep 2026: R39/U5_VCC filter, C40 10 nF | Basic-part review 26 Sep 2026: R4/R10-R13/R32 values, Q1/Q2 AO3400A, 2.2u/10u 50 V",
   "manufacturing_released": false,
   "review_method": "Pin/net requirements for the new and changed Q5 parts were transcribed from the primary pin tables: TI TPS22917 Table 4-1 (1 VIN, 2 GND, 3 ON, 4 CT, 5 QOD, 6 VOUT), TI BQ25185 Table 4-1 (STAT2 pin 3, STAT1 pin 9), TI TLV7012 section 5 (DGK and DDF share OUTA/INA-/INA+/VEE/INB+/INB-/OUTB/VCC), Nexperia BAT54C (1 A1, 2 A2, 3 common K), SOD-323 pad 1 cathode, 2N7002 (1 G, 2 S, 3 D), Q&J CR2032-BS-6-1 supplier land pattern (pad 1 +, pad 2 -) and ST DS10689 LQFP48 (PA4 14, PA5 15, PA6 16, PB2 20). Unchanged Q4 entries are retained. The author of the change performed this check; an independent adversarial review is still required.",
   "parts": {
@@ -359,7 +359,7 @@
       }
     },
     "R32": {
-      "value": "68",
+      "value": "75",
       "pins": {
         "1": "VLOGIC",
         "2": "VFRAM"

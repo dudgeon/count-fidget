@@ -1031,7 +1031,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "; exact same-device reel suffix -13; no electrical polarity change"
+		(property "Description" "AO3400A: SOT-23 1 G / 2 S / 3 D, 30 V, 48 mOhm max at VGS 2.5 V; BQ29700 FET per TI Fig. 9-1"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -1056,7 +1056,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "DMN2056U-13"
+		(property "MPN" "AO3400A"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -2616,7 +2616,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "16.5k"
+		(property "Value" "18k"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -2666,7 +2666,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-0716K5L"
+		(property "MPN" "0603WAF1802T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -7121,7 +7121,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10uF package rail bulk; include all MCU/FRAM/module capacitance in regulator stability and startup review; effective capacitance unmeasured"
+		(property "Description" "10 uF, 50 V, X5R, 0805; effective >=1 uF at 4.5 V"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -7146,7 +7146,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM21BR61E106KA73L"
+		(property "MPN" "GRM21BR61H106KE43L"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -8103,7 +8103,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10uF25V X5R; require>=6.8uF effective for proposed memory ramp budget"
+		(property "Description" "10 uF 50 V X5R; require >=6.8 uF effective at the memory rail (measure on the first article)"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -8128,7 +8128,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM21BR61E106KA73L"
+		(property "MPN" "GRM21BR61H106KE43L"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -8764,7 +8764,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10 uF, 25 V, X5R; effective >=1 uF at 4.5 V"
+		(property "Description" "10 uF, 50 V, X5R, 0805; effective >=1 uF at 4.5 V"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -8789,7 +8789,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM21BR61E106KA73L"
+		(property "MPN" "GRM21BR61H106KE43L"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -9503,7 +9503,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "115k"
+		(property "Value" "82k"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -9553,7 +9553,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF1153T5E"
+		(property "MPN" "0603WAF8202T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -10165,7 +10165,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "24.3k"
+		(property "Value" "18k"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -10215,7 +10215,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-0724K3L"
+		(property "MPN" "0603WAF1802T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -10467,7 +10467,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "16.2k"
+		(property "Value" "12k"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -10517,7 +10517,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF1622T5E"
+		(property "MPN" "0603WAF1202T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -11054,7 +11054,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "; exact same-device reel suffix -13; no electrical polarity change"
+		(property "Description" "AO3400A: SOT-23 1 G / 2 S / 3 D, 30 V, 48 mOhm max at VGS 2.5 V; BQ29700 FET per TI Fig. 9-1"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -11079,7 +11079,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "DMN2056U-13"
+		(property "MPN" "AO3400A"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -12469,7 +12469,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "2.2 uF, 25 V, X7R; effective >=1 uF at 5 V"
+		(property "Description" "2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -12494,7 +12494,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM21BR71E225KE11L"
+		(property "MPN" "CL21A225KBQNNNE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -13198,7 +13198,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "68"
+		(property "Value" "75"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -13223,7 +13223,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "1%; controlled memory rail RC"
+		(property "Description" "1%; controlled memory rail RC (75 ohm with C30)"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -13248,7 +13248,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF680JT5E"
+		(property "MPN" "0603WAF750JT5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -13374,7 +13374,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "2.2 uF, 25 V, X7R"
+		(property "Description" "2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -13399,7 +13399,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM21BR71E225KE11L"
+		(property "MPN" "CL21A225KBQNNNE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -15312,7 +15312,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "57.6k"
+		(property "Value" "56k"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -15362,7 +15362,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RC0603FR-0757K6L"
+		(property "MPN" "0603WAF5602T5E"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -16633,7 +16633,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.2 uF, 50 V, X5R, 0805; effective >=1 uF at 5 V"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -16658,7 +16658,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM21BR71E225KE11L"
+		(property "MPN" "CL21A225KBQNNNE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
