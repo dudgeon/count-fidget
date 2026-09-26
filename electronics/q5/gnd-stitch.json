@@ -1,0 +1,431 @@
+{
+  "revision": "Q5",
+  "method": "Plan local GND stitching vias beside Q5 bypass/ground pads on the routed board.",
+  "vias": [
+    {
+      "ref": "C1",
+      "pad": "2",
+      "pad_xy": [
+        35.6,
+        2.65
+      ],
+      "via": [
+        35.198,
+        1.68
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C2",
+      "pad": "2",
+      "pad_xy": [
+        33.3,
+        2.35
+      ],
+      "via": [
+        32.898,
+        1.38
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C3",
+      "pad": "2",
+      "pad_xy": [
+        40.4,
+        14.25
+      ],
+      "via": [
+        39.998,
+        13.28
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C5",
+      "pad": "2",
+      "pad_xy": [
+        39.0,
+        43.65
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "C6",
+      "pad": "2",
+      "pad_xy": [
+        38.9,
+        39.65
+      ],
+      "via": [
+        40.1,
+        39.65
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C9",
+      "pad": "2",
+      "pad_xy": [
+        13.0,
+        43.625
+      ],
+      "via": [
+        12.03,
+        44.027
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C20",
+      "pad": "2",
+      "pad_xy": [
+        12.475,
+        1.2
+      ],
+      "via": [
+        13.525,
+        1.2
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C30",
+      "pad": "2",
+      "pad_xy": [
+        25.8,
+        46.65
+      ],
+      "via": [
+        26.79,
+        45.66
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C31",
+      "pad": "2",
+      "pad_xy": [
+        17.775,
+        38.2
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "C32",
+      "pad": "2",
+      "pad_xy": [
+        20.975,
+        38.2
+      ],
+      "via": [
+        21.945,
+        38.602
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C33",
+      "pad": "2",
+      "pad_xy": [
+        28.075,
+        34.6
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "C34",
+      "pad": "2",
+      "pad_xy": [
+        28.175,
+        27.0
+      ],
+      "via": [
+        29.024,
+        26.151
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C35",
+      "pad": "2",
+      "pad_xy": [
+        14.2,
+        27.425
+      ],
+      "via": [
+        15.25,
+        27.425
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C36",
+      "pad": "2",
+      "pad_xy": [
+        25.375,
+        41.2
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "C37",
+      "pad": "2",
+      "pad_xy": [
+        4.575,
+        29.6
+      ],
+      "via": [
+        3.726,
+        28.751
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C38",
+      "pad": "2",
+      "pad_xy": [
+        33.4,
+        22.525
+      ],
+      "via": [
+        34.45,
+        22.525
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C39",
+      "pad": "2",
+      "pad_xy": [
+        25.79,
+        36.195
+      ],
+      "via": [
+        27.453,
+        35.506
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C7",
+      "pad": "2",
+      "pad_xy": [
+        28.175,
+        28.6
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "C10",
+      "pad": "2",
+      "pad_xy": [
+        13.02,
+        33.805
+      ],
+      "via": [
+        14.151,
+        34.936
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C11",
+      "pad": "2",
+      "pad_xy": [
+        8.275,
+        31.3
+      ],
+      "via": [
+        9.475,
+        31.3
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "C12",
+      "pad": "2",
+      "pad_xy": [
+        3.415,
+        33.2
+      ],
+      "via": [
+        3.817,
+        32.23
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "U1",
+      "pad": "8",
+      "pad_xy": [
+        16.4375,
+        31.05
+      ],
+      "via": [
+        17.637,
+        31.05
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "U1",
+      "pad": "23",
+      "pad_xy": [
+        22.85,
+        27.6375
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "U1",
+      "pad": "35",
+      "pad_xy": [
+        24.7625,
+        34.05
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "U1",
+      "pad": "47",
+      "pad_xy": [
+        18.35,
+        35.9625
+      ],
+      "via": [
+        18.35,
+        34.762
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "U2",
+      "pad": "5",
+      "pad_xy": [
+        33.9,
+        8.2
+      ],
+      "via": [
+        34.536,
+        7.564
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "U3",
+      "pad": "3",
+      "pad_xy": [
+        38.4125,
+        47.48
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "U6",
+      "pad": "2",
+      "pad_xy": [
+        6.7625,
+        2.2
+      ],
+      "via": [
+        5.654,
+        2.659
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "U7",
+      "pad": "2",
+      "pad_xy": [
+        39.6,
+        35.7375
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "U8",
+      "pad": "4",
+      "pad_xy": [
+        18.525,
+        45.695
+      ],
+      "via": [
+        18.181,
+        44.864
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "D1",
+      "pad": "2",
+      "pad_xy": [
+        30.8,
+        28.3375
+      ],
+      "via": [
+        31.259,
+        27.229
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "D2",
+      "pad": "2",
+      "pad_xy": [
+        28.02,
+        32.9375
+      ],
+      "via": null,
+      "reason": "no clear position"
+    },
+    {
+      "ref": "R9",
+      "pad": "2",
+      "pad_xy": [
+        6.0,
+        21.375
+      ],
+      "via": [
+        7.05,
+        21.375
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "R31",
+      "pad": "2",
+      "pad_xy": [
+        40.8,
+        44.575
+      ],
+      "via": [
+        39.75,
+        44.575
+      ],
+      "stub_width_mm": 0.2
+    },
+    {
+      "ref": "R37",
+      "pad": "2",
+      "pad_xy": [
+        4.625,
+        28.0
+      ],
+      "via": [
+        5.367,
+        27.258
+      ],
+      "stub_width_mm": 0.2
+    }
+  ]
+}

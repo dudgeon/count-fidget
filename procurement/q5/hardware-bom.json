@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "revision": "Q5 engineering candidate",
+  "authorization": "Engineering only; quote/vendor pause remains. No purchase or manufacturing release.",
+  "scope": "Separate stacked hardware, not an independent native PCB footprint or duplicate DS1 module entry. Battery, cable, fasteners and other offboard items are outside this one-item entry.",
+  "items": [
+    {
+      "hardware_id": "DS1-INTERPOSER",
+      "manufacturer": "XFCN",
+      "mpn": "PZ254V-11-07P",
+      "jlc_part": "C492406",
+      "description": "Straight seven-position 2.54 mm male header joining DS1 OLED module to host PCB",
+      "quantity_per_board": 1,
+      "quantity_for_10": 10,
+      "screening_spares": 2,
+      "screening_required": 12,
+      "available_order_quantity": 52108,
+      "minimum_order": 1,
+      "observed_at": "2026-09-25T11:07:49.517Z",
+      "catalog_source": "https://jlcpcb.com/partdetail/C492406",
+      "manufacturer_drawing": "https://datasheet.lcsc.com/datasheet/pdf/3b85a1cdf6ed945f2e278f00c1e42442.pdf?productCode=C492406",
+      "native_location": "DS1 seven plated host holes; do not add a second footprint or independent placement row",
+      "solder_joints_per_assembly": 14,
+      "solder_joint_scope": "Seven module joints plus seven host-board joints; seven electrical interconnections, one header",
+      "dimensions_mm": {
+        "pitch": 2.54,
+        "square_pin_width": 0.64,
+        "terminal_span": 15.24,
+        "insulator": [
+          17.78,
+          2.5,
+          2.5
+        ],
+        "long_pin": 6.1,
+        "short_pin": 3.0,
+        "recommended_finished_hole": 1.02
+      },
+      "assembly_status": "Exact module photograph shows bare plated holes, but loose header inclusion is unconfirmed. Plan one separately accounted header; do not double purchase if supplied by module vendor. Stacked height, solder access, clipping and fillet process need physical/assembler verification. No vendor contact made during the quote pause.",
+      "retail_stock": {
+        "lcsc_part": "C492406",
+        "mpn": "PZ254V-11-07P",
+        "observed_at": "2026-09-25T11:07:51.040Z",
+        "source": "https://www.lcsc.com/product-detail/C492406.html",
+        "method": "LCSC public product API (read-only)",
+        "in_stock": 50530,
+        "minimum_order": 10,
+        "order_multiple": 1000,
+        "unit_price_usd_at_1": null,
+        "unit_price_usd_at_10": 0.0461,
+        "references": [
+          "DS1-INTERPOSER"
+        ],
+        "quantity_per_board": 1,
+        "quantity_for_10": 10,
+        "screening_spares": 2,
+        "rounded_screening_quantity": 1000,
+        "passes_retail_stock_screen": true
+      }
+    }
+  ]
+}

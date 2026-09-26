@@ -1,0 +1,153 @@
+{
+ "elf": "/home/user/count-fidget/firmware/q4-stm32/build/count-fidget-Q4-stm32.elf",
+ "session_1": {
+  "presses": 1,
+  "window_s": 36.0,
+  "charge_mAs": 53.30105008291191,
+  "breakdown_mAs": {
+   "mcu_stop": 0.019099541586906157,
+   "oled": 30.05814762499999,
+   "fram": 2.747105697498527,
+   "adc": 1.4999657687501233,
+   "mcu_run": 12.32357926249961,
+   "mcu_sleep": 6.653152187563922
+  },
+  "final_count": 1,
+  "stops": 3
+ },
+ "session_10": {
+  "presses": 10,
+  "window_s": 45.0,
+  "charge_mAs": 70.24388391417338,
+  "breakdown_mAs": {
+   "mcu_stop": 0.019102841586906127,
+   "oled": 39.057144125,
+   "fram": 3.557020697496271,
+   "adc": 1.9499157687503328,
+   "mcu_run": 17.507247174998188,
+   "mcu_sleep": 8.153453306314493
+  },
+  "final_count": 10,
+  "stops": 3
+ },
+ "session_30": {
+  "presses": 30,
+  "window_s": 65.0,
+  "charge_mAs": 107.96340382041168,
+  "breakdown_mAs": {
+   "mcu_stop": 0.019102841586906127,
+   "oled": 59.057148250000004,
+   "fram": 5.357020697493391,
+   "adc": 2.9499157687508437,
+   "mcu_run": 29.12253698749631,
+   "mcu_sleep": 11.45767927506184
+  },
+  "final_count": 30,
+  "stops": 3
+ },
+ "idle_mA": {
+  "as built (TLV76701 + 150k/49.9k)": 0.0828,
+  "3.3 V nano-IQ LDO (TPS7A0233)": 0.016825000000000003,
+  "key power-off via U7 latch (#12)": 0.0082
+ },
+ "profiles": {
+  "as built (TLV76701 + 150k/49.9k) | idle / on a shelf": {
+   "mAh_per_day": 1.987,
+   "days": {
+    "40 mAh min x 0.9 usable": 17.7,
+    "45 mAh nominal x 0.9 usable": 19.9
+   }
+  },
+  "as built (TLV76701 + 150k/49.9k) | light: 10 sessions x 10 presses": {
+   "mAh_per_day": 2.181,
+   "days": {
+    "40 mAh min x 0.9 usable": 16.2,
+    "45 mAh nominal x 0.9 usable": 18.2
+   }
+  },
+  "as built (TLV76701 + 150k/49.9k) | moderate: 30 sessions x 10 presses": {
+   "mAh_per_day": 2.569,
+   "days": {
+    "40 mAh min x 0.9 usable": 13.8,
+    "45 mAh nominal x 0.9 usable": 15.5
+   }
+  },
+  "as built (TLV76701 + 150k/49.9k) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 4.166,
+   "days": {
+    "40 mAh min x 0.9 usable": 8.5,
+    "45 mAh nominal x 0.9 usable": 9.6
+   }
+  },
+  "3.3 V nano-IQ LDO (TPS7A0233) | idle / on a shelf": {
+   "mAh_per_day": 0.404,
+   "days": {
+    "40 mAh min x 0.9 usable": 80.2,
+    "45 mAh nominal x 0.9 usable": 90.2
+   }
+  },
+  "3.3 V nano-IQ LDO (TPS7A0233) | light: 10 sessions x 10 presses": {
+   "mAh_per_day": 0.598,
+   "days": {
+    "40 mAh min x 0.9 usable": 56.0,
+    "45 mAh nominal x 0.9 usable": 63.0
+   }
+  },
+  "3.3 V nano-IQ LDO (TPS7A0233) | moderate: 30 sessions x 10 presses": {
+   "mAh_per_day": 0.986,
+   "days": {
+    "40 mAh min x 0.9 usable": 34.9,
+    "45 mAh nominal x 0.9 usable": 39.3
+   }
+  },
+  "3.3 V nano-IQ LDO (TPS7A0233) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 2.582,
+   "days": {
+    "40 mAh min x 0.9 usable": 13.7,
+    "45 mAh nominal x 0.9 usable": 15.4
+   }
+  },
+  "key power-off via U7 latch (#12) | idle / on a shelf": {
+   "mAh_per_day": 0.197,
+   "days": {
+    "40 mAh min x 0.9 usable": 148.9,
+    "45 mAh nominal x 0.9 usable": 167.5
+   }
+  },
+  "key power-off via U7 latch (#12) | light: 10 sessions x 10 presses": {
+   "mAh_per_day": 0.402,
+   "days": {
+    "40 mAh min x 0.9 usable": 80.6,
+    "45 mAh nominal x 0.9 usable": 90.7
+   }
+  },
+  "key power-off via U7 latch (#12) | moderate: 30 sessions x 10 presses": {
+   "mAh_per_day": 0.811,
+   "days": {
+    "40 mAh min x 0.9 usable": 42.0,
+    "45 mAh nominal x 0.9 usable": 47.3
+   }
+  },
+  "key power-off via U7 latch (#12) | heavy: 20 x 30 presses + 1 h continuous": {
+   "mAh_per_day": 2.48,
+   "days": {
+    "40 mAh min x 0.9 usable": 14.3,
+    "45 mAh nominal x 0.9 usable": 16.0
+   }
+  }
+ },
+ "currents_mA": {
+  "mcu_run": 1.1,
+  "mcu_sleep": 0.35,
+  "mcu_stop": 0.0033,
+  "adc": 0.05,
+  "fram_standby": 0.09,
+  "fram_sleep": 0.005,
+  "oled": 1.0,
+  "ldo_tlv767": 0.05,
+  "divider": 0.016,
+  "bq29700": 0.004,
+  "bq25185": 0.004,
+  "u7": 0.0005
+ }
+}

@@ -1,0 +1,820 @@
+{
+  "commands": [
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "startup.c.d",
+      "-c",
+      "startup.c",
+      "-o",
+      "startup.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "main_stm32.c.d",
+      "-c",
+      "main_stm32.c",
+      "-o",
+      "main_stm32.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "runtime.c.d",
+      "-c",
+      "runtime.c",
+      "-o",
+      "runtime.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "counter.c.d",
+      "-c",
+      "counter.c",
+      "-o",
+      "counter.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "input.c.d",
+      "-c",
+      "input.c",
+      "-o",
+      "input.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "journal.c.d",
+      "-c",
+      "journal.c",
+      "-o",
+      "journal.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "app.c.d",
+      "-c",
+      "app.c",
+      "-o",
+      "app.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "fram.c.d",
+      "-c",
+      "fram.c",
+      "-o",
+      "fram.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "oled.c.d",
+      "-c",
+      "oled.c",
+      "-o",
+      "oled.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "rail.c.d",
+      "-c",
+      "rail.c",
+      "-o",
+      "rail.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-MD",
+      "-MF",
+      "battery.c.d",
+      "-c",
+      "battery.c",
+      "-o",
+      "battery.c.o"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-std=c11",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fstack-usage",
+      "-ffile-prefix-map=<BUILD>=.",
+      "-Ivendor/st",
+      "-Ivendor/arm",
+      "-nostdlib",
+      "-T",
+      "linker.ld",
+      "startup.c.o",
+      "main_stm32.c.o",
+      "runtime.c.o",
+      "counter.c.o",
+      "input.c.o",
+      "journal.c.o",
+      "app.c.o",
+      "fram.c.o",
+      "oled.c.o",
+      "rail.c.o",
+      "battery.c.o",
+      "-Wl,--gc-sections,-Map,count-fidget-Q5-stm32.map",
+      "-lgcc",
+      "-o",
+      "count-fidget-Q5-stm32.elf"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-objcopy",
+      "-O",
+      "ihex",
+      "count-fidget-Q5-stm32.elf",
+      "count-fidget-Q5-stm32.hex"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-objcopy",
+      "-O",
+      "binary",
+      "count-fidget-Q5-stm32.elf",
+      "count-fidget-Q5-stm32.bin"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-objdump",
+      "-d",
+      "count-fidget-Q5-stm32.elf"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-print-libgcc-file-name"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-print-prog-name=cc1"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-print-prog-name=as"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-print-prog-name=collect2"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-gcc",
+      "-print-prog-name=ld"
+    ],
+    [
+      "<TOOLCHAIN>/bin/arm-none-eabi-size",
+      "count-fidget-Q5-stm32.elf"
+    ]
+  ],
+  "compiler": {
+    "archive_sha256": "8f6903f8ceb084d9227b9ef991490413014d991874a1e34074443c2a72b14dbd",
+    "package_url": "https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz",
+    "tools": {
+      "gcc": {
+        "bytes": 2421736,
+        "sha256": "510c55cfeed7328ade1eb8cb23808fcce1ba6c52dac8d4ebfe033ae4b2534385"
+      },
+      "objcopy": {
+        "bytes": 1229864,
+        "sha256": "0424b422a6c075238c2d4878630e9f111fd0f9320ac34e6f2cd617954042adda"
+      },
+      "objdump": {
+        "bytes": 1909744,
+        "sha256": "29829538419301ed3da5f3148a89e19ea9f9111105fa2ec3e05550f8998a5389"
+      },
+      "size": {
+        "bytes": 1073352,
+        "sha256": "9aa1623c3874cab906b5cca55212b2f6abaec25fc2b1512e55cf9f1d8217f7cb"
+      }
+    },
+    "version": "arm-none-eabi-gcc (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623"
+  },
+  "dependencies": {
+    "<BUILD>/app.c": {
+      "bytes": 2181,
+      "sha256": "10d0576a30dd5e2f05acb6721a8c0127b96bbf48eae6919a31dc545fea49e28e"
+    },
+    "<BUILD>/app.h": {
+      "bytes": 979,
+      "sha256": "cf88de42b1c2b4e4f6fa5e09c393a03cb7709c47e2c08c6adb73c5d236042663"
+    },
+    "<BUILD>/battery.c": {
+      "bytes": 1976,
+      "sha256": "23f984a69e7e0ac4d15dbb52eb1b6781dcb53e7783d5b5d5e14223c68600293c"
+    },
+    "<BUILD>/battery.h": {
+      "bytes": 1661,
+      "sha256": "071185222585c7e536eb11fadfc636f136e9e5d6e1a2a87390d27be7fb3dff35"
+    },
+    "<BUILD>/board.h": {
+      "bytes": 1472,
+      "sha256": "1b7b7f0a8997f7970e8edcad1f56792bb9fa46a7475d1ba3ec13cd232359d4ba"
+    },
+    "<BUILD>/counter.c": {
+      "bytes": 2736,
+      "sha256": "76b3854fac058e4c9c10bfb963b484a8a24215019d497352767868a0163e8eff"
+    },
+    "<BUILD>/counter.h": {
+      "bytes": 1695,
+      "sha256": "148e36a53a77e648da2be0f95188686e5a1a44850444160c492b728114d4ad8e"
+    },
+    "<BUILD>/fram.c": {
+      "bytes": 3292,
+      "sha256": "e85aebd6a1d5d691af182b7be5cd6ef027a9ba94e0ffabdfd6b597d1735f992c"
+    },
+    "<BUILD>/fram.h": {
+      "bytes": 656,
+      "sha256": "0b7f1dd4fbd068f8bf6b9bea28c9f9b4638e9087eb79e9789ba697da563f35cc"
+    },
+    "<BUILD>/input.c": {
+      "bytes": 2285,
+      "sha256": "672636f2ebeb8a2768c2f558b45c11a3acd6aab937ac17bd4939b7f66b12f53b"
+    },
+    "<BUILD>/input.h": {
+      "bytes": 946,
+      "sha256": "d7c8f58f256ac14a70dcdde15d2499432758e605186111d06bc8baf05a807547"
+    },
+    "<BUILD>/journal.c": {
+      "bytes": 3720,
+      "sha256": "9c84be9248fc546f9d068d6e4484e2fb1906b85e59200a72903994e75450b431"
+    },
+    "<BUILD>/journal.h": {
+      "bytes": 1088,
+      "sha256": "0c6691beca633d18d5eaba0aab5d092acff73bb7a3da5c62f3916a82c3edaa01"
+    },
+    "<BUILD>/main_stm32.c": {
+      "bytes": 23277,
+      "sha256": "99863e8555f0d00f11226cb693de881501bb7655b4eede01eaf335944732f52b"
+    },
+    "<BUILD>/oled.c": {
+      "bytes": 11355,
+      "sha256": "b8f1c564e4333955055e6c1cd9cf4243f7f3ff7ba335008e6a197e8178b47635"
+    },
+    "<BUILD>/oled.h": {
+      "bytes": 3238,
+      "sha256": "75236a39b5b63b17194a9c13bda7021371588085364df0b05487962ce6da9743"
+    },
+    "<BUILD>/rail.c": {
+      "bytes": 710,
+      "sha256": "b6bc53ad4799d1f8741bccfca1758f8a81e52477387bc7f862fb7df92b53d917"
+    },
+    "<BUILD>/rail.h": {
+      "bytes": 421,
+      "sha256": "89082031f115abafe247c43aabbbd6d63b79e480dd77e2fa00e15c25020d6968"
+    },
+    "<BUILD>/runtime.c": {
+      "bytes": 673,
+      "sha256": "d96d5feff5b7dd0582e10fc35997a9ae89485ac6ccac44d36fd72760159c511b"
+    },
+    "<BUILD>/startup.c": {
+      "bytes": 3343,
+      "sha256": "487f2ab030316938cc6f076318fcfa59de5f8d42326eb0f7b6bc1d216dea3eb8"
+    },
+    "<BUILD>/vendor/arm/cmsis_compiler.h": {
+      "bytes": 9481,
+      "sha256": "b51963d271c1571ca3463654c76aa7ea50c4eac5d0a2710df10414ac64d9e0f8"
+    },
+    "<BUILD>/vendor/arm/cmsis_gcc.h": {
+      "bytes": 63374,
+      "sha256": "43bfd1fe69fbbc2ca70aaf7d43cc3e20f16e0c7f66e1bdef9b51af6dc14b2617"
+    },
+    "<BUILD>/vendor/arm/cmsis_version.h": {
+      "bytes": 1680,
+      "sha256": "184c19fd3ee73632edf35a0b4d49cd48be75fbf49e6ccb19d9db05fa83bea4b3"
+    },
+    "<BUILD>/vendor/arm/core_cm0plus.h": {
+      "bytes": 49877,
+      "sha256": "a09fa9c6b8b21d1920bce15b98aa56182b027e9278cca0b154812bac2aea3cfa"
+    },
+    "<BUILD>/vendor/arm/mpu_armv7.h": {
+      "bytes": 11731,
+      "sha256": "29206b52ee02290ed6f5a5415ebd4187de802cf176d9b3cb844390d8e5571372"
+    },
+    "<BUILD>/vendor/st/stm32l072xx.h": {
+      "bytes": 596920,
+      "sha256": "d153a55736b25edcb291dc3e5706a2a1721b7ea0de40992eb7246e4e8e43082a"
+    },
+    "<BUILD>/vendor/st/system_stm32l0xx.h": {
+      "bytes": 2327,
+      "sha256": "92bee36c2803ae8632e1da98b8297343f099a83c49b62539c7f66e0bc8af5fb0"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/_ansi.h": {
+      "bytes": 2625,
+      "sha256": "5c6403b471ee897c9a6c12e00a58617247804eb3ee72d7baeb7c08616090dd1d"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/_newlib_version.h": {
+      "bytes": 336,
+      "sha256": "f4c14dfb59c9eb36181455ef077c4ec7a0571ed64f79947094ac1cd9a96d3fae"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/machine/_default_types.h": {
+      "bytes": 6650,
+      "sha256": "5d8f9f7ead7927e4b8b7ed00172e84f2ae82ea7f5f6ba3240ff813a9236771b3"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/machine/_types.h": {
+      "bytes": 112,
+      "sha256": "44544ecbbc10c8aa58ca2da6d0617ffeee5af847af24515ab108c8218d6d92c8"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/machine/ieeefp.h": {
+      "bytes": 11416,
+      "sha256": "ec1e7f9f068ef40e2ec360681a4bbc7e2f3f1e3bb9e141a254a1f1ccdc4af195"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/newlib.h": {
+      "bytes": 12020,
+      "sha256": "7de3c0c43deda9748c7a14ab10dcf469841e762627409120b0cb01b5e8f240b4"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/string.h": {
+      "bytes": 5555,
+      "sha256": "79722fe25a7d01447fee06a0b8efe7535c1b891568730ba154a139c59c068ffc"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/sys/_types.h": {
+      "bytes": 5094,
+      "sha256": "1abe39aca5104bafbde2e0219e7cdc3e96129b22ce1ef5cd58b66d8d147d3fb7"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/sys/cdefs.h": {
+      "bytes": 24504,
+      "sha256": "9dcd9f554b32c40791b8f081f34c83767c61c0bc567b4a486066edda39812f3e"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/sys/config.h": {
+      "bytes": 7342,
+      "sha256": "583e381e7184a477bcea569149f6154ccf4f0faa0829a9d8363954adb7aecf14"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/sys/features.h": {
+      "bytes": 16935,
+      "sha256": "c580ee2a628857e7ebeb0484d078b16cf61049f14b2492b0cac5b54ed1f34cca"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/sys/lock.h": {
+      "bytes": 2455,
+      "sha256": "f5cad9196ce745967fd2673e085b5c03df7887d4d11d7544aff05ff6679be6b8"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/sys/reent.h": {
+      "bytes": 30279,
+      "sha256": "1631214a7fb5c26f8b6ce1c1d317af9863afd8109a811dc72f9ec1afd2c0789b"
+    },
+    "<TOOLCHAIN>/arm-none-eabi/include/sys/string.h": {
+      "bytes": 116,
+      "sha256": "b7164ee36ccb0a08bc27c7e381ea417c97d8c3fd3157de62b75d2a6bf7a0a589"
+    },
+    "<TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as": {
+      "bytes": 1883976,
+      "sha256": "500c3d460643e1961d1de6b5be98c50ceae574d85edce8e3c8c57cf8c35d2fd8"
+    },
+    "<TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld": {
+      "bytes": 1939688,
+      "sha256": "73b48c4930f7b9d9888fb400a46432486596b943d1415101245b735117d97732"
+    },
+    "<TOOLCHAIN>/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v6-m/nofp/libgcc.a": {
+      "bytes": 1651384,
+      "sha256": "c822b64c0f5c5e345de2e16e7c19ce90afa6eba66d44c83199063b22a83c6bda"
+    },
+    "<TOOLCHAIN>/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1": {
+      "bytes": 38184600,
+      "sha256": "46d2feebbf684cded9ab0699c51bc73b7c3f6c3dfafbeaf4be9927acf62d2ebf"
+    },
+    "<TOOLCHAIN>/bin/../libexec/gcc/arm-none-eabi/14.3.1/collect2": {
+      "bytes": 1398264,
+      "sha256": "28095bc74474ae237bd76ef0cfbfe71996b4e091b36682476311ac5e57a32b5c"
+    },
+    "<TOOLCHAIN>/lib/gcc/arm-none-eabi/14.3.1/include/stdbool.h": {
+      "bytes": 1490,
+      "sha256": "7b9c438a5b2f082a560a72da8d752da51062cc6f84d1c4acec45ff0a68e8d037"
+    },
+    "<TOOLCHAIN>/lib/gcc/arm-none-eabi/14.3.1/include/stddef.h": {
+      "bytes": 14135,
+      "sha256": "bac7ab773a3e3d9568d5cbe61632cfb96292ef5039df54a7ffaf15ba54af0ba0"
+    },
+    "<TOOLCHAIN>/lib/gcc/arm-none-eabi/14.3.1/include/stdint-gcc.h": {
+      "bytes": 9648,
+      "sha256": "bc975de13f21d9336769718601ec86e1c1efd60fc75f5f4ce1d04508768a6e49"
+    },
+    "<TOOLCHAIN>/lib/gcc/arm-none-eabi/14.3.1/include/stdint.h": {
+      "bytes": 328,
+      "sha256": "86a7914ab7d6a18465a6fb9a7b54f945cad604fdbf3ca0d10e4e0254e0037911"
+    }
+  },
+  "display": "HS96L01W4S03 / SSD1315 SPI2",
+  "inputs": {
+    "firmware/q5-stm32/README.md": {
+      "bytes": 1890,
+      "sha256": "b3c52ba11fb9be5c61ca0086e7273e31f9a99515d52e235283a2a906f210d5e4"
+    },
+    "firmware/q5-stm32/app.c": {
+      "bytes": 2181,
+      "sha256": "10d0576a30dd5e2f05acb6721a8c0127b96bbf48eae6919a31dc545fea49e28e"
+    },
+    "firmware/q5-stm32/app.h": {
+      "bytes": 979,
+      "sha256": "cf88de42b1c2b4e4f6fa5e09c393a03cb7709c47e2c08c6adb73c5d236042663"
+    },
+    "firmware/q5-stm32/battery.c": {
+      "bytes": 1976,
+      "sha256": "23f984a69e7e0ac4d15dbb52eb1b6781dcb53e7783d5b5d5e14223c68600293c"
+    },
+    "firmware/q5-stm32/battery.h": {
+      "bytes": 1661,
+      "sha256": "071185222585c7e536eb11fadfc636f136e9e5d6e1a2a87390d27be7fb3dff35"
+    },
+    "firmware/q5-stm32/board.h": {
+      "bytes": 1472,
+      "sha256": "1b7b7f0a8997f7970e8edcad1f56792bb9fa46a7475d1ba3ec13cd232359d4ba"
+    },
+    "firmware/q5-stm32/counter.c": {
+      "bytes": 2736,
+      "sha256": "76b3854fac058e4c9c10bfb963b484a8a24215019d497352767868a0163e8eff"
+    },
+    "firmware/q5-stm32/counter.h": {
+      "bytes": 1695,
+      "sha256": "148e36a53a77e648da2be0f95188686e5a1a44850444160c492b728114d4ad8e"
+    },
+    "firmware/q5-stm32/fram.c": {
+      "bytes": 3292,
+      "sha256": "e85aebd6a1d5d691af182b7be5cd6ef027a9ba94e0ffabdfd6b597d1735f992c"
+    },
+    "firmware/q5-stm32/fram.h": {
+      "bytes": 656,
+      "sha256": "0b7f1dd4fbd068f8bf6b9bea28c9f9b4638e9087eb79e9789ba697da563f35cc"
+    },
+    "firmware/q5-stm32/input.c": {
+      "bytes": 2285,
+      "sha256": "672636f2ebeb8a2768c2f558b45c11a3acd6aab937ac17bd4939b7f66b12f53b"
+    },
+    "firmware/q5-stm32/input.h": {
+      "bytes": 946,
+      "sha256": "d7c8f58f256ac14a70dcdde15d2499432758e605186111d06bc8baf05a807547"
+    },
+    "firmware/q5-stm32/journal.c": {
+      "bytes": 3720,
+      "sha256": "9c84be9248fc546f9d068d6e4484e2fb1906b85e59200a72903994e75450b431"
+    },
+    "firmware/q5-stm32/journal.h": {
+      "bytes": 1088,
+      "sha256": "0c6691beca633d18d5eaba0aab5d092acff73bb7a3da5c62f3916a82c3edaa01"
+    },
+    "firmware/q5-stm32/linker.ld": {
+      "bytes": 991,
+      "sha256": "291306d6a73cb4e469eeb5524208b1b4a2a2a796476edfbda5deb8a6a7993e2a"
+    },
+    "firmware/q5-stm32/main_stm32.c": {
+      "bytes": 23277,
+      "sha256": "99863e8555f0d00f11226cb693de881501bb7655b4eede01eaf335944732f52b"
+    },
+    "firmware/q5-stm32/oled.c": {
+      "bytes": 11355,
+      "sha256": "b8f1c564e4333955055e6c1cd9cf4243f7f3ff7ba335008e6a197e8178b47635"
+    },
+    "firmware/q5-stm32/oled.h": {
+      "bytes": 3238,
+      "sha256": "75236a39b5b63b17194a9c13bda7021371588085364df0b05487962ce6da9743"
+    },
+    "firmware/q5-stm32/rail.c": {
+      "bytes": 710,
+      "sha256": "b6bc53ad4799d1f8741bccfca1758f8a81e52477387bc7f862fb7df92b53d917"
+    },
+    "firmware/q5-stm32/rail.h": {
+      "bytes": 421,
+      "sha256": "89082031f115abafe247c43aabbbd6d63b79e480dd77e2fa00e15c25020d6968"
+    },
+    "firmware/q5-stm32/runtime.c": {
+      "bytes": 673,
+      "sha256": "d96d5feff5b7dd0582e10fc35997a9ae89485ac6ccac44d36fd72760159c511b"
+    },
+    "firmware/q5-stm32/source-records.json": {
+      "bytes": 1532,
+      "sha256": "3b8f2a1d2a1d4499a1181c096f192275a01032113829b25b17712a0aac21cc86"
+    },
+    "firmware/q5-stm32/startup.c": {
+      "bytes": 3343,
+      "sha256": "487f2ab030316938cc6f076318fcfa59de5f8d42326eb0f7b6bc1d216dea3eb8"
+    },
+    "firmware/q5-stm32/test_battery.c": {
+      "bytes": 2530,
+      "sha256": "1bc046b3746a7338e71fcc40e88cdcd631d08bc2da5978f4363fd23d5a31326e"
+    },
+    "firmware/q5-stm32/test_behavior.c": {
+      "bytes": 17492,
+      "sha256": "c13ff02bed3a309bd7ca908554a211335ee5c93f07746917b31462e8e22d4fe2"
+    },
+    "firmware/q5-stm32/test_fram.c": {
+      "bytes": 4419,
+      "sha256": "60b58be4acbddcb6b0e34a6db571799f1e7f3677773d843e38c8c3831768a500"
+    },
+    "firmware/q5-stm32/test_oled.c": {
+      "bytes": 9086,
+      "sha256": "dc2a802e70fef27f66dc6ed4fe82cd6d00d29dc5cc6e9e8d376261ee20af656a"
+    },
+    "firmware/q5-stm32/test_rail.c": {
+      "bytes": 1617,
+      "sha256": "776b3e16632d1d6e71d72cd3b591579b7fe24a34c4a47222a4755559d29bce67"
+    },
+    "firmware/q5-stm32/vendor/arm/LICENSE.txt": {
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    "firmware/q5-stm32/vendor/arm/cmsis_compiler.h": {
+      "bytes": 9481,
+      "sha256": "b51963d271c1571ca3463654c76aa7ea50c4eac5d0a2710df10414ac64d9e0f8"
+    },
+    "firmware/q5-stm32/vendor/arm/cmsis_gcc.h": {
+      "bytes": 63374,
+      "sha256": "43bfd1fe69fbbc2ca70aaf7d43cc3e20f16e0c7f66e1bdef9b51af6dc14b2617"
+    },
+    "firmware/q5-stm32/vendor/arm/cmsis_version.h": {
+      "bytes": 1680,
+      "sha256": "184c19fd3ee73632edf35a0b4d49cd48be75fbf49e6ccb19d9db05fa83bea4b3"
+    },
+    "firmware/q5-stm32/vendor/arm/core_cm0plus.h": {
+      "bytes": 49877,
+      "sha256": "a09fa9c6b8b21d1920bce15b98aa56182b027e9278cca0b154812bac2aea3cfa"
+    },
+    "firmware/q5-stm32/vendor/arm/mpu_armv7.h": {
+      "bytes": 11731,
+      "sha256": "29206b52ee02290ed6f5a5415ebd4187de802cf176d9b3cb844390d8e5571372"
+    },
+    "firmware/q5-stm32/vendor/st/LICENSE.md": {
+      "bytes": 9757,
+      "sha256": "dadb755f51d36614173b28c5790cb4a991e8f4cc822e5b634fd66a4f4145824d"
+    },
+    "firmware/q5-stm32/vendor/st/stm32l072xx.h": {
+      "bytes": 596920,
+      "sha256": "d153a55736b25edcb291dc3e5706a2a1721b7ea0de40992eb7246e4e8e43082a"
+    },
+    "firmware/q5-stm32/vendor/st/system_stm32l0xx.h": {
+      "bytes": 2327,
+      "sha256": "92bee36c2803ae8632e1da98b8297343f099a83c49b62539c7f66e0bc8af5fb0"
+    },
+    "scripts/build_firmware_q5.py": {
+      "bytes": 13477,
+      "sha256": "f430c662f0ad87bee5235dd772427f0f5f03548d6149faf3f9e78b292296e5fd"
+    },
+    "scripts/test_firmware_q5.py": {
+      "bytes": 7046,
+      "sha256": "98ba1fac3a597ac9f41f2d25dbc652ec020b7c0d43ac42120a1523149bb3e15c"
+    }
+  },
+  "outputs": {
+    "count-fidget-Q5-stm32.bin": {
+      "bytes": 10652,
+      "sha256": "17eac86b0454cdcc91e9ffb5f0bb0152f4844f3c5b08ee19bc0781b5d88dc502"
+    },
+    "count-fidget-Q5-stm32.elf": {
+      "bytes": 23552,
+      "sha256": "bb5a4a38aeeb41213e5f46c07e4a361e69b22f9b96742ebbff875b6083f58b03"
+    },
+    "count-fidget-Q5-stm32.hex": {
+      "bytes": 30026,
+      "sha256": "d0d0607b8e574d7bb47918b8be3bb913baaf373c998a4881a8c716712d131372"
+    },
+    "count-fidget-Q5-stm32.lst": {
+      "bytes": 194670,
+      "sha256": "ad56dddd5f13b36ddc282e13f447c33ee89c58e3d297da821f33230672c0e45b"
+    },
+    "count-fidget-Q5-stm32.map": {
+      "bytes": 19512,
+      "sha256": "3c3a439e50d5551d2288b5497b83776765d7dd4556f15eae84aec6cedaf9af36"
+    },
+    "host-tests.json": {
+      "bytes": 1423,
+      "sha256": "81b6908e97d856ddd0f8598462cb77860f5d883205bcb1f34406272cf4a8dabd"
+    },
+    "stack-usage.txt": {
+      "bytes": 2609,
+      "sha256": "90165a45e385b9e4a7aad3f091ba0878131fbf7fd6afe5d01150a119685274f8"
+    }
+  },
+  "power": "U7 soft latch on PB2; auto power-off on battery",
+  "schema": 1,
+  "size": "text\t   data\t    bss\t    dec\t    hex\tfilename\n  10652\t      0\t   2432\t  13084\t   331c\tcount-fidget-Q5-stm32.elf",
+  "status": "Q5 engineering target; physical qualification pending",
+  "storage": "FM25V02A-GTR SPI1 FRAM",
+  "target": "STM32L072CBT6",
+  "validation": {
+    "all_eeprom_excluded": true,
+    "bank1_only": true,
+    "bin_bytes": 10652,
+    "elf_hex_bin_equal": true,
+    "hardware_executed": false,
+    "load_bytes": 10652,
+    "manufacturing_released": false,
+    "option_bytes_excluded": true,
+    "static_ram_bytes": 2488,
+    "stop_ram_workaround": {
+      "bank1_load_address": "0x8002964",
+      "bytes": 56,
+      "copied_ram_span": [
+        "0x20000000",
+        "0x20000038"
+      ],
+      "execution_address": "0x20000000",
+      "no_calls_or_flash_literals": true,
+      "scope": "Bounded actual-instruction check; not hardware timing emulation",
+      "trace": [
+        "key1",
+        "key2",
+        "powerdown",
+        "dsb",
+        "isb",
+        "wfi",
+        "powerup",
+        "dsb",
+        "isb",
+        "return"
+      ]
+    },
+    "vectors": {
+      "EXTI0_1_IRQHandler": "0x80007a9",
+      "Reset_Handler": "0x80000ed",
+      "SPI2_IRQHandler": "0x80006bd",
+      "SysTick_Handler": "0x800071d"
+    }
+  }
+}

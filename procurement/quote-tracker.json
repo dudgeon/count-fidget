@@ -1288,5 +1288,30 @@
     "programming": true,
     "limited_through_hole_soldering": true,
     "condition": "Material cost reduction; exact split and savings remain to be demonstrated."
+  },
+  "q5_jlc_quote": {
+    "snapshot_utc": "2026-09-25T20:40Z",
+    "authorization": "JLCPCB quotes only, variants A (JLC SMT, user solders DS1) and B (JLC full assembly); no order, payment, allocation, release or other-vendor contact",
+    "gerber_zip_sha256": "f9b9afe4ead8ebe9c9f7066926ef95a16f03e42750d92ad6f939462d12864230",
+    "observed_public_quote": {
+      "quantity": 10,
+      "spec": "2 layers, 42x54 mm, 1.6 mm FR-4, 1 oz, ENIG, green/white",
+      "pcb_usd": 22.1,
+      "shipping_dhl_ddp_usd": 29.45
+    },
+    "pcba_binding_quote": "not obtained: BOM/CPL step requires the user's JLCPCB sign-in; no credentials requested or used",
+    "estimate_usd_10_boards_before_shipping": {
+      "A_economic": 245.94,
+      "A_standard": 254.45,
+      "B_economic": 276.68,
+      "B_standard": 282.11
+    },
+    "estimate_source": "procurement/q5/jlc-cost-estimate.json",
+    "record": "procurement/q5/JLC-QUOTE-Q5.md",
+    "complete_quote_received": false,
+    "cart_saved": false,
+    "order_placed": false,
+    "paid": false,
+    "manufacturing_released": false
   }
 }

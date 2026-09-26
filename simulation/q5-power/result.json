@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "scope": "Analytical bounds from stated datasheet values; not a simulation or measurement",
+  "model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+  "script_sha256": "bae28081be1b02c81b7a73f2ae252844d0ee8221beab473be18c525e76cbb2b5",
+  "latch": {
+    "ton_typ_ms": 17.86,
+    "tr_typ_ms": 7.52,
+    "press_needed_typ_ms": 10.5,
+    "press_needed_allowance_ms": 16.3,
+    "deliberate_press_ms": 50,
+    "margin_factor_at_50ms": 3.07,
+    "on_node_levels_V": {
+      "pwr_hold_min": 2.851,
+      "key_min_battery": 2.7,
+      "vbus_min": 3.364,
+      "vbus_max": 4.409
+    },
+    "on_levels_within_VIH_and_abs_max": true,
+    "c40_bounce_bridge_ms": 9.93,
+    "c40_turn_off_ms": 20.97,
+    "vbus_spike_filter_tau_ms": 0.909,
+    "note": "TPS22917 slew figures are typical only; the press-duration bound is an allowance, not a guarantee."
+  },
+  "inrush": {
+    "downstream_capacitance_uF_plus10pct": 25.3,
+    "inrush_typ_slew_mA": 12.6,
+    "inrush_if_slew_twice_as_fast_mA": 23.7,
+    "bq29700_ocd_min_mA_over_temperature": 24.8,
+    "bq29700_tocdd_min_ms": 16.0,
+    "inrush_duration_ms": 7.52,
+    "passes_typical": true,
+    "passes_by_duration": true,
+    "note": "OCD cannot trip on the inrush: the pulse (tR) is shorter than the minimum OCD delay; SCD needs >=117 mA. X5R/X7R DC-bias derating lowers effective C; measure inrush at first article."
+  },
+  "off_current": {
+    "typ_uA": 8.01,
+    "max_uA": 11.1,
+    "removed_versus_q4_asleep_uA": [
+      "TLV767 IQ 50",
+      "feedback 16",
+      "FRAM sleep 5",
+      "MCU Stop 3.3",
+      "U7 on 0.5"
+    ],
+    "note": "Everything downstream of U7 (regulator, dividers, MCU, FRAM, OLED) is unpowered when off."
+  },
+  "battery_adc": {
+    "total_error_pct": 2.062,
+    "usb_sys_min_reading_V": 4.3191,
+    "full_cell_max_reading_V": 4.308,
+    "usb_threshold_V": 4.313,
+    "separation_ok": true,
+    "leakage_error_mV": 3.75,
+    "cutoff_actual_range_V": [
+      3.282,
+      3.421
+    ],
+    "divider_current_while_on_uA": 12.3,
+    "divider_current_off_uA": 0.0,
+    "note": "STAT1/STAT2 low also classify USB, covering the charging and fault states at any ADC error."
+  },
+  "cold_insertion": {
+    "cold_insert_upstream_us": 198.692,
+    "usb_first_c3_only_us": 35.83,
+    "bq2970_scc_delay_min_us": 125,
+    "cold_insertion_bound_passes": false,
+    "usb_first_passes": true,
+    "latch_effect": "U7 is OFF at insertion (no key, no USB), so SYS_LOAD capacitance never loads the cell at insertion; the upstream C2/C3 counterexample of Q4 is unchanged.",
+    "bq2970_first_connection": "SLUSBU9I 8.4.1: discharge may not enable until a charger is connected - insert the cell with USB present."
+  },
+  "storage": {
+    "shelf_days_to_cutoff": {
+      "min_40mAh": 152.0,
+      "nominal_45mAh": 171.0
+    },
+    "days_cutoff_to_protector": 9.5,
+    "recommendation": "Store charged to about 50-60 %, top up every 3 months; after the 3.35 V firmware cut-off the protector disconnects at 2.8 V roughly a week later."
+  },
+  "bounded_checks_pass": true,
+  "retained_counterexample": "Unrestricted cold insertion (upstream C2+C3) still exceeds the 125 us minimum SCC delay."
+}

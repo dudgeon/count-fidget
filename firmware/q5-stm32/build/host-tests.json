@@ -1,0 +1,7 @@
+{
+  "battery": "PASS: 1301 steady battery readings, bar hysteresis, cut-off debounce, USB/STAT decoding; policy only, no cell model\n",
+  "behavior": "{\"key_hold_cases\":826,\"torn_word_reboots\":1179648,\"single_bit_corruptions\":256,\"button_waveforms\":7072,\"queue_storage_schedules\":2295,\"recovery_interleavings\":200,\"fault_idle_recovery_scenarios\":8,\"hardware_executed\":false}\n",
+  "fram": "PASS: two permanent sleep/wake failures stop bus retries; explicit reinitialization recovers\nPASS: 350 SPI FRAM transaction/byte-prefix failures, stuck MISO0/1, ignored writes, protected-device refusal,1000 sleep/wake guards across wrap; no MCU execution\n",
+  "oled": "PASS: HS96 SPI startup, first frame in GDDRAM before 8Dh/AFh, partial digit/label/icon redraw, MAX/labels/bars, shutdown guard\nPASS: injected mid-frame transport error discards display state and recovers the latest committed count\nPASS: deadline wrap and sleep during every early startup tick\nPASS: module held in reset until the rail is measured; rail loss shuts down and waits for recovery\nPASS: transport failure at each of80 startup/frame packet positions\nHost model only; target ISR timing, rail sequencing, pixels and current require hardware tests.\n",
+  "rail": "PASS: 1527742 voltage/error/initial-state corners, hysteresis, invalid calibration/ADC, stale samples and timestamp wrap;2% bounded error model, no analog execution\n"
+}

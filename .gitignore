@@ -30,3 +30,7 @@ firmware/test_lcd
 # Q4 local router inputs contain local paths.
 /electronics/q4/*.dsn
 /electronics/q4/*.ses
+
+# Q5 local router inputs contain local paths.
+/electronics/q5/*.dsn
+/electronics/q5/*.ses

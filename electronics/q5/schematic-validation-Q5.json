@@ -1,0 +1,160 @@
+{
+  "status": "Native Q5 schematic candidate; not a hardware release",
+  "kicad_version": "10.0.6",
+  "sheets": 19,
+  "components_and_pcb_features": 96,
+  "fitted_components": 82,
+  "connected_pins_matched": 270,
+  "explicit_unused_pins": 22,
+  "erc_violations": 0,
+  "nc_nets": {
+    "U1.2": "unconnected-(U1-PC13-Pad2)",
+    "U1.3": "unconnected-(U1-PC14-Pad3)",
+    "U1.4": "unconnected-(U1-PC15-Pad4)",
+    "U1.5": "unconnected-(U1-PH0-Pad5)",
+    "U1.6": "unconnected-(U1-PH1-Pad6)",
+    "U1.12": "unconnected-(U1-PA2-Pad12)",
+    "U1.13": "unconnected-(U1-PA3-Pad13)",
+    "U1.17": "unconnected-(U1-PA7-Pad17)",
+    "U1.21": "unconnected-(U1-PB10-Pad21)",
+    "U1.22": "unconnected-(U1-PB11-Pad22)",
+    "U1.29": "unconnected-(U1-PA8-Pad29)",
+    "U1.30": "unconnected-(U1-PA9-Pad30)",
+    "U1.31": "unconnected-(U1-PA10-Pad31)",
+    "U1.38": "unconnected-(U1-PA15-Pad38)",
+    "U1.42": "unconnected-(U1-PB6-Pad42)",
+    "U1.43": "unconnected-(U1-PB7-Pad43)",
+    "U1.46": "unconnected-(U1-PB9-Pad46)",
+    "U6.5": "unconnected-(U6-QOD-Pad5)",
+    "J1.A8": "unconnected-(J1-SBUA-PadA8)",
+    "J1.B8": "unconnected-(J1-SBUB-PadB8)",
+    "U7.5": "unconnected-(U7-QOD-Pad5)",
+    "U4.1": "unconnected-(U4-NC-Pad1)"
+  },
+  "erc_ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "commands": [
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "electronics/q5/schematic-netlist-Q5.xml",
+      "electronics/q5/click-counter-Q5.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "electronics/q5/erc-Q5.json",
+      "electronics/q5/click-counter-Q5.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "pdf",
+      "-o",
+      "electronics/q5/schematic-Q5.pdf",
+      "electronics/q5/click-counter-Q5.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "svg",
+      "-o",
+      "electronics/q5/schematic-svg/",
+      "electronics/q5/click-counter-Q5.kicad_sch"
+    ]
+  ],
+  "supply_assertions": {
+    "VBUS": "External USB source",
+    "GND": "System return via reviewed power topology",
+    "CELL_N_RAW": "External cell return",
+    "BAT_SENSE": "Cell supply through R7",
+    "SYS_LOAD": "U7 output from SYS"
+  },
+  "limitations": [
+    "ERC does not verify analog thresholds, startup, protection bypass or battery safety.",
+    "Supply assertions describe external/passive power paths; they are not extra fitted parts.",
+    "The drawing uses global labels between functional sheets; pin names/types are explicit.",
+    "All existing first-article, mechanical, firmware and purchase approval gates remain."
+  ],
+  "inputs_sha256": {
+    "scripts/build_q5_schematic.py": "81968bc2452e53586e8c43ba02d35534ce4dd8d19c72c5fe83bae331469b392d",
+    "scripts/build_q5_model.py": "1ad6f55dabb2b0da2f7a6ef9bf521b8fef8d631bf6654e42bd03695ff2dd6b98",
+    "electronics/q5/netlist-Q5.json": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+    "electronics/q5/placement.json": "a0151a48bdf6c94aa7ca3ecbd96f655435d50d31b07f0fd9c82f95483cc05fdc"
+  },
+  "artifacts_sha256": {
+    "electronics/q5/click-counter-Q5.kicad_sch": "21f2d332000b3fc44a2eb070c13ca509248d75c4432da17574b80f6f2ae689fd",
+    "electronics/q5/mcu-1.kicad_sch": "d7ed494cc0648e473351ff84a35f25dacdc9b52cc28a2da90da923cdb609e1e7",
+    "electronics/q5/mcu-2.kicad_sch": "a52551b795703f6b757a21af2408d165cb8a11c9812e39c58e9dc0ce32db9311",
+    "electronics/q5/mcu-3.kicad_sch": "5222526eb82396ed28ae828303081de9829ffef88a030d1492212a7c9a14c81c",
+    "electronics/q5/mcu-4.kicad_sch": "a73ca06c03ceffa7c6f506b4b044f6a37cac324d73d4c8e020416a5fc1b926c8",
+    "electronics/q5/mcu-5.kicad_sch": "a91e50e6709f78fa9f8f552433d0f66ee4e1166f2355027ba16585d6c933d085",
+    "electronics/q5/mcu-6.kicad_sch": "6e5561165cd52b504c99ef5e370130e78b0edfd7399b886f08120253ff108c7f",
+    "electronics/q5/display-1.kicad_sch": "6d02f6d76c44d883a7d9cf0bc3b39c24337fe2383c287e29fb34115236a6af02",
+    "electronics/q5/display-2.kicad_sch": "7eac6c32626f0c0c7d62af0a99bb880c5a26b8581c26daa62b565982df4c8be7",
+    "electronics/q5/memory-1.kicad_sch": "5b76e080183bf5b5ba03847c9460d608cb37a66a99335b6fcdd05260531f7749",
+    "electronics/q5/usb-power-1.kicad_sch": "c5ad8a0af60841d1a628b7e1a2c331197baf4326d1e5922e5189f23436d5866d",
+    "electronics/q5/usb-power-2.kicad_sch": "7bf96fd0fb0cc7aa79d0c90c78e69f4a67f04c99d6068051949e32a63b8bcd8d",
+    "electronics/q5/usb-power-3.kicad_sch": "5f598d9affa6061dada2ae117bb917c802a993c7c8de3e448990c0b672b50e19",
+    "electronics/q5/usb-power-4.kicad_sch": "73e7711a40e31c44f9b7ec963372e143fc12dab31af2c7608d0bd012a28ab35c",
+    "electronics/q5/usb-power-5.kicad_sch": "0c0025b7a4ce009a4be116ef49f8990643ea1f41b488b259ded239a961a892d4",
+    "electronics/q5/battery-1.kicad_sch": "41f92388b3d1e33d4e9130f3180cfd6ad9e76cb689b03ac5cd5d10b4ddda7235",
+    "electronics/q5/battery-2.kicad_sch": "e1aa4536e646e75e3e656c131a9c0092791cb5d3b08212b6794cbd099ab4d988",
+    "electronics/q5/thermal-1.kicad_sch": "8938db11c603c46b669ec8be8952f30e84b2d7cfb87c64d00a52ecc4137f670f",
+    "electronics/q5/thermal-2.kicad_sch": "994f33392c5bdea74a00ba740e502f8bf468afec5b0cb5ae6b5b8078ae05df4c",
+    "electronics/q5/CountFidgetQ5.kicad_sym": "e6bb7035bad07ea503af7f9cb82b213615dc1f3f67f435f16762fa575f00ccf9",
+    "electronics/q5/sym-lib-table": "dc35b02d39bb80dbfc0ccd628e4feedfe4eaad38b75139e79c5e12b6eba92e78",
+    "electronics/q5/schematic-paths-Q5.json": "9dcaeb7369bd7591a5c922d97715ede3e12be8d32609a5e52cc1602cdd8a3777",
+    "electronics/q5/schematic-netlist-Q5.xml": "4332ba78519a0f9d6d41b1023571d1ad64938647366ddfd68a9e59ecd8357b10",
+    "electronics/q5/erc-Q5.json": "65c0f33a63c28d3f87bece1df3769d1876ed6a16dcfec75d29ddcf55db31e480",
+    "electronics/q5/schematic-Q5.pdf": "c3026438e09b576272a1fd5d440332e7b22185a37b64070ec0c28011240cffdc",
+    "electronics/q5/schematic-svg/click-counter-Q5-Independent SPI retained-count memory _ 1.svg": "ecc44831598d759a7419945d02056891de06e8926c91168206064d92562f6318",
+    "electronics/q5/schematic-svg/click-counter-Q5-Independent charge-temperature window _ 1.svg": "82ccb2ee82451dc24548c15c8bf97f0ab66e93a2983b6cdf35bef1ecaad347f9",
+    "electronics/q5/schematic-svg/click-counter-Q5-Independent charge-temperature window _ 2.svg": "ed2fe3e2e5f3d81577b7f91644be74a732284ba6519f99be57ed1fa669f780f9",
+    "electronics/q5/schematic-svg/click-counter-Q5-On-board LIR2032 holder and protection _ 1.svg": "a2e163f9b39982ef148e747ee4c615cfdc24e473c750619f3368e75fb046f7ec",
+    "electronics/q5/schematic-svg/click-counter-Q5-On-board LIR2032 holder and protection _ 2.svg": "20503a71f036ad6324698011d040d20529347aa1ac94f1e0d5153c405915e39f",
+    "electronics/q5/schematic-svg/click-counter-Q5-SPI OLED module and power control _ 1.svg": "78ac2029f5754aab88339797fa2650e2d0bc0535f4ccfce1dfb1f1632518736f",
+    "electronics/q5/schematic-svg/click-counter-Q5-SPI OLED module and power control _ 2.svg": "e04918d9aee5d4f5cda345b87bc1880568b41a3f5ab1fd6d7dcdfd491bbe1ac8",
+    "electronics/q5/schematic-svg/click-counter-Q5-STM32, keys and USB boot controls _ 2.svg": "760d7662292664cc3b78c671daacf8e0277b60e2c4e99f7aaa0f56331b53138b",
+    "electronics/q5/schematic-svg/click-counter-Q5-STM32, keys and USB boot controls _ 3.svg": "849e0af6d1c293f0e3eaa603495aaad05b707f70c1cea2af4d33399c2e40c6ca",
+    "electronics/q5/schematic-svg/click-counter-Q5-STM32, keys and USB boot controls _ 4.svg": "c2e7e30bca5734a09029fd97c8f4c2609248059a400289536911ba4f5910d4fb",
+    "electronics/q5/schematic-svg/click-counter-Q5-STM32, keys and USB boot controls _ 5.svg": "57920841ee539e776e74ee80f890918dc836e8eb5d5288e7b60c798270925f0d",
+    "electronics/q5/schematic-svg/click-counter-Q5-STM32, keys and USB boot controls _ 6.svg": "4c2fd881243359c8b31e8d7c9559eea03450bb4f76a8e66372707520d10893f7",
+    "electronics/q5/schematic-svg/click-counter-Q5-STM32, keys and USB boot controls.svg": "b5198eaa6ffb932cc9f9a412abf56e4dc9627cf24cf71924aec9b1256de8f0cd",
+    "electronics/q5/schematic-svg/click-counter-Q5-USB, charging, soft power latch and common supply _ 1.svg": "f0985e330f131a6b35b6400c7f07be3ee8ef316e609a1b066d4c53feb7b493e0",
+    "electronics/q5/schematic-svg/click-counter-Q5-USB, charging, soft power latch and common supply _ 2.svg": "89c8170a4acd63e00b7e6cf8da803bdc2764d7d012ab047f38bea0064fb026ec",
+    "electronics/q5/schematic-svg/click-counter-Q5-USB, charging, soft power latch and common supply _ 3.svg": "67d3bdeee80bb9869fe0283495b958f23a554927023ec756258fdde3cff1123b",
+    "electronics/q5/schematic-svg/click-counter-Q5-USB, charging, soft power latch and common supply _ 4.svg": "02844a7abc428dcc4b5d2112d758322812f97f56d81644866cb7b69cd741795c",
+    "electronics/q5/schematic-svg/click-counter-Q5-USB, charging, soft power latch and common supply _ 5.svg": "6f4290b6cf71d684a9af54ee0838627c412d503564d5c0ac849238fd48395e20",
+    "electronics/q5/schematic-svg/click-counter-Q5.svg": "3eac2a35ca0e76fc62716ed6ddbd5fa333e306497775da561de08492f275adba"
+  }
+}

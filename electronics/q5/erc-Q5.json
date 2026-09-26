@@ -1,0 +1,127 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-26T02:42:37",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243",
+            "violations": []
+        },
+        {
+            "path": "/STM32, keys and USB boot controls/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/13b3b74f-a3c8-51d4-b48b-fce3bec0261c",
+            "violations": []
+        },
+        {
+            "path": "/STM32, keys and USB boot controls / 2/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/25c8a497-d064-5849-8b98-8381803a397d",
+            "violations": []
+        },
+        {
+            "path": "/STM32, keys and USB boot controls / 3/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c95d9573-76d3-535d-a7a6-1eff788ec11a",
+            "violations": []
+        },
+        {
+            "path": "/STM32, keys and USB boot controls / 4/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5b560024-5f43-580a-88a1-035a458454bd",
+            "violations": []
+        },
+        {
+            "path": "/STM32, keys and USB boot controls / 5/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/2f9dfd4f-ef26-5940-ad4a-519e367606ec",
+            "violations": []
+        },
+        {
+            "path": "/STM32, keys and USB boot controls / 6/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/fc98771e-3d36-5fe2-9fec-1520070c0127",
+            "violations": []
+        },
+        {
+            "path": "/SPI OLED module and power control / 1/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a",
+            "violations": []
+        },
+        {
+            "path": "/SPI OLED module and power control / 2/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/30e7c69a-a640-5d4b-98e4-fa5805923b37",
+            "violations": []
+        },
+        {
+            "path": "/Independent SPI retained-count memory / 1/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/dfe44b2e-dca8-55dc-a058-ba49538b1523",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging, soft power latch and common supply / 1/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/81d32175-1402-5eb1-8389-0a5fb2a4f6de",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging, soft power latch and common supply / 2/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging, soft power latch and common supply / 3/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging, soft power latch and common supply / 4/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa",
+            "violations": []
+        },
+        {
+            "path": "/USB, charging, soft power latch and common supply / 5/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624",
+            "violations": []
+        },
+        {
+            "path": "/On-board LIR2032 holder and protection / 1/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a2b4a664-6944-5f42-8858-eb265e415837",
+            "violations": []
+        },
+        {
+            "path": "/On-board LIR2032 holder and protection / 2/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/24070760-7d96-518f-a2fc-25e7d39e2151",
+            "violations": []
+        },
+        {
+            "path": "/Independent charge-temperature window / 1/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/aadedfde-0ecd-5e28-8d03-06e68f385e72",
+            "violations": []
+        },
+        {
+            "path": "/Independent charge-temperature window / 2/",
+            "uuid_path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36",
+            "violations": []
+        }
+    ],
+    "source": "click-counter-Q5.kicad_sch"
+}

@@ -1,0 +1,2 @@
+Comment,Designator,Footprint,Quantity,Manufacturer,Manufacturer Part Number,LCSC Part #,Assembly Role,Side,Qualification,Notes
+LIR2032 rechargeable Li-ion coin cell (user supplied),BAT1,OFFBOARD,1,USER_SUPPLIED,LIR2032,,user_inserts_into_BT1,,Consumable; exact cell brand and holder contact resistance unqualified,Insert into the vendor-soldered BT1 holder with USB connected (USB-first). Rechargeable LIR2032 only: never a primary CR2032 or 3 V ML2032. No soldering to the cell. Not a JLC/LCSC assembly part.

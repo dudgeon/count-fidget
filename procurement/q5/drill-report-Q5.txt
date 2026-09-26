@@ -1,0 +1,28 @@
+Drill report for click-counter-Q5.kicad_pcb
+Created on 2026-09-26T02:43:37
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'click-counter-Q5-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (130 holes))
+    T2  0.600mm  0.0236"  (4 holes)  (with 4 slots)
+    T3  1.020mm  0.0402"  (7 holes))
+
+    Total plated holes count 141
+
+
+Drill file 'click-counter-Q5-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  0.650mm  0.0256"  (2 holes))
+    T2  2.200mm  0.0866"  (4 holes))
+    T3  3.000mm  0.1181"  (4 holes))
+    T4  4.000mm  0.1575"  (2 holes))
+
+    Total unplated holes count 12

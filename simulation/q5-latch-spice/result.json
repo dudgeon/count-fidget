@@ -1,0 +1,1919 @@
+{
+ "schema": 1,
+ "status": "Behavioural ngspice transient; not a measurement or transistor-level simulation",
+ "model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+ "script_sha256": "a102376da3cf1a858d903f498be6617d2fddebdf0566d1ad6ac7b66a17f4bd79",
+ "ngspice": "** ngspice-42 : Circuit level simulation program",
+ "corners": {
+  "vcell_V": [
+   3.4,
+   3.7,
+   4.2
+  ],
+  "on_threshold_V": [
+   0.4,
+   0.7,
+   1.0
+  ],
+  "slew_scale": [
+   0.75,
+   1.0,
+   1.25
+  ],
+  "reset_temporisation_ms": [
+   1.0,
+   3.3
+  ]
+ },
+ "summary": {
+  "worst_min_clean_press_ms": 14.5,
+  "best_min_clean_press_ms": 2.3,
+  "bounce_50ms_latched": "60/60",
+  "bounce_worst_plus5_latched": "60/60",
+  "short_taps_latched": 13,
+  "short_taps_partial_mcu_start": 2,
+  "usb_turns_on": true
+ },
+ "min_press_ms": [
+  {
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 4.4
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 6.3
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 8.7
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 3.5
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 5.4
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 7.8
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 9.6
+  },
+  {
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 12.1
+  },
+  {
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 3.8
+  },
+  {
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 6.0
+  },
+  {
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 8.1
+  },
+  {
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 10.2
+  },
+  {
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 12.1
+  },
+  {
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 14.5
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 3.2
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 4.7
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 7.2
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 4.1
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 6.6
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 8.1
+  },
+  {
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 10.5
+  },
+  {
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.6
+  },
+  {
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 4.7
+  },
+  {
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 6.6
+  },
+  {
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 9.0
+  },
+  {
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 10.8
+  },
+  {
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 13.0
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.9
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 5.0
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 4.4
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 6.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 8.4
+  },
+  {
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 2.3
+  },
+  {
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 3.2
+  },
+  {
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 4.7
+  },
+  {
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 7.2
+  },
+  {
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "min_clean_press_ms": 8.7
+  },
+  {
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "min_clean_press_ms": 10.8
+  }
+ ],
+ "bounce_trials": [
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.208,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.208,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.208,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.208,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.208,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.208,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.4,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 1.0,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 0.7,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 0.4,
+   "kslew": 1.25,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 50,
+   "vcell": 4.2,
+   "vth": 0.7,
+   "kslew": 1.25,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 0.75,
+   "tempo_ms": 3.3,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 50,
+   "vcell": 3.7,
+   "vth": 1.0,
+   "kslew": 0.75,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "press_ms": 19.5,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "kslew": 1.0,
+   "tempo_ms": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  }
+ ],
+ "short_tap": [
+  {
+   "press_ms": 2,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 2,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "latched": false,
+   "peak_vlogic": 0.0,
+   "partial_start": false,
+   "final_sys_load": 0.898
+  },
+  {
+   "press_ms": 2,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 2,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "latched": false,
+   "peak_vlogic": 2.062,
+   "partial_start": true,
+   "final_sys_load": 1.396
+  },
+  {
+   "press_ms": 5,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 5,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "latched": false,
+   "peak_vlogic": 2.034,
+   "partial_start": true,
+   "final_sys_load": 1.396
+  },
+  {
+   "press_ms": 5,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 5,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 10,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 10,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 10,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 10,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.207,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 15,
+   "vcell": 3.4,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 15,
+   "vcell": 3.4,
+   "vth": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.395
+  },
+  {
+   "press_ms": 15,
+   "vcell": 4.2,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  },
+  {
+   "press_ms": 15,
+   "vcell": 4.2,
+   "vth": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.205,
+   "partial_start": false,
+   "final_sys_load": 4.195
+  }
+ ],
+ "usb": [
+  {
+   "vbus": 4.4,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "vbus": 4.4,
+   "vth": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "vbus": 5.25,
+   "vth": 0.4,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  },
+  {
+   "vbus": 5.25,
+   "vth": 1.0,
+   "latched": true,
+   "peak_vlogic": 3.206,
+   "partial_start": false,
+   "final_sys_load": 3.695
+  }
+ ]
+}

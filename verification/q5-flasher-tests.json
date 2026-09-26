@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "tool_sha256": "20b2239c87ecdebe4866d5af0526bba68322063b3ef7329bcd7e70a436ff729f",
+  "mock_sha256": "90f9dfabfeba64d2da3131d3bf24983fb2c59cd2d34b3ca6915cf75402c620be",
+  "test_sha256": "820b48360b985a2deac71ceb737d57c2cbf184e1d2896215c4f259963c57f94c",
+  "image_sha256": "17eac86b0454cdcc91e9ffb5f0bb0152f4844f3c5b08ee19bc0781b5d88dc502",
+  "passed": [
+    "happy_path",
+    "corrupted_write_is_rejected_and_logged",
+    "download_error_is_reported",
+    "leave_error_after_verified_readback_passes_with_note",
+    "two_devices_are_refused",
+    "no_device_times_out_with_instructions",
+    "read_protected_layout_is_refused",
+    "not_a_rom_bootloader_is_refused",
+    "unexpected_flash_size_warns_but_flashes",
+    "kib_layout_syntax_is_parsed",
+    "commissioning_answers_are_logged",
+    "tampered_image_is_refused",
+    "unrecorded_image_is_refused",
+    "bad_vector_table_is_refused",
+    "batch_flashes_successive_units"
+  ],
+  "real_dfu_util": {
+    "download": {
+      "exit": 74,
+      "message": "No DFU capable USB device available"
+    },
+    "upload_leave": {
+      "exit": 74,
+      "message": "No DFU capable USB device available"
+    },
+    "version": "0.11",
+    "list_parses": true
+  },
+  "hardware_executed": false,
+  "limits": "Mock DfuSe device reproduces dfu-util 0.11 CLI semantics only; no USB transfer, ROM bootloader or macOS libusb behaviour is exercised."
+}

@@ -1,0 +1,501 @@
+{
+ "schema": 1,
+ "status": "ESTIMATE from published fees and live catalogue prices; binding PCBA price requires the signed-in JLC BOM/CPL step",
+ "quantity": 10,
+ "model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+ "stock_sha256": "cff9d5ae8cbe2a1d297ebbe0124792218884b53aef2e979a7eac189e53bcc89a",
+ "board_sha256": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+ "fee_schedule": {
+  "economic": {
+   "setup": 8.18,
+   "stencil": 1.53,
+   "per_joint": 0.0016,
+   "feeder_extended": 3.07,
+   "feeder_basic": 0.0
+  },
+  "standard": {
+   "setup": 25.56,
+   "stencil": 8.21,
+   "per_joint": 0.0016,
+   "feeder_extended": 1.53,
+   "feeder_basic": 1.53
+  },
+  "manual_per_joint": 0.0164,
+  "hand_soldering_labor_per_order": 3.58
+ },
+ "fee_source": "https://jlcpcb.com/help/article/pcb-assembly-price (read 2026-09-25)",
+ "observed_jlc_quote_page": {
+  "pcb_usd": 22.1,
+  "pcb_quantity": 10,
+  "pcb_breakdown": {
+   "board": 5.0,
+   "enig": 17.1
+  },
+  "build_time_with_pcba": "24 hours (PCBA only) at $0.00",
+  "shipping_dhl_ddp_usd": 29.45,
+  "shipping_weight_kg": 0.2,
+  "observed_utc": "2026-09-25T20:05Z"
+ },
+ "smt_joints_per_board": 278,
+ "smt_part_types": {
+  "basic": 25,
+  "extended": 16
+ },
+ "variant_A": {
+  "description": "JLC SMT only; user solders DS1 on its header (14 joints)",
+  "economic": {
+   "pcb": 22.1,
+   "setup": 8.18,
+   "stencil": 1.53,
+   "smt_joints": 4.45,
+   "feeder_loading": 49.12,
+   "components": 135.81,
+   "subtotal_before_shipping": 221.19,
+   "with_dhl_shipping": 250.64,
+   "per_board_with_shipping": 25.06
+  },
+  "standard": {
+   "pcb": 22.1,
+   "setup": 25.56,
+   "stencil": 8.21,
+   "smt_joints": 4.45,
+   "feeder_loading": 62.73,
+   "components": 135.81,
+   "subtotal_before_shipping": 258.86,
+   "with_dhl_shipping": 288.31,
+   "per_board_with_shipping": 28.83
+  }
+ },
+ "variant_B": {
+  "description": "JLC SMT plus JLC through-hole DS1 on header DS1H (acceptance of the stacked module is a quote question)",
+  "economic": {
+   "pcb": 22.1,
+   "setup": 8.18,
+   "stencil": 1.53,
+   "smt_joints": 4.45,
+   "feeder_loading": 49.12,
+   "components": 135.81,
+   "tht_components": 18.72,
+   "tht_feeder_loading": 6.14,
+   "manual_joints": 2.3,
+   "hand_soldering_labor": 3.58,
+   "subtotal_before_shipping": 251.93,
+   "with_dhl_shipping": 281.38,
+   "per_board_with_shipping": 28.14
+  },
+  "standard": {
+   "pcb": 22.1,
+   "setup": 25.56,
+   "stencil": 8.21,
+   "smt_joints": 4.45,
+   "feeder_loading": 62.73,
+   "components": 135.81,
+   "tht_components": 18.72,
+   "tht_feeder_loading": 3.06,
+   "manual_joints": 2.3,
+   "hand_soldering_labor": 3.58,
+   "subtotal_before_shipping": 286.52,
+   "with_dhl_shipping": 315.97,
+   "per_board_with_shipping": 31.6
+  }
+ },
+ "lcsc_loose_parts_both_variants": {
+  "CPG151101D13": {
+   "usd": 2.69,
+   "quantity": 25
+  },
+  "PA2X6nie": {
+   "usd": null,
+   "quantity": 100
+  }
+ },
+ "lcsc_loose_parts_variant_A_only": {
+  "HS96L01W4S03": {
+   "usd": 22.12,
+   "quantity": 12
+  },
+  "PZ254V-11-07P": {
+   "usd": 0.92,
+   "quantity": 20
+  }
+ },
+ "not_included": [
+  "LCSC shipping",
+  "LIR2032 cells (user supplied, retail)",
+  "enclosure printing (home print per spec)",
+  "coupons/promotions (JLC advertises setup-fee coupons)",
+  "import tax beyond DDP",
+  "JLC component attrition surcharges"
+ ],
+ "component_lines": [
+  {
+   "mpn": "FM25V02A-GTR",
+   "lcsc": "C66029",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 3.4899,
+   "cost_usd": 34.899
+  },
+  {
+   "mpn": "STM32L072CBT6",
+   "lcsc": "C465977",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 3.1099,
+   "cost_usd": 31.099
+  },
+  {
+   "mpn": "BQ25185DLHR",
+   "lcsc": "C19725033",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 1.4648,
+   "cost_usd": 14.648
+  },
+  {
+   "mpn": "TLV7012DDFR",
+   "lcsc": "C2871502",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 1.1238,
+   "cost_usd": 11.238
+  },
+  {
+   "mpn": "USB4105-GF-A-120",
+   "lcsc": "C5184243",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.7178,
+   "cost_usd": 7.178
+  },
+  {
+   "mpn": "TPS22917DBVR",
+   "lcsc": "C2681320",
+   "library": "expand",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.3537,
+   "cost_usd": 7.074
+  },
+  {
+   "mpn": "GRM21BR61H106KE43L",
+   "lcsc": "C440198",
+   "library": "base",
+   "per_board": 3,
+   "buy": 30,
+   "unit_usd": 0.2065,
+   "cost_usd": 6.195
+  },
+  {
+   "mpn": "BQ29700DSER",
+   "lcsc": "C183096",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.5165,
+   "cost_usd": 5.165
+  },
+  {
+   "mpn": "USBLC6-2SC6",
+   "lcsc": "C7519",
+   "library": "expand",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.1759,
+   "cost_usd": 3.518
+  },
+  {
+   "mpn": "TLV76701DRVR",
+   "lcsc": "C2863998",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.2675,
+   "cost_usd": 2.675
+  },
+  {
+   "mpn": "CC0603KRX7R9BB104",
+   "lcsc": "C14663",
+   "library": "base",
+   "per_board": 14,
+   "buy": 140,
+   "unit_usd": 0.0122,
+   "cost_usd": 1.708
+  },
+  {
+   "mpn": "AO3400A",
+   "lcsc": "C20917",
+   "library": "base",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.0845,
+   "cost_usd": 1.69
+  },
+  {
+   "mpn": "CL21A225KBQNNNE",
+   "lcsc": "C377773",
+   "library": "base",
+   "per_board": 3,
+   "buy": 30,
+   "unit_usd": 0.053,
+   "cost_usd": 1.59
+  },
+  {
+   "mpn": "CR2032-BS-6-1",
+   "lcsc": "C70377",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.1381,
+   "cost_usd": 1.381
+  },
+  {
+   "mpn": "RT0603BRD07150KL",
+   "lcsc": "C326734",
+   "library": "expand",
+   "per_board": 3,
+   "buy": 30,
+   "unit_usd": 0.0432,
+   "cost_usd": 1.296
+  },
+  {
+   "mpn": "CPG151101S11-16",
+   "lcsc": "C41430893",
+   "library": "expand",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.0445,
+   "cost_usd": 0.89
+  },
+  {
+   "mpn": "TS-1088-AR02016",
+   "lcsc": "C720477",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0536,
+   "cost_usd": 0.536
+  },
+  {
+   "mpn": "2N7002",
+   "lcsc": "C8545",
+   "library": "base",
+   "per_board": 3,
+   "buy": 30,
+   "unit_usd": 0.0178,
+   "cost_usd": 0.534
+  },
+  {
+   "mpn": "NCP18XH103F03RB",
+   "lcsc": "C13564",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0463,
+   "cost_usd": 0.463
+  },
+  {
+   "mpn": "RT0603BRD0749K9L",
+   "lcsc": "C705780",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0381,
+   "cost_usd": 0.381
+  },
+  {
+   "mpn": "0603WAF1003T5E",
+   "lcsc": "C25803",
+   "library": "base",
+   "per_board": 10,
+   "buy": 100,
+   "unit_usd": 0.0031,
+   "cost_usd": 0.31
+  },
+  {
+   "mpn": "0603B472K500NT",
+   "lcsc": "C53987",
+   "library": "base",
+   "per_board": 3,
+   "buy": 30,
+   "unit_usd": 0.0092,
+   "cost_usd": 0.276
+  },
+  {
+   "mpn": "BAT54C,215",
+   "lcsc": "C37704",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0178,
+   "cost_usd": 0.178
+  },
+  {
+   "mpn": "CL10B102KB8NNNC",
+   "lcsc": "C1588",
+   "library": "base",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.0089,
+   "cost_usd": 0.178
+  },
+  {
+   "mpn": "1N4148WS",
+   "lcsc": "C2128",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0159,
+   "cost_usd": 0.159
+  },
+  {
+   "mpn": "0603B103K500NT",
+   "lcsc": "C57112",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0108,
+   "cost_usd": 0.108
+  },
+  {
+   "mpn": "0603WAF1802T5E",
+   "lcsc": "C25810",
+   "library": "base",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.004,
+   "cost_usd": 0.08
+  },
+  {
+   "mpn": "0603WAF1002T5E",
+   "lcsc": "C25804",
+   "library": "base",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.0018,
+   "cost_usd": 0.036
+  },
+  {
+   "mpn": "0603WAF750JT5E",
+   "lcsc": "C4275",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0033,
+   "cost_usd": 0.033
+  },
+  {
+   "mpn": "0603WAF1202T5E",
+   "lcsc": "C22790",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0031,
+   "cost_usd": 0.031
+  },
+  {
+   "mpn": "0603WAF5101T5E",
+   "lcsc": "C23186",
+   "library": "base",
+   "per_board": 2,
+   "buy": 20,
+   "unit_usd": 0.0015,
+   "cost_usd": 0.03
+  },
+  {
+   "mpn": "0603WAF5602T5E",
+   "lcsc": "C23206",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0027,
+   "cost_usd": 0.027
+  },
+  {
+   "mpn": "0603WAF8202T5E",
+   "lcsc": "C23254",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0027,
+   "cost_usd": 0.027
+  },
+  {
+   "mpn": "0603WAF1001T5E",
+   "lcsc": "C21190",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0026,
+   "cost_usd": 0.026
+  },
+  {
+   "mpn": "0603WAF3300T5E",
+   "lcsc": "C23138",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0026,
+   "cost_usd": 0.026
+  },
+  {
+   "mpn": "0603WAF330KT5E",
+   "lcsc": "C22979",
+   "library": "expand",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0026,
+   "cost_usd": 0.026
+  },
+  {
+   "mpn": "0603WAF2001T5E",
+   "lcsc": "C22975",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0024,
+   "cost_usd": 0.024
+  },
+  {
+   "mpn": "0603WAF2402T5E",
+   "lcsc": "C23352",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0024,
+   "cost_usd": 0.024
+  },
+  {
+   "mpn": "0603WAF1004T5E",
+   "lcsc": "C22935",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0019,
+   "cost_usd": 0.019
+  },
+  {
+   "mpn": "0603WAF2201T5E",
+   "lcsc": "C4190",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0018,
+   "cost_usd": 0.018
+  },
+  {
+   "mpn": "0603WAF2203T5E",
+   "lcsc": "C22961",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0015,
+   "cost_usd": 0.015
+  }
+ ]
+}

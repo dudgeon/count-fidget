@@ -1,0 +1,2230 @@
+{
+  "root_uuid": "7c190cd8-3ca2-5363-8a92-396d30a08243",
+  "namespace": "5a1f0c22-8d3e-5e41-9b07-2c6d4e8f1a35",
+  "parts": {
+    "U1": {
+      "sheet": "mcu-1",
+      "sheet_file": "mcu-1.kicad_sch",
+      "symbol_uuid": "c2f83f8f-ec79-5a87-b104-804680d17441",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/c2f83f8f-ec79-5a87-b104-804680d17441",
+      "pins": {
+        "1": {
+          "name": "VDD",
+          "type": "power_in",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "PC13",
+          "type": "bidirectional",
+          "net": null
+        },
+        "3": {
+          "name": "PC14",
+          "type": "bidirectional",
+          "net": null
+        },
+        "4": {
+          "name": "PC15",
+          "type": "bidirectional",
+          "net": null
+        },
+        "5": {
+          "name": "PH0",
+          "type": "bidirectional",
+          "net": null
+        },
+        "6": {
+          "name": "PH1",
+          "type": "bidirectional",
+          "net": null
+        },
+        "7": {
+          "name": "NRST",
+          "type": "input",
+          "net": "NRST"
+        },
+        "8": {
+          "name": "VSSA",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "9": {
+          "name": "VDDA",
+          "type": "power_in",
+          "net": "VLOGIC"
+        },
+        "10": {
+          "name": "PA0",
+          "type": "bidirectional",
+          "net": "COUNT_N"
+        },
+        "11": {
+          "name": "PA1",
+          "type": "bidirectional",
+          "net": "BOOT_COUNT_RESET"
+        },
+        "12": {
+          "name": "PA2",
+          "type": "bidirectional",
+          "net": null
+        },
+        "13": {
+          "name": "PA3",
+          "type": "bidirectional",
+          "net": null
+        },
+        "14": {
+          "name": "PA4",
+          "type": "bidirectional",
+          "net": "VBAT_SENSE"
+        },
+        "15": {
+          "name": "PA5",
+          "type": "bidirectional",
+          "net": "CHG_STAT1"
+        },
+        "16": {
+          "name": "PA6",
+          "type": "bidirectional",
+          "net": "CHG_STAT2"
+        },
+        "17": {
+          "name": "PA7",
+          "type": "bidirectional",
+          "net": null
+        },
+        "18": {
+          "name": "PB0",
+          "type": "bidirectional",
+          "net": "OLED_RESET_N"
+        },
+        "19": {
+          "name": "PB1",
+          "type": "bidirectional",
+          "net": "OLED_ENABLE"
+        },
+        "20": {
+          "name": "PB2",
+          "type": "bidirectional",
+          "net": "PWR_HOLD"
+        },
+        "21": {
+          "name": "PB10",
+          "type": "bidirectional",
+          "net": null
+        },
+        "22": {
+          "name": "PB11",
+          "type": "bidirectional",
+          "net": null
+        },
+        "23": {
+          "name": "VSS",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "24": {
+          "name": "VDD",
+          "type": "power_in",
+          "net": "VLOGIC"
+        },
+        "25": {
+          "name": "PB12",
+          "type": "bidirectional",
+          "net": "OLED_CS_N"
+        },
+        "26": {
+          "name": "PB13",
+          "type": "bidirectional",
+          "net": "OLED_SCK"
+        },
+        "27": {
+          "name": "PB14",
+          "type": "bidirectional",
+          "net": "OLED_DC"
+        },
+        "28": {
+          "name": "PB15",
+          "type": "bidirectional",
+          "net": "OLED_MOSI"
+        },
+        "29": {
+          "name": "PA8",
+          "type": "bidirectional",
+          "net": null
+        },
+        "30": {
+          "name": "PA9",
+          "type": "bidirectional",
+          "net": null
+        },
+        "31": {
+          "name": "PA10",
+          "type": "bidirectional",
+          "net": null
+        },
+        "32": {
+          "name": "PA11",
+          "type": "bidirectional",
+          "net": "USB_DM"
+        },
+        "33": {
+          "name": "PA12",
+          "type": "bidirectional",
+          "net": "USB_DP"
+        },
+        "34": {
+          "name": "PA13",
+          "type": "bidirectional",
+          "net": "SWDIO"
+        },
+        "35": {
+          "name": "VSS",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "36": {
+          "name": "VDD_USB",
+          "type": "power_in",
+          "net": "VLOGIC"
+        },
+        "37": {
+          "name": "PA14",
+          "type": "bidirectional",
+          "net": "SWCLK"
+        },
+        "38": {
+          "name": "PA15",
+          "type": "bidirectional",
+          "net": null
+        },
+        "39": {
+          "name": "PB3",
+          "type": "bidirectional",
+          "net": "FRAM_SCK"
+        },
+        "40": {
+          "name": "PB4",
+          "type": "bidirectional",
+          "net": "FRAM_MISO"
+        },
+        "41": {
+          "name": "PB5",
+          "type": "bidirectional",
+          "net": "FRAM_MOSI"
+        },
+        "42": {
+          "name": "PB6",
+          "type": "bidirectional",
+          "net": null
+        },
+        "43": {
+          "name": "PB7",
+          "type": "bidirectional",
+          "net": null
+        },
+        "44": {
+          "name": "BOOT0",
+          "type": "input",
+          "net": "BOOT_COUNT_RESET"
+        },
+        "45": {
+          "name": "PB8",
+          "type": "bidirectional",
+          "net": "FRAM_CS_N"
+        },
+        "46": {
+          "name": "PB9",
+          "type": "bidirectional",
+          "net": null
+        },
+        "47": {
+          "name": "VSS",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "48": {
+          "name": "VDD",
+          "type": "power_in",
+          "net": "VLOGIC"
+        }
+      }
+    },
+    "C31": {
+      "sheet": "mcu-1",
+      "sheet_file": "mcu-1.kicad_sch",
+      "symbol_uuid": "8832e93b-1d6b-55de-b333-c4b88236d947",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/8832e93b-1d6b-55de-b333-c4b88236d947",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C32": {
+      "sheet": "mcu-1",
+      "sheet_file": "mcu-1.kicad_sch",
+      "symbol_uuid": "26330fee-e8ec-56ba-a45d-ba73e1e63810",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/26330fee-e8ec-56ba-a45d-ba73e1e63810",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C33": {
+      "sheet": "mcu-1",
+      "sheet_file": "mcu-1.kicad_sch",
+      "symbol_uuid": "317c655d-6277-5926-b731-077709471b5b",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/317c655d-6277-5926-b731-077709471b5b",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C34": {
+      "sheet": "mcu-1",
+      "sheet_file": "mcu-1.kicad_sch",
+      "symbol_uuid": "170f4525-af78-5948-b80a-5973d8e41bcb",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/13b3b74f-a3c8-51d4-b48b-fce3bec0261c/170f4525-af78-5948-b80a-5973d8e41bcb",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C10": {
+      "sheet": "mcu-2",
+      "sheet_file": "mcu-2.kicad_sch",
+      "symbol_uuid": "15d126ce-97b7-53fc-9eca-c19a176da8b5",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/25c8a497-d064-5849-8b98-8381803a397d/15d126ce-97b7-53fc-9eca-c19a176da8b5",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "NRST"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C11": {
+      "sheet": "mcu-2",
+      "sheet_file": "mcu-2.kicad_sch",
+      "symbol_uuid": "de31bee3-e938-514c-9f4b-036a6a3f3b19",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/25c8a497-d064-5849-8b98-8381803a397d/de31bee3-e938-514c-9f4b-036a6a3f3b19",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "COUNT_N"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C12": {
+      "sheet": "mcu-2",
+      "sheet_file": "mcu-2.kicad_sch",
+      "symbol_uuid": "819cec11-781e-58de-a56b-3e1f462bbdbf",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/25c8a497-d064-5849-8b98-8381803a397d/819cec11-781e-58de-a56b-3e1f462bbdbf",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "BOOT_COUNT_RESET"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C35": {
+      "sheet": "mcu-2",
+      "sheet_file": "mcu-2.kicad_sch",
+      "symbol_uuid": "93ebfc45-fa72-59e6-b473-15bed4439410",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/25c8a497-d064-5849-8b98-8381803a397d/93ebfc45-fa72-59e6-b473-15bed4439410",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C37": {
+      "sheet": "mcu-2",
+      "sheet_file": "mcu-2.kicad_sch",
+      "symbol_uuid": "260807f4-bad2-56a5-9edb-850b230d285a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/25c8a497-d064-5849-8b98-8381803a397d/260807f4-bad2-56a5-9edb-850b230d285a",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBAT_SENSE"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C6": {
+      "sheet": "mcu-2",
+      "sheet_file": "mcu-2.kicad_sch",
+      "symbol_uuid": "e64d99d4-6a58-52f6-a95c-f3809ea794be",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/25c8a497-d064-5849-8b98-8381803a397d/e64d99d4-6a58-52f6-a95c-f3809ea794be",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C7": {
+      "sheet": "mcu-3",
+      "sheet_file": "mcu-3.kicad_sch",
+      "symbol_uuid": "8c9e673a-300a-5306-94fe-f7d79c2f6314",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c95d9573-76d3-535d-a7a6-1eff788ec11a/8c9e673a-300a-5306-94fe-f7d79c2f6314",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "H1": {
+      "sheet": "mcu-3",
+      "sheet_file": "mcu-3.kicad_sch",
+      "symbol_uuid": "1afcc4e6-36ea-5035-8d8b-6060692d6237",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c95d9573-76d3-535d-a7a6-1eff788ec11a/1afcc4e6-36ea-5035-8d8b-6060692d6237",
+      "pins": {}
+    },
+    "H2": {
+      "sheet": "mcu-3",
+      "sheet_file": "mcu-3.kicad_sch",
+      "symbol_uuid": "39f0601c-bb3b-55c5-bbf3-415932180b53",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c95d9573-76d3-535d-a7a6-1eff788ec11a/39f0601c-bb3b-55c5-bbf3-415932180b53",
+      "pins": {}
+    },
+    "H3": {
+      "sheet": "mcu-3",
+      "sheet_file": "mcu-3.kicad_sch",
+      "symbol_uuid": "58aaee84-0f3d-5a00-af9a-7aabdc42b11b",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c95d9573-76d3-535d-a7a6-1eff788ec11a/58aaee84-0f3d-5a00-af9a-7aabdc42b11b",
+      "pins": {}
+    },
+    "H4": {
+      "sheet": "mcu-3",
+      "sheet_file": "mcu-3.kicad_sch",
+      "symbol_uuid": "4e2935d3-5c57-5e92-b948-5a8cf506ff90",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c95d9573-76d3-535d-a7a6-1eff788ec11a/4e2935d3-5c57-5e92-b948-5a8cf506ff90",
+      "pins": {}
+    },
+    "Q5": {
+      "sheet": "mcu-3",
+      "sheet_file": "mcu-3.kicad_sch",
+      "symbol_uuid": "ce6b46d4-aede-51d9-b295-d926cacf78b6",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c95d9573-76d3-535d-a7a6-1eff788ec11a/ce6b46d4-aede-51d9-b295-d926cacf78b6",
+      "pins": {
+        "1": {
+          "name": "G",
+          "type": "input",
+          "net": "PWR_KEY"
+        },
+        "2": {
+          "name": "S",
+          "type": "passive",
+          "net": "GND"
+        },
+        "3": {
+          "name": "D",
+          "type": "passive",
+          "net": "COUNT_N"
+        }
+      }
+    },
+    "R16": {
+      "sheet": "mcu-4",
+      "sheet_file": "mcu-4.kicad_sch",
+      "symbol_uuid": "7774a6de-66a2-5ae9-858e-8414c5bcf755",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5b560024-5f43-580a-88a1-035a458454bd/7774a6de-66a2-5ae9-858e-8414c5bcf755",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "NRST"
+        }
+      }
+    },
+    "R17": {
+      "sheet": "mcu-4",
+      "sheet_file": "mcu-4.kicad_sch",
+      "symbol_uuid": "68906212-c32d-5a0a-ac18-dfc9da61e18d",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5b560024-5f43-580a-88a1-035a458454bd/68906212-c32d-5a0a-ac18-dfc9da61e18d",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "COUNT_N"
+        }
+      }
+    },
+    "R18": {
+      "sheet": "mcu-4",
+      "sheet_file": "mcu-4.kicad_sch",
+      "symbol_uuid": "5752509c-c435-567f-a9c1-83b0d64121f0",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5b560024-5f43-580a-88a1-035a458454bd/5752509c-c435-567f-a9c1-83b0d64121f0",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "BOOT_COUNT_RESET"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R36": {
+      "sheet": "mcu-4",
+      "sheet_file": "mcu-4.kicad_sch",
+      "symbol_uuid": "524e9962-7ea9-558b-8b34-e7745d8d5a15",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5b560024-5f43-580a-88a1-035a458454bd/524e9962-7ea9-558b-8b34-e7745d8d5a15",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS_LOAD"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "VBAT_SENSE"
+        }
+      }
+    },
+    "R37": {
+      "sheet": "mcu-4",
+      "sheet_file": "mcu-4.kicad_sch",
+      "symbol_uuid": "42a7e13e-970b-5803-82c8-c9079259c990",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5b560024-5f43-580a-88a1-035a458454bd/42a7e13e-970b-5803-82c8-c9079259c990",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBAT_SENSE"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "SW1": {
+      "sheet": "mcu-4",
+      "sheet_file": "mcu-4.kicad_sch",
+      "symbol_uuid": "f7547ba6-8e5b-550b-b54a-0527914d976a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5b560024-5f43-580a-88a1-035a458454bd/f7547ba6-8e5b-550b-b54a-0527914d976a",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "PWR_KEY"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "SYS"
+        }
+      }
+    },
+    "SW2": {
+      "sheet": "mcu-5",
+      "sheet_file": "mcu-5.kicad_sch",
+      "symbol_uuid": "3f0814a7-4254-57ed-9f58-8472ac0ab5fa",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/2f9dfd4f-ef26-5940-ad4a-519e367606ec/3f0814a7-4254-57ed-9f58-8472ac0ab5fa",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "BOOT_COUNT_RESET"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "VLOGIC"
+        }
+      }
+    },
+    "SW3": {
+      "sheet": "mcu-5",
+      "sheet_file": "mcu-5.kicad_sch",
+      "symbol_uuid": "5e4c1f48-9f87-5d84-944b-ed9754f3285f",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/2f9dfd4f-ef26-5940-ad4a-519e367606ec/5e4c1f48-9f87-5d84-944b-ed9754f3285f",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "NRST"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "TP1": {
+      "sheet": "mcu-5",
+      "sheet_file": "mcu-5.kicad_sch",
+      "symbol_uuid": "6eaf1385-34c2-51fc-9f3f-2ef274172d10",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/2f9dfd4f-ef26-5940-ad4a-519e367606ec/6eaf1385-34c2-51fc-9f3f-2ef274172d10",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "TP11": {
+      "sheet": "mcu-5",
+      "sheet_file": "mcu-5.kicad_sch",
+      "symbol_uuid": "33d5db18-1b62-55e5-bd83-978238c677b3",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/2f9dfd4f-ef26-5940-ad4a-519e367606ec/33d5db18-1b62-55e5-bd83-978238c677b3",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "NRST"
+        }
+      }
+    },
+    "TP12": {
+      "sheet": "mcu-5",
+      "sheet_file": "mcu-5.kicad_sch",
+      "symbol_uuid": "0bdc0500-7ed2-5edf-b8f7-052797d18955",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/2f9dfd4f-ef26-5940-ad4a-519e367606ec/0bdc0500-7ed2-5edf-b8f7-052797d18955",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "BOOT_COUNT_RESET"
+        }
+      }
+    },
+    "TP2": {
+      "sheet": "mcu-5",
+      "sheet_file": "mcu-5.kicad_sch",
+      "symbol_uuid": "522ac632-b30e-59ca-85e2-a0e01ea3a5c3",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/2f9dfd4f-ef26-5940-ad4a-519e367606ec/522ac632-b30e-59ca-85e2-a0e01ea3a5c3",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        }
+      }
+    },
+    "TP3": {
+      "sheet": "mcu-6",
+      "sheet_file": "mcu-6.kicad_sch",
+      "symbol_uuid": "45515c55-9076-56e2-ac36-5acfceeed484",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/fc98771e-3d36-5fe2-9fec-1520070c0127/45515c55-9076-56e2-ac36-5acfceeed484",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SWDIO"
+        }
+      }
+    },
+    "TP4": {
+      "sheet": "mcu-6",
+      "sheet_file": "mcu-6.kicad_sch",
+      "symbol_uuid": "2d68ea12-5a93-5696-9c0c-59d12ac110e9",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/fc98771e-3d36-5fe2-9fec-1520070c0127/2d68ea12-5a93-5696-9c0c-59d12ac110e9",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SWCLK"
+        }
+      }
+    },
+    "TP5": {
+      "sheet": "mcu-6",
+      "sheet_file": "mcu-6.kicad_sch",
+      "symbol_uuid": "136e929d-ffab-5143-97af-9c3a0c6a7dd0",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/fc98771e-3d36-5fe2-9fec-1520070c0127/136e929d-ffab-5143-97af-9c3a0c6a7dd0",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        }
+      }
+    },
+    "TP6": {
+      "sheet": "mcu-6",
+      "sheet_file": "mcu-6.kicad_sch",
+      "symbol_uuid": "5ef793dd-70e3-565a-a15a-f39f4fead051",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/fc98771e-3d36-5fe2-9fec-1520070c0127/5ef793dd-70e3-565a-a15a-f39f4fead051",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS"
+        }
+      }
+    },
+    "TP9": {
+      "sheet": "mcu-6",
+      "sheet_file": "mcu-6.kicad_sch",
+      "symbol_uuid": "15bf62db-102d-53e7-92b6-665d028a9850",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/fc98771e-3d36-5fe2-9fec-1520070c0127/15bf62db-102d-53e7-92b6-665d028a9850",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "COUNT_N"
+        }
+      }
+    },
+    "C20": {
+      "sheet": "display-1",
+      "sheet_file": "display-1.kicad_sch",
+      "symbol_uuid": "d5b89259-1ca8-5265-ac66-8d71300b7ef5",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/d5b89259-1ca8-5265-ac66-8d71300b7ef5",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C28": {
+      "sheet": "display-1",
+      "sheet_file": "display-1.kicad_sch",
+      "symbol_uuid": "1685a161-ff09-5853-8cdb-3bd0a5bba500",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/1685a161-ff09-5853-8cdb-3bd0a5bba500",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "OLED_CT"
+        }
+      }
+    },
+    "DS1": {
+      "sheet": "display-1",
+      "sheet_file": "display-1.kicad_sch",
+      "symbol_uuid": "18a40708-af31-5360-992c-a3efd1570f47",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/18a40708-af31-5360-992c-a3efd1570f47",
+      "pins": {
+        "1": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "2": {
+          "name": "VCC",
+          "type": "power_in",
+          "net": "OLED_SUPPLY"
+        },
+        "3": {
+          "name": "SCL/SCK",
+          "type": "input",
+          "net": "OLED_SCK"
+        },
+        "4": {
+          "name": "SDA/MOSI",
+          "type": "input",
+          "net": "OLED_MOSI"
+        },
+        "5": {
+          "name": "RES#",
+          "type": "input",
+          "net": "OLED_RESET_N"
+        },
+        "6": {
+          "name": "D/C#",
+          "type": "input",
+          "net": "OLED_DC"
+        },
+        "7": {
+          "name": "CS#",
+          "type": "input",
+          "net": "OLED_CS_N"
+        }
+      }
+    },
+    "R24": {
+      "sheet": "display-1",
+      "sheet_file": "display-1.kicad_sch",
+      "symbol_uuid": "52626091-58e2-5048-8aab-56f8e9e203f3",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/52626091-58e2-5048-8aab-56f8e9e203f3",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "OLED_ENABLE"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R25": {
+      "sheet": "display-1",
+      "sheet_file": "display-1.kicad_sch",
+      "symbol_uuid": "829903b1-5baa-54d4-b844-8520bd23ee7a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/829903b1-5baa-54d4-b844-8520bd23ee7a",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "OLED_RESET_N"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R29": {
+      "sheet": "display-1",
+      "sheet_file": "display-1.kicad_sch",
+      "symbol_uuid": "12aec400-ff68-5482-82ba-14f386076bf6",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a5c2d3a6-51db-5a84-b99b-2f2e9ec90a3a/12aec400-ff68-5482-82ba-14f386076bf6",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "OLED_SUPPLY"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "OLED_CS_N"
+        }
+      }
+    },
+    "U6": {
+      "sheet": "display-2",
+      "sheet_file": "display-2.kicad_sch",
+      "symbol_uuid": "83fae058-b58e-51d7-8065-2382a3f10234",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/30e7c69a-a640-5d4b-98e4-fa5805923b37/83fae058-b58e-51d7-8065-2382a3f10234",
+      "pins": {
+        "1": {
+          "name": "VIN",
+          "type": "power_in",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "3": {
+          "name": "ON",
+          "type": "input",
+          "net": "OLED_ENABLE"
+        },
+        "4": {
+          "name": "CT",
+          "type": "passive",
+          "net": "OLED_CT"
+        },
+        "5": {
+          "name": "QOD",
+          "type": "passive",
+          "net": null
+        },
+        "6": {
+          "name": "VOUT",
+          "type": "power_out",
+          "net": "OLED_SUPPLY"
+        }
+      }
+    },
+    "C30": {
+      "sheet": "memory-1",
+      "sheet_file": "memory-1.kicad_sch",
+      "symbol_uuid": "35184aa5-f8fc-57e2-aa1b-dd85ff92fb42",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/dfe44b2e-dca8-55dc-a058-ba49538b1523/35184aa5-f8fc-57e2-aa1b-dd85ff92fb42",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VFRAM"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C36": {
+      "sheet": "memory-1",
+      "sheet_file": "memory-1.kicad_sch",
+      "symbol_uuid": "8a1d6f59-2e1c-580b-ac22-b581232f0683",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/dfe44b2e-dca8-55dc-a058-ba49538b1523/8a1d6f59-2e1c-580b-ac22-b581232f0683",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VFRAM"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R32": {
+      "sheet": "memory-1",
+      "sheet_file": "memory-1.kicad_sch",
+      "symbol_uuid": "f6d74bc3-3cd5-5854-a486-64cbec6f791a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/dfe44b2e-dca8-55dc-a058-ba49538b1523/f6d74bc3-3cd5-5854-a486-64cbec6f791a",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "VFRAM"
+        }
+      }
+    },
+    "R33": {
+      "sheet": "memory-1",
+      "sheet_file": "memory-1.kicad_sch",
+      "symbol_uuid": "9c1bdb75-5439-5860-a236-9ca010b747dc",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/dfe44b2e-dca8-55dc-a058-ba49538b1523/9c1bdb75-5439-5860-a236-9ca010b747dc",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VFRAM"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "FRAM_CS_N"
+        }
+      }
+    },
+    "U8": {
+      "sheet": "memory-1",
+      "sheet_file": "memory-1.kicad_sch",
+      "symbol_uuid": "6f8dd0d4-a7a6-56dc-8739-50eb50b21995",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/dfe44b2e-dca8-55dc-a058-ba49538b1523/6f8dd0d4-a7a6-56dc-8739-50eb50b21995",
+      "pins": {
+        "1": {
+          "name": "CS#",
+          "type": "input",
+          "net": "FRAM_CS_N"
+        },
+        "2": {
+          "name": "SO",
+          "type": "tri_state",
+          "net": "FRAM_MISO"
+        },
+        "3": {
+          "name": "WP#",
+          "type": "input",
+          "net": "VFRAM"
+        },
+        "4": {
+          "name": "VSS",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "5": {
+          "name": "SI",
+          "type": "input",
+          "net": "FRAM_MOSI"
+        },
+        "6": {
+          "name": "SCK",
+          "type": "input",
+          "net": "FRAM_SCK"
+        },
+        "7": {
+          "name": "HOLD#",
+          "type": "input",
+          "net": "VFRAM"
+        },
+        "8": {
+          "name": "VDD",
+          "type": "power_in",
+          "net": "VFRAM"
+        }
+      }
+    },
+    "C1": {
+      "sheet": "usb-power-1",
+      "sheet_file": "usb-power-1.kicad_sch",
+      "symbol_uuid": "e46fc2f7-c46c-580f-b5a0-a76b19aa47ec",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/81d32175-1402-5eb1-8389-0a5fb2a4f6de/e46fc2f7-c46c-580f-b5a0-a76b19aa47ec",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C13": {
+      "sheet": "usb-power-1",
+      "sheet_file": "usb-power-1.kicad_sch",
+      "symbol_uuid": "aa771356-43b3-538b-a77d-87de49fd081e",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/81d32175-1402-5eb1-8389-0a5fb2a4f6de/aa771356-43b3-538b-a77d-87de49fd081e",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "RC_COMP"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C2": {
+      "sheet": "usb-power-1",
+      "sheet_file": "usb-power-1.kicad_sch",
+      "symbol_uuid": "98d386f5-9d7b-571d-858b-cd2a44a5d7ca",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/81d32175-1402-5eb1-8389-0a5fb2a4f6de/98d386f5-9d7b-571d-858b-cd2a44a5d7ca",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C29": {
+      "sheet": "usb-power-1",
+      "sheet_file": "usb-power-1.kicad_sch",
+      "symbol_uuid": "5444e3f3-0d1a-55de-b4bf-c8064cc62bd5",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/81d32175-1402-5eb1-8389-0a5fb2a4f6de/5444e3f3-0d1a-55de-b4bf-c8064cc62bd5",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "SYS_CT"
+        }
+      }
+    },
+    "C3": {
+      "sheet": "usb-power-1",
+      "sheet_file": "usb-power-1.kicad_sch",
+      "symbol_uuid": "fdc6510e-6813-5658-8740-107bb6f9d15a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/81d32175-1402-5eb1-8389-0a5fb2a4f6de/fdc6510e-6813-5658-8740-107bb6f9d15a",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "CELL_P"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C38": {
+      "sheet": "usb-power-1",
+      "sheet_file": "usb-power-1.kicad_sch",
+      "symbol_uuid": "734e50e0-0abe-5ec7-9dc0-b04e52ba9262",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/81d32175-1402-5eb1-8389-0a5fb2a4f6de/734e50e0-0abe-5ec7-9dc0-b04e52ba9262",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C39": {
+      "sheet": "usb-power-2",
+      "sheet_file": "usb-power-2.kicad_sch",
+      "symbol_uuid": "af06aba0-529f-5797-b88f-8f04e565eada",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/af06aba0-529f-5797-b88f-8f04e565eada",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C40": {
+      "sheet": "usb-power-2",
+      "sheet_file": "usb-power-2.kicad_sch",
+      "symbol_uuid": "9c4c697e-6982-5833-a4a4-e74ee5c0dac9",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/9c4c697e-6982-5833-a4a4-e74ee5c0dac9",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS_ON"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "C5": {
+      "sheet": "usb-power-2",
+      "sheet_file": "usb-power-2.kicad_sch",
+      "symbol_uuid": "f71d06db-25e5-5e08-adb0-1014b1190af0",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/f71d06db-25e5-5e08-adb0-1014b1190af0",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS_LOAD"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "D1": {
+      "sheet": "usb-power-2",
+      "sheet_file": "usb-power-2.kicad_sch",
+      "symbol_uuid": "7c0f9501-5b63-55f6-a837-f7b45f4f2878",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/7c0f9501-5b63-55f6-a837-f7b45f4f2878",
+      "pins": {
+        "1": {
+          "name": "I/O1",
+          "type": "passive",
+          "net": "CC1"
+        },
+        "2": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "3": {
+          "name": "I/O2",
+          "type": "passive",
+          "net": "CC2"
+        },
+        "4": {
+          "name": "I/O2",
+          "type": "passive",
+          "net": "CC2"
+        },
+        "5": {
+          "name": "VBUS",
+          "type": "power_in",
+          "net": "VBUS"
+        },
+        "6": {
+          "name": "I/O1",
+          "type": "passive",
+          "net": "CC1"
+        }
+      }
+    },
+    "D2": {
+      "sheet": "usb-power-2",
+      "sheet_file": "usb-power-2.kicad_sch",
+      "symbol_uuid": "8e6d33bb-9d32-56c0-b730-2d4d39f270ee",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/8e6d33bb-9d32-56c0-b730-2d4d39f270ee",
+      "pins": {
+        "1": {
+          "name": "I/O1",
+          "type": "passive",
+          "net": "USB_DM"
+        },
+        "2": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "3": {
+          "name": "I/O2",
+          "type": "passive",
+          "net": "USB_DP"
+        },
+        "4": {
+          "name": "I/O2",
+          "type": "passive",
+          "net": "USB_DP"
+        },
+        "5": {
+          "name": "VBUS",
+          "type": "power_in",
+          "net": "VBUS"
+        },
+        "6": {
+          "name": "I/O1",
+          "type": "passive",
+          "net": "USB_DM"
+        }
+      }
+    },
+    "D3": {
+      "sheet": "usb-power-2",
+      "sheet_file": "usb-power-2.kicad_sch",
+      "symbol_uuid": "98b589d5-ab09-5748-af88-a181ecf4cdb0",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/212a85d9-b47b-5df6-8d9b-ffcc17a81200/98b589d5-ab09-5748-af88-a181ecf4cdb0",
+      "pins": {
+        "1": {
+          "name": "A1",
+          "type": "passive",
+          "net": "PWR_KEY"
+        },
+        "2": {
+          "name": "A2",
+          "type": "passive",
+          "net": "PWR_HOLD"
+        },
+        "3": {
+          "name": "K",
+          "type": "passive",
+          "net": "SYS_ON"
+        }
+      }
+    },
+    "D4": {
+      "sheet": "usb-power-3",
+      "sheet_file": "usb-power-3.kicad_sch",
+      "symbol_uuid": "ec485278-a550-5bc5-b803-a8f0e3b06555",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/ec485278-a550-5bc5-b803-a8f0e3b06555",
+      "pins": {
+        "1": {
+          "name": "K",
+          "type": "passive",
+          "net": "VBUS_WAKE"
+        },
+        "2": {
+          "name": "A",
+          "type": "passive",
+          "net": "VBUS"
+        }
+      }
+    },
+    "J1": {
+      "sheet": "usb-power-3",
+      "sheet_file": "usb-power-3.kicad_sch",
+      "symbol_uuid": "5d51feec-2d6a-50a4-83e7-26a875f4479a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/5d51feec-2d6a-50a4-83e7-26a875f4479a",
+      "pins": {
+        "A1": {
+          "name": "GND",
+          "type": "passive",
+          "net": "GND"
+        },
+        "A4": {
+          "name": "VBUS",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "A5": {
+          "name": "CCA",
+          "type": "passive",
+          "net": "CC1"
+        },
+        "A6": {
+          "name": "D+",
+          "type": "passive",
+          "net": "USB_DP"
+        },
+        "A7": {
+          "name": "D-",
+          "type": "passive",
+          "net": "USB_DM"
+        },
+        "A8": {
+          "name": "SBUA",
+          "type": "passive",
+          "net": null
+        },
+        "A9": {
+          "name": "VBUS",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "A12": {
+          "name": "GND",
+          "type": "passive",
+          "net": "GND"
+        },
+        "B1": {
+          "name": "GND",
+          "type": "passive",
+          "net": "GND"
+        },
+        "B4": {
+          "name": "VBUS",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "B5": {
+          "name": "CCB",
+          "type": "passive",
+          "net": "CC2"
+        },
+        "B6": {
+          "name": "D+",
+          "type": "passive",
+          "net": "USB_DP"
+        },
+        "B7": {
+          "name": "D-",
+          "type": "passive",
+          "net": "USB_DM"
+        },
+        "B8": {
+          "name": "SBUB",
+          "type": "passive",
+          "net": null
+        },
+        "B9": {
+          "name": "VBUS",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "B12": {
+          "name": "GND",
+          "type": "passive",
+          "net": "GND"
+        },
+        "SH": {
+          "name": "SHIELD",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R1": {
+      "sheet": "usb-power-3",
+      "sheet_file": "usb-power-3.kicad_sch",
+      "symbol_uuid": "c8fef18c-6eda-52c3-8c99-bc70b7578a6f",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/c8fef18c-6eda-52c3-8c99-bc70b7578a6f",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "CC1"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R19": {
+      "sheet": "usb-power-3",
+      "sheet_file": "usb-power-3.kicad_sch",
+      "symbol_uuid": "2e6d7a58-02c5-58e9-9fe7-ac399581e8e0",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/2e6d7a58-02c5-58e9-9fe7-ac399581e8e0",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "ISET"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "RC_COMP"
+        }
+      }
+    },
+    "R2": {
+      "sheet": "usb-power-3",
+      "sheet_file": "usb-power-3.kicad_sch",
+      "symbol_uuid": "11c39ec1-5cda-55bb-ba2a-4890534adbda",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/11c39ec1-5cda-55bb-ba2a-4890534adbda",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "CC2"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R3": {
+      "sheet": "usb-power-3",
+      "sheet_file": "usb-power-3.kicad_sch",
+      "symbol_uuid": "758fba5d-4ece-56d7-a4fa-382a9e105a75",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/5fb45f3b-d34f-5b9b-a51a-46ba79d45117/758fba5d-4ece-56d7-a4fa-382a9e105a75",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VSET"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R30": {
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
+      "symbol_uuid": "5568ca25-ccb6-594e-b3c7-df18034f79bb",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/5568ca25-ccb6-594e-b3c7-df18034f79bb",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "VLOGIC_FB"
+        }
+      }
+    },
+    "R31": {
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
+      "symbol_uuid": "87e735fd-e51a-527b-a312-193597f3e3f6",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/87e735fd-e51a-527b-a312-193597f3e3f6",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VLOGIC_FB"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R34": {
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
+      "symbol_uuid": "2c16b16e-e3bd-5503-89ca-6f66f57bed5c",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/2c16b16e-e3bd-5503-89ca-6f66f57bed5c",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "PWR_KEY"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R35": {
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
+      "symbol_uuid": "5e22faed-1db5-5ece-abf4-1ec7c0e23b85",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/5e22faed-1db5-5ece-abf4-1ec7c0e23b85",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS_ON"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R38": {
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
+      "symbol_uuid": "199f5b4f-6022-53e6-8380-09526c64739b",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/199f5b4f-6022-53e6-8380-09526c64739b",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS_WAKE"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "SYS_ON"
+        }
+      }
+    },
+    "R4": {
+      "sheet": "usb-power-4",
+      "sheet_file": "usb-power-4.kicad_sch",
+      "symbol_uuid": "b47f4e54-f26a-5434-ad4f-b027ca412fb5",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/f230856b-0764-5f2a-9868-fada72ac48fa/b47f4e54-f26a-5434-ad4f-b027ca412fb5",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "ISET"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R5": {
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
+      "symbol_uuid": "d1fb8646-66b4-518e-a4f8-6b2fe2c3bf6a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/d1fb8646-66b4-518e-a4f8-6b2fe2c3bf6a",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "TS_FIXED"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R6": {
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
+      "symbol_uuid": "9bc5fed5-ec02-5846-a314-ec8447ccc755",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/9bc5fed5-ec02-5846-a314-ec8447ccc755",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "CE_N"
+        }
+      }
+    },
+    "TP13": {
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
+      "symbol_uuid": "ff4cc9f0-a391-58c1-8de0-7ee75f2cd24d",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/ff4cc9f0-a391-58c1-8de0-7ee75f2cd24d",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SYS_ON"
+        }
+      }
+    },
+    "U2": {
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
+      "symbol_uuid": "cd7708ef-89ea-5751-ad79-3aef09b9d32c",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/cd7708ef-89ea-5751-ad79-3aef09b9d32c",
+      "pins": {
+        "1": {
+          "name": "SYS",
+          "type": "power_out",
+          "net": "SYS"
+        },
+        "2": {
+          "name": "BAT",
+          "type": "passive",
+          "net": "CELL_P"
+        },
+        "3": {
+          "name": "STAT2",
+          "type": "open_collector",
+          "net": "CHG_STAT2"
+        },
+        "4": {
+          "name": "~{CE}",
+          "type": "input",
+          "net": "CE_N"
+        },
+        "5": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "6": {
+          "name": "TS/MR",
+          "type": "input",
+          "net": "TS_FIXED"
+        },
+        "7": {
+          "name": "ILIM/VSET",
+          "type": "input",
+          "net": "VSET"
+        },
+        "8": {
+          "name": "ISET",
+          "type": "input",
+          "net": "ISET"
+        },
+        "9": {
+          "name": "STAT1",
+          "type": "open_collector",
+          "net": "CHG_STAT1"
+        },
+        "10": {
+          "name": "IN",
+          "type": "power_in",
+          "net": "VBUS"
+        },
+        "11": {
+          "name": "EP/GND",
+          "type": "power_in",
+          "net": "GND"
+        }
+      }
+    },
+    "U3": {
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
+      "symbol_uuid": "1a25caad-f0e6-5fc3-86d3-218b7b413c8e",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/1a25caad-f0e6-5fc3-86d3-218b7b413c8e",
+      "pins": {
+        "1": {
+          "name": "OUT",
+          "type": "power_out",
+          "net": "VLOGIC"
+        },
+        "2": {
+          "name": "FB",
+          "type": "input",
+          "net": "VLOGIC_FB"
+        },
+        "3": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "4": {
+          "name": "EN",
+          "type": "input",
+          "net": "SYS_LOAD"
+        },
+        "5": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "6": {
+          "name": "IN",
+          "type": "power_in",
+          "net": "SYS_LOAD"
+        },
+        "7": {
+          "name": "EP",
+          "type": "power_in",
+          "net": "GND"
+        }
+      }
+    },
+    "U7": {
+      "sheet": "usb-power-5",
+      "sheet_file": "usb-power-5.kicad_sch",
+      "symbol_uuid": "24f6234d-ae9a-5542-b068-33967bc72c98",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/c582cfd8-dc71-5908-af2d-68ea1ca76624/24f6234d-ae9a-5542-b068-33967bc72c98",
+      "pins": {
+        "1": {
+          "name": "VIN",
+          "type": "power_in",
+          "net": "SYS"
+        },
+        "2": {
+          "name": "GND",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "3": {
+          "name": "ON",
+          "type": "input",
+          "net": "SYS_ON"
+        },
+        "4": {
+          "name": "CT",
+          "type": "passive",
+          "net": "SYS_CT"
+        },
+        "5": {
+          "name": "QOD",
+          "type": "passive",
+          "net": null
+        },
+        "6": {
+          "name": "VOUT",
+          "type": "power_out",
+          "net": "SYS_LOAD"
+        }
+      }
+    },
+    "BT1": {
+      "sheet": "battery-1",
+      "sheet_file": "battery-1.kicad_sch",
+      "symbol_uuid": "43eca0ad-d2e2-5fc6-8458-d62dc4a1f4b1",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a2b4a664-6944-5f42-8858-eb265e415837/43eca0ad-d2e2-5fc6-8458-d62dc4a1f4b1",
+      "pins": {
+        "1": {
+          "name": "+",
+          "type": "passive",
+          "net": "CELL_P"
+        },
+        "2": {
+          "name": "-",
+          "type": "passive",
+          "net": "CELL_N_RAW"
+        }
+      }
+    },
+    "C4": {
+      "sheet": "battery-1",
+      "sheet_file": "battery-1.kicad_sch",
+      "symbol_uuid": "bcf72333-b39c-59d4-89a0-e9c9c022c042",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a2b4a664-6944-5f42-8858-eb265e415837/bcf72333-b39c-59d4-89a0-e9c9c022c042",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "BAT_SENSE"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "CELL_N_RAW"
+        }
+      }
+    },
+    "Q1": {
+      "sheet": "battery-1",
+      "sheet_file": "battery-1.kicad_sch",
+      "symbol_uuid": "bcb1a50b-9877-5cc6-a119-60bc05df7697",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a2b4a664-6944-5f42-8858-eb265e415837/bcb1a50b-9877-5cc6-a119-60bc05df7697",
+      "pins": {
+        "1": {
+          "name": "G",
+          "type": "input",
+          "net": "DOUT"
+        },
+        "2": {
+          "name": "S",
+          "type": "passive",
+          "net": "CELL_N_RAW"
+        },
+        "3": {
+          "name": "D",
+          "type": "passive",
+          "net": "FET_DRAIN"
+        }
+      }
+    },
+    "Q2": {
+      "sheet": "battery-1",
+      "sheet_file": "battery-1.kicad_sch",
+      "symbol_uuid": "3f40a072-e210-5aff-9bb8-ee278f985e10",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a2b4a664-6944-5f42-8858-eb265e415837/3f40a072-e210-5aff-9bb8-ee278f985e10",
+      "pins": {
+        "1": {
+          "name": "G",
+          "type": "input",
+          "net": "COUT"
+        },
+        "2": {
+          "name": "S",
+          "type": "passive",
+          "net": "SENSE_FET"
+        },
+        "3": {
+          "name": "D",
+          "type": "passive",
+          "net": "FET_DRAIN"
+        }
+      }
+    },
+    "R7": {
+      "sheet": "battery-1",
+      "sheet_file": "battery-1.kicad_sch",
+      "symbol_uuid": "1b18e5ca-88f2-5c32-b06f-a764a6688978",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a2b4a664-6944-5f42-8858-eb265e415837/1b18e5ca-88f2-5c32-b06f-a764a6688978",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "CELL_P"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "BAT_SENSE"
+        }
+      }
+    },
+    "R8": {
+      "sheet": "battery-1",
+      "sheet_file": "battery-1.kicad_sch",
+      "symbol_uuid": "163436f5-07b7-59fb-bb29-a1cff0c4bc8c",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/a2b4a664-6944-5f42-8858-eb265e415837/163436f5-07b7-59fb-bb29-a1cff0c4bc8c",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "GND"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "VMINUS"
+        }
+      }
+    },
+    "R9": {
+      "sheet": "battery-2",
+      "sheet_file": "battery-2.kicad_sch",
+      "symbol_uuid": "e716a67a-073d-5928-a0e2-3f6a767c4b2e",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/24070760-7d96-518f-a2fc-25e7d39e2151/e716a67a-073d-5928-a0e2-3f6a767c4b2e",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "SENSE_FET"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "U4": {
+      "sheet": "battery-2",
+      "sheet_file": "battery-2.kicad_sch",
+      "symbol_uuid": "49ab74e2-b22c-518e-8363-3e7ab22d1574",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/24070760-7d96-518f-a2fc-25e7d39e2151/49ab74e2-b22c-518e-8363-3e7ab22d1574",
+      "pins": {
+        "1": {
+          "name": "NC",
+          "type": "no_connect",
+          "net": null
+        },
+        "2": {
+          "name": "COUT",
+          "type": "output",
+          "net": "COUT"
+        },
+        "3": {
+          "name": "DOUT",
+          "type": "output",
+          "net": "DOUT"
+        },
+        "4": {
+          "name": "VSS",
+          "type": "power_in",
+          "net": "CELL_N_RAW"
+        },
+        "5": {
+          "name": "BAT",
+          "type": "power_in",
+          "net": "BAT_SENSE"
+        },
+        "6": {
+          "name": "V-",
+          "type": "input",
+          "net": "VMINUS"
+        }
+      }
+    },
+    "C9": {
+      "sheet": "thermal-1",
+      "sheet_file": "thermal-1.kicad_sch",
+      "symbol_uuid": "0ff69b20-118b-5d21-9ffb-452f7562cab8",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/aadedfde-0ecd-5e28-8d03-06e68f385e72/0ff69b20-118b-5d21-9ffb-452f7562cab8",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "U5_VCC"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "Q3": {
+      "sheet": "thermal-1",
+      "sheet_file": "thermal-1.kicad_sch",
+      "symbol_uuid": "c1b2d514-9c2a-5f93-80aa-4de9f0a98ef9",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/aadedfde-0ecd-5e28-8d03-06e68f385e72/c1b2d514-9c2a-5f93-80aa-4de9f0a98ef9",
+      "pins": {
+        "1": {
+          "name": "G",
+          "type": "input",
+          "net": "TEMP_COLD_OK"
+        },
+        "2": {
+          "name": "S",
+          "type": "passive",
+          "net": "CE_MID"
+        },
+        "3": {
+          "name": "D",
+          "type": "passive",
+          "net": "CE_N"
+        }
+      }
+    },
+    "Q4": {
+      "sheet": "thermal-1",
+      "sheet_file": "thermal-1.kicad_sch",
+      "symbol_uuid": "6c3f1bd9-780f-55a9-8879-28398cd2d8f6",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/aadedfde-0ecd-5e28-8d03-06e68f385e72/6c3f1bd9-780f-55a9-8879-28398cd2d8f6",
+      "pins": {
+        "1": {
+          "name": "G",
+          "type": "input",
+          "net": "TEMP_HOT_OK"
+        },
+        "2": {
+          "name": "S",
+          "type": "passive",
+          "net": "GND"
+        },
+        "3": {
+          "name": "D",
+          "type": "passive",
+          "net": "CE_MID"
+        }
+      }
+    },
+    "R10": {
+      "sheet": "thermal-1",
+      "sheet_file": "thermal-1.kicad_sch",
+      "symbol_uuid": "4a999cec-8862-548d-8bf5-2aae8f8e6f7a",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/aadedfde-0ecd-5e28-8d03-06e68f385e72/4a999cec-8862-548d-8bf5-2aae8f8e6f7a",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "TEMP_SENSE"
+        }
+      }
+    },
+    "R11": {
+      "sheet": "thermal-1",
+      "sheet_file": "thermal-1.kicad_sch",
+      "symbol_uuid": "b812e991-f40f-5c54-b946-a472d083e110",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/aadedfde-0ecd-5e28-8d03-06e68f385e72/b812e991-f40f-5c54-b946-a472d083e110",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "TEMP_COLD"
+        }
+      }
+    },
+    "R12": {
+      "sheet": "thermal-1",
+      "sheet_file": "thermal-1.kicad_sch",
+      "symbol_uuid": "ca357ef5-3039-5fbc-9b1f-b22982bfadd1",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/aadedfde-0ecd-5e28-8d03-06e68f385e72/ca357ef5-3039-5fbc-9b1f-b22982bfadd1",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "TEMP_COLD"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "TEMP_HOT"
+        }
+      }
+    },
+    "R13": {
+      "sheet": "thermal-2",
+      "sheet_file": "thermal-2.kicad_sch",
+      "symbol_uuid": "1c896d03-aedc-5f03-823d-f54157aaaf5e",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/1c896d03-aedc-5f03-823d-f54157aaaf5e",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "TEMP_HOT"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R14": {
+      "sheet": "thermal-2",
+      "sheet_file": "thermal-2.kicad_sch",
+      "symbol_uuid": "6303d10a-5e5d-5b08-9f2c-5cf955e4fedc",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/6303d10a-5e5d-5b08-9f2c-5cf955e4fedc",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "TEMP_COLD_OK"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R15": {
+      "sheet": "thermal-2",
+      "sheet_file": "thermal-2.kicad_sch",
+      "symbol_uuid": "56296882-31b7-50d1-a0a0-584a9a24be2d",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/56296882-31b7-50d1-a0a0-584a9a24be2d",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "TEMP_HOT_OK"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "R39": {
+      "sheet": "thermal-2",
+      "sheet_file": "thermal-2.kicad_sch",
+      "symbol_uuid": "078bb1f2-9a98-5a4e-b87a-06e4a2901c20",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/078bb1f2-9a98-5a4e-b87a-06e4a2901c20",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "U5_VCC"
+        }
+      }
+    },
+    "TH1": {
+      "sheet": "thermal-2",
+      "sheet_file": "thermal-2.kicad_sch",
+      "symbol_uuid": "d973132f-1218-530e-b79f-248e024a7b19",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/d973132f-1218-530e-b79f-248e024a7b19",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "TEMP_SENSE"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "GND"
+        }
+      }
+    },
+    "U5": {
+      "sheet": "thermal-2",
+      "sheet_file": "thermal-2.kicad_sch",
+      "symbol_uuid": "e103dcb7-641b-5ad3-8636-a7581fb5842f",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/e103dcb7-641b-5ad3-8636-a7581fb5842f",
+      "pins": {
+        "1": {
+          "name": "OUTA",
+          "type": "output",
+          "net": "TEMP_COLD_OK"
+        },
+        "2": {
+          "name": "INA-",
+          "type": "input",
+          "net": "TEMP_SENSE"
+        },
+        "3": {
+          "name": "INA+",
+          "type": "input",
+          "net": "TEMP_COLD"
+        },
+        "4": {
+          "name": "VEE",
+          "type": "power_in",
+          "net": "GND"
+        },
+        "5": {
+          "name": "INB+",
+          "type": "input",
+          "net": "TEMP_SENSE"
+        },
+        "6": {
+          "name": "INB-",
+          "type": "input",
+          "net": "TEMP_HOT"
+        },
+        "7": {
+          "name": "OUTB",
+          "type": "output",
+          "net": "TEMP_HOT_OK"
+        },
+        "8": {
+          "name": "VCC",
+          "type": "power_in",
+          "net": "U5_VCC"
+        }
+      }
+    }
+  }
+}
