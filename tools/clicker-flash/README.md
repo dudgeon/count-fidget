@@ -67,6 +67,7 @@ It never writes option bytes, never mass-erases and never touches the external F
 | `More than one STM32 DFU device` | Connect one clicker at a time. |
 | `VERIFY FAILED` | Re-run `flash` on the same unit. A repeat failure means a hardware fault: set the unit aside. |
 | `WARNING: device reports … KiB flash` | Not an STM32L072CB. Check it is a Count Fidget Q5 board. |
+| A flash FAILED or you stopped mid-flash | The clicker is still in DFU mode. **Press the pinhole before unplugging it.** A clicker unplugged while in DFU stays powered (its USB pull-up back-feeds the power latch) and drains its cell until the pinhole is pressed. |
 | Display blank after PASS | Press the pinhole once (normal restart). If still blank, record it as a commissioning failure. |
 
 ## Tests

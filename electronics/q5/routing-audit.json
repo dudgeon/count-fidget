@@ -1,13 +1,13 @@
 {
-  "board_sha256": "69acc36fadd4f51ff3f32192c2d27d8a914eacf024aeb27651487a67c8f6cc2d",
+  "board_sha256": "c0bcdddff297daeb4b3d9059a77fc4ce144f33838f0b5cdbbd2ad5572cefcded",
   "measurement_method": "Shortest centerline graph with endpoints joined by exact native pad hit testing. Planar length includes pad-center joins; via count excludes component lead/package propagation. Ground pours/plane propagation excluded. USB characteristic impedance is not inferred.",
   "paths": [
     {
       "net": "USB_DM",
       "from": "U1.32",
       "to": "J1.A7",
-      "planar_mm": 19.498057,
-      "via_count": 2,
+      "planar_mm": 24.544087,
+      "via_count": 4,
       "target_xy": [
         35.22,
         26.85
@@ -17,8 +17,8 @@
       "net": "USB_DM",
       "from": "U1.32",
       "to": "J1.B7",
-      "planar_mm": 17.201565,
-      "via_count": 2,
+      "planar_mm": 22.247595,
+      "via_count": 4,
       "target_xy": [
         35.22,
         25.85
@@ -28,8 +28,8 @@
       "net": "USB_DP",
       "from": "U1.33",
       "to": "J1.A6",
-      "planar_mm": 16.368902,
-      "via_count": 2,
+      "planar_mm": 29.92558,
+      "via_count": 4,
       "target_xy": [
         35.22,
         26.35
@@ -39,8 +39,8 @@
       "net": "USB_DP",
       "from": "U1.33",
       "to": "J1.B6",
-      "planar_mm": 15.786566,
-      "via_count": 2,
+      "planar_mm": 29.274495,
+      "via_count": 4,
       "target_xy": [
         35.22,
         27.35
@@ -50,7 +50,7 @@
       "net": "SYS_LOAD",
       "from": "U3.6",
       "to": "C5.1",
-      "planar_mm": 4.213816,
+      "planar_mm": 4.074457,
       "via_count": 0,
       "target_xy": [
         39.0,
@@ -61,7 +61,7 @@
       "net": "VLOGIC",
       "from": "U3.1",
       "to": "C6.1",
-      "planar_mm": 8.9883,
+      "planar_mm": 12.634592,
       "via_count": 2,
       "target_xy": [
         38.9,
@@ -72,7 +72,7 @@
       "net": "VLOGIC_FB",
       "from": "U3.2",
       "to": "R30.2",
-      "planar_mm": 9.786502,
+      "planar_mm": 14.890576,
       "via_count": 2,
       "target_xy": [
         40.8,
@@ -83,8 +83,8 @@
       "net": "VLOGIC_FB",
       "from": "U3.2",
       "to": "R31.1",
-      "planar_mm": 6.983189,
-      "via_count": 0,
+      "planar_mm": 8.244512,
+      "via_count": 2,
       "target_xy": [
         40.8,
         46.225
@@ -94,7 +94,7 @@
       "net": "VBUS",
       "from": "U2.10",
       "to": "C1.1",
-      "planar_mm": 9.499928,
+      "planar_mm": 6.565114,
       "via_count": 2,
       "target_xy": [
         35.6,
@@ -105,7 +105,7 @@
       "net": "SYS",
       "from": "U2.1",
       "to": "C2.1",
-      "planar_mm": 7.422243,
+      "planar_mm": 6.881328,
       "via_count": 2,
       "target_xy": [
         33.3,
@@ -116,7 +116,7 @@
       "net": "CELL_P",
       "from": "U2.2",
       "to": "C3.1",
-      "planar_mm": 14.336925,
+      "planar_mm": 14.919525,
       "via_count": 0,
       "target_xy": [
         40.4,
@@ -127,7 +127,7 @@
       "net": "CELL_P",
       "from": "U2.2",
       "to": "BT1.1",
-      "planar_mm": 9.264793,
+      "planar_mm": 9.847393,
       "via_count": 0,
       "target_xy": [
         35.39,
@@ -135,11 +135,11 @@
       ]
     },
     {
-      "net": "VBUS",
+      "net": "U5_VCC",
       "from": "U5.8",
       "to": "C9.1",
-      "planar_mm": 22.143878,
-      "via_count": 0,
+      "planar_mm": 24.749282,
+      "via_count": 2,
       "target_xy": [
         13.0,
         45.175
@@ -160,7 +160,7 @@
       "net": "OLED_CT",
       "from": "U6.4",
       "to": "C28.2",
-      "planar_mm": 7.887286,
+      "planar_mm": 7.886955,
       "via_count": 2,
       "target_xy": [
         12.375,
@@ -171,7 +171,7 @@
       "net": "SYS_CT",
       "from": "U7.4",
       "to": "C29.2",
-      "planar_mm": 17.305647,
+      "planar_mm": 16.936367,
       "via_count": 2,
       "target_xy": [
         28.95,
@@ -182,8 +182,8 @@
       "net": "SYS_ON",
       "from": "U7.3",
       "to": "D3.3",
-      "planar_mm": 49.226143,
-      "via_count": 2,
+      "planar_mm": 63.954179,
+      "via_count": 4,
       "target_xy": [
         8.4375,
         26.8
@@ -193,7 +193,7 @@
       "net": "SYS_ON",
       "from": "U7.3",
       "to": "R38.2",
-      "planar_mm": 16.061426,
+      "planar_mm": 15.06492,
       "via_count": 0,
       "target_xy": [
         27.55,
@@ -204,7 +204,7 @@
       "net": "VBUS_WAKE",
       "from": "R38.1",
       "to": "D4.1",
-      "planar_mm": 12.158448,
+      "planar_mm": 22.390517,
       "via_count": 0,
       "target_xy": [
         38.55,
@@ -215,7 +215,7 @@
       "net": "SYS_ON",
       "from": "U7.3",
       "to": "C40.1",
-      "planar_mm": 15.30752,
+      "planar_mm": 16.80879,
       "via_count": 0,
       "target_xy": [
         29.04,
@@ -226,7 +226,7 @@
       "net": "SYS_ON",
       "from": "U7.3",
       "to": "R35.1",
-      "planar_mm": 10.461545,
+      "planar_mm": 10.129579,
       "via_count": 0,
       "target_xy": [
         31.885,
@@ -237,7 +237,7 @@
       "net": "VFRAM",
       "from": "U8.8",
       "to": "C36.1",
-      "planar_mm": 10.46333,
+      "planar_mm": 12.016188,
       "via_count": 0,
       "target_xy": [
         23.825,
@@ -259,7 +259,7 @@
       "net": "VLOGIC",
       "from": "U1.1",
       "to": "C31.1",
-      "planar_mm": 5.07524,
+      "planar_mm": 3.73802,
       "via_count": 0,
       "target_xy": [
         16.225,
@@ -270,7 +270,7 @@
       "net": "VLOGIC",
       "from": "U1.9",
       "to": "C35.1",
-      "planar_mm": 4.23535,
+      "planar_mm": 4.706086,
       "via_count": 2,
       "target_xy": [
         14.2,
@@ -281,7 +281,7 @@
       "net": "VLOGIC",
       "from": "U1.24",
       "to": "C34.1",
-      "planar_mm": 3.539061,
+      "planar_mm": 3.790598,
       "via_count": 0,
       "target_xy": [
         26.625,
@@ -303,7 +303,7 @@
       "net": "VLOGIC",
       "from": "U1.48",
       "to": "C32.1",
-      "planar_mm": 6.91025,
+      "planar_mm": 9.903485,
       "via_count": 0,
       "target_xy": [
         19.425,
@@ -314,7 +314,7 @@
       "net": "VBAT_SENSE",
       "from": "U1.14",
       "to": "R36.2",
-      "planar_mm": 16.433008,
+      "planar_mm": 16.282495,
       "via_count": 0,
       "target_xy": [
         4.625,
@@ -325,7 +325,7 @@
       "net": "VBAT_SENSE",
       "from": "U1.14",
       "to": "C37.1",
-      "planar_mm": 20.366461,
+      "planar_mm": 20.217178,
       "via_count": 0,
       "target_xy": [
         3.025,
@@ -336,7 +336,7 @@
       "net": "PWR_HOLD",
       "from": "U1.20",
       "to": "D3.2",
-      "planar_mm": 18.33223,
+      "planar_mm": 17.209623,
       "via_count": 2,
       "target_xy": [
         6.5625,
@@ -347,7 +347,7 @@
       "net": "CELL_N_RAW",
       "from": "U4.4",
       "to": "C4.2",
-      "planar_mm": 8.536305,
+      "planar_mm": 4.209421,
       "via_count": 0,
       "target_xy": [
         3.075,
@@ -358,8 +358,8 @@
       "net": "BAT_SENSE",
       "from": "U4.5",
       "to": "C4.1",
-      "planar_mm": 6.687606,
-      "via_count": 2,
+      "planar_mm": 3.929189,
+      "via_count": 0,
       "target_xy": [
         1.525,
         11.9
@@ -369,7 +369,7 @@
       "net": "VBUS",
       "from": "D1.5",
       "to": "C38.1",
-      "planar_mm": 3.550189,
+      "planar_mm": 3.962876,
       "via_count": 0,
       "target_xy": [
         33.4,
@@ -380,7 +380,7 @@
       "net": "VBUS",
       "from": "D2.5",
       "to": "C39.1",
-      "planar_mm": 11.429123,
+      "planar_mm": 8.977934,
       "via_count": 2,
       "target_xy": [
         25.79,
@@ -391,7 +391,7 @@
       "net": "CELL_N_RAW",
       "from": "BT1.2",
       "to": "Q1.2",
-      "planar_mm": 15.620713,
+      "planar_mm": 10.274491,
       "via_count": 0,
       "target_xy": [
         1.35,
@@ -402,8 +402,8 @@
       "net": "TEMP_COLD_OK",
       "from": "Q3.1",
       "to": "R14.1",
-      "planar_mm": 17.840959,
-      "via_count": 2,
+      "planar_mm": 16.174699,
+      "via_count": 0,
       "target_xy": [
         16.375,
         52.6
@@ -413,8 +413,8 @@
       "net": "TEMP_HOT_OK",
       "from": "Q4.1",
       "to": "R15.1",
-      "planar_mm": 5.301025,
-      "via_count": 2,
+      "planar_mm": 4.760044,
+      "via_count": 0,
       "target_xy": [
         16.375,
         51.0
@@ -426,22 +426,22 @@
       "net": "GND",
       "from": "C5.2",
       "to": "nearest same-net via",
-      "planar_mm": 17.641393,
+      "planar_mm": 4.103395,
       "via_count": 0,
       "target_xy": [
-        26.79,
-        47.64
+        39.75,
+        44.575
       ]
     },
     {
       "net": "GND",
       "from": "C6.2",
       "to": "nearest same-net via",
-      "planar_mm": 1.050002,
+      "planar_mm": 1.2,
       "via_count": 0,
       "target_xy": [
-        38.498,
-        38.68
+        40.1,
+        39.65
       ]
     },
     {
@@ -481,11 +481,11 @@
       "net": "GND",
       "from": "C9.2",
       "to": "nearest same-net via",
-      "planar_mm": 1.05,
+      "planar_mm": 1.050002,
       "via_count": 0,
       "target_xy": [
-        11.95,
-        43.625
+        12.03,
+        44.027
       ]
     },
     {
@@ -507,73 +507,73 @@
       "via_count": 0,
       "target_xy": [
         26.79,
-        47.64
+        45.66
       ]
     },
     {
       "net": "GND",
       "from": "C36.2",
       "to": "nearest same-net via",
-      "planar_mm": 1.05,
+      "planar_mm": 7.026112,
       "via_count": 0,
       "target_xy": [
-        26.425,
-        41.2
+        26.79,
+        45.66
       ]
     },
     {
       "net": "GND",
       "from": "C31.2",
       "to": "nearest same-net via",
-      "planar_mm": 4.958277,
+      "planar_mm": 3.753835,
       "via_count": 0,
       "target_xy": [
-        22.025,
-        38.2
+        18.35,
+        34.762
       ]
     },
     {
       "net": "GND",
       "from": "C32.2",
       "to": "nearest same-net via",
-      "planar_mm": 1.05,
+      "planar_mm": 1.050002,
       "via_count": 0,
       "target_xy": [
-        22.025,
-        38.2
+        21.945,
+        38.602
       ]
     },
     {
       "net": "GND",
       "from": "C33.2",
       "to": "nearest same-net via",
-      "planar_mm": 1.050002,
+      "planar_mm": 4.745751,
       "via_count": 0,
       "target_xy": [
-        27.673,
-        35.57
+        27.453,
+        35.506
       ]
     },
     {
       "net": "GND",
       "from": "C34.2",
       "to": "nearest same-net via",
-      "planar_mm": 1.05,
+      "planar_mm": 1.200667,
       "via_count": 0,
       "target_xy": [
-        29.225,
-        27.0
+        29.024,
+        26.151
       ]
     },
     {
       "net": "GND",
       "from": "C35.2",
       "to": "nearest same-net via",
-      "planar_mm": 0.9,
+      "planar_mm": 1.05,
       "via_count": 0,
       "target_xy": [
-        14.2,
-        26.525
+        15.25,
+        27.425
       ]
     },
     {
@@ -584,11 +584,11 @@
       "via_count": 0,
       "target_xy": [
         3.726,
-        30.449
+        28.751
       ]
     }
   ],
   "same_net_via_to_smt_land_gaps_below_0_1mm": [],
-  "track_count": 1155,
-  "via_count": 121
+  "track_count": 1186,
+  "via_count": 130
 }

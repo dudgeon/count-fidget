@@ -1,7 +1,7 @@
 """Export Q5 engineering review files from current, saved native validation.
 
 No uploads, quotation changes, purchases or manufacturing release are performed.
-The factory list contains every jlc_smt placement (80 in Q5, all on the bottom,
+The factory list contains every jlc_smt placement (81 in Q5, all on the bottom,
 including the two MX hot-swap sockets). Two quotation variants are exported:
   A: JLC SMT only; the user solders DS1 and its separate seven-pin header (14 joints);
   B: JLC SMT plus JLC through-hole assembly of DS1 and the header (no home soldering).
@@ -100,7 +100,7 @@ def groups(parts):
     return result
 
 
-EXPECTED = dict(references=95, fitted=81, smt=80, home=1, features=14, types=41)
+EXPECTED = dict(references=96, fitted=82, smt=81, home=1, features=14, types=43)
 SCREW = dict(mpn='PA2X6nie', lcsc='C357360', manufacturer='Shuntian', quantity=4,
              description='M2 x 6 cross pan-head self-tapping screw (nickel)')
 DS1_FOOTPRINT = ROOT / 'electronics/q5/CountFidgetQ5.pretty/HS96L01W4S03_Module_7Pin.kicad_mod'
@@ -423,8 +423,8 @@ Two quotation variants:
 
 | Variant | BOM | CPL | Who solders what |
 |---|---|---|---|
-| A | `BOM-JLCPCB-Q5.csv` (80 rows) | `CPL-JLCPCB-Q5.csv` | JLC: all 80 SMT parts. User: DS1 display on its 7-pin header (14 joints) |
-| B | `BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv` (82 rows) | `CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv` | JLC: all SMT plus through-hole DS1 (C5139758) stacked on header DS1H (C492406), module PCB 2.5 mm above the host, pins trimmed <= 1 mm |
+| A | `BOM-JLCPCB-Q5.csv` (81 placements) | `CPL-JLCPCB-Q5.csv` | JLC: all 81 SMT parts. User: DS1 display on its 7-pin header (14 joints) |
+| B | `BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv` (83 placements) | `CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv` | JLC: all SMT plus through-hole DS1 (C5139758) stacked on header DS1H (C492406), module PCB 2.5 mm above the host, pins trimmed <= 1 mm |
 
 Both variants: the two clicky switches (K1/K2, C49234235) clip into the printed key
 plate and press into the vendor-placed hot-swap sockets SW1/SW2 (no soldering); four
@@ -437,7 +437,7 @@ manufacturer correction applied): polarity/pin 1 of U1-U8, Q1-Q5, D1-D4, J1, the
 BT1 holder (+ contact on pad 1 / CELL_P, marked + on the silkscreen) and the two
 hot-swap sockets (pads beside the 3.0 mm switch-pin holes).
 
-`BOM-PCBA-Q5.csv` / `placements-KiCad-Q5.csv` describe all 81 fitted parts. Stock
+`BOM-PCBA-Q5.csv` / `placements-KiCad-Q5.csv` describe all 82 fitted parts. Stock
 counts are timestamped, unreserved public catalogue observations in `stock.json`.
 See `export-manifest-Q5.json` for exact source/output hashes and checks.
 '''
@@ -509,7 +509,7 @@ def export(args, output):
                 'Published output copy differs: ' + name)
     require(input_hashes(validation) == initial, 'Sources changed while publishing staged exports')
     MANIFEST.write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
-    print('Q5 exports checked: 81 board parts; variant A 80 SMT BOM/CPL (DS1 home-soldered); variant B 82 rows incl. DS1 + header THT. Hardware unqualified.')
+    print('Q5 exports checked: 82 board parts; variant A 81 SMT BOM/CPL (DS1 home-soldered); variant B 83 placements incl. DS1 + header THT. Hardware unqualified.')
 
 
 def main():

@@ -38,6 +38,7 @@ These commands wait for the device and prompt the operator interactively, so run
 - **PASS:** bytes verified by read-back. It is not proof the board works; the `--check` answers are the functional test.
 - **VERIFY FAILED / Download failed:** retry once on the same unit. A repeat failure means a hardware fault: tell the user to set the unit aside and note its serial.
 - **More than one device:** only one clicker at a time.
+- **Never unplug a clicker that is still in DFU mode** (after a FAIL or an interrupted run): press the pinhole first. Otherwise it stays powered and drains its cell.
 - **Device not found:** data cable; RESET held while the pinhole is released; another port.
 - **FLASHED_CHECK_FAIL:** flashing worked but the unit failed a functional check. Treat it as a reject for diagnosis.
 

@@ -1,5 +1,5 @@
 {
-  "revision": "Q5 soft-power latch / on-board LIR2032 holder / STM32 SPI module circuit contract | design lock 25 Sep 2026: hot-swap sockets, R38/C40, 1.6 mm board",
+  "revision": "Q5 soft-power latch / on-board LIR2032 holder / STM32 SPI module circuit contract | design lock 25 Sep 2026: hot-swap sockets, R38/C40, 1.6 mm board | first-order review 26 Sep 2026: R39/U5_VCC filter, C40 10 nF",
   "manufacturing_released": false,
   "review_method": "Pin/net requirements for the new and changed Q5 parts were transcribed from the primary pin tables: TI TPS22917 Table 4-1 (1 VIN, 2 GND, 3 ON, 4 CT, 5 QOD, 6 VOUT), TI BQ25185 Table 4-1 (STAT2 pin 3, STAT1 pin 9), TI TLV7012 section 5 (DGK and DDF share OUTA/INA-/INA+/VEE/INB+/INB-/OUTB/VCC), Nexperia BAT54C (1 A1, 2 A2, 3 common K), SOD-323 pad 1 cathode, 2N7002 (1 G, 2 S, 3 D), Q&J CR2032-BS-6-1 supplier land pattern (pad 1 +, pad 2 -) and ST DS10689 LQFP48 (PA4 14, PA5 15, PA6 16, PB2 20). Unchanged Q4 entries are retained. The author of the change performed this check; an independent adversarial review is still required.",
   "parts": {
@@ -118,9 +118,9 @@
         "5": "TEMP_SENSE",
         "6": "TEMP_HOT",
         "7": "TEMP_HOT_OK",
-        "8": "VBUS"
+        "8": "U5_VCC"
       },
-      "note": "ExactTLV7012 outputs are push-pull; preserve separate output nets and100k gate pulldowns."
+      "note": "ExactTLV7012 outputs are push-pull; preserve separate output nets and100k gate pulldowns. Supply U5_VCC through R39 1k from VBUS with C9 100 nF (6 V abs max vs hot-plug ringing)."
     },
     "U6": {
       "mpn": "TPS22917DBVR",
@@ -249,16 +249,16 @@
         "2": "SYS_ON"
       },
       "physical_pin_count": 2,
-      "note": "100k series limit VBUS->U7 ON (6 V abs max); with C40 a 0.43 ms hot-plug filter."
+      "note": "100k series limit VBUS->U7 ON (6 V abs max); with C40 a 0.9 ms hot-plug filter."
     },
     "C40": {
-      "mpn": "0603B472K500NT",
+      "mpn": "0603B103K500NT",
       "pins": {
         "1": "SYS_ON",
         "2": "GND"
       },
       "physical_pin_count": 2,
-      "note": "4.7nF C0G on SYS_ON: bounce bridge ~4.7 ms with R35; U7 off ~10 ms after release."
+      "note": "10nF X7R on SYS_ON: bounce bridge ~10 ms with R35; U7 off ~21 ms after release."
     },
     "SW1": {
       "mpn": "CPG151101S11-16",
@@ -275,6 +275,23 @@
         "2": "VLOGIC"
       },
       "physical_pin_count": 2
+    },
+    "R39": {
+      "mpn": "0603WAF1001T5E",
+      "pins": {
+        "1": "VBUS",
+        "2": "U5_VCC"
+      },
+      "physical_pin_count": 2,
+      "note": "1k U5 supply filter with C9 (tau 0.1 ms)."
+    },
+    "C9": {
+      "pins": {
+        "1": "U5_VCC",
+        "2": "GND"
+      },
+      "physical_pin_count": 2,
+      "note": "U5 supply decoupler after R39."
     }
   },
   "critical_controls": {

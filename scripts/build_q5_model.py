@@ -102,10 +102,21 @@ def make_model():
     # spikes filtered (tau 0.47 ms), bounce gaps up to ~4.7 ms bridged (tau R35*C40).
     clone('R38', 'R6', {'1': 'VBUS_WAKE', '2': 'SYS_ON'}, 'usb-power',
           '100k series limit from D4 into U7 ON: with C40 filters VBUS hot-plug transients below the ON 6 V abs max.')
-    add('C40', '4.7n', 'GRM1885C1H472JA01D', 'Murata', 'Capacitor_SMD_C_0603_1608Metric',
+    # First-order review: 10 nF (was 4.7 nF) doubles the bounce bridge (tau with R35 = 10 ms)
+    # and the short-tap latch margin; U7 turns off ~21 ms after the last source is released.
+    add('C40', '10n', '0603B103K500NT', 'FH', 'Capacitor_SMD_C_0603_1608Metric',
         {'1': 'SYS_ON', '2': 'GND'},
-        '4.7nF C0G on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); '
-        'U7 turns off ~10 ms after the last source is released.', 'C85980', 'usb-power')
+        '10nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 10 ms); '
+        'U7 turns off ~21 ms after the last source is released.', 'C57112', 'usb-power')
+    # First-order review: U5 (TLV7012, 6 V abs max) was on raw VBUS. R39 1k with C9 100 nF
+    # (tau 0.1 ms) filters cable hot-plug ringing; supply current is ~1.3 uA, so the drop is ~1 mV.
+    add('R39', '1k', '0603WAF1001T5E', 'UNI-ROYAL', 'Resistor_SMD_R_0603_1608Metric',
+        {'1': 'VBUS', '2': 'U5_VCC'},
+        '1k series supply filter for U5 with C9: keeps USB hot-plug ringing off the TLV7012 6 V abs max supply.',
+        'C21190', 'thermal')
+    parts['U5']['pins']['8'] = 'U5_VCC'
+    parts['C9']['pins'] = {'1': 'U5_VCC', '2': 'GND'}
+    parts['C9']['notes'] = '100 nF U5 supply decoupler after the R39 1k filter; nearby plane return'
     # Slew capacitors reduced so a normal key press latches (tON 3.8us/pF x 4.7nF = 17.9ms typ).
     for ref in ('C28', 'C29'):
         parts[ref].update(value='4.7n', mpn='GRM1885C1H472JA01D', lcsc='C85980',

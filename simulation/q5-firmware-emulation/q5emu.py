@@ -40,9 +40,9 @@ HZ = 4_000_000          # HSI16 / AHB prescaler 4, set by setup()
 OLED_TON = 3.8e-6 * 4700        # TPS22917 tON 3.8 us/pF (VIN 3.3-3.6 V) x C28 4.7 nF
 U7_TON = 3.8e-6 * 4700          # system switch, C29 4.7 nF
 BOOT_TEMPO = 0.002              # regulator soft start + STM32 POR temporization allowance
-# SYS_ON node: C40 4.7 nF discharging through R35 1 MOhm (tau 4.7 ms) from ~2.7-2.85 V.
-ON_HOLD_HIGH = 0.0047 * 0.99    # ON certainly still above VIH (1.0 V) for ln(2.7/1.0)*tau = 4.67 ms
-ON_HOLD_OFF = 0.0047 * 2.10     # ON certainly below VIL (0.35 V) after ln(2.85/0.35)*tau = 9.9 ms
+# SYS_ON node: C40 10 nF discharging through R35 1 MOhm (tau 10 ms) from ~2.7-2.85 V.
+ON_HOLD_HIGH = 0.010 * 0.99     # ON certainly still above VIH (1.0 V) for ln(2.7/1.0)*tau = 9.9 ms
+ON_HOLD_OFF = 0.010 * 2.10      # ON certainly below VIL (0.35 V) after ln(2.85/0.35)*tau = 21 ms
 COLLAPSE_RUN = 0.005            # latch released while running: ~1.3 mA from ~15 uF to BOR
 COLLAPSE_STOP = 0.080           # latch released in Stop: ~80 uA from ~15 uF to BOR
 USB_SYS_V = 4.50                # BQ25185 VSYS_REG with valid input (VBATREG <= 4.3 V)

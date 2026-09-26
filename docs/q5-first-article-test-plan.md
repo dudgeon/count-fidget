@@ -27,6 +27,7 @@ Test points: TP1 GND, TP2 VLOGIC, TP5 VBUS, TP6 SYS, TP9 COUNT_N, TP11 NRST, TP1
 | A4 | DFU entry and `clicker_flash.py flash --check` | PASS, and all four commissioning answers pass. **Stop** if DFU never enumerates on two cables |
 | A5 | Unplug/replug, pinhole restart | Count returns without ERR |
 | A6 | After the flasher's automatic DFU leave, the display comes up without pressing the pinhole | Digits appear within 1 s. The firmware's ROM-leftover reset path has worked |
+| A7 | With a cell fitted: enter DFU, then unplug USB **without** leaving DFU. Watch TP13 and the current | Expected: the board stays on (D+ pull-up back-feed through D2 holds the latch), drawing several mA. Record the current. The pinhole must turn it off. This confirms the "pinhole before unplugging" rule |
 
 ## B. Power latch (5 units)
 
@@ -39,6 +40,7 @@ Test points: TP1 GND, TP2 VLOGIC, TP5 VBUS, TP6 SYS, TP9 COUNT_N, TP11 NRST, TP1
 | B5 | On: plug USB; wait 30 s; unplug USB during Stop | Board off after the unplug; no half-powered state (VLOGIC 0 V, not floating mid-rail) |
 | B6 | Inrush: PPK2 at 3.0 V, capture power-on | Peak < 25 mA, and the protector does not trip over 20 power-ons |
 | B7 | Pinhole on battery | Board turns off; next COUNT press restores the count |
+| B8 | Fallback check (1 unit): bridge TP13 SYS_ON to TP6 SYS with a wire | Board powers and counts without the latch (the recovery route if latch control fails); remove the bridge afterwards |
 
 ## C. Battery sense, gauge and charger status (3 units)
 

@@ -225,7 +225,7 @@ def main():
     mapping={}; rootitems=[]
     for index,(name,title,positions,note) in enumerate(PAGES,2):
         libs='\n'.join(definitions[ref].replace('(symbol '+q(ref),'(symbol '+q(LIB+':'+ref),1) for ref,_,_ in positions)
-        flags = [('VBUS',80,275,1),('GND',185,275,2)] if name=='usb-power-1' else [('CELL_N_RAW',75,275,3),('BAT_SENSE',210,275,4)] if name=='battery-1' else [('VFRAM',300,275,5)] if name=='memory-1' else []
+        flags = [('VBUS',80,275,1),('GND',185,275,2)] if name=='usb-power-1' else [('CELL_N_RAW',75,275,3),('BAT_SENSE',210,275,4)] if name=='battery-1' else [('VFRAM',300,275,5)] if name=='memory-1' else [('U5_VCC',300,275,6)] if name=='thermal-1' else []
         if flags:
             libs+='\n'+FLAG.replace('(symbol "SupplyAssertion"',f'(symbol "{LIB}:SupplyAssertion"',1)
         content=[header(uid('file/'+name),title),'(lib_symbols '+libs+')',text(note,20,22,1.27)]

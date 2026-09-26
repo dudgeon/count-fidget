@@ -1979,7 +1979,7 @@
         "1": {
           "name": "1",
           "type": "passive",
-          "net": "VBUS"
+          "net": "U5_VCC"
         },
         "2": {
           "name": "2",
@@ -2142,6 +2142,24 @@
         }
       }
     },
+    "R39": {
+      "sheet": "thermal-2",
+      "sheet_file": "thermal-2.kicad_sch",
+      "symbol_uuid": "078bb1f2-9a98-5a4e-b87a-06e4a2901c20",
+      "path": "/7c190cd8-3ca2-5363-8a92-396d30a08243/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/078bb1f2-9a98-5a4e-b87a-06e4a2901c20",
+      "pins": {
+        "1": {
+          "name": "1",
+          "type": "passive",
+          "net": "VBUS"
+        },
+        "2": {
+          "name": "2",
+          "type": "passive",
+          "net": "U5_VCC"
+        }
+      }
+    },
     "TH1": {
       "sheet": "thermal-2",
       "sheet_file": "thermal-2.kicad_sch",
@@ -2204,7 +2222,7 @@
         "8": {
           "name": "VCC",
           "type": "power_in",
-          "net": "VBUS"
+          "net": "U5_VCC"
         }
       }
     }

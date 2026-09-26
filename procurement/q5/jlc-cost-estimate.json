@@ -2,9 +2,9 @@
  "schema": 1,
  "status": "ESTIMATE from published fees and live catalogue prices; binding PCBA price requires the signed-in JLC BOM/CPL step",
  "quantity": 10,
- "model_sha256": "67c816161594167ef4e57a1a50c7155c2c48ef49607775825cd9701b768cb62f",
- "stock_sha256": "c9a8a2d8636422c804c3e57cd42572de5f1ca2a7a66ff58e59578167e9ec22d2",
- "board_sha256": "e78629ed361ff9f38c8ead58770e2dd60fc865461600456b503f6015345428df",
+ "model_sha256": "f38fbe34969f2a5969b465973295a14b7b04c13d15475f9faad9497ad3a91e5b",
+ "stock_sha256": "ea516ce73ea6a3b72d2e6bbc90781ca5e860ad1c8900f4429072572873d0c8e1",
+ "board_sha256": "589e6fba0d499a65fd40e7a5d598eec67c92703d0f11c0a26f7b7aec2ca30041",
  "fee_schedule": {
   "economic": {
    "setup": 8.18,
@@ -36,9 +36,9 @@
   "shipping_weight_kg": 0.2,
   "observed_utc": "2026-09-25T20:05Z"
  },
- "smt_joints_per_board": 276,
+ "smt_joints_per_board": 278,
  "smt_part_types": {
-  "basic": 15,
+  "basic": 17,
   "extended": 25
  },
  "variant_A": {
@@ -47,23 +47,23 @@
    "pcb": 22.1,
    "setup": 8.18,
    "stencil": 1.53,
-   "smt_joints": 4.42,
+   "smt_joints": 4.45,
    "feeder_loading": 76.75,
-   "components": 132.96,
-   "subtotal_before_shipping": 245.94,
-   "with_dhl_shipping": 275.39,
-   "per_board_with_shipping": 27.54
+   "components": 136.24,
+   "subtotal_before_shipping": 249.25,
+   "with_dhl_shipping": 278.7,
+   "per_board_with_shipping": 27.87
   },
   "standard": {
    "pcb": 22.1,
    "setup": 25.56,
    "stencil": 8.21,
-   "smt_joints": 4.42,
-   "feeder_loading": 61.2,
-   "components": 132.96,
-   "subtotal_before_shipping": 254.45,
-   "with_dhl_shipping": 283.9,
-   "per_board_with_shipping": 28.39
+   "smt_joints": 4.45,
+   "feeder_loading": 64.26,
+   "components": 136.24,
+   "subtotal_before_shipping": 260.82,
+   "with_dhl_shipping": 290.27,
+   "per_board_with_shipping": 29.03
   }
  },
  "variant_B": {
@@ -72,31 +72,31 @@
    "pcb": 22.1,
    "setup": 8.18,
    "stencil": 1.53,
-   "smt_joints": 4.42,
+   "smt_joints": 4.45,
    "feeder_loading": 76.75,
-   "components": 132.96,
+   "components": 136.24,
    "tht_components": 18.72,
    "tht_feeder_loading": 6.14,
    "manual_joints": 2.3,
    "hand_soldering_labor": 3.58,
-   "subtotal_before_shipping": 276.68,
-   "with_dhl_shipping": 306.13,
-   "per_board_with_shipping": 30.61
+   "subtotal_before_shipping": 279.99,
+   "with_dhl_shipping": 309.44,
+   "per_board_with_shipping": 30.94
   },
   "standard": {
    "pcb": 22.1,
    "setup": 25.56,
    "stencil": 8.21,
-   "smt_joints": 4.42,
-   "feeder_loading": 61.2,
-   "components": 132.96,
+   "smt_joints": 4.45,
+   "feeder_loading": 64.26,
+   "components": 136.24,
    "tht_components": 18.72,
    "tht_feeder_loading": 3.06,
    "manual_joints": 2.3,
    "hand_soldering_labor": 3.58,
-   "subtotal_before_shipping": 282.11,
-   "with_dhl_shipping": 311.56,
-   "per_board_with_shipping": 31.16
+   "subtotal_before_shipping": 288.48,
+   "with_dhl_shipping": 317.93,
+   "per_board_with_shipping": 31.79
   }
  },
  "lcsc_loose_parts_both_variants": {
@@ -143,8 +143,8 @@
    "library": "expand",
    "per_board": 1,
    "buy": 10,
-   "unit_usd": 2.7867,
-   "cost_usd": 27.867
+   "unit_usd": 3.1099,
+   "cost_usd": 31.099
   },
   {
    "mpn": "BQ25185DLHR",
@@ -309,15 +309,6 @@
    "cost_usd": 0.381
   },
   {
-   "mpn": "0603B472K500NT",
-   "lcsc": "C53987",
-   "library": "base",
-   "per_board": 4,
-   "buy": 40,
-   "unit_usd": 0.0092,
-   "cost_usd": 0.368
-  },
-  {
    "mpn": "0603WAF1003T5E",
    "lcsc": "C25803",
    "library": "base",
@@ -325,6 +316,15 @@
    "buy": 100,
    "unit_usd": 0.0031,
    "cost_usd": 0.31
+  },
+  {
+   "mpn": "0603B472K500NT",
+   "lcsc": "C53987",
+   "library": "base",
+   "per_board": 3,
+   "buy": 30,
+   "unit_usd": 0.0092,
+   "cost_usd": 0.276
   },
   {
    "mpn": "BAT54C,215",
@@ -352,6 +352,15 @@
    "buy": 10,
    "unit_usd": 0.0159,
    "cost_usd": 0.159
+  },
+  {
+   "mpn": "0603B103K500NT",
+   "lcsc": "C57112",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0108,
+   "cost_usd": 0.108
   },
   {
    "mpn": "RC0603FR-0757K6L",
@@ -397,6 +406,15 @@
    "buy": 20,
    "unit_usd": 0.0015,
    "cost_usd": 0.03
+  },
+  {
+   "mpn": "0603WAF1001T5E",
+   "lcsc": "C21190",
+   "library": "base",
+   "per_board": 1,
+   "buy": 10,
+   "unit_usd": 0.0026,
+   "cost_usd": 0.026
   },
   {
    "mpn": "0603WAF3300T5E",

@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "scope": "Analytical bounds from stated datasheet values; not a simulation or measurement",
-  "model_sha256": "67c816161594167ef4e57a1a50c7155c2c48ef49607775825cd9701b768cb62f",
-  "script_sha256": "a7797759756690934512e4906dcf6b4daf0a820b7edb7b57b5ca3b07b2563f6c",
+  "model_sha256": "f38fbe34969f2a5969b465973295a14b7b04c13d15475f9faad9497ad3a91e5b",
+  "script_sha256": "4c13a0a2c6d787411d2193a0adc218519444f2536f160f372375b88ddeaf38b7",
   "latch": {
     "ton_typ_ms": 17.86,
     "tr_typ_ms": 7.52,
-    "press_needed_typ_ms": 15.8,
-    "press_needed_allowance_ms": 21.6,
+    "press_needed_typ_ms": 10.5,
+    "press_needed_allowance_ms": 16.3,
     "deliberate_press_ms": 50,
-    "margin_factor_at_50ms": 2.32,
+    "margin_factor_at_50ms": 3.07,
     "on_node_levels_V": {
       "pwr_hold_min": 2.851,
       "key_min_battery": 2.7,
@@ -17,9 +17,9 @@
       "vbus_max": 4.409
     },
     "on_levels_within_VIH_and_abs_max": true,
-    "c40_bounce_bridge_ms": 4.67,
-    "c40_turn_off_ms": 9.86,
-    "vbus_spike_filter_tau_ms": 0.427,
+    "c40_bounce_bridge_ms": 9.93,
+    "c40_turn_off_ms": 20.97,
+    "vbus_spike_filter_tau_ms": 0.909,
     "note": "TPS22917 slew figures are typical only; the press-duration bound is an allowance, not a guarantee."
   },
   "inrush": {

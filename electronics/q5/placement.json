@@ -568,5 +568,11 @@
   "y": 37.0,
   "rotation": 90,
   "side": "bottom"
+ },
+ "R39": {
+  "x": 14.23,
+  "y": 40.81,
+  "rotation": 90,
+  "side": "bottom"
  }
 }

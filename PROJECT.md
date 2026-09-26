@@ -5,7 +5,7 @@
 The user asked for all findings from the Q4 simulation review to be resolved, plus a soft power key, a battery gauge with low warning and storage cut-off, charge status, a reachable hardware reset, new key logic (**both keys: increment wins; reset only after a deliberate 2 s hold and release**), a smaller enclosure and a BOM of standard JLC inventory parts only. **Q5 implements this as a coordinated revision of Q4:**
 - same STM32L072CBT6 / ROM USB DFU, FM25V02A FRAM journal (Q4-compatible), HS96L01W4S03 SPI OLED module and 42 × 54 mm two-layer board (now 1.6 mm);
 - adds a COUNT-key soft power latch on U7 (~8 µA off), a vendor-soldered LIR2032 holder (BT1) with an onboard NTC in place of the pack harness, SYS/2 battery sense and BQ25185 STAT inputs;
-- 95 references: 81 fitted (80 vendor SMT + the DS1 display, home-soldered in variant A or JLC-fitted in variant B), 41 exact MPNs, all passing a read-only 10-board JLC stock screen;
+- 96 references: 82 fitted (81 vendor SMT + the DS1 display, home-soldered in variant A or JLC-fitted in variant B), 43 exact MPNs, all passing a read-only 10-board JLC stock screen;
 - five-part printed enclosure (base, front cover, rear key plate, two keycaps), 47.2 × 59.2 × 16.8 mm.
 
 Start at `docs/REVIEW-Q5-2026-09-25.md`, then `docs/q5-power-design.md` and `docs/q5-firmware.md`. Q5 lives in `electronics/q5/`, `firmware/q5-stm32/`, `mechanical/q5/`, `procurement/q5/`, `simulation/q5-*` and `scripts/*q5*`. Q1–Q4 artifacts are frozen; never run a Q4 builder against Q5.
@@ -36,6 +36,8 @@ This lifts the quote pause for JLCPCB quoting only. Uploading the locked design 
 - the parts-matched PCBA step needs the user's JLCPCB sign-in;
 - the estimate from published fees is A ≈ $246 and B ≈ $277 before shipping.
 The macOS flashing tool is `tools/clicker-flash/` (skill `flash-clickers`). The first-article plan is `docs/q5-first-article-test-plan.md`.
+
+**First-order de-risking (26 September).** The owner decided on variant B (JLC assembles everything) and a small first batch. Three independent checks found no pinout, footprint or dead-on-arrival defect: a datasheet pinout audit, a fit against JLC's EasyEDA footprints and a DOA review. The resulting changes are the R39/C9 filter on U5's supply, C40 raised to 10 nF, the JLC-corrected CPLs with a preview checklist, and a flasher rule to press the pinhole before unplugging a unit in DFU; see the REVIEW-Q5 section. The owner may bring this session to their Mac and sign in to JLCPCB themselves; the agent may then drive the signed-in quote flow up to the order summary. **Payment or order placement needs the owner's explicit go-ahead at that moment.**
 
 ## Previous Q4 checkpoint — 24 September 2026 (superseded by Q5 where inconsistent)
 

@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>electronics/q5/click-counter-Q5.kicad_sch</source>
-    <date>2026-09-25T20:21:25</date>
+    <date>2026-09-26T02:20:41</date>
     <tool>Eeschema 10.0.6-10.0.6~ubuntu24.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1752,17 +1752,17 @@
       </units>
     </comp>
     <comp ref="C40">
-      <value>4.7n</value>
+      <value>10n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>4.7nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</description>
+      <description>10nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 10 ms); U7 turns off ~21 ms after the last source is released.</description>
       <fields>
-        <field name="MPN">0603B472K500NT</field>
+        <field name="MPN">0603B103K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">4.7nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.</field>
+        <field name="Description">10nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 10 ms); U7 turns off ~21 ms after the last source is released.</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C40" description="" />
-      <property name="MPN" value="0603B472K500NT" />
+      <property name="MPN" value="0603B103K500NT" />
       <property name="Sheetname" value="USB, charging, soft power latch and common supply / 2" />
       <property name="Sheetfile" value="usb-power-2.kicad_sch" />
       <sheetpath names="/USB, charging, soft power latch and common supply / 2/" tstamps="/212a85d9-b47b-5df6-8d9b-ffcc17a81200/" />
@@ -2550,12 +2550,12 @@
     <comp ref="C9">
       <value>100n</value>
       <footprint>CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</footprint>
-      <description>100 nF local VBUS decoupler beside U5; nearby plane return</description>
+      <description>100 nF U5 supply decoupler after the R39 1k filter; nearby plane return</description>
       <fields>
         <field name="MPN">CC0603KRX7R9BB104</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
-        <field name="Description">100 nF local VBUS decoupler beside U5; nearby plane return</field>
+        <field name="Description">100 nF U5 supply decoupler after the R39 1k filter; nearby plane return</field>
       </fields>
       <libsource lib="CountFidgetQ5" part="C9" description="" />
       <property name="MPN" value="CC0603KRX7R9BB104" />
@@ -2765,6 +2765,31 @@
       <property name="Sheetfile" value="thermal-2.kicad_sch" />
       <sheetpath names="/Independent charge-temperature window / 2/" tstamps="/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/" />
       <tstamps>56296882-31b7-50d1-a0a0-584a9a24be2d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1" />
+            <pin num="2" />
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R39">
+      <value>1k</value>
+      <footprint>CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</footprint>
+      <description>1k series supply filter for U5 with C9: keeps USB hot-plug ringing off the TLV7012 6 V abs max supply.</description>
+      <fields>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description">1k series supply filter for U5 with C9: keeps USB hot-plug ringing off the TLV7012 6 V abs max supply.</field>
+      </fields>
+      <libsource lib="CountFidgetQ5" part="R39" description="" />
+      <property name="MPN" value="0603WAF1001T5E" />
+      <property name="Sheetname" value="Independent charge-temperature window / 2" />
+      <property name="Sheetfile" value="thermal-2.kicad_sch" />
+      <sheetpath names="/Independent charge-temperature window / 2/" tstamps="/3ab1e06e-b4a5-5ee5-b850-83ae62357a36/" />
+      <tstamps>078bb1f2-9a98-5a4e-b87a-06e4a2901c20</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -3121,7 +3146,7 @@
     <libpart lib="CountFidgetQ5" part="C40">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">0603B472K500NT</field>
+        <field name="Value">0603B103K500NT</field>
         <field name="Footprint">CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -3712,6 +3737,19 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">0603WAF1003T5E</field>
+        <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet" />
+        <field name="Description" />
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive" />
+        <pin num="2" name="2" type="passive" />
+      </pins>
+    </libpart>
+    <libpart lib="CountFidgetQ5" part="R39">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0603WAF1001T5E</field>
         <field name="Footprint">CountFidgetQ5:Resistor_SMD_R_0603_1608Metric</field>
         <field name="Datasheet" />
         <field name="Description" />
@@ -4455,31 +4493,35 @@
       <node ref="R5" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U2" pin="6" pinfunction="TS/MR_6" pintype="input" />
     </net>
-    <net code="46" name="USB_DM" class="Default">
+    <net code="46" name="U5_VCC" class="Default">
+      <node ref="C9" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R39" pin="2" pinfunction="2_2" pintype="passive" />
+      <node ref="U5" pin="8" pinfunction="VCC_8" pintype="power_in" />
+    </net>
+    <net code="47" name="USB_DM" class="Default">
       <node ref="D2" pin="1" pinfunction="I/O1_1" pintype="passive" />
       <node ref="D2" pin="6" pinfunction="I/O1_6" pintype="passive" />
       <node ref="J1" pin="A7" pinfunction="D-_A7" pintype="passive" />
       <node ref="J1" pin="B7" pinfunction="D-_B7" pintype="passive" />
       <node ref="U1" pin="32" pinfunction="PA11_32" pintype="bidirectional" />
     </net>
-    <net code="47" name="USB_DP" class="Default">
+    <net code="48" name="USB_DP" class="Default">
       <node ref="D2" pin="3" pinfunction="I/O2_3" pintype="passive" />
       <node ref="D2" pin="4" pinfunction="I/O2_4" pintype="passive" />
       <node ref="J1" pin="A6" pinfunction="D+_A6" pintype="passive" />
       <node ref="J1" pin="B6" pinfunction="D+_B6" pintype="passive" />
       <node ref="U1" pin="33" pinfunction="PA12_33" pintype="bidirectional" />
     </net>
-    <net code="48" name="VBAT_SENSE" class="Default">
+    <net code="49" name="VBAT_SENSE" class="Default">
       <node ref="C37" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="R36" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="R37" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U1" pin="14" pinfunction="PA4_14" pintype="bidirectional" />
     </net>
-    <net code="49" name="VBUS" class="Default">
+    <net code="50" name="VBUS" class="Default">
       <node ref="C1" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C38" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C39" pin="1" pinfunction="1_1" pintype="passive" />
-      <node ref="C9" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="D1" pin="5" pinfunction="VBUS_5" pintype="power_in" />
       <node ref="D2" pin="5" pinfunction="VBUS_5" pintype="power_in" />
       <node ref="D4" pin="2" pinfunction="A_2" pintype="passive" />
@@ -4489,16 +4531,16 @@
       <node ref="J1" pin="B9" pinfunction="VBUS_B9" pintype="passive" />
       <node ref="R10" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="R11" pin="1" pinfunction="1_1" pintype="passive" />
+      <node ref="R39" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="R6" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U2" pin="10" pinfunction="IN_10" pintype="power_in" />
-      <node ref="U5" pin="8" pinfunction="VCC_8" pintype="power_in" />
     </net>
-    <net code="50" name="VBUS_WAKE" class="Default">
+    <net code="51" name="VBUS_WAKE" class="Default">
       <node ref="D4" pin="1" pinfunction="K_1" pintype="passive" />
       <node ref="R38" pin="1" pinfunction="1_1" pintype="passive" />
     </net>
-    <net code="51" name="VFRAM" class="Default">
+    <net code="52" name="VFRAM" class="Default">
       <node ref="C30" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C36" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="R32" pin="2" pinfunction="2_2" pintype="passive" />
@@ -4507,7 +4549,7 @@
       <node ref="U8" pin="7" pinfunction="HOLD#_7" pintype="input" />
       <node ref="U8" pin="8" pinfunction="VDD_8" pintype="power_in" />
     </net>
-    <net code="52" name="VLOGIC" class="Default">
+    <net code="53" name="VLOGIC" class="Default">
       <node ref="C20" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C28" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="C31" pin="1" pinfunction="1_1" pintype="passive" />
@@ -4531,83 +4573,83 @@
       <node ref="U3" pin="1" pinfunction="OUT_1" pintype="power_out" />
       <node ref="U6" pin="1" pinfunction="VIN_1" pintype="power_in" />
     </net>
-    <net code="53" name="VLOGIC_FB" class="Default">
+    <net code="54" name="VLOGIC_FB" class="Default">
       <node ref="R30" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="R31" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U3" pin="2" pinfunction="FB_2" pintype="input" />
     </net>
-    <net code="54" name="VMINUS" class="Default">
+    <net code="55" name="VMINUS" class="Default">
       <node ref="R8" pin="2" pinfunction="2_2" pintype="passive" />
       <node ref="U4" pin="6" pinfunction="V-_6" pintype="input" />
     </net>
-    <net code="55" name="VSET" class="Default">
+    <net code="56" name="VSET" class="Default">
       <node ref="R3" pin="1" pinfunction="1_1" pintype="passive" />
       <node ref="U2" pin="7" pinfunction="ILIM/VSET_7" pintype="input" />
     </net>
-    <net code="56" name="unconnected-(J1-SBUA-PadA8)" class="Default">
+    <net code="57" name="unconnected-(J1-SBUA-PadA8)" class="Default">
       <node ref="J1" pin="A8" pinfunction="SBUA_A8" pintype="passive+no_connect" />
     </net>
-    <net code="57" name="unconnected-(J1-SBUB-PadB8)" class="Default">
+    <net code="58" name="unconnected-(J1-SBUB-PadB8)" class="Default">
       <node ref="J1" pin="B8" pinfunction="SBUB_B8" pintype="passive+no_connect" />
     </net>
-    <net code="58" name="unconnected-(U1-PA2-Pad12)" class="Default">
+    <net code="59" name="unconnected-(U1-PA2-Pad12)" class="Default">
       <node ref="U1" pin="12" pinfunction="PA2_12" pintype="bidirectional+no_connect" />
     </net>
-    <net code="59" name="unconnected-(U1-PA3-Pad13)" class="Default">
+    <net code="60" name="unconnected-(U1-PA3-Pad13)" class="Default">
       <node ref="U1" pin="13" pinfunction="PA3_13" pintype="bidirectional+no_connect" />
     </net>
-    <net code="60" name="unconnected-(U1-PA7-Pad17)" class="Default">
+    <net code="61" name="unconnected-(U1-PA7-Pad17)" class="Default">
       <node ref="U1" pin="17" pinfunction="PA7_17" pintype="bidirectional+no_connect" />
     </net>
-    <net code="61" name="unconnected-(U1-PA8-Pad29)" class="Default">
+    <net code="62" name="unconnected-(U1-PA8-Pad29)" class="Default">
       <node ref="U1" pin="29" pinfunction="PA8_29" pintype="bidirectional+no_connect" />
     </net>
-    <net code="62" name="unconnected-(U1-PA9-Pad30)" class="Default">
+    <net code="63" name="unconnected-(U1-PA9-Pad30)" class="Default">
       <node ref="U1" pin="30" pinfunction="PA9_30" pintype="bidirectional+no_connect" />
     </net>
-    <net code="63" name="unconnected-(U1-PA10-Pad31)" class="Default">
+    <net code="64" name="unconnected-(U1-PA10-Pad31)" class="Default">
       <node ref="U1" pin="31" pinfunction="PA10_31" pintype="bidirectional+no_connect" />
     </net>
-    <net code="64" name="unconnected-(U1-PA15-Pad38)" class="Default">
+    <net code="65" name="unconnected-(U1-PA15-Pad38)" class="Default">
       <node ref="U1" pin="38" pinfunction="PA15_38" pintype="bidirectional+no_connect" />
     </net>
-    <net code="65" name="unconnected-(U1-PB6-Pad42)" class="Default">
+    <net code="66" name="unconnected-(U1-PB6-Pad42)" class="Default">
       <node ref="U1" pin="42" pinfunction="PB6_42" pintype="bidirectional+no_connect" />
     </net>
-    <net code="66" name="unconnected-(U1-PB7-Pad43)" class="Default">
+    <net code="67" name="unconnected-(U1-PB7-Pad43)" class="Default">
       <node ref="U1" pin="43" pinfunction="PB7_43" pintype="bidirectional+no_connect" />
     </net>
-    <net code="67" name="unconnected-(U1-PB9-Pad46)" class="Default">
+    <net code="68" name="unconnected-(U1-PB9-Pad46)" class="Default">
       <node ref="U1" pin="46" pinfunction="PB9_46" pintype="bidirectional+no_connect" />
     </net>
-    <net code="68" name="unconnected-(U1-PB10-Pad21)" class="Default">
+    <net code="69" name="unconnected-(U1-PB10-Pad21)" class="Default">
       <node ref="U1" pin="21" pinfunction="PB10_21" pintype="bidirectional+no_connect" />
     </net>
-    <net code="69" name="unconnected-(U1-PB11-Pad22)" class="Default">
+    <net code="70" name="unconnected-(U1-PB11-Pad22)" class="Default">
       <node ref="U1" pin="22" pinfunction="PB11_22" pintype="bidirectional+no_connect" />
     </net>
-    <net code="70" name="unconnected-(U1-PC13-Pad2)" class="Default">
+    <net code="71" name="unconnected-(U1-PC13-Pad2)" class="Default">
       <node ref="U1" pin="2" pinfunction="PC13_2" pintype="bidirectional+no_connect" />
     </net>
-    <net code="71" name="unconnected-(U1-PC14-Pad3)" class="Default">
+    <net code="72" name="unconnected-(U1-PC14-Pad3)" class="Default">
       <node ref="U1" pin="3" pinfunction="PC14_3" pintype="bidirectional+no_connect" />
     </net>
-    <net code="72" name="unconnected-(U1-PC15-Pad4)" class="Default">
+    <net code="73" name="unconnected-(U1-PC15-Pad4)" class="Default">
       <node ref="U1" pin="4" pinfunction="PC15_4" pintype="bidirectional+no_connect" />
     </net>
-    <net code="73" name="unconnected-(U1-PH0-Pad5)" class="Default">
+    <net code="74" name="unconnected-(U1-PH0-Pad5)" class="Default">
       <node ref="U1" pin="5" pinfunction="PH0_5" pintype="bidirectional+no_connect" />
     </net>
-    <net code="74" name="unconnected-(U1-PH1-Pad6)" class="Default">
+    <net code="75" name="unconnected-(U1-PH1-Pad6)" class="Default">
       <node ref="U1" pin="6" pinfunction="PH1_6" pintype="bidirectional+no_connect" />
     </net>
-    <net code="75" name="unconnected-(U4-NC-Pad1)" class="Default">
+    <net code="76" name="unconnected-(U4-NC-Pad1)" class="Default">
       <node ref="U4" pin="1" pinfunction="NC_1" pintype="no_connect" />
     </net>
-    <net code="76" name="unconnected-(U6-QOD-Pad5)" class="Default">
+    <net code="77" name="unconnected-(U6-QOD-Pad5)" class="Default">
       <node ref="U6" pin="5" pinfunction="QOD_5" pintype="passive+no_connect" />
     </net>
-    <net code="77" name="unconnected-(U7-QOD-Pad5)" class="Default">
+    <net code="78" name="unconnected-(U7-QOD-Pad5)" class="Default">
       <node ref="U7" pin="5" pinfunction="QOD_5" pintype="passive+no_connect" />
     </net>
   </nets>

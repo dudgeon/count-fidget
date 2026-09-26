@@ -24,17 +24,18 @@ def check_latch(model):
     tempo_max = 3.3e-3                # DS10689 Table 27 TRSTTEMPO, VDD rising, BOR enabled
     ldo = 0.5e-3                      # TLV767 soft start typical
     firmware = 0.1e-3                 # Reset_Handler -> setup(): PB2 driven high (emulated ~20 us, allowance)
-    # C40 keeps ON above VIH for ~4.7 ms after the key opens, so the press may end that much
+    # C40 (10 nF) keeps ON above VIH for ~9.9 ms after the key opens, so the press may end that much
     # before PWR_HOLD is driven (Reset_Handler drives PB2 before RAM initialisation).
-    hold = 4.7e-9 * 1e6 * math.log(2.7 / 1.0)
+    hold = 10e-9 * 1e6 * math.log(2.7 / 1.0)
     typ = ton + ldo + 2e-3 + firmware - hold
     worst = 1.25 * ton + ldo + tempo_max + firmware - hold   # +25% allowance on the typical-only slew
     # ON-node levels: VIH(ON) min 1.0 V; BAT54C VF at a few uA ~0.25 V; 1N4148WS ~0.6 V at uA levels.
-    # VBUS reaches ON through D4 and R38 100k into R35 1M (divider 1/1.1); C40 4.7 nF filters it.
+    # VBUS reaches ON through D4 and R38 100k into R35 1M (divider 1/1.1); C40 10 nF filters it.
     levels = dict(pwr_hold_min=3.151 - 0.3, key_min_battery=3.0 - 0.3, vbus_min=round((4.4 - 0.7) / 1.1, 3),
                   vbus_max=round((5.25 - 0.4) / 1.1, 3))
     ok = all(v >= 1.0 for v in levels.values()) and levels['vbus_max'] <= 5.5
-    c40, r35 = 4.7e-9, 1e6
+    c40, r35 = 10e-9, 1e6
+    assert parts['C40']['value'] == '10n' and parts['R35']['value'] == '1M'
     tau = c40 * r35
     bounce_bridge = tau * math.log(2.7 / 1.0)        # ON stays above VIH(max) 1.0 V through a gap this long
     turn_off = tau * math.log(2.85 / 0.35)           # after the last source releases, ON is below VIL 0.35 V

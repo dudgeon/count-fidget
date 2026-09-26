@@ -608,7 +608,7 @@
      "power-on"
     ],
     [
-     73.136749,
+     73.147879,
      "off",
      "supply collapsed"
     ]
@@ -745,7 +745,7 @@
      "power-on"
     ],
     [
-     30.136751,
+     30.147881,
      "off",
      "supply collapsed"
     ]
@@ -797,7 +797,7 @@
      "power-on"
     ],
     [
-     30.136751,
+     30.147881,
      "off",
      "supply collapsed"
     ],
@@ -817,8 +817,8 @@
     "press_to_AF": 372.0
    }
   },
-  "B4 10 ms tap from off is too short to latch U7": {
-   "label": "B4 10 ms tap from off is too short to latch U7",
+  "B4 3 ms tap from off is too short to latch U7": {
+   "label": "B4 3 ms tap from off is too short to latch U7",
    "t": 86.0,
    "halted": null,
    "display": null,
@@ -857,7 +857,7 @@
      "power-on"
     ],
     [
-     30.136751,
+     30.147881,
      "off",
      "supply collapsed"
     ],
@@ -867,7 +867,7 @@
      "COUNT key"
     ],
     [
-     75.158247,
+     75.169377,
      "off",
      "supply collapsed"
     ]
@@ -916,7 +916,7 @@
      "power-on"
     ],
     [
-     30.136751,
+     30.147881,
      "off",
      "supply collapsed"
     ],
@@ -926,7 +926,7 @@
      "COUNT key"
     ],
     [
-     75.158247,
+     75.169377,
      "off",
      "supply collapsed"
     ],
@@ -936,7 +936,7 @@
      "COUNT key"
     ],
     [
-     135.08987,
+     135.101,
      "off",
      "supply collapsed"
     ]
@@ -1188,7 +1188,7 @@
   },
   "D4 battery only: NRST during a reset hold powers the board off": {
    "label": "D4 battery only: NRST during a reset hold powers the board off",
-   "t": 3.0149,
+   "t": 3.026,
    "halted": "ROM bootloader (BOOT0 high at NRST)",
    "display": null,
    "oled": {
@@ -1226,7 +1226,7 @@
      "power-on"
     ],
     [
-     3.01487,
+     3.026,
      "off",
      "supply collapsed"
     ]
@@ -1475,7 +1475,7 @@
      "power-on"
     ],
     [
-     4.178746,
+     4.189876,
      "off",
      "supply collapsed"
     ]
@@ -1524,7 +1524,7 @@
      "power-on"
     ],
     [
-     4.178746,
+     4.189876,
      "off",
      "supply collapsed"
     ],
@@ -1534,7 +1534,7 @@
      "COUNT key"
     ],
     [
-     9.463962,
+     9.475092,
      "off",
      "supply collapsed"
     ]
@@ -1783,7 +1783,7 @@
      "power-on"
     ],
     [
-     41.08987,
+     41.101,
      "off",
      "supply collapsed"
     ]
@@ -1890,5 +1890,5 @@
    }
   }
  },
- "wall_s": 279.2
+ "wall_s": 246.1
 }

@@ -677,7 +677,7 @@
  },
  {
   "ref": "C40",
-  "lcsc": "C53987",
+  "lcsc": "C57112",
   "layer": "Bottom",
   "cpl_rot": 90.0,
   "predicted_ok_rot": [
@@ -1817,6 +1817,32 @@
   "cpl_mid": [
    27.55,
    -37.32
+  ]
+ },
+ {
+  "ref": "R39",
+  "lcsc": "C21190",
+  "layer": "Bottom",
+  "cpl_rot": 90.0,
+  "predicted_ok_rot": [
+   90
+  ],
+  "correct_rot": 90,
+  "rot_change": false,
+  "resid": 0.072,
+  "offset": [
+   0.0,
+   0.0
+  ],
+  "offset_change": false,
+  "new_mid": [
+   14.23,
+   -40.81
+  ],
+  "legacy_model_rot": 90,
+  "cpl_mid": [
+   14.23,
+   -40.81
   ]
  },
  {

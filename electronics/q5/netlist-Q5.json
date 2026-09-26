@@ -478,21 +478,21 @@
     },
     {
       "ref": "C40",
-      "value": "4.7n",
-      "mpn": "0603B472K500NT",
+      "value": "10n",
+      "mpn": "0603B103K500NT",
       "manufacturer": "FH",
       "footprint": "CountFidgetQ5:Capacitor_SMD_C_0603_1608Metric",
       "pins": {
         "1": "SYS_ON",
         "2": "GND"
       },
-      "notes": "4.7nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 4.7 ms); U7 turns off ~10 ms after the last source is released.",
+      "notes": "10nF X7R on U7 ON: holds ON through COUNT-key contact bounce (tau with R35 = 10 ms); U7 turns off ~21 ms after the last source is released.",
       "x": 29.04,
       "y": 37.0,
       "rotation": 90,
       "side": "bottom",
       "sheet": "usb-power",
-      "lcsc": "C53987",
+      "lcsc": "C57112",
       "assembly": "jlc_smt"
     },
     {
@@ -569,10 +569,10 @@
       "rotation": 90,
       "side": "bottom",
       "pins": {
-        "1": "VBUS",
+        "1": "U5_VCC",
         "2": "GND"
       },
-      "notes": "100 nF local VBUS decoupler beside U5; nearby plane return",
+      "notes": "100 nF U5 supply decoupler after the R39 1k filter; nearby plane return",
       "source_footprint": "Capacitor_SMD:C_0603_1608Metric",
       "lcsc": "C14663",
       "source_footprint_Q3": "ClickCounterQ2:Capacitor_SMD_C_0603_1608Metric",
@@ -1504,6 +1504,25 @@
       "assembly": "jlc_smt"
     },
     {
+      "ref": "R39",
+      "value": "1k",
+      "mpn": "0603WAF1001T5E",
+      "manufacturer": "UNI-ROYAL",
+      "footprint": "CountFidgetQ5:Resistor_SMD_R_0603_1608Metric",
+      "pins": {
+        "1": "VBUS",
+        "2": "U5_VCC"
+      },
+      "notes": "1k series supply filter for U5 with C9: keeps USB hot-plug ringing off the TLV7012 6 V abs max supply.",
+      "x": 14.23,
+      "y": 40.81,
+      "rotation": 90,
+      "side": "bottom",
+      "sheet": "thermal",
+      "lcsc": "C21190",
+      "assembly": "jlc_smt"
+    },
+    {
       "ref": "R4",
       "value": "16.5k",
       "mpn": "RC0603FR-0716K5L",
@@ -2275,7 +2294,7 @@
         "5": "TEMP_SENSE",
         "6": "TEMP_HOT",
         "7": "TEMP_HOT_OK",
-        "8": "VBUS"
+        "8": "U5_VCC"
       },
       "notes": "Same TLV7012 die and pin order as DGK (datasheet Table 5-2); push-pull outputs; charge enable requires both in-window indications; USB-powered.",
       "lcsc": "C2871502",
@@ -2442,7 +2461,7 @@
   "source_baseline": "Frozen Q4 JSON; Q1/Q2/Q3/Q4 artifacts unchanged",
   "hardware_tested": false,
   "manufacturing_released": false,
-  "fitted_components": 81,
+  "fitted_components": 82,
   "placement_status": "Root-owned placement overrides; single-sided (bottom) factory SMT",
   "cost_intent": "Standard JLC inventory only; no custom pack/harness; the only through-hole part is the display module on its header (home or JLC THT); switches press into vendor-placed hot-swap sockets",
   "source_baseline_sha256": "2ee9be24459e83c13af9585f1d83def47617b98fce6547d9f5a6a5c42dd06763",

@@ -212,6 +212,10 @@ def select_args(device, alt):
         args += ['-p', device['path']]
     return args
 
+# A unit left in ROM DFU keeps its USB D+ pull-up on; after unplugging, that back-feeds VBUS through the
+# ESD diode and holds the power latch on (draining the cell) until the pinhole resets it.
+STUCK_HINT = 'Press the pinhole (reset) BEFORE unplugging: a clicker unplugged while still in DFU mode stays powered and drains its cell.'
+
 
 def flash_device(tool, device, image, leave=True, say=print):
     alt, warnings = flash_alt(device, len(image))
@@ -342,6 +346,7 @@ def cmd_flash(a, ask=input):
             row.update(result='FAIL', note=str(e).splitlines()[0])
             failures += 1
             print('FAIL:', e)
+            print(STUCK_HINT)
         append_log(a.log, row)
         print(f'Logged to {a.log}')
         if not a.batch:
@@ -351,7 +356,7 @@ def cmd_flash(a, ask=input):
             # Never re-flash a unit that is still sitting in DFU; it must be unplugged first.
             seen = {(device['path'], device['serial'])}
             if not a.no_leave:
-                print('WARNING: this unit is still in DFU mode after leave; unplug it (the pinhole also restarts it).')
+                print('WARNING: this unit is still in DFU mode after leave.', STUCK_HINT)
         print(f'\n{done} flashed, {failures} failed. Connect the next clicker in DFU mode, or Ctrl-C to stop.')
 
 

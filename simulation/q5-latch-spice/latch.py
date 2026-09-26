@@ -43,7 +43,7 @@ Cq5 pwr_key 0 60p
 D3a pwr_key sys_on bat54
 D3b pwr_hold sys_on bat54
 .model bat54 d is=2e-7 n=1.05 rs=2.5 cjo=10p bv=30
-C40 sys_on 0 4.7n
+C40 sys_on 0 10n
 R35 sys_on 0 1meg
 Vvbus vbus 0 {{vbus}}
 D4 vbus vbus_wake d4148
@@ -154,7 +154,7 @@ def min_press(case, bounce, seed, lo=2, hi=80):
 def main():
     model = json.loads(MODEL.read_text())
     parts = {p['ref']: p for p in model['parts']}
-    for ref, val in dict(C40='4.7n', R35='1M', R38='100k', R34='100k', C29='4.7n', C5='2.2u', C6='10u').items():
+    for ref, val in dict(C40='10n', R35='1M', R38='100k', R34='100k', C29='4.7n', C5='2.2u', C6='10u').items():
         assert parts[ref]['value'] == val, (ref, parts[ref]['value'])
     assert parts['D3']['pins'] == {'1': 'PWR_KEY', '2': 'PWR_HOLD', '3': 'SYS_ON'}
     assert parts['SW1']['pins'] == {'1': 'PWR_KEY', '2': 'SYS'}

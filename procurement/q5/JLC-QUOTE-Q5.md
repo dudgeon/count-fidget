@@ -6,7 +6,7 @@ Authorized scope: JLCPCB quotes for two variants of the locked Q5 design. **A** 
 
 Page: https://cart.jlcpcb.com/quote.
 
-Uploaded file: `click-counter-Q5-Gerbers.zip`, sha256 `f9b9afe4ead8ebe9c9f7066926ef95a16f03e42750d92ad6f939462d12864230`. This is the design-lock export. The run was repeated after the final Basic-part substitution, with the same result.
+Uploaded file: `click-counter-Q5-Gerbers.zip`, sha256 `f9b9afe4ead8ebe9c9f7066926ef95a16f03e42750d92ad6f939462d12864230`. This was the 25 Sep design-lock export. The 26 Sep first-order revision changes the Gerbers but not the price inputs: layers, size, thickness and finish are the same. The current zip SHA-256 is `c7033004a0a3a30796fb0a186e57f7d693655358b90c4f85b5e1fbbd1c57e205`.
 
 JLC detected 2 layers and 42 × 54 mm. Selected options: 10 pcs, FR-4, 1.6 mm, 1 oz, green/white and ENIG.
 
@@ -24,110 +24,87 @@ JLC displayed a factory holiday notice at the time: closed 25 and 27 Sep and 1�
 
 ## Pre-quote estimate of the full JLC order (not a JLC quote)
 
-The estimate is computed by `scripts/estimate_q5_jlc_cost.py` and saved in `jlc-cost-estimate.json`. Its inputs are:
+The estimates come from `scripts/estimate_q5_jlc_cost.py --qty {2,5,10}` and are saved in `jlc-cost-estimate{-2,-5,}.json`. Their inputs are:
 - JLC's published PCBA fee schedule, https://jlcpcb.com/help/article/pcb-assembly-price, read 25 Sep 2026;
-- live LCSC/JLC catalogue prices and minimum order quantities from `stock.json`;
+- live LCSC/JLC catalogue prices and minimum order quantities from `stock.json`, refreshed 26 Sep 2026;
 - the joint counts of the routed board;
-- the PCB and shipping figures above.
+- the observed PCB and shipping figures.
 
-Part counts:
-- 276 SMT joints per board;
-- 40 SMT part types, of which 15 are Basic (no feeder fee) and 25 are Extended.
+The board has 278 SMT joints and 42 SMT part types, of which 17 are Basic (no feeder fee) and 25 are Extended at $3.07 each.
 
-All figures are for 10 boards.
+The 5-bare-PCB page price ($4.00 + ENIG $16.90 = **$20.90**, DHL $29.45, 0.16 kg) was observed the same way. The 2-board case is 5 bare PCBs with 2 assembled; JLC's PCBA minimum is 2.
 
-| USD, 10 boards | A Economic | A Standard | B Economic | B Standard |
-|---|---|---|---|---|
-| PCB (observed) | 22.10 | 22.10 | 22.10 | 22.10 |
-| Setup + stencil | 9.71 | 33.77 | 9.71 | 33.77 |
-| SMT joints | 4.42 | 4.42 | 4.42 | 4.42 |
-| Feeder loading | 76.75 | 61.20 | 76.75 | 61.20 |
-| SMT components | 132.96 | 132.96 | 132.96 | 132.96 |
-| DS1 display + header, THT feeders, 140 hand joints, labor | — | — | 30.74 | 27.66 |
-| **Subtotal** | **245.94** | **254.45** | **276.68** | **282.11** |
-| + DHL DDP estimate | 275.39 | 283.90 | 306.13 | 311.56 |
-| **Per board, shipped** | **27.54** | **28.39** | **30.61** | **31.16** |
+| Economic PCBA, USD | 2 boards (A / B) | 5 boards (A / B) | 10 boards (A / B) |
+|---|---|---|---|
+| PCB (observed) | 20.90 / 20.90 | 20.90 / 20.90 | 22.10 / 22.10 |
+| Setup + stencil + joints | 10.60 / 10.60 | 11.93 / 11.93 | 14.16 / 14.16 |
+| Feeder loading (25 Extended types) | 76.75 / 76.75 | 76.75 / 76.75 | 76.75 / 76.75 |
+| SMT components | 30.83 / 30.83 | 68.12 / 68.12 | 136.24 / 136.24 |
+| DS1 + header, THT feeders, hand joints, labor | — / 14.86 | — / 20.23 | — / 30.74 |
+| **Subtotal** | **139.08 / 153.94** | **177.70 / 197.93** | **249.25 / 279.99** |
+| **With DHL DDP** | **168.53 / 183.39** | **207.15 / 227.38** | **278.70 / 309.44** |
+| **Per board, shipped** | **84.27 / 91.69** | **41.43 / 45.48** | **27.87 / 30.94** |
 
-Variant A also needs parts that the user buys from LCSC:
-- DS1 displays, 12 at $22.12 (includes 2 spares);
-- headers, 20 at $0.92.
+- Standard PCBA adds about $8–12 per order.
+- Soldering the display yourself (variant A) saves $3–7.40 per board at JLC, but you then buy the display and header from LCSC, about $1.9–2.3 per board plus LCSC shipping.
+- **Owner decision (26 Sep 2026): variant B.** Self-soldering is only wanted when it saves more than $10 per board.
 
-Both variants need:
-- K1/K2 clicky switches C49234235, 25 at $2.69;
-- M2 × 6 screws C357360, 100 pcs (price not published at screen time);
+Both variants also need:
+- K1/K2 clicky switches C49234235 (25 at $2.69);
+- M2 × 6 screws C357360;
 - LIR2032 cells (retail);
-- a 3D-printed enclosure (home print, `mechanical/q5/`);
-- LCSC shipping.
-
-Variant B is therefore about $30 more at JLC and saves the user about $23 of LCSC display/header parts plus 140 home solder joints.
+- the home-printed enclosure.
 
 Caveats:
-- The estimate excludes coupons (JLC advertises setup-fee coupons), attrition extras JLC adds per part, and any extended-part price change after 20:21 UTC.
-- Whether Economic PCBA accepts the through-hole DS1 stacked on header DS1H, or requires Standard, is a quote question for variant B.
+- The estimates exclude coupons, JLC's per-part attrition extras and later price changes.
+- Whether Economic PCBA accepts the through-hole DS1 stacked on header DS1H, or requires Standard, is a quote question.
 
-## 5-board variant (observed 25 Sep 2026, same page and options)
+## Placement file: use the JLC-corrected CPL
 
-On the public quote page, PCB Qty 5 gave:
-- Special Offer $4.00 + ENIG $16.90 = **$20.90**;
-- DHL DDP shipping $29.45 (0.16 kg).
+The 26 Sep footprint check (`scripts/q5_jlc_footprint_check/REPORT.md`) fitted JLC's own EasyEDA footprint for every part onto our pads. All 43 LCSC parts match: no pad-order or mirror error. Our raw KiCad CPL would still show many parts rotated wrong in JLC's preview, and SW1/SW2, J1 and DS1 offset by 1.3–12.4 mm.
 
-PCBA qty 5 is offered (the minimum is 2). The estimate is in `jlc-cost-estimate-5.json`, from `estimate_q5_jlc_cost.py --qty 5`:
+Upload the corrected file:
+- variant A: `CPL-JLCPCB-Q5-JLC-CORRECTED.csv`;
+- variant B: `CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv`.
 
-| USD, 5 boards | A Economic | B Economic |
-|---|---|---|
-| PCB (observed) | 20.90 | 20.90 |
-| Setup + stencil + joints | 11.92 | 11.92 |
-| Feeder loading (25 Extended types) | 76.75 | 76.75 |
-| SMT components | 66.48 | 66.48 |
-| DS1 + header, THT feeders, hand joints, labor | — | 20.23 |
-| **Subtotal** | **176.05** | **196.28** |
-| **With DHL** | **205.50** | **225.73** |
-| **Per board, shipped** | **41.10** | **45.15** |
+They are generated by `make_jlc_cpl.py`. The bottom-side convention behind them is community-documented, not JLC-documented. **In JLC's preview, confirm before accepting:**
 
-The feeder fee is per part type, not per board. That is why 5 boards cost about 75 % of the price of 10. Component prices use the 10-piece price break, so 5-piece breaks may add a few dollars. Standard PCBA adds about $8.50 (A) or $5.40 (B).
+| Part | What to check in the preview |
+|---|---|
+| BT1 | The "+" marking is on the pad at X ≈ 35.4 mm (the CELL_P pad). |
+| D4 | The cathode bar is on pad 1 (VBUS_WAKE). |
+| U3, U4, U1, U2, U8 | The pin-1 dot is on our pin 1. |
+| D1, D2 | Pin 5 (VBUS) and pin 2 (GND) are on our pads 5 and 2. |
+| Q1–Q5, D3 | The single pin (drain / common cathode) is on our pad 3. |
+| SW1, SW2 | The socket body is centred on the 4 mm hole. **Do not accept a 180° "pad number" correction**; the pads are interchangeable. |
+| J1 | The receptacle mouth is at the board edge. |
 
-## Cost per board at 2, 5 and 10 (estimate, Economic PCBA, DHL included)
+If the preview disagrees with the corrected file on BT1/D4/U3, the convention is different. Upload the raw CPL instead and re-check the same parts. Tick **"Confirm Parts Placement"** so a JLC engineer reviews orientation before production.
 
-The 2-board case is 5 bare PCBs with 2 assembled; JLC's PCBA minimum is 2, and `--qty 2` prices parts at the 1-piece break.
+## Steps for the binding quote (owner signed in)
 
-| Assembled boards | A (user solders DS1) | B (JLC fits everything) | B − A per board | A also needs from LCSC per board |
-|---|---|---|---|---|
-| 2 | $167.74 → **$83.87** | $182.60 → **$91.30** | $7.43 | ~$2.3 display + header, plus LCSC shipping |
-| 5 | $205.50 → **$41.10** | $225.73 → **$45.15** | $4.05 | ~$1.9 |
-| 10 | $275.39 → **$27.54** | $306.13 → **$30.61** | $3.07 | ~$1.9 |
-
-At every quantity, soldering the display yourself saves less than $10 per board: about $1–5 net after buying the display yourself. **Owner decision (26 Sep 2026): variant B**, because self-soldering is only wanted when it saves more than $10 per board.
-
-## Steps for the binding quote (user, signed in; stop at the cart)
-
-1. Open https://cart.jlcpcb.com/quote and sign in.
-2. Upload `click-counter-Q5-Gerbers.zip`. Choose 10 pcs, 1.6 mm, ENIG, and leave everything else at its default.
+1. Open https://cart.jlcpcb.com/quote and sign in (the owner, not the agent).
+2. Upload `click-counter-Q5-Gerbers.zip`. Choose 5 pcs, 1.6 mm, ENIG, and leave everything else at its default.
 3. Turn on **PCB Assembly** and set:
    - Economic;
    - **Bottom Side**;
-   - PCBA qty 10;
+   - PCBA qty 2 or 5;
    - "Added by JLCPCB" tooling holes;
    - Confirm Parts Placement: yes.
 4. Tick the terms box and click NEXT.
-5. Upload the BOM and CPL for the variant:
-   - **Variant A:** `BOM-JLCPCB-Q5.csv` + `CPL-JLCPCB-Q5.csv`.
-   - **Variant B:** `BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv` + `CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv`. If Economic refuses the through-hole lines, repeat with **Standard**.
+5. Upload `BOM-JLCPCB-Q5-FULL-ASSEMBLY.csv` and `CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv` (variant B). If Economic refuses the through-hole lines, use Standard.
 6. On the parts page:
-   - every line should match the LCSC number in the BOM, with no "shortfall" or "not selected";
-   - for variant B, DS1 (C5139758) and DS1H (C492406) should show as through-hole/manual.
-7. On the placement preview, check pin 1 / polarity against `assembly-bottom-Q5.svg`:
-   - U1–U8, Q1–Q5, D1–D4 and J1;
-   - BT1 (+ contact on pad 1);
-   - the two hot-swap sockets SW1/SW2, whose pads sit beside the 3.0 mm pin holes.
-   JLC's preview may need rotation corrections. Record any correction in this file; do not edit the CPL silently.
-8. Record the product total, the shipping total and each rotation correction below. **Stop before "Save to cart"/checkout**: ordering is not authorized.
+   - every line should match the BOM's LCSC number, with no shortfall or "not selected";
+   - DS1 (C5139758) and DS1H (C492406) should show as through-hole.
+7. On the placement preview, work through the table above.
+8. Record the totals and any correction below. Stop at the order summary; payment needs the owner's explicit go-ahead.
 
-| Signed-in result | Variant A | Variant B |
-|---|---|---|
-| PCBA total (10) | pending | pending |
-| Parts shortfall / substitutions | pending | pending |
-| Rotation corrections | pending | pending |
-| Date/time | pending | pending |
+| Signed-in result | Variant B |
+|---|---|
+| PCBA total | pending |
+| Parts shortfall / substitutions | pending |
+| Preview corrections | pending |
+| Date/time | pending |
 
 ## Enclosure
 
