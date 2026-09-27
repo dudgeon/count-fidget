@@ -47,7 +47,7 @@ SHOTS = {
     'exploded': ((-0.255, -0.330, 0.270), (0.0, 0.0, 0.043), 70, None, None, 'explode'),
     'display': ((0.010, -0.047, 0.088), (0.0, 0.0112, 0.0145), 100, 16, (0.0, 0.0124, 0.0140), None),
     'edge': ((-0.098, -0.090, 0.052), (-0.0150, -0.0205, 0.0140), 100, 11, (-0.0185, -0.0250, 0.0168), None),
-    'keys': ((0.020, -0.108, 0.058), (0.0, -0.0115, 0.0175), 100, 11, (0.0, -0.0200, 0.0240), None),
+    'keys': ((0.030, -0.132, 0.066), (0.0, -0.0105, 0.0170), 100, 16, (0.0, -0.0200, 0.0230), None),
     'side': ((0.0, -0.33, 0.012), (0.0, 0.0, 0.012), 135, None, None, None),
     'usb': ((0.090, -0.075, 0.030), (0.0227, -0.0006, 0.0060), 100, 8, (0.0227, -0.0006, 0.0060), None),
     'pcb': ((-0.105, -0.150, 0.150), (0.0, 0.0, 0.0185), 85, 13, (0.0, -0.004, 0.0215), 'flip'),
@@ -75,7 +75,8 @@ def main():
         ctx = S.build(tray_colour=S.srgb(args.tray), oled_frame=S.OLED / args.frame)
         S.studio_lights()
         bpy.context.scene.view_settings.exposure = args.exposure
-        S.configure_render(samples=48 if args.preview else args.samples, res=(w, h), threshold=0.03 if args.preview else 0.008)
+        S.configure_render(samples=48 if args.preview else args.samples, res=(w, h), threshold=0.03 if args.preview else 0.02)
+        S.lean_paths()
         loc, tgt, lens, fstop, focus, setup = SHOTS[shot]
         if setup == 'explode':
             explode(ctx)

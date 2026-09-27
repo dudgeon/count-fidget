@@ -47,12 +47,12 @@ TITLES = [  # polished film
 CAPTIONS = [  # explainer: (first, last, title, body, callouts)
     (8, 118, 'The ordered Q5 board', 'JLC-assembled component side: every part below is on the underside.',
      [('mcu', 'STM32L072 MCU'), ('fram', 'FM25V02A FRAM'), ('cell', 'LIR2032 in BT1'), ('socket', 'Hot-swap socket'), ('usb', 'USB-C')]),
-    (124, 226, 'Display side', 'The HS96L01 OLED module stands 2.5 mm off the board on its header.', [('oled', '128 x 64 OLED')]),
+    (124, 226, 'Display side', 'The HS96L01 OLED module stands 2.5 mm off the board on its header.', [('oled', '128 x 64 OLED', 204, 226)]),
     (232, 334, 'Printed tray', 'PETG, 1.2 mm walls, 0.5 mm around the board. Four bosses and two load posts carry it.', [('tray', 'Tray')]),
     (340, 418, 'Switches, no soldering', 'The clicky CPG151101D13 switches press into the hot-swap sockets.', [('switch', 'Clicky MX switch')]),
     (424, 538, 'One flat lid', '2 mm clear cast acrylic, laser cut. No display cutout: the OLED sits 0.3 mm below it.', [('lid', '2.0 mm cast acrylic')]),
     (544, 670, 'Four screws hold everything', 'M2 x 14 self-tapping screws pass through 6 mm brass spacers and the board into the tray.',
-     [('screw', 'M2 x 14 screw'), ('spacer', '6 mm spacer')]),
+     [('screw', 'M2 x 14 screw', 544, 618), ('spacer', '6 mm spacer', 552, 618)]),
     (676, 742, 'Printed keycaps', '17 mm tiles: 1.4 mm clear of the screw heads, 0.7 mm above the lid at full travel.', [('keycap', 'Keycap')]),
     (748, 874, 'Firmware-accurate display', 'Frames from the Q5 renderer: wake, then COUNT three times.', []),
     (880, 984, 'Q5A', 'Body 45.4 x 57.4 x 16.8 mm  ·  26.2 mm to the key tops  ·  1.8 mm smaller each way than Q5', []),
@@ -82,18 +82,18 @@ def label(d, xy, text, op, side):
     ln = 110 if side > 0 else -110
     ex, ey = x + ln, y - 70
     col = (255, 255, 255, int(255 * op))
-    d.line([(x, y), (x + ln * 0.35, ey), (ex, ey)], fill=(30, 32, 36, int(200 * op)), width=5)
-    d.line([(x, y), (x + ln * 0.35, ey), (ex, ey)], fill=col, width=2)
-    d.ellipse([x - 7, y - 7, x + 7, y + 7], fill=(30, 32, 36, int(160 * op)))
-    d.ellipse([x - 5, y - 5, x + 5, y + 5], fill=col)
-    f = font(500, 26)
+    d.line([(x, y), (x + ln * 0.35, ey), (ex, ey)], fill=(30, 32, 36, int(170 * op)), width=6)
+    d.line([(x, y), (x + ln * 0.35, ey), (ex, ey)], fill=col, width=3)
+    d.ellipse([x - 9, y - 9, x + 9, y + 9], fill=(30, 32, 36, int(150 * op)))
+    d.ellipse([x - 6, y - 6, x + 6, y + 6], fill=col)
+    f = font(600, 31)
     anchor = 'ls' if side > 0 else 'rs'
     tx = ex + (10 if side > 0 else -10)
     for dx in (-2, -1, 0, 1, 2):
         for dy in (-2, -1, 0, 1, 2):
             if dx or dy:
-                d.text((tx + dx, ey + 9 + dy), text, font=f, fill=(30, 32, 36, int(150 * op)), anchor=anchor)
-    d.text((tx, ey + 9), text, font=f, fill=col, anchor=anchor)
+                d.text((tx + dx, ey + 11 + dy), text, font=f, fill=(30, 32, 36, int(130 * op)), anchor=anchor)
+    d.text((tx, ey + 11), text, font=f, fill=col, anchor=anchor)
 
 
 def draw_caption(im, f, cap, anchors):
@@ -114,14 +114,18 @@ def draw_caption(im, f, cap, anchors):
     d.text((x0 + 36, y0 + 52), title, font=tf, fill=(*INK, int(255 * op)), anchor='ls')
     d.text((x0 + 36, y0 + 96), body, font=bf, fill=(*SOFT, int(255 * op)), anchor='ls')
     pts = anchors.get(str(f), {}).get('points', {})
-    for name, text in callouts:
+    for c in callouts:
+        name, text = c[0], c[1]
+        ca, cb = (c[2], c[3]) if len(c) > 2 else (a + 8, b - 4)
         if name not in pts:
             continue
         u, v, depth = pts[name]
-        if depth <= 0 or not (0.03 < u < 0.97 and 0.05 < v < 0.8):
+        edge = min(1.0, (u - 0.04) / 0.08, (0.9 - u) / 0.08, (v - 0.10) / 0.08, (0.72 - v) / 0.08)
+        if depth <= 0 or edge <= 0:
             continue
-        cop = op * fade(f, a + 8, b - 4, 10)
-        label(d, (u * w, v * h), text, cop, 1 if u < 0.62 else -1)
+        cop = op * fade(f, ca, cb, 10) * ease(edge)
+        if cop > 0.01:
+            label(d, (u * w, v * h), text, cop, 1 if u < 0.62 else -1)
     return Image.alpha_composite(im, over)
 
 

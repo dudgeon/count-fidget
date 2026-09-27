@@ -328,7 +328,7 @@ def build_materials(opts):
     mats['acrylic'] = acrylic_material()
     mats['pc_clear'] = acrylic_material('pc_clear', ior=1.585, rough=0.035, tint=(0.97, 0.985, 1.0, 1))
     mats['tray'] = printed_material('tray', opts['tray_colour'])
-    top = meta()['keycap_top'] * MM
+    top = 0.0          # keycap origins are moved to the top face (build(): set_origin), so object z = 0 there
     mats['keycap_count'] = keycap_material('keycap_count', opts['count_colour'], opts['legend_colour'], top)
     mats['keycap_reset'] = keycap_material('keycap_reset', opts['reset_colour'], opts['legend_colour'], top)
     mats['brass'] = principled('brass', (0.93, 0.72, 0.42, 1), 1.0, 0.24)[0]
@@ -680,6 +680,21 @@ def configure_render(samples=256, res=(1920, 1080), threshold=0.01, motion_blur=
         except Exception:
             continue
     sc.render.use_persistent_data = True
+
+
+def lean_paths():
+    """Path depth and material settings shared by stills and film: enough bounces for the lid and
+    switch housings, no subsurface (it multiplied CPU render time for no visible gain)."""
+    cy = bpy.context.scene.cycles
+    cy.max_bounces, cy.diffuse_bounces, cy.glossy_bounces, cy.transmission_bounces = 6, 1, 2, 6
+    cy.transparent_max_bounces = 12
+    cy.denoising_prefilter = 'FAST'
+    cy.adaptive_min_samples = 16
+    for m in bpy.data.materials:
+        if m.node_tree:
+            for n in m.node_tree.nodes:
+                if n.type == 'BSDF_PRINCIPLED':
+                    n.inputs['Subsurface Weight'].default_value = 0.0
 
 
 def camera(name='cam', lens=85, sensor=36):

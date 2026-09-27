@@ -6,8 +6,12 @@ Q5A is an alternate enclosure for the **ordered, locked Q5 board**. It keeps a 3
 
 | | |
 |---|---|
-| ![Hero](renders/hero-graphite.png) | ![Exploded](renders/exploded.png) |
-| ![Display through the lid](renders/display-macro.png) | ![Board underside](renders/pcb-underside.png) |
+| ![Assembled, graphite tray](renders/hero-graphite.jpg) | ![Exploded assembly](renders/exploded.jpg) |
+| ![Top view through the clear lid](renders/top.jpg) | ![Profile](renders/side.jpg) |
+| ![OLED through the lid: firmware frame](renders/display-macro.jpg) | ![Board underside as ordered](renders/pcb-underside.jpg) |
+| ![Corner: screw, spacer, lid edge](renders/corner-macro.jpg) | ![Clicky switches under the keycaps](renders/keys-macro.jpg) |
+
+Also: [white tray](renders/hero-white.jpg), [black tray](renders/hero-black.jpg), [USB-C port](renders/usb.jpg).
 
 Films: [assembly film](video/q5a-assembly-film.mp4) (polished cut) and [assembly explainer](video/q5a-assembly-explainer.mp4) (annotated cut).
 
@@ -25,6 +29,14 @@ Films: [assembly film](video/q5a-assembly-film.mp4) (polished cut) and [assembly
 | **USB opening 13.4 × 7.2 mm, R1.0** (Q5: square corners) | Still passes the USB-IF maximum 12.35 × 6.5 mm overmold envelope. Any radius above 1.13 mm would clip its corners. The mouth is now 1.1 mm behind the outer wall (Q5: 2.0 mm), so plugs seat more easily. |
 | **Fasteners: 4 × M2 × 14 cross pan-head self-tapping screws** through the lid (Ø2.4 holes), 6.0 mm spacers and the PCB mounting holes into Ø1.7 mm tray pilots (4.4 mm engagement) | One screw per corner clamps the lid, spacer, board and tray. No threads are cut in acrylic. Heat-set inserts are not used because bottom-side parts limit the tray bosses to Ø4.4 mm, too thin a wall for an M2 insert. The Q5 M2 × 6 screws (C357360) are too short for this stack. |
 | **0.25 mm reveal** between the tray rim and the lid, and the lid inset 0.25 mm from the tray outline | The spacers, not the print, set the lid height. The inset makes cut and print tolerance read as a deliberate step. A 0.4 mm chamfer on the rim absorbs misalignment. |
+
+## Could it be smaller?
+
+| Dimension | What sets it | Options and cost |
+|---|---|---|
+| Width/depth 45.4 × 57.4 | 42 × 54 board + 2 × (0.5 gap + 1.2 wall) | 1.0 mm walls save 0.4 mm but are 2.5 perimeters and weaker around the USB opening. A 0.3 mm gap saves 0.4 mm but needs a tightly calibrated printer. Not recommended. |
+| Height to the lid top 16.8 | 1.2 floor + 0.5 + 5.52 holder + 1.6 PCB + 6.0 (OLED/rims) + 2.0 lid | A 1.5 mm (1/16 in) sheet saves 0.5 mm and still passes, but flexes more at the screws. A 1.0 mm floor saves 0.2 mm, with a thinner floor under the cell. |
+| Key tops 26.2 | The switch's fixed stem height (PCB top + 15.0) plus 2.4 mm of keycap | Fixed by the switch. The Q5 printed-lid design sits at 26.7 only because of its thicker floor and gap. |
 
 ## Laser-cut acrylic — DFM
 

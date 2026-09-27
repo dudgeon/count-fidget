@@ -1,5 +1,35 @@
 # Instructions for agents
 
+## Q5A acrylic-lid enclosure — 27 September 2026
+
+The owner has ordered the Q5 board and asked for an alternate case. It keeps the 3D-printed tray and replaces the Q5 printed front cover and rear key plate with **one flat, clear, laser-cut acrylic lid**, as small as works well. The request included DFM and high-fidelity renders plus an assembly film.
+
+**Q5A** implements this in `mechanical/q5-acrylic/` (start at its README). It has two sources:
+- the generator `scripts/build_q5_acrylic_enclosure.py`, which reuses the Q5 board reader and envelopes read-only;
+- the render pipeline `scripts/render_q5_acrylic/`.
+
+It changes nothing on the board or in the Q5 printed-lid candidate.
+
+Key facts:
+- **Body:** 45.4 × 57.4 × 16.8 mm.
+- **Lid:** 2.0 mm cast acrylic, underside at PCB top + 6.0 mm. That clears the OLED maximum by 0.3 mm and rests on the switch rims.
+- **Display:** no cutout.
+- **Key holes:** 15.2 × 12.9 mm; they capture the 15.6 × 13.96 mm rims.
+- **Fixings:** 4 × M2 × 14 self-tapping screws through 6 mm spacers.
+- **Keycaps:** 17 mm tiles.
+- **Checks:** zero intersections and zero collisions over 244 vertical assembly poses.
+
+Physical gates:
+- rim capture (cut the laser coupon first);
+- acrylic crazing at the screw holes;
+- OLED readability through the lid;
+- the 0.5 mm board clearance;
+- self-tapping thread life;
+- USB fit;
+- variant B header-pin trim.
+
+Work is on `claude/q5-acrylic-case-design-s25kxg` and draft PR #15; do not merge. No purchase or order is authorised by this work.
+
 ## Active Q5 checkpoint — 25 September 2026
 
 The user asked for all findings from the Q4 simulation review to be resolved, plus a soft power key, a battery gauge with low warning and storage cut-off, charge status, a reachable hardware reset, new key logic (**both keys: increment wins; reset only after a deliberate 2 s hold and release**), a smaller enclosure and a BOM of standard JLC inventory parts only. **Q5 implements this as a coordinated revision of Q4:**
