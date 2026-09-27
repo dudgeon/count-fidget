@@ -1,0 +1,17 @@
+{
+  "generator": "eb8657df740382a45d0ff8c3d0db3957aed8cae074d3d5bcddaa49a1774ed764",
+  "q5_builder": "38601c310ccb4d42ca1908a6400a72a7102c27d7fb9fa37cb63401b3f73f0003",
+  "board": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+  "model": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+  "outputs": {
+    "tray-Q5A.stl": "3268834eb04d9c0ca045ae168987b0bc24d63a3658d25d9be6699856a54ec96e",
+    "keycap-count-Q5A.stl": "bad516ebbce2fbe6af3f014b56cbe4bc6867e902295516a71859f70054797dea",
+    "keycap-reset-Q5A.stl": "2444d739e283e16e0972ddef32ec0547f6ede501f43f283caa1d609481afe4b8",
+    "spacer-printable-Q5A.stl": "2603ffae438ba7ca818eb06d0b16a3f90b892afd1e5fdbd6dc5698d63d4621d5",
+    "lid-acrylic-Q5A.dxf": "73b4e1d66ad0e85f046e0c51de1e9bd9a8bbbfa10a1412f27df8acd4eeb8116c",
+    "lid-acrylic-Q5A.svg": "b757a752921923514f63b2271a83b47b1b5ac54ad0b62c19b1943c59e75e2754",
+    "laser-coupon-Q5A.svg": "a3d1563d4e2881fe7c922281f8e5a6a646859ff6a9483dc94a7974ef0325ee45",
+    "enclosure-Q5A.step": "96f2f58d9a628e5ef0b90446e0b5b719a64a311fac88b2650e2ec6b2b160d8b8",
+    "fit-report.json": "4d394917ad677a30ee6d4b89f6e1b09d6b05d72de314f493129cc36a2a98b774"
+  }
+}
