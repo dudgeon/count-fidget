@@ -13,7 +13,7 @@ Q5A is an alternate enclosure for the **ordered, locked Q5 board**. It keeps a 3
 
 Also: [white tray](renders/hero-white.jpg), [black tray](renders/hero-black.jpg), [USB-C port](renders/usb.jpg).
 
-Films: [assembly film](video/q5a-assembly-film.mp4) (polished cut) and [assembly explainer](video/q5a-assembly-explainer.mp4) (annotated cut).
+Films: [assembly film](video/q5a-assembly-film.mp4) (polished cut, 44.5 s) and [assembly explainer](video/q5a-assembly-explainer.mp4) (annotated cut, 46.8 s).
 
 ## Design decisions
 
@@ -151,6 +151,22 @@ The renders use the native board, not a stand-in:
 - enclosure parts come from this generator.
 
 The OLED module, BT1 holder and cell, hot-swap sockets, tact switch, MX switches, screws and spacers are appearance models built from their drawings and LCSC photos. They are not vendor CAD, and chip markings are illustrative (part numbers only). Studio HDRIs are CC0 from Poly Haven.
+
+The two films are cut from the same 984 frames: 1920 × 1080, 24 fps, Cycles at 16 spp with OIDN denoising, no soundtrack.
+- The **film** is the polished cut, with an opening title and an end card.
+- The **explainer** adds captions, labels that follow the parts and four short holds: after the board reveal, on the display side, when the lid lands and after the count.
+
+| Shot | Frames | What happens |
+|---|---|---|
+| 1 | 1–120 | Macro over the component side as JLC assembles it: STM32L072, LIR2032 in BT1, hot-swap sockets |
+| 2 | 121–228 | The board rolls over to the display side and descends; the tray appears |
+| 3 | 229–336 | The board lands in the tray |
+| 4 | 337–420 | Both clicky switches press into their sockets |
+| 5 | 421–540 | The acrylic lid comes down with its screws and spacers and lands on the switch rims |
+| 6 | 541–672 | Close-ups of the screws driving home |
+| 7 | 673–744 | The keycaps drop on, seen past the USB-C opening |
+| 8 | 745–876 | The display wakes and counts 1, 2, 3 on three COUNT presses, using firmware frames |
+| 9 | 877–984 | Final orbit |
 
 Reproduce (Blender 5.2, KiCad 10.0.6, CadQuery 2.8, ffmpeg; see `scripts/render_q5_acrylic/README.md`):
 

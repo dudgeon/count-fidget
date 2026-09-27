@@ -271,8 +271,8 @@ def build(args):
         'oled': ('pcb', (md['oled_active_center'][0] * MM, md['oled_active_center'][1] * MM, md['oled_active_z'] * MM)),
         'tray': ('tray', (-0.0227, -0.010, 0.008)),
         'switch': ('sw1', (-0.0095, -0.0138, pcb_top + 0.009)),
-        'lid': ('lid', (0.016, 0.018, lid_top)),
-        'spacer': ('lid', (-0.0185, -0.025, pcb_top + 0.003)),
+        'lid': ('lid', (-0.0210, -0.0030, lid_top)),                  # open acrylic by the left edge, clear of screws and the OLED
+        'spacer': ('lid', (-0.0185, -0.025, lid_top - 0.003)),         # 1 mm below the lid underside, visible through it
         'screw': ('lid', (-0.0185, -0.025, lid_top + 0.0016)),
         'keycap': ('key1', (-0.0095, -0.0138, md['keycap_top'] * MM)),
     }

@@ -9,7 +9,7 @@ Only the appearance models listed below are hand-made. Intermediates go to `buil
 
 Tools used: Blender 5.2.2 (Cycles, CPU), KiCad 10.0.6 (`kicad-cli`, `pcbnew`), CadQuery 2.8, rsvg-convert, ffmpeg 6, Pillow.
 - Studio HDRIs `studio_small_09` and `photo_studio_loft_hall` (4K) are CC0 from Poly Haven.
-- Inter and JetBrains Mono (OFL) come from Google Fonts. The render steps expect all four files in `build/render-q5-acrylic/assets/`.
+- Inter and JetBrains Mono (OFL) come from Google Fonts. The render steps expect both HDRIs (`*_4k.exr`), `Inter-{300,400,500,600,700}.ttf` and `JetBrainsMono-{400,500}.ttf` in `build/render-q5-acrylic/assets/`.
 - The KiCad 10 STEP models the board references come from `kicad-packages3D` (for example under `/opt/kicad3d`).
 
 | Step | Command | Output |
@@ -22,7 +22,7 @@ Tools used: Blender 5.2.2 (Cycles, CPU), KiCad 10.0.6 (`kicad-cli`, `pcbnew`), C
 | 6. Stills | `blender -b --python render_stills.py -- --shots hero,display,... --samples 256` | `stills-final/*.png` |
 | 7. Film scene | `blender -b --python animate.py` | `film.blend` and `anchors.json` (screen positions of labelled parts per frame) |
 | 8. Film frames | `blender -b film.blend --python render_film.py -- --start 1 --end 984` | 1920 × 1080 PNGs, 16 spp + OIDN, resumable |
-| 9. Cuts | `python3 compose_videos.py` | `mechanical/q5-acrylic/video/*.mp4` |
+| 9. Cuts | `python3 compose_videos.py [--crf 20]` | `mechanical/q5-acrylic/video/*.mp4`: the film (opening title, end card) and the explainer (captions, labels that track the parts, holds), H.264 |
 
 `step 3` contents:
 - the enclosure parts from the generator;
@@ -34,4 +34,4 @@ Materials:
 - **Printed plastic** carries 0.16 mm layer lines as a bump.
 - **The OLED** is an emissive plane textured with the firmware bitmap and a 0.88-fill pixel grid.
 
-Render cost on a 4-core CPU: a still takes about 5 minutes at 1080p/256 spp, and a film frame about 31 s at 1080p/16 spp.
+Render cost on a 4-core CPU: a still takes about 4–5 minutes at 1080p/256 spp. A film frame takes 31–80 s (mean 43 s) at 1080p/16 spp, so the 984 frames took 11.8 hours.
