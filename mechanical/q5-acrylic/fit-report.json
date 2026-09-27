@@ -1,0 +1,178 @@
+{
+  "status": "Q5A acrylic-lid engineering fit candidate for the ordered Q5 board; physical qualification pending",
+  "body_mm": [
+    45.4,
+    57.4,
+    16.82
+  ],
+  "lid_mm": [
+    44.9,
+    56.9,
+    2.0
+  ],
+  "lid_thickness_accepted_mm": [
+    1.8,
+    2.3
+  ],
+  "keycap_top_mm": 26.22,
+  "stack_mm": {
+    "floor": 1.2,
+    "holder_gap": 0.5,
+    "holder": 5.52,
+    "pcb_bottom": 7.22,
+    "pcb_top": 8.82,
+    "spacer": 6.0,
+    "lid_underside": 14.82,
+    "lid_top": 16.82,
+    "tray_rim": 14.57,
+    "reveal": 0.25
+  },
+  "walls_mm": {
+    "wall": 1.2,
+    "pcb_gap": 0.5,
+    "r_inner": 1.4,
+    "r_outer": 2.5999999999999996,
+    "lid_inset": 0.25,
+    "top_chamfer": 0.4,
+    "bottom_fillet": 0.6,
+    "usb_relief": {
+      "depth": 0.4,
+      "width": 10.0,
+      "reason": "J1 mouth is 0.575 mm proud of the PCB edge; the side gap is 0.5 mm"
+    }
+  },
+  "lid": {
+    "material": "clear cast acrylic (PMMA), laser cut, both sides identical",
+    "holes": {
+      "screw": 2.4,
+      "key": [
+        15.2,
+        12.9,
+        0.6
+      ]
+    },
+    "display_cutout": false,
+    "reason": "OLED maximum is 0.3 mm below the lid underside; the switch rims already set the lid there, so a cutout saves no height"
+  },
+  "keycaps": {
+    "size": 17.0,
+    "corner_r": 2.0,
+    "underside_above_pcb": 13.1,
+    "top_above_pcb": 17.4,
+    "cavity": 14.0,
+    "socket_depth": 3.5
+  },
+  "fasteners": {
+    "screws": "4 x M2 x 14 cross pan-head self-tapping (head 3.8 x 1.6) through the lid, spacer and PCB into 1.7 mm tray pilots",
+    "spacers": "4 x round spacer OD 4.0 / ID 2.2 / L 6.0 (brass or nylon; clear PC also works)",
+    "pilot_depth": 4.8
+  },
+  "rim_capture": {
+    "switch-1": {
+      "area_mm2": 22.01,
+      "overlap_x_mm": 0.2,
+      "overlap_y_mm": 0.53
+    },
+    "switch-2": {
+      "area_mm2": 22.01,
+      "overlap_x_mm": 0.2,
+      "overlap_y_mm": 0.53
+    }
+  },
+  "tolerance_stack_mm": {
+    "rim_top": "6.00 +-0.15 (drawing X.xx general tolerance)",
+    "spacer": "6.0 +-0.1",
+    "result": "lid underside to rim: -0.25 (light preload) to +0.25 (switch may lift 0.25 before the lid stops it)",
+    "preload_limit": "CPG151101D13 push strength 5 kgf, 15 s, no damage"
+  },
+  "valid_solids": {
+    "tray": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 6592.719
+    },
+    "keycap-count": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 689.93
+    },
+    "keycap-reset": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 687.791
+    },
+    "lid-acrylic": {
+      "valid": true,
+      "count": 1,
+      "volume_mm3": 4280.864
+    }
+  },
+  "reported_intersections": [],
+  "assembly_path_checks": {
+    "poses": 244,
+    "sampled_intersection_tests": 38064,
+    "step_mm": 0.5,
+    "max_lift_mm": 30,
+    "collisions": [],
+    "limitations": "Straight vertical sampled paths; excludes screw driving, cell insertion and print distortion."
+  },
+  "minimum_modeled_distances_mm": {
+    "oled_max_to_lid_underside": 0.3,
+    "holder_to_floor": 0.5,
+    "pressed_keycap_to_lid_top_nominal": 0.7,
+    "pressed_keycap_to_lid_top_2.3mm_sheet": 0.4,
+    "keycap_to_screw_head_plan": 1.4118,
+    "pressed_keycap_roof_to_housing": 0.65,
+    "lid_key_hole_to_upper_housing_x": 0.25,
+    "lid_key_hole_to_upper_housing_y": 0.28,
+    "screw_thread_engagement": 4.4,
+    "usb_mouth_to_outer_wall": 1.125,
+    "usb_mouth_to_relief_wall": 0.325,
+    "pcb_side_clearance": 0.5,
+    "lid_hole_edge_to_lid_edge_min": 2.25,
+    "lid_web_between_key_holes": 3.85
+  },
+  "source_board_sha256": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+  "source_model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+  "generator_sha256": "eb8657df740382a45d0ff8c3d0db3957aed8cae074d3d5bcddaa49a1774ed764",
+  "q5_builder_sha256": "38601c310ccb4d42ca1908a6400a72a7102c27d7fb9fa37cb63401b3f73f0003",
+  "cadquery_version": "2.8.0",
+  "python_version": "3.11.15",
+  "cad_coordinate_transform": "X = PCB_X - 21; Y = 27 - PCB_Y; Z above the tray underside",
+  "limitations": [
+    "Component bodies are envelopes; the switch profile is read from the maker drawing (upper-housing widths +-0.2 mm).",
+    "Rim capture depends on the real upper-housing width; cut the laser coupon first (key holes 15.0/15.2/15.4 x 12.7/12.9/13.1).",
+    "Cast acrylic thickness varies 1.8-2.3 mm; keycap clearance is checked at 2.3 mm.",
+    "Self-tapping thread life in printed pilots, drop behaviour, acrylic stress crazing and USB cable fit are untested."
+  ],
+  "stl_mesh_checks": {
+    "tray-Q5A.stl": {
+      "triangles": 52740,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": -0.0,
+      "z_max_mm": 14.57
+    },
+    "keycap-count-Q5A.stl": {
+      "triangles": 10100,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 5.9
+    },
+    "keycap-reset-Q5A.stl": {
+      "triangles": 11060,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 5.9
+    },
+    "spacer-printable-Q5A.stl": {
+      "triangles": 1008,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 6.0
+    }
+  }
+}

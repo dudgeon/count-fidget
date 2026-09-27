@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48.900mm" height="60.900mm" viewBox="0 0 48.900 60.900">
+  <!-- Count Fidget Q5A lid: clear cast acrylic 2.0 mm, 1 part. Red = cut. Finished sizes; kerf compensation by the cutter. -->
+  <path d="M4.3500,2.0000 H44.5500 A2.35,2.35 0 0 1 46.9000,4.3500 V56.5500 A2.35,2.35 0 0 1 44.5500,58.9000 H4.3500 A2.35,2.35 0 0 1 2.0000,56.5500 V4.3500 A2.35,2.35 0 0 1 4.3500,2.0000 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M4.7500,55.4500 a1.2,1.2 0 1 0 2.4,0 a1.2,1.2 0 1 0 -2.4,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M41.7500,55.4500 a1.2,1.2 0 1 0 2.4,0 a1.2,1.2 0 1 0 -2.4,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M4.7500,5.9500 a1.2,1.2 0 1 0 2.4,0 a1.2,1.2 0 1 0 -2.4,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M41.7500,5.9500 a1.2,1.2 0 1 0 2.4,0 a1.2,1.2 0 1 0 -2.4,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M7.9250,37.8000 H21.9250 A0.6,0.6 0 0 1 22.5250,38.4000 V50.1000 A0.6,0.6 0 0 1 21.9250,50.7000 H7.9250 A0.6,0.6 0 0 1 7.3250,50.1000 V38.4000 A0.6,0.6 0 0 1 7.9250,37.8000 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M26.9750,37.8000 H40.9750 A0.6,0.6 0 0 1 41.5750,38.4000 V50.1000 A0.6,0.6 0 0 1 40.9750,50.7000 H26.9750 A0.6,0.6 0 0 1 26.3750,50.1000 V38.4000 A0.6,0.6 0 0 1 26.9750,37.8000 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+</svg>
