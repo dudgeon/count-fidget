@@ -117,6 +117,23 @@ def main():
                 via=p.PCB_VIA(board);via.SetPosition(vv(r['via']));via.SetWidth(p.FromMM(.6));via.SetDrill(p.FromMM(.3))
                 via.SetViaType(p.VIATYPE_THROUGH);via.SetLayerPair(p.F_Cu,p.B_Cu);via.SetNet(board.FindNet('GND'));via.SetLocked(True);board.Add(via)
     sync(board)
+    # Silkscreen pin-1 dots for polarised parts whose footprints carry no marker
+    # (planned by plan_q5_pin1_marks.py; verify_q5.py re-checks every rule).
+    marks=OUT/'pin1-markers.json'
+    if marks.exists():
+        from plan_q5_pin1_marks import is_marker
+        # Board-level silk (not footprint items) so every footprint stays identical to
+        # its library copy; the build discards and re-creates them deterministically.
+        stale=[(f,g) for f in board.GetFootprints() for g in f.GraphicalItems() if is_marker(g)]
+        for f,g in stale: f.Remove(g)
+        for g in list(board.GetDrawings()):
+            if is_marker(g): board.Remove(g); g.thisown=False
+        for m in json.loads(marks.read_text())['markers']:
+            x,y=m['marker_xy']; r=m['radius_mm']
+            dot=p.PCB_SHAPE(board);dot.SetShape(p.SHAPE_T_CIRCLE);dot.SetFilled(True);dot.SetWidth(0)
+            dot.SetLayer(p.B_SilkS if m['side']=='bottom' else p.F_SilkS)
+            dot.SetCenter(p.VECTOR2I(p.FromMM(x),p.FromMM(y)));dot.SetEnd(p.VECTOR2I(p.FromMM(x+r),p.FromMM(y)))
+            board.Add(dot)
     # The router's optional SMD fanout can create electrically pointless stubs
     # on single-pad no-connect nets. They have no schematic connection and
     # must not be retained as dangling copper.

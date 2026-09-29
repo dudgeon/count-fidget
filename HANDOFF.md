@@ -8,11 +8,11 @@ The user asked for all findings from the Q4 simulation review to be resolved, pl
 - 96 references: 82 fitted (81 vendor SMT + the DS1 display, home-soldered in variant A or JLC-fitted in variant B), 42 exact MPNs (16 JLC Extended types after the 26 Sep Basic-part review), all passing a read-only 10-board JLC stock screen;
 - five-part printed enclosure (base, front cover, rear key plate, two keycaps), 47.2 × 59.2 × 16.8 mm.
 
-Start at `docs/REVIEW-Q5-2026-09-25.md`, then `docs/q5-power-design.md` and `docs/q5-firmware.md`. Q5 lives in `electronics/q5/`, `firmware/q5-stm32/`, `mechanical/q5/`, `procurement/q5/`, `simulation/q5-*` and `scripts/*q5*`. Q1–Q4 artifacts are frozen; never run a Q4 builder against Q5.
+Start at `docs/REVIEW-Q5-2026-09-25.md`, then `docs/q5-power-design.md` and `docs/q5-firmware.md`. **Before any vendor order or design change, read `docs/vendor-clarity-rules.md`:** every polarised part must carry unambiguous pin-1 silkscreen (enforced by `verify_q5.py`); upload the JLC-corrected CPL; attach or offer `POLARITY-REFERENCE-Q5.pdf`; and check every polarised part in any engineer-"corrected" placement photo. Q5 lives in `electronics/q5/`, `firmware/q5-stm32/`, `mechanical/q5/`, `procurement/q5/`, `simulation/q5-*` and `scripts/*q5*`. Q1–Q4 artifacts are frozen; never run a Q4 builder against Q5.
 
 Evidence:
 - fresh KiCad 10.0.6 ERC/DRC/unconnected/parity all zero;
-- 42/42 verifier corruptions rejected;
+- 45/45 verifier corruptions rejected (including the pin-1 silkscreen rule);
 - full and UBSan firmware suites plus 13 image negatives passed;
 - 37 instruction-level emulator scenario records on the final ELF with zero failures;
 - five valid/manifold enclosure parts with zero modelled collisions.
