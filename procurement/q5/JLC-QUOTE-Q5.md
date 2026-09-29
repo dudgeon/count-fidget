@@ -135,6 +135,16 @@ Lessons for the estimator:
 - Standard charges the feeder fee on every part type (41 × ~$1.55), not only on Extended types.
 - A top-side through-hole part on a bottom-SMT board needs "Both Sides" (a second setup fee plus a fixture).
 
+## JLC engineering query (29 Sep 2026)
+
+After the order was placed, JLC's engineer sent a bottom-side 2D placement picture and asked us to confirm the polarity of D1, D2, U6, U7, U2 and U4. Our pin-1 pads were overlaid on that picture, calibrated on the four mounting holes (35.27 px/mm, mirrored X).
+- **Correct as shown:** D1, D2, U6 and U4, plus U1, U3, U5, U8, D3, D4, Q1–Q5 and BT1 (+ on the CELL_P tab).
+- **U7 (TPS22917) and U2 (BQ25185): 180° wrong.** JLC's pin-1 dot was on the diagonally opposite pad from our pin 1.
+
+The reply, drafted for the owner to send, asks JLC to rotate U2 and U7 by 180° and send an updated picture before production.
+
+The order used `CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv`, and the signed-in preview matched it. The 180° error on U2 and U7 therefore appeared in **JLC's engineer-"corrected" placement**, not in our CPL. On every future order, check the engineer's placement photo for U2 and U7 as well as the upload preview.
+
 ## Enclosure
 
 The finished-product plan prints the five enclosure parts at home (PETG, per `mechanical/q5/README.md`). A JLC3DP print quote was not requested: it needs the same account sign-in, and it was not part of the authorized A/B scope.
