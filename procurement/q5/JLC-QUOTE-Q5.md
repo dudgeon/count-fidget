@@ -145,6 +145,13 @@ The reply, drafted for the owner to send, asks JLC to rotate U2 and U7 by 180° 
 
 The order used `CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv`, and the signed-in preview matched it. The 180° error on U2 and U7 therefore appeared in **JLC's engineer-"corrected" placement**, not in our CPL. On every future order, check the engineer's placement photo for U2 and U7 as well as the upload preview.
 
+**Resolution (30 Sep 2026).** JLC sent an updated DFM picture. It was overlaid the same way (identical calibration) and checked against every polarised part:
+- U2 and U7 are now correct;
+- U1, U3–U6, U8, Q1–Q5, D1–D4 and BT1 are unchanged and correct;
+- the other differences are non-polarised resistors and capacitors drawn at 180°.
+
+Production was approved by email on the owner's instruction.
+
 **Design fix (29 Sep 2026).** The parts JLC queried were exactly the polarised parts with no pin-1 silkscreen; their footprints had been inherited without silk bodies. Every polarised part now has an unambiguous marker, and `verify_q5.py` enforces this. Each export also produces a polarity reference sheet (`POLARITY-REFERENCE-Q5.pdf`). Order-notes text and the query procedure are in [vendor clarity rules](../../docs/vendor-clarity-rules.md). The first order uses the earlier Gerbers without the dots; the reply to JLC covers it.
 
 ## Enclosure
