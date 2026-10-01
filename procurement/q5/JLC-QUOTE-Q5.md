@@ -1,4 +1,4 @@
-# Q5 JLCPCB quotation record — 25 September 2026
+# Q5 JLCPCB quotation and order record — 25–26 September 2026
 
 Authorized scope: JLCPCB quotes for two variants of the locked Q5 design. **A** has JLC doing all SMT, and the user solders DS1. **B** has JLC assemble everything. Not authorized: ordering, payment, part allocation or preorder, manufacturing release, and contact with other vendors. No account was created or used. No cart item was saved. No vendor was contacted.
 
@@ -99,12 +99,60 @@ If the preview disagrees with the corrected file on BT1/D4/U3, the convention is
 7. On the placement preview, work through the table above.
 8. Record the totals and any correction below. Stop at the order summary; payment needs the owner's explicit go-ahead.
 
-| Signed-in result | Variant B |
+| Signed-in result (26 Sep 2026, owner's account, agent-driven browser) | Variant B |
 |---|---|
-| PCBA total | pending |
-| Parts shortfall / substitutions | pending |
-| Preview corrections | pending |
-| Date/time | pending |
+| Parts matching | All 83 placements matched (81 bottom SMT + DS1/DS1H top THT); no shortfall or substitution |
+| Assembly type | **Standard** is required. BT1 (C70377) and J1 (C5184243) are "Standard only" parts, so Economic cannot place them. Standard adds 5 mm edge rails (70 × 70 mm panel) and charges the feeder fee on every part type |
+| Preview (JLC-corrected CPL) | Matched the predictions with no manual correction: BT1 "+" on the CELL_P pad; D4 cathode on VBUS_WAKE; pin 1 on U1/U3/U5/U8 matches the silkscreen; U2/U4/U6 consistent; J1 at the board edge; DS1 on its header with pin 1 matching. JLC's DS1 model draws four mounting holes the PCB does not have (cosmetic) |
+| Quote at 6 boards, both sides | $22.70 PCB + $259.96 PCBA = $282.66, plus DHL $29.94 = $312.60. Bottom-only (no display) was $221.32 before shipping, so JLC fitting the display cost about $61 (second setup, fixture, labor) |
+| Date/time | 26 Sep 2026 |
+
+## Order placed — 26 September 2026
+
+The owner reviewed the quote, changed the assembled quantity to 5 and paid. **This is an ordered first-article batch, not a production release.**
+
+| Line | Qty | USD |
+|---|---|---|
+| PCB, 2 layers, 1.6 mm, ENIG, green, 24 h build | 10 bare (JLC's batch size) | 22.80 |
+| Standard PCBA, both sides, JLC-corrected CPL, Confirm Parts Placement on | **5 assembled** | 242.83 |
+| DHL Express (DDP) | — | 32.45 |
+| **Total paid** | 5 finished boards + 5 bare PCBs | **298.08** |
+
+Status at order time: file review, then JLC's parts-placement photos for the owner's approval. "Do not confirm automatically" was ticked, so production waits for that approval. In the photos, check BT1's "+" side, D4, the U-part pin-1 marks and DS1's orientation before approving.
+
+Still to buy separately (LCSC or retail):
+- 10 × CPG151101D13 clicky switches (C49234235);
+- 20 × M2 × 6 self-tapping screws (C357360);
+- 5 × LIR2032 cells;
+- filament for the enclosure. Print the tolerance coupon first.
+
+When the boards arrive:
+1. Snap off the edge rails.
+2. Follow `docs/q5-first-article-test-plan.md` and flash with `tools/clicker-flash/`.
+
+Lessons for the estimator:
+- The published-fee estimate assumed Economic PCBA. It must check for "Standard only" parts first: here the holder and USB-C connector forced Standard.
+- Standard charges the feeder fee on every part type (41 × ~$1.55), not only on Extended types.
+- A top-side through-hole part on a bottom-SMT board needs "Both Sides" (a second setup fee plus a fixture).
+
+## JLC engineering query (29 Sep 2026)
+
+After the order was placed, JLC's engineer sent a bottom-side 2D placement picture and asked us to confirm the polarity of D1, D2, U6, U7, U2 and U4. Our pin-1 pads were overlaid on that picture, calibrated on the four mounting holes (35.27 px/mm, mirrored X).
+- **Correct as shown:** D1, D2, U6 and U4, plus U1, U3, U5, U8, D3, D4, Q1–Q5 and BT1 (+ on the CELL_P tab).
+- **U7 (TPS22917) and U2 (BQ25185): 180° wrong.** JLC's pin-1 dot was on the diagonally opposite pad from our pin 1.
+
+The reply, drafted for the owner to send, asks JLC to rotate U2 and U7 by 180° and send an updated picture before production.
+
+The order used `CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv`, and the signed-in preview matched it. The 180° error on U2 and U7 therefore appeared in **JLC's engineer-"corrected" placement**, not in our CPL. On every future order, check the engineer's placement photo for U2 and U7 as well as the upload preview.
+
+**Resolution (30 Sep 2026).** JLC sent an updated DFM picture. It was overlaid the same way (identical calibration) and checked against every polarised part:
+- U2 and U7 are now correct;
+- U1, U3–U6, U8, Q1–Q5, D1–D4 and BT1 are unchanged and correct;
+- the other differences are non-polarised resistors and capacitors drawn at 180°.
+
+Production was approved by email on the owner's instruction.
+
+**Design fix (29 Sep 2026).** The parts JLC queried were exactly the polarised parts with no pin-1 silkscreen; their footprints had been inherited without silk bodies. Every polarised part now has an unambiguous marker, and `verify_q5.py` enforces this. Each export also produces a polarity reference sheet (`POLARITY-REFERENCE-Q5.pdf`). Order-notes text and the query procedure are in [vendor clarity rules](../../docs/vendor-clarity-rules.md). The first order uses the earlier Gerbers without the dots; the reply to JLC covers it.
 
 ## Enclosure
 

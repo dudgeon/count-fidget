@@ -17,7 +17,7 @@ JLC performs all SMT from standard inventory parts. Two JLCPCB variants are prep
 
 Q1–Q4 remain historical, unchanged packages.
 
-**The design is locked. JLCPCB quoting only is authorized** (see [JLC-QUOTE-Q5](procurement/q5/JLC-QUOTE-Q5.md)): no order, payment or manufacture. The design files, firmware, emulation and CAD checks pass. Nothing has been built or measured. The first units follow the [first-article test plan](docs/q5-first-article-test-plan.md).
+**The design is locked, and a first-article batch of 5 assembled boards was ordered from JLCPCB on 26 September 2026** (see [JLC-QUOTE-Q5](procurement/q5/JLC-QUOTE-Q5.md)). Nothing has been built or measured yet. The boards will be checked against the [first-article test plan](docs/q5-first-article-test-plan.md).
 
 Start with [the Q5 engineering review](docs/REVIEW-Q5-2026-09-25.md), [PROJECT.md](PROJECT.md) for status, and [HANDOFF.md](HANDOFF.md) for continuation.
 
