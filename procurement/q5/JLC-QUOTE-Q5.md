@@ -159,7 +159,7 @@ Production was approved by email on the owner's instruction.
 
 The query was most likely prompted by the four corner mounting holes in JLC's library model, which the PCB intentionally lacks. The reply, sent on the owner's instruction, confirms the position, asks JLC not to add holes, and asks for header pins trimmed to ≤ 1 mm on the bottom.
 
-JLC then asked which holes the reply meant: "no holes under the module's four corner mounting holes" was too vague for a non-native reader. A follow-up reply was drafted that marks up JLC's own 3D picture:
+JLC then asked which holes the reply meant: "no holes under the module's four corner mounting holes" was too vague for a non-native reader. A follow-up reply was sent (5 Oct, on the owner's instruction) that marks up JLC's own 3D picture:
 - red circles 1–4 on the module's own corner holes;
 - a yellow box on the 7 pins.
 
