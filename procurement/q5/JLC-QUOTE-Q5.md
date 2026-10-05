@@ -159,6 +159,17 @@ Production was approved by email on the owner's instruction.
 
 The query was most likely prompted by the four corner mounting holes in JLC's library model, which the PCB intentionally lacks. The reply, sent on the owner's instruction, confirms the position, asks JLC not to add holes, and asks for header pins trimmed to ≤ 1 mm on the bottom.
 
+JLC then asked which holes the reply meant: "no holes under the module's four corner mounting holes" was too vague for a non-native reader. A follow-up reply was drafted that marks up JLC's own 3D picture:
+- red circles 1–4 on the module's own corner holes;
+- a yellow box on the 7 pins.
+
+It explains in short sentences that:
+- those holes belong to the display module's board;
+- the main PCB needs no holes there, and no action is needed;
+- DS1 is held only by its 7 pins in DS1H.
+
+Lesson, added to the vendor clarity rules: answer a vendor query with an annotated copy of the vendor's own picture, and avoid negated or nested phrasing.
+
 **Design fix (29 Sep 2026).** The parts JLC queried were exactly the polarised parts with no pin-1 silkscreen; their footprints had been inherited without silk bodies. Every polarised part now has an unambiguous marker, and `verify_q5.py` enforces this. Each export also produces a polarity reference sheet (`POLARITY-REFERENCE-Q5.pdf`). Order-notes text and the query procedure are in [vendor clarity rules](../../docs/vendor-clarity-rules.md). The first order uses the earlier Gerbers without the dots; the reply to JLC covers it.
 
 ## Enclosure

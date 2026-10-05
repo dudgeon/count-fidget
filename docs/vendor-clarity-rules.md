@@ -45,6 +45,9 @@ Keep **"Confirm Parts Placement"** switched on so questions come back before pro
 1. Download the placement photo from the email.
 2. Overlay our pin-1 pads by calibrating on the four mounting holes (the method is in `procurement/q5/JLC-QUOTE-Q5.md`, "JLC engineering query"), or compare it by eye with `POLARITY-REFERENCE-Q5-BOTTOM.png`. Both use the same mirrored view.
 3. Reply part by part: "correct as shown", or "rotate N°: pin 1 (function) must be on the pad at …". Attach the annotated picture.
+   - Mark up the vendor's own picture: numbered circles on exactly the features you mean.
+   - Write short, plain sentences for a non-native reader, and avoid negations like "no holes under the holes".
+   - End with one explicit instruction ("correct as shown, please proceed").
 4. Never approve an engineer-"corrected" placement without checking every polarised part, not only the ones asked about.
 5. Record the outcome in `procurement/q5/JLC-QUOTE-Q5.md`, without order or account numbers.
 
