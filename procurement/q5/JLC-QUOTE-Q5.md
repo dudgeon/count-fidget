@@ -152,6 +152,13 @@ The order used `CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv`, and the signed-i
 
 Production was approved by email on the owner's instruction.
 
+**DS1 position query (5 Oct 2026).** JLC sent a 3D top view asking whether DS1's position is correct. It matches the design:
+- the module's 7 pins sit in header DS1H near the board edge;
+- the body extends toward the board centre, glass up;
+- the module centre is about 12.7 mm from the pin row, against 12.4 mm designed.
+
+The query was most likely prompted by the four corner mounting holes in JLC's library model, which the PCB intentionally lacks. The drafted reply confirms the position, asks JLC not to add holes, and asks for header pins trimmed to ≤ 1 mm on the bottom.
+
 **Design fix (29 Sep 2026).** The parts JLC queried were exactly the polarised parts with no pin-1 silkscreen; their footprints had been inherited without silk bodies. Every polarised part now has an unambiguous marker, and `verify_q5.py` enforces this. Each export also produces a polarity reference sheet (`POLARITY-REFERENCE-Q5.pdf`). Order-notes text and the query procedure are in [vendor clarity rules](../../docs/vendor-clarity-rules.md). The first order uses the earlier Gerbers without the dots; the reply to JLC covers it.
 
 ## Enclosure
