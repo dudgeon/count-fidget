@@ -170,6 +170,11 @@ It explains in short sentences that:
 
 Lesson, added to the vendor clarity rules: answer a vendor query with an annotated copy of the vendor's own picture, and avoid negated or nested phrasing.
 
+**Placement confirmation request (6 Oct 2026).** Doris replied that JLC will proceed and has updated the placement on the website. JLC's automated email then asked the owner to confirm the parts placement in the order history within 72 hours; without confirmation the order goes into production automatically. Confirmation is a website action in the owner's signed-in account. Before confirming, check:
+- U2 and U7 keep the 30 Sep correction;
+- DS1 is on top on its header;
+- every other polarised part matches `POLARITY-REFERENCE-Q5-BOTTOM.png`.
+
 **Design fix (29 Sep 2026).** The parts JLC queried were exactly the polarised parts with no pin-1 silkscreen; their footprints had been inherited without silk bodies. Every polarised part now has an unambiguous marker, and `verify_q5.py` enforces this. Each export also produces a polarity reference sheet (`POLARITY-REFERENCE-Q5.pdf`). Order-notes text and the query procedure are in [vendor clarity rules](../../docs/vendor-clarity-rules.md). The first order uses the earlier Gerbers without the dots; the reply to JLC covers it.
 
 ## Enclosure
