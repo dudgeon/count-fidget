@@ -42,11 +42,11 @@ def input_hashes():
            ROOT/'scripts/kicad_sexpr.py',ROOT/'scripts/build_q5_model.py',ROOT/'scripts/build_q5_schematic.py',
            ROOT/'scripts/build_q5_board.py',ROOT/'scripts/sync_q5_board.py',
            ROOT/'scripts/preroute_q5.py',ROOT/'scripts/prepare_q5_route.py',ROOT/'scripts/finish_q5_board.py',ROOT/'scripts/plan_q5_stitching.py',
-           ROOT/'scripts/measure_q5_routes.py',
+           ROOT/'scripts/measure_q5_routes.py',ROOT/'scripts/plan_q5_pin1_marks.py',
            ROOT/'electronics/q4/netlist-Q4.json'}
     for pattern in ('*.kicad_sch','*.kicad_sym','*.kicad_dru','*.pretty/*.kicad_mod'):
         paths.update(Q5.glob(pattern))
-    for name in ('placement.json','circuit-contract.json','locked-route-seed.json'):
+    for name in ('placement.json','circuit-contract.json','locked-route-seed.json','pin1-markers.json','gnd-stitch.json'):
         if (Q5/name).exists(): paths.add(Q5/name)
     return {relative(p):digest(p) for p in sorted(paths)}
 
@@ -103,6 +103,63 @@ def world_pad(footprint, pad):
     # KiCad stores local coordinates already mirrored for a flipped footprint.
     return x + px * math.cos(angle) + py * math.sin(angle), y - px * math.sin(angle) + py * math.cos(angle)
 
+
+POLARISED=('U1','U2','U3','U4','U5','U6','U7','U8','Q1','Q2','Q3','Q4','Q5','D1','D2','D3','D4')
+
+def world_xy(footprint, xy):
+    position = child(footprint, 'at')
+    x, y = map(float, position[1:3])
+    angle = math.radians(float(position[3]) if len(position) > 3 else 0)
+    px, py = xy
+    return x + px * math.cos(angle) + py * math.sin(angle), y - px * math.sin(angle) + py * math.cos(angle)
+
+def verify_pin1_markers(tree,fps):
+    """Every polarised part needs silkscreen that an assembler can read unambiguously as pin 1:
+    either its footprint's own pin-1 triangle / diode cathode bar at pad 1, or a planned board-level
+    dot closer to pin 1 than 0.75 x any other pad of the part and closer than any other part's pad."""
+    plan=json.loads((Q5/'pin1-markers.json').read_text())
+    rules=plan['rules']
+    dots=[]
+    for g in children(tree,'gr_circle'):
+        layer=child(g,'layer')[1]
+        if layer not in ('F.SilkS','B.SilkS') or child(g,'fill')[1] not in ('yes','solid'): continue
+        cx,cy=map(float,child(g,'center')[1:3]); ex,ey=map(float,child(g,'end')[1:3])
+        dots.append((layer,cx,cy,math.hypot(ex-cx,ey-cy)))
+    planned={m['ref']:m for m in plan['markers']}
+    require(len(dots)==len(planned),'Pin-1 dots on the board differ from pin1-markers.json')
+    pads={ref:{pad[1]:world_pad(fp,pad) for pad in children(fp,'pad') if pad[1]} for ref,fp in fps.items()}
+    side={ref:child(fp,'layer')[1][0] for ref,fp in fps.items()}
+    kinds={}
+    # Coverage: a new IC, transistor or diode can never slip in without a pin-1 marker rule.
+    candidates={r for r in fps if r[:1] in ('U','Q','D') and not r.startswith('DS')}
+    require(candidates<=set(POLARISED),'Polarised part missing from the pin-1 marker rule: '+', '.join(sorted(candidates-set(POLARISED))))
+    for ref in POLARISED:
+        fp=fps[ref]; own=pads[ref]; p1=own['1']
+        def nearest(xy): return min(own,key=lambda n:math.dist(xy,own[n]))
+        silk=[g for g in fp[1:] if isinstance(g,list) and g and g[0] in ('fp_poly','fp_line')
+              and child(g,'layer')[1].endswith('.SilkS')]
+        def centre(g):
+            pts=[tuple(map(float,q[1:3])) for q in child(g,'pts')[1:]] if g[0]=='fp_poly' else \
+                [tuple(map(float,child(g,k)[1:3])) for k in ('start','end')]
+            return world_xy(fp,(sum(a for a,_ in pts)/len(pts),sum(b for _,b in pts)/len(pts)))
+        if ref in planned:
+            m=planned[ref]; x,y=m['marker_xy']
+            layer={'B':'B.SilkS','F':'F.SilkS'}[side[ref]]
+            require(any(l==layer and abs(cx-x)<1e-4 and abs(cy-y)<1e-4 and abs(r-rules['dot_radius_mm'])<1e-4 for l,cx,cy,r in dots),
+                    f'Planned pin-1 dot missing from the board: {ref}')
+            d1=math.dist((x,y),p1)
+            require(d1<=rules['max_ratio_pin1_to_other_pad_distance']*min(math.dist((x,y),q) for n,q in own.items() if n!='1'),
+                    f'Pin-1 dot is ambiguous between pins: {ref}')
+            require(d1<rules['max_ratio_pin1_to_other_part_pad_distance']*min(math.dist((x,y),q) for o,op in pads.items()
+                    if o!=ref and side[o]==side[ref] for q in op.values()),f'Pin-1 dot sits nearer another part: {ref}')
+            kinds[ref]='board dot'
+        elif any(g[0]=='fp_poly' and nearest(centre(g))=='1' for g in silk):
+            kinds[ref]='footprint pin-1 triangle'
+        elif len(own)==2 and len(silk)>=2 and all(nearest(centre(g))=='1' for g in silk):
+            kinds[ref]='cathode bar at pad 1'
+        else:
+            require(False,f'Polarised part has no unambiguous pin-1 silkscreen: {ref}')
+    return kinds
 
 
 def verify_semantics(xml_path=PUBLIC_XML):
@@ -229,9 +286,11 @@ def verify_semantics(xml_path=PUBLIC_XML):
             require(len(comps[ref]['pins'])==entry['physical_pin_count'],
                     f'Critical circuit contract differs: {ref}.physical_pin_count')
     require(c.get('manufacturing_released') is False,'Contract cannot authorize manufacture')
+    marked=verify_pin1_markers(tree,fps)
     return dict(references=len(parts),fitted_components=fitted,connected_physical_pins=len(connected),
                 explicit_nc_physical_pins=len(nc),named_pads_including_duplicates=named_pads,
                 all_fields_nets_placements_paths_outline_and_local_land_geometry_match=True,
+                polarised_parts_with_unambiguous_pin1_silk=marked,
                 nc_nets={ref+'.'+pin:net for (ref,pin),net in sorted(nc.items())})
 
 

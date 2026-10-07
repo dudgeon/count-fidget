@@ -1,0 +1,219 @@
+{
+ "schema": 1,
+ "purpose": "Silkscreen pin-1 dot per polarised part; applied by finish_q5_board.py, re-checked by verify_q5.py",
+ "rules": {
+  "dot_radius_mm": 0.25,
+  "pad_and_via_clearance_mm": 0.2,
+  "minimum_pad_clearance_mm": 0.15,
+  "silk_clearance_mm": 0.15,
+  "edge_clearance_mm": 0.5,
+  "max_ratio_pin1_to_other_pad_distance": 0.75,
+  "max_ratio_pin1_to_other_part_pad_distance": 1.0
+ },
+ "markers": [
+  {
+   "ref": "U2",
+   "side": "bottom",
+   "pad1_xy": [
+    33.9,
+    9.8
+   ],
+   "marker_xy": [
+    33.3,
+    10.3
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.781,
+   "distance_to_nearest_other_pad_mm": 1.082,
+   "outside_other_courtyards": false,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "U4",
+   "side": "bottom",
+   "pad1_xy": [
+    1.775,
+    9.8
+   ],
+   "marker_xy": [
+    1.775,
+    10.4
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.6,
+   "distance_to_nearest_other_pad_mm": 1.101,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "U6",
+   "side": "bottom",
+   "pad1_xy": [
+    6.7625,
+    3.15
+   ],
+   "marker_xy": [
+    6.763,
+    3.9
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.75,
+   "distance_to_nearest_other_pad_mm": 1.7,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "U7",
+   "side": "bottom",
+   "pad1_xy": [
+    40.55,
+    35.7375
+   ],
+   "marker_xy": [
+    41.25,
+    36.637
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 1.14,
+   "distance_to_nearest_other_pad_mm": 1.879,
+   "outside_other_courtyards": false,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "Q1",
+   "side": "bottom",
+   "pad1_xy": [
+    3.25,
+    17.2375
+   ],
+   "marker_xy": [
+    2.5,
+    17.288
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.752,
+   "distance_to_nearest_other_pad_mm": 1.151,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "Q2",
+   "side": "bottom",
+   "pad1_xy": [
+    3.25,
+    22.3375
+   ],
+   "marker_xy": [
+    2.5,
+    22.387
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.752,
+   "distance_to_nearest_other_pad_mm": 1.151,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "Q3",
+   "side": "bottom",
+   "pad1_xy": [
+    3.24,
+    48.4675
+   ],
+   "marker_xy": [
+    2.49,
+    48.517
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.752,
+   "distance_to_nearest_other_pad_mm": 1.151,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "Q4",
+   "side": "bottom",
+   "pad1_xy": [
+    12.4625,
+    52.85
+   ],
+   "marker_xy": [
+    11.262,
+    53.2
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 1.25,
+   "distance_to_nearest_other_pad_mm": 2.55,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "Q5",
+   "side": "bottom",
+   "pad1_xy": [
+    10.5625,
+    28.95
+   ],
+   "marker_xy": [
+    10.512,
+    28.2
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.752,
+   "distance_to_nearest_other_pad_mm": 1.151,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "D1",
+   "side": "bottom",
+   "pad1_xy": [
+    31.75,
+    28.3375
+   ],
+   "marker_xy": [
+    32.45,
+    28.938
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.922,
+   "distance_to_nearest_other_pad_mm": 1.756,
+   "outside_other_courtyards": false,
+   "pad_clearance_mm": 0.15
+  },
+  {
+   "ref": "D2",
+   "side": "bottom",
+   "pad1_xy": [
+    28.97,
+    32.9375
+   ],
+   "marker_xy": [
+    29.12,
+    34.087
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 1.159,
+   "distance_to_nearest_other_pad_mm": 1.591,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  },
+  {
+   "ref": "D3",
+   "side": "bottom",
+   "pad1_xy": [
+    6.5625,
+    27.75
+   ],
+   "marker_xy": [
+    6.562,
+    28.5
+   ],
+   "radius_mm": 0.25,
+   "distance_to_pin1_mm": 0.75,
+   "distance_to_nearest_other_pad_mm": 2.531,
+   "outside_other_courtyards": true,
+   "pad_clearance_mm": 0.2
+  }
+ ]
+}

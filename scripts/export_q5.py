@@ -508,8 +508,17 @@ def export(args, output):
         require(digest(ROOT / name) == entry['sha256'] and (ROOT / name).stat().st_size == entry['bytes'],
                 'Published output copy differs: ' + name)
     require(input_hashes(validation) == initial, 'Sources changed while publishing staged exports')
+    # Vendor clarity kit, generated from the published CPLs and the board so no manual step can be
+    # skipped: JLC-rotation-corrected CPLs (fails if the footprint-fit corrections are stale) and the
+    # polarity reference sheet engineers can check orientation queries against.
+    for script in ('scripts/q5_jlc_footprint_check/make_jlc_cpl.py', 'scripts/polarity_reference_q5.py'):
+        subprocess.run([sys.executable, str(ROOT / script)], check=True, cwd=ROOT, capture_output=True, text=True)
+    for name in ('CPL-JLCPCB-Q5-JLC-CORRECTED.csv', 'CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv', 'POLARITY-REFERENCE-Q5.csv',
+                 'POLARITY-REFERENCE-Q5.pdf', 'POLARITY-REFERENCE-Q5-BOTTOM.png', 'POLARITY-REFERENCE-Q5-TOP.png'):
+        path = DEST / name
+        manifest['files'][str(path.relative_to(ROOT))] = {'bytes': path.stat().st_size, 'sha256': digest(path)}
     MANIFEST.write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
-    print('Q5 exports checked: 82 board parts; variant A 81 SMT BOM/CPL (DS1 home-soldered); variant B 83 placements incl. DS1 + header THT. Hardware unqualified.')
+    print('Q5 exports checked (with JLC-corrected CPLs and polarity reference): 82 board parts; variant A 81 SMT BOM/CPL (DS1 home-soldered); variant B 83 placements incl. DS1 + header THT. Hardware unqualified.')
 
 
 def main():

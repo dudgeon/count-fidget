@@ -1,5 +1,5 @@
 {
-  "prepared_ns": 1790390559402080376,
+  "prepared_ns": 1790684329832711462,
   "inputs_sha256": {
     "electronics/q4/netlist-Q4.json": "2ee9be24459e83c13af9585f1d83def47617b98fce6547d9f5a6a5c42dd06763",
     "electronics/q5/CountFidgetQ5.kicad_sym": "e6bb7035bad07ea503af7f9cb82b213615dc1f3f67f435f16762fa575f00ccf9",
@@ -26,12 +26,13 @@
     "electronics/q5/battery-1.kicad_sch": "41f92388b3d1e33d4e9130f3180cfd6ad9e76cb689b03ac5cd5d10b4ddda7235",
     "electronics/q5/battery-2.kicad_sch": "e1aa4536e646e75e3e656c131a9c0092791cb5d3b08212b6794cbd099ab4d988",
     "electronics/q5/circuit-contract.json": "eeebcd6db58b4bd8a96e5cd899e7bf1356d7e810bc32b3f14ff0be42ea62262d",
-    "electronics/q5/click-counter-Q5.kicad_pcb": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+    "electronics/q5/click-counter-Q5.kicad_pcb": "77ad721f204d9de3e84c2ff0e6e263facbb2bcafe1e0a0a26f51a70f18e43562",
     "electronics/q5/click-counter-Q5.kicad_pro": "04c9bdd754ab845b28f246c4c378d3db0a6e2033a4060626fa0a277c3ad0fe5b",
     "electronics/q5/click-counter-Q5.kicad_sch": "21f2d332000b3fc44a2eb070c13ca509248d75c4432da17574b80f6f2ae689fd",
     "electronics/q5/display-1.kicad_sch": "6d02f6d76c44d883a7d9cf0bc3b39c24337fe2383c287e29fb34115236a6af02",
     "electronics/q5/display-2.kicad_sch": "7eac6c32626f0c0c7d62af0a99bb880c5a26b8581c26daa62b565982df4c8be7",
     "electronics/q5/fp-lib-table": "e02fa6180ad823b4036cc1de029665923d581495314e0ee2139056d48d5f3365",
+    "electronics/q5/gnd-stitch.json": "79a4aa2da4858eeb3a2429169b965c8f5ddb4e3f13b3fad6118e4ab090ed3843",
     "electronics/q5/locked-route-seed.json": "66aeceaed6338854321ee6423ad29d35f3f016db59d5ab97174ef5533d3a0148",
     "electronics/q5/mcu-1.kicad_sch": "d7ed494cc0648e473351ff84a35f25dacdc9b52cc28a2da90da923cdb609e1e7",
     "electronics/q5/mcu-2.kicad_sch": "a52551b795703f6b757a21af2408d165cb8a11c9812e39c58e9dc0ce32db9311",
@@ -41,6 +42,7 @@
     "electronics/q5/mcu-6.kicad_sch": "6e5561165cd52b504c99ef5e370130e78b0edfd7399b886f08120253ff108c7f",
     "electronics/q5/memory-1.kicad_sch": "5b76e080183bf5b5ba03847c9460d608cb37a66a99335b6fcdd05260531f7749",
     "electronics/q5/netlist-Q5.json": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+    "electronics/q5/pin1-markers.json": "f458b103f800ebde6fb57a444dbcdc5fa991af756e8c18cae6cc6a24d88662b9",
     "electronics/q5/placement.json": "a0151a48bdf6c94aa7ca3ecbd96f655435d50d31b07f0fd9c82f95483cc05fdc",
     "electronics/q5/schematic-netlist-Q5.xml": "4332ba78519a0f9d6d41b1023571d1ad64938647366ddfd68a9e59ecd8357b10",
     "electronics/q5/schematic-paths-Q5.json": "9dcaeb7369bd7591a5c922d97715ede3e12be8d32609a5e52cc1602cdd8a3777",
@@ -55,14 +57,15 @@
     "scripts/build_q5_board.py": "baa1653a67060b9d3a3a8d02035988747371ff28c6885f43d77486dca7c55e22",
     "scripts/build_q5_model.py": "1ad6f55dabb2b0da2f7a6ef9bf521b8fef8d631bf6654e42bd03695ff2dd6b98",
     "scripts/build_q5_schematic.py": "81968bc2452e53586e8c43ba02d35534ce4dd8d19c72c5fe83bae331469b392d",
-    "scripts/finish_q5_board.py": "d6ba5179ed4d922beccd69a232076ea560360a6f4c8d0106733365deb7628d1e",
+    "scripts/finish_q5_board.py": "1e747d03a17a2404cfaf1339ba99ecf7f7ba87c3d35a5ca3b8cb5e9510ff6381",
     "scripts/kicad_sexpr.py": "4a6c547f7f5bb0fcc7160da24c04e918c1d146026b4f990db624482fb8eacfeb",
     "scripts/measure_q5_routes.py": "9a103462bde70721f9a675581a48c9bfb4793495c42b37cf25223d003cb81f11",
+    "scripts/plan_q5_pin1_marks.py": "7057e6266de059df8aca139c8fb64aedecd6aa8cd6daabb30eca75a6b5dcf295",
     "scripts/plan_q5_stitching.py": "969c320248d4dbe8d533f7571b12da07f13e47499993a96efd7850169d218747",
     "scripts/prepare_q5_route.py": "fba01b2efb014a46dcce831413e7a8996939020a414e7c2b98c0400abe9257ba",
     "scripts/preroute_q5.py": "c7b3b374d016af414febac41171358ebd7bfcbb9d3ec1935378d91603486f430",
     "scripts/sync_q5_board.py": "74e5ef807d8a92a249edd2e319a1ef171b63d4dfe42c1bfb4583d8ad642e9fb7",
-    "scripts/verify_q5.py": "bd17ede2d39999cda30e542d293167808fcb889ffa1c566af3483327d0830bec"
+    "scripts/verify_q5.py": "9389d3cb525be2606792367964619a4fb1e0eacd73423cac4f255fd72437f10e"
   },
   "commands": [
     [

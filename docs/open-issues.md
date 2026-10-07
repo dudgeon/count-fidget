@@ -11,7 +11,7 @@ GitHub issues #2–#9, #12 and #13 from the Q4 simulation review are resolved in
 | E30 | Cell holder and first connection | Holder contact resistance and retention; cell insertion with USB present; the retained cold-insertion counterexample (E25) on real cells; TH1 coupling to the cell |
 | E31 | Display module supply (#8) | Module power tree; VBAT/pump/current at 3.15–3.26 V; 200 × NRST with the display on |
 | E32 | Enclosure | USB-C plugs in both orientations; printed keycap fit/travel; pinhole reach to SW3; load supports |
-| P06 | Binding JLC PCBA quote for variants A and B | Owner signs in and uploads the prepared BOM/CPL per [JLC-QUOTE-Q5](../procurement/q5/JLC-QUOTE-Q5.md); record parts matching, rotation corrections and totals. Confirm that variant B's stacked THT display is accepted (Economic or Standard) |
+| P06 | ~~Binding JLC PCBA quote~~ **Done 26 Sep 2026:** quoted and ordered (5 boards, variant B, Standard PCBA, $298.08). Remaining: approve JLC's placement photos, then run the first-article plan | Owner approval of the placement photos |
 | E33 | Hot-swap sockets and printed tolerances | Socket solder/seating (G2b), tolerance coupon (G0), M2 × 6 self-tapping thread life (G5) |
 
 Q4 design choices addressed E26 (the common regulated rail) and E27 (superseded by external FRAM); their physical verification remains among the Q4 gates in `REVIEW-Q4-2026-09-24.md`, which still apply to Q5 wherever the circuit is unchanged.
