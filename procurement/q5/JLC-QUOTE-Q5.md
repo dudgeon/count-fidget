@@ -175,6 +175,13 @@ Lesson, added to the vendor clarity rules: answer a vendor query with an annotat
 - DS1 is on top on its header;
 - every other polarised part matches `POLARITY-REFERENCE-Q5-BOTTOM.png`.
 
+**Placement check (6 Oct 2026, signed-in viewer).** JLC's "Show Revised Items" list contains only 28 resistors and capacitors (non-polarised); no U, Q, D, BT or DS part was revised. Every polarised part was checked in the bottom-side 2D viewer against our pin-1 coordinates, calibrated on U1 and U2 pin 1 (about 9.6 px/mm, X mirrored):
+- U1–U8, Q1–Q5, D1–D4 and BT1: JLC's pin-1 marker is on our pin-1 pad, within calibration error (≤ 8 px, under one pin pitch);
+- U2 and U7 keep the 30 Sep correction;
+- DS1 is on top, on its header, as in the 5 Oct picture.
+
+Result: safe to confirm. The final "Yes, please proceed to production" and Submit are left to the owner, because the agent's auto-mode permission filter blocks production-release clicks.
+
 **Design fix (29 Sep 2026).** The parts JLC queried were exactly the polarised parts with no pin-1 silkscreen; their footprints had been inherited without silk bodies. Every polarised part now has an unambiguous marker, and `verify_q5.py` enforces this. Each export also produces a polarity reference sheet (`POLARITY-REFERENCE-Q5.pdf`). Order-notes text and the query procedure are in [vendor clarity rules](../../docs/vendor-clarity-rules.md). The first order uses the earlier Gerbers without the dots; the reply to JLC covers it.
 
 ## Enclosure
