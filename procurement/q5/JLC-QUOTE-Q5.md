@@ -180,7 +180,7 @@ Lesson, added to the vendor clarity rules: answer a vendor query with an annotat
 - U2 and U7 keep the 30 Sep correction;
 - DS1 is on top, on its header, as in the 5 Oct picture.
 
-Result: safe to confirm. The final "Yes, please proceed to production" and Submit are left to the owner, because the agent's auto-mode permission filter blocks production-release clicks.
+Result: safe to confirm. On the owner's explicit instruction, the agent selected "Yes, please proceed to production" and submitted (6 Oct 2026). The order no longer shows "Action Required"; the PCBA is in production.
 
 **Design fix (29 Sep 2026).** The parts JLC queried were exactly the polarised parts with no pin-1 silkscreen; their footprints had been inherited without silk bodies. Every polarised part now has an unambiguous marker, and `verify_q5.py` enforces this. Each export also produces a polarity reference sheet (`POLARITY-REFERENCE-Q5.pdf`). Order-notes text and the query procedure are in [vendor clarity rules](../../docs/vendor-clarity-rules.md). The first order uses the earlier Gerbers without the dots; the reply to JLC covers it.
 
