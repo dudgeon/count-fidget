@@ -1,5 +1,5 @@
 Reference Designators,Manufacturer,Manufacturer Part Number,Value,Description,Supplier,Supplier Part Number,DNP
-BT1,Q&J,CR2032-BS-6-1,LIR2032 holder,"SMD 2032 coin-cell holder (LIR2032), pads +/-14.39 mm",,,
+BT1,Keystone Electronics,1060,LIR2032 holder,"SMD 20 mm coin-cell holder (LIR2032), 5.5 mm tall, + contact on pad 1",Digi-Key,36-1060-ND,
 "C1,C3,C5",Samsung Electro-Mechanics,CL21A225KBFNNNE,2.2u,2.2uF 50V X5R 10% 0805,Digi-Key,1276-6702-1-ND,
 "C2,C6,C30",Cal-Chip Electronics,GMC21X5R106K50NT,10u,10uF 50V X5R 10% 0805,Digi-Key,4713-GMC21X5R106K50NTCT-ND,
 "C4,C7,C9,C10,C20,C31,C32,C33,C34,C35,C36,C37,C38,C39",YAGEO,CC0603KRX7R9BB104,100n,100nF 50V X7R 10% 0603,Digi-Key,311-1344-1-ND,
@@ -31,8 +31,8 @@ R31,YAGEO,RT0603BRD0749K9L,49.9k,49.9k 0.1% 25ppm thin film 0603,Digi-Key,YAG167
 R32,YAGEO,RC0603FR-0775RL,75,75 ohm 1% 0.1W thick film 0603,Digi-Key,311-75.0HRCT-ND,
 R35,YAGEO,RC0603FR-071ML,1M,1M ohm 1% 0.1W thick film 0603,Digi-Key,311-1.00MHRCT-ND,
 R39,YAGEO,RC0603FR-071KL,1k,1k ohm 1% 0.1W thick film 0603,Digi-Key,311-1.00KHRCT-ND,
-"SW1,SW2",Kailh (HanElectricity),CPG151101S11-16,COUNT / POWER / RESET COUNT / BOOT,"MX hot-swap socket, SMT",,,
-SW3,XUNPU,TS-1088-AR02016,MCU RESET,2-terminal SMD tact switch 3.9x3.0x2.0 mm,,,
+"SW1,SW2",Adafruit Industries LLC,4958,COUNT / POWER / RESET COUNT / BOOT,"Kailh MX hot-swap socket, pack of 20 (2 per board)",Digi-Key,1528-4958-ND,
+SW3,C&K,PTS820J20MSMTR LFS,MCU RESET,"2-terminal SMD tact switch 3.9 x 2.9 mm, 2.0 mm, 160 gf, J-lead, no pegs",Digi-Key,CKN10505CT-ND,
 TH1,Murata,NCP18XH103F03RB,10k NTC B3380,10k NTC B3380 0603,Digi-Key,490-4800-1-ND,
 U1,STMicroelectronics,STM32L072CBT6,STM32L072CBT6,"STM32L072CBT6 MCU, LQFP-48",Digi-Key,497-17503-ND (Tray),
 U2,Texas Instruments,BQ25185DLHR,Li-ion charger,"BQ25185 Li-ion charger, WSON-10",Digi-Key,296-BQ25185DLHRCT-ND,

@@ -7,13 +7,14 @@
  },
  "by_quantity": {
   "2": {
-   "parts_usd": 165.57,
-   "parts_usd_per_board": 82.79,
+   "parts_usd": 181.68,
+   "parts_usd_per_board": 90.84,
    "parts_lines": [
     {
      "mpn": "CL21A225KBFNNNE",
      "need": 6,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.166,
      "line_usd": 4.15
     },
@@ -21,6 +22,7 @@
      "mpn": "GMC21X5R106K50NT",
      "need": 6,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 1.166,
      "line_usd": 29.15
     },
@@ -28,6 +30,7 @@
      "mpn": "CC0603KRX7R9BB104",
      "need": 28,
      "buy": 38,
+     "buy_unit": "piece",
      "unit_usd": 0.08,
      "line_usd": 3.04
     },
@@ -35,6 +38,7 @@
      "mpn": "CL10B102KB8NNNC",
      "need": 4,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.034,
      "line_usd": 0.85
     },
@@ -42,6 +46,7 @@
      "mpn": "CL10B472KB8NNNC",
      "need": 6,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.032,
      "line_usd": 0.8
     },
@@ -49,6 +54,7 @@
      "mpn": "CL10B103KB8NNNC",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.03,
      "line_usd": 0.75
     },
@@ -56,6 +62,7 @@
      "mpn": "USBLC6-2SC6",
      "need": 4,
      "buy": 9,
+     "buy_unit": "piece",
      "unit_usd": 0.54,
      "line_usd": 4.86
     },
@@ -63,6 +70,7 @@
      "mpn": "BAT54C,215",
      "need": 2,
      "buy": 7,
+     "buy_unit": "piece",
      "unit_usd": 0.15,
      "line_usd": 1.05
     },
@@ -70,6 +78,7 @@
      "mpn": "1N4148WS-7-F",
      "need": 2,
      "buy": 7,
+     "buy_unit": "piece",
      "unit_usd": 0.18,
      "line_usd": 1.26
     },
@@ -77,6 +86,7 @@
      "mpn": "USB4105-GF-A-120",
      "need": 2,
      "buy": 3,
+     "buy_unit": "piece",
      "unit_usd": 0.8,
      "line_usd": 2.4
     },
@@ -84,6 +94,7 @@
      "mpn": "AO3400A",
      "need": 4,
      "buy": 9,
+     "buy_unit": "piece",
      "unit_usd": 0.52,
      "line_usd": 4.68
     },
@@ -91,6 +102,7 @@
      "mpn": "2N7002LT1G",
      "need": 6,
      "buy": 11,
+     "buy_unit": "piece",
      "unit_usd": 0.158,
      "line_usd": 1.74
     },
@@ -98,6 +110,7 @@
      "mpn": "RC0603FR-075K1L",
      "need": 4,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -105,6 +118,7 @@
      "mpn": "RC0603FR-0724KL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -112,6 +126,7 @@
      "mpn": "RC0603FR-0718KL",
      "need": 4,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -119,6 +134,7 @@
      "mpn": "RMCF0603FT10K0",
      "need": 4,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.022,
      "line_usd": 0.55
     },
@@ -126,6 +142,7 @@
      "mpn": "RMCF0603FT100K",
      "need": 20,
      "buy": 30,
+     "buy_unit": "piece",
      "unit_usd": 0.022,
      "line_usd": 0.66
     },
@@ -133,6 +150,7 @@
      "mpn": "RMCF0603FT330R",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.021,
      "line_usd": 0.53
     },
@@ -140,6 +158,7 @@
      "mpn": "RC0603FR-072K2L",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -147,6 +166,7 @@
      "mpn": "RMCF0603FT3R30",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -154,6 +174,7 @@
      "mpn": "RC0603FR-0756KL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -161,6 +182,7 @@
      "mpn": "RC0603FR-0782KL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -168,6 +190,7 @@
      "mpn": "RC0603FR-0712KL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -175,6 +198,7 @@
      "mpn": "RC0603FR-07220KL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -182,6 +206,7 @@
      "mpn": "RC0603FR-072KL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -189,6 +214,7 @@
      "mpn": "RC0603FR-0775RL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -196,6 +222,7 @@
      "mpn": "RC0603FR-071ML",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -203,6 +230,7 @@
      "mpn": "RC0603FR-071KL",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -210,6 +238,7 @@
      "mpn": "RT0603BRD07150KL",
      "need": 6,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.074,
      "line_usd": 1.85
     },
@@ -217,6 +246,7 @@
      "mpn": "RT0603BRD0749K9L",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.074,
      "line_usd": 1.85
     },
@@ -224,6 +254,7 @@
      "mpn": "NCP18XH103F03RB",
      "need": 2,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.143,
      "line_usd": 3.57
     },
@@ -231,6 +262,7 @@
      "mpn": "STM32L072CBT6",
      "need": 2,
      "buy": 3,
+     "buy_unit": "piece",
      "unit_usd": 5.45,
      "line_usd": 16.35
     },
@@ -238,6 +270,7 @@
      "mpn": "BQ25185DLHR",
      "need": 2,
      "buy": 7,
+     "buy_unit": "piece",
      "unit_usd": 2.58,
      "line_usd": 18.06
     },
@@ -245,6 +278,7 @@
      "mpn": "TLV76701DRVR",
      "need": 2,
      "buy": 7,
+     "buy_unit": "piece",
      "unit_usd": 1.05,
      "line_usd": 7.35
     },
@@ -252,6 +286,7 @@
      "mpn": "BQ29700DSER",
      "need": 2,
      "buy": 7,
+     "buy_unit": "piece",
      "unit_usd": 0.57,
      "line_usd": 3.99
     },
@@ -259,6 +294,7 @@
      "mpn": "TLV7012DDFR",
      "need": 2,
      "buy": 7,
+     "buy_unit": "piece",
      "unit_usd": 1.87,
      "line_usd": 13.09
     },
@@ -266,6 +302,7 @@
      "mpn": "TPS22917DBVR",
      "need": 4,
      "buy": 9,
+     "buy_unit": "piece",
      "unit_usd": 0.58,
      "line_usd": 5.22
     },
@@ -273,26 +310,36 @@
      "mpn": "FM25V02A-GTR",
      "need": 2,
      "buy": 3,
+     "buy_unit": "piece",
      "unit_usd": 9.8,
      "line_usd": 29.4
+    },
+    {
+     "mpn": "1060",
+     "need": 2,
+     "buy": 3,
+     "buy_unit": "piece",
+     "unit_usd": 1.2,
+     "line_usd": 3.6
+    },
+    {
+     "mpn": "4958",
+     "need": 4,
+     "buy": 1,
+     "buy_unit": "pack",
+     "unit_usd": 4.95,
+     "line_usd": 4.95
+    },
+    {
+     "mpn": "PTS820J20MSMTR LFS",
+     "need": 2,
+     "buy": 7,
+     "buy_unit": "piece",
+     "unit_usd": 1.08,
+     "line_usd": 7.56
     }
    ],
    "not_bought_by_circuithub": [
-    {
-     "mpn": "CR2032-BS-6-1",
-     "refs": 1,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
-    {
-     "mpn": "CPG151101S11-16",
-     "refs": 2,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
-    {
-     "mpn": "TS-1088-AR02016",
-     "refs": 1,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
     {
      "mpn": "HS96L01W4S03",
      "refs": 1,
@@ -302,31 +349,32 @@
    "fastest": {
     "lead_time_days": 3.0,
     "fab_and_assembly_usd": 716.22,
-    "total_before_shipping_usd": 881.79,
-    "per_board_usd": 440.9
+    "total_before_shipping_usd": 897.9,
+    "per_board_usd": 448.95
    },
    "cheapest": {
     "lead_time_days": 5.0,
     "fab_and_assembly_usd": 636.22,
-    "total_before_shipping_usd": 801.79,
-    "per_board_usd": 400.9
+    "total_before_shipping_usd": 817.9,
+    "per_board_usd": 408.95
    },
    "value_proto_if_eligible": {
     "fab_and_assembly_usd": 179.06,
-    "total_before_shipping_usd": 344.63,
-    "per_board_usd": 172.31,
+    "total_before_shipping_usd": 360.74,
+    "per_board_usd": 180.37,
     "eligible_today": false,
-    "blocker": "J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole; consigned parts are excluded"
+    "blocker": "J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole (left unplaced)"
    }
   },
   "5": {
-   "parts_usd": 221.98,
-   "parts_usd_per_board": 44.4,
+   "parts_usd": 243.34,
+   "parts_usd_per_board": 48.67,
    "parts_lines": [
     {
      "mpn": "CL21A225KBFNNNE",
      "need": 15,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.166,
      "line_usd": 4.15
     },
@@ -334,6 +382,7 @@
      "mpn": "GMC21X5R106K50NT",
      "need": 15,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 1.166,
      "line_usd": 29.15
     },
@@ -341,6 +390,7 @@
      "mpn": "CC0603KRX7R9BB104",
      "need": 70,
      "buy": 80,
+     "buy_unit": "piece",
      "unit_usd": 0.08,
      "line_usd": 6.4
     },
@@ -348,6 +398,7 @@
      "mpn": "CL10B102KB8NNNC",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.034,
      "line_usd": 0.85
     },
@@ -355,6 +406,7 @@
      "mpn": "CL10B472KB8NNNC",
      "need": 15,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.032,
      "line_usd": 0.8
     },
@@ -362,6 +414,7 @@
      "mpn": "CL10B103KB8NNNC",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.03,
      "line_usd": 0.75
     },
@@ -369,6 +422,7 @@
      "mpn": "USBLC6-2SC6",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 0.329,
      "line_usd": 4.94
     },
@@ -376,6 +430,7 @@
      "mpn": "BAT54C,215",
      "need": 5,
      "buy": 10,
+     "buy_unit": "piece",
      "unit_usd": 0.093,
      "line_usd": 0.93
     },
@@ -383,6 +438,7 @@
      "mpn": "1N4148WS-7-F",
      "need": 5,
      "buy": 10,
+     "buy_unit": "piece",
      "unit_usd": 0.109,
      "line_usd": 1.09
     },
@@ -390,6 +446,7 @@
      "mpn": "USB4105-GF-A-120",
      "need": 5,
      "buy": 6,
+     "buy_unit": "piece",
      "unit_usd": 0.8,
      "line_usd": 4.8
     },
@@ -397,6 +454,7 @@
      "mpn": "AO3400A",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 0.322,
      "line_usd": 4.83
     },
@@ -404,6 +462,7 @@
      "mpn": "2N7002LT1G",
      "need": 15,
      "buy": 20,
+     "buy_unit": "piece",
      "unit_usd": 0.158,
      "line_usd": 3.16
     },
@@ -411,6 +470,7 @@
      "mpn": "RC0603FR-075K1L",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -418,6 +478,7 @@
      "mpn": "RC0603FR-0724KL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -425,6 +486,7 @@
      "mpn": "RC0603FR-0718KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -432,6 +494,7 @@
      "mpn": "RMCF0603FT10K0",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.022,
      "line_usd": 0.55
     },
@@ -439,6 +502,7 @@
      "mpn": "RMCF0603FT100K",
      "need": 50,
      "buy": 60,
+     "buy_unit": "piece",
      "unit_usd": 0.022,
      "line_usd": 1.32
     },
@@ -446,6 +510,7 @@
      "mpn": "RMCF0603FT330R",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.021,
      "line_usd": 0.53
     },
@@ -453,6 +518,7 @@
      "mpn": "RC0603FR-072K2L",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -460,6 +526,7 @@
      "mpn": "RMCF0603FT3R30",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -467,6 +534,7 @@
      "mpn": "RC0603FR-0756KL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -474,6 +542,7 @@
      "mpn": "RC0603FR-0782KL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -481,6 +550,7 @@
      "mpn": "RC0603FR-0712KL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -488,6 +558,7 @@
      "mpn": "RC0603FR-07220KL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -495,6 +566,7 @@
      "mpn": "RC0603FR-072KL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -502,6 +574,7 @@
      "mpn": "RC0603FR-0775RL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -509,6 +582,7 @@
      "mpn": "RC0603FR-071ML",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -516,6 +590,7 @@
      "mpn": "RC0603FR-071KL",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -523,6 +598,7 @@
      "mpn": "RT0603BRD07150KL",
      "need": 15,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.074,
      "line_usd": 1.85
     },
@@ -530,6 +606,7 @@
      "mpn": "RT0603BRD0749K9L",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.074,
      "line_usd": 1.85
     },
@@ -537,6 +614,7 @@
      "mpn": "NCP18XH103F03RB",
      "need": 5,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.143,
      "line_usd": 3.57
     },
@@ -544,6 +622,7 @@
      "mpn": "STM32L072CBT6",
      "need": 5,
      "buy": 6,
+     "buy_unit": "piece",
      "unit_usd": 5.45,
      "line_usd": 32.7
     },
@@ -551,6 +630,7 @@
      "mpn": "BQ25185DLHR",
      "need": 5,
      "buy": 10,
+     "buy_unit": "piece",
      "unit_usd": 1.918,
      "line_usd": 19.18
     },
@@ -558,6 +638,7 @@
      "mpn": "TLV76701DRVR",
      "need": 5,
      "buy": 10,
+     "buy_unit": "piece",
      "unit_usd": 0.757,
      "line_usd": 7.57
     },
@@ -565,6 +646,7 @@
      "mpn": "BQ29700DSER",
      "need": 5,
      "buy": 10,
+     "buy_unit": "piece",
      "unit_usd": 0.403,
      "line_usd": 4.03
     },
@@ -572,6 +654,7 @@
      "mpn": "TLV7012DDFR",
      "need": 5,
      "buy": 10,
+     "buy_unit": "piece",
      "unit_usd": 1.371,
      "line_usd": 13.71
     },
@@ -579,6 +662,7 @@
      "mpn": "TPS22917DBVR",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 0.407,
      "line_usd": 6.1
     },
@@ -586,26 +670,36 @@
      "mpn": "FM25V02A-GTR",
      "need": 5,
      "buy": 6,
+     "buy_unit": "piece",
      "unit_usd": 9.8,
      "line_usd": 58.8
+    },
+    {
+     "mpn": "1060",
+     "need": 5,
+     "buy": 6,
+     "buy_unit": "piece",
+     "unit_usd": 1.2,
+     "line_usd": 7.2
+    },
+    {
+     "mpn": "4958",
+     "need": 10,
+     "buy": 1,
+     "buy_unit": "pack",
+     "unit_usd": 4.95,
+     "line_usd": 4.95
+    },
+    {
+     "mpn": "PTS820J20MSMTR LFS",
+     "need": 5,
+     "buy": 10,
+     "buy_unit": "piece",
+     "unit_usd": 0.921,
+     "line_usd": 9.21
     }
    ],
    "not_bought_by_circuithub": [
-    {
-     "mpn": "CR2032-BS-6-1",
-     "refs": 1,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
-    {
-     "mpn": "CPG151101S11-16",
-     "refs": 2,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
-    {
-     "mpn": "TS-1088-AR02016",
-     "refs": 1,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
     {
      "mpn": "HS96L01W4S03",
      "refs": 1,
@@ -615,31 +709,32 @@
    "fastest": {
     "lead_time_days": 3.0,
     "fab_and_assembly_usd": 1023.1,
-    "total_before_shipping_usd": 1245.09,
-    "per_board_usd": 249.02
+    "total_before_shipping_usd": 1266.44,
+    "per_board_usd": 253.29
    },
    "cheapest": {
     "lead_time_days": 12.0,
     "fab_and_assembly_usd": 846.4,
-    "total_before_shipping_usd": 1068.38,
-    "per_board_usd": 213.68
+    "total_before_shipping_usd": 1089.74,
+    "per_board_usd": 217.95
    },
    "value_proto_if_eligible": {
     "fab_and_assembly_usd": 255.78,
-    "total_before_shipping_usd": 477.76,
-    "per_board_usd": 95.55,
+    "total_before_shipping_usd": 499.12,
+    "per_board_usd": 99.82,
     "eligible_today": false,
-    "blocker": "J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole; consigned parts are excluded"
+    "blocker": "J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole (left unplaced)"
    }
   },
   "10": {
-   "parts_usd": 337.66,
-   "parts_usd_per_board": 33.77,
+   "parts_usd": 373.69,
+   "parts_usd_per_board": 37.37,
    "parts_lines": [
     {
      "mpn": "CL21A225KBFNNNE",
      "need": 30,
      "buy": 40,
+     "buy_unit": "piece",
      "unit_usd": 0.166,
      "line_usd": 6.64
     },
@@ -647,6 +742,7 @@
      "mpn": "GMC21X5R106K50NT",
      "need": 30,
      "buy": 40,
+     "buy_unit": "piece",
      "unit_usd": 1.166,
      "line_usd": 46.64
     },
@@ -654,6 +750,7 @@
      "mpn": "CC0603KRX7R9BB104",
      "need": 140,
      "buy": 150,
+     "buy_unit": "piece",
      "unit_usd": 0.0478,
      "line_usd": 7.17
     },
@@ -661,6 +758,7 @@
      "mpn": "CL10B102KB8NNNC",
      "need": 20,
      "buy": 30,
+     "buy_unit": "piece",
      "unit_usd": 0.034,
      "line_usd": 1.02
     },
@@ -668,6 +766,7 @@
      "mpn": "CL10B472KB8NNNC",
      "need": 30,
      "buy": 40,
+     "buy_unit": "piece",
      "unit_usd": 0.032,
      "line_usd": 1.28
     },
@@ -675,6 +774,7 @@
      "mpn": "CL10B103KB8NNNC",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.03,
      "line_usd": 0.75
     },
@@ -682,6 +782,7 @@
      "mpn": "USBLC6-2SC6",
      "need": 20,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.329,
      "line_usd": 8.22
     },
@@ -689,6 +790,7 @@
      "mpn": "BAT54C,215",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 0.093,
      "line_usd": 1.4
     },
@@ -696,6 +798,7 @@
      "mpn": "1N4148WS-7-F",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 0.109,
      "line_usd": 1.64
     },
@@ -703,6 +806,7 @@
      "mpn": "USB4105-GF-A-120",
      "need": 10,
      "buy": 11,
+     "buy_unit": "piece",
      "unit_usd": 0.676,
      "line_usd": 7.44
     },
@@ -710,6 +814,7 @@
      "mpn": "AO3400A",
      "need": 20,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.322,
      "line_usd": 8.05
     },
@@ -717,6 +822,7 @@
      "mpn": "2N7002LT1G",
      "need": 30,
      "buy": 35,
+     "buy_unit": "piece",
      "unit_usd": 0.158,
      "line_usd": 5.53
     },
@@ -724,6 +830,7 @@
      "mpn": "RC0603FR-075K1L",
      "need": 20,
      "buy": 30,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.75
     },
@@ -731,6 +838,7 @@
      "mpn": "RC0603FR-0724KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -738,6 +846,7 @@
      "mpn": "RC0603FR-0718KL",
      "need": 20,
      "buy": 30,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.81
     },
@@ -745,6 +854,7 @@
      "mpn": "RMCF0603FT10K0",
      "need": 20,
      "buy": 30,
+     "buy_unit": "piece",
      "unit_usd": 0.022,
      "line_usd": 0.66
     },
@@ -752,6 +862,7 @@
      "mpn": "RMCF0603FT100K",
      "need": 100,
      "buy": 110,
+     "buy_unit": "piece",
      "unit_usd": 0.0102,
      "line_usd": 1.12
     },
@@ -759,6 +870,7 @@
      "mpn": "RMCF0603FT330R",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.021,
      "line_usd": 0.53
     },
@@ -766,6 +878,7 @@
      "mpn": "RC0603FR-072K2L",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -773,6 +886,7 @@
      "mpn": "RMCF0603FT3R30",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -780,6 +894,7 @@
      "mpn": "RC0603FR-0756KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -787,6 +902,7 @@
      "mpn": "RC0603FR-0782KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -794,6 +910,7 @@
      "mpn": "RC0603FR-0712KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -801,6 +918,7 @@
      "mpn": "RC0603FR-07220KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -808,6 +926,7 @@
      "mpn": "RC0603FR-072KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -815,6 +934,7 @@
      "mpn": "RC0603FR-0775RL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -822,6 +942,7 @@
      "mpn": "RC0603FR-071ML",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.025,
      "line_usd": 0.62
     },
@@ -829,6 +950,7 @@
      "mpn": "RC0603FR-071KL",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.027,
      "line_usd": 0.68
     },
@@ -836,6 +958,7 @@
      "mpn": "RT0603BRD07150KL",
      "need": 30,
      "buy": 40,
+     "buy_unit": "piece",
      "unit_usd": 0.074,
      "line_usd": 2.96
     },
@@ -843,6 +966,7 @@
      "mpn": "RT0603BRD0749K9L",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.074,
      "line_usd": 1.85
     },
@@ -850,6 +974,7 @@
      "mpn": "NCP18XH103F03RB",
      "need": 10,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.143,
      "line_usd": 3.57
     },
@@ -857,6 +982,7 @@
      "mpn": "STM32L072CBT6",
      "need": 10,
      "buy": 11,
+     "buy_unit": "piece",
      "unit_usd": 4.131,
      "line_usd": 45.44
     },
@@ -864,6 +990,7 @@
      "mpn": "BQ25185DLHR",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 1.918,
      "line_usd": 28.77
     },
@@ -871,6 +998,7 @@
      "mpn": "TLV76701DRVR",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 0.757,
      "line_usd": 11.36
     },
@@ -878,6 +1006,7 @@
      "mpn": "BQ29700DSER",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 0.403,
      "line_usd": 6.04
     },
@@ -885,6 +1014,7 @@
      "mpn": "TLV7012DDFR",
      "need": 10,
      "buy": 15,
+     "buy_unit": "piece",
      "unit_usd": 1.371,
      "line_usd": 20.57
     },
@@ -892,6 +1022,7 @@
      "mpn": "TPS22917DBVR",
      "need": 20,
      "buy": 25,
+     "buy_unit": "piece",
      "unit_usd": 0.407,
      "line_usd": 10.17
     },
@@ -899,26 +1030,36 @@
      "mpn": "FM25V02A-GTR",
      "need": 10,
      "buy": 11,
+     "buy_unit": "piece",
      "unit_usd": 9.11,
      "line_usd": 100.21
+    },
+    {
+     "mpn": "1060",
+     "need": 10,
+     "buy": 11,
+     "buy_unit": "piece",
+     "unit_usd": 1.12,
+     "line_usd": 12.32
+    },
+    {
+     "mpn": "4958",
+     "need": 20,
+     "buy": 2,
+     "buy_unit": "pack",
+     "unit_usd": 4.95,
+     "line_usd": 9.9
+    },
+    {
+     "mpn": "PTS820J20MSMTR LFS",
+     "need": 10,
+     "buy": 15,
+     "buy_unit": "piece",
+     "unit_usd": 0.921,
+     "line_usd": 13.82
     }
    ],
    "not_bought_by_circuithub": [
-    {
-     "mpn": "CR2032-BS-6-1",
-     "refs": 1,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
-    {
-     "mpn": "CPG151101S11-16",
-     "refs": 2,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
-    {
-     "mpn": "TS-1088-AR02016",
-     "refs": 1,
-     "handling": "consign or custom (LCSC) purchase source"
-    },
     {
      "mpn": "HS96L01W4S03",
      "refs": 1,
@@ -928,21 +1069,21 @@
    "fastest": {
     "lead_time_days": 3.0,
     "fab_and_assembly_usd": 1532.7,
-    "total_before_shipping_usd": 1870.36,
-    "per_board_usd": 187.04
+    "total_before_shipping_usd": 1906.39,
+    "per_board_usd": 190.64
    },
    "cheapest": {
     "lead_time_days": 12.0,
     "fab_and_assembly_usd": 902.4,
-    "total_before_shipping_usd": 1240.06,
-    "per_board_usd": 124.01
+    "total_before_shipping_usd": 1276.09,
+    "per_board_usd": 127.61
    },
    "value_proto_if_eligible": {
     "fab_and_assembly_usd": 383.17,
-    "total_before_shipping_usd": 720.83,
-    "per_board_usd": 72.08,
+    "total_before_shipping_usd": 756.87,
+    "per_board_usd": 75.69,
     "eligible_today": false,
-    "blocker": "J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole; consigned parts are excluded"
+    "blocker": "J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole (left unplaced)"
    }
   }
  }

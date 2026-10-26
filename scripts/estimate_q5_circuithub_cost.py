@@ -38,7 +38,7 @@ def refs_per_mpn():
 def buy_quantity(entry, need):
     if entry['package'] in PASSIVE:
         return max(25, need + 10)
-    if entry['package'] in ('SOT-23', 'SOT-23-6', 'SOT-23-8', 'SOD-323', 'WSON-6_1.5x1.5', 'WSON-6-1EP', 'WSON-10'):
+    if entry['package'] in ('SOT-23', 'SOT-23-6', 'SOT-23-8', 'SOD-323', 'WSON-6_1.5x1.5', 'WSON-6-1EP', 'WSON-10', 'TS-1088', 'CPG151101S11'):
         return need + 5
     return need + 1
 
@@ -69,9 +69,12 @@ def main():
                 continue
             ev = entry['evidence']
             buy = buy_quantity(entry, need)
+            if ev.get('pack_size'):  # sold in packs (e.g. 20 hot-swap sockets): price per pack
+                buy = math.ceil(buy / ev['pack_size'])
             price = unit_price(ev, buy)
             parts_usd += buy * price
-            lines.append(dict(mpn=entry['mpn'], need=need, buy=buy, unit_usd=price, line_usd=round(buy * price, 2)))
+            lines.append(dict(mpn=entry['mpn'], need=need, buy=buy, buy_unit='pack' if ev.get('pack_size') else 'piece',
+                              unit_usd=price, line_usd=round(buy * price, 2)))
         row = dict(parts_usd=round(parts_usd, 2), parts_usd_per_board=round(parts_usd / n, 2), parts_lines=lines,
                    not_bought_by_circuithub=separate)
         for mode in ('Fastest', 'Cheapest'):
@@ -86,7 +89,7 @@ def main():
             fab_and_assembly_usd=round(0.25 * priority, 2), total_before_shipping_usd=round(0.25 * priority + parts_usd, 2),
             per_board_usd=round((0.25 * priority + parts_usd) / n, 2),
             eligible_today=False,
-            blocker='J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole; consigned parts are excluded')
+            blocker='J1 USB4105 has plated shell stakes (hybrid part); DS1 is through-hole (left unplaced)')
         result['by_quantity'][str(n)] = row
     (DEST / 'circuithub-cost-estimate.json').write_text(json.dumps(result, indent=1) + '\n')
     for n in QUANTITIES:

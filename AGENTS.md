@@ -55,6 +55,11 @@ JLC's placement was checked part by part and confirmed on 6 Oct. The boards were
 - **In scope:** feasibility, a CircuitHub upload package and a cost estimate (`procurement/q5/circuithub/CIRCUITHUB-Q5.md`). Uploading the package to CircuitHub's quote tool inside the owner's own signed-in session is in scope.
 - **Not in scope:** placing an order, paying, consigning parts or contacting CircuitHub staff without the owner's explicit go-ahead at that moment.
 - **The design stays unchanged:** the CircuitHub CSV BOM only swaps LCSC house-brand part numbers for same-footprint, stocked US-distributor parts (`crossref-q5.json`). Regenerate with `scripts/export_q5_circuithub.py`.
+- **Result (26 Oct):** feasible with no board change.
+  - 39 of the 41 placed lines are in stock at Digi-Key, including same-pad Keystone 1060, Kailh socket and C&K PTS820 equivalents for BT1, SW1/SW2 and SW3. These need checking on the first CircuitHub boards.
+  - U3 TLV76701DRVR and U5 TLV7012DDFR are out of stock until about 19–23 Nov 2026. DS1 is left for home soldering.
+  - Estimate: about $1,090–1,270 for 5 boards before shipping, against $298.08 at JLC.
+  - No CircuitHub account, upload, quote or order exists yet.
 
 ## Previous Q4 checkpoint — 24 September 2026 (superseded by Q5 where inconsistent)
 

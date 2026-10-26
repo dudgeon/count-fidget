@@ -2,8 +2,8 @@
  "counts": {
   "circuithub_dnp": 1,
   "circuithub_placed": 81,
-  "consign_lines": 3,
-  "crossed_lines": 22,
+  "consign_lines": 0,
+  "crossed_lines": 25,
   "csv_lines": 43,
   "fitted_references": 82,
   "not_fitted_lands_and_holes": 14,
@@ -32,11 +32,11 @@
   "electronics/q5/usb-power-4.kicad_sch": "73e7711a40e31c44f9b7ec963372e143fc12dab31af2c7608d0bd012a28ab35c",
   "electronics/q5/usb-power-5.kicad_sch": "0c0025b7a4ce009a4be116ef49f8990643ea1f41b488b259ded239a961a892d4",
   "procurement/q5/BOM-Q5.csv": "0d66c12b7984b8c53976683ad49c3cd77239314cf3aa476b4d39411724abe6d0",
-  "procurement/q5/circuithub/crossref-q5.json": "1a8251f94b650725a9861790055f82a41171f39fa3b1b8f03dd686d9505b6bdc"
+  "procurement/q5/circuithub/crossref-q5.json": "67248bbdbd38bfbb7ab499b5f18a97954f2e6f387e60d6175807b97b8f00a760"
  },
  "outputs_sha256": {
-  "procurement/q5/circuithub/BOM-CIRCUITHUB-Q5.csv": "7605195a4ef1621770ad7a6e367a9ef5f352acc147712161bb3e891c4f682603",
-  "procurement/q5/circuithub/SOURCING-CIRCUITHUB-Q5.md": "0af0ff93ae3d8980e2ae5208bd029ab8ef50b8a0fd935f30f2df559f5b3ad9a0",
+  "procurement/q5/circuithub/BOM-CIRCUITHUB-Q5.csv": "5a33bdabccfb75ead6d6ff67b0d20d038d7437e0fd4b5ee2d7edf8fa796dcf20",
+  "procurement/q5/circuithub/SOURCING-CIRCUITHUB-Q5.md": "345c9481d187a1d896fdf2ba3aa3e92103f0f318b7e0f000050ee63441636b1b",
   "procurement/q5/circuithub/click-counter-Q5-circuithub.zip": "1c0e92213e892b3c12482b8729b49319e08162da5f382a4754635163dedcfb84"
  },
  "purpose": "CircuitHub upload package for the locked Q5 board; not a quote, order or release",

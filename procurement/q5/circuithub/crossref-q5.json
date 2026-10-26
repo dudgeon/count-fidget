@@ -966,40 +966,86 @@
    "availability": "in_stock"
   },
   "CR2032-BS-6-1": {
-   "action": "consign",
-   "mpn": "CR2032-BS-6-1",
-   "manufacturer": "Q&J",
+   "action": "cross",
+   "mpn": "1060",
+   "manufacturer": "Keystone Electronics",
    "package": "CR2032-BS-6-1",
-   "description": "SMD 2032 coin-cell holder (LIR2032), pads +/-14.39 mm",
-   "reason": "LCSC-only part; pending a US-stocked holder with the identical two-tab land pattern",
+   "description": "SMD 20 mm coin-cell holder (LIR2032), 5.5 mm tall, + contact on pad 1",
+   "reason": "The Q&J CR2032-BS-6-1 is a copy of the Keystone 1060 (22 x 16 x 5.5 mm body, 3.5-3.6 mm tabs). Keystone recommends 2.6 x 3.6 mm lands at 29.3 mm centres (+/-14.65); both terminals land wholly inside our 4.2 x 3.8 mm pads at +/-14.39 (tab tips 0.54 mm inside the pad ends, 0.10 mm side margin). Same height as the original, so the enclosure model is unchanged",
    "dnp": false,
-   "supplier": "",
-   "supplier_pn": "",
-   "evidence": {}
+   "supplier": "Digi-Key",
+   "supplier_pn": "36-1060-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "36-1060-ND",
+    "stock": 10689,
+    "status": "Active",
+    "packaging": "bulk (hand or tray placement)",
+    "price_breaks_usd": {
+     "1": 1.2,
+     "10": 1.12
+    },
+    "url": "https://www.digikey.com/en/products/detail/keystone-electronics/1060/303556",
+    "observed": "2026-10-26",
+    "datasheet": "https://www.keyelco.com/userAssets/file/K75p4.pdf",
+    "note": "Place the + contact on pad 1 (the + silkscreen side). Cut-tape alternative with the same land fit: MPD BU2032SM-G (BU2032SM-GCT-ND, 31,025 in stock), 5.2 mm tall, drawn with + on the opposite side, so check its orientation in the placement view. LIR2032 retention and contact remain first-article checks"
+   },
+   "availability": "in_stock"
   },
   "CPG151101S11-16": {
-   "action": "consign",
-   "mpn": "CPG151101S11-16",
-   "manufacturer": "Kailh (HanElectricity)",
+   "action": "cross",
+   "mpn": "4958",
+   "manufacturer": "Adafruit Industries LLC",
    "package": "CPG151101S11",
-   "description": "MX hot-swap socket, SMT",
-   "reason": "LCSC-only part; pending a US-stocked socket with the identical land pattern",
+   "description": "Kailh MX hot-swap socket, pack of 20 (2 per board)",
+   "reason": "Adafruit 4958 is the Kailh MX hot-swap socket sold in 20-piece packs; its Kailh drawing matches the HanElectricity CPG151101S11-16 drawing dimension for dimension, including the recommended 2.55 x 2.5 mm pads and 3.0 mm holes our footprint uses. Gold instead of tin contacts",
    "dnp": false,
-   "supplier": "",
-   "supplier_pn": "",
-   "evidence": {}
+   "supplier": "Digi-Key",
+   "supplier_pn": "1528-4958-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1528-4958-ND",
+    "stock": 253,
+    "stock_unit": "packs of 20",
+    "pack_size": 20,
+    "status": "Active",
+    "packaging": "bulk bag of 20 (hand placement)",
+    "price_breaks_usd": {
+     "1": 4.95
+    },
+    "url": "https://www.digikey.com/en/products/result?keywords=1528-4958-ND",
+    "observed": "2026-10-26",
+    "datasheet": "https://cdn-shop.adafruit.com/product-files/4958/Datasheet.jpeg",
+    "note": "One pack covers 10 boards; tell CircuitHub the unit is a 20-piece pack so it does not buy one pack per socket"
+   },
+   "availability": "in_stock"
   },
   "TS-1088-AR02016": {
-   "action": "consign",
-   "mpn": "TS-1088-AR02016",
-   "manufacturer": "XUNPU",
+   "action": "cross",
+   "mpn": "PTS820J20MSMTR LFS",
+   "manufacturer": "C&K",
    "package": "TS-1088",
-   "description": "2-terminal SMD tact switch 3.9x3.0x2.0 mm",
-   "reason": "LCSC-only part; pending a US-stocked switch with the identical land pattern",
+   "description": "2-terminal SMD tact switch 3.9 x 2.9 mm, 2.0 mm, 160 gf, J-lead, no pegs",
+   "reason": "Same size, actuator height (2.0 mm) and force (160 gf) as the XUNPU part, no locating pegs. Its J-lead terminals (tips at +/-2.2 mm, 1.0 mm wide) land inside our 1.05 x 2.0 mm pads at +/-2.225; C&K recommends 0.95 x 1.4 mm pads at +/-2.075",
    "dnp": false,
-   "supplier": "",
-   "supplier_pn": "",
-   "evidence": {}
+   "supplier": "Digi-Key",
+   "supplier_pn": "CKN10505CT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "CKN10505CT-ND",
+    "stock": 48095,
+    "status": "Active",
+    "packaging": "cut tape",
+    "price_breaks_usd": {
+     "1": 1.08,
+     "10": 0.921
+    },
+    "url": "https://www.digikey.com/en/products/result?keywords=PTS820J20MSMTR",
+    "observed": "2026-10-26",
+    "datasheet": "https://www.littelfuse.com/assetdocs/littelfuse-c-k-tactile-pts820-series-datasheet?assetguid=40a5bd42-bcea-48fa-b1e7-757cd7836733",
+    "note": "Stock figure read from Digi-Key's result page, which also lists a CTS substitute; confirm it in CircuitHub's quote. C&K's layout shows four lighter-hatched corner areas (frame legs) where our board has solder-masked bottom-layer tracks, as under the original switch: confirm they need no pads. Ask CircuitHub to reduce the SW3 paste apertures to about 0.95 x 1.4 mm. Do not use the P (pegged) version"
+   },
+   "availability": "in_stock"
   },
   "HS96L01W4S03": {
    "action": "dnp",
@@ -1007,7 +1053,7 @@
    "manufacturer": "HS",
    "package": "HS96L01W4S03",
    "description": "0.96in 128x64 SPI OLED module, 7-pin, through-hole",
-   "reason": "Not sold by CircuitHub-approved distributors and needs a separate 7-pin header stacked under it; leave unplaced and fit at home (14 joints, as JLC variant A)",
+   "reason": "Through-hole module stacked on a separate 7-pin header that is not in the KiCad design; leave unplaced at CircuitHub and fit at home (14 joints, as JLC variant A). Home options: the LCSC HS96L01W4S03 + XFCN PZ254V-11-07P used on the JLC first article, or the Digi-Key-stocked Orient Display AOM12864A0-0.96WW-ANO (5491-AOM12864A0-0.96WW-ANO-ND, 144 in stock, $9.38 at 10; same outline, holes, pin order and active area on its drawing; sample one first) with a Sullins PRPC007SAAN-RC header (35-PRPC007SAAN-RC-ND)",
    "dnp": true,
    "supplier": "",
    "supplier_pn": "",

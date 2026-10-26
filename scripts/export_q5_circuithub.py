@@ -99,7 +99,8 @@ def sourcing_table(lines, cross):
         entry = line['entry']
         original = originals[id(entry)]
         ev = entry.get('evidence') or {}
-        stock = f"{ev['stock']:,} ({ev['distributor_pn']})" if isinstance(ev.get('stock'), int) else (ev.get('stock') or 'not at approved distributors')
+        stock = (f"{ev['stock']:,}{' ' + ev['stock_unit'] if ev.get('stock_unit') else ''} ({ev['distributor_pn']})"
+                 if isinstance(ev.get('stock'), int) else (ev.get('stock') or 'not at approved distributors'))
         if entry.get('availability') == 'short':
             stock = '**' + stock + ': short**'
         note = (ev.get('note') or (entry['reason'] if entry['action'] != 'keep' else '')).replace('|', '/')
