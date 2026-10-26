@@ -44,11 +44,17 @@ The macOS flashing tool is `tools/clicker-flash/` (skill `flash-clickers`). The 
 - variant B, Standard PCBA (BT1 and J1 are Standard-only parts), both sides so JLC fits the display;
 - DHL Express, duties included.
 
-The agent drove the signed-in browser flow and verified the parts matching and the placement preview; the owner confirmed the price and checked out. Production waits for the owner's approval of JLC's parts-placement photos (auto-confirm disabled). Details are in `procurement/q5/JLC-QUOTE-Q5.md`; order and account identifiers are deliberately not recorded. This is a first-article batch, not a production release. Any further order, or approval of a design change, needs the owner's explicit go-ahead. Next steps:
-- approve the placement photos;
+The agent drove the signed-in browser flow and verified the parts matching and the placement preview; the owner confirmed the price and checked out. Details are in `procurement/q5/JLC-QUOTE-Q5.md`; order and account identifiers are deliberately not recorded. This is a first-article batch, not a production release. Any further order, or approval of a design change, needs the owner's explicit go-ahead.
+
+JLC's placement was checked part by part and confirmed on 6 Oct. The boards were delivered on 14 Oct. No first-article results are recorded in the repo yet. Next steps:
 - buy the switches, screws and LIR2032 cells;
 - print the tolerance coupon and enclosure;
-- on arrival, snap off the edge rails and run `docs/q5-first-article-test-plan.md`.
+- snap off the edge rails and run `docs/q5-first-article-test-plan.md`.
+
+**CircuitHub (owner, 26 October 2026):** "see if you can get this pcb made and manufactured at circuithub.com".
+- **In scope:** feasibility, a CircuitHub upload package and a cost estimate (`procurement/q5/circuithub/CIRCUITHUB-Q5.md`). Uploading the package to CircuitHub's quote tool inside the owner's own signed-in session is in scope.
+- **Not in scope:** placing an order, paying, consigning parts or contacting CircuitHub staff without the owner's explicit go-ahead at that moment.
+- **The design stays unchanged:** the CircuitHub CSV BOM only swaps LCSC house-brand part numbers for same-footprint, stocked US-distributor parts (`crossref-q5.json`). Regenerate with `scripts/export_q5_circuithub.py`.
 
 ## Previous Q4 checkpoint — 24 September 2026 (superseded by Q5 where inconsistent)
 

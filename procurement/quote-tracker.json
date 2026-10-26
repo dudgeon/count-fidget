@@ -1333,5 +1333,22 @@
       "status_at_record": "file review; parts-placement photos await owner approval (auto-confirm disabled)",
       "note": "Order and account identifiers intentionally not recorded (public repository)."
     }
+  },
+  "q5_circuithub": {
+    "snapshot_utc": "2026-10-26T14:00Z",
+    "authorization": "Owner, 26 Oct 2026: \"see if you can get this pcb made and manufactured at circuithub.com\". Feasibility, upload package, estimate; quote only in the owner's signed-in session; no order, payment, consignment shipment or staff contact without the owner's explicit go-ahead",
+    "record": "procurement/q5/circuithub/CIRCUITHUB-Q5.md",
+    "account_created": false,
+    "uploaded": false,
+    "complete_quote_received": false,
+    "order_placed": false,
+    "paid": false,
+    "design_changed": false,
+    "package": {
+      "kicad_zip": "procurement/q5/circuithub/click-counter-Q5-circuithub.zip",
+      "csv_bom": "procurement/q5/circuithub/BOM-CIRCUITHUB-Q5.csv",
+      "generator": "scripts/export_q5_circuithub.py"
+    },
+    "estimate": "procurement/q5/circuithub/circuithub-cost-estimate.json (pending)"
   }
 }
