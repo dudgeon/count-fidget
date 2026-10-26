@@ -6,7 +6,21 @@
 
 ## Bottom line
 
-_In progress (26 Oct 2026): the Digi-Key stock screen and the US-sourced fit check for BT1, SW1/SW2, SW3 and DS1 are still running. This section is completed when they land._
+**Yes, CircuitHub can build Q5 with no change to the board, but not cheaply, and not all parts are available today.**
+
+1. **Design fit:** pass. CircuitHub imports the KiCad 10 project natively, and the board meets its published rules for the low-cost ProtoBoard tier (table below).
+2. **Parts:** 36 of the 42 part lines are in stock at Digi-Key, the US distributor CircuitHub buys from most:
+   - 14 are the same part numbers as on the JLC first article;
+   - 22 are same-footprint equivalents for LCSC house brands or Digi-Key stock-outs.
+
+   The other six lines need handling:
+   - **U3** (TLV76701 3.2 V regulator) and **U5** (TLV7012 comparator) are out of stock at Digi-Key. Restock is expected 19–23 Nov 2026.
+   - **BT1**, **SW1/SW2** and **SW3** are LCSC-only. CircuitHub would buy them from LCSC as a "not preferred" custom source, or the owner consigns them.
+   - **DS1** (display) is left for home soldering, 14 joints, as in JLC variant A.
+3. **Cost (estimate):** about **$1,070–1,250 for 5 boards before shipping** ($214–249 a board), against $298.08 all-in for 5 at JLC. CircuitHub's 75 %-off Value Proto would be about $480 for 5, but Q5 does not qualify: J1 has plated shell stakes, and Value Proto excludes through-hole and hybrid parts.
+4. **Binding quote:** this needs the owner's CircuitHub account. It cannot be done from this cloud session; see "How to get the binding quote" below.
+
+**Recommendation:** unless US assembly is itself the goal, run the JLC first-article tests before paying for a second build. If a CircuitHub build is wanted, upload this package for the binding quote, and order only after U3/U5 stock and the LCSC lines are resolved.
 
 ## What CircuitHub needs, and what is in this folder
 
@@ -44,11 +58,45 @@ Regenerate the package after any BOM or board change with `python3 scripts/expor
 
 ## Parts
 
-_In progress: see `crossref-q5.json` for the current decision per line (keep 18, cross 20, consign 3, DNP 1)._
+All 82 fitted references keep their footprints. Every line, with its Digi-Key evidence, is in [`SOURCING-CIRCUITHUB-Q5.md`](SOURCING-CIRCUITHUB-Q5.md); the summary:
+
+| Handling | Lines | References |
+|---|---|---|
+| Same part as the JLC first article, in stock at Digi-Key | 14 | BAT54C, USBLC6-2SC6, AO3400A, USB4105-GF-A-120, STM32L072CBT6, BQ25185, BQ29700, TPS22917, FM25V02A, NCP18XH103 NTC, the 0.1 % RT0603 resistors and two capacitor values |
+| Same part, **out of stock at Digi-Key** | 2 | **U3** TLV76701DRVR: 0; the identical TLV76701DRVT has 250 expected 23 Nov 2026. **U5** TLV7012DDFR: 0; 2,000 expected 19 Nov 2026 |
+| Same-footprint equivalent (LCSC house brand or Digi-Key stock-out) | 22 | Samsung/Cal-Chip capacitors instead of Fenghua and the stocked-out Samsung/Murata parts; Yageo/Stackpole 1 % resistors instead of UNI-ROYAL; Diodes 1N4148WS-7-F and onsemi 2N7002LT1G instead of CJ |
+| LCSC-only: custom LCSC purchase source or consign | 3 | BT1 holder, SW1/SW2 hot-swap sockets, SW3 reset switch (US-stocked drop-in search still running) |
+| Left unplaced, fitted at home | 1 | DS1 display + separate 7-pin header (14 joints) |
+| Not parts (copper lands / holes), DNP | — | TP1–TP13 (10), H1–H4 |
+
+Notes:
+- **U5 alternative:** TLV7032DDFR is in stock with the same package, pinout and push-pull output. It is a different comparator (315 nA instead of 4.7 µA per channel, 3 µs response, different hysteresis), so it needs owner and engineering sign-off. Waiting for TLV7012 stock keeps the build identical to the JLC first article.
+- **U3 alternative:** TLV76701DGNR is in stock, but it is an 8-pin HVSSOP package and would need a PCB change.
+- **Value Proto:** buying the LCSC-only parts through a custom source keeps a build eligible, but consigning them does not. J1 rules Value Proto out regardless.
 
 ## Cost estimate (not a CircuitHub quote)
 
-_In progress: `scripts/estimate_q5_circuithub_cost.py` combines CircuitHub's published example prices with Digi-Key prices once the stock screen lands._
+`scripts/estimate_q5_circuithub_cost.py` writes `circuithub-cost-estimate.json`. It combines:
+- **Fabrication + assembly:** CircuitHub's own published example "2 layers, simple microcontroller", read from circuithub.com/pricing on 26 Oct 2026. That board is similar to Q5 in size and layer count. Q5 has more parts (81 placements, 41 unique), so the real assembly price is more likely above this than below.
+- **Parts:** every CircuitHub-bought line at the Digi-Key price for the quantity bought, including CircuitHub's published attrition extras (0603/0805 passives: at least 10 extra and 25 minimum; small ICs: 5 extra; large ICs: 1 extra).
+
+Shipping and the LCSC-only or consigned parts (BT1, SW1/SW2, SW3: well under $1 a board at LCSC) are not included.
+
+| USD, before shipping | 2 boards | 5 boards | 10 boards |
+|---|---|---|---|
+| Parts bought by CircuitHub (Digi-Key + attrition) | 166 | 222 | 338 |
+| Cheapest lead time (5 / 12 / 12 days): fab + assembly | 636 | 846 | 902 |
+| **Cheapest total** | **802 (401/board)** | **1,068 (214/board)** | **1,240 (124/board)** |
+| Fastest (3 days): fab + assembly | 716 | 1,023 | 1,533 |
+| **Fastest total** | **882 (441/board)** | **1,245 (249/board)** | **1,870 (187/board)** |
+| Value Proto (75 % off Priority fab + assembly), **if the design qualified** | 345 (172/board) | 478 (96/board) | 721 (72/board) |
+
+**For comparison**, JLC built the 5 first-article boards for **$298.08 in total**, including 10 bare PCBs, DHL and duties: about $60 a board. At 5 boards, CircuitHub's standard service is roughly 3.5–4× JLC; Value Proto would be about 1.6×.
+
+The largest part costs at 5 boards:
+- FM25V02A F-RAM: $9.80 each at Digi-Key;
+- STM32L072: $5.45;
+- the 10 µF capacitor cross (Cal-Chip): $1.17 each, bought 25 at a time.
 
 ## How to get the binding quote (owner signed in)
 

@@ -1335,7 +1335,7 @@
     }
   },
   "q5_circuithub": {
-    "snapshot_utc": "2026-10-26T14:00Z",
+    "snapshot_utc": "2026-10-26T14:05Z",
     "authorization": "Owner, 26 Oct 2026: \"see if you can get this pcb made and manufactured at circuithub.com\". Feasibility, upload package, estimate; quote only in the owner's signed-in session; no order, payment, consignment shipment or staff contact without the owner's explicit go-ahead",
     "record": "procurement/q5/circuithub/CIRCUITHUB-Q5.md",
     "account_created": false,
@@ -1349,6 +1349,32 @@
       "csv_bom": "procurement/q5/circuithub/BOM-CIRCUITHUB-Q5.csv",
       "generator": "scripts/export_q5_circuithub.py"
     },
-    "estimate": "procurement/q5/circuithub/circuithub-cost-estimate.json (pending)"
+    "estimate": "procurement/q5/circuithub/circuithub-cost-estimate.json",
+    "estimate_usd_before_shipping": {
+      "2_boards": {
+        "cheapest": 802,
+        "fastest": 882
+      },
+      "5_boards": {
+        "cheapest": 1068,
+        "fastest": 1245
+      },
+      "10_boards": {
+        "cheapest": 1240,
+        "fastest": 1870
+      },
+      "basis": "CircuitHub's published '2 layers, simple microcontroller' example (fab+assembly) plus Q5 parts at Digi-Key with CircuitHub attrition"
+    },
+    "value_proto_eligible": false,
+    "value_proto_blockers": [
+      "J1 USB4105 plated shell stakes (hybrid part)",
+      "DS1 through-hole (DNP)",
+      "consigned parts excluded"
+    ],
+    "stock_blockers_2026_10_26": {
+      "U3 TLV76701DRVR": "0 at Digi-Key; TLV76701DRVT 250 expected 2026-11-23",
+      "U5 TLV7012DDFR": "0 at Digi-Key; 2,000 expected 2026-11-19",
+      "BT1, SW1/SW2, SW3": "LCSC-only: custom LCSC purchase source or consignment"
+    }
   }
 }
