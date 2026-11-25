@@ -7,8 +7,8 @@
   ],
   "currency": "USD",
   "complete_quotes_received": false,
-  "paid_procurement": false,
-  "order_placed": false,
+  "paid_procurement": true,
+  "order_placed": true,
   "manufacturing_released": false,
   "vendors": [
     {
@@ -1290,7 +1290,7 @@
     "condition": "Material cost reduction; exact split and savings remain to be demonstrated."
   },
   "q5_jlc_quote": {
-    "snapshot_utc": "2026-09-25T20:40Z",
+    "snapshot_utc": "2026-09-26T08:30Z",
     "authorization": "JLCPCB quotes only, variants A (JLC SMT, user solders DS1) and B (JLC full assembly); no order, payment, allocation, release or other-vendor contact",
     "gerber_zip_sha256": "f9b9afe4ead8ebe9c9f7066926ef95a16f03e42750d92ad6f939462d12864230",
     "observed_public_quote": {
@@ -1299,7 +1299,7 @@
       "pcb_usd": 22.1,
       "shipping_dhl_ddp_usd": 29.45
     },
-    "pcba_binding_quote": "not obtained: BOM/CPL step requires the user's JLCPCB sign-in; no credentials requested or used",
+    "pcba_binding_quote": "obtained 26 Sep 2026 in the owner's signed-in session (owner signed in; agent drove the browser)",
     "estimate_usd_10_boards_before_shipping": {
       "A_economic": 245.94,
       "A_standard": 254.45,
@@ -1308,10 +1308,92 @@
     },
     "estimate_source": "procurement/q5/jlc-cost-estimate.json",
     "record": "procurement/q5/JLC-QUOTE-Q5.md",
+    "complete_quote_received": true,
+    "cart_saved": true,
+    "order_placed": true,
+    "paid": true,
+    "manufacturing_released": false,
+    "signed_in_quote_6_boards_both_sides_usd": {
+      "pcb": 22.7,
+      "pcba": 259.96,
+      "shipping_dhl_ddp": 29.94,
+      "total": 312.6
+    },
+    "standard_pcba_required": "BT1 C70377 and J1 C5184243 are Standard-only parts",
+    "order": {
+      "date": "2026-09-26",
+      "boards_assembled": 5,
+      "bare_pcbs": 10,
+      "variant": "B (JLC assembles everything, both sides, Standard PCBA)",
+      "cpl": "CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv",
+      "pcb_usd": 22.8,
+      "pcba_usd": 242.83,
+      "shipping_usd": 32.45,
+      "total_paid_usd": 298.08,
+      "status_at_record": "file review; parts-placement photos await owner approval (auto-confirm disabled)",
+      "note": "Order and account identifiers intentionally not recorded (public repository)."
+    }
+  },
+  "q5_circuithub": {
+    "snapshot_utc": "2026-11-25T00:00Z",
+    "authorization": "Owner, 26 Oct 2026: \"see if you can get this pcb made and manufactured at circuithub.com\". Feasibility, upload package, estimate; quote only in the owner's signed-in session; no order, payment, consignment shipment or staff contact without the owner's explicit go-ahead",
+    "record": "procurement/q5/circuithub/CIRCUITHUB-Q5.md",
+    "account_created": false,
+    "uploaded": false,
     "complete_quote_received": false,
-    "cart_saved": false,
     "order_placed": false,
     "paid": false,
-    "manufacturing_released": false
+    "design_changed": false,
+    "package": {
+      "kicad_zip": "procurement/q5/circuithub/click-counter-Q5-circuithub.zip",
+      "csv_bom": "procurement/q5/circuithub/BOM-CIRCUITHUB-Q5.csv",
+      "generator": "scripts/export_q5_circuithub.py"
+    },
+    "estimate": "procurement/q5/circuithub/circuithub-cost-estimate.json",
+    "estimate_usd_before_shipping": {
+      "2_boards": {
+        "cheapest": 818,
+        "fastest": 898
+      },
+      "5_boards": {
+        "cheapest": 1090,
+        "fastest": 1266
+      },
+      "10_boards": {
+        "cheapest": 1276,
+        "fastest": 1906
+      },
+      "value_proto_if_eligible": {
+        "2_boards": 361,
+        "5_boards": 499,
+        "10_boards": 757
+      },
+      "basis": "CircuitHub's published '2 layers, simple microcontroller' example (fab+assembly) plus Q5 parts at Digi-Key with CircuitHub attrition"
+    },
+    "value_proto_eligible": false,
+    "value_proto_blockers": [
+      "J1 USB4105 plated shell stakes (hybrid part)",
+      "DS1 through-hole (left unplaced)"
+    ],
+    "stock_blockers_2026_10_26": {
+      "U3 TLV76701DRVR": "0 at Digi-Key; identical TLV76701DRVT 250 due 2026-11-23",
+      "U5 TLV7012DDFR": "0 at Digi-Key; 2,000 due 2026-11-19"
+    },
+    "jlc_first_article_comparison_usd": 298.08,
+    "consigned_parts": [],
+    "bom_substitutions": {
+      "like_for_like": 22,
+      "mechanical_check_on_first_boards": [
+        "BT1 Keystone 1060",
+        "SW1/SW2 Kailh socket (Adafruit 4958, pack of 20)",
+        "SW3 C&K PTS820J20MSMTR LFS"
+      ],
+      "left_unplaced": "DS1 (home soldering, 14 joints)",
+      "approval": "owner approves by uploading/ordering"
+    },
+    "stock_blockers_2026_11_25": {
+      "U3 TLV76701DRVR": "0 at Digi-Key; DRVR 3,000 due 2027-04-01; identical TLV76701DRVT 66 due 2026-12-07 and 184 due 2027-01-27",
+      "U5 TLV7012DDFR": "resolved: 1,884 in stock at Digi-Key on 2026-11-25"
+    }
   }
 }

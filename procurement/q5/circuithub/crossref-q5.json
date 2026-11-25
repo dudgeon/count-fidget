@@ -1,0 +1,1067 @@
+{
+ "schema": 1,
+ "purpose": "CircuitHub sourcing decision for every fitted Q5 part line, keyed by the canonical BOM-Q5 MPN. Footprints never change; only LCSC house-brand part numbers are replaced with stocked US-distributor equivalents.",
+ "actions": {
+  "keep": "same MPN as the JLC first article",
+  "cross": "drop-in equivalent, same package and specification",
+  "consign": "customer supplies the original part to CircuitHub",
+  "dnp": "left unplaced; fitted at home"
+ },
+ "lines": {
+  "CL21A225KBQNNNE": {
+   "action": "cross",
+   "mpn": "CL21A225KBFNNNE",
+   "manufacturer": "Samsung Electro-Mechanics",
+   "package": "0805",
+   "description": "2.2uF 50V X5R 10% 0805",
+   "reason": "Digi-Key does not stock CL21A225KBQNNNE (50,000-piece reels only); CL21A225KBFNNNE is the same Samsung 2.2uF 10% 50V X5R 0805, differing only in the thickness code (1.35 mm max)",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "1276-6702-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1276-6702-1-ND",
+    "stock": 214072,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.28,
+     "10": 0.166,
+     "100": 0.1059
+    },
+    "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21A225KBFNNNE/5961186",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "GRM21BR61H106KE43L": {
+   "action": "cross",
+   "mpn": "GMC21X5R106K50NT",
+   "manufacturer": "Cal-Chip Electronics",
+   "package": "0805",
+   "description": "10uF 50V X5R 10% 0805",
+   "reason": "Murata GRM21BR61H106KE43L: 0 at Digi-Key (3,000 expected 15 Mar 2027); Samsung CL21A106KBYQNNE also 0. Cal-Chip GMC21X5R106K50NT is the stocked 10uF 10% 50V X5R 0805 (1.50 mm max thickness)",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "4713-GMC21X5R106K50NTCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "4713-GMC21X5R106K50NTCT-ND",
+    "stock": 16108,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 1.76,
+     "10": 1.166,
+     "100": 0.86
+    },
+    "url": "https://www.digikey.com/en/products/detail/cal-chip-electronics-inc/GMC21X5R106K50NT/22461297",
+    "observed": "2026-10-26",
+    "note": "Any 10uF 50V X5R 0805 easily meets the design need (effective >=1 uF at 4.5 V)"
+   },
+   "availability": "in_stock"
+  },
+  "CC0603KRX7R9BB104": {
+   "action": "keep",
+   "mpn": "CC0603KRX7R9BB104",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "100nF 50V X7R 10% 0603",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-1344-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-1344-1-ND",
+    "stock": 4002472,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.14,
+     "10": 0.08,
+     "100": 0.0478
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "CL10B102KB8NNNC": {
+   "action": "keep",
+   "mpn": "CL10B102KB8NNNC",
+   "manufacturer": "Samsung Electro-Mechanics",
+   "package": "0603",
+   "description": "1nF 50V X7R 10% 0603",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "1276-1018-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1276-1018-1-ND",
+    "stock": 1497515,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.034,
+     "100": 0.0194
+    },
+    "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B102KB8NNNC/3886676",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603B472K500NT": {
+   "action": "cross",
+   "mpn": "CL10B472KB8NNNC",
+   "manufacturer": "Samsung Electro-Mechanics",
+   "package": "0603",
+   "description": "4.7nF 50V X7R 10% 0603",
+   "reason": "FH (Fenghua) is an LCSC house brand; same value, voltage, dielectric, tolerance and 0603 size as the part fitted on the JLC first article",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "1276-1098-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1276-1098-1-ND",
+    "stock": 2938852,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.032,
+     "100": 0.0185
+    },
+    "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B472KB8NNNC/3886756",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603B103K500NT": {
+   "action": "cross",
+   "mpn": "CL10B103KB8NNNC",
+   "manufacturer": "Samsung Electro-Mechanics",
+   "package": "0603",
+   "description": "10nF 50V X7R 10% 0603",
+   "reason": "FH (Fenghua) is an LCSC house brand; same value, voltage, dielectric, tolerance and 0603 size",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "1276-1009-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1276-1009-1-ND",
+    "stock": 197265,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.03,
+     "100": 0.0172
+    },
+    "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B103KB8NNNC/3886667",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "USBLC6-2SC6": {
+   "action": "keep",
+   "mpn": "USBLC6-2SC6",
+   "manufacturer": "STMicroelectronics",
+   "package": "SOT-23-6",
+   "description": "USB ESD protection, SOT-23-6",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "497-5235-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "497-5235-1-ND",
+    "stock": 80499,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.54,
+     "10": 0.329,
+     "100": 0.2088
+    },
+    "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/USBLC6-2SC6/1040559",
+    "observed": "2026-10-26",
+    "note": "Digi-Key also lists same-name parts from other makers; specify STMicroelectronics"
+   },
+   "availability": "in_stock"
+  },
+  "BAT54C,215": {
+   "action": "keep",
+   "mpn": "BAT54C,215",
+   "manufacturer": "Nexperia",
+   "package": "SOT-23",
+   "description": "BAT54C common-cathode Schottky, SOT-23",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "1727-2902-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1727-2902-1-ND",
+    "stock": 336513,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.15,
+     "10": 0.093,
+     "100": 0.0569
+    },
+    "url": "https://www.digikey.com/en/products/detail/nexperia-usa-inc/BAT54C-215/763216",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "1N4148WS": {
+   "action": "cross",
+   "mpn": "1N4148WS-7-F",
+   "manufacturer": "Diodes Incorporated",
+   "package": "SOD-323",
+   "description": "1N4148WS switching diode, SOD-323 (pad 1 = cathode)",
+   "reason": "Changjiang (CJ) is an LCSC house brand; Diodes 1N4148WS-7-F is the same JEDEC diode in the same SOD-323 package (onsemi 1N4148WS is SOD-323F flat-lead)",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "1N4148WS-FDICT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1N4148WS-FDICT-ND",
+    "stock": 291968,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.18,
+     "10": 0.109,
+     "100": 0.067
+    },
+    "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/1N4148WS-7-F/815127",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "USB4105-GF-A-120": {
+   "action": "keep",
+   "mpn": "USB4105-GF-A-120",
+   "manufacturer": "GCT",
+   "package": "USB4105",
+   "description": "USB-C 2.0 receptacle, 1.20 mm shell stakes",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors. Hybrid part (SMT pins + plated shell stakes): rules out CircuitHub Value Proto",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "2073-USB4105-GF-A-120CT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "2073-USB4105-GF-A-120CT-ND",
+    "stock": 42683,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.8,
+     "10": 0.676,
+     "100": 0.5745
+    },
+    "url": "https://www.digikey.com/en/products/detail/gct/USB4105-GF-A-120/14559037",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "AO3400A": {
+   "action": "keep",
+   "mpn": "AO3400A",
+   "manufacturer": "Alpha & Omega Semiconductor",
+   "package": "SOT-23",
+   "description": "N-MOSFET 30V 5.7A SOT-23",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "785-1000-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "785-1000-1-ND",
+    "stock": 211992,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.52,
+     "10": 0.322
+    },
+    "url": "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO3400A/1855772",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "2N7002": {
+   "action": "cross",
+   "mpn": "2N7002LT1G",
+   "manufacturer": "onsemi",
+   "package": "SOT-23",
+   "description": "2N7002 N-MOSFET 60V SOT-23 (1 G, 2 S, 3 D)",
+   "reason": "CJ is an LCSC house brand; same JEDEC 2N7002 in SOT-23 with the standard gate-source-drain pinout",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "2N7002LT1GOSCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "2N7002LT1GOSCT-ND",
+    "stock": 790229,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.26,
+     "10": 0.158,
+     "100": 0.0979
+    },
+    "url": "https://www.digikey.com/en/products/detail/onsemi/2N7002LT1G/918297",
+    "observed": "2026-10-26",
+    "note": "onsemi SOT-23 case 318 style 21: 1 gate, 2 source, 3 drain (datasheet read 26 Oct 2026); Nexperia 2N7002,215 is 0 until Oct 2027"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF5101T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-075K1L",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "5.1k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-5.10KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-5.10KHRCT-ND",
+    "stock": 434089,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-075K1L/727268",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF2402T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-0724KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "24k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-24.0KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-24.0KHRCT-ND",
+    "stock": 108386,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0724KL/727076",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF1802T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-0718KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "18k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-18.0KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-18.0KHRCT-ND",
+    "stock": 347625,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.027,
+     "100": 0.0129
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0718KL/726989",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF1002T5E": {
+   "action": "cross",
+   "mpn": "RMCF0603FT10K0",
+   "manufacturer": "Stackpole Electronics",
+   "package": "0603",
+   "description": "10k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand and the Yageo RC0603FR-07 equivalent is 0 at Digi-Key (backorder); Stackpole RMCF0603FT is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "RMCF0603FT10K0CT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "RMCF0603FT10K0CT-ND",
+    "stock": 2172504,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.022,
+     "100": 0.0102
+    },
+    "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT10K0/1761235",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF1003T5E": {
+   "action": "cross",
+   "mpn": "RMCF0603FT100K",
+   "manufacturer": "Stackpole Electronics",
+   "package": "0603",
+   "description": "100k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand and the Yageo RC0603FR-07 equivalent is 0 at Digi-Key (backorder); Stackpole RMCF0603FT is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "RMCF0603FT100KCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "RMCF0603FT100KCT-ND",
+    "stock": 1094258,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.022,
+     "100": 0.0102
+    },
+    "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT100K/1761112",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF3300T5E": {
+   "action": "cross",
+   "mpn": "RMCF0603FT330R",
+   "manufacturer": "Stackpole Electronics",
+   "package": "0603",
+   "description": "330 ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand and the Yageo RC0603FR-07 equivalent is 0 at Digi-Key (backorder); Stackpole RMCF0603FT is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "RMCF0603FT330RCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "RMCF0603FT330RCT-ND",
+    "stock": 258325,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.021,
+     "100": 0.0096
+    },
+    "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT330R/1760736",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF2201T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-072K2L",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "2.2k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-2.20KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-2.20KHRCT-ND",
+    "stock": 186420,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-072K2L/727016",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF330KT5E": {
+   "action": "cross",
+   "mpn": "RMCF0603FT3R30",
+   "manufacturer": "Stackpole Electronics",
+   "package": "0603",
+   "description": "3.3 ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand and the Yageo RC0603FR-07 equivalent is 0 at Digi-Key (backorder); Stackpole RMCF0603FT is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "RMCF0603FT3R30CT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "RMCF0603FT3R30CT-ND",
+    "stock": 189846,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.027,
+     "100": 0.013
+    },
+    "url": "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT3R30/4440027",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF5602T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-0756KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "56k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-56KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-56KHRCT-ND",
+    "stock": 72601,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0756KL/2827626",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF8202T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-0782KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "82k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-82.0KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-82.0KHRCT-ND",
+    "stock": 89638,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.027,
+     "100": 0.0129
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0782KL/727400",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF1202T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-0712KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "12k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-12.0KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-12.0KHRCT-ND",
+    "stock": 510214,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0712KL/726913",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF2203T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-07220KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "220k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-220KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-220KHRCT-ND",
+    "stock": 106218,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-07220KL/727062",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF2001T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-072KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "2k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-2.00KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-2.00KHRCT-ND",
+    "stock": 3880,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.027,
+     "100": 0.0129
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-072KL/727009",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF750JT5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-0775RL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "75 ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-75.0HRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-75.0HRCT-ND",
+    "stock": 184890,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0775RL/727377",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF1004T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-071ML",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "1M ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-1.00MHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-1.00MHRCT-ND",
+    "stock": 1921450,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.1,
+     "10": 0.025,
+     "100": 0.0122
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-071ML/726844",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "0603WAF1001T5E": {
+   "action": "cross",
+   "mpn": "RC0603FR-071KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "1k ohm 1% 0.1W thick film 0603",
+   "reason": "UNI-ROYAL is an LCSC house brand; Yageo RC0603FR-07 is the same 1%, 0.1 W, 0603 thick-film specification",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "311-1.00KHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "311-1.00KHRCT-ND",
+    "stock": 2155386,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.027,
+     "100": 0.0129
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-071KL/726843",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "RT0603BRD07150KL": {
+   "action": "keep",
+   "mpn": "RT0603BRD07150KL",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "150k 0.1% 25ppm thin film 0603",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "YAG1532CT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "YAG1532CT-ND",
+    "stock": 50566,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.074,
+     "100": 0.0615
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RT0603BRD07150KL/1072257",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "RT0603BRD0749K9L": {
+   "action": "keep",
+   "mpn": "RT0603BRD0749K9L",
+   "manufacturer": "YAGEO",
+   "package": "0603",
+   "description": "49.9k 0.1% 25ppm thin film 0603",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "YAG1671CT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "YAG1671CT-ND",
+    "stock": 117880,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.11,
+     "10": 0.074,
+     "100": 0.0615
+    },
+    "url": "https://www.digikey.com/en/products/detail/yageo/RT0603BRD0749K9L/1072550",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "NCP18XH103F03RB": {
+   "action": "keep",
+   "mpn": "NCP18XH103F03RB",
+   "manufacturer": "Murata",
+   "package": "0603",
+   "description": "10k NTC B3380 0603",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "490-4800-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "490-4800-1-ND",
+    "stock": 144478,
+    "status": "Not For New Designs",
+    "price_breaks_usd": {
+     "1": 0.18,
+     "10": 0.143,
+     "100": 0.1184
+    },
+    "url": "https://www.digikey.com/en/products/detail/murata-electronics/NCP18XH103F03RB/1644665",
+    "observed": "2026-10-26",
+    "note": "Not For New Designs but in stock; Murata-recommended successor NCU18XH103F60RB (same 10k 1%, B25/50 3380K) is Active with 446,079 in stock"
+   },
+   "availability": "in_stock"
+  },
+  "STM32L072CBT6": {
+   "action": "keep",
+   "mpn": "STM32L072CBT6",
+   "manufacturer": "STMicroelectronics",
+   "package": "LQFP-48",
+   "description": "STM32L072CBT6 MCU, LQFP-48",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "497-17503-ND (Tray)",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "497-17503-ND (Tray)",
+    "stock": 2446,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 5.45,
+     "10": 4.131,
+     "100": 3.4416
+    },
+    "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32L072CBT6/6166996",
+    "observed": "2026-10-26",
+    "note": "Tray; manufacturer lead time 40 weeks if stock runs out"
+   },
+   "availability": "in_stock"
+  },
+  "BQ25185DLHR": {
+   "action": "keep",
+   "mpn": "BQ25185DLHR",
+   "manufacturer": "Texas Instruments",
+   "package": "WSON-10",
+   "description": "BQ25185 Li-ion charger, WSON-10",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "296-BQ25185DLHRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "296-BQ25185DLHRCT-ND",
+    "stock": 14150,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 2.58,
+     "10": 1.918,
+     "100": 1.5709
+    },
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/BQ25185DLHR/21769368",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "TLV76701DRVR": {
+   "action": "keep",
+   "mpn": "TLV76701DRVR",
+   "manufacturer": "Texas Instruments",
+   "package": "WSON-6-1EP",
+   "description": "TLV767 adjustable LDO, WSON-6",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "296-TLV76701DRVRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "296-TLV76701DRVRCT-ND",
+    "stock": 0,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 1.05,
+     "10": 0.757,
+     "100": 0.6027
+    },
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/TLV76701DRVR/10434713",
+    "observed": "2026-11-25",
+    "note": "Re-read 25 Nov 2026: TLV76701DRVR 0 at Digi-Key, 3,000 expected 1 Apr 2027. Identical TLV76701DRVT (250-piece reel): 0, 66 expected 7 Dec 2026 and 184 on 27 Jan 2027 (the 23 Nov delivery did not arrive as 250). TLV76701DGNR is in stock but is an 8-pin HVSSOP needing a PCB change. Options: select DRVT and enter the 7 Dec date, add LCSC C2863998 as a custom purchase source (check with CircuitHub first), or consign. Figures from a summarised page read; confirm in CircuitHub's quote"
+   },
+   "availability": "short"
+  },
+  "BQ29700DSER": {
+   "action": "keep",
+   "mpn": "BQ29700DSER",
+   "manufacturer": "Texas Instruments",
+   "package": "WSON-6_1.5x1.5",
+   "description": "BQ29700 cell protector, WSON-6 1.5x1.5",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "296-43985-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "296-43985-1-ND",
+    "stock": 13500,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.57,
+     "10": 0.403,
+     "100": 0.3141
+    },
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/BQ29700DSER/5973173",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "TLV7012DDFR": {
+   "action": "keep",
+   "mpn": "TLV7012DDFR",
+   "manufacturer": "Texas Instruments",
+   "package": "SOT-23-8",
+   "description": "TLV7012 dual comparator, SOT-23-8",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "296-TLV7012DDFRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "296-TLV7012DDFRCT-ND",
+    "stock": 1884,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 1.87,
+     "10": 1.371,
+     "100": 1.1112
+    },
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/TLV7012DDFR/13213533",
+    "observed": "2026-11-25",
+    "note": "Back in stock: 1,884 at Digi-Key on 25 Nov 2026 (0 on 26 Oct). Figure from a summarised page read; confirm in CircuitHub's quote. TLV7032DDFR is no longer needed as an alternative"
+   },
+   "availability": "in_stock"
+  },
+  "TPS22917DBVR": {
+   "action": "keep",
+   "mpn": "TPS22917DBVR",
+   "manufacturer": "Texas Instruments",
+   "package": "SOT-23-6",
+   "description": "TPS22917 load switch, SOT-23-6",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "296-50498-1-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "296-50498-1-ND",
+    "stock": 63493,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 0.58,
+     "10": 0.407,
+     "100": 0.3166
+    },
+    "url": "https://www.digikey.com/en/products/detail/texas-instruments/TPS22917DBVR/8539916",
+    "observed": "2026-10-26"
+   },
+   "availability": "in_stock"
+  },
+  "FM25V02A-GTR": {
+   "action": "keep",
+   "mpn": "FM25V02A-GTR",
+   "manufacturer": "Infineon",
+   "package": "SOIC-8",
+   "description": "FM25V02A 256-kbit SPI F-RAM, SOIC-8",
+   "reason": "Same part as the JLC first article; stocked at approved US distributors",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "448-FM25V02A-GTRCT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "448-FM25V02A-GTRCT-ND",
+    "stock": 8764,
+    "status": "Active",
+    "price_breaks_usd": {
+     "1": 9.8,
+     "10": 9.11,
+     "100": 8.4126
+    },
+    "url": "https://www.digikey.com/en/products/detail/infineon-technologies/FM25V02A-GTR/5210536",
+    "observed": "2026-10-26",
+    "note": "$9.80 each at 1 piece; the most expensive line"
+   },
+   "availability": "in_stock"
+  },
+  "CR2032-BS-6-1": {
+   "action": "cross",
+   "mpn": "1060",
+   "manufacturer": "Keystone Electronics",
+   "package": "CR2032-BS-6-1",
+   "description": "SMD 20 mm coin-cell holder (LIR2032), 5.5 mm tall, + contact on pad 1",
+   "reason": "The Q&J CR2032-BS-6-1 is a copy of the Keystone 1060 (22 x 16 x 5.5 mm body, 3.5-3.6 mm tabs). Keystone recommends 2.6 x 3.6 mm lands at 29.3 mm centres (+/-14.65); both terminals land wholly inside our 4.2 x 3.8 mm pads at +/-14.39 (tab tips 0.54 mm inside the pad ends, 0.10 mm side margin). Same height as the original, so the enclosure model is unchanged",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "36-1060-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "36-1060-ND",
+    "stock": 10689,
+    "status": "Active",
+    "packaging": "bulk (hand or tray placement)",
+    "price_breaks_usd": {
+     "1": 1.2,
+     "10": 1.12
+    },
+    "url": "https://www.digikey.com/en/products/detail/keystone-electronics/1060/303556",
+    "observed": "2026-10-26",
+    "datasheet": "https://www.keyelco.com/userAssets/file/K75p4.pdf",
+    "note": "Place the + contact on pad 1 (the + silkscreen side). Cut-tape alternative with the same land fit: MPD BU2032SM-G (BU2032SM-GCT-ND, 31,025 in stock), 5.2 mm tall, drawn with + on the opposite side, so check its orientation in the placement view. LIR2032 retention and contact remain first-article checks"
+   },
+   "availability": "in_stock"
+  },
+  "CPG151101S11-16": {
+   "action": "cross",
+   "mpn": "4958",
+   "manufacturer": "Adafruit Industries LLC",
+   "package": "CPG151101S11",
+   "description": "Kailh MX hot-swap socket, pack of 20 (2 per board)",
+   "reason": "Adafruit 4958 is the Kailh MX hot-swap socket sold in 20-piece packs; its Kailh drawing matches the HanElectricity CPG151101S11-16 drawing dimension for dimension, including the recommended 2.55 x 2.5 mm pads and 3.0 mm holes our footprint uses. Gold instead of tin contacts",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "1528-4958-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "1528-4958-ND",
+    "stock": 253,
+    "stock_unit": "packs of 20",
+    "pack_size": 20,
+    "status": "Active",
+    "packaging": "bulk bag of 20 (hand placement)",
+    "price_breaks_usd": {
+     "1": 4.95
+    },
+    "url": "https://www.digikey.com/en/products/result?keywords=1528-4958-ND",
+    "observed": "2026-10-26",
+    "datasheet": "https://cdn-shop.adafruit.com/product-files/4958/Datasheet.jpeg",
+    "note": "One pack covers 10 boards; tell CircuitHub the unit is a 20-piece pack so it does not buy one pack per socket"
+   },
+   "availability": "in_stock"
+  },
+  "TS-1088-AR02016": {
+   "action": "cross",
+   "mpn": "PTS820J20MSMTR LFS",
+   "manufacturer": "C&K",
+   "package": "TS-1088",
+   "description": "2-terminal SMD tact switch 3.9 x 2.9 mm, 2.0 mm, 160 gf, J-lead, no pegs",
+   "reason": "Same size, actuator height (2.0 mm) and force (160 gf) as the XUNPU part, no locating pegs. Its J-lead terminals (tips at +/-2.2 mm, 1.0 mm wide) land inside our 1.05 x 2.0 mm pads at +/-2.225; C&K recommends 0.95 x 1.4 mm pads at +/-2.075",
+   "dnp": false,
+   "supplier": "Digi-Key",
+   "supplier_pn": "CKN10505CT-ND",
+   "evidence": {
+    "distributor": "Digi-Key",
+    "distributor_pn": "CKN10505CT-ND",
+    "stock": 48095,
+    "status": "Active",
+    "packaging": "cut tape",
+    "price_breaks_usd": {
+     "1": 1.08,
+     "10": 0.921
+    },
+    "url": "https://www.digikey.com/en/products/result?keywords=PTS820J20MSMTR",
+    "observed": "2026-10-26",
+    "datasheet": "https://www.littelfuse.com/assetdocs/littelfuse-c-k-tactile-pts820-series-datasheet?assetguid=40a5bd42-bcea-48fa-b1e7-757cd7836733",
+    "note": "Stock figure read from Digi-Key's result page, which also lists a CTS substitute; confirm it in CircuitHub's quote. C&K's layout shows four lighter-hatched corner areas (frame legs) where our board has solder-masked bottom-layer tracks, as under the original switch: confirm they need no pads. Ask CircuitHub to reduce the SW3 paste apertures to about 0.95 x 1.4 mm. Do not use the P (pegged) version"
+   },
+   "availability": "in_stock"
+  },
+  "HS96L01W4S03": {
+   "action": "dnp",
+   "mpn": "HS96L01W4S03",
+   "manufacturer": "HS",
+   "package": "HS96L01W4S03",
+   "description": "0.96in 128x64 SPI OLED module, 7-pin, through-hole",
+   "reason": "Through-hole module stacked on a separate 7-pin header that is not in the KiCad design; leave unplaced at CircuitHub and fit at home (14 joints, as JLC variant A). Home options: the LCSC HS96L01W4S03 + XFCN PZ254V-11-07P used on the JLC first article, or the Digi-Key-stocked Orient Display AOM12864A0-0.96WW-ANO (5491-AOM12864A0-0.96WW-ANO-ND, 144 in stock, $9.38 at 10; same outline, holes, pin order and active area on its drawing; sample one first) with a Sullins PRPC007SAAN-RC header (35-PRPC007SAAN-RC-ND)",
+   "dnp": true,
+   "supplier": "",
+   "supplier_pn": "",
+   "evidence": {}
+  }
+ },
+ "stock_screen": {
+  "source": "Digi-Key product pages read 26 Oct 2026 (Mouser, Arrow, TTI, Future refused automated reads; TI direct shows inventory only when signed in); U3 and U5 re-read 25 Nov 2026",
+  "circuithub_note": "CircuitHub's quote shows availability from a single distributor; it can add other approved distributors on request"
+ }
+}

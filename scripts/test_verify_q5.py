@@ -31,6 +31,7 @@ SEMANTIC_CASES = (
     'Schematic MCU supply connection omitted', 'Schematic MCU pin duplicated',
     'Coherent MCU supply miswired despite independent contract',
     'Coherent regulator MPN changed despite independent contract',
+    'PCB pin-1 dot removed', 'PCB pin-1 dot moved between pins', 'Polarised part left without pin-1 silk',
 )
 BOUND_CASES = (
     'Bound source modified', 'Bound local footprint modified',
@@ -227,6 +228,26 @@ def main():
         board_case('PCB extra outline primitive', lambda b: b.append(['gr_circle', ['center', '5', '5'], ['end', '6', '5'], ['stroke', ['width', '.05'], ['type', 'default']], ['fill', 'none'], ['layer', 'Edge.Cuts'], ['uuid', 'q5-negative-test-extra-outline']]), 'outline')
         board_case('PCB thickness changed', lambda b: bump(v.child(b, 'general'), 'thickness'), 'Board thickness')
         board_case('PCB inner layer added', lambda b: v.child(b, 'layers').append(['2', 'In1.Cu', 'power']), 'two copper layers')
+        def dots(b):
+            return [g for g in v.children(b, 'gr_circle') if v.child(g, 'layer')[1].endswith('.SilkS') and v.child(g, 'fill')[1] in ('yes', 'solid')]
+        def plan_ref(ref):
+            return next(m for m in json.loads((f.root / 'electronics/q5/pin1-markers.json').read_text())['markers'] if m['ref'] == ref)
+        def dot_for(b, ref):
+            x, y = plan_ref(ref)['marker_xy']
+            return next(g for g in dots(b) if abs(float(v.child(g, 'center')[1]) - x) < 1e-4 and abs(float(v.child(g, 'center')[2]) - y) < 1e-4)
+        board_case('PCB pin-1 dot removed', lambda b: b.remove(dots(b)[0]), 'Pin-1 dots on the board differ')
+        def between(b):
+            # Move U2's dot (board and plan together) to the midpoint of pins 1 and 2.
+            p1 = v.world_pad(by_ref(b, 'U2'), pad(b, 'U2', '1')); p2 = v.world_pad(by_ref(b, 'U2'), pad(b, 'U2', '2'))
+            mid = [round((p1[0] + p2[0]) / 2, 4), round((p1[1] + p2[1]) / 2, 4)]
+            g = dot_for(b, 'U2')
+            v.child(g, 'center')[1:3] = [str(mid[0]), str(mid[1])]; v.child(g, 'end')[1:3] = [str(mid[0] + .25), str(mid[1])]
+            f.json('electronics/q5/pin1-markers.json', lambda r: next(m for m in r['markers'] if m['ref'] == 'U2').update(marker_xy=mid))
+        board_case('PCB pin-1 dot moved between pins', between, 'Pin-1 dot is ambiguous between pins: U2')
+        def unmarked(b):
+            b.remove(dot_for(b, 'U7'))
+            f.json('electronics/q5/pin1-markers.json', lambda r: r.update(markers=[m for m in r['markers'] if m['ref'] != 'U7']))
+        board_case('Polarised part left without pin-1 silk', unmarked, 'no unambiguous pin-1 silkscreen: U7')
         rejects('Schematic MPN changed', lambda: f.schematic_xml(lambda x: setattr(x.find("components/comp[@ref='U3']/fields/field[@name='MPN']"), 'text', 'INVALID')), 'Schematic identity differs: U3.mpn')
         rejects('Schematic MPN duplicated', lambda: f.schematic_xml(lambda x: x.find("components/comp[@ref='U3']/fields").append(copy.deepcopy(x.find("components/comp[@ref='U3']/fields/field[@name='MPN']")))), 'duplicated schematic identity')
         def remove_supply(x):

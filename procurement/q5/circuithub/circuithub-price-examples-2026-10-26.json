@@ -1,0 +1,316 @@
+{
+ "schema": 1,
+ "source": "https://circuithub.com/pricing (embedded public app https://retool.app.circuithub.com/p/pricing), read with headless Chromium",
+ "observed_utc": "2026-10-26T13:40Z",
+ "meaning": "CircuitHub published price examples, per board, USD, for three example designs. \"Fastest\"/\"Cheapest\" are the two lead-time choices the page offers. These are CircuitHub examples, not a quote for Count Fidget Q5.",
+ "examples": {
+  "Low-Fastest": {
+   "design": "2 layers, simple microcontroller",
+   "by_quantity": {
+    "1": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 523.42,
+     "parts_usd_per_board": 40.36,
+     "lead_time_days": 3.0
+    },
+    "2": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 266.67,
+     "parts_usd_per_board": 22.82,
+     "lead_time_days": 3.0
+    },
+    "3": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 181.09,
+     "parts_usd_per_board": 17.1,
+     "lead_time_days": 3.0
+    },
+    "4": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 138.3,
+     "parts_usd_per_board": 14.04,
+     "lead_time_days": 3.0
+    },
+    "5": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 113.18,
+     "parts_usd_per_board": 12.2,
+     "lead_time_days": 3.0
+    },
+    "6": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 95.93,
+     "parts_usd_per_board": 10.52,
+     "lead_time_days": 3.0
+    },
+    "7": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 83.68,
+     "parts_usd_per_board": 9.1,
+     "lead_time_days": 3.0
+    },
+    "8": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 74.43,
+     "parts_usd_per_board": 8.48,
+     "lead_time_days": 3.0
+    },
+    "9": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 67.54,
+     "parts_usd_per_board": 8.01,
+     "lead_time_days": 3.0
+    },
+    "10": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 61.83,
+     "parts_usd_per_board": 7.63,
+     "lead_time_days": 3.0
+    },
+    "25": {
+     "board_usd_per_board": 112.45,
+     "assembly_usd_per_board": 36.25,
+     "parts_usd_per_board": 5.31,
+     "lead_time_days": 3.0
+    },
+    "100": {
+     "board_usd_per_board": 7.59,
+     "assembly_usd_per_board": 39.7,
+     "parts_usd_per_board": 4.27,
+     "lead_time_days": 9.0
+    }
+   }
+  },
+  "Low-Cheapest": {
+   "design": "2 layers, simple microcontroller",
+   "by_quantity": {
+    "1": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 444.9,
+     "parts_usd_per_board": 40.36,
+     "lead_time_days": 5.0
+    },
+    "2": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 226.67,
+     "parts_usd_per_board": 22.82,
+     "lead_time_days": 5.0
+    },
+    "3": {
+     "board_usd_per_board": 91.44,
+     "assembly_usd_per_board": 153.93,
+     "parts_usd_per_board": 17.1,
+     "lead_time_days": 5.0
+    },
+    "4": {
+     "board_usd_per_board": 90.78,
+     "assembly_usd_per_board": 117.56,
+     "parts_usd_per_board": 14.04,
+     "lead_time_days": 12.0
+    },
+    "5": {
+     "board_usd_per_board": 73.08,
+     "assembly_usd_per_board": 96.2,
+     "parts_usd_per_board": 12.2,
+     "lead_time_days": 12.0
+    },
+    "6": {
+     "board_usd_per_board": 61.28,
+     "assembly_usd_per_board": 81.54,
+     "parts_usd_per_board": 10.52,
+     "lead_time_days": 12.0
+    },
+    "7": {
+     "board_usd_per_board": 52.86,
+     "assembly_usd_per_board": 71.13,
+     "parts_usd_per_board": 9.1,
+     "lead_time_days": 12.0
+    },
+    "8": {
+     "board_usd_per_board": 46.53,
+     "assembly_usd_per_board": 63.27,
+     "parts_usd_per_board": 8.48,
+     "lead_time_days": 12.0
+    },
+    "9": {
+     "board_usd_per_board": 41.62,
+     "assembly_usd_per_board": 57.41,
+     "parts_usd_per_board": 8.01,
+     "lead_time_days": 12.0
+    },
+    "10": {
+     "board_usd_per_board": 37.69,
+     "assembly_usd_per_board": 52.55,
+     "parts_usd_per_board": 7.63,
+     "lead_time_days": 12.0
+    },
+    "25": {
+     "board_usd_per_board": 16.78,
+     "assembly_usd_per_board": 30.81,
+     "parts_usd_per_board": 5.31,
+     "lead_time_days": 12.0
+    },
+    "100": {
+     "board_usd_per_board": 6.24,
+     "assembly_usd_per_board": 17.67,
+     "parts_usd_per_board": 4.27,
+     "lead_time_days": 13.0
+    }
+   }
+  },
+  "Medium-Fastest": {
+   "design": "4 layers, fine pitch QFNs",
+   "by_quantity": {
+    "1": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 678.78,
+     "parts_usd_per_board": 189.76,
+     "lead_time_days": 3.0
+    },
+    "2": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 359.19,
+     "parts_usd_per_board": 122.28,
+     "lead_time_days": 3.0
+    },
+    "3": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 252.66,
+     "parts_usd_per_board": 92.33,
+     "lead_time_days": 3.0
+    },
+    "4": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 199.39,
+     "parts_usd_per_board": 77.14,
+     "lead_time_days": 3.0
+    },
+    "5": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 167.91,
+     "parts_usd_per_board": 69.41,
+     "lead_time_days": 3.0
+    },
+    "6": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 149.38,
+     "parts_usd_per_board": 63.47,
+     "lead_time_days": 3.0
+    },
+    "7": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 143.43,
+     "parts_usd_per_board": 60.86,
+     "lead_time_days": 3.0
+    },
+    "8": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 130.32,
+     "parts_usd_per_board": 58.13,
+     "lead_time_days": 3.0
+    },
+    "9": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 120.12,
+     "parts_usd_per_board": 56.01,
+     "lead_time_days": 3.0
+    },
+    "10": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 112.09,
+     "parts_usd_per_board": 54.31,
+     "lead_time_days": 3.0
+    },
+    "25": {
+     "board_usd_per_board": 216.95,
+     "assembly_usd_per_board": 76.93,
+     "parts_usd_per_board": 43.16,
+     "lead_time_days": 3.0
+    },
+    "100": {
+     "board_usd_per_board": 19.91,
+     "assembly_usd_per_board": 57.37,
+     "parts_usd_per_board": 36.88,
+     "lead_time_days": 11.0
+    }
+   }
+  },
+  "Medium-Cheapest": {
+   "design": "4 layers, fine pitch QFNs",
+   "by_quantity": {
+    "1": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 576.97,
+     "parts_usd_per_board": 189.76,
+     "lead_time_days": 5.0
+    },
+    "2": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 305.31,
+     "parts_usd_per_board": 122.28,
+     "lead_time_days": 5.0
+    },
+    "3": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 214.76,
+     "parts_usd_per_board": 92.33,
+     "lead_time_days": 5.0
+    },
+    "4": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 169.48,
+     "parts_usd_per_board": 77.14,
+     "lead_time_days": 5.0
+    },
+    "5": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 142.72,
+     "parts_usd_per_board": 69.41,
+     "lead_time_days": 5.0
+    },
+    "6": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 126.98,
+     "parts_usd_per_board": 63.47,
+     "lead_time_days": 5.0
+    },
+    "7": {
+     "board_usd_per_board": 98.11,
+     "assembly_usd_per_board": 121.92,
+     "parts_usd_per_board": 60.86,
+     "lead_time_days": 5.0
+    },
+    "8": {
+     "board_usd_per_board": 90.67,
+     "assembly_usd_per_board": 110.77,
+     "parts_usd_per_board": 58.13,
+     "lead_time_days": 13.0
+    },
+    "9": {
+     "board_usd_per_board": 81.3,
+     "assembly_usd_per_board": 102.1,
+     "parts_usd_per_board": 56.01,
+     "lead_time_days": 13.0
+    },
+    "10": {
+     "board_usd_per_board": 73.81,
+     "assembly_usd_per_board": 95.28,
+     "parts_usd_per_board": 54.31,
+     "lead_time_days": 13.0
+    },
+    "25": {
+     "board_usd_per_board": 33.66,
+     "assembly_usd_per_board": 65.39,
+     "parts_usd_per_board": 43.16,
+     "lead_time_days": 13.0
+    },
+    "100": {
+     "board_usd_per_board": 13.59,
+     "assembly_usd_per_board": 40.28,
+     "parts_usd_per_board": 36.88,
+     "lead_time_days": 15.0
+    }
+   }
+  }
+ }
+}

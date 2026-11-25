@@ -114,9 +114,17 @@
       "bytes": 20801,
       "sha256": "0d66c12b7984b8c53976683ad49c3cd77239314cf3aa476b4d39411724abe6d0"
     },
+    "procurement/q5/CPL-JLCPCB-Q5-FULL-ASSEMBLY-JLC-CORRECTED.csv": {
+      "bytes": 3887,
+      "sha256": "8031a6b1899bce22d07ae8acb069dfdb9d38fdea5beb17bc156c9a53dd4fbaf8"
+    },
     "procurement/q5/CPL-JLCPCB-Q5-FULL-ASSEMBLY.csv": {
       "bytes": 3729,
       "sha256": "48dac3ff7a08556835f1771cdc4d024b355d1387ca56e35e9021aeee6a4af92a"
+    },
+    "procurement/q5/CPL-JLCPCB-Q5-JLC-CORRECTED.csv": {
+      "bytes": 3806,
+      "sha256": "a7df45c302ecd460d46ff5d34e1e9ba4dbb32f0f12d98b1f449ee39317584825"
     },
     "procurement/q5/CPL-JLCPCB-Q5.csv": {
       "bytes": 3656,
@@ -134,6 +142,22 @@
       "bytes": 510,
       "sha256": "78e5335925a2570200f1b8eb73119307a389f3ff98eb393642485688a6fd0ca6"
     },
+    "procurement/q5/POLARITY-REFERENCE-Q5-BOTTOM.png": {
+      "bytes": 314215,
+      "sha256": "8a1893bcd53881e7ff4f7f21f6f7a12d522190ecfc4ed64d3f32f9fa23e08056"
+    },
+    "procurement/q5/POLARITY-REFERENCE-Q5-TOP.png": {
+      "bytes": 56347,
+      "sha256": "75466f91ac0449b6fc742b0b081e303a1a648875e58ddd5160ca5dd97c6ddda0"
+    },
+    "procurement/q5/POLARITY-REFERENCE-Q5.csv": {
+      "bytes": 1878,
+      "sha256": "6291adaf31db0cfcd337fc407e983a1ce58eed54a7169ff189f8c2325fe82ee1"
+    },
+    "procurement/q5/POLARITY-REFERENCE-Q5.pdf": {
+      "bytes": 543962,
+      "sha256": "9838369898a708c8b1ed4834ac3efd53539f6f365ade67f07dcc75125bf10213"
+    },
     "procurement/q5/REVIEW-EXPORTS-Q5.md": {
       "bytes": 1760,
       "sha256": "59cdb160ecc5c3f90fb3cec6a84eff61e473896f8ab7941f06b29d165e40c583"
@@ -143,68 +167,68 @@
       "sha256": "ff4b7316eef1ecd9120fb9e851b87287b74611b87222cc63e5bf474fa83f7959"
     },
     "procurement/q5/assembly-bottom-Q5.svg": {
-      "bytes": 959788,
-      "sha256": "8ab590688e2d249e066978408484d165ee4431ded006f488d80c7d6a31057314"
+      "bytes": 960453,
+      "sha256": "e014fa4d07586d7531b1b1572ebaa9b2c6a4af04937f56d521d523304a1d80d5"
     },
     "procurement/q5/assembly-top-Q5.svg": {
-      "bytes": 126512,
-      "sha256": "99e9198911b1dc0ba339cc863e7a5570f8292893b2612ed3cfc69a32369d706c"
+      "bytes": 126464,
+      "sha256": "e20dd50f4e8ca0b3d0f46fecdc6d69caf0998b8fb08c07d32dcf143efcd8ab4c"
     },
     "procurement/q5/click-counter-Q5-Gerbers.zip": {
-      "bytes": 139513,
-      "sha256": "7bc3d62e1758dcdf68b72ddff1c4493ea96ac1af9c037d9f46ae734401db0d19"
+      "bytes": 139765,
+      "sha256": "378eca20d3899c4441584b56329884f220c6e27996031df7d5481cc8ff4b4faf"
     },
     "procurement/q5/drill-report-Q5.txt": {
       "bytes": 877,
-      "sha256": "e06815ae69d0278f7974d0df6607b0774825318b378eefac3779fcb1ece18e48"
+      "sha256": "2ac0d1ce0b7f8a9167c4d770b0374ad88142a9fe856d0d66bd8c384fdb516d1f"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Cu.gbl": {
-      "bytes": 326014,
-      "sha256": "d5ce03de5c3defa66c1f129c6332e4cd36c88ef4fb4bfc023f816a7b7211cc40"
+      "bytes": 326038,
+      "sha256": "4952afedf3e5e479ffbfa3235567235bdd4e8dc37a3db6c630f181e48aa2a836"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Mask.gbs": {
       "bytes": 13179,
-      "sha256": "a01670894c1a1e5e066447ae62aed06e16e6bd468dfc7fdb0f063d20fd693180"
+      "sha256": "437b85d70c193e0e652157b064d460a55e3448b4ad41239a7602e5a11c389e1d"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Paste.gbp": {
       "bytes": 12155,
-      "sha256": "1ed9acf68927307ecc630651b80735236c27618ddd121cbc49b227b2361bbfa2"
+      "sha256": "a71afdc449c7397a6705a084190257aa64c6839771084e1c189ad9b029c0f6c0"
     },
     "procurement/q5/gerbers/click-counter-Q5-B_Silkscreen.gbo": {
-      "bytes": 15937,
-      "sha256": "666cf246feb0a144896de63c237bc055401e8f0be860f4814bd90a5074e3a82d"
+      "bytes": 17654,
+      "sha256": "1208e3689349563a32db6e93eb104d913c5d070d01055bf717856f963eb70e6c"
     },
     "procurement/q5/gerbers/click-counter-Q5-Edge_Cuts.gm1": {
       "bytes": 665,
-      "sha256": "a048dba1fd4d37fb6b481e3ad3eb34c0cf5d561dbb422dce1a71e37ea7e64cf2"
+      "sha256": "b7f44b63bba3a0bab349cb3e9721f130ab9753052777f358aaecf41bddc3ccdc"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Cu.gtl": {
-      "bytes": 139956,
-      "sha256": "d7edbf180b8b25f4ab1030796c14ba6b69a43b571f2ddcea9498624bcb7f1960"
+      "bytes": 139884,
+      "sha256": "6e9a2ca8cd057a6da55b61661631d6630afa7ee52ec0315335929c0935a17c84"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Mask.gts": {
       "bytes": 1440,
-      "sha256": "4b7314f8a6152ab801efd2985b23fcc7c63310271de602ce1330fe76089334c3"
+      "sha256": "7bb538bb332e63e0c5f0f6b2f59f9931070a22a5b59636dce958e7efe9d170f6"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Paste.gtp": {
       "bytes": 503,
-      "sha256": "8e3f2d3e587898dce4e300ed11d25369c5573349dd36062309c03b2937c98b44"
+      "sha256": "d25301a8ee9e811f9d6c7ae8cb0b14384c3d19819dccedf9a3576c1c1c511e00"
     },
     "procurement/q5/gerbers/click-counter-Q5-F_Silkscreen.gto": {
       "bytes": 1450,
-      "sha256": "e3fdd2370ca15dfcfceee69a41538ed0cfbeb719ca08bb3004aeccce1a5cdceb"
+      "sha256": "dd1107d45a405731f32be6e5c47c23afd02efcbddf9585b31c93a0461f731fd6"
     },
     "procurement/q5/gerbers/click-counter-Q5-NPTH.drl": {
       "bytes": 722,
-      "sha256": "bf24d53c2124fe53ca3903fc472efa7e872b178e8d4e01658387ba99d528696b"
+      "sha256": "c58ea249a14cc97607fb41e9d8463a3aae70595d57c5d07911324b8be2fb8233"
     },
     "procurement/q5/gerbers/click-counter-Q5-PTH.drl": {
       "bytes": 2727,
-      "sha256": "e0ccb9d5f237eb8d0c1f06f06489ae18cc7b573bc8b74e6371f53879a7d9bae1"
+      "sha256": "05756e62ccacb31eb756324464a17ac60a7d88799980da130bffc547c1d2dbf9"
     },
     "procurement/q5/gerbers/click-counter-Q5-job.gbrjob": {
       "bytes": 2895,
-      "sha256": "d6a931a7981f75ffe1a4c90aa9b5b129e80a0bae7c5b7d181a5f5cdc8883c6a9"
+      "sha256": "6f7f3d0be96fffc305233a1ba0081c2c76062c6306272198da7cf7a6ab754f5f"
     },
     "procurement/q5/placements-KiCad-Q5.csv": {
       "bytes": 7133,
@@ -238,12 +262,13 @@
     "electronics/q5/battery-1.kicad_sch": "41f92388b3d1e33d4e9130f3180cfd6ad9e76cb689b03ac5cd5d10b4ddda7235",
     "electronics/q5/battery-2.kicad_sch": "e1aa4536e646e75e3e656c131a9c0092791cb5d3b08212b6794cbd099ab4d988",
     "electronics/q5/circuit-contract.json": "eeebcd6db58b4bd8a96e5cd899e7bf1356d7e810bc32b3f14ff0be42ea62262d",
-    "electronics/q5/click-counter-Q5.kicad_pcb": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+    "electronics/q5/click-counter-Q5.kicad_pcb": "77ad721f204d9de3e84c2ff0e6e263facbb2bcafe1e0a0a26f51a70f18e43562",
     "electronics/q5/click-counter-Q5.kicad_pro": "04c9bdd754ab845b28f246c4c378d3db0a6e2033a4060626fa0a277c3ad0fe5b",
     "electronics/q5/click-counter-Q5.kicad_sch": "21f2d332000b3fc44a2eb070c13ca509248d75c4432da17574b80f6f2ae689fd",
     "electronics/q5/display-1.kicad_sch": "6d02f6d76c44d883a7d9cf0bc3b39c24337fe2383c287e29fb34115236a6af02",
     "electronics/q5/display-2.kicad_sch": "7eac6c32626f0c0c7d62af0a99bb880c5a26b8581c26daa62b565982df4c8be7",
     "electronics/q5/fp-lib-table": "e02fa6180ad823b4036cc1de029665923d581495314e0ee2139056d48d5f3365",
+    "electronics/q5/gnd-stitch.json": "79a4aa2da4858eeb3a2429169b965c8f5ddb4e3f13b3fad6118e4ab090ed3843",
     "electronics/q5/locked-route-seed.json": "66aeceaed6338854321ee6423ad29d35f3f016db59d5ab97174ef5533d3a0148",
     "electronics/q5/mcu-1.kicad_sch": "d7ed494cc0648e473351ff84a35f25dacdc9b52cc28a2da90da923cdb609e1e7",
     "electronics/q5/mcu-2.kicad_sch": "a52551b795703f6b757a21af2408d165cb8a11c9812e39c58e9dc0ce32db9311",
@@ -253,6 +278,7 @@
     "electronics/q5/mcu-6.kicad_sch": "6e5561165cd52b504c99ef5e370130e78b0edfd7399b886f08120253ff108c7f",
     "electronics/q5/memory-1.kicad_sch": "5b76e080183bf5b5ba03847c9460d608cb37a66a99335b6fcdd05260531f7749",
     "electronics/q5/netlist-Q5.json": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+    "electronics/q5/pin1-markers.json": "f458b103f800ebde6fb57a444dbcdc5fa991af756e8c18cae6cc6a24d88662b9",
     "electronics/q5/placement.json": "a0151a48bdf6c94aa7ca3ecbd96f655435d50d31b07f0fd9c82f95483cc05fdc",
     "electronics/q5/schematic-netlist-Q5.xml": "4332ba78519a0f9d6d41b1023571d1ad64938647366ddfd68a9e59ecd8357b10",
     "electronics/q5/schematic-paths-Q5.json": "9dcaeb7369bd7591a5c922d97715ede3e12be8d32609a5e52cc1602cdd8a3777",
@@ -269,19 +295,20 @@
     "scripts/build_q5_board.py": "baa1653a67060b9d3a3a8d02035988747371ff28c6885f43d77486dca7c55e22",
     "scripts/build_q5_model.py": "1ad6f55dabb2b0da2f7a6ef9bf521b8fef8d631bf6654e42bd03695ff2dd6b98",
     "scripts/build_q5_schematic.py": "81968bc2452e53586e8c43ba02d35534ce4dd8d19c72c5fe83bae331469b392d",
-    "scripts/export_q5.py": "5d2eb66faf3f30710696bbe6d34f20f5195bfc16cecbc7f685d1c7cacc0f4dda",
-    "scripts/finish_q5_board.py": "d6ba5179ed4d922beccd69a232076ea560360a6f4c8d0106733365deb7628d1e",
+    "scripts/export_q5.py": "7426c83ae88432bc7801cd061ade174182e9e76639335e4c13fa5c2f6b959465",
+    "scripts/finish_q5_board.py": "1e747d03a17a2404cfaf1339ba99ecf7f7ba87c3d35a5ca3b8cb5e9510ff6381",
     "scripts/kicad_sexpr.py": "4a6c547f7f5bb0fcc7160da24c04e918c1d146026b4f990db624482fb8eacfeb",
     "scripts/measure_q5_routes.py": "9a103462bde70721f9a675581a48c9bfb4793495c42b37cf25223d003cb81f11",
+    "scripts/plan_q5_pin1_marks.py": "7057e6266de059df8aca139c8fb64aedecd6aa8cd6daabb30eca75a6b5dcf295",
     "scripts/plan_q5_stitching.py": "969c320248d4dbe8d533f7571b12da07f13e47499993a96efd7850169d218747",
     "scripts/prepare_q5_route.py": "fba01b2efb014a46dcce831413e7a8996939020a414e7c2b98c0400abe9257ba",
     "scripts/preroute_q5.py": "c7b3b374d016af414febac41171358ebd7bfcbb9d3ec1935378d91603486f430",
     "scripts/sync_q5_board.py": "74e5ef807d8a92a249edd2e319a1ef171b63d4dfe42c1bfb4583d8ad642e9fb7",
-    "scripts/verify_q5.py": "bd17ede2d39999cda30e542d293167808fcb889ffa1c566af3483327d0830bec",
-    "verification/q5-native-drc.json": "6234c1b079e48f1da76b09a1631a290322023be8cc76b19217e9d31346b5ab71",
-    "verification/q5-native-erc.json": "4a48137614d3d6976f8c35abb2fc1c4925300a5dc98ef87fe0c384405d07e1af",
-    "verification/q5-native-netlist.xml": "1fd2ad8245a48b201f6f95b78d7be41831b51b01ebc6b5abb8f46bc9597070ef",
-    "verification/q5-validation.json": "50c25a272b9c53a60e038965fe84ccfe282bb7e580524d11de2fb04bbc46aeb5"
+    "scripts/verify_q5.py": "9389d3cb525be2606792367964619a4fb1e0eacd73423cac4f255fd72437f10e",
+    "verification/q5-native-drc.json": "37a0c68d5efa9da30579d9b3f02868fd2d6b0efa772aa7a7b96dbb76b2ff742e",
+    "verification/q5-native-erc.json": "853d70448371d5fdb5e5c3668fccbb8d829f0b6f410a85a676199d83f682ff23",
+    "verification/q5-native-netlist.xml": "dc974490e33b9880007a6c6fc04ba662d958ac914f9e559670353bbb24c8776d",
+    "verification/q5-validation.json": "cf82baaf4bc080952151766e9ccff93fb008b65eaffc98723e064df6f4e2e663"
   },
   "kicad_cli": {
     "sha256": "03d0a691514fa384d4e4a81331c2ba5a872c8493fa78f54032aec011eeb22402",
@@ -291,7 +318,7 @@
   "quote_authorization": "JLCPCB quotes for variants A and B only (user, 25 Sep 2026); no order, payment or release",
   "revision": "Q5 engineering review candidate",
   "schema_version": 1,
-  "source_board_sha256": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+  "source_board_sha256": "77ad721f204d9de3e84c2ff0e6e263facbb2bcafe1e0a0a26f51a70f18e43562",
   "source_checks": {
     "catalog_observation_range_utc": [
       "2026-09-26T02:42:51.370Z",
