@@ -122,17 +122,20 @@ Stage 3 has already ruled out a dead short, so this stage looks for a part that 
 
 ### Stage 6 — Flash and commission (5 min) — tests A4, A6
 
-Claude drives this stage and tells you each physical step as it comes. The sequence:
+Claude drives this stage with the `flash-clickers` skill (PR #18 until it merges), over Remote Control from a separate worktree on the Mac, and tells you each physical step as it comes. Only the flash step writes anything; every other step is read-only.
 
-1. **Claude** runs `doctor` (tool and image check). Stops here if anything fails.
+1. **Claude** runs the skill's preflight (tools, image against the build manifest). Stops here if anything fails.
 2. **You** put the board in DFU, USB still connected:
-   1. **Hold RESET (○).**
-   2. Press and release the **pinhole** (SW3) with the paper clip.
-   3. **Release RESET.**
-3. **Claude** runs `list` and confirms exactly one `[0483:df11]` device with `@Internal Flash`. If none, Claude walks you through the troubleshooting table.
-4. **Claude** flashes (`clicker_flash.py flash`): image check, write, full read-back compare, start the application, log the chip's DFU serial. Claude copies the serial into the board log.
-5. **A6:** you say whether the digits appeared within about 1 s without pressing the pinhole. (If blank, Claude asks you to press the pinhole once and records that it was needed.)
-6. **Commissioning:** Claude asks you each step, one at a time, and records what you see:
+   1. **Hold RESET (○)** and keep holding it.
+   2. Press and release the **pinhole** (SW3) with the paper clip **while still holding RESET**. BOOT0 is read at the moment the pinhole is released, so letting go of RESET first just boots the blank flash and nothing appears on the Mac.
+   3. Then **release RESET**.
+   (Without K2 fitted, bridging TP2 to TP12 during the pinhole release does the same.)
+3. **Claude** waits for and probes the device: exactly one `0483:df11` "STM32 BOOTLOADER" with `@Internal Flash` at 0x08000000. Claude copies the DFU serial into the board log.
+4. **Claude** takes a read-only **backup** of the 128 KiB flash and the RDP/USER option words. A new board should classify as `blank` (all 0x00, not 0xFF). **If the backup read fails on a new board, the chip may be read-protected: STOP.** Never run an unprotect; it mass-erases.
+5. **Claude** flashes (`flash --no-leave`), then **verifies the device** by read-back while it is still in DFU, then sends **leave** to start the application, and records the result.
+6. **Keep USB connected for at least 5 s after the first start.** On first boot the firmware programs its brown-out option byte once and may reset itself; that is normal.
+7. **A6:** you say whether the digits appeared within about 1 s of the leave, without pressing the pinhole. (If blank, Claude asks you to press the pinhole once and records that it was needed.)
+8. **Commissioning:** Claude asks you each step, one at a time, and records what you see:
 
 | Step | Expected |
 |---|---|
@@ -141,9 +144,9 @@ Claude drives this stage and tells you each physical step as it comes. The seque
 | Press COUNT three times | `3`; battery bars or **CHG** visible |
 | Hold RESET 2 s, release | `0` |
 
-A first boot may reset itself once while the firmware programs its brown-out option byte; that is normal. **OPT** with no digits is a fail (STOP).
+**OPT** with no digits is a STOP. It is recoverable later over DFU or SWD, so don't set the board aside as dead.
 
-Result handling: **PASS** → continue. **VERIFY FAILED** or download failed → Claude retries once on the same board; a second failure is a STOP. If anything fails while the board is in DFU, **press the pinhole before unplugging**; Claude will remind you.
+Result handling: **PASS** → continue. **VERIFY FAILED** or download failed → the board stays in DFU, so Claude retries the flash once on the same board without you touching it; a second failure is a STOP. If anything fails while the board is in DFU, **press the pinhole before unplugging**; Claude will remind you.
 
 ### Stage 7 — Restart, cell and battery checks (10 min) — tests A5, B7, assembly step 5
 
@@ -183,9 +186,11 @@ About 40 minutes per bare board, plus the enclosure.
 
 | Symptom | Try |
 |---|---|
-| No DFU device | Data cable (try the second brand); RESET must still be held when the pinhole is released; another port or a powered hub |
+| No DFU device | Most often RESET was let go before the pinhole: hold RESET, press and release the pinhole, then release RESET. Then: data cable (try the second brand), another port, no hub |
 | More than one DFU device | One board at a time |
-| `WARNING: device reports … KiB flash` | Not an STM32L072CB: re-check the board and the MCU marking |
+| Device reports 192 KiB flash (`1536*128g`) | Expected: the L072CB ROM reports 192 KiB on this 128 KiB part, and the tool accepts it |
+| `WARNING: device reports … KiB flash` (any other size) | Not an STM32L072CB: re-check the board and the MCU marking |
+| Backup read fails | Possible read protection. STOP; never unprotect (mass-erase) |
 | Display blank after PASS | Press the pinhole once. Still blank: record a commissioning fail (DS1, its header or the module supply) |
 | `0 ERR` won't clear | The reset hold must be ≥ 2 s and released before 10 s, with no COUNT press during it. Still ERR: FRAM (U8) fault, STOP |
 | No CHG with USB and a part-charged cell | The NTC window holds charging off outside about 0–45 °C; check the room. Otherwise record a C4 fail |
