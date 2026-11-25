@@ -18,6 +18,8 @@ Test points: TP1 GND, TP2 VLOGIC, TP5 VBUS, TP6 SYS, TP9 COUNT_N, TP11 NRST, TP1
 
 ## A. Bring-up and programming (every unit)
 
+Operator procedure, one board at a time, with per-board logs: [board-bring-up.md](board-bring-up.md).
+
 | # | Test | Pass |
 |---|---|---|
 | A1 | Visual/X-ray from JLC: BT1, J1 stakes, QFN/WSON joints | No bridges; J1 stakes wetted |
