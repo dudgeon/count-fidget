@@ -12,17 +12,19 @@ The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. Their ru
 **Q5B** implements this in `mechanical/q5b/` (start at its README). Its generator is `scripts/build_q5b_enclosure.py` and its renders are in `scripts/render_q5b/`.
 
 Key facts:
-- **Body:** 47.0 × 59.0 × 20.0 mm.
+- **Body:** 47.0 × 64.0 × 20.0 mm (lengthened 25 Nov so all four screws go through the acrylic top).
 - **Faceplate:** one 4.5 mm clear faceplate with one key well, 1.0 mm over the OLED.
 - **Switch plate:** a hidden 1.5 mm black plate at the MX height, which retains the switches.
 - **Fixings:**
-  - 2 × M2 × 18 (faceplate) and 2 × M2 × 12 (plate) into hex nuts in pockets under the tray;
-  - printed 6.7 and 3.5 mm spacers.
+  - 4 × M2 × 18 through the faceplate into hex nuts in pockets under the tray: two in the board's upper holes, two on tray posts below the keys, outside the board (the board's lower holes are too close to the keycaps for an acrylic web);
+  - the lower screws also clamp the plate; printed pegs in the board's lower holes hold the board;
+  - printed 6.7 and 1.7 mm spacers.
 - **Checks:** zero intersections and zero collisions over 366 vertical assembly poses.
 
 Physical gates:
 - plate fit;
-- real keycap size and skirt (modelled OEM-like: 0.22 mm plan / 0.4 mm vertical to the lower screw heads);
+- real keycap size and skirt (modelled OEM-like);
+- peg-pin fit in the board holes;
 - nut pockets and spacers;
 - acrylic crazing;
 - OLED readability.

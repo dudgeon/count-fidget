@@ -1,18 +1,19 @@
 {
-  "generator": "da5706625e68775b2fee5a947d9899108cb805dd24a5ac86ad370688453487e7",
+  "generator": "77a76665608ad454ee65d783cb38361f7281018219ad07451aee0ea4ce9f51d6",
   "board": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
   "model": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
   "outputs": {
-    "tray-Q5B.stl": "a999040ceaf4e8245524094b51e91010f7dc0fd15a25c87863170625e97aa22c",
-    "plate-printable-Q5B.stl": "3828b1d3e93760a0c55d577777036975d62319e8fad7508c0d65b1156a5eb4ed",
-    "spacer-3.5-Q5B.stl": "eae4938f9c1ca2e0419126d0cbe0ac39a9efa61df607393e8b7edfe322e05f77",
+    "tray-Q5B.stl": "2863fa31bb6f9732eb858bf2a552b08ec02035af3bb5ce30fb5474cfdb940a83",
+    "plate-printable-Q5B.stl": "1f601b42112777d04a99011e68c10bb69bb3380df3084d6e8addd2c9a24a8db9",
     "spacer-6.7-Q5B.stl": "452817ea0a346bc0395e852ea93655ef48e007e6e04d290839d62c3372081c29",
-    "faceplate-acrylic-Q5B.dxf": "e2c1624fe0e7f56a3df8f033e6b85efd541513b9cb12d3847154ba98c5a0523d",
-    "faceplate-acrylic-Q5B.svg": "9a42c9d65d8e809a9e819c4684aeb7f9de6ae1520c3f04441aff7900947bd726",
-    "plate-acrylic-Q5B.dxf": "df4c4345d7582c1f35fedcd0d619c43706ed4eb26a867a5ac96f2f125919253c",
-    "plate-acrylic-Q5B.svg": "91ae21cdf2b96c3e5c46248f8572752641a0bd26c2fd65e5a1b59c7d28884a4f",
+    "spacer-1.7-Q5B.stl": "87e379501a30ba2b253d6a4333887ab546ba835c25bc9746536b18e870de5dd0",
+    "peg-3.5-Q5B.stl": "02b60bda5ad331146e6be997df92b560c156c0b9e16205dad60bd58ca623c9ee",
+    "faceplate-acrylic-Q5B.dxf": "6e8dfbe85d3cbd7dda3867f66779ee6a5cf389ad8a101f756d1f1885ca18ed23",
+    "faceplate-acrylic-Q5B.svg": "57ee592b0f61463eb998947e5dbd6c34b759bae1a2533f54fa6ec3a1d043a93d",
+    "plate-acrylic-Q5B.dxf": "dede65076eb2d295d2f9921a0d3fc70394b618314f9a24039c0cfdcf9607f15f",
+    "plate-acrylic-Q5B.svg": "03d44028c2cdc9b16ff3867f646e3d463aebb2c8631cc66b297397aec21b513c",
     "laser-coupon-Q5B.svg": "c46f7f4a6c3e3ed4aa093b9fface5767f63480309fc92aac0c6067426776df2e",
-    "enclosure-Q5B.step": "6a9596ec3b6742fc7a741a7e7869aa474b93ca4c2e2e2160b7a2ef2e0482d316",
-    "fit-report.json": "db572f0deef6dec9dd82e7348b4f5521cf4750e6c9442eff6b2a8ef8c46d5845"
+    "enclosure-Q5B.step": "52ac70a8ee37e56cf0aa5580a70cd08240b5338f12779231d80cd15ea476beba",
+    "fit-report.json": "87499164c13bf3b462205fd331f1b1b81836140c40a191e35f6d3a42e31a080e"
   }
 }

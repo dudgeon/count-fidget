@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Q5B: printed bezel tray + clear acrylic display window + acrylic MX switch plate, for the locked Q5 board.
+"""Q5B: printed bezel tray + one-piece clear acrylic faceplate on four screws + hidden MX switch plate, for the locked Q5 board.
 
 Successor to Q5A (mechanical/q5-acrylic), after the owner's review on 24 Nov 2026:
   * keys are Kailh Box Jade (3-pin, plate mount) with standard MX keycaps, not the HanElectricity
@@ -9,15 +9,18 @@ Successor to Q5A (mechanical/q5-acrylic), after the owner's review on 24 Nov 202
   * spacers are printable.
 
 Two laser-cut parts replace the Q5A lid:
-  plate  - 1.5 mm acrylic at the standard MX plate height (top = PCB top + 5.0) with 14.0 mm cut-outs.
+  plate  - hidden 1.5 mm plate at the standard MX plate height (top = PCB top + 5.0) with 14.0 mm cut-outs.
            Every MX/Box switch clips into it, so switch retention no longer depends on a rim overlap.
-           It covers the key area only and is clamped by the two lower screws on 3.5 mm spacers.
-  window - 4.5 mm clear acrylic over the display (underside = PCB top + 6.0, 0.3 mm over the OLED
-           maximum, as Q5A). It stops just above the keys and is clamped by the two upper screws on
-           6.0 mm spacers. Its thickness sinks the keys into a well framed by the window edge and the bezel.
+           It rests on two tray posts below the keys and is clamped there by the lower faceplate screws;
+           printed pegs in the board's lower holes locate it and hold the board down.
+  window - one-piece 4.5 mm clear faceplate (3/16 in accepted) over the whole top, underside PCB top + 6.7
+           (1.0 mm over the OLED maximum), one well round both keycaps. Four M2 x 18 screws go through it:
+           two in the board's upper holes on 6.7 mm spacers, two on the tray posts below the keys on 1.7 mm
+           spacers (the board's lower holes leave only 0.3 mm of acrylic to the key well).
 
 Stack (Z above the tray underside, mm):
-  floor 1.2 | 0.5 gap | BT1 5.52 | PCB 7.22-8.82 | plate 12.32-13.82 | window 14.82-19.32 | tray top 19.32
+  floor 1.2 | PCB 7.22-8.82 | plate 12.32-13.82 | faceplate 15.52-20.02 | tray top 20.02
+  Body 47.0 x 64.0 mm.
 
 Geometry is built in the Q5 builder frame (X = PCB_X - 21, Y = PCB_Y - 27, Y down) and exported mirrored to
 right-handed CAD coordinates (Y = 27 - PCB_Y). Board envelopes are reused read-only from the Q5A generator.
@@ -56,7 +59,17 @@ TOP = WIN_TOP                       # bezel top flush with the nominal window to
 GAP, WALL = 0.5, 2.0                # board clearance; wall = 5 x 0.4 mm perimeters
 BEZEL = 1.2                         # wall left beside the laser parts (3 perimeters)
 CLEAR = 0.25                        # laser part to bezel, each side
-W, D = 42 + 2 * (GAP + WALL), 54 + 2 * (GAP + WALL)      # 47.0 x 59.0
+PART_HOLE = 2.4
+W = 42 + 2 * (GAP + WALL)            # 47.0
+Y_TOP = -(27 + GAP + WALL)           # -29.5: display end, as Q5A/Q5B v1
+# Four screws through the one faceplate. The lower pair cannot use the board's lower holes (+-18.5, 25): a hole there
+# leaves 0.3 mm of acrylic to the key well. They sit just below the keys instead, outside the board edge, on tray posts.
+FACE_LOW_Y = 27 + GAP + 2.2          # 29.7: post (R2.2) clears the board edge by the board gap
+FACE_LOW = [(-18.5, FACE_LOW_Y), (18.5, FACE_LOW_Y)]
+PART_BOT_Y = FACE_LOW_Y + PART_HOLE / 2 + 2.15          # 33.05: faceplate/plate bottom edge
+Y_BOT = PART_BOT_Y + 0.25 + 1.2      # 34.5 (CLEAR + BEZEL)
+D = Y_BOT - Y_TOP                    # 64.0
+YC = (Y_TOP + Y_BOT) / 2             # 2.5: tray centre offset (board frame)
 R_IN = 1.4
 R_OUT = R_IN + WALL
 R_POCKET = R_OUT - BEZEL
@@ -68,10 +81,9 @@ GUSSET_TOP = FLOOR + 3.3
 
 # ---- laser parts ------------------------------------------------------------------
 PART_HALF_W = W / 2 - BEZEL - CLEAR                     # 22.05
-PART_TOP_Y = -(D / 2 - BEZEL - CLEAR)                   # -28.05
+PART_TOP_Y = Y_TOP + BEZEL + CLEAR                      # -28.05
 WELL = (2 * (abs(q5.KEYS[0][0]) + 9.1 + 0.6), 18.2 + 2 * 0.6, 1.0)   # key well in the faceplate: 1u caps + 0.6 mm all round
 PLATE_EDGE_Y = 4.45                 # plate top edge: 0.5 mm clear of the OLED module footprint
-PART_HOLE = 2.4
 SWITCH_CUT, SWITCH_CUT_R = 14.0, 0.3
 
 # ---- keys: Kailh Box Jade + standard 1u MX keycap (envelopes, not vendor CAD) ------
@@ -92,8 +104,9 @@ NUT_AF, NUT_H = 4.0, 1.6             # M2 hex nut, ISO 4032
 NUT_POCKET_AF = 4.15                 # snug for PETG; nut pressed in from below
 HOLE_R = 1.2                         # 2.4 clearance through the bosses
 BOSS_R, BOSS_BASE_R = 2.2, 3.7
-UPPER = dict(len=18.0, head_z=WIN_TOP, nut_top=3.7)     # through window, 6.0 spacer, PCB, tray
-LOWER = dict(len=12.0, head_z=PLATE_TOP, nut_top=3.4)   # through plate, 3.5 spacer, PCB, tray
+UPPER = dict(len=18.0, head_z=WIN_TOP, nut_top=3.7)     # through faceplate, 6.7 spacer, PCB, tray boss
+LOWER = dict(len=18.0, head_z=WIN_TOP, nut_top=3.7)     # through faceplate, 1.7 spacer, plate, tray post (outside the board)
+PEG_PIN_R = 0.95                     # locating pegs in the board's lower holes: 1.9 pins into the 2.2 / 2.4 holes
 
 
 def rrect(w, d, r, h, z, x=0, y=0):
@@ -140,20 +153,20 @@ def keycap(x, y, base=CAP_BASE):
 
 def make_window(mounts, t=WIN_T):
     """One-piece clear faceplate over the whole top: covers the display, one well round both keycaps,
-    clamped by the two upper screws; its lower strip rests 0.1 mm over the lower (plate) screw heads."""
-    win = rrect(2 * PART_HALF_W, -2 * PART_TOP_Y, R_POCKET - CLEAR, t, WIN_Z)
+    four screw holes (two upper board holes, two posts below the keys)."""
+    win = rrect(2 * PART_HALF_W, PART_BOT_Y - PART_TOP_Y, R_POCKET - CLEAR, t, WIN_Z, 0, (PART_TOP_Y + PART_BOT_Y) / 2)
     for x, y in mounts:
-        if y < 0:
-            win = win.cut(cyl(PART_HOLE / 2, t + 1, WIN_Z - 0.5, x, y))
+        win = win.cut(cyl(PART_HOLE / 2, t + 1, WIN_Z - 0.5, x, y))
     win = win.cut(rrect(WELL[0], WELL[1], WELL[2], t + 1, WIN_Z - 0.5, 0, KEYS[0][1]))
     return win
 
 
-def make_plate(mounts):
-    plate = span(PLATE_EDGE_Y, -PART_TOP_Y, PLATE_T, PLATE_Z, -PART_HALF_W, PART_HALF_W, r_top=0.5, r_bot=R_POCKET - CLEAR)
-    for x, y in mounts:
-        if y > 0:
-            plate = plate.cut(cyl(PART_HOLE / 2, PLATE_T + 1, PLATE_Z - 0.5, x, y))
+def make_plate(points):
+    """Hidden switch plate: clamped between the lower tray posts and the faceplate's 1.7 mm spacers by the two lower
+    faceplate screws; the pegs in the board's lower holes locate it and hold the board down."""
+    plate = span(PLATE_EDGE_Y, PART_BOT_Y, PLATE_T, PLATE_Z, -PART_HALF_W, PART_HALF_W, r_top=0.5, r_bot=R_POCKET - CLEAR)
+    for x, y in points:
+        plate = plate.cut(cyl(PART_HOLE / 2, PLATE_T + 1, PLATE_Z - 0.5, x, y))
     for x, y in KEYS:
         plate = plate.cut(rrect(SWITCH_CUT, SWITCH_CUT, SWITCH_CUT_R, PLATE_T + 1, PLATE_Z - 0.5, x, y))
     return plate
@@ -167,40 +180,51 @@ def fastener(x, y, spec):
 
 def build(refs):
     env = q5a.build(refs)            # board, components, envelopes on the identical stack
-    mounts = env['mounts']
+    board_mounts = env['mounts']
+    upper = [m for m in board_mounts if m[1] < 0]
+    pegs_at = [m for m in board_mounts if m[1] > 0]
+    mounts = upper + FACE_LOW        # the four faceplate screws
     usb_y, usb_axis = env['usb_y'], env['usb_axis']
     g = {k: env[k] for k in ('pcb', 'holder', 'oled_max', 'oled_header', 'usb', 'mcu', 'usb_plug', 'bottom', 'tails', 'module_z', 'mouth_x')}
-    g['mounts'], g['usb_y'] = mounts, usb_y
+    g['mounts'], g['board_mounts'], g['peg_points'], g['usb_y'] = mounts, board_mounts, pegs_at, usb_y
     spec = {m: (UPPER if m[1] < 0 else LOWER) for m in mounts}
+    clip = rounded(W - 0.2, D - 0.2, TOP, 0, r=R_OUT - 0.1, y=YC)
     # ---- tray ----
-    tray = rounded(W, D, TOP, r=R_OUT)
+    tray = rounded(W, D, TOP, r=R_OUT, y=YC)
     tray = tray.faces('>Z').edges().chamfer(TOP_CHAMFER)
     tray = tray.faces('<Z').edges().chamfer(BOTTOM_CHAMFER)
-    tray = tray.cut(rounded(W - 2 * WALL, D - 2 * WALL, TOP, FLOOR, r=R_IN))
-    pocket = rounded(W - 2 * BEZEL, D - 2 * BEZEL, TOP, 0, r=R_POCKET)
+    tray = tray.cut(rounded(W - 2 * WALL, D - 2 * WALL, TOP, FLOOR, r=R_IN, y=YC))
+    pocket = rounded(W - 2 * BEZEL, D - 2 * BEZEL, TOP, 0, r=R_POCKET, y=YC)
     win_ledge, plate_ledge = WIN_Z - LEDGE_DROP, PLATE_Z - LEDGE_DROP
-    tray = tray.cut(pocket.intersect(block(W, SPLIT_Y + D / 2, TOP, win_ledge, 0, (SPLIT_Y - D / 2) / 2)))
-    tray = tray.cut(pocket.intersect(block(W, D / 2 - SPLIT_Y, TOP, plate_ledge, 0, (SPLIT_Y + D / 2) / 2)))
-    iw, idp = W / 2 - WALL, D / 2 - WALL
-    boxes = [(-W / 2, -D / 2, 0, W / 2, D / 2, FLOOR),
-             (-W / 2, -D / 2, 0, -iw + R_IN, D / 2, TOP), (iw - R_IN, -D / 2, 0, W / 2, D / 2, TOP),
-             (-W / 2, -D / 2, 0, W / 2, -idp + R_IN, TOP), (-W / 2, idp - R_IN, 0, W / 2, D / 2, TOP)]
-    for x, y in mounts:
-        s = spec[(x, y)]
-        base_top = s['nut_top'] + 1.2
-        tray = tray.union(cyl(BOSS_R, PCB_Z - FLOOR, FLOOR, x, y)).union(cyl(BOSS_BASE_R, base_top - FLOOR, FLOOR, x, y)
-                                                                         .intersect(rounded(W - 0.2, D - 0.2, TOP, 0, r=R_OUT - 0.1)))
-        boxes.append((min(x, math.copysign(21 + GAP, x)) - BOSS_BASE_R, min(y, math.copysign(27 + GAP, y)) - BOSS_BASE_R, 0,
-                      max(x, math.copysign(21 + GAP, x)) + BOSS_BASE_R, max(y, math.copysign(27 + GAP, y)) + BOSS_BASE_R, PCB_Z))
+    tray = tray.cut(pocket.intersect(block(W, SPLIT_Y - Y_TOP, TOP, win_ledge, 0, (SPLIT_Y + Y_TOP) / 2)))
+    tray = tray.cut(pocket.intersect(block(W, Y_BOT - SPLIT_Y, TOP, plate_ledge, 0, (SPLIT_Y + Y_BOT) / 2)))
+    iw = W / 2 - WALL
+    boxes = [(-W / 2, Y_TOP, 0, W / 2, Y_BOT, FLOOR),
+             (-W / 2, Y_TOP, 0, -iw + R_IN, Y_BOT, TOP), (iw - R_IN, Y_TOP, 0, W / 2, Y_BOT, TOP),
+             (-W / 2, Y_TOP, 0, W / 2, Y_TOP + WALL + R_IN, TOP), (-W / 2, Y_BOT - WALL - R_IN, 0, W / 2, Y_BOT, TOP)]
+
+    def gusset(x, y):
         cx, cy = math.copysign(21 + GAP, x), math.copysign(27 + GAP, y)
         ang = math.degrees(math.atan2(cy - y, cx - x))
         length = math.hypot(cx - x, cy - y) + 0.6
-        gusset = (block(length, 1.2, GUSSET_TOP - FLOOR, FLOOR).translate((length / 2, 0, 0))
-                  .rotate((0, 0, 0), (0, 0, 1), ang).translate((x, y, 0)))
-        tray = tray.union(gusset.intersect(rounded(W - 0.2, D - 0.2, TOP, 0, r=R_OUT - 0.1)))
+        return (block(length, 1.2, GUSSET_TOP - FLOOR, FLOOR).translate((length / 2, 0, 0))
+                .rotate((0, 0, 0), (0, 0, 1), ang).translate((x, y, 0))).intersect(clip)
+    for x, y in board_mounts:        # bosses under all four board holes (upper: screw + nut; lower: peg support)
+        tray = tray.union(cyl(BOSS_R, PCB_Z - FLOOR, FLOOR, x, y))
+        if y < 0:
+            tray = tray.union(cyl(BOSS_BASE_R, spec[(x, y)]['nut_top'] + 1.2 - FLOOR, FLOOR, x, y).intersect(clip))
+        r = BOSS_BASE_R if y < 0 else BOSS_R
+        boxes.append((min(x, math.copysign(21 + GAP, x)) - r, min(y, math.copysign(27 + GAP, y)) - r, 0,
+                      max(x, math.copysign(21 + GAP, x)) + r, max(y, math.copysign(27 + GAP, y)) + r, PCB_Z))
+        tray = tray.union(gusset(x, y))
+    for x, y in FACE_LOW:            # posts outside the board edge, up to the plate underside, tied into the end wall
+        tray = tray.union(cyl(BOSS_R, PLATE_Z - FLOOR, FLOOR, x, y))
+        tray = tray.union(block(2 * BOSS_R, Y_BOT - WALL + 0.5 - y, PLATE_Z - FLOOR, FLOOR, x, (y + Y_BOT - WALL + 0.5) / 2).intersect(clip))
+        tray = tray.union(cyl(BOSS_BASE_R, spec[(x, y)]['nut_top'] + 1.2 - FLOOR, FLOOR, x, y).intersect(clip))
+        boxes.append((x - BOSS_BASE_R, y - BOSS_BASE_R, 0, x + BOSS_BASE_R, Y_BOT, PLATE_Z))
     for x, y in mounts:
         s = spec[(x, y)]
-        tray = tray.cut(cyl(HOLE_R, PCB_Z + 0.1, -0.05, x, y))
+        tray = tray.cut(cyl(HOLE_R, PLATE_Z + 0.1, -0.05, x, y))
         tray = tray.cut(hexagon(NUT_POCKET_AF, s['nut_top'] + 0.05, -0.05, x, y))
     for x, y in q5.LOAD_SUPPORTS:
         tray = tray.union(cyl(1.3, PCB_Z - FLOOR, FLOOR, x, y))
@@ -219,7 +243,7 @@ def build(refs):
     warn = None
     for line, size, dy in (('LIR2032 ONLY', 2.6, 11.5), ('rechargeable - never CR2032', 1.7, 8.0)):
         t = (cq.Workplane('XY').text(line, size, 0.45, fontPath=FONT, halign='center', valign='center')
-             .translate((0, -D / 2 + dy, -0.05)))   # reads correctly from below after the CAD-frame mirror
+             .translate((0, Y_TOP + dy, -0.05)))   # reads correctly from below after the CAD-frame mirror
         warn = t if warn is None else warn.union(t)
     bb = warn.val().BoundingBox()
     assert bb.xlen < W - 2 * (BOTTOM_CHAMFER + 3), f'Underside text too wide: {bb.xlen:.1f} mm'
@@ -227,17 +251,19 @@ def build(refs):
     g['tray'], g['tray_boxes'] = tray, boxes
     # ---- laser parts, keys, fasteners ----
     g['window'] = make_window(mounts)
-    g['plate'] = make_plate(mounts)
+    g['plate'] = make_plate(FACE_LOW + pegs_at)
     g['switches'] = [switch_envelope(x, y) for x, y in KEYS]
     g['keycaps'] = [keycap(x, y) for x, y in KEYS]
     g['spacers'] = []
     g['screws'], g['nuts'] = [], []
     for x, y in mounts:
-        top = WIN_Z if y < 0 else PLATE_Z
-        g['spacers'].append(cyl(2.0, top - PCB_TOP, PCB_TOP, x, y).cut(cyl(1.15, top - PCB_TOP + 1, PCB_TOP - 0.5, x, y)))
+        bot = PCB_TOP if y < 0 else PLATE_TOP
+        g['spacers'].append(cyl(2.0, WIN_Z - bot, bot, x, y).cut(cyl(1.15, WIN_Z - bot + 1, bot - 0.5, x, y)))
         sc, nut = fastener(x, y, spec[(x, y)])
         g['screws'].append(sc)
         g['nuts'].append(nut)
+    g['pegs'] = [cyl(2.0, PLATE_Z - PCB_TOP, PCB_TOP, x, y).union(cyl(PEG_PIN_R, 1.4, PCB_TOP - 1.4, x, y))
+                 .union(cyl(PEG_PIN_R, PLATE_T - 0.2, PLATE_Z, x, y)) for x, y in pegs_at]
     g['spec'] = spec
     return g
 
@@ -263,6 +289,7 @@ def main():
     spacers = [(f'spacer-{i+1}', s) for i, s in enumerate(g['spacers'])]
     screws = [(f'screw-{i+1}', s) for i, s in enumerate(g['screws'])]
     nuts = [(f'nut-{i+1}', s) for i, s in enumerate(g['nuts'])]
+    pegs = [(f'peg-{i+1}', s) for i, s in enumerate(g['pegs'])]
     hits = []
 
     def check(a, sa, b, sb, tol=1e-5):
@@ -270,22 +297,23 @@ def main():
         if v > tol:
             hits.append(dict(a=a, b=b, intersection_mm3=round(v, 6)))
     # Tray: clear of every component, switch, laser part, spacer, screw and nut (screws pass clearance holes).
-    for n, s in comps + sw + [('USB-plug-access', g['usb_plug']), ('window', win), ('plate', plate)] + spacers + screws + nuts:
+    for n, s in comps + sw + [('USB-plug-access', g['usb_plug']), ('window', win), ('plate', plate)] + spacers + screws + nuts + pegs:
         if n != 'PCB':
             check('tray', tray, n, s)
-    for n, s in comps + spacers + nuts:
-        if n != 'PCB':
-            for m, sc in screws:
-                if not (n.startswith('spacer') or n.startswith('nut')):
-                    check(m, sc, n, s)
+    for n, s in comps + pegs + [('USB-plug-access', g['usb_plug'])]:
+        for (m, sc), pt in zip(screws, g['mounts']):
+            if n != 'PCB' or pt[1] > 0:          # the lower screws pass outside the board, so check them against it too
+                check(m, sc, n, s)
     for part, shape in (('window', win), ('plate', plate)):
-        for n, s in comps + sw + screws:
-            if n == 'PCB':
+        for n, s in comps + sw + screws + pegs:
+            if n == 'PCB' or (part == 'plate' and n.startswith('peg')):
                 continue
             check(part, shape, n, s)
     check('window', win, 'plate', plate)
-    for i, (n, s) in enumerate(spacers):
-        check(n, s, 'switches', sw[0][1].union(sw[3][1]))
+    for n, s in spacers + pegs:
+        for m, o in sw + comps:
+            if m != 'PCB' or n.startswith('spacer'):
+                check(n, s, m, o)
     # Keycaps at rest and pressed (full travel, plus wobble as a 0.3 mm larger skirt) against our parts.
     thick_win = make_window(g['mounts'], WIN_T_RANGE[1])
     for i, (x, y) in enumerate(KEYS, 1):
@@ -300,16 +328,12 @@ def main():
     def touches_tray(bb):
         return any(bb.xmin < b[3] and bb.xmax > b[0] and bb.ymin < b[4] and bb.ymax > b[1] and bb.zmin < b[5] and bb.zmax > b[2]
                    for b in g['tray_boxes'])
-    low = [i for i, m in enumerate(g['mounts']) if m[1] > 0]
-    high = [i for i, m in enumerate(g['mounts']) if m[1] < 0]
-    board = [n_s for n_s in comps]
-    stages = [('board-into-tray', board, [('tray', tray)]),
-              ('plate-with-switches-and-low-spacers', [('plate', plate)] + sw + [spacers[i] for i in low],
-               [n_s for n_s in comps if n_s[0] != 'PCB'] + [('tray', tray)]),
-              ('lower-screws', [screws[i] for i in low], [('plate', plate), ('tray', tray)] + sw),
-              ('window-with-high-spacers', [('window', win)] + [spacers[i] for i in high],
-               [n_s for n_s in comps if n_s[0] != 'PCB'] + sw + [('plate', plate), ('tray', tray)] + [screws[i] for i in low]),
-              ('upper-screws', [screws[i] for i in high], [('window', win), ('tray', tray)]),
+    others = [n_s for n_s in comps if n_s[0] != 'PCB']
+    stages = [('board-into-tray', comps, [('tray', tray)]),
+              ('pegs', pegs, others + [('tray', tray)]),
+              ('plate-with-switches', [('plate', plate)] + sw, others + pegs + [('tray', tray)]),
+              ('faceplate-with-spacers', [('window', win)] + spacers, others + sw + pegs + [('plate', plate), ('tray', tray)]),
+              ('screws', screws, [('window', win), ('plate', plate), ('tray', tray)] + pegs),
               ('keycaps', [(f'keycap-{i+1}', c) for i, c in enumerate(caps)], [('window', win), ('plate', plate), ('tray', tray)] + screws)]
     for stage, moving, obstacles in stages:
         for step in range(61):
@@ -336,8 +360,8 @@ def main():
     for m in g['mounts']:
         s = g['spec'][m]
         tip = s['head_z'] - s['len']
-        for t in (WIN_T_RANGE if m[1] < 0 else (PLATE_T,)):
-            shift = (t - WIN_T) if m[1] < 0 else 0
+        for t in WIN_T_RANGE + (4.7625,):
+            shift = t - WIN_T
             nut_bottom = s['nut_top'] - NUT_H
             engage[f"{'upper' if m[1] < 0 else 'lower'}@{t}"] = dict(
                 thread_in_nut=round(min(NUT_H, s['nut_top'] - (tip + shift)), 3),
@@ -347,15 +371,16 @@ def main():
         'holder_to_floor': g['holder'].val().distance(floor_top.val()),
         'keycap_skirt_rest_above_window_top': CAP_B - WIN_TOP,
         'keycap_skirt_pressed_above_plate_top': CAP_B - TRAVEL - PLATE_TOP,
-        'keycap_skirt_pressed_above_lower_screw_heads': CAP_B - TRAVEL - (PLATE_TOP + HEAD_H),
-        'keycap_to_lower_screw_head_plan': min(c.val().distance(h.val()) for c in cap_skirts for h in head_rings),
+        'keycap_to_screw_head_plan': min(c.val().distance(h.val()) for c in cap_skirts for h in head_rings),
         'keycap_to_faceplate_well_plan': (WELL[1] - CAP_BASE) / 2,
-        'faceplate_to_lower_screw_heads': WIN_Z - (PLATE_TOP + HEAD_H),
-        'faceplate_strip_below_well': -PART_TOP_Y - (KEYS[0][1] + WELL[1] / 2),
+        'faceplate_lower_hole_to_well': FACE_LOW_Y - PART_HOLE / 2 - (KEYS[0][1] + WELL[1] / 2),
+        'faceplate_strip_below_well': PART_BOT_Y - (KEYS[0][1] + WELL[1] / 2),
+        'lower_post_to_board_edge': FACE_LOW_Y - BOSS_R - 27,
         'faceplate_side_rail': PART_HALF_W - WELL[0] / 2,
         'plate_edge_to_oled_footprint': PLATE_EDGE_Y - 3.95,
         'keycap_top_above_bezel': CAP_B + CAP_H - TOP,
-        'part_hole_edge_to_part_edge_min': min(min(PART_HALF_W - abs(x), abs(PART_TOP_Y) - abs(y)) - PART_HOLE / 2 for x, y in g['mounts']),
+        'part_hole_edge_to_part_edge_min': min(min(PART_HALF_W - abs(x), (y - PART_TOP_Y) if y < 0 else (PART_BOT_Y - y)) - PART_HOLE / 2
+                                               for x, y in g['mounts']),
         'plate_switch_cutout_web': (KEYS[1][0] - KEYS[0][0]) - SWITCH_CUT,
         'plate_top_edge_to_cutout': (KEYS[0][1] - SWITCH_CUT / 2) - PLATE_EDGE_Y,
         'usb_mouth_to_outer_wall': W / 2 - g['mouth_x'],
@@ -363,7 +388,8 @@ def main():
     }
     assert sha(q5.BOARD) == data['board_sha256'] and sha(q5.MODEL) == data['model_sha256'], 'Source changed during build'
     solids = {n: dict(valid=s.val().isValid(), count=len(s.solids().vals()), volume_mm3=round(volume(s), 3))
-              for n, s in (('tray', tray), ('window', win), ('plate', plate), ('spacer-6.0', g['spacers'][0]))}
+              for n, s in (('tray', tray), ('window', win), ('plate', plate), ('spacer-6.7', g['spacers'][0]),
+                           ('spacer-1.7', g['spacers'][-1]), ('peg', g['pegs'][0]))}
     report = dict(
         status='Q5B engineering fit candidate for the ordered Q5 board (Kailh Box Jade, standard MX keycaps); physical qualification pending',
         body_mm=[round(W, 3), round(D, 3), round(TOP, 3)],
@@ -375,11 +401,12 @@ def main():
         window=dict(material='clear cast acrylic', thickness=WIN_T, accepted=list(WIN_T_RANGE),
                     outline=[round(2 * PART_HALF_W, 3), round(-2 * PART_TOP_Y, 3)], key_well=list(WELL), holes=PART_HOLE),
         plate=dict(material='hidden: black cast acrylic (laser) or printed PETG (plate-printable-Q5B.stl)', thickness=PLATE_T,
-                   outline=[round(2 * PART_HALF_W, 3), round(-PART_TOP_Y - PLATE_EDGE_Y, 3)], switch_cutout=SWITCH_CUT, holes=PART_HOLE),
-        fasteners=dict(upper='2 x M2 x 18 pan-head machine screw (ISO 7045/DIN 7985) through faceplate, 6.7 mm spacer, PCB, tray',
-                       lower='2 x M2 x 12 pan-head machine screw through plate, 3.5 mm spacer, PCB, tray',
+                   outline=[round(2 * PART_HALF_W, 3), round(PART_BOT_Y - PLATE_EDGE_Y, 3)], switch_cutout=SWITCH_CUT, holes=PART_HOLE),
+        fasteners=dict(upper='2 x M2 x 18 pan-head machine screw (ISO 7045/DIN 7985) through faceplate, 6.7 mm spacer, PCB upper holes, tray boss',
+                       lower='2 x M2 x 18 pan-head machine screw through faceplate, 1.7 mm spacer, plate, tray post below the keys (outside the board)',
                        nuts=f'4 x M2 hex nut (4.0 AF x 1.6) in hex pockets {NUT_POCKET_AF} AF open to the underside',
-                       spacers='2 x 6.7 mm + 2 x 3.5 mm, OD 4.0 / ID 2.3, printed (spacer-6.7-Q5B.stl, spacer-3.5-Q5B.stl)',
+                       spacers='2 x 6.7 mm + 2 x 1.7 mm, OD 4.0 / ID 2.3, printed (spacer-6.7-Q5B.stl, spacer-1.7-Q5B.stl)',
+                       pegs='2 x printed 3.5 mm locating pegs (OD 4.0, 1.9 mm pins) in the board lower holes: hold the board down under the plate (peg-3.5-Q5B.stl)',
                        thread_engagement_mm=engage),
         valid_solids=solids, reported_intersections=hits,
         assembly_path_checks=dict(poses=poses, sampled_intersection_tests=tests, step_mm=0.5, max_lift_mm=30, collisions=motion,
@@ -450,20 +477,20 @@ def export(g, report):
     mirror = lambda s: s.mirror('XZ')
     stl = {'tray-Q5B.stl': g['tray'], 'plate-printable-Q5B.stl': g['plate'].translate((0, 0, -PLATE_Z))}
     for i, m in enumerate(g['mounts']):
-        name = f'spacer-{HIGH_SPACER:.1f}-Q5B.stl' if m[1] < 0 else f'spacer-{LOW_SPACER:.1f}-Q5B.stl'
-        stl[name] = g['spacers'][i].translate((-m[0], -m[1], -PCB_TOP))
+        name = f'spacer-{HIGH_SPACER:.1f}-Q5B.stl' if m[1] < 0 else f'spacer-{WIN_Z - PLATE_TOP:.1f}-Q5B.stl'
+        stl[name] = g['spacers'][i].translate((-m[0], -m[1], -(PCB_TOP if m[1] < 0 else PLATE_TOP)))
+    pm = g['peg_points'][0]
+    stl[f'peg-{LOW_SPACER:.1f}-Q5B.stl'] = g['pegs'][0].translate((-pm[0], -pm[1], -(PCB_TOP - 1.4)))
     for name, shape in stl.items():
         cq.exporters.export(mirror(shape), str(OUT / name), tolerance=0.02, angularTolerance=0.1)
     report['stl_mesh_checks'] = {name: q5.mesh_check(OUT / name) for name in stl}
     for part, z in (('window', WIN_Z), ('plate', PLATE_Z)):
         face = mirror(g[part]).faces('<Z').val().translate((0, 0, -z))
         cq.exporters.export(cq.Workplane('XY').add(face), str(OUT / f"{'faceplate' if part == 'window' else part}-acrylic-Q5B.dxf"))
-    hi = [m for m in g['mounts'] if m[1] < 0]
-    lo = [m for m in g['mounts'] if m[1] > 0]
     write_svg(OUT / 'faceplate-acrylic-Q5B.svg', f'Count Fidget Q5B faceplate: clear cast acrylic {WIN_T} mm (3/16 in OK), 1 part.',
-              PART_TOP_Y, -PART_TOP_Y, R_POCKET - CLEAR, R_POCKET - CLEAR, hi, [], wells=[(0, KEYS[0][1])])
+              PART_TOP_Y, PART_BOT_Y, R_POCKET - CLEAR, R_POCKET - CLEAR, g['mounts'], [], wells=[(0, KEYS[0][1])])
     write_svg(OUT / 'plate-acrylic-Q5B.svg', f'Count Fidget Q5B switch plate: cast acrylic {PLATE_T} mm, 1 part.',
-              PLATE_EDGE_Y, -PART_TOP_Y, 0.5, R_POCKET - CLEAR, lo, KEYS)
+              PLATE_EDGE_Y, PART_BOT_Y, 0.5, R_POCKET - CLEAR, FACE_LOW + g['peg_points'], KEYS)
     write_coupon(OUT)
     assy = cq.Assembly(name='Count-Fidget-Q5B')
     for key, col in {'tray': '#5f6166', 'window': '#d8f0f4', 'plate': '#16171a', 'pcb': '#1f6b3a', 'holder': '#ece6d6',
@@ -479,6 +506,8 @@ def export(g, report):
         assy.add(mirror(s), name=f'spacer-{i}', color=cq.Color('#3a3f46'))
         assy.add(mirror(sc), name=f'screw-{i}', color=cq.Color('#9aa3aa'))
         assy.add(mirror(n), name=f'nut-{i}', color=cq.Color('#9aa3aa'))
+    for i, pg in enumerate(g['pegs'], 1):
+        assy.add(mirror(pg), name=f'peg-{i}', color=cq.Color('#3a3f46'))
     for n, s in g['bottom']:
         assy.add(mirror(s), name=f'env-{n}', color=cq.Color('#3a3f46'))
     assy.export(str(OUT / 'enclosure-Q5B.step'))

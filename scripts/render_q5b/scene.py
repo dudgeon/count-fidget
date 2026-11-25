@@ -748,7 +748,7 @@ def build(**opts):
     # Screws rotate about their own axes; give them local origins.
     for i, (x, y) in enumerate(md['mounts'], 1):
         set_origin(parts[f'screw-{i}'], (x * MM, y * MM, md['screw_head_z'][i - 1] * MM))
-        set_origin(parts[f'spacer-{i}'], (x * MM, y * MM, md['pcb_top'] * MM))
+        set_origin(parts[f'spacer-{i}'], (x * MM, y * MM, md['spacer_base_z'][i - 1] * MM))
     for i, (x, y) in enumerate(md['keys'], 1):
         set_origin(parts[f'keycap-{i}'], (x * MM, y * MM, md['keycap_top'] * MM))
     pcb_names = [n for n in parts if n.startswith(('oled', 'bt1', 'sw1-socket', 'sw2-socket', 'sw3'))]
@@ -758,8 +758,8 @@ def build(**opts):
     for i in (1, 2):
         G[f'sw{i}'] = group(f'G_SW{i}', [parts[n] for n in parts if n.startswith(f'switch-{i}-')])
         G[f'key{i}'] = group(f'G_KEY{i}', [parts[f'keycap-{i}']])
-    G['plate'] = group('G_PLATE', [parts['plate']] + [parts[f'spacer-{i}'] for i in md['lower']] + [parts[f'screw-{i}'] for i in md['lower']])
-    G['window'] = group('G_WINDOW', [parts['window']] + [parts[f'spacer-{i}'] for i in md['upper']] + [parts[f'screw-{i}'] for i in md['upper']])
+    G['plate'] = group('G_PLATE', [parts['plate']] + [parts[f'peg-{i}'] for i in range(1, md['pegs'] + 1)])
+    G['window'] = group('G_WINDOW', [parts['window']] + [parts[f'spacer-{i}'] for i in range(1, 5)] + [parts[f'screw-{i}'] for i in range(1, 5)])
     cyclorama(mats['backdrop'])
     world_hdri(o['hdri'], strength=o.get('hdri_strength', 0.22), rotation=o.get('hdri_rotation', 0.6))
     home = {k: g.location.copy() for k, g in G.items()}

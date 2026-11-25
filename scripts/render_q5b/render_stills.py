@@ -27,8 +27,8 @@ def explode(ctx, amount=1.0):
     G['window'].location.z = 0.054 * amount
     for i in range(1, 5):
         up = i in md['upper']
-        P[f'screw-{i}'].location.z = md['screw_head_z'][i - 1] * MM + (0.012 if up else 0.010) * amount
-        P[f'spacer-{i}'].location.z = md['pcb_top'] * MM - (0.006 if up else 0.003) * amount
+        P[f'screw-{i}'].location.z = md['screw_head_z'][i - 1] * MM + 0.012 * amount
+        P[f'spacer-{i}'].location.z = md['spacer_base_z'][i - 1] * MM - (0.006 if up else 0.004) * amount
         P[f'nut-{i}'].location.z = -0.010 * amount
 
 
@@ -45,8 +45,8 @@ def flip_pcb(ctx):
 
 SHOTS = {
     # name: (camera location, target, lens, fstop or None, focus point or None, setup)
-    'hero': ((-0.125, -0.180, 0.245), (0.0, 0.0015, 0.0135), 85, 11, (0.0, -0.002, 0.019), None),
-    'top': ((0.0, -0.0005, 0.44), (0.0, 0.0, 0.0), 135, None, None, None),
+    'hero': ((-0.125, -0.182, 0.245), (0.0, -0.0010, 0.0135), 85, 11, (0.0, -0.002, 0.019), None),
+    'top': ((0.0, -0.0030, 0.48), (0.0, -0.0025, 0.0), 135, None, None, None),
     'exploded': ((-0.255, -0.330, 0.270), (0.0, 0.0, 0.045), 70, None, None, 'explode'),
     'exploded2': ((-0.200, -0.330, 0.165), (0.0, 0.0, 0.062), 60, None, None, 'explode'),
     'keys': ((0.034, -0.140, 0.074), (0.0, -0.0120, 0.0190), 100, 14, (0.0, -0.0200, 0.0240), None),
