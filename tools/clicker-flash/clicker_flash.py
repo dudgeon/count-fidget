@@ -9,7 +9,8 @@ application USB stack are needed. This tool:
   2. waits for exactly one STM32 DFU device and checks its flash layout;
   3. downloads the image to 0x08000000;
   4. reads the same range back and compares it byte for byte;
-  5. leaves DFU (the application starts) and appends a line to a unit log;
+  5. only after a matching read-back, leaves DFU (the application starts) and
+     appends a line to a unit log;
   6. optionally records the operator's on-device commissioning checks.
 
 Standard library only. Requires dfu-util >= 0.9 (Homebrew: `brew install dfu-util`).
@@ -35,7 +36,17 @@ DEFAULT_BUILD = ROOT / 'firmware/q5-stm32/build'
 STEM = 'count-fidget-Q5-stm32'
 ST_DFU = (0x0483, 0xDF11)
 FLASH_BASE = 0x08000000
-BANK1_BYTES = 96 * 1024          # STM32L072CB: 192 KiB in two 96 KiB banks
+# STM32L072CB (DS10689 Table 2): 128 KiB of Flash in two 64 KiB banks; Bank 2 starts at 0x08010000.
+# The firmware linker script and build_firmware_q5.py both confine the image to Bank 1.
+BANK1_BYTES = 64 * 1024
+DEVICE_FLASH_BYTES = 128 * 1024
+# The L07x ROM bootloader is shared by the 128 and 192 KiB parts. Its DfuSe descriptor has been
+# reported as "@Internal Flash /0x08000000/1536*128g" (192 KiB) on 128 KiB parts, so accept both.
+ROM_LAYOUT_BYTES = (128 * 1024, 192 * 1024)
+# STM32L0 NVM reads 0 after an erase (RM0376 section 3.3): a factory-blank part reads all zero.
+ERASED_BYTE = 0x00
+OPTION_BASE = 0x1FF80000
+OPTION_FIRMWARE_USER = 0x807C     # firmware/q5-stm32/board.h BOARD_OPTR_USER
 RAM_BASE, RAM_BYTES = 0x20000000, 20 * 1024
 DEFAULT_LOG = Path.home() / 'count-fidget-flash-log.csv'
 DEFAULT_BACKUPS = Path.home() / 'count-fidget-flash-backups'
@@ -169,11 +180,11 @@ def flash_alt(device, image_len):
         if segments[-1]['end'] < FLASH_BASE + image_len or not covered:
             raise FlashError('Device flash is smaller than the image')
         if not all(s['readable'] and s['erasable'] and s['writable'] for s in covered):
-            raise FlashError('Flash pages for the image are not readable/erasable/writable (read protection set?)')
+            raise FlashError('Flash pages for the image are not readable/erasable/writable in the DfuSe layout')
         warnings = []
-        if segments[-1]['end'] - FLASH_BASE != 192 * 1024:
-            warnings.append(f'device reports {(segments[-1]["end"] - FLASH_BASE) // 1024} KiB flash, '
-                            'expected 192 KiB for STM32L072CB: check this is a Count Fidget Q5 board')
+        if segments[-1]['end'] - FLASH_BASE not in ROM_LAYOUT_BYTES:
+            warnings.append(f'device reports {(segments[-1]["end"] - FLASH_BASE) // 1024} KiB flash, expected the '
+                            'STM32L07x ROM layout (192 KiB, or 128 KiB): check this is a Count Fidget Q5 board')
         return alt, warnings
     raise FlashError('No "@Internal Flash" DfuSe interface: this is not the STM32 ROM bootloader')
 
@@ -218,6 +229,12 @@ def select_args(device, alt):
 # A unit left in ROM DFU keeps its USB D+ pull-up on; after unplugging, that back-feeds VBUS through the
 # ESD diode and holds the power latch on (draining the cell) until the pinhole resets it.
 STUCK_HINT = 'Press the pinhole (reset) BEFORE unplugging: a clicker unplugged while still in DFU mode stays powered and drains its cell.'
+# The first application boot programs the BOR option byte (about 6.4 ms of NVM write, then a reload
+# reset); power loss during that write leaves an invalid option word. The ROM jump after leave is
+# also not guaranteed to restart cleanly on silicon (first-article test A6); a pinhole press is a
+# clean hardware reset with BOOT0 low.
+FIRST_BOOT_HINT = ('Keep USB connected for at least 5 s. Digits (or 0 ERR) should appear within about 1 s; '
+                   'if the display stays dark, press the pinhole once (a clean reset) and record that it was needed.')
 
 
 def flash_device(tool, device, image, leave=True, say=print):
@@ -231,23 +248,26 @@ def flash_device(tool, device, image, leave=True, say=print):
         code, out = run([tool] + select_args(device, alt) + ['-s', f'0x{FLASH_BASE:08x}', '-D', str(src)], timeout=180)
         if code != 0 or re.search(r'(?i)error during download|status is not ok|cannot open device', out):
             raise FlashError('Download failed:\n' + tail(out))
-        back = Path(td) / 'readback.bin'        # dfu-util refuses to overwrite: path must not exist
-        opts = f'0x{FLASH_BASE:08x}:{len(image)}' + (':leave' if leave else '')
         say('Reading back and comparing...')
-        code, out = run([tool] + select_args(device, alt) + ['-s', opts, '-U', str(back)], timeout=180)
-        if not back.is_file():
+        code, out, readback = upload(tool, device, alt, len(image))
+        if readback is None:
             raise FlashError('Read-back produced no file:\n' + tail(out))
-        readback = back.read_bytes()
         if readback != image:
             first = next((i for i, (a, b) in enumerate(zip(readback, image)) if a != b), min(len(readback), len(image)))
             raise FlashError(f'VERIFY FAILED: read-back differs from the image at offset 0x{first:x} '
-                             f'({len(readback)} bytes read). Do not ship this unit; re-flash it.')
-        if code != 0 and not leave:
+                             f'({len(readback)} bytes read). The unit is still in DFU mode: re-flash it. '
+                             'Do not ship it.')
+        if code != 0:
             raise FlashError('Read-back reported an error:\n' + tail(out))
-        # With :leave the ROM jumps to the application and may drop off the bus before
-        # answering the final status request, so a non-zero exit after a verified
-        # read-back is expected on some hosts (libusb pipe/timeout errors).
-        return sha256(readback), (code, tail(out))
+    if not leave:
+        return sha256(readback), (0, '')
+    # Start the application only once the read-back has matched, so the ROM never jumps into a
+    # partly written image. The leave is a zero-length DfuSe download after an 8-byte read; it writes
+    # nothing. The ROM jumps to the application and may drop off the bus before answering the final
+    # status request, so a non-zero exit here is expected on some hosts (libusb pipe/timeout errors).
+    say('Verified. Starting the application...')
+    code, out, _ = upload(tool, device, alt, 8, leave=True)
+    return sha256(readback), (code, tail(out))
 
 
 def tail(text, lines=12):
@@ -335,7 +355,7 @@ def cmd_flash(a, ask=input):
             readback, (code, _) = flash_device(tool, device, image, leave=not a.no_leave)
             row.update(result='PASS', readback_sha256=readback,
                        note='' if code == 0 else f'dfu-util exit {code} after verified read-back and leave (expected on some hosts)')
-            print(f'PASS: {device["serial"]} verified ({info["bytes"]} bytes).')
+            print(f'PASS: {device["serial"]} verified ({info["bytes"]} bytes).' + ('' if a.no_leave else ' ' + FIRST_BOOT_HINT))
             if a.check and not a.no_leave:
                 wait_for_departure(tool, device)
                 results = commissioning(ask)
@@ -396,11 +416,11 @@ def flash_size(device):
     raise FlashError('No "@Internal Flash" DfuSe interface: this is not the STM32 ROM bootloader')
 
 
-def upload(tool, device, alt, length, leave=False):
-    """Read `length` bytes from FLASH_BASE. Read-only; with leave=True the ROM then starts the application."""
+def upload(tool, device, alt, length, leave=False, address=FLASH_BASE):
+    """Read `length` bytes from `address`. Read-only; with leave=True the ROM then starts the application."""
     with tempfile.TemporaryDirectory(prefix='clicker-read-') as td:
-        back = Path(td) / 'read.bin'
-        opts = f'0x{FLASH_BASE:08x}:{length}' + (':leave' if leave else '')
+        back = Path(td) / 'read.bin'        # dfu-util refuses to overwrite: path must not exist
+        opts = f'0x{address:08x}:{length}' + (':leave' if leave else '')
         code, out = run([tool] + select_args(device, alt) + ['-s', opts, '-U', str(back)], timeout=180)
         data = back.read_bytes() if back.is_file() else None
     return code, out, data
@@ -409,9 +429,46 @@ def upload(tool, device, alt, length, leave=False):
 def describe_contents(data, image):
     if data[:len(image)] == image:
         return 'q5-image'
-    if all(b == 0xFF for b in data):
-        return 'blank'
+    if all(b == ERASED_BYTE for b in data):
+        return 'blank'          # STM32L0 erased NVM reads 0x00, not 0xFF
     return 'other'
+
+
+READ_FAIL_HINT = ('If this repeats on a board that was never flashed, its flash may be read-protected (RDP level 1): '
+                  'stop and set the board aside. Never use dfu-util :unprotect or "read unprotect": it mass-erases.')
+
+
+def decode_option_bytes(data):
+    """Decode the RDP and USER option words (RM0376 option byte layout: value in bits 15:0, complement in 31:16)
+    and predict what the Q5 firmware's first boot will do (firmware/q5-stm32/main_stm32.c provision_options)."""
+    w0, w1 = struct.unpack_from('<II', data, 0)
+    valid0, valid1 = (w0 >> 16) == (~w0 & 0xFFFF), (w1 >> 16) == (~w1 & 0xFFFF)
+    rdp, user = w0 & 0xFF, w1 & 0xFFFF
+    level = {0xAA: 0, 0xCC: 2}.get(rdp, 1)
+    if not (valid0 and valid1):
+        firmware = 'OPT (option word and complement disagree: the loader applies its default values)'
+    elif level != 0:
+        firmware = 'OPT (read protection active)'
+    elif user == OPTION_FIRMWARE_USER:
+        firmware = 'already provisioned'
+    elif ((user & ~0x008F) | 0x800C) == OPTION_FIRMWARE_USER:
+        firmware = 'programs USER 0x807C once on first boot, then resets itself'
+    else:
+        firmware = 'OPT (unexpected watchdog/stop/standby option bits: not changed by the firmware)'
+    return {'rdp_word': f'0x{w0:08x}', 'user_word': f'0x{w1:08x}', 'complements_valid': valid0 and valid1,
+            'rdp_level': level, 'bor_lev': f'0x{user & 0xF:x}', 'bfb2': bool(user & 0x80), 'nboot1': bool(user & 0x8000),
+            'firmware_first_boot': firmware}
+
+
+def read_option_bytes(tool, device):
+    """Best-effort read-only upload of the first two option words through the ROM's '@Option Bytes' alt."""
+    alt = next((k for k, v in sorted(device['alts'].items()) if v.startswith('@Option Bytes')), None)
+    if alt is None:
+        return {'error': 'no @Option Bytes alt'}
+    code, out, data = upload(tool, device, alt, 8, address=OPTION_BASE)
+    if code != 0 or data is None or len(data) != 8:
+        return {'error': 'option byte read failed: ' + (tail(out, 2) or f'exit {code}')}
+    return decode_option_bytes(data)
 
 
 def cmd_wait(a):
@@ -432,7 +489,9 @@ def cmd_probe(a):
     print(f'serial={d["serial"]} path={d["path"]} bootloader ver={d["ver"]}')
     for k, v in sorted(d['alts'].items()):
         print(f'  alt {k}: {v}')
-    print(f'Flash alt {alt}: {total // 1024} KiB; image pages readable/erasable/writable (RDP level 0)')
+    print(f'Flash alt {alt}: descriptor {total // 1024} KiB (the STM32L072CB has {DEVICE_FLASH_BYTES // 1024} KiB); '
+          'image pages readable/erasable/writable in the layout. Read protection does not change the descriptor; '
+          '`backup` is the first step that proves the flash can be read.')
     for w in warnings:
         print('WARNING: ' + w)
     emit({'step': 'probe', 'ok': not warnings, 'serial': d['serial'], 'path': d['path'], 'bootloader_ver': d['ver'],
@@ -444,19 +503,26 @@ def cmd_backup(a):
     image, _ = load_image(a.build, a.image)
     tool = dfu_util_path(a.dfu_util)
     d = one_device(tool, a.serial)
-    alt, total = flash_size(d)
+    alt, descriptor = flash_size(d)
+    # The ROM descriptor can claim 192 KiB on this 128 KiB part; never read past the real Flash.
+    total = min(descriptor, DEVICE_FLASH_BYTES)
     print(f'Reading all {total // 1024} KiB of flash from {d["serial"]} (read-only, stays in DFU)...')
     code, out, data = upload(tool, d, alt, total)
-    if data is None or len(data) != total:
-        raise FlashError(f'Backup read returned {0 if data is None else len(data)} of {total} bytes:\n' + tail(out))
+    if code != 0 or data is None or len(data) != total:
+        raise FlashError(f'Backup read returned {0 if data is None else len(data)} of {total} bytes '
+                         f'(dfu-util exit {code}). {READ_FAIL_HINT}\n' + tail(out))
+    options = read_option_bytes(tool, d)
     stamp = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     a.out.mkdir(parents=True, exist_ok=True)
     path = a.out / f'{d["serial"] or "unknown"}-{stamp}.bin'
     path.write_bytes(data)
     contents = describe_contents(data, image)
     print(f'Saved {path} ({len(data)} bytes, SHA-256 {sha256(data)}); contents: {contents}')
+    print('Option bytes: ' + (options['error'] if 'error' in options else
+                              f"RDP word {options['rdp_word']}, USER word {options['user_word']}: "
+                              f"firmware first boot {options['firmware_first_boot']}"))
     emit({'step': 'backup', 'ok': True, 'serial': d['serial'], 'file': str(path), 'bytes': len(data),
-          'sha256': sha256(data), 'contents': contents, 'dfu_exit': code})
+          'sha256': sha256(data), 'contents': contents, 'dfu_exit': code, 'option_bytes': options})
     return 0
 
 
@@ -466,8 +532,8 @@ def cmd_verify_device(a):
     d = one_device(tool, a.serial)
     alt, _ = flash_alt(d, len(image))
     code, out, data = upload(tool, d, alt, len(image))
-    if data is None:
-        raise FlashError('Read-back produced no file:\n' + tail(out))
+    if code != 0 or data is None:
+        raise FlashError(f'Read-back failed (dfu-util exit {code}). {READ_FAIL_HINT}\n' + tail(out))
     match = data == image
     first = None if match else next((i for i, (x, y) in enumerate(zip(data, image)) if x != y), min(len(data), len(image)))
     print(('MATCH' if match else f'MISMATCH at offset 0x{first:x}') + f': {d["serial"]} flash vs {Path(info["path"]).name}')
@@ -480,10 +546,19 @@ def cmd_leave(a):
     tool = dfu_util_path(a.dfu_util)
     d = one_device(tool, a.serial)
     alt, _ = flash_size(d)
+    # Never ask the ROM to jump into a blank or foreign image: on a factory-blank STM32L0 the vector
+    # table reads zero and the core would lock up until the pinhole is pressed.
+    code, out, head = upload(tool, d, alt, 8)
+    if code != 0 or head is None or len(head) != 8:
+        raise FlashError(f'Could not read the vector table (dfu-util exit {code}). {READ_FAIL_HINT}\n' + tail(out))
+    sp, reset = struct.unpack('<II', head)
+    if not (RAM_BASE < sp <= RAM_BASE + RAM_BYTES) or not reset & 1 or not FLASH_BASE <= (reset & ~1) < FLASH_BASE + BANK1_BYTES:
+        raise FlashError(f'Flash does not start with an application vector table (SP 0x{sp:08x}, reset 0x{reset:08x}); '
+                         'not leaving DFU. Flash the board first. ' + STUCK_HINT)
     print(f'Asking the ROM bootloader on {d["serial"]} to start the application (no write)...')
     code, out, _ = upload(tool, d, alt, 8, leave=True)
     departed = wait_for_departure(tool, d, timeout=a.timeout)
-    print('Device left DFU mode.' if departed else 'WARNING: still in DFU mode. ' + STUCK_HINT)
+    print(('Device left DFU mode. ' + FIRST_BOOT_HINT) if departed else 'WARNING: still in DFU mode. ' + STUCK_HINT)
     emit({'step': 'leave', 'ok': departed, 'serial': d['serial'], 'dfu_exit': code})
     return 0 if departed else 1
 

@@ -12,9 +12,9 @@ The tool is `tools/clicker-flash/clicker_flash.py`: standard-library Python 3 wr
 | Command | Touches the device? |
 |---|---|
 | `doctor`, `verify-image`, `list`, `wait`, `probe` | lists the USB devices only |
-| `backup`, `verify-device` | reads flash; stays in DFU |
-| `leave` | reads 8 bytes, then asks the ROM to start the application; no write |
-| `flash [--no-leave] [--serial S]` | **the only write:** downloads the image to 0x08000000, reads it back and compares, logs |
+| `backup`, `verify-device` | reads flash (backup also reads the two option words); stays in DFU |
+| `leave` | reads 8 bytes, refuses a blank/foreign vector table, then asks the ROM to start the application; no write |
+| `flash [--no-leave] [--serial S]` | **the only write:** downloads the image to 0x08000000, reads it back and compares, and only then (without `--no-leave`) starts it; logs |
 | `record-check --serial S --checks …`, `summary` | log file only |
 
 Shorthand below: `CF="python3 tools/clicker-flash/clicker_flash.py"`, run from the repository root.
@@ -53,23 +53,28 @@ Start `$CF wait --timeout 300` in the background **before** you ask, so it is al
 
 The saved count is never affected by this.
 
-When `wait` returns, note the `serial` and pass `--serial S` to every later step for this board. If it times out, re-check the cable, the order of the four steps, and another port. A **Stop** gate is DFU that never enumerates on two different cables (A4).
+When `wait` returns, note the `serial` and pass `--serial S` to every later step for this board. If it times out, re-check the cable, the order of the four steps, and another port. To see whether the board enumerates at all, run `system_profiler SPUSBHostDataType` (on macOS 27 `SPUSBDataType` returns nothing) and look for vendor ID 0x0483, product ID 0xdf11 (usually named "STM32 BOOTLOADER"). A **Stop** gate is DFU that never enumerates on two different cables (A4).
 
 ## 3. First board: progressive, testing each step
 
 Run these one at a time. Report each result to the user in a short line before the next.
 
-1. `$CF probe --serial S`. Expect `flash_kib: 192`, an option-bytes alt and no warnings.
-   - A warning (exit 3), or a "read protection" refusal: **stop** and report.
-2. `$CF backup --serial S`. This reads all 192 KiB into `~/count-fidget-flash-backups/` and proves that USB reads work before anything is written.
-   - Expect `contents: blank` on a new board.
+1. `$CF probe --serial S`. Expect `flash_kib: 192` (the L07x ROM's descriptor; the STM32L072CB really has 128 KiB, and 128 is also accepted), an option-bytes alt and no warnings. Probe cannot see read protection.
+   - A warning (exit 3), or a layout refusal: **stop** and report.
+2. `$CF backup --serial S`. This reads the real 128 KiB into `~/count-fidget-flash-backups/` plus the RDP/USER option words, and proves that USB reads work before anything is written.
+   - Expect `contents: blank` on a new board (erased STM32L0 Flash reads `0x00`).
    - `q5-image` means it was already flashed.
    - `other` means unknown firmware from JLC's test. Keep the backup and tell the user before overwriting.
+   - A read failure (exit 2) on a never-flashed board can mean read protection: **stop**. Never try to unprotect (it mass-erases).
+   - Report `option_bytes`. Expect `rdp_word 0xff5500aa`, `complements_valid: true` and `firmware_first_boot` "programs USER 0x807C once…" (factory) or "already provisioned". Anything that predicts **OPT**: stop and report before flashing.
 3. `$CF flash --serial S --no-leave --timeout 30`. This is the write: download, then read back and compare byte for byte. The board stays in DFU.
    - Expect `result: PASS`.
    - On FAIL: retry once. A second FAIL means a reject, which goes to step 6.
 4. `$CF verify-device --serial S`. An independent second read-back. Expect `ok: true`.
-5. `$CF leave --serial S`. This starts the application. Expect `ok: true`: the device disappears from DFU, and the display should show digits within 1 s (test A6).
+5. `$CF leave --serial S`. This starts the application. Expect `ok: true`: the device disappears from DFU, and the display should show digits (or `0 ERR`) within about 1 s (test A6). The first boot resets itself once while it programs the brown-out option byte.
+   - Tell the user to **keep USB connected for at least 5 s**: unplugging during that option-byte write can leave the board showing OPT.
+   - Dark display after 2 s: ask for **one** pinhole press (a clean hardware reset with BOOT0 low) and record in the A6 result that it was needed. Still dark: commissioning fail.
+   - **OPT** with no digits: stop; DFU and SWD still work. Do not try to repair option bytes with this tool.
    - `ok: false` means it is still in DFU. The board must **not** be unplugged: ask the user to press the pinhole first.
 6. **Commissioning.** Ask the user each check in turn and wait for each answer. Use the four checks in `COMMISSIONING` in the tool, which match the README table:
    - `blank`: after the flash the display shows `0` with **ERR** (new FRAM) or the previous count;
@@ -86,7 +91,7 @@ Once the first board has passed every step, use the compact sequence per board:
 1. `wait`;
 2. `probe`;
 3. `backup`;
-4. `flash --serial S`, with leave included;
+4. `flash --serial S`, with leave included (it starts the image only after the read-back matched); keep USB connected 5 s;
 5. `list`, to confirm it left DFU. If it is still listed, ask for the pinhole before the unplug;
 6. the commissioning questions, then `record-check`.
 

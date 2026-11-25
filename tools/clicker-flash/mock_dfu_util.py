@@ -3,11 +3,16 @@
 
 Behaviour copied from dfu-util 0.11 (src/main.c, src/dfuse.c): `-l` output
 format, `-s address[:length][:leave]` parsing, O_EXCL on the upload file, page
-erase before raw download, and leave after download or upload. State lives in
-the JSON file named by $MOCK_DFU_STATE:
+erase before raw download, and leave after download or upload. The device side
+follows the STM32L072CB and AN3156: erased Flash reads 0x00 (STM32L0 NVM), the
+ROM descriptor may claim more Flash than the 128 KiB that exist (reads past the
+end fail), and read protection (RDP level 1) leaves the descriptor unchanged
+but makes every read, erase and write fail with a DFU error. State lives in the
+JSON file named by $MOCK_DFU_STATE:
 
   {"devices": [{"serial": ..., "path": ..., "alts": {"0": "@Internal Flash  /0x08000000/1536*128 g"},
-                "flash": "<hex of first bytes>", "in_dfu": true}],
+                "flash": "<hex of first bytes>", "in_dfu": true, "flash_bytes": 131072,
+                "options": "<hex of option bytes at 0x1FF80000>", "rdp1": false}],
    "faults": {"corrupt_write_offset": n, "leave_exit": 74, "download_exit": 74}}
 """
 import json
@@ -58,20 +63,32 @@ def main(argv):
     address = int(parts[0], 16)
     length = next((int(p) for p in parts[1:] if p.isdigit()), None)
     leave = 'leave' in parts[1:]
+    alt_name = dev['alts'].get(opts.get('-a', '0'), '')
+    if alt_name.startswith('@Option Bytes'):
+        if address != 0x1FF80000 or '-U' not in opts or leave:
+            print('mock: option bytes may only be read here'); return 64
+        if dev.get('rdp1'):
+            print('dfu-util: Error during upload'); save(state); return 74
+        fd = os.open(opts['-U'], os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_TRUNC, 0o666)
+        os.write(fd, bytes.fromhex(dev.get('options', 'aa0055ff70808f7f'))[:length or 32]); os.close(fd)
+        save(state); return 0
     if address != 0x08000000:
         print('mock: unexpected address'); return 64
+    physical = dev.get('flash_bytes', 128 * 1024)
     flash = bytearray.fromhex(dev.get('flash', ''))
     code = 0
     if '-D' in opts:
         if faults.get('download_exit'):
             save(state); print('dfu-util: Error during download get_status'); return faults['download_exit']
+        if dev.get('rdp1'):
+            print('dfu-util: Error during special command "ERASE_PAGE" get_status'); save(state); return 74
         data = bytearray(open(opts['-D'], 'rb').read())
         if 'corrupt_write_offset' in faults:
             data[faults['corrupt_write_offset']] ^= 0x40
         pages = (len(data) + 127) // 128 * 128
         if len(flash) < pages:
-            flash.extend(b'\xff' * (pages - len(flash)))
-        flash[:pages] = b'\xff' * pages
+            flash.extend(b'\x00' * (pages - len(flash)))
+        flash[:pages] = b'\x00' * pages
         flash[:len(data)] = data
         dev['flash'] = flash.hex()
         print(f'Download\t[=========================] 100%\t{len(data)} bytes\nFile downloaded successfully')
@@ -81,8 +98,13 @@ def main(argv):
         except FileExistsError:
             print('dfu-util: Cannot open file for writing'); save(state); return 73
         want = length or 0x4000
-        out = bytes(flash[:want]) + b'\xff' * max(0, want - len(flash))
+        if dev.get('rdp1'):
+            os.close(fd); print('dfu-util: Error during upload'); save(state); return 74
+        out = (bytes(flash[:want]) + b'\x00' * max(0, want - len(flash)))[:physical]
         os.write(fd, out); os.close(fd)
+        if len(out) < want:
+            print(f'dfu-util: dfuse_upload: libusb_control_transfer returned -9 (LIBUSB_ERROR_PIPE)')
+            save(state); return 74
         print(f'Upload\t[=========================] 100%\t{len(out)} bytes\nUpload done.')
     if leave:
         print('Submitting leave request...')
