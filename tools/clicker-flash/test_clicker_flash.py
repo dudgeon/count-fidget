@@ -419,6 +419,10 @@ def real_dfu_util_accepts_arguments():
     tool = shutil.which('dfu-util')
     if not tool:
         return {'skipped': 'dfu-util not installed'}
+    # Never send real commands (one of them is a DOWNLOAD) while any DFU device is attached:
+    # only the serial filter would stand between this test and a real board.
+    if cf.list_devices(tool):
+        return {'skipped': 'a DFU device is attached; real dfu-util argument check not run'}
     results = {}
     with tempfile.TemporaryDirectory() as td:
         src = Path(td) / 'i.bin'; src.write_bytes(image())
