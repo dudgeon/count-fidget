@@ -326,7 +326,7 @@ def build_materials(opts):
     mats = {}
     mats['pcb'] = pcb_material()
     mats['acrylic'] = acrylic_material()
-    mats['pc_clear'] = acrylic_material('pc_clear', ior=1.585, rough=0.035, tint=(0.97, 0.985, 1.0, 1))
+    mats['pc_clear'] = acrylic_material('pc_clear', ior=1.585, rough=0.28, tint=(0.86, 0.90, 0.92, 1))   # Box top housing: translucent, reads as a solid part
     mats['tray'] = printed_material('tray', opts['tray_colour'])
     top = 0.0          # keycap origins are moved to the top face (build(): set_origin), so object z = 0 there
     mats['keycap_count'] = keycap_material('keycap_count', opts['count_colour'], opts['legend_colour'], top)
