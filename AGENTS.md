@@ -1,5 +1,34 @@
 # Instructions for agents
 
+## Q5B enclosure — 24 November 2026 (supersedes Q5A for the owner's build)
+
+The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. After reviewing Q5A, they asked for:
+- a printed bezel around the laser parts;
+- thicker walls and a bottom chamfer;
+- keys that sit less proud;
+- easy-to-buy fasteners into captive nuts under the case;
+- printable spacers.
+
+**Q5B** implements this in `mechanical/q5b/` (start at its README). Its generator is `scripts/build_q5b_enclosure.py` and its renders are in `scripts/render_q5b/`.
+
+Key facts:
+- **Body:** 47.0 × 59.0 × 19.3 mm.
+- **Switch plate:** 1.5 mm acrylic at the standard MX height, with 14.0 mm cut-outs. It retains the switches.
+- **Display window:** 4.5 mm clear acrylic, 0.3 mm over the OLED. It ends above the keys and forms the key well.
+- **Fixings:**
+  - 2 × M2 × 18 and 2 × M2 × 12 pan-head screws into M2 hex nuts in pockets under the tray;
+  - printed 6.0 and 3.5 mm spacers.
+- **Checks:** zero intersections and zero collisions over 366 vertical assembly poses.
+
+Physical gates:
+- the plate coupon fit;
+- the real keycap skirt height (modelled OEM-like; 0.22 mm plan / 0.4 mm vertical to the lower screw heads);
+- nut-pocket and spacer prints;
+- acrylic crazing;
+- OLED readability through 4.5 mm.
+
+Q5A stays as it was. No purchase or order is authorised.
+
 ## Q5A acrylic-lid enclosure — 27 September 2026
 
 The owner has ordered the Q5 board and asked for an alternate case. It keeps the 3D-printed tray and replaces the Q5 printed front cover and rear key plate with **one flat, clear, laser-cut acrylic lid**, as small as works well. The request included DFM and high-fidelity renders plus an assembly film.
