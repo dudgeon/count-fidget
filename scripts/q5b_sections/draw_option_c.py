@@ -10,7 +10,7 @@ HEAD = (TOP, TOP + 1.75); TIP = TOP - 25.0; NUT = (0, 2.0); POCKET = 2.05
 W, Y_TOP, Y_BOT = 47.0, -29.5, 33.75; WALL, BEZEL = 2.0, 1.2
 WIN_Y = (-28.05, 32.3); WIN_X = 22.05; WELL_X, WELL_Y = 19.05, (4.2, 23.4)
 PLATE_Y = (4.45, 32.3); SPLIT = 4.2
-UP, LOW = (18.5, -25.0), (18.5, 29.55); PEG = (18.5, 25.0); FEET = [(8, -24.5), (8, 28.5)]; FOOT = (8.0, 2.0)
+UP, LOW = (18.5, -24.5), (18.5, 29.55); PEG = (18.5, 25.0); FEET = [(8, -24.5), (8, 28.5)]; FOOT = (8.0, 2.0)
 KEY = (9.525, 13.8); CAP_B, CAP_T = 19.82 + S, 19.82 + S + 9.4; CAP_W, CAP_D, CAP_TIP = 17.85, 18.0, 13.0
 SW_TOP, STEM_TOP = 8.82 + 11.6 + S, 8.82 + 15.2 + S
 GUS = FRAME_B + 3.3
@@ -121,13 +121,13 @@ def section_a():
     f.rect(-27, 27, *PCB, C['pcb'], '#173d24')
     f.rect(-4.87, 4.07, PCB[0] - 3.31, PCB[0], C['comp'], C['comp_s'])
     # top piece: switch plate, its side arm to the display end, pegs and spacer bosses, all one print
-    tp(f, UP[1], 1.5, WIN[0] - 2.0, WIN[0])                       # arm against the acrylic
-    tp(f, 1.5, 4.0, PLATE[0], WIN[0])                             # step down to the plate
-    tp(f, 4.0, 23.4, *PLATE)                                      # side rail of the plate
-    tp(f, 23.4, 27.2, PCB[1], WIN[0]); tp(f, 27.2, Y_BOT - WALL - 0.15, PLATE[0], WIN[0])   # key-end block
+    tp(f, UP[1], 5.95, PCB[1], PCB[1] + 2.0)                       # arm, lying on the board
+    tp(f, 4.45, 22.8, PCB[1], PLATE[1])                           # switch-box wall up to the plate
+    tp(f, 22.6, 23.4, PCB[1], PLATE[1])                           # low link
+    tp(f, 23.4, Y_BOT - WALL - 0.15, PCB[1], WIN[0])              # key-end spacer block
     tp(f, UP[1] - 2.5, UP[1] + 2.5, PCB[1], WIN[0])
     # M2 self-tapping screw: head recessed in the block, through the board hole, into the grey standoff
-    f.rect(PEG[1] - 2.1, PEG[1] + 2.1, PCB[1] + 4.0, WIN[0], '#ffffff', C['top_s'], 0.6)
+    f.rect(PEG[1] - 2.0, PEG[1] + 2.0, PCB[1] + 4.0, WIN[0], '#ffffff', C['top_s'], 0.6)
     f.rect(PEG[1] - 1.9, PEG[1] + 1.9, PCB[1] + 4.0, PCB[1] + 5.4, C['metal'], C['metal_s'])
     f.rect(PEG[1] - 1.0, PEG[1] + 1.0, PCB[1] - 6.0, PCB[1] + 4.0, C['metal'], C['metal_s'])
     acr(f, WIN_Y[0], WELL_Y[0], *WIN); acr(f, WELL_Y[1], WIN_Y[1], *WIN)
@@ -147,8 +147,8 @@ def section_a():
     f.label(-12, WIN[1] - 1, 'TOP ACRYLIC, 3/16 in clear')
     f.label(14, WIN[0] + 1, 'opening for the keycaps')
     f.label(UP[1] + 2.2, (PLATE[1] + WIN[0]) / 2, 'spacer boss to the acrylic (part of print 1)')
-    f.label(12, PLATE[1] - 0.6, 'PRINT 1: plate side rail (orange)')
-    f.label(-10, WIN[0] - 1.0, 'arm of print 1, beside the display, against the acrylic')
+    f.label(12, PLATE[1] - 0.6, 'PRINT 1: switch-box wall, plate on top (orange)')
+    f.label(-10, PCB[1] + 1.0, 'arm of print 1, beside the display, lying on the board')
     f.label(PEG[1], PCB[1] + 4.7, 'M2 × 10 self-tapping screw: print 1 → board → print 2')
     f.label(PEG[1] - 1.6, PCB[1] + 2.0, 'key-end block of print 1')
     f.label(-20, PCB[1] - 0.6, 'Q5 BOARD (unchanged)')
@@ -184,6 +184,7 @@ def section_b():
     f.rect(KEY[1] - 7.75, KEY[1] + 7.75, PCB[0] - 1.85, PCB[0], '#444', '#111')
     # plate with the switch cut-out; switch; keycap in the opening
     tp(f, PLATE_Y[0], KEY[1] - 7.0, *PLATE); tp(f, KEY[1] + 7.0, KEY[1] + 9.0, *PLATE)
+    tp(f, PLATE_Y[0], KEY[1] - 7.6, PCB[1], PLATE[0]); tp(f, KEY[1] + 7.6, KEY[1] + 9.0, PCB[1], PLATE[0])
     f.rect(KEY[1] - 6.975, KEY[1] + 6.975, PCB[1], PLATE[1], C['sw'], '#555')
     f.poly([(KEY[1] - 7.8, PLATE[1]), (KEY[1] + 7.8, PLATE[1]), (KEY[1] + 6.5, SW_TOP), (KEY[1] - 6.5, SW_TOP)], C['sw'], '#555')
     f.rect(KEY[1] - 0.65, KEY[1] + 0.65, SW_TOP, STEM_TOP, '#2bb673', '#185')
@@ -224,9 +225,10 @@ def section_c():
         f.poly([(kx - 7.8, PLATE[1]), (kx + 7.8, PLATE[1]), (kx + 6.5, SW_TOP), (kx - 6.5, SW_TOP)], C['sw'], '#555')
         f.rect(kx - 2.0, kx + 2.0, SW_TOP, STEM_TOP, '#2bb673', '#185')
         f.poly([(kx - CAP_W / 2, CAP_B), (kx + CAP_W / 2, CAP_B), (kx + CAP_TIP / 2, CAP_T), (kx - CAP_TIP / 2, CAP_T)], C['cap'], '#777')
-    edges = [-20.5, -KEY[0] - 7.0, -KEY[0] + 7.0, KEY[0] - 7.0, KEY[0] + 7.0, 20.5]
+    edges = [-KEY[0] - 9.0, -KEY[0] - 7.0, -KEY[0] + 7.0, KEY[0] - 7.0, KEY[0] + 7.0, KEY[0] + 9.0]
     for a, b in zip(edges[::2], edges[1::2]):
         tp(f, a, b, *PLATE)
+        tp(f, a + (0.6 if a > -KEY[0] - 8 else 0), b - (0.6 if b < KEY[0] + 8 else 0), PCB[1], PLATE[0])
     acr(f, -WIN_X, -WELL_X, *WIN); acr(f, WELL_X, WIN_X, *WIN)
     f.label(KEY[0], CAP_T - 1, 'keycaps 36.9 × 18.0 (pair, measured)')
     f.label(WELL_X + 0.5, WIN[1] - 0.8, 'top acrylic: 38.1 mm opening, 3.0 mm side rails')
@@ -310,14 +312,15 @@ def top_piece():
     rr(-21, -27, 21, 27, 0.5, C['pcb'], '#173d24', 1, None, 0.30)
     rr(-13.85, -24.4, 13.85, 3.8, 0.3, '#1d3f73', '#0d1f3a', 1, None, 0.35)
     # plate level (light): rings round the switches, centre web, side rails
-    rr(-20.5, PLATE_Y[0], 20.5, KEY[1] + 9.0, 0.6, LO, C['top_s'])
+    rr(-KEY[0] - 9.0, PLATE_Y[0], KEY[0] + 9.0, KEY[1] + 9.0, 0.6, LO, C['top_s'])
     for kx in (-KEY[0], KEY[0]):
         rr(kx - 7, KEY[1] - 7, kx + 7, KEY[1] + 7, 0.3, '#ffffff', C['top_s'])
         rr(kx - CAP_W / 2, KEY[1] - CAP_D / 2, kx + CAP_W / 2, KEY[1] + CAP_D / 2, 1.0, 'none', '#555', 1, '3,3')
     for sx in (-1, 1):
         a, b = sorted((sx * 17.3, sx * 20.5))
-        rr(a, UP[1], b, 4.7, 0.3, HI, C['top_s'])                       # arm + step, full height
-        a, b = sorted((sx * 16.3, sx * 20.7))
+        rr(a, UP[1], b, 5.95, 0.3, LO, C['top_s'])                      # arm, on the board
+        a, b = sorted((sx * 15.8, sx * 21.2))
+        rr(a, 22.6, b, 23.4, 0.1, LO, C['top_s'])
         rr(a, 23.4, b, Y_BOT - WALL - 0.15, 0.5, HI, C['top_s'])        # key-end block
         circ(sx * 18.5, UP[1], 2.5, HI, C['top_s']); circ(sx * 18.5, UP[1], 1.45, '#fff', C['top_s'])
         circ(sx * 18.5, LOW[1], 1.45, '#fff', C['top_s'])
@@ -325,21 +328,21 @@ def top_piece():
     rx = X(W / 2 + 4); yy = top + 6
     notes = [('The orange piece, from above', 16, 'bold'), ('', 8, ''),
              ('Dark orange: full height, touches the top', 13, ''), ('acrylic. These are the spacers.', 13, ''),
-             ('Light orange: the 1.5 mm switch plate,', 13, ''), ('1.7 mm below the acrylic.', 13, ''), ('', 8, ''),
-             ('Plate: a 2 mm ring round each switch and', 13, ''), ('the web between them. It sits almost', 13, ''),
-             ('entirely under the keycaps (dashed).', 13, ''), ('', 8, ''),
-             ('Arms: 3.2 mm wide, beside the display.', 13, ''), ('', 8, ''),
+             ('Light orange: lower parts. The switch box', 13, ''), ('(walls from the board up to the 1.5 mm', 13, ''),
+             ('plate) and the arms, 2 mm tall, lying', 13, ''), ('on the board.', 13, ''), ('', 8, ''),
+             ('The switch box sits almost entirely', 13, ''), ('under the keycaps (dashed).', 13, ''), ('', 8, ''),
+             ('Prints board side down, no supports.', 13, ''), ('', 8, ''),
              ('Holes: 4 for the M2.5 through-screws,', 13, ''), ('2 recessed for the M2 self-tappers', 13, ''),
              ('(grey dots) that fix it to the board', 13, ''), ('and the surround. No pins.', 13, ''), ('', 8, ''),
              ('Green: the board. Blue: the display.', 13, ''), ('Outside the keycaps and display, the', 13, ''),
-             ('print covers about 15% of the board.', 13, '')]
+             ('print covers about 12% of the board.', 13, '')]
     for t, sz, wgt in notes:
         it.append(f'<text x="{rx:.1f}" y="{yy:.1f}" font-size="{sz}" font-weight="{wgt or "normal"}">{t}</text>'); yy += sz + 7
     it.append(f'<text x="{X(0):.1f}" y="{Y(Y_TOP) - 12:.1f}" font-size="13" text-anchor="middle" fill="#555">display end</text>')
     it.append(f'<text x="{X(0):.1f}" y="{Y(Y_BOT) + 22:.1f}" font-size="13" text-anchor="middle" fill="#555">key end</text>')
     w, h = rx + 330, Y(Y_BOT + 1) + 50
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w:.0f}" height="{h:.0f}" viewBox="0 0 {w:.0f} {h:.0f}" font-family="DejaVu Sans, sans-serif">'
-            f'<rect width="100%" height="100%" fill="#fff"/><text x="20" y="32" font-size="18" font-weight="bold">Print 1 (orange): plate + spacers, skeletonized</text>'
+            f'<rect width="100%" height="100%" fill="#fff"/><text x="20" y="32" font-size="18" font-weight="bold">Print 1 (orange): switch box + spacers</text>'
             + ''.join(it) + '</svg>')
 
 

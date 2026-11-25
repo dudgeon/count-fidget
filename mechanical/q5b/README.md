@@ -70,7 +70,7 @@ The owner's design goals for C are the most view of the board from above and bel
 | Part | File | Notes |
 |---|---|---|
 | Top acrylic | `faceplate-acrylic-Q5B.svg` / `.dxf` | 3/16 in clear. Four 2.9 mm holes and the 38.1 × 19.2 mm key opening. |
-| **Upper piece** (print 1) | `upper-piece-with-supports-Q5B.stl` | Switch plate (2 mm rings round the switches), two spacer bosses on 3.2 mm arms beside the display, and two key-end blocks. |
+| **Upper piece** (print 1) | `upper-piece-Q5B.stl` | A switch box (walls from the board up to the 1.5 mm plate, 2 mm rings round the switches), two spacer bosses on 3.2 mm arms that lie on the board beside the display, and two key-end spacer blocks. |
 | **Surround** (print 2) | `surround-Q5B.stl` | 2.0 mm ring, flush with the top acrylic, with four corner standoffs joined to the walls and a USB shelf. No floor. |
 | Back acrylic | `back-panel-acrylic-Q5B.svg` / `.dxf` | 3/16 in clear, full outline. |
 | Feet (optional print) | `foot-2.0-Q5B.stl` × 4 | 8 mm discs, glued on. Stick-on bumpers of 2 mm or more also work. |
@@ -80,17 +80,11 @@ The owner's design goals for C are the most view of the board from above and bel
 - 2 × M2 × 10 self-tapping pan head (head 3.8 mm or less). Each goes through a key-end block and the board's key-end hole into a 1.7 mm pilot hole in the surround's standoff, with 4.4 mm of thread in the plastic. They replace printed locating pins (the owner's change).
 
 **Printing (0.4 mm nozzle, 0.2 mm layers, PETG):**
-- **Upper piece:** print it as exported, top side down. The arms, bosses and blocks sit on the bed. The plate hangs 1.7 mm above the bed on built-in support ribs (0.5 mm wide, 0.2 mm gap under the plate). Turn slicer supports off, then break the rib grid off the plate afterwards. `upper-piece-no-supports-Q5B.stl` is the same part without ribs, for slicer supports.
-- **M2 counterbores:** each has a 0.25 mm sacrificial skin over the screw hole so the counterbore roof bridges cleanly. The screw pierces it.
+- **Upper piece:** print it as exported, board side down, with no supports. Everything stands on the bed. The only overhang is the 0.6 mm plate lip inside each switch opening, which leaves room for the switch clips. The M2 counterbores are open to the top.
 - **Surround:** print it back-panel side down. It needs no supports. The USB opening's top edge is a 13.4 mm bridge. The bed edge has a 0.3 mm chamfer.
 - **Plate fit:** print `plate-fit-coupon-printable-Q5B.stl` first if your printer runs holes small.
 
-**Back panel SVG:**
-- **Orientation:** drawn as seen from outside. Lay the panel outside face up.
-- **Red:** cut (outline, four screw holes, the 1.5 mm reset pinhole).
-- **Grey fill:** the four hex nut pockets. Engrave them **2.05 mm deep**, and test the depth on scrap first.
-- **Blue:** the battery warning, to engrave. Convert the text to paths if your laser software needs it.
-- **Green dashed:** where the feet go. Reference only; switch it off before cutting.
+**Laser SVGs:** red lines are cuts, drawn 0.1 mm wide so they show on screen (set them to hairline if your laser needs it). The back panel is drawn as seen from outside, so lay it outside face up. Its grey hexagons are the four nut pockets: engrave them **2.05 mm deep**, and test the depth on scrap first. The small red circle is the 1.5 mm reset pinhole. Feet go at (±8, 24.5) and (±8, 28.5) mm from the board centre toward the display and key ends, clear of the screws.
 
 **Assembly:**
 1. Fit the LIR2032 with USB connected (Q5 USB-first rule). Drop the board into the surround, onto the four corner standoffs.
@@ -123,7 +117,7 @@ Nothing here is a measurement. Before calling Q5B done, check:
 - **Faceplate and lip (A):**
   - lip retention and fit on a real print;
   - the acrylic lip insertion.
-- **Option C:** laser nut-pocket depth; support-rib removal; M2 thread strength in the printed standoffs; screw tips against the feet.
+- **Option C:** laser nut-pocket depth; Box Jade clip fit under the 0.6 mm plate lip; M2 thread strength in the printed standoffs; screw tips against the feet.
 - **Hardware fit:**
   - nut-pocket fit;
   - spacer and collar lengths (check with calipers);

@@ -35,7 +35,7 @@
   },
   "printed_parts": [
     "surround-Q5B.stl (1x, bed side = back-panel side)",
-    "upper-piece-with-supports-Q5B.stl (1x, printed top side down; break the ribs off the plate)",
+    "upper-piece-Q5B.stl (1x, printed board side down, no supports)",
     "foot-2.0-Q5B.stl (4x, optional: or stick-on bumpers, or trim the screws to 23.5 mm)"
   ],
   "laser_parts": [
@@ -72,7 +72,7 @@
     "upper": {
       "valid": true,
       "count": 1,
-      "volume_mm3": 1524.32
+      "volume_mm3": 2184.13
     },
     "window": {
       "valid": true,
@@ -107,12 +107,13 @@
     "plate_ring_min": 2.0,
     "arm_to_oled_module": 3.45,
     "key_end_post_gap_under_upper_piece": 0.15,
-    "support_gap_under_plate": 0.2,
+    "plate_lip_overhang": 0.6,
+    "switch_box_wall_min": 1.4,
     "screw_hole_wall_to_board_edge": 0.6
   },
   "source_board_sha256": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
   "source_model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
-  "generator_sha256": "2189b7453ec9fe4c05aeb5e556c188f217dc322b971dfc01ba052c64780e8ae4",
+  "generator_sha256": "150fc1b992c8edfe8140eef27445948d21d3430a8dfd2e0d089a45557c306359",
   "q5b_generator_sha256": "979ee1cf41b43bd691fda048e61086789968b2fc75f1a37e5031a3acd43e58e4",
   "cadquery_version": "2.8.0",
   "python_version": "3.13.18",
@@ -129,18 +130,11 @@
       "z_min_mm": -0.0,
       "z_max_mm": 19.0825
     },
-    "upper-piece-with-supports-Q5B.stl": {
-      "triangles": 7236,
+    "upper-piece-Q5B.stl": {
+      "triangles": 7468,
       "nonmanifold_edges": 0,
       "vertex_quantization_mm": 1e-05,
-      "z_min_mm": -0.0,
-      "z_max_mm": 6.7
-    },
-    "upper-piece-no-supports-Q5B.stl": {
-      "triangles": 6416,
-      "nonmanifold_edges": 0,
-      "vertex_quantization_mm": 1e-05,
-      "z_min_mm": -0.0,
+      "z_min_mm": 0.0,
       "z_max_mm": 6.7
     },
     "foot-2.0-Q5B.stl": {
@@ -150,11 +144,5 @@
       "z_min_mm": 0.0,
       "z_max_mm": 2.0
     }
-  },
-  "support_ribs": {
-    "count": 1,
-    "width_mm": 0.5,
-    "gap_to_plate_mm": 0.2,
-    "height_mm": 1.5
   }
 }

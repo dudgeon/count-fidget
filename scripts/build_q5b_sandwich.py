@@ -12,8 +12,9 @@ Owner's design (25 Nov 2026): maximise the view of the board from above and belo
 
 Fasteners: 4 x M2.5 x 25 through everything into M2.5 nuts in the back panel's pockets; 2 x M2 x 10 self-tapping screws
 through the upper piece's key-end blocks and the board's key-end holes into the surround's standoffs (the owner's change:
-they replace printed locating pins). The upper piece prints top side down; its plate hangs 1.7 mm below the spacer tops,
-so the STL includes breakaway support ribs under it (0.2 mm gap).
+they replace printed locating pins). The upper piece prints board side down with no supports: the plate stands on walls
+round each switch (a 0.6 mm lip under the plate leaves room for the switch clips) and the arms lie on the board.
+
 
 Geometry and checks reuse the Q5B generator's constants (variant "four") and the Q5A board envelopes, read-only.
 """
@@ -49,12 +50,12 @@ ARM_X = (17.3, 20.5)                         # arms beside the display (OLED mod
 ARM_T = 2.0
 RAIL_X = 20.5                                # plate half width
 PLATE_Y = (b.PLATE_EDGE_Y, KEYS[0][1] + b.SWITCH_CUT / 2 + 2.0)   # 4.45 .. 22.8: 2 mm ring below the switches
-BLOCK_X, BLOCK_Y = (15.8, 21.2), (23.2, 31.6)
+BLOCK_X, BLOCK_Y = (15.8, 21.2), (23.4, 31.6)
 M2_SEAT = PCB_TOP + 4.0                      # underside of the M2 screw head
 M2_LEN, M2_SHANK_R, M2_HEAD_R, M2_HEAD_H = 10.0, 1.0, 1.9, 1.4
 M2_CLEAR_R, M2_CBORE_R, M2_PILOT_R = 1.15, 2.0, 0.85
-MEMBRANE = 0.25                              # one sacrificial layer over the M2 hole so the counterbore roof bridges cleanly
-SUP_GAP, SUP_W = 0.2, 0.5                    # breakaway support ribs under the plate
+RING = 2.0                                   # plate ring round each switch cut-out
+CLIP_OPEN = 15.2                             # opening under the plate: 0.6 mm lip all round for the switch clips
 # surround
 STAND_X = (16.3, 21.7)
 POST_GAP = 0.15                              # key-end posts stop this far under the upper piece: the board sets the height
@@ -78,33 +79,24 @@ def plate_prism(z0, h, inset=0.0):
 
 
 def make_upper():
-    up = plate_prism(PLATE_Z, b.PLATE_T)
+    """Prints board side down with no supports: everything stands on the bed except the plate lip, a 0.6 mm overhang."""
+    x1 = KEYS[1][0] + b.SWITCH_CUT / 2 + RING
+    up = box(-x1, x1, PLATE_Y[0], PLATE_Y[1], PCB_TOP, PLATE_TOP)                  # switch box: walls from the board up to the plate
+    for x, y in KEYS:
+        up = up.cut(b.rrect(CLIP_OPEN, CLIP_OPEN, 0.4, PLATE_Z - PCB_TOP + 1, PCB_TOP - 1, x, y))   # clip room under the plate
+        up = up.cut(b.rrect(b.SWITCH_CUT, b.SWITCH_CUT, b.SWITCH_CUT_R, 10, PCB_TOP - 1, x, y))
     for sx in (-1, 1):
-        up = up.union(cyl(BOSS_R, WIN_Z - PCB_TOP, PCB_TOP, sx * MX, UP_Y))                         # display-end spacer boss
-        up = up.union(box(sx * ARM_X[0], sx * ARM_X[1], UP_Y, 1.6, WIN_Z - ARM_T, WIN_Z))          # arm, against the acrylic
-        up = up.union(box(sx * ARM_X[0], sx * ARM_X[1], 1.6, PLATE_Y[0] + 0.15, PLATE_Z, WIN_Z))   # step down to the plate
-        up = up.union(box(sx * BLOCK_X[0], sx * BLOCK_X[1], BLOCK_Y[0], BLOCK_Y[1], PCB_TOP, WIN_Z))   # key-end block
-        up = up.union(box(sx * BLOCK_X[0], sx * RAIL_X, PLATE_Y[1] - 0.1, BLOCK_Y[0] + 0.1, PLATE_Z, PLATE_TOP))
+        up = up.union(cyl(BOSS_R, WIN_Z - PCB_TOP, PCB_TOP, sx * MX, UP_Y))                              # display-end spacer boss
+        up = up.union(box(sx * ARM_X[0], sx * ARM_X[1], UP_Y, PLATE_Y[0] + 1.5, PCB_TOP, PCB_TOP + ARM_T))   # arm, lying on the board
+        up = up.union(box(sx * BLOCK_X[0], sx * BLOCK_X[1], PLATE_Y[1] - 0.2, BLOCK_Y[0], PCB_TOP, PLATE_TOP))   # low link, clear of the keycap
+        up = up.union(box(sx * BLOCK_X[0], sx * BLOCK_X[1], BLOCK_Y[0], BLOCK_Y[1], PCB_TOP, WIN_Z))      # key-end spacer block
     for sx in (-1, 1):
         for y in (UP_Y, LOW_Y):
             up = up.cut(cyl(HOLE_R, 20, PCB_TOP - 1, sx * MX, y))
-        up = up.cut(cyl(M2_CLEAR_R, M2_SEAT - MEMBRANE - PCB_TOP + 1, PCB_TOP - 1, sx * MX, PEG_Y))
-        up = up.cut(cyl(M2_CBORE_R, WIN_Z - M2_SEAT + 1, M2_SEAT, sx * MX, PEG_Y))
+        up = up.cut(cyl(M2_CLEAR_R, 20, PCB_TOP - 1, sx * MX, PEG_Y))
+        up = up.cut(cyl(M2_CBORE_R, WIN_Z - M2_SEAT + 1, M2_SEAT, sx * MX, PEG_Y))                       # open to the top: no roof to bridge
     # stay 0.15 mm inside the surround's cavity, including its rounded corners
     return up.intersect(rounded(W - 2 * WALL - 0.3, D - 2 * WALL - 0.3, 40, 0, r=b.R_IN - 0.15, y=YC))
-
-
-def make_supports():
-    """Breakaway ribs for printing the upper piece top side down: from the bed (the acrylic plane) to 0.2 mm short of the plate."""
-    z0, h = PLATE_TOP + SUP_GAP, WIN_Z - PLATE_TOP - SUP_GAP
-    ribs = None
-    xs = [-18.5 + i * 37.0 / 12 for i in range(13)]
-    for x in xs:
-        r = box(x - SUP_W / 2, x + SUP_W / 2, PLATE_Y[0], PLATE_Y[1], z0, z0 + h)
-        ribs = r if ribs is None else ribs.union(r)
-    for y in (PLATE_Y[0] + 1.15, PLATE_Y[1] - 1.0):
-        ribs = ribs.union(box(-RAIL_X, RAIL_X, y - SUP_W / 2, y + SUP_W / 2, z0, z0 + h))
-    return ribs.intersect(plate_prism(z0 - 0.5, h + 1, inset=0.4))
 
 
 def make_surround(env):
@@ -152,7 +144,7 @@ def build(refs):
     assert all(abs(abs(x) - MX) < 1e-6 and abs(y - PEG_Y) < 1e-6 for x, y in env['mounts'] if y > 0)
     g['mounts'] = mounts
     g['sw3'] = (refs['SW3']['x'] - 21, refs['SW3']['y'] - 27)
-    g['surround'], g['upper'], g['supports'] = make_surround(env), make_upper(), make_supports()
+    g['surround'], g['upper'] = make_surround(env), make_upper()
     g['window'] = b.make_window(mounts)
     g['panel'] = make_panel(mounts, g['sw3'])
     g['switches'] = [b.switch_envelope(x, y) for x, y in KEYS]
@@ -198,11 +190,8 @@ def main():
         check('surround', sur, n, s)
     for n, s in comps + sw + plug + [('window', win), ('panel', panel)] + screws:
         check('upper', up, n, s)
-    pierced = up
-    for sx in (-1, 1):                               # the M2 screw pierces the sacrificial membrane
-        pierced = pierced.cut(cyl(M2_CLEAR_R, 6, PCB_TOP - 1, sx * MX, PEG_Y))
     for n, s in m2:
-        check('upper', pierced, n, s)
+        check('upper', up, n, s)
     for n, s in nopcb + sw + screws + m2 + [('panel', panel)]:
         check('window', win, n, s)
     for n, s in comps + sw + screws + nuts + m2 + feet:
@@ -265,7 +254,8 @@ def main():
         'plate_ring_min': min(PLATE_Y[1] - (KEYS[0][1] + b.SWITCH_CUT / 2), (KEYS[0][1] - b.SWITCH_CUT / 2) - PLATE_Y[0]),
         'arm_to_oled_module': ARM_X[0] - 13.85,
         'key_end_post_gap_under_upper_piece': POST_GAP,
-        'support_gap_under_plate': SUP_GAP,
+        'plate_lip_overhang': (CLIP_OPEN - b.SWITCH_CUT) / 2,
+        'switch_box_wall_min': RING - (CLIP_OPEN - b.SWITCH_CUT) / 2,
         'screw_hole_wall_to_board_edge': LOW_Y - HOLE_R - 27.5,
     }
     solids = {n: dict(valid=s.val().isValid(), count=len(s.solids().vals()), volume_mm3=round(volume(s), 3))
@@ -278,7 +268,7 @@ def main():
             back_acrylic=(PANEL_Z, FLOOR), standoffs=(FLOOR, PCB_Z), pcb=(PCB_Z, PCB_TOP), plate=(PLATE_Z, PLATE_TOP),
             upper_piece=(PCB_TOP, WIN_Z), top_acrylic=(WIN_Z, WIN_TOP)).items()},
         printed_parts=['surround-Q5B.stl (1x, bed side = back-panel side)',
-                       'upper-piece-with-supports-Q5B.stl (1x, printed top side down; break the ribs off the plate)',
+                       'upper-piece-Q5B.stl (1x, printed board side down, no supports)',
                        'foot-2.0-Q5B.stl (4x, optional: or stick-on bumpers, or trim the screws to 23.5 mm)'],
         laser_parts=['faceplate-acrylic-Q5B.svg/.dxf (top, 3/16 in clear)', 'back-panel-acrylic-Q5B.svg/.dxf (back, 3/16 in clear, hex pockets 2.05 mm deep)'],
         fasteners=dict(through='4 x M2.5 x 25 pan head + 4 x M2.5 hex nut (nuts in lasered pockets in the back panel)',
@@ -319,39 +309,29 @@ def write_panel_svg(path, g):
         pockets.append('M' + ' L'.join(f'{px:.3f},{py:.3f}' for px, py in pts) + ' Z')
     cut.append(b._circle(X(g['sw3'][0]), Y(g['sw3'][1]), 1.5))
     w, h = W + 2 * m, D + 2 * m
-    body = '\n'.join(f'  <path d="{d}" fill="#808080" stroke="#000000" stroke-width="0.01"/>' for d in pockets)
-    body += '\n' + '\n'.join(f'  <path d="{d}" fill="none" stroke="#ff0000" stroke-width="0.01"/>' for d in cut)
-    feet = '\n'.join(f'  <path d="{b._circle(X(sx * x), Y(y), 2 * FOOT_R)}" fill="none" stroke="#00aa00" stroke-width="0.1" stroke-dasharray="0.6,0.6"/>'
-                     for x, y in FEET for sx in (-1, 1))
-    ty = Y(Y_BOT - 14.0)
-    text = (f'  <g fill="#0000ff" font-family="DejaVu Sans, sans-serif" text-anchor="middle">\n'
-            f'    <text x="{X(0):.3f}" y="{ty:.3f}" font-size="2.6" font-weight="bold">LIR2032 ONLY</text>\n'
-            f'    <text x="{X(0):.3f}" y="{ty + 3.0:.3f}" font-size="1.7">rechargeable - never CR2032</text>\n  </g>')
+    body = '\n'.join(f'  <path d="{d}" fill="#808080" stroke="none"/>' for d in pockets)
+    body += '\n' + '\n'.join(f'  <path d="{d}" fill="none" stroke="#ff0000" stroke-width="0.1"/>' for d in cut)
     path.write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="{w:.3f}mm" height="{h:.3f}mm" '
                     f'viewBox="0 0 {w:.3f} {h:.3f}">\n  <!-- Count Fidget Q5B option C back panel: clear cast acrylic 3/16 in (4.76 mm), 1 part, drawn as seen '
                     f'from OUTSIDE (put the outside face up). Red = cut through (4 screw holes 2.9 mm, reset pinhole 1.5 mm, outline). '
                     f'Grey fill = hex nut pockets ({b.NUT_POCKET_AF} mm across flats), engrave {POCKET} mm deep: test the depth on scrap first. '
-                    f'Blue = engrave text (convert to paths if needed). Green dashed = where the four 8 mm feet go: reference only, '
-                    f'delete or switch off before cutting. Display end at the top of the drawing. -->\n{body}\n{feet}\n{text}\n</svg>\n')
+                    f'Display end at the top of the drawing. Lines are 0.1 mm wide so they show on screen: set them to hairline if your laser needs it. -->\n{body}\n</svg>\n')
 
 
 def export(g, report):
     mirror = lambda s: s.mirror('XZ')
-    flip = lambda s: s.rotate((0, 0, 0), (1, 0, 0), 180).translate((0, 0, WIN_Z))      # top side down on the bed
-    with_sup = cq.Workplane('XY').add(cq.Compound.makeCompound([g['upper'].val()] + list(g['supports'].solids().vals())))
     stl = {'surround-Q5B.stl': g['surround'].translate((0, 0, -FLOOR)),
-           'upper-piece-with-supports-Q5B.stl': flip(with_sup),
-           'upper-piece-no-supports-Q5B.stl': flip(g['upper']),
+           'upper-piece-Q5B.stl': g['upper'].translate((0, 0, -PCB_TOP)),
            'foot-2.0-Q5B.stl': cyl(FOOT_R, FOOT_H, 0)}
     for name, shape in stl.items():
         cq.exporters.export(mirror(shape), str(OUT / name), tolerance=0.02, angularTolerance=0.1)
     report['stl_mesh_checks'] = {name: q5.mesh_check(OUT / name) for name in stl}
-    report['support_ribs'] = dict(count=len(g['supports'].solids().vals()), width_mm=SUP_W, gap_to_plate_mm=SUP_GAP,
-                                  height_mm=round(WIN_Z - PLATE_TOP - SUP_GAP, 3))
     face = mirror(g['window']).faces('<Z').val().translate((0, 0, -WIN_Z))
     cq.exporters.export(cq.Workplane('XY').add(face), str(OUT / 'faceplate-acrylic-Q5B.dxf'))
     b.write_svg(OUT / 'faceplate-acrylic-Q5B.svg', f'Count Fidget Q5B option C top: clear cast acrylic {WIN_T} mm (3/16 in), 1 part.',
                 b.PART_TOP_Y, b.PART_BOT_Y, b.R_POCKET - b.CLEAR, b.R_POCKET - b.CLEAR, g['mounts'], [], wells=[(0, KEYS[0][1])])
+    fp = OUT / 'faceplate-acrylic-Q5B.svg'
+    fp.write_text(fp.read_text().replace('stroke-width="0.01"', 'stroke-width="0.1"'))   # visible on screen
     face = mirror(g['panel']).faces('>Z').val().translate((0, 0, -FLOOR))
     cq.exporters.export(cq.Workplane('XY').add(face), str(OUT / 'back-panel-acrylic-Q5B.dxf'))
     write_panel_svg(OUT / 'back-panel-acrylic-Q5B.svg', g)
