@@ -41,7 +41,7 @@ Q5B is the third enclosure for the **ordered, locked Q5 board**. The board, BOM 
 | Switch plate | 1 | **Made, not bought** (switches do not come with one). Print `plate-printable-Q5B.stl` in PETG, solid, flat; or laser-cut 1.5 mm black acrylic (`plate-acrylic-Q5B.svg` / `.dxf`). 3/16 in sheet is too thick for switch clips. |
 | Spacers | 2 + 2 | `spacer-6.7-Q5B.stl`, `spacer-1.7-Q5B.stl`, OD 4.0 / ID 2.3 |
 | Locating pegs | 2 | `peg-3.5-Q5B.stl` (print pins up, solid) |
-| Screws | 4 | **M2 × 18** pan-head machine screws (ISO 7045 / DIN 7985, head ≤ 4.0 × 1.6 mm) |
+| Screws | 4 | **M2 × 20** pan-head machine screws for 3/16 in (4.76 mm) acrylic: full 1.6 mm nut engagement, tip 0.28 mm inside the underside. M2 × 18 also works (1.42 mm engagement) and is the length for sheet under 4.6 mm. ISO 7045 / DIN 7985, head ≤ 4.0 × 1.6 mm |
 | Nuts | 4 | **M2 hex nuts** (ISO 4032, 4.0 mm AF × 1.6 mm) |
 | Switches / keycaps | 2 / 2 | Kailh Box Jade (3-pin) in the board's MX hot-swap sockets; standard 1u MX keycaps |
 
