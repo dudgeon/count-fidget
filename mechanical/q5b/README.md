@@ -1,121 +1,124 @@
-# Q5B — bezel tray, one-piece acrylic faceplate on four screws, hidden switch plate
+# Q5B: bezel tray, one-piece acrylic faceplate, hidden switch plate (three options)
 
-Q5B is the third enclosure for the **ordered, locked Q5 board**. The board, BOM and every Q5/Q5A file are unchanged. It follows the owner's review of Q5A (24 Nov 2026):
+Q5B is an enclosure for the **ordered, locked Q5 board**. It does not change the board, the BOM or any Q5/Q5A file. The owner set these requirements on 24–25 Nov 2026:
 
-- **Keys are Kailh Box Jade** (3-pin, plate mount) with **standard MX keycaps**, not the HanElectricity switch and printed tiles. Q5A's lid held the switches by a 0.20 mm overlap on a raised rim that Box switches do not have.
-- **Keys sat too proud** and looked fragile.
-- **Case changes:** a thin printed bezel should frame the acrylic, the walls should be thicker, and the bottom edge chamfered.
-- **Fasteners** should be easy to buy, with **captive nuts under the case**; spacers may be printed.
-- **The top must be one solid acrylic piece.** A two-part bottom is fine.
-- **All four screws go through the acrylic top** (25 Nov 2026), so there are no hidden screws.
+- **Switches and caps:** Kailh Box Jade switches with standard MX keycaps. The caps were measured assembled: the pair is **36.9 × 18.0 mm**.
+- **Top:** one solid clear acrylic piece. A two-part bottom is fine.
+- **Case:** a printed bezel round the acrylic, thick walls and a bottom chamfer.
+- **Keys:** they must not sit proud.
+- **Hardware (owner's stock):** M2.5 screws in **20 and 25 mm only**, M2.5 nuts, and **3/16 in (4.76 mm)** clear acrylic. The two board holes at the display end are drilled out to **7/64 in**. They are unplated; the nearest trace is 0.4 mm outside the new hole.
+- **Switch plate:** printed, with the pegs built in.
 
-**Body: 47.0 × 64.0 × 20.0 mm**; standard OEM-style keycap tops are about 29.2 mm above the table. The case is 5 mm longer than the first Q5B so that the lower screws can sit below the keys. Q5A was 45.4 × 57.4 × 16.8 mm.
+The owner has not chosen yet, so there are three options. All three share the same board stack, faceplate height and key opening.
 
-![Assembled](renders/hero.jpg)
+| | **A: lip** (`lip/`) | **B: four screws** (`four/`) | **C: clear back** (`back/`) |
+|---|---|---|---|
+| Body | **47.0 × 59.0 × 21.1 mm** (original footprint) | 47.0 × 63.25 × 20.3 mm | 47.0 × 59.0 × 26.2 mm |
+| Faceplate fixing | 2 × M2.5 × 20 at the display end. At the key end, the acrylic edge sits 0.7 mm under a printed lip. | 4 × M2.5 × 20. The key-end pair are on tray posts just outside the board edge. | As A, but with 2 × **M2.5 × 25**. They go through the back panel into nuts in hex pockets lasered into its outside face. |
+| Bezel | Stands 0.8 mm above the acrylic all round | Flush with the acrylic | Stands 0.8 mm above the acrylic all round |
+| Bottom | Printed floor, nuts in printed pockets | Printed floor, nuts in printed pockets | **Clear 3/16 in panel** on a 1.6 mm frame ledge. Loose printed standoffs carry the board on it. |
+| Hidden screws | none | none | none |
 
-| | |
-|---|---|
-| ![Top](renders/top.jpg) | ![Exploded](renders/exploded.jpg) |
-| ![Low angle](renders/lowangle.jpg) | ![Profile](renders/side.jpg) |
-| ![Keys in their well](renders/keys.jpg) | ![Underside: captive nuts](renders/under.jpg) |
+Renders: `renders/<option>-<view>.jpg`.
 
-## Design
+## Shared design
 
 | Decision | Why |
 |---|---|
-| **One 4.5 mm clear cast-acrylic faceplate** (3/16 in is fine) over the whole top, with a single 38.45 × 19.4 mm well round both keycaps. Underside at PCB top + 6.7. | **Shape:** one solid, thick piece with no seams. **Clearance:** it covers the display with a 1.0 mm air gap over the OLED maximum. **Keycap fit:** standard keycaps drop into the well with 0.6 mm all round, and rest with their skirts 0.2 mm below its top face, so only the caps stand up (9.2 mm). |
-| **Hidden 1.5 mm black switch plate**, part of the bottom assembly, at the standard MX plate height (top = PCB top + 5.0). It has 14.0 mm cut-outs, rests on the two tray posts below the keys, and is clamped there by the lower faceplate screws. | **Retention:** Box switches clip into a 1.5 mm plate the standard way, so they cannot pull out with a keycap; this replaces Q5A's rim capture. **Clearance:** the plate stops 0.5 mm short of the OLED module, which occupies that height. **Material:** black acrylic (laser) or printed PETG (`plate-printable-Q5B.stl`) both work. |
-| **Faceplate fixing: four M2 × 18 screws, all through the acrylic.** The upper pair use the board's upper holes on 6.7 mm spacers. The lower pair sit 29.7 mm below the board centre, just outside the board edge, on tray posts; a 1.7 mm spacer sits between the plate and the faceplate. | **Why not the board's lower holes:** they sit at the keycaps' bottom corners, so a hole there leaves only 0.3 mm of acrylic to the key well. Below the keys there is 5.0 mm of acrylic between each hole and the well, and the heads are 4.8 mm from the keycaps. |
-| **Printed locating pegs in the board's lower holes**, 3.5 mm long with 1.9 mm pins into the board and the plate | **Hold the board's key end down** under the clamped plate and locate the plate, so the lower board holes need no screws. |
-| **Bezel tray:** 2.0 mm walls (5 perimeters) up to the PCB, then a 1.2 mm bezel round the faceplate with 0.25 mm clearance; the top is flush with the faceplate. Printed ledges sit 0.1 mm under the faceplate (display half) and under the plate (key half). | **Protection:** the acrylic edge is covered. **Stiffness:** the thicker walls are stiffer for drops. **Heights:** the spacers set them, not the print. |
-| **1.0 mm 45° bottom chamfer**; 0.4 mm top chamfer | **Bottom:** hides elephant's foot. **Top:** breaks the bezel edge. |
-| **M2 pan-head machine screws into hex nuts captive in pockets under the tray**: 4 × M2 × 18 | **No threads in plastic.** **Pocket size:** the pockets are 4.15 mm across flats, in a widened boss base. The parts under the board start 5 mm up, so the base has room to grow. |
-| **Printed spacers**: 2 × 6.7 mm (upper), 2 × 1.7 mm (lower, plate to faceplate); 2 × 3.5 mm pegs | Their length sets the faceplate height. **Print solid and check the length with calipers** (±0.1 mm). The lower posts are part of the tray and set the plate height. |
+| **Faceplate:** 3/16 in clear cast acrylic, one piece. Its underside is 1.0 mm above the OLED maximum. One **38.1 × 19.2 mm** opening round both caps. | The opening is the measured caps plus 0.6 mm all round. The cap skirts rest 0.46 mm below the acrylic top, and only the caps stand up (8.1 mm above the bezel in A and C). |
+| **Switch plate:** hidden, 1.5 mm, at the standard MX height (top = PCB top + 5.0). **Printed in PETG with the two pegs built in.** | The Box Jade clips lock under the plate, so pulling a keycap can't pull a switch out of its hot-swap socket, and key presses load the plate rather than the solder joints. The pegs sit in the board's key-end holes. They locate the plate and hold the board down. |
+| **Print the plate top face down.** | The pegs then point up, so it needs no supports. Use 0.25 or 0.15 mm layers so 1.5 mm is a whole number of layers. Print `plate-fit-coupon-printable-Q5B.stl` (13.9–14.2 mm holes) first if your printer runs holes small. |
+| **Key-end screws: none in A and C; off the board in B** | The board's key-end holes sit at the keycaps' corners. A screw hole there leaves only about 0.2 mm of acrylic beside the opening. |
+| **M2.5 nuts** (5.0 AF × 2.0) in 5.15 AF pockets | With 3/16 in sheet, every screw has the full 2.0 mm of thread in its nut. The tips stay 0.28–0.45 mm inside the bottom surface. |
 
-## Parts
+## Parts per option
 
-| Item | Qty | Specification |
-|---|---:|---|
-| Tray | 1 | `tray-Q5B.stl`, PETG, 0.2 mm layers, 5 perimeters, floor down, no supports |
-| Faceplate | 1 | Clear **cast** acrylic **4.5 mm** (3/16 in; 4.3–5.0 accepted), `faceplate-acrylic-Q5B.svg` / `.dxf` |
-| Switch plate | 1 | **Made, not bought** (switches do not come with one). Print `plate-printable-Q5B.stl` in PETG, solid, flat; or laser-cut 1.5 mm black acrylic (`plate-acrylic-Q5B.svg` / `.dxf`). 3/16 in sheet is too thick for switch clips. |
-| Spacers | 2 + 2 | `spacer-6.7-Q5B.stl`, `spacer-1.7-Q5B.stl`, OD 4.0 / ID 2.3 |
-| Locating pegs | 2 | `peg-3.5-Q5B.stl` (print pins up, solid) |
-| Screws | 4 | **M2 × 20** pan-head machine screws for 3/16 in (4.76 mm) acrylic: full 1.6 mm nut engagement, tip 0.28 mm inside the underside. M2 × 18 also works (1.42 mm engagement) and is the length for sheet under 4.6 mm. ISO 7045 / DIN 7985, head ≤ 4.0 × 1.6 mm |
-| Nuts | 4 | **M2 hex nuts** (ISO 4032, 4.0 mm AF × 1.6 mm) |
-| Switches / keycaps | 2 / 2 | Kailh Box Jade (3-pin) in the board's MX hot-swap sockets; standard 1u MX keycaps |
+**Every option:**
+- **Printed:**
+  - `plate-with-pegs-printable-Q5B.stl` (PETG, top face down);
+  - 2 × `spacer-6.7-Q5B.stl` (OD 5.0 / ID 2.7, solid).
+- **Faceplate:** `faceplate-acrylic-Q5B.svg` / `.dxf`, cut from 3/16 in clear acrylic.
+- **Screws:** M2.5 pan head (ISO 7045 / DIN 7985), with one M2.5 nut per screw.
+- **Not printing the plate:** `plate-acrylic-Q5B.svg` (1.5 mm acrylic) plus the separate `peg-for-acrylic-plate-3.5-Q5B.stl` is the alternative.
 
-**Buying the hardware:**
-- **Board holes:** these are 2.2 mm, so the fasteners must be **M2**. M3 does not fit, and #2-56 is too tight in the plated holes.
-- **Where to buy:** hardware stores reliably stock M3, but M2 is hit or miss. An M2 pan-head assortment with nuts is the dependable source.
+| Option | Body | Screws | Extra printed parts | Extra laser parts |
+|---|---|---|---|---|
+| A | `lip/tray-Q5B.stl` | 2 × M2.5 × 20 | 2 × `collar-1.7-Q5B.stl` (washers between the plate and the faceplate, pinned into the plate) | — |
+| B | `four/tray-Q5B.stl` | 4 × M2.5 × 20 | 2 × `spacer-1.7-Q5B.stl` (between the plate and the faceplate on the key-end screws) | — |
+| C | `back/frame-Q5B.stl` (walls only) | 2 × M2.5 × **25** | Collars as A, plus loose standoffs: 2 × `screw-standoff`, 2 × `standoff`, 2 × `post`, 1 × `usb-support`. Each is pinned into the panel. | `back-panel-acrylic-Q5B.svg` / `.dxf`, 3/16 in clear |
 
-## DFM
-
-- **Switch fit:**
-  - **Printed plate:** print it flat at 0.25 or 0.15 mm layers (6 or 10 layers make exactly 1.5 mm; 0.2 mm layers give 1.4 or 1.6). Print `plate-fit-coupon-printable-Q5B.stl` first (13.9 / 14.0 / 14.1 / 14.2 mm holes). Use the size where a Box Jade clicks in and doesn't rock; FDM holes usually print 0.1–0.2 mm small. If that size isn't 14.0, tell Claude and the plate will be regenerated with it.
-  - **Laser-cut plate:** cut `laser-coupon-Q5B.svg` from the 1.5 mm sheet first. A Box Jade should click into the 14.0 mm hole and not rock.
-  - **Printed plate:** check the same fit on a print.
-- **Faceplate thickness:** 4.3–5.0 mm is accepted, so 3/16 in (4.76 mm) sheet works. The datum is its underside, so thickness only moves the top face. The screws keep 1.18–1.6 mm of thread in the nut across that range (1.42 mm at 3/16 in).
-- **Faceplate edges and webs:**
-  - side rails beside the well: 2.83 mm;
-  - strip below the well: 9.55 mm;
-  - lower screw hole to well: 5.0 mm;
-  - screw hole to edge: 2.15 mm minimum.
-- **Tightening:** stop as soon as the heads seat; acrylic cracks at over-clamped holes.
+**Back panel SVG (C):**
+- **Orientation:** drawn as seen from outside. Lay the panel outside face up.
+- **Red:** cut.
+- **Grey fill:** the two hex nut pockets. Engrave them **2.05 mm deep**, and test the depth on scrap first.
+- **Blue:** the battery warning, to engrave. Convert the text to paths if your laser software needs it.
+- **Reset hole:** the 1.5 mm hole is the reset pinhole.
 
 ## Assembly
 
-1. Press the four nuts into the hex pockets from underneath. A dab of tape holds them if the fit is loose.
-2. Insert the LIR2032 with USB connected (Q5 USB-first rule), then lower the board into the tray.
-3. Push a peg into each of the board's two lower holes.
-4. Clip both Box Jades into the plate. Lower the plate and switches so the switch pins enter the hot-swap sockets, the peg pins enter the plate, and the plate rests on the two tray posts.
-5. Put the 6.7 mm spacers on the upper board holes and the 1.7 mm spacers on the plate over the posts. Lay the faceplate in its pocket and drive the four M2 × 18 screws.
-6. Press on the keycaps through the well.
+**A (lip):**
+1. Press the two nuts into the pockets under the tray.
+2. Fit the LIR2032 with USB connected (Q5 USB-first rule), then drop the board in.
+3. Clip the Box Jades into the plate. Lower the plate so the switch pins enter the sockets and the peg pins enter the board's key-end holes.
+4. Put a collar on each peg position and a 6.7 mm spacer on each display-end hole.
+5. **Fit the faceplate.** Hold it with the display end tipped up about 7° and shifted 1 mm toward the display end. Lower it until the key-end edge is level with the lip, slide that edge under the lip, then swing the display end down. The generator checks this path.
+6. Drive the two M2.5 × 20 screws. Press the keycaps on.
+
+**B (four screws):** as A, with these changes:
+- In step 4, put 1.7 mm spacers on the plate over the key-end posts instead of collars.
+- In step 5, lower the faceplate straight down.
+- Drive four screws.
+
+**C (clear back):**
+1. Press the two nuts into the panel's pockets from outside. Tape holds them until the screws are in.
+2. Lay the panel in the frame on the bottom ledge.
+3. Stand the loose standoffs, posts and USB support in their panel holes.
+4. Continue as A from step 2.
 
 ## What the generator checks
 
-`scripts/build_q5b_enclosure.py` reads the native board through the Q5 builder and reuses the Q5A board envelopes. It writes `fit-report.json` and `build-manifest.json`. The final build found:
-- **Parts:** valid single solids and manifold, bed-aligned STLs.
-- **Static clearance:** zero static intersections among the tray, faceplate, plate, switches, spacers, screws, nuts, the board and every component envelope, and the USB plug reservation.
-- **Keycaps:** clear at rest and fully pressed (4.0 mm travel, 0.3 mm wobble allowance) against the tray, the thickest accepted faceplate, the plate and all screws.
-- **Assembly paths:** zero collisions on straight vertical paths (366 poses, 94,428 sampled tests).
+`scripts/build_q5b_enclosure.py` builds one option per run. Select it with `Q5B_VARIANT=lip|four|back`.
 
-| Minimum modelled distance (mm) | |
-|---|---|
-| OLED maximum to faceplate underside | 1.0 |
-| Keycap to faceplate well, plan | 0.6 |
-| Lower screw hole to key well (acrylic web) | 5.0 |
-| Keycap to nearest screw head, plan | 4.85 |
-| Pressed keycap skirt above the plate | 2.0 |
-| Lower tray post to board edge | 0.5 |
-| Plate edge to OLED module footprint | 0.5 |
+For each option, the final build found:
+- **Parts:** valid single solids; every STL is manifold and sits on the bed.
+- **Static clearance:** zero intersections between the case parts, both acrylic parts, the switches, spacers, collars, standoffs, screws, nuts, the board, every component envelope and the USB plug space.
+- **Keycaps:** clear at rest and fully pressed (4.0 mm travel, with a 0.3 mm wobble allowance), against the thickest accepted faceplate (5.0 mm) and everything else.
+- **Assembly paths:** zero collisions on straight vertical paths, plus the tilt-and-swing faceplate path in A and C. That is 520 / 488 / 642 poses.
 
 ## Not established (first-article checks)
 
 Nothing here is a measurement. Before calling Q5B done, check:
-- **Switches and keycaps:**
-  - Box Jade fit in the plate;
-  - real keycap size and skirt height. The check assumes an 18.2 mm OEM-R3-like 1u cap with its skirt at PCB top + 11.0. The board's 19.05 mm switch pitch leaves about 0.85 mm between standard caps, as on any keyboard;
-- **Fasteners:**
-  - nut-pocket fit on a real print;
-  - spacer lengths and peg-pin fit in the 2.2 mm board holes on a real print;
-- **Case and acrylic:**
-  - acrylic crazing at the screw holes;
-  - OLED readability through 4.5 mm;
+- **Switches and caps:**
+  - Box Jade fit in the printed plate (use the coupon);
+  - keycap **skirt height**, which is assumed at PCB top + 11.0. Only the plan size was measured.
+- **Faceplate and lip (A, C):**
+  - lip retention and fit on a real print;
+  - the acrylic lip insertion.
+- **Back panel (C):** laser nut-pocket depth.
+- **Hardware fit:**
+  - nut-pocket fit;
+  - spacer and collar lengths (check with calipers);
+  - peg-pin fit in the 2.2 mm holes.
+- **Board:** the drilled 7/64 in holes.
+- **Acrylic:** crazing at the screw holes. Don't over-tighten, and **don't use anaerobic threadlocker (Loctite 242/243/271)**: it stress-cracks acrylic and PETG.
+- **Use:**
+  - OLED readability through 4.76 mm of acrylic;
   - USB cable fit;
   - drop behaviour.
 
 ## Renders
 
-`scripts/render_q5b/` adapts the Q5A pipeline:
+`scripts/render_q5b/` renders each option:
 - **Board:** the native board textures and KiCad STEP models.
 - **Enclosure:** the checked enclosure parts.
 - **Display:** firmware OLED frames.
 - **Appearance models:** the Box Jade, screws, nuts and keycaps are appearance models.
-- **Substitutions:** Blender's bundled `studio.exr` stands in for the Poly Haven HDRIs, and DejaVu for the decal fonts, because those downloads were blocked where these were made.
+- **Substitutions:** Blender's bundled `studio.exr` stands in for the Poly Haven HDRIs, and DejaVu for the decal fonts.
 
 ```sh
-python3 -B scripts/build_q5b_enclosure.py --kicad-python /usr/bin/python3
-python3 -B scripts/render_q5b/build_render_assets.py --kicad-python /usr/bin/python3   # textures/OLED/decals as for Q5A
-python3 -B scripts/render_q5b/render_stills.py -- --shots hero,top,lowangle,exploded2,keys,under,side --samples 128 --out build/render-q5b/stills
+for v in lip four back; do
+  Q5B_VARIANT=$v python3 -B scripts/build_q5b_enclosure.py --kicad-python /usr/bin/python3
+  Q5B_VARIANT=$v python3 -B scripts/render_q5b/build_render_assets.py --kicad-python /usr/bin/python3
+  Q5B_VARIANT=$v python3 -B scripts/render_q5b/render_stills.py -- --shots hero,top,exploded2,under --samples 128
+done
 ```

@@ -53,28 +53,28 @@ def box_jade():
 
 
 def machine_screw(length):
-    """M2 pan head (ISO 7045, head 4.0 x 1.6, cross recess), head on z = 0 up; plain-threaded shank down."""
+    """M2.5 pan head (ISO 7045, head 5.0 x 1.75, cross recess), head on z = 0 up; plain-threaded shank down."""
     head = cq.Workplane('XY').circle(b.HEAD_D / 2).extrude(b.HEAD_H)
     try:
         head = head.faces('>Z').edges().fillet(0.7)
     except Exception:
         pass
     for ang in (0, 90):
-        slot = cq.Workplane('XY').box(2.1, 0.55, 1.2, centered=(True, True, False)).translate((0, 0, 0.75))
+        slot = cq.Workplane('XY').box(2.6, 0.6, 1.3, centered=(True, True, False)).translate((0, 0, 0.75))
         head = head.cut(slot.rotate((0, 0, 0), (0, 0, 1), ang))
-    core = cyl(0.8, length, -length)
+    core = cyl(1.05, length, -length)
     thread = None
-    pitch = 0.4
+    pitch = 0.45
     for i in range(int((length - 0.4) / pitch)):
         z = -length + 0.2 + i * pitch
-        ring = cq.Workplane('XY').add(cq.Solid.makeCone(0.8, 1.0, pitch / 2, cq.Vector(0, 0, z))).union(
-            cq.Workplane('XY').add(cq.Solid.makeCone(1.0, 0.8, pitch / 2, cq.Vector(0, 0, z + pitch / 2))))
+        ring = cq.Workplane('XY').add(cq.Solid.makeCone(1.05, 1.25, pitch / 2, cq.Vector(0, 0, z))).union(
+            cq.Workplane('XY').add(cq.Solid.makeCone(1.25, 1.05, pitch / 2, cq.Vector(0, 0, z + pitch / 2))))
         thread = ring if thread is None else thread.union(ring)
     return head.union(core).union(thread)
 
 
 def hex_nut():
-    n = b.hexagon(b.NUT_AF, b.NUT_H, 0, 0, 0).cut(cyl(0.85, 3, -1))
+    n = b.hexagon(b.NUT_AF, b.NUT_H, 0, 0, 0).cut(cyl(1.1, 3, -1))
     try:
         n = n.faces('>Z or <Z').edges('not %CIRCLE').chamfer(0.15)
     except Exception:
@@ -85,7 +85,7 @@ def hex_nut():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--kicad-python', required=True)
-    ap.add_argument('--out', type=Path, default=ROOT / 'build/render-q5b/assets/q5b-parts.glb')
+    ap.add_argument('--out', type=Path, default=ROOT / 'build/render-q5b/assets' / b.VARIANT / 'q5b-parts.glb')
     args = ap.parse_args()
     data, refs = q5.read_board(args.kicad_python)
     g = b.build(refs)
@@ -105,6 +105,14 @@ def main():
         add('steel_screw', f'nut-{i}', hex_nut().translate((x, y, s['nut_top'] - b.NUT_H)))
     for i, pg in enumerate(g['pegs'], 1):
         add('spacer', f'peg-{i}', pg)
+    for i, cl in enumerate(g['collars'], 1):
+        add('spacer', f'collar-{i}', cl)
+    loose_names = []
+    for i, (k, sh, _) in enumerate(g['loose'], 1):
+        add('spacer', f'{k}-{i}', sh)
+        loose_names.append(f'{k}-{i}')
+    if b.BACK:
+        add('acrylic', 'back-panel', g['panel'])
     sw = box_jade()
     for i, (x, y) in enumerate(b.KEYS, 1):
         for mat, s in sw.items():
@@ -134,7 +142,8 @@ def main():
     meta = dict(frame='mm; CAD frame X = PCB_X - 21, Y = 27 - PCB_Y, Z above tray underside',
                 pcb_z=b.PCB_Z, pcb_top=b.PCB_TOP, plate_z=b.PLATE_Z, plate_top=b.PLATE_TOP, win_z=b.WIN_Z, win_top=b.WIN_TOP,
                 keycap_top=b.CAP_B + b.CAP_H, stem_top=b.STEM_TOP, travel=b.TRAVEL,
-                mounts=[[x, -y] for x, y in g['mounts']], pegs=len(g['pegs']),
+                mounts=[[x, -y] for x, y in g['mounts']], pegs=len(g['pegs']), n_mounts=len(g['mounts']), collars=len(g['collars']),
+                loose=loose_names, base_z=b.BASE_Z, variant=b.VARIANT,
                 spacer_base_z=[b.PCB_TOP if m[1] < 0 else b.PLATE_TOP for m in g['mounts']], screw_head_z=[g['spec'][m]['head_z'] for m in g['mounts']],
                 upper=[i + 1 for i, m in enumerate(g['mounts']) if m[1] < 0], lower=[i + 1 for i, m in enumerate(g['mounts']) if m[1] > 0],
                 keys=[[x, -y] for x, y in b.KEYS], oled_active_center=[ox, -(oy - 2.1)], oled_active_size=[21.74, 10.86],

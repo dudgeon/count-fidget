@@ -25,11 +25,16 @@ def explode(ctx, amount=1.0):
         G[f'key{i}'].location.z = 0.084 * amount
     G['plate'].location.z = 0.036 * amount
     G['window'].location.z = 0.054 * amount
-    for i in range(1, 5):
+    for i in range(1, md['n_mounts'] + 1):
         up = i in md['upper']
         P[f'screw-{i}'].location.z = md['screw_head_z'][i - 1] * MM + 0.012 * amount
         P[f'spacer-{i}'].location.z = md['spacer_base_z'][i - 1] * MM - (0.006 if up else 0.004) * amount
         P[f'nut-{i}'].location.z = -0.010 * amount
+    if 'back-panel' in P:   # lift everything; the clear back panel stays on the floor below the frame
+        lift = 0.012 * amount
+        for k, grp in G.items():
+            grp.location.z += lift
+        P['back-panel'].location.z = -lift
 
 
 def flip_pcb(ctx):
@@ -77,7 +82,7 @@ def main():
     ap.add_argument('--preview', action='store_true')
     ap.add_argument('--samples', type=int, default=384)
     ap.add_argument('--res', default='1920x1080')
-    ap.add_argument('--out', type=Path, default=S.BUILD / 'stills')
+    ap.add_argument('--out', type=Path, default=S.ROOT / 'build/render-q5b' / ('stills-' + S.PARTS_DIR.name))
     ap.add_argument('--tray', default='#3a3b3e')
     ap.add_argument('--frame', default='oled_108_none.png')
     ap.add_argument('--exposure', type=float, default=0.0)

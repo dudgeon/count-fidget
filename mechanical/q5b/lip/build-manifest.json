@@ -1,0 +1,19 @@
+{
+  "generator": "979ee1cf41b43bd691fda048e61086789968b2fc75f1a37e5031a3acd43e58e4",
+  "board": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+  "model": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+  "outputs": {
+    "tray-Q5B.stl": "511c27228b4c816f636bc6671921c346004e76f332fba11346f13f0b10b9488f",
+    "plate-with-pegs-printable-Q5B.stl": "0fa8e2b13d8480264f7847d9605163acf847418c9c631a4960fe30e1ad3eb6c8",
+    "spacer-6.7-Q5B.stl": "68ac6fe3cf1fae8ed386f187e19f22046bbf8971d6031fe1449a3a5181299c22",
+    "peg-for-acrylic-plate-3.5-Q5B.stl": "cfd009f7516f58e2ecd725f291eb80f138a42fd7e5d7060e76d47d4ff9b67844",
+    "collar-1.7-Q5B.stl": "45077ab5f9c19d7f6442ab6a04d8d5164a3c0de1cdcc27f5789cc6e8a784e764",
+    "faceplate-acrylic-Q5B.dxf": "7899b3e9303ae3e3d138130877b4029df05040034826b806f7544f2e57f382d5",
+    "faceplate-acrylic-Q5B.svg": "d5b4cb0934808dae6a124c190a04c0ed17836404b2f3b0e6c785af3879c78619",
+    "plate-acrylic-Q5B.dxf": "0ea22556a7fc22e4e08bbddab3af1cf719e5a3d1369d719434d8f9e78e62a3ac",
+    "plate-acrylic-Q5B.svg": "dc1fa542236e00f538d5ad33bafc2ee785172cd2b29e41fb4579adaa205c0cc2",
+    "laser-coupon-Q5B.svg": "c46f7f4a6c3e3ed4aa093b9fface5767f63480309fc92aac0c6067426776df2e",
+    "enclosure-Q5B.step": "6b88f94a6a16228d255d0980ab23d43f75ef185665977ca573178b3f61f536f7",
+    "fit-report.json": "b130f45ee822ddd01bc0a375138d6dc98d8bdfb079e0da74df0aad93c5dc0bf3"
+  }
+}

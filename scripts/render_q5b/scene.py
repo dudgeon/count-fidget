@@ -6,6 +6,7 @@ Units are metres (real scale). The CAD frame is used throughout:
 X = PCB_X - 21 mm, Y = 27 mm - PCB_Y, Z above the tray underside.
 """
 import json
+import os
 import math
 from pathlib import Path
 
@@ -16,12 +17,13 @@ ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / 'build/render-q5-acrylic'
 TEX = BUILD / 'textures'
 ASSETS = ROOT / 'build/render-q5b/assets'
+PARTS_DIR = ASSETS / os.environ.get('Q5B_VARIANT', 'lip')   # per-variant GLB + meta; textures stay in ASSETS
 OLED = BUILD / 'oled'
 MM = 0.001
 
 
 def meta():
-    return json.loads((ASSETS / 'q5b-parts.json').read_text())
+    return json.loads((PARTS_DIR / 'q5b-parts.json').read_text())
 
 
 # ------------------------------------------------------------------ helpers
@@ -488,7 +490,7 @@ def load_board(mats):
 
 
 def load_parts(mats):
-    objs = import_glb(ASSETS / 'q5b-parts.glb')
+    objs = import_glb(PARTS_DIR / 'q5b-parts.glb')
     bake_to_world(objs, MM)
     out = {}
     for o in objs:
@@ -754,13 +756,18 @@ def build(**opts):
     pcb_names = [n for n in parts if n.startswith(('oled', 'bt1', 'sw1-socket', 'sw2-socket', 'sw3'))]
     G = {}
     G['pcb'] = group('G_PCB', [board] + kicad_parts + marks + [parts[n] for n in pcb_names], origin=(0, 0, (md['pcb_z'] + 0.8) * MM))
-    G['tray'] = group('G_TRAY', [parts['tray']] + [parts[f'nut-{i}'] for i in range(1, 5)])
+    n = md['n_mounts']
+    G['tray'] = group('G_TRAY', [parts['tray']] + [parts[f'nut-{i}'] for i in range(1, n + 1)]
+                      + [parts[k] for k in md['loose']] + ([parts['back-panel']] if 'back-panel' in parts else []))
     for i in (1, 2):
         G[f'sw{i}'] = group(f'G_SW{i}', [parts[n] for n in parts if n.startswith(f'switch-{i}-')])
         G[f'key{i}'] = group(f'G_KEY{i}', [parts[f'keycap-{i}']])
-    G['plate'] = group('G_PLATE', [parts['plate']] + [parts[f'peg-{i}'] for i in range(1, md['pegs'] + 1)])
-    G['window'] = group('G_WINDOW', [parts['window']] + [parts[f'spacer-{i}'] for i in range(1, 5)] + [parts[f'screw-{i}'] for i in range(1, 5)])
-    cyclorama(mats['backdrop'])
+    G['plate'] = group('G_PLATE', [parts['plate']] + [parts[f'peg-{i}'] for i in range(1, md['pegs'] + 1)]
+                       + [parts[f'collar-{i}'] for i in range(1, md['collars'] + 1)])
+    G['window'] = group('G_WINDOW', [parts['window']] + [parts[f'spacer-{i}'] for i in range(1, n + 1)] + [parts[f'screw-{i}'] for i in range(1, n + 1)])
+    cyc = cyclorama(mats['backdrop'])
+    if md.get('base_z') and cyc is not None:
+        cyc.location.z = md['base_z'] * MM
     world_hdri(o['hdri'], strength=o.get('hdri_strength', 0.22), rotation=o.get('hdri_rotation', 0.6))
     home = {k: g.location.copy() for k, g in G.items()}
     return dict(G=G, parts=parts, board=board, kicad=kicad_parts, mats=mats, meta=md, opts=o, home=home)

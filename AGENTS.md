@@ -11,22 +11,26 @@ The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. Their ru
 
 **Q5B** implements this in `mechanical/q5b/` (start at its README). Its generator is `scripts/build_q5b_enclosure.py` and its renders are in `scripts/render_q5b/`.
 
-Key facts:
-- **Body:** 47.0 × 64.0 × 20.0 mm (lengthened 25 Nov so all four screws go through the acrylic top).
-- **Faceplate:** one 4.5 mm clear faceplate with one key well, 1.0 mm over the OLED.
-- **Switch plate:** a hidden 1.5 mm black plate at the MX height, which retains the switches.
-- **Fixings:**
-  - 4 × M2 × 18 through the faceplate into hex nuts in pockets under the tray: two in the board's upper holes, two on tray posts below the keys, outside the board (the board's lower holes are too close to the keycaps for an acrylic web);
-  - the lower screws also clamp the plate; printed pegs in the board's lower holes hold the board;
-  - printed 6.7 and 1.7 mm spacers.
-- **Checks:** zero intersections and zero collisions over 366 vertical assembly poses.
+Key facts (25 Nov 2026; three options pending the owner's choice, one generator run each with `Q5B_VARIANT=lip|four|back`):
+- **Owner's stock:** M2.5 × 20 / × 25 screws and M2.5 nuts only; 3/16 in clear acrylic. The board's two display-end holes are drilled to 7/64 in.
+- **Keycaps:** measured as a pair at 36.9 × 18.0 mm. The faceplate opening is 38.1 × 19.2 mm.
+- **Shared parts:**
+  - one 3/16 in clear faceplate, 1.0 mm over the OLED;
+  - a hidden 1.5 mm printed switch plate with integrated pegs, printed top face down.
+- **The options:**
+  - **A lip** (47 × 59): 2 × M2.5 × 20; the key-end acrylic edge sits under a printed lip; collars on top of the plate.
+  - **B four** (47 × 63.25): 4 × M2.5 × 20; the key-end pair on tray posts outside the board edge.
+  - **C back** (47 × 59 × 26.2): A plus a clear 3/16 in back panel; 2 × M2.5 × 25 into nuts in laser-pocketed hex recesses in the panel; loose printed standoffs.
+- **Key-end board holes:** never take faceplate screws; they are about 0.2 mm from the key opening.
+- **Checks:** zero intersections and zero assembly-path collisions in all three.
 
 Physical gates:
-- plate fit;
-- real keycap size and skirt (modelled OEM-like);
-- peg-pin fit in the board holes;
+- plate fit (coupon);
+- keycap skirt height;
+- lip insertion and retention;
+- laser pocket depth;
 - nut pockets and spacers;
-- acrylic crazing;
+- acrylic crazing (no anaerobic threadlocker);
 - OLED readability.
 
 Q5A stays as it was. No purchase or order is authorised.

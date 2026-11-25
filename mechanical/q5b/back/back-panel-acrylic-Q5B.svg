@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="46.600mm" height="58.600mm" viewBox="0 0 46.600 58.600">
+  <!-- Count Fidget Q5B back panel: clear cast acrylic 3/16 in (4.76 mm), 1 part, drawn as seen from OUTSIDE (put the outside face up). Red = cut through. Grey fill = hex nut pockets (5.15 mm across flats), engrave 2.05 mm deep: test the depth on scrap first. Blue = engrave text (convert to paths if needed). Display end at the top of the drawing. -->
+  <path d="M3.2000,2.0000 H43.4000 A1.2,1.2 0 0 1 44.6000,3.2000 V55.4000 A1.2,1.2 0 0 1 43.4000,56.6000 H3.2000 A1.2,1.2 0 0 1 2.0000,55.4000 V3.2000 A1.2,1.2 0 0 1 3.2000,2.0000 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M40.3500,4.8000 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M3.3500,4.8000 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M40.7500,54.3000 a1.05,1.05 0 1 0 2.1,0 a1.05,1.05 0 1 0 -2.1,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M3.7500,54.3000 a1.05,1.05 0 1 0 2.1,0 a1.05,1.05 0 1 0 -2.1,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M27.7500,46.3000 a1.05,1.05 0 1 0 2.1,0 a1.05,1.05 0 1 0 -2.1,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M16.7500,46.3000 a1.05,1.05 0 1 0 2.1,0 a1.05,1.05 0 1 0 -2.1,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M5.2500,28.9000 a1.05,1.05 0 1 0 2.1,0 a1.05,1.05 0 1 0 -2.1,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M9.9500,53.5000 a0.75,0.75 0 1 0 1.5,0 a0.75,0.75 0 1 0 -1.5,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
+  <path d="M44.773,4.800 L43.287,7.375 L40.313,7.375 L38.827,4.800 L40.313,2.225 L43.287,2.225 Z" fill="#808080" stroke="#000000" stroke-width="0.01"/>
+  <path d="M7.773,4.800 L6.287,7.375 L3.313,7.375 L1.827,4.800 L3.313,2.225 L6.287,2.225 Z" fill="#808080" stroke="#000000" stroke-width="0.01"/>
+  <g fill="#0000ff" font-family="DejaVu Sans, sans-serif" text-anchor="middle">
+    <text x="23.300" y="11.300" font-size="2.6" font-weight="bold">LIR2032 ONLY</text>
+    <text x="23.300" y="14.300" font-size="1.7">rechargeable - never CR2032</text>
+  </g>
+</svg>
