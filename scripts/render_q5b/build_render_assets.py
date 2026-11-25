@@ -95,7 +95,7 @@ def main():
         parts.append((mat, name, shape))
     add('tray', 'tray', g['tray'])
     add('acrylic', 'window', g['window'])
-    add('acrylic', 'plate', g['plate'])
+    add('plastic_black', 'plate', g['plate'])
     for i, c in enumerate(g['keycaps'], 1):
         add('keycap', f'keycap-{i}', c)
     for i, (x, y) in enumerate(g['mounts'], 1):

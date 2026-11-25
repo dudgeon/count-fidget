@@ -46,7 +46,7 @@ PLATE_T = 1.5                       # standard MX plate thickness; Box clips are
 PLATE_TOP = PCB_TOP + 5.0           # MX standard: PCB top to plate top 5.0
 PLATE_Z = PLATE_TOP - PLATE_T       # = PCB top + 3.5 (lower spacer length)
 LOW_SPACER = PLATE_Z - PCB_TOP
-WIN_Z = PCB_TOP + 6.0               # window underside: 0.3 mm above the checked OLED maximum (PCB top + 5.7)
+WIN_Z = PCB_TOP + 6.7               # faceplate underside: 1.0 mm over the OLED maximum (PCB top + 5.7), 0.1 mm over the lower screw heads
 HIGH_SPACER = WIN_Z - PCB_TOP
 WIN_T, WIN_T_RANGE = 4.5, (4.3, 5.0)   # cast sheet; datum is the underside. 3/16 in (4.76) is inside the range
 WIN_TOP = WIN_Z + WIN_T
@@ -69,7 +69,7 @@ GUSSET_TOP = FLOOR + 3.3
 # ---- laser parts ------------------------------------------------------------------
 PART_HALF_W = W / 2 - BEZEL - CLEAR                     # 22.05
 PART_TOP_Y = -(D / 2 - BEZEL - CLEAR)                   # -28.05
-WIN_EDGE_Y = 3.95                   # window bottom edge: covers the OLED module (ends at 3.95) and clears the keycaps
+WELL = (2 * (abs(q5.KEYS[0][0]) + 9.1 + 0.6), 18.2 + 2 * 0.6, 1.0)   # key well in the faceplate: 1u caps + 0.6 mm all round
 PLATE_EDGE_Y = 4.45                 # plate top edge: 0.5 mm clear of the OLED module footprint
 PART_HOLE = 2.4
 SWITCH_CUT, SWITCH_CUT_R = 14.0, 0.3
@@ -92,7 +92,7 @@ NUT_AF, NUT_H = 4.0, 1.6             # M2 hex nut, ISO 4032
 NUT_POCKET_AF = 4.15                 # snug for PETG; nut pressed in from below
 HOLE_R = 1.2                         # 2.4 clearance through the bosses
 BOSS_R, BOSS_BASE_R = 2.2, 3.7
-UPPER = dict(len=18.0, head_z=WIN_TOP, nut_top=3.0)     # through window, 6.0 spacer, PCB, tray
+UPPER = dict(len=18.0, head_z=WIN_TOP, nut_top=3.7)     # through window, 6.0 spacer, PCB, tray
 LOWER = dict(len=12.0, head_z=PLATE_TOP, nut_top=3.4)   # through plate, 3.5 spacer, PCB, tray
 
 
@@ -139,10 +139,13 @@ def keycap(x, y, base=CAP_BASE):
 
 
 def make_window(mounts, t=WIN_T):
-    win = span(PART_TOP_Y, WIN_EDGE_Y, t, WIN_Z, -PART_HALF_W, PART_HALF_W, r_top=R_POCKET - CLEAR, r_bot=0.5)
+    """One-piece clear faceplate over the whole top: covers the display, one well round both keycaps,
+    clamped by the two upper screws; its lower strip rests 0.1 mm over the lower (plate) screw heads."""
+    win = rrect(2 * PART_HALF_W, -2 * PART_TOP_Y, R_POCKET - CLEAR, t, WIN_Z)
     for x, y in mounts:
         if y < 0:
             win = win.cut(cyl(PART_HOLE / 2, t + 1, WIN_Z - 0.5, x, y))
+    win = win.cut(rrect(WELL[0], WELL[1], WELL[2], t + 1, WIN_Z - 0.5, 0, KEYS[0][1]))
     return win
 
 
@@ -213,8 +216,13 @@ def build(refs):
     tube_top = PCB_Z - 2.2 - 0.8
     tray = tray.union(cyl(1.65, tube_top - FLOOR, FLOOR, rx, ry)).cut(cyl(0.65, tube_top + 0.1, -0.05, rx, ry))
     boxes.append((rx - 1.65, ry - 1.65, 0, rx + 1.65, ry + 1.65, tube_top))
-    warn = (cq.Workplane('XY').text('LIR2032 ONLY - rechargeable - never CR2032', 2.2, 0.45, fontPath=FONT,
-                                    halign='center', valign='center').mirror('YZ').translate((0, -D / 2 + 10, -0.05)))
+    warn = None
+    for line, size, dy in (('LIR2032 ONLY', 2.6, 11.5), ('rechargeable - never CR2032', 1.7, 8.0)):
+        t = (cq.Workplane('XY').text(line, size, 0.45, fontPath=FONT, halign='center', valign='center')
+             .translate((0, -D / 2 + dy, -0.05)))   # reads correctly from below after the CAD-frame mirror
+        warn = t if warn is None else warn.union(t)
+    bb = warn.val().BoundingBox()
+    assert bb.xlen < W - 2 * (BOTTOM_CHAMFER + 3), f'Underside text too wide: {bb.xlen:.1f} mm'
     tray = tray.cut(warn)
     g['tray'], g['tray_boxes'] = tray, boxes
     # ---- laser parts, keys, fasteners ----
@@ -341,7 +349,10 @@ def main():
         'keycap_skirt_pressed_above_plate_top': CAP_B - TRAVEL - PLATE_TOP,
         'keycap_skirt_pressed_above_lower_screw_heads': CAP_B - TRAVEL - (PLATE_TOP + HEAD_H),
         'keycap_to_lower_screw_head_plan': min(c.val().distance(h.val()) for c in cap_skirts for h in head_rings),
-        'keycap_to_window_edge_plan': (KEYS[0][1] - CAP_BASE / 2) - WIN_EDGE_Y,
+        'keycap_to_faceplate_well_plan': (WELL[1] - CAP_BASE) / 2,
+        'faceplate_to_lower_screw_heads': WIN_Z - (PLATE_TOP + HEAD_H),
+        'faceplate_strip_below_well': -PART_TOP_Y - (KEYS[0][1] + WELL[1] / 2),
+        'faceplate_side_rail': PART_HALF_W - WELL[0] / 2,
         'plate_edge_to_oled_footprint': PLATE_EDGE_Y - 3.95,
         'keycap_top_above_bezel': CAP_B + CAP_H - TOP,
         'part_hole_edge_to_part_edge_min': min(min(PART_HALF_W - abs(x), abs(PART_TOP_Y) - abs(y)) - PART_HOLE / 2 for x, y in g['mounts']),
@@ -362,13 +373,13 @@ def main():
         walls_mm=dict(wall=WALL, pcb_gap=GAP, bezel=BEZEL, part_clearance=CLEAR, r_outer=R_OUT, top_chamfer=TOP_CHAMFER,
                       bottom_chamfer=BOTTOM_CHAMFER, ledge_drop=LEDGE_DROP),
         window=dict(material='clear cast acrylic', thickness=WIN_T, accepted=list(WIN_T_RANGE),
-                    outline=[round(2 * PART_HALF_W, 3), round(WIN_EDGE_Y - PART_TOP_Y, 3)], holes=PART_HOLE),
-        plate=dict(material='cast acrylic (clear or black)', thickness=PLATE_T,
+                    outline=[round(2 * PART_HALF_W, 3), round(-2 * PART_TOP_Y, 3)], key_well=list(WELL), holes=PART_HOLE),
+        plate=dict(material='hidden: black cast acrylic (laser) or printed PETG (plate-printable-Q5B.stl)', thickness=PLATE_T,
                    outline=[round(2 * PART_HALF_W, 3), round(-PART_TOP_Y - PLATE_EDGE_Y, 3)], switch_cutout=SWITCH_CUT, holes=PART_HOLE),
-        fasteners=dict(upper='2 x M2 x 18 pan-head machine screw (ISO 7045/DIN 7985) through window, 6.0 mm spacer, PCB, tray',
+        fasteners=dict(upper='2 x M2 x 18 pan-head machine screw (ISO 7045/DIN 7985) through faceplate, 6.7 mm spacer, PCB, tray',
                        lower='2 x M2 x 12 pan-head machine screw through plate, 3.5 mm spacer, PCB, tray',
                        nuts=f'4 x M2 hex nut (4.0 AF x 1.6) in hex pockets {NUT_POCKET_AF} AF open to the underside',
-                       spacers='2 x 6.0 mm + 2 x 3.5 mm, OD 4.0 / ID 2.3, printed (spacer-6.0-Q5B.stl, spacer-3.5-Q5B.stl)',
+                       spacers='2 x 6.7 mm + 2 x 3.5 mm, OD 4.0 / ID 2.3, printed (spacer-6.7-Q5B.stl, spacer-3.5-Q5B.stl)',
                        thread_engagement_mm=engage),
         valid_solids=solids, reported_intersections=hits,
         assembly_path_checks=dict(poses=poses, sampled_intersection_tests=tests, step_mm=0.5, max_lift_mm=30, collisions=motion,
@@ -407,12 +418,13 @@ def _outline(x0, y0, x1, y1, rt, rb):
             f'A{rt:g},{rt:g} 0 0 1 {x0 + rt:.4f},{y0:.4f} Z')
 
 
-def write_svg(path, title, y0, y1, rt, rb, holes, cutouts):
+def write_svg(path, title, y0, y1, rt, rb, holes, cutouts, wells=()):
     m = 2.0
     ox, oy = PART_HALF_W + m, -y0 + m
     items = [_outline(ox - PART_HALF_W, oy + y0, ox + PART_HALF_W, oy + y1, rt, rb)]
     items += [_circle(ox + x, oy + y, PART_HOLE) for x, y in holes]
     items += [_rr_path(ox + x, oy + y, SWITCH_CUT, SWITCH_CUT, SWITCH_CUT_R) for x, y in cutouts]
+    items += [_rr_path(ox + x, oy + y, WELL[0], WELL[1], WELL[2]) for x, y in wells]
     body = '\n'.join(f'  <path d="{d}" fill="none" stroke="#ff0000" stroke-width="0.01"/>' for d in items)
     sw, sh = 2 * PART_HALF_W + 2 * m, y1 - y0 + 2 * m
     path.write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="{sw:.3f}mm" height="{sh:.3f}mm" '
@@ -436,25 +448,25 @@ def write_coupon(out):
 
 def export(g, report):
     mirror = lambda s: s.mirror('XZ')
-    stl = {'tray-Q5B.stl': g['tray']}
+    stl = {'tray-Q5B.stl': g['tray'], 'plate-printable-Q5B.stl': g['plate'].translate((0, 0, -PLATE_Z))}
     for i, m in enumerate(g['mounts']):
-        name = 'spacer-6.0-Q5B.stl' if m[1] < 0 else 'spacer-3.5-Q5B.stl'
+        name = f'spacer-{HIGH_SPACER:.1f}-Q5B.stl' if m[1] < 0 else f'spacer-{LOW_SPACER:.1f}-Q5B.stl'
         stl[name] = g['spacers'][i].translate((-m[0], -m[1], -PCB_TOP))
     for name, shape in stl.items():
         cq.exporters.export(mirror(shape), str(OUT / name), tolerance=0.02, angularTolerance=0.1)
     report['stl_mesh_checks'] = {name: q5.mesh_check(OUT / name) for name in stl}
     for part, z in (('window', WIN_Z), ('plate', PLATE_Z)):
         face = mirror(g[part]).faces('<Z').val().translate((0, 0, -z))
-        cq.exporters.export(cq.Workplane('XY').add(face), str(OUT / f'{part}-acrylic-Q5B.dxf'))
+        cq.exporters.export(cq.Workplane('XY').add(face), str(OUT / f"{'faceplate' if part == 'window' else part}-acrylic-Q5B.dxf"))
     hi = [m for m in g['mounts'] if m[1] < 0]
     lo = [m for m in g['mounts'] if m[1] > 0]
-    write_svg(OUT / 'window-acrylic-Q5B.svg', f'Count Fidget Q5B display window: clear cast acrylic {WIN_T} mm (3/16 in OK), 1 part.',
-              PART_TOP_Y, WIN_EDGE_Y, R_POCKET - CLEAR, 0.5, hi, [])
+    write_svg(OUT / 'faceplate-acrylic-Q5B.svg', f'Count Fidget Q5B faceplate: clear cast acrylic {WIN_T} mm (3/16 in OK), 1 part.',
+              PART_TOP_Y, -PART_TOP_Y, R_POCKET - CLEAR, R_POCKET - CLEAR, hi, [], wells=[(0, KEYS[0][1])])
     write_svg(OUT / 'plate-acrylic-Q5B.svg', f'Count Fidget Q5B switch plate: cast acrylic {PLATE_T} mm, 1 part.',
               PLATE_EDGE_Y, -PART_TOP_Y, 0.5, R_POCKET - CLEAR, lo, KEYS)
     write_coupon(OUT)
     assy = cq.Assembly(name='Count-Fidget-Q5B')
-    for key, col in {'tray': '#5f6166', 'window': '#d8f0f4', 'plate': '#d8f0f4', 'pcb': '#1f6b3a', 'holder': '#ece6d6',
+    for key, col in {'tray': '#5f6166', 'window': '#d8f0f4', 'plate': '#16171a', 'pcb': '#1f6b3a', 'holder': '#ece6d6',
                      'oled_max': '#1d3f73', 'usb': '#b7bcc0'}.items():
         assy.add(mirror(g[key]), name=key, color=cq.Color(col))
     for i, c in enumerate(g['keycaps'], 1):
@@ -471,7 +483,7 @@ def export(g, report):
         assy.add(mirror(s), name=f'env-{n}', color=cq.Color('#3a3f46'))
     assy.export(str(OUT / 'enclosure-Q5B.step'))
     (OUT / 'fit-report.json').write_text(json.dumps(report, indent=2) + '\n')
-    names = list(stl) + ['window-acrylic-Q5B.dxf', 'window-acrylic-Q5B.svg', 'plate-acrylic-Q5B.dxf', 'plate-acrylic-Q5B.svg',
+    names = list(stl) + ['faceplate-acrylic-Q5B.dxf', 'faceplate-acrylic-Q5B.svg', 'plate-acrylic-Q5B.dxf', 'plate-acrylic-Q5B.svg',
                          'laser-coupon-Q5B.svg', 'enclosure-Q5B.step', 'fit-report.json']
     manifest = dict(generator=report['generator_sha256'], board=report['source_board_sha256'], model=report['source_model_sha256'],
                     outputs={n: sha(OUT / n) for n in names})

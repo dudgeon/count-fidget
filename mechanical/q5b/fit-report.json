@@ -3,7 +3,7 @@
   "body_mm": [
     47.0,
     59.0,
-    19.32
+    20.02
   ],
   "keycap_top_mm": 29.22,
   "stack_mm": {
@@ -15,10 +15,10 @@
       13.82
     ],
     "window": [
-      14.82,
-      19.32
+      15.52,
+      20.02
     ],
-    "tray_top": 19.32
+    "tray_top": 20.02
   },
   "walls_mm": {
     "wall": 2.0,
@@ -39,12 +39,17 @@
     ],
     "outline": [
       44.1,
-      32.0
+      56.1
+    ],
+    "key_well": [
+      38.45,
+      19.4,
+      1.0
     ],
     "holes": 2.4
   },
   "plate": {
-    "material": "cast acrylic (clear or black)",
+    "material": "hidden: black cast acrylic (laser) or printed PETG (plate-printable-Q5B.stl)",
     "thickness": 1.5,
     "outline": [
       44.1,
@@ -54,10 +59,10 @@
     "holes": 2.4
   },
   "fasteners": {
-    "upper": "2 x M2 x 18 pan-head machine screw (ISO 7045/DIN 7985) through window, 6.0 mm spacer, PCB, tray",
+    "upper": "2 x M2 x 18 pan-head machine screw (ISO 7045/DIN 7985) through faceplate, 6.7 mm spacer, PCB, tray",
     "lower": "2 x M2 x 12 pan-head machine screw through plate, 3.5 mm spacer, PCB, tray",
     "nuts": "4 x M2 hex nut (4.0 AF x 1.6) in hex pockets 4.15 AF open to the underside",
-    "spacers": "2 x 6.0 mm + 2 x 3.5 mm, OD 4.0 / ID 2.3, printed (spacer-6.0-Q5B.stl, spacer-3.5-Q5B.stl)",
+    "spacers": "2 x 6.7 mm + 2 x 3.5 mm, OD 4.0 / ID 2.3, printed (spacer-6.7-Q5B.stl, spacer-3.5-Q5B.stl)",
     "thread_engagement_mm": {
       "lower@1.5": {
         "thread_in_nut": 1.58,
@@ -67,12 +72,12 @@
       "upper@4.3": {
         "thread_in_nut": 1.6,
         "tip_below_nut": 0.28,
-        "tip_above_underside": 1.12
+        "tip_above_underside": 1.82
       },
       "upper@5.0": {
         "thread_in_nut": 1.18,
         "tip_below_nut": -0.42,
-        "tip_above_underside": 1.82
+        "tip_above_underside": 2.52
       }
     }
   },
@@ -80,12 +85,12 @@
     "tray": {
       "valid": true,
       "count": 1,
-      "volume_mm3": 9844.387
+      "volume_mm3": 10087.444
     },
     "window": {
       "valid": true,
       "count": 1,
-      "volume_mm3": 6301.858
+      "volume_mm3": 7724.819
     },
     "plate": {
       "valid": true,
@@ -108,15 +113,18 @@
     "limitations": "Straight vertical sampled paths; excludes screw driving, nut insertion and print distortion."
   },
   "minimum_modeled_distances_mm": {
-    "oled_max_to_window_underside": 0.3,
+    "oled_max_to_window_underside": 1.0,
     "holder_to_floor": 0.5,
-    "keycap_skirt_rest_above_window_top": 0.5,
+    "keycap_skirt_rest_above_window_top": -0.2,
     "keycap_skirt_pressed_above_plate_top": 2.0,
     "keycap_skirt_pressed_above_lower_screw_heads": 0.4,
     "keycap_to_lower_screw_head_plan": 0.2211,
-    "keycap_to_window_edge_plan": 0.75,
+    "keycap_to_faceplate_well_plan": 0.6,
+    "faceplate_to_lower_screw_heads": 0.1,
+    "faceplate_strip_below_well": 4.55,
+    "faceplate_side_rail": 2.825,
     "plate_edge_to_oled_footprint": 0.5,
-    "keycap_top_above_bezel": 9.9,
+    "keycap_top_above_bezel": 9.2,
     "part_hole_edge_to_part_edge_min": 1.85,
     "plate_switch_cutout_web": 5.05,
     "plate_top_edge_to_cutout": 2.35,
@@ -125,7 +133,7 @@
   },
   "source_board_sha256": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
   "source_model_sha256": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
-  "generator_sha256": "8c5c889ed3e450ad16b244ead9c4cd3f523a5cea9ef732c641a606610e32ea5e",
+  "generator_sha256": "da5706625e68775b2fee5a947d9899108cb805dd24a5ac86ad370688453487e7",
   "q5a_generator_sha256": "eb8657df740382a45d0ff8c3d0db3957aed8cae074d3d5bcddaa49a1774ed764",
   "cadquery_version": "2.8.0",
   "python_version": "3.13.18",
@@ -137,11 +145,18 @@
   ],
   "stl_mesh_checks": {
     "tray-Q5B.stl": {
-      "triangles": 46474,
+      "triangles": 58462,
       "nonmanifold_edges": 0,
       "vertex_quantization_mm": 1e-05,
       "z_min_mm": 0.0,
-      "z_max_mm": 19.32
+      "z_max_mm": 20.02
+    },
+    "plate-printable-Q5B.stl": {
+      "triangles": 2604,
+      "nonmanifold_edges": 0,
+      "vertex_quantization_mm": 1e-05,
+      "z_min_mm": 0.0,
+      "z_max_mm": 1.5
     },
     "spacer-3.5-Q5B.stl": {
       "triangles": 1008,
@@ -150,12 +165,12 @@
       "z_min_mm": 0.0,
       "z_max_mm": 3.5
     },
-    "spacer-6.0-Q5B.stl": {
+    "spacer-6.7-Q5B.stl": {
       "triangles": 1008,
       "nonmanifold_edges": 0,
       "vertex_quantization_mm": 1e-05,
       "z_min_mm": 0.0,
-      "z_max_mm": 6.0
+      "z_max_mm": 6.7
     }
   }
 }

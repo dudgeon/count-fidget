@@ -48,19 +48,27 @@ SHOTS = {
     'hero': ((-0.125, -0.180, 0.245), (0.0, 0.0015, 0.0135), 85, 11, (0.0, -0.002, 0.019), None),
     'top': ((0.0, -0.0005, 0.44), (0.0, 0.0, 0.0), 135, None, None, None),
     'exploded': ((-0.255, -0.330, 0.270), (0.0, 0.0, 0.045), 70, None, None, 'explode'),
+    'exploded2': ((-0.200, -0.330, 0.165), (0.0, 0.0, 0.062), 60, None, None, 'explode'),
     'keys': ((0.034, -0.140, 0.074), (0.0, -0.0120, 0.0190), 100, 14, (0.0, -0.0200, 0.0240), None),
     'side': ((0.0, -0.33, 0.014), (0.0, 0.0, 0.014), 135, None, None, None),
     'lowangle': ((0.150, -0.150, 0.045), (0.0, 0.0, 0.012), 85, 11, (0.010, -0.012, 0.016), None),
     'usb': ((0.095, -0.075, 0.032), (0.0235, -0.0006, 0.0060), 100, 8, (0.0235, -0.0006, 0.0060), None),
-    'under': ((-0.110, -0.150, -0.140), (0.0, 0.0, 0.004), 85, None, None, 'under'),
+    'under': ((-0.125, -0.180, 0.245), (0.0, 0.0, 0.020), 85, 11, (0.0, 0.0, 0.029), 'under'),
 }
 
 
 def under(ctx):
-    """Underside: hide the backdrop so the nut pockets show."""
-    for o in bpy.data.objects:
-        if o.name.lower().startswith(('cyclo', 'backdrop', 'floor')):
-            o.hide_render = True
+    """Device turned over onto its top face so the nut pockets in the underside face the camera."""
+    root = bpy.data.objects.new('G_FLIP', None)
+    bpy.context.scene.collection.objects.link(root)
+    for g in ctx['G'].values():
+        if g.parent is None:
+            g.parent = root
+    for i in (1, 2):
+        for c in [ctx['G'][f'key{i}']] + list(ctx['G'][f'key{i}'].children_recursive):
+            c.hide_render = True
+    root.rotation_euler = (math.pi, 0, 0)
+    root.location = (0, 0, S.meta()['win_top'] * MM)
 
 
 def main():

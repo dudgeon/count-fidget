@@ -2,9 +2,9 @@
 
 ## Q5B enclosure — 24 November 2026 (supersedes Q5A for the owner's build)
 
-The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. After reviewing Q5A, they asked for:
-- a printed bezel around the laser parts;
-- thicker walls and a bottom chamfer;
+The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. Their rules for this enclosure:
+- **a single one-piece acrylic top**; a two-part bottom is fine;
+- a printed bezel, thicker walls and a bottom chamfer;
 - keys that sit less proud;
 - easy-to-buy fasteners into captive nuts under the case;
 - printable spacers.
@@ -12,20 +12,20 @@ The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. After re
 **Q5B** implements this in `mechanical/q5b/` (start at its README). Its generator is `scripts/build_q5b_enclosure.py` and its renders are in `scripts/render_q5b/`.
 
 Key facts:
-- **Body:** 47.0 × 59.0 × 19.3 mm.
-- **Switch plate:** 1.5 mm acrylic at the standard MX height, with 14.0 mm cut-outs. It retains the switches.
-- **Display window:** 4.5 mm clear acrylic, 0.3 mm over the OLED. It ends above the keys and forms the key well.
+- **Body:** 47.0 × 59.0 × 20.0 mm.
+- **Faceplate:** one 4.5 mm clear faceplate with one key well, 1.0 mm over the OLED.
+- **Switch plate:** a hidden 1.5 mm black plate at the MX height, which retains the switches.
 - **Fixings:**
-  - 2 × M2 × 18 and 2 × M2 × 12 pan-head screws into M2 hex nuts in pockets under the tray;
-  - printed 6.0 and 3.5 mm spacers.
+  - 2 × M2 × 18 (faceplate) and 2 × M2 × 12 (plate) into hex nuts in pockets under the tray;
+  - printed 6.7 and 3.5 mm spacers.
 - **Checks:** zero intersections and zero collisions over 366 vertical assembly poses.
 
 Physical gates:
-- the plate coupon fit;
-- the real keycap skirt height (modelled OEM-like; 0.22 mm plan / 0.4 mm vertical to the lower screw heads);
-- nut-pocket and spacer prints;
+- plate fit;
+- real keycap size and skirt (modelled OEM-like: 0.22 mm plan / 0.4 mm vertical to the lower screw heads);
+- nut pockets and spacers;
 - acrylic crazing;
-- OLED readability through 4.5 mm.
+- OLED readability.
 
 Q5A stays as it was. No purchase or order is authorised.
 
