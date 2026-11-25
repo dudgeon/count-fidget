@@ -9,7 +9,7 @@ The procedure is `docs/board-bring-up.md`; the logs are `verification/first-arti
 
 1. Read `docs/board-bring-up.md` and `verification/first-article/README.md`. Pick the board: the one the user names, else the first NOT STARTED or partly filled log. Only one board at a time; if an earlier board is HOLD, ask whether the fault could be common before powering another.
 2. Go stage by stage. For each stage, tell the user what to do and what values to read out, wait for their answers, then write the measured values (not just ticks) into the board's log. Apply the stop rules exactly: on a STOP, mark the board HOLD, record why, and do not tell the user to power it again.
-3. Stage 6 flashing uses the `flash-clickers` skill and `tools/clicker-flash/`. The flasher prompts interactively, so the user runs it in their own terminal; ask them for the DFU serial and the four commissioning answers.
+3. Stage 6: **you run all flashing yourself; the user never types flasher commands.** It must run on the user's Mac (USB), so use a Remote Control session in the repository folder and follow the `flash-clickers` skill. Go step by step and check each result before the next: `doctor`, then ask the user to enter DFU, then `list`, then `flash` (without `--check`, since it prompts interactively), then ask the four commissioning questions one at a time and record the answers and the DFU serial in the log.
 4. Always repeat the two safety rules when they apply: press the pinhole before unplugging a board in DFU, and LIR2032 only, inserted with USB connected.
 5. At the end, set the status in the log and the summary table, and commit the log on a branch (never the flasher CSV or private photos). Then tell the user the result and which board is next.
 

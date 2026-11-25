@@ -24,7 +24,7 @@ A **STOP** means: do not continue on this board, do not power it again, mark it 
 ## Kit
 
 Required:
-- Mac with this repository checked out, Python 3 and `dfu-util` (one-time setup below)
+- Mac with this repository checked out and the Claude desktop app open, so Claude can run the flasher (setup below)
 - USB-C **data** cable (a charge-only cable never enumerates); a second cable of another brand for troubleshooting
 - Multimeter with resistance, diode/continuity and DC volts; fine probes
 - Loupe or phone macro camera
@@ -36,21 +36,20 @@ Useful, not required: an inline USB-C power meter (about US$15; lets you read th
 
 Reference files to have open:
 - [`POLARITY-REFERENCE-Q5-BOTTOM.png`](../procurement/q5/POLARITY-REFERENCE-Q5-BOTTOM.png) and [`-TOP.png`](../procurement/q5/POLARITY-REFERENCE-Q5-TOP.png) (or the [PDF](../procurement/q5/POLARITY-REFERENCE-Q5.pdf))
-- [`tools/clicker-flash/README.md`](../tools/clicker-flash/README.md)
+- [`tools/clicker-flash/README.md`](../tools/clicker-flash/README.md) (for Claude; you don't need to run it)
 
-## One-time setup (Mac)
+## Who does what in flashing
+
+**Claude runs all flashing** on the Mac (through a Remote Control session in this repository, using the `flash-clickers` skill). You only plug things in, press keys when asked, and say what the display shows. Do not run `clicker_flash.py` or `dfu-util` yourself. Claude flashes in small steps and checks each one before the next: tool check, device seen, flash with read-back, application started, then the commissioning questions.
+
+One-time setup, which Claude also runs and checks (`brew install dfu-util` needs your OK the first time):
 
 ```sh
-xcode-select --install                       # only if python3 is missing
 brew install dfu-util
-cd ~/repos/count-fidget                       # this repository
-git status firmware/q5-stm32/build            # must be clean
-python3 tools/clicker-flash/clicker_flash.py doctor
+python3 tools/clicker-flash/clicker_flash.py doctor   # dfu-util >= 0.9, image OK against the build manifest
 ```
 
-`doctor` must report dfu-util ≥ 0.9 and the image **OK** against the build manifest. If the image check fails, do not flash: restore the committed build (`git checkout -- firmware/q5-stm32/build`).
-
-Keep the flasher's unit log outside the repository (the default `~/count-fidget-flash-log.csv` is fine). It is private; only the board IDs and results go into the committed logs.
+If the image check fails, nothing is flashed until the committed build is restored. The flasher's unit log stays outside the repository (`~/count-fidget-flash-log.csv`). It is private; only board IDs and results go into the committed logs.
 
 ## Per-board procedure
 
@@ -120,18 +119,17 @@ Stage 3 has already ruled out a dead short, so this stage looks for a part that 
 
 ### Stage 6 — Flash and commission (5 min) — tests A4, A6
 
-1. Enter DFU, with USB still connected:
+Claude drives this stage and tells you each physical step as it comes. The sequence:
+
+1. **Claude** runs `doctor` (tool and image check). Stops here if anything fails.
+2. **You** put the board in DFU, USB still connected:
    1. **Hold RESET (○).**
    2. Press and release the **pinhole** (SW3) with the paper clip.
    3. **Release RESET.**
-2. `python3 tools/clicker-flash/clicker_flash.py list` shows one `[0483:df11]` device with `@Internal Flash`. If not, see troubleshooting.
-3. Flash with the commissioning questions:
-   ```sh
-   python3 tools/clicker-flash/clicker_flash.py flash --check
-   ```
-   The tool verifies the image, flashes, reads back, starts the application and logs the chip's DFU serial. Copy the serial into the board log.
-4. **A6:** the digits should appear within about 1 s of the flash finishing, without pressing the pinhole. Record yes/no. (If blank, press the pinhole once and record that it needed it.)
-5. Answer the tool's four questions honestly by looking at the display:
+3. **Claude** runs `list` and confirms exactly one `[0483:df11]` device with `@Internal Flash`. If none, Claude walks you through the troubleshooting table.
+4. **Claude** flashes (`clicker_flash.py flash`): image check, write, full read-back compare, start the application, log the chip's DFU serial. Claude copies the serial into the board log.
+5. **A6:** you say whether the digits appeared within about 1 s without pressing the pinhole. (If blank, Claude asks you to press the pinhole once and records that it was needed.)
+6. **Commissioning:** Claude asks you each step, one at a time, and records what you see:
 
 | Step | Expected |
 |---|---|
@@ -140,9 +138,9 @@ Stage 3 has already ruled out a dead short, so this stage looks for a part that 
 | Press COUNT three times | `3`; battery bars or **CHG** visible |
 | Hold RESET 2 s, release | `0` |
 
-A first boot may reset itself once while the firmware programs its brown-out option byte; that is normal. **OPT** with no digits is a fail (record it, STOP).
+A first boot may reset itself once while the firmware programs its brown-out option byte; that is normal. **OPT** with no digits is a fail (STOP).
 
-Result handling: **PASS** → continue. **VERIFY FAILED** or download failed → run step 6.3 once more on the same board; a second failure is a STOP. If anything fails while the board is in DFU, **press the pinhole before unplugging**.
+Result handling: **PASS** → continue. **VERIFY FAILED** or download failed → Claude retries once on the same board; a second failure is a STOP. If anything fails while the board is in DFU, **press the pinhole before unplugging**; Claude will remind you.
 
 ### Stage 7 — Restart, cell and battery checks (10 min) — tests A5, B7, assembly step 5
 
