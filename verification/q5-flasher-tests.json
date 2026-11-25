@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "tool_sha256": "20b2239c87ecdebe4866d5af0526bba68322063b3ef7329bcd7e70a436ff729f",
-  "mock_sha256": "90f9dfabfeba64d2da3131d3bf24983fb2c59cd2d34b3ca6915cf75402c620be",
-  "test_sha256": "820b48360b985a2deac71ceb737d57c2cbf184e1d2896215c4f259963c57f94c",
+  "tool_sha256": "58325ab05f1b0a6402b155ff1a065e38146fa56500cd21fc125a41db102beca0",
+  "mock_sha256": "cc16eb1acfea80f2209df5957f36764edd394b29cd6a4b08db35951b9d26a40a",
+  "test_sha256": "5928099807ffe14ba60377d41a819a33f03b1706888e116444d1a5176f4470ea",
   "image_sha256": "17eac86b0454cdcc91e9ffb5f0bb0152f4844f3c5b08ee19bc0781b5d88dc502",
   "passed": [
     "happy_path",
@@ -11,7 +11,7 @@
     "leave_error_after_verified_readback_passes_with_note",
     "two_devices_are_refused",
     "no_device_times_out_with_instructions",
-    "read_protected_layout_is_refused",
+    "non_writable_layout_is_refused",
     "not_a_rom_bootloader_is_refused",
     "unexpected_flash_size_warns_but_flashes",
     "kib_layout_syntax_is_parsed",
@@ -19,7 +19,18 @@
     "tampered_image_is_refused",
     "unrecorded_image_is_refused",
     "bad_vector_table_is_refused",
-    "batch_flashes_successive_units"
+    "batch_flashes_successive_units",
+    "stepwise_first_article_sequence",
+    "stepwise_commands_refuse_ambiguity_and_absence",
+    "stepwise_probe_refuses_non_writable_layout",
+    "flash_serial_filter_ignores_other_units",
+    "record_check_rejects_bad_input_and_logs_failures",
+    "backup_reads_only_the_real_128k",
+    "read_protected_part_fails_reads_and_is_never_written",
+    "only_flash_downloads_and_nothing_writes_option_bytes",
+    "rom_descriptor_of_128k_is_accepted_without_warning",
+    "image_limit_is_bank1_of_the_128k_part",
+    "option_byte_decoding_predicts_first_boot"
   ],
   "real_dfu_util": {
     "download": {
@@ -27,6 +38,22 @@
       "message": "No DFU capable USB device available"
     },
     "upload_leave": {
+      "exit": 74,
+      "message": "No DFU capable USB device available"
+    },
+    "upload_verify": {
+      "exit": 74,
+      "message": "No DFU capable USB device available"
+    },
+    "upload_leave8": {
+      "exit": 74,
+      "message": "No DFU capable USB device available"
+    },
+    "upload_backup": {
+      "exit": 74,
+      "message": "No DFU capable USB device available"
+    },
+    "upload_option_bytes": {
       "exit": 74,
       "message": "No DFU capable USB device available"
     },

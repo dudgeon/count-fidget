@@ -80,8 +80,10 @@ def happy_path(td):
     assert row['result'] == 'PASS' and row['serial'] == DEVICE['serial'] and row['readback_sha256'] == row['image_sha256']
     dl = [c for c in st['calls'] if '-D' in c][0]
     assert dl[dl.index('-S') + 1] == DEVICE['serial'] and dl[dl.index('-s') + 1] == '0x08000000'
-    up = [c for c in st['calls'] if '-U' in c][0]
-    assert up[up.index('-s') + 1] == f'0x08000000:{len(image())}:leave'
+    ups = [c[c.index('-s') + 1] for c in st['calls'] if '-U' in c]
+    # Verify first without leaving, then a separate 8-byte read that carries the leave.
+    assert ups == [f'0x08000000:{len(image())}', '0x08000000:8:leave'], ups
+    assert st['calls'].index(dl) < [i for i, c in enumerate(st['calls']) if '-U' in c][0]
 
 
 @case
@@ -90,6 +92,10 @@ def corrupted_write_is_rejected_and_logged(td):
     code, out = env.flash()
     assert code == 1 and 'VERIFY FAILED' in out and 'offset 0x4d2' in out, out
     assert env.rows()[0]['result'] == 'FAIL'
+    dev = env.read()['devices'][0]
+    # A corrupt image must never be started: the unit stays in DFU for a retry.
+    assert dev.get('in_dfu', True) is True and not dev.get('app_started'), dev
+    assert not any(':leave' in ' '.join(c) for c in env.read()['calls'])
 
 
 @case
@@ -125,10 +131,10 @@ def no_device_times_out_with_instructions(td):
 
 
 @case
-def read_protected_layout_is_refused(td):
+def non_writable_layout_is_refused(td):
     env = Env(td, devices=[dict(DEVICE, alts={'0': '@Internal Flash  /0x08000000/1536*128 a'})])
     code, out = env.flash()
-    assert code == 1 and 'read protection' in out, out
+    assert code == 1 and 'DfuSe layout' in out, out
     assert not any('-D' in c for c in env.read()['calls'])
 
 
@@ -155,7 +161,7 @@ def kib_layout_syntax_is_parsed(td):
     try:
         cf.flash_alt({'alts': {0: '@Internal Flash /0x08000000/4*001Ka,124*001Kg'}}, 10196)
     except cf.FlashError as e:
-        assert 'read protection' in str(e)
+        assert 'DfuSe layout' in str(e)
     else:
         raise AssertionError('read-only first pages accepted')
 
@@ -234,21 +240,207 @@ def batch_flashes_successive_units(td):
     assert [r['serial'] for r in rows] == ['2067368F5041', '2067368F5042'] and all(r['result'] == 'PASS' for r in rows), rows
 
 
+def step(env, *args):
+    """Run one step-by-step command through main() and return (exit, RESULT dict, output)."""
+    out, err = io.StringIO(), io.StringIO()
+    with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+        code = cf.main(['--dfu-util', str(env.tool), *args])
+    text = out.getvalue() + err.getvalue()
+    results = [json.loads(l[7:]) for l in out.getvalue().splitlines() if l.startswith('RESULT ')]
+    assert len(results) == 1, text
+    return code, results[0], text
+
+
+def writes(env):
+    return [c for c in env.read().get('calls', []) if '-D' in c]
+
+
+@case
+def stepwise_first_article_sequence(td):
+    env = Env(td)
+    backups = Path(td) / 'backups'
+    code, r, _ = step(env, 'wait', '--timeout', '1')
+    assert code == 0 and r['serial'] == DEVICE['serial']
+    code, r, _ = step(env, 'probe')
+    assert code == 0 and r['ok'] and r['flash_kib'] == 192 and r['option_bytes_alt'] == 1
+    code, r, _ = step(env, 'leave')
+    assert code == 2 and 'vector table' in r['error'], r      # blank part: never jump into it
+    code, r, _ = step(env, 'backup', '--out', str(backups))
+    # The ROM descriptor says 192 KiB but the STM32L072CB has 128 KiB; erased STM32L0 Flash reads 0x00.
+    assert code == 0 and r['contents'] == 'blank' and r['bytes'] == 128 * 1024 and Path(r['file']).is_file(), r
+    assert r['option_bytes']['firmware_first_boot'].startswith('programs USER 0x807C'), r
+    code, r, _ = step(env, 'verify-device')
+    assert code == 1 and not r['ok'], r
+    assert not writes(env), 'read-only steps must never download'
+    assert env.read()['devices'][0].get('in_dfu', True) is True, 'read-only steps must not leave DFU'
+    code, r, _ = step(env, 'flash', '--no-leave', '--timeout', '1', '--log', str(env.log))
+    assert code == 0 and r['result'] == 'PASS' and r['leave_requested'] is False
+    assert env.read()['devices'][0].get('in_dfu', True) is True
+    code, r, _ = step(env, 'verify-device')
+    assert code == 0 and r['ok'] and r['readback_sha256'] == r['image_sha256']
+    code, r, _ = step(env, 'backup', '--out', str(backups))
+    assert r['contents'] == 'q5-image'
+    code, r, _ = step(env, 'leave')
+    assert code == 0 and r['ok'] and env.read()['devices'][0]['app_started'] == 1
+    assert len(writes(env)) == 1
+    code, r, _ = step(env, 'record-check', '--serial', DEVICE['serial'], '--checks',
+                      'blank=pass,reset=pass,count=pass,zero=pass', '--log', str(env.log))
+    assert code == 0 and r['result'] == 'COMMISSIONED'
+    code, r, _ = step(env, 'summary', '--log', str(env.log))
+    assert r['units'] == {DEVICE['serial']: 'COMMISSIONED'} and r['rows'] == 2
+
+
+@case
+def stepwise_commands_refuse_ambiguity_and_absence(td):
+    other = dict(DEVICE, serial='3A1F00000001', path='20-2')
+    env = Env(td, devices=[dict(DEVICE), other])
+    for cmd in ('probe', 'backup', 'verify-device', 'leave'):
+        code, r, _ = step(env, cmd, *(['--out', str(Path(td) / 'b')] if cmd == 'backup' else []))
+        assert code == 2 and not r['ok'] and 'More than one' in r['error'], (cmd, r)
+    code, r, _ = step(env, 'probe', '--serial', other['serial'])
+    assert code == 0 and r['serial'] == other['serial']
+    env2 = Env(Path(td), devices=[])
+    code, r, _ = step(env2, 'wait', '--timeout', '0.2')
+    assert code == 2 and 'No STM32 DFU device' in r['error']
+    assert not writes(env) and not writes(env2)
+
+
+@case
+def stepwise_probe_refuses_non_writable_layout(td):
+    env = Env(td, devices=[dict(DEVICE, alts={'0': '@Internal Flash  /0x08000000/1536*128 a'})])
+    code, r, _ = step(env, 'probe')
+    assert code == 2 and 'DfuSe layout' in r['error']
+
+
+@case
+def flash_serial_filter_ignores_other_units(td):
+    env = Env(td, devices=[dict(DEVICE)])
+    code, r, _ = step(env, 'flash', '--serial', 'NOT-THIS-ONE', '--timeout', '0.3', '--log', str(env.log))
+    assert code == 2 and not r['ok'] and not writes(env)
+
+
+@case
+def record_check_rejects_bad_input_and_logs_failures(td):
+    env = Env(td)
+    code, r, _ = step(env, 'record-check', '--serial', 'X', '--checks', 'blank=maybe', '--log', str(env.log))
+    assert code == 2 and not env.log.exists()
+    code, r, _ = step(env, 'record-check', '--serial', 'X', '--checks', 'blank=pass,reset=fail', '--log', str(env.log))
+    assert code == 1 and r['result'] == 'FLASHED_CHECK_FAIL' and env.rows()[0]['checks'] == 'blank=pass;reset=FAIL'
+
+
+@case
+def backup_reads_only_the_real_128k(td):
+    env = Env(td)
+    code, r, _ = step(env, 'backup', '--out', str(Path(td) / 'b'))
+    up = [c for c in env.read()['calls'] if '-U' in c and c[c.index('-a') + 1] == '0'][0]
+    assert code == 0 and up[up.index('-s') + 1] == f'0x08000000:{128 * 1024}', up
+    # A device that really has 192 KiB is still only read to 128 KiB (the Q5 part).
+    other = Path(td) / 'x'; other.mkdir()
+    env2 = Env(other, devices=[dict(DEVICE, flash_bytes=192 * 1024)])
+    code, r, _ = step(env2, 'backup', '--out', str(Path(td) / 'b2'))
+    assert code == 0 and r['bytes'] == 128 * 1024
+
+
+@case
+def read_protected_part_fails_reads_and_is_never_written(td):
+    # RDP level 1: same descriptor (AN3156), but every read, erase and write fails.
+    env = Env(td, devices=[dict(DEVICE, rdp1=True)])
+    backups = Path(td) / 'b'
+    code, r, _ = step(env, 'probe')
+    assert code == 0                                   # the layout alone cannot reveal RDP
+    for cmd in ('backup', 'verify-device', 'leave'):
+        code, r, _ = step(env, cmd, *(['--out', str(backups)] if cmd == 'backup' else []))
+        assert code == 2 and not r['ok'] and 'read-protected' in r['error'] + _, (cmd, r)
+    assert not backups.exists() or not any(backups.iterdir()), 'no partial backup file may be saved'
+    code, out = env.flash()
+    assert code == 1 and 'Download failed' in out and 'pinhole' in out, out
+    calls = env.read()['calls']
+    assert not any(':leave' in ' '.join(c) for c in calls)
+    assert not any(a in c for c in calls for a in (':force', ':unprotect', ':mass-erase')), calls
+
+
+@case
+def only_flash_downloads_and_nothing_writes_option_bytes(td):
+    env = Env(td)
+    for cmd in (['wait', '--timeout', '1'], ['probe'], ['backup', '--out', str(Path(td) / 'b')], ['verify-device'],
+                ['list'], ['doctor']):
+        try:
+            step(env, *cmd)
+        except AssertionError:      # list/doctor print no RESULT line
+            pass
+    assert not writes(env)
+    step(env, 'flash', '--no-leave', '--timeout', '1', '--log', str(env.log))
+    step(env, 'leave')
+    calls = env.read()['calls']
+    assert len(writes(env)) == 1
+    for c in calls:
+        if '-a' in c and env.read()['devices'][0]['alts'].get(c[c.index('-a') + 1], '').startswith('@Option Bytes'):
+            assert '-U' in c and '-D' not in c and ':leave' not in ' '.join(c), c
+        assert not any(x in ' '.join(c) for x in (':force', ':unprotect', ':mass-erase', '-E', '-R')), c
+
+
+@case
+def rom_descriptor_of_128k_is_accepted_without_warning(td):
+    env = Env(td, devices=[dict(DEVICE, alts={'0': '@Internal Flash  /0x08000000/1024*128 g'})])
+    code, r, _ = step(env, 'probe')
+    assert code == 0 and r['ok'] and r['flash_kib'] == 128 and not r['warnings'], r
+
+
+@case
+def image_limit_is_bank1_of_the_128k_part(td):
+    assert cf.BANK1_BYTES == 0x08010000 - cf.FLASH_BASE
+    d = bytearray(64 * 1024 + 4); d[0:8] = bytes(image()[0:8])
+    try:
+        cf.check_vector_table(bytes(d))
+    except cf.FlashError as e:
+        assert 'Bank 1' in str(e)
+    else:
+        raise AssertionError('image past Bank 1 accepted')
+
+
+@case
+def option_byte_decoding_predicts_first_boot(td):
+    def words(w0, w1):
+        return w0.to_bytes(4, 'little') + w1.to_bytes(4, 'little')
+    factory = cf.decode_option_bytes(words(0xFF5500AA, 0x7F8F8070))
+    assert factory['rdp_level'] == 0 and factory['complements_valid'] and factory['firmware_first_boot'].startswith('programs')
+    done = cf.decode_option_bytes(words(0xFF5500AA, 0x7F83807C))
+    assert done['firmware_first_boot'] == 'already provisioned' and done['bor_lev'] == '0xc' and done['nboot1']
+    torn = cf.decode_option_bytes(words(0xFF5500AA, 0x00000000))
+    assert not torn['complements_valid'] and torn['firmware_first_boot'].startswith('OPT')
+    rdp1 = cf.decode_option_bytes(words(0xFFFF0000, 0x7F8F8070))   # RDP byte 0x00: level 1
+    assert rdp1['rdp_level'] == 1 and rdp1['firmware_first_boot'].startswith('OPT')
+    wdg = cf.decode_option_bytes(words(0xFF5500AA, 0x7F9F8060))
+    assert wdg['firmware_first_boot'].startswith('OPT (unexpected')
+
+
 def real_dfu_util_accepts_arguments():
     """With no device attached, the real dfu-util must fail on 'no device', never on usage."""
     tool = shutil.which('dfu-util')
     if not tool:
         return {'skipped': 'dfu-util not installed'}
+    # Never send real commands (one of them is a DOWNLOAD) while any DFU device is attached:
+    # only the serial filter would stand between this test and a real board.
+    if cf.list_devices(tool):
+        return {'skipped': 'a DFU device is attached; real dfu-util argument check not run'}
     results = {}
     with tempfile.TemporaryDirectory() as td:
         src = Path(td) / 'i.bin'; src.write_bytes(image())
         dev = {'serial': '2067368F5041', 'path': '1-1'}
         for name, extra in (('download', ['-s', '0x08000000', '-D', str(src)]),
-                            ('upload_leave', ['-s', f'0x08000000:{len(image())}:leave', '-U', str(Path(td) / 'r.bin')])):
+                            ('upload_leave', ['-s', f'0x08000000:{len(image())}:leave', '-U', str(Path(td) / 'r.bin')]),
+                            ('upload_verify', ['-s', f'0x08000000:{len(image())}', '-U', str(Path(td) / 'v.bin')]),
+                            ('upload_leave8', ['-s', '0x08000000:8:leave', '-U', str(Path(td) / 'l.bin')]),
+                            ('upload_backup', ['-s', f'0x08000000:{128 * 1024}', '-U', str(Path(td) / 'b.bin')])):
             p = subprocess.run([tool] + cf.select_args(dev, 0) + extra, capture_output=True, text=True)
             out = p.stdout + p.stderr
             assert p.returncode != 64 and 'No DFU capable USB device available' in out, (name, p.returncode, out)
             results[name] = {'exit': p.returncode, 'message': 'No DFU capable USB device available'}
+        # Option-byte read used by `backup` (alt 1, read-only upload of the first two words).
+        p = subprocess.run([tool] + cf.select_args(dev, 1) + ['-s', f'0x{cf.OPTION_BASE:08x}:8', '-U', str(Path(td) / 'o.bin')],
+                           capture_output=True, text=True)
+        assert p.returncode != 64 and 'No DFU capable USB device available' in p.stdout + p.stderr, p
+        results['upload_option_bytes'] = {'exit': p.returncode, 'message': 'No DFU capable USB device available'}
         results['version'] = cf.dfu_version(tool)
         results['list_parses'] = cf.list_devices(tool) == []
     return results

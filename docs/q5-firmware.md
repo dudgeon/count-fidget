@@ -63,22 +63,37 @@ The ADC runs from PCLK/2 = 2 MHz. RM0376 makes ADC_CCR.LFMEN mandatory below 3.5
 
 A DfuSe "leave", as used by `tools/clicker-flash`, makes the ST ROM jump to the application without a reset. Its clocks, USB peripheral and interrupt, vector table and memory remap may still be configured. `Reset_Handler` and `Default_Handler` detect that state (USB clock enabled, VTOR non-zero, flash not mapped at 0, or SYSCLK not MSI) and take a clean `NVIC_SystemReset()`. `setup()` therefore always starts from reset-default hardware. Emulator scenario D5 models the jump with a pending USB interrupt; the pre-review image crashed into `panic()` there.
 
+Limits of that evidence (bootloader review, 25 Nov 2026):
+- AN3156 says the ROM resets the registers of the peripherals it used before the jump. Which of the four leftovers actually survive on STM32L072 silicon is not documented and not yet observed.
+- The hazardous leftover is the memory remap: after a BOOT0 entry, system memory is mapped at 0, so with VTOR = 0 every interrupt would use the ROM's vectors. `rom_leftovers()` reads `SYSCFG_CFGR1.MEM_MODE` before anything enables the SYSCFG clock. If the ROM leaves that clock off, the read is unreliable and the remap can go undetected.
+- The emulator always takes vectors from application Flash, so D5 cannot show that case.
+- First-article test A6 is the gate. The flasher now starts the image only after a matching read-back. A dark display 2 s after the leave is cleared by one pinhole press: a real reset with BOOT0 low, which always starts cleanly.
+- Proposed firmware fix for the next pinned-toolchain build: set `RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN` before the `rom_leftovers()` test in `Reset_Handler` and `Default_Handler`.
+
 ## Option bytes (issue #6)
 
 The application still requires BOR_LEV raw **0xC** (RM0376 "BOR LEVEL 5", VBOR4 falling 2.68–2.85 V), RDP 0xAA, nBOOT1 = 1 and BFB2 = 0. If the USER half-word differs from the reviewed value **0x807C** only in those fields — for example the RM0376 factory value 0x8070 — firmware programs 0x807C once (PEKEY + OPTKEY, word written with its complement, BSY polled) and triggers OBL_LAUNCH. It never writes RDP. It first waits for VREFINT/PVD to be ready, so PVDO is meaningful, and it never rewrites an option word that is already stored (that case shows OPT). A reload that still fails, or any unexpected WDG/STOP/STDBY choice, shows **OPT** with the digits hidden, and FRAM is never accessed. The emulated factory-option scenario programs once, reloads and then counts normally. PVD level 5 remains a best-effort write gate, not a guaranteed pre-BOR warning: DS10689 Table 27 PVD5 falling is 2.77–2.88 V versus BOR4 at 2.68–2.85 V (issue #9.1). The tear-safe journal does not depend on it.
+
+Recovery and margins:
+- **Nothing in this path can block ROM DFU or SWD.** Only the USER word (0x1FF80004) is ever written, and only with the fixed value 0x807C (nBOOT1 = 1, BFB2 = 0). RDP, WPRMOD and the write-protection words are never touched.
+- **BOR level 5 versus VDD.** VLOGIC is the TLV767 output, 3.151–3.259 V (R30/R31 150k/49.9k), against VBOR4 below 3.0 V. With USB connected SYS is regulated to 4.5 V, so the ROM always runs on a regulated rail. On a cell deep enough to drop the LDO out, the MCU simply stays in reset until USB is connected.
+- **Power loss during the one option write** (about 6.4 ms, erase plus program, on the first boot after the first flash, normally on USB) leaves the word and its complement inconsistent. RM0376 says the loader then applies default values; the exact defaults per field were not verified in this review.
+  - If the RDP word still loads as AA, the next boot finds the stored word differs from 0x807C and rewrites it once.
+  - Otherwise the board shows OPT. DFU and SWD still work, and STM32CubeProgrammer can restore the option bytes.
+  - The flasher therefore asks for USB to stay connected for 5 s after the first flash. Its `backup` step reads and decodes the stored option words before anything is written.
 
 ## Home USB programming
 
 A USB data cable and STM32CubeProgrammer are the intended tools. This repository has not exercised a physical DFU connection.
 
 1. Verify the Q5 build manifest (`python3 -B scripts/build_firmware_q5.py --verify-only`). Use the Q5 image only.
-2. **Connect USB first.** USB powers the board through D4, and it stays powered while the ROM runs.
+2. **Connect USB first.** USB powers the board through D4, and it stays powered while the ROM runs. A factory-blank STM32L0 reads all zero (a zero stack pointer and reset vector), so a blank board sits in a core lockup with the display dark until it is put into DFU as below.
 3. Enter ROM DFU in either order. Both preserve the count, because a reset only commits on release after a completed hold:
    - hold RESET COUNT, press and release the base pinhole (NRST), then release RESET COUNT; or
    - hold the pinhole, press RESET COUNT, release the pinhole, then release RESET COUNT.
    Without USB, NRST simply powers the board off (issue #3's data loss cannot happen).
 4. On a Mac, use the bundled tool: `python3 tools/clicker-flash/clicker_flash.py flash --check`. It verifies the image against the build manifest, flashes over DFU, reads back and compares, starts the application and logs the unit; see `tools/clicker-flash/README.md` and the `flash-clickers` Claude skill. STM32CubeProgrammer also works: select USB, connect to the DFU device, download `count-fidget-Q5-stm32.hex` (or the BIN at 0x08000000) and verify. Setting option bytes by hand is optional: the application provisions BOR_LEV itself. If you set them, use RDP AA, nBOOT1 = 1, BFB2 = 0 and BOR_LEV raw 0xC ("BOR LEVEL 5" in RM0376 naming, VBOR4). Some GUIs label raw 0xB as "level 4"; that is wrong for this firmware.
-5. Reset normally. With valid FRAM the saved count returns without ERR. New or unrecognised FRAM shows `0 ERR`: hold RESET COUNT for 2 s and release it to establish a verified zero.
+5. Keep USB connected for at least 5 s after the first flash (option-byte provisioning). Reset normally. With valid FRAM the saved count returns without ERR. New or unrecognised FRAM shows `0 ERR`: hold RESET COUNT for 2 s and release it to establish a verified zero.
 
 The external FRAM is outside the DFU address space, so updates never touch the count. SWD pads remain a second recovery route.
 
