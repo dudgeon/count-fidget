@@ -1335,7 +1335,7 @@
     }
   },
   "q5_circuithub": {
-    "snapshot_utc": "2026-10-26T14:20Z",
+    "snapshot_utc": "2026-11-25T00:00Z",
     "authorization": "Owner, 26 Oct 2026: \"see if you can get this pcb made and manufactured at circuithub.com\". Feasibility, upload package, estimate; quote only in the owner's signed-in session; no order, payment, consignment shipment or staff contact without the owner's explicit go-ahead",
     "record": "procurement/q5/circuithub/CIRCUITHUB-Q5.md",
     "account_created": false,
@@ -1390,6 +1390,10 @@
       ],
       "left_unplaced": "DS1 (home soldering, 14 joints)",
       "approval": "owner approves by uploading/ordering"
+    },
+    "stock_blockers_2026_11_25": {
+      "U3 TLV76701DRVR": "0 at Digi-Key; DRVR 3,000 due 2027-04-01; identical TLV76701DRVT 66 due 2026-12-07 and 184 due 2027-01-27",
+      "U5 TLV7012DDFR": "resolved: 1,884 in stock at Digi-Key on 2026-11-25"
     }
   }
 }

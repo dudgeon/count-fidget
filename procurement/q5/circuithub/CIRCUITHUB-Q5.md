@@ -2,28 +2,27 @@
 
 **Request (owner, 26 Oct 2026):** "see if you can get this pcb made and manufactured at circuithub.com".
 
-**Status:** feasibility checked and upload package prepared. **No CircuitHub account was created or used; nothing was uploaded, quoted, ordered or paid.**
+**Status:** feasibility checked and upload package prepared. Stock for U3 and U5 re-read on 25 Nov 2026. **No CircuitHub account was created or used; nothing was uploaded, quoted, ordered or paid.**
 - CircuitHub quotes only inside a signed-in account (app.circuithub.com). This cloud session cannot sign in, and the agent never asks for or uses the owner's credentials.
 - The BOM substitutions below are proposals: the owner approves them by uploading and ordering.
 - Placing an order or paying needs the owner's explicit go-ahead at that moment.
 
 ## Bottom line
 
-**Yes, CircuitHub can build Q5 with no change to the board. It costs about 3.5–4× JLC, and two TI chips are out of stock until about 19–23 November.**
+**Yes, CircuitHub can build Q5 with no change to the board. It costs about 3.5–4× JLC, and one TI chip (U3) is still out of stock: the earliest Digi-Key delivery is 66 parts due 7 December.**
 
 1. **Design fit:** pass. CircuitHub imports the KiCad 10 project natively, and the board meets its published rules for the low-cost ProtoBoard tier (table below).
-2. **Parts:** CircuitHub buys every part itself; nothing has to be consigned. Of the 41 part lines CircuitHub places, 39 are in stock at Digi-Key, the US distributor it buys from most:
-   - 14 lines are the same part numbers as on the JLC first article;
+2. **Parts:** CircuitHub buys every part itself; nothing has to be consigned. Of the 41 part lines CircuitHub places, 40 are in stock at Digi-Key (U5 restocked by 25 Nov), the US distributor it buys from most:
+   - 15 lines are the same part numbers as on the JLC first article;
    - 25 lines are same-footprint equivalents for LCSC-only parts or Digi-Key stock-outs. 22 are like-for-like passives and discretes. Three are mechanical parts to check on the first CircuitHub boards: the Keystone 1060 battery holder, the Kailh hot-swap sockets and the C&K reset switch.
 
-   Three lines remain:
-   - **U3** (TLV76701 3.2 V regulator) is out of stock at Digi-Key; the identical TLV76701DRVT has 250 due 23 Nov 2026.
-   - **U5** (TLV7012 comparator) is also out of stock; 2,000 are due 19 Nov 2026.
+   Two lines remain:
+   - **U3** (TLV76701 3.2 V regulator) is still out of stock at Digi-Key (re-read 25 Nov 2026). The identical TLV76701DRVT has 66 due 7 Dec 2026 and 184 on 27 Jan 2027. TLV76701DRVR has 3,000 due 1 Apr 2027.
    - **DS1** (display) is left unplaced and soldered at home, 14 joints, as in JLC variant A.
 3. **Cost (estimate):** about **$1,090–1,270 for 5 boards before shipping** ($218–253 a board), against **$298.08 all-in** for 5 at JLC (about $60 a board). CircuitHub's 75 %-off Value Proto would be about $500 for 5, but Q5 does not qualify: J1 has plated shell stakes, and Value Proto excludes through-hole and hybrid parts.
 4. **Binding quote:** this needs the owner's CircuitHub account. It cannot be done from this cloud session; see "How to get the binding quote" below.
 
-**Recommendation:** unless US assembly is itself worth the premium, run the JLC first-article tests (boards delivered 14 Oct) before paying for a second build. If a CircuitHub build is wanted, upload this package now for the binding quote, and order once U3 and U5 are back in stock.
+**Recommendation:** unless US assembly is itself worth the premium, run the JLC first-article tests (boards delivered 14 Oct) before paying for a second build. If a CircuitHub build is wanted, upload this package now for the binding quote, and order once U3 is in stock (the first 66 are due 7 Dec 2026).
 
 ## What CircuitHub needs, and what is in this folder
 
@@ -70,8 +69,8 @@ All 82 fitted references keep their footprints. Every line with its evidence is 
 
 | Handling | Lines | Parts |
 |---|---|---|
-| Same part as the JLC first article, in stock | 14 | STM32L072CBT6, BQ25185, BQ29700, TPS22917, FM25V02A, USB4105-GF-A-120, USBLC6-2SC6, BAT54C, AO3400A, NCP18XH103 NTC, the 0.1 % RT0603 resistors and two capacitor values |
-| Same part, **out of stock at Digi-Key** | 2 | **U3** TLV76701DRVR: 0; the identical TLV76701DRVT has 250 due 23 Nov 2026. **U5** TLV7012DDFR: 0; 2,000 due 19 Nov 2026 |
+| Same part as the JLC first article, in stock | 15 | TLV7012DDFR (U5, back in stock on 25 Nov), STM32L072CBT6, BQ25185, BQ29700, TPS22917, FM25V02A, USB4105-GF-A-120, USBLC6-2SC6, BAT54C, AO3400A, NCP18XH103 NTC, the 0.1 % RT0603 resistors and two capacitor values |
+| Same part, **out of stock at Digi-Key** | 1 | **U3** TLV76701DRVR: 0 on 25 Nov 2026, 3,000 due 1 Apr 2027. The identical TLV76701DRVT: 66 due 7 Dec 2026 and 184 on 27 Jan 2027 (the 250 due 23 Nov did not arrive as planned) |
 | Like-for-like equivalent, same footprint | 22 | Samsung, Cal-Chip and Yageo capacitors instead of Fenghua and stocked-out Samsung/Murata parts. Yageo and Stackpole 1 % resistors instead of UNI-ROYAL. Diodes 1N4148WS-7-F and onsemi 2N7002LT1G instead of CJ |
 | Mechanical equivalent, fits the same pads (check on the first boards) | 3 | **BT1:** Keystone 1060 instead of the Q&J copy of it. **SW1/SW2:** Kailh MX hot-swap socket, sold as Adafruit 4958 (pack of 20), instead of the HanElectricity copy. **SW3:** C&K PTS820J20MSMTR LFS instead of XUNPU TS-1088 |
 | Left unplaced, fitted at home | 1 | DS1 display + separate 7-pin header (14 joints) |
@@ -96,7 +95,7 @@ The three mechanical equivalents, from the makers' drawings:
   - never use the pegged "P" version.
 
 Other options:
-- **U5:** TLV7032DDFR (in stock) has the same package, pinout and push-pull output but is a different comparator: 315 nA instead of 4.7 µA per channel, 3 µs response, different hysteresis. It needs owner and engineering sign-off. Waiting about three weeks keeps the build identical to the JLC first article.
+- **U5:** back in stock (1,884 on 25 Nov 2026), so the TLV7032DDFR alternative is no longer needed.
 - **U3:** TLV76701DGNR is in stock but is an 8-pin HVSSOP and would need a PCB change. Adding LCSC as a custom purchase source for TLV76701DRVR is the other route; check with CircuitHub first.
 - **DS1 for home soldering:** either the LCSC HS96L01W4S03 + XFCN PZ254V-11-07P header used by JLC, or the Digi-Key-stocked Orient Display AOM12864A0-0.96WW-ANO ($9.38 at 10) with a Sullins PRPC007SAAN-RC header.
   - The Orient module matches our outline, holes, pin order and active area on its drawing, and runs from 2.7–3.3 V (our display rail is 3.15–3.26 V).
@@ -137,7 +136,7 @@ The largest part costs at 5 boards:
    - **no custom requirements**: any text there triggers a manual quote, and so does "US FABRICATION".
 5. Parts tab:
    - check every line shows the part number in the CSV with stock;
-   - for U3 and U5, use "Supply Pricing" to enter the restock dates if CircuitHub shows no stock (the ship date then moves);
+   - for U3, use "Supply Pricing" to enter the restock date (TLV76701DRVT, 7 Dec 2026) if CircuitHub shows no stock; the ship date then moves;
    - check that the hot-swap socket line buys **packs of 20**;
    - confirm DS1 and the test lands are DNP.
 6. Wait for the Advanced PCB Analysis (DFM) to finish (up to about 20 minutes). Then read the Priority, Standard and Flexible prices for 2, 5 and 10 boards, and download the DFM report.
@@ -160,7 +159,7 @@ If an order is placed, give CircuitHub's assembly team these points through the 
     - **SW3:** pinhole press feel and solder joints.
 - **Same design, different factory.** CircuitHub's CAM applies its own solder-mask expansion; the board sets 0. The narrowest feature (0.127 mm track and gap) is exactly at the ProtoBoard limit. Read CircuitHub's DFM report before ordering.
 - **J1 stake length is inherited.** USB4105-GF-A-120 has 1.20 mm shell stakes on the 1.6 mm board, the same as the JLC first article. First-article check A1 (stakes wetted) applies to both builds.
-- **Stock moves.** U3 and U5 restock dates are Digi-Key estimates. The Kailh socket pack (253 in stock) and the Orient display (144) have shallow stock. CircuitHub's quote shows availability from one distributor at a time; it can look elsewhere on request.
+- **Stock moves.** Digi-Key restock dates slip: U3's moved from 23 Nov to 7 Dec 2026 (66 parts) and 1 Apr 2027 (3,000). The Kailh socket pack (253 in stock) and the Orient display (144) have shallow stock. CircuitHub's quote shows availability from one distributor at a time; it can look elsewhere on request.
 - **Tariffs.** CircuitHub bills afterwards any US tariff on China-origin components it buys; most parts here are not affected.
 - **US fabrication is not guaranteed.** Assembly is always in Massachusetts. Bare boards are "generally" made in the US for short lead times and in China for longer ones. Guaranteed US fabrication needs the custom requirement "US FABRICATION", which triggers a manual quote and loses ProtoBoard/Value Proto eligibility.
 - **Firmware.** CircuitHub pre-programs only orders above 200 units. Flash the boards over USB-C at home with `tools/clicker-flash/` (skill `flash-clickers`), as for the JLC boards.

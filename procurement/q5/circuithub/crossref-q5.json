@@ -858,8 +858,8 @@
      "100": 0.6027
     },
     "url": "https://www.digikey.com/en/products/detail/texas-instruments/TLV76701DRVR/10434713",
-    "observed": "2026-10-26",
-    "note": "0 at Digi-Key, 3,000 expected 3 Mar 2027. Identical TLV76701DRVT (250-piece reel): 0, 250 expected 23 Nov 2026. TLV76701DGNR is in stock but is an 8-pin HVSSOP needing a PCB change. Options: select DRVT and enter the 23 Nov date, add LCSC C2863998 as a custom purchase source (check with CircuitHub first), or consign"
+    "observed": "2026-11-25",
+    "note": "Re-read 25 Nov 2026: TLV76701DRVR 0 at Digi-Key, 3,000 expected 1 Apr 2027. Identical TLV76701DRVT (250-piece reel): 0, 66 expected 7 Dec 2026 and 184 on 27 Jan 2027 (the 23 Nov delivery did not arrive as 250). TLV76701DGNR is in stock but is an 8-pin HVSSOP needing a PCB change. Options: select DRVT and enter the 7 Dec date, add LCSC C2863998 as a custom purchase source (check with CircuitHub first), or consign. Figures from a summarised page read; confirm in CircuitHub's quote"
    },
    "availability": "short"
   },
@@ -901,7 +901,7 @@
    "evidence": {
     "distributor": "Digi-Key",
     "distributor_pn": "296-TLV7012DDFRCT-ND",
-    "stock": 0,
+    "stock": 1884,
     "status": "Active",
     "price_breaks_usd": {
      "1": 1.87,
@@ -909,10 +909,10 @@
      "100": 1.1112
     },
     "url": "https://www.digikey.com/en/products/detail/texas-instruments/TLV7012DDFR/13213533",
-    "observed": "2026-10-26",
-    "note": "0 at Digi-Key; 2,000 expected 19 Nov 2026 and 1,000 on 23 Nov 2026. TLV7032DDFR (4,022 in stock) has the same SOT-23-8 package, pinout and push-pull output but lower supply current (315 nA vs 4.7 uA per channel), slower response (3 us) and different hysteresis: usable only with owner and engineering sign-off"
+    "observed": "2026-11-25",
+    "note": "Back in stock: 1,884 at Digi-Key on 25 Nov 2026 (0 on 26 Oct). Figure from a summarised page read; confirm in CircuitHub's quote. TLV7032DDFR is no longer needed as an alternative"
    },
-   "availability": "short"
+   "availability": "in_stock"
   },
   "TPS22917DBVR": {
    "action": "keep",
@@ -1061,7 +1061,7 @@
   }
  },
  "stock_screen": {
-  "source": "Digi-Key product pages read 26 Oct 2026 (Mouser, Arrow, TTI, Future refused automated reads; TI direct shows inventory only when signed in)",
+  "source": "Digi-Key product pages read 26 Oct 2026 (Mouser, Arrow, TTI, Future refused automated reads; TI direct shows inventory only when signed in); U3 and U5 re-read 25 Nov 2026",
   "circuithub_note": "CircuitHub's quote shows availability from a single distributor; it can add other approved distributors on request"
  }
 }
