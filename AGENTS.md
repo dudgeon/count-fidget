@@ -11,7 +11,7 @@ The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. Their ru
 
 **Q5B** implements this in `mechanical/q5b/` (start at its README). Its generator is `scripts/build_q5b_enclosure.py` and its renders are in `scripts/render_q5b/`.
 
-Key facts (25 Nov 2026; three options pending the owner's choice, one generator run each with `Q5B_VARIANT=lip|four|back`):
+Key facts (25 Nov 2026; three options pending the owner's choice; A and B come from `Q5B_VARIANT=lip|four`, C from `scripts/build_q5b_sandwich.py`):
 - **Owner's stock:** M2.5 × 20 / × 25 screws and M2.5 nuts only; 3/16 in clear acrylic. The board's two display-end holes are drilled to 7/64 in.
 - **Keycaps:** measured as a pair at 36.9 × 18.0 mm. The faceplate opening is 38.1 × 19.2 mm.
 - **Shared parts:**
@@ -20,9 +20,10 @@ Key facts (25 Nov 2026; three options pending the owner's choice, one generator 
 - **The options:**
   - **A lip** (47 × 59): 2 × M2.5 × 20; the key-end acrylic edge sits under a printed lip; collars on top of the plate.
   - **B four** (47 × 63.25): 4 × M2.5 × 20; the key-end pair on tray posts outside the board edge.
-  - **C back** (47 × 59 × 26.2): A plus a clear 3/16 in back panel; 2 × M2.5 × 25 into nuts in laser-pocketed hex recesses in the panel; loose printed standoffs.
+  - **C sandwich** (47 × 63.25 × 23.8, `mechanical/q5b/sandwich/`): the owner's own design, and the one they are printing first. Clear 3/16 in top and back; two prints only (upper piece = plate + spacers; surround with corner standoffs, no floor); 4 × M2.5 × 25 into nuts in laser-pocketed hex recesses in the back; 2 × M2 × 10 self-tappers fix the upper piece and board to the surround. Goal: the most view of the board from above and below.
 - **Key-end board holes:** never take faceplate screws; they are about 0.2 mm from the key opening.
 - **Checks:** zero intersections and zero assembly-path collisions in all three.
+- **A and B shared parts** (below) do not apply to C: it has no separate plate, pegs or loose spacers.
 
 Physical gates:
 - plate fit (coupon);

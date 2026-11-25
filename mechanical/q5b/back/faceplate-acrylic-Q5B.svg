@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="48.100mm" height="60.100mm" viewBox="0 0 48.100 60.100">
-  <!-- Count Fidget Q5B faceplate: clear cast acrylic 4.7625 mm (3/16 in OK), 1 part. Red = cut. Finished sizes; kerf compensation by the cutter. -->
-  <path d="M3.9500,2.0000 H44.1500 A1.95,1.95 0 0 1 46.1000,3.9500 V56.1500 A1.95,1.95 0 0 1 44.1500,58.1000 H3.9500 A1.95,1.95 0 0 1 2.0000,56.1500 V3.9500 A1.95,1.95 0 0 1 3.9500,2.0000 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
-  <path d="M4.1000,5.5500 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
-  <path d="M41.1000,5.5500 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
-  <path d="M6.0000,34.2500 H42.1000 A1,1 0 0 1 43.1000,35.2500 V52.4500 A1,1 0 0 1 42.1000,53.4500 H6.0000 A1,1 0 0 1 5.0000,52.4500 V35.2500 A1,1 0 0 1 6.0000,34.2500 Z" fill="none" stroke="#ff0000" stroke-width="0.01"/>
-</svg>

@@ -9,14 +9,14 @@ Q5B is an enclosure for the **ordered, locked Q5 board**. It does not change the
 - **Hardware (owner's stock):** M2.5 screws in **20 and 25 mm only**, M2.5 nuts, and **3/16 in (4.76 mm)** clear acrylic. The two board holes at the display end are drilled out to **7/64 in**. They are unplated; the nearest trace is 0.4 mm outside the new hole.
 - **Switch plate:** printed, with the pegs built in.
 
-The owner has not chosen yet, so there are three options. All three share the same board stack, faceplate height and key opening.
+The owner has not chosen yet, so there are three options. All three share the same board stack, faceplate height and key opening. **Option C was redesigned with the owner on 25 Nov 2026** as a two-print sandwich; see its own section below. The "Shared design" and "Parts per option" sections describe A and B.
 
-| | **A: lip** (`lip/`) | **B: four screws** (`four/`) | **C: clear back** (`back/`) |
+| | **A: lip** (`lip/`) | **B: four screws** (`four/`) | **C: clear sandwich** (`sandwich/`) |
 |---|---|---|---|
-| Body | **47.0 × 59.0 × 21.1 mm** (original footprint) | 47.0 × 63.25 × 20.3 mm | 47.0 × 59.0 × 26.2 mm |
-| Faceplate fixing | 2 × M2.5 × 20 at the display end. At the key end, the acrylic edge sits 0.7 mm under a printed lip. | 4 × M2.5 × 20. The key-end pair are on tray posts just outside the board edge. | As A, but with 2 × **M2.5 × 25**. They go through the back panel into nuts in hex pockets lasered into its outside face. |
-| Bezel | Stands 0.8 mm above the acrylic all round | Flush with the acrylic | Stands 0.8 mm above the acrylic all round |
-| Bottom | Printed floor, nuts in printed pockets | Printed floor, nuts in printed pockets | **Clear 3/16 in panel** on a 1.6 mm frame ledge. Loose printed standoffs carry the board on it. |
+| Body | **47.0 × 59.0 × 21.1 mm** (original footprint) | 47.0 × 63.25 × 20.3 mm | 47.0 × 63.25 × 23.8 mm (25.8 on its feet) |
+| Faceplate fixing | 2 × M2.5 × 20 at the display end. At the key end, the acrylic edge sits 0.7 mm under a printed lip. | 4 × M2.5 × 20. The key-end pair are on tray posts just outside the board edge. | 4 × **M2.5 × 25** straight through both acrylic sheets, into nuts in hex pockets lasered into the back panel's outside face. |
+| Bezel | Stands 0.8 mm above the acrylic all round | Flush with the acrylic | Flush with the acrylic |
+| Bottom | Printed floor, nuts in printed pockets | Printed floor, nuts in printed pockets | **Clear 3/16 in panel**, full outline. No printed floor: the board's underside is visible. |
 | Hidden screws | none | none | none |
 
 Renders: `renders/<option>-<view>.jpg`.
@@ -45,14 +45,6 @@ Renders: `renders/<option>-<view>.jpg`.
 |---|---|---|---|---|
 | A | `lip/tray-Q5B.stl` | 2 × M2.5 × 20 | 2 × `collar-1.7-Q5B.stl` (washers between the plate and the faceplate, pinned into the plate) | — |
 | B | `four/tray-Q5B.stl` | 4 × M2.5 × 20 | 2 × `spacer-1.7-Q5B.stl` (between the plate and the faceplate on the key-end screws) | — |
-| C | `back/frame-Q5B.stl` (walls only) | 2 × M2.5 × **25** | Collars as A, plus loose standoffs: 2 × `screw-standoff`, 2 × `standoff`, 2 × `post`, 1 × `usb-support`. Each is pinned into the panel. | `back-panel-acrylic-Q5B.svg` / `.dxf`, 3/16 in clear |
-
-**Back panel SVG (C):**
-- **Orientation:** drawn as seen from outside. Lay the panel outside face up.
-- **Red:** cut.
-- **Grey fill:** the two hex nut pockets. Engrave them **2.05 mm deep**, and test the depth on scrap first.
-- **Blue:** the battery warning, to engrave. Convert the text to paths if your laser software needs it.
-- **Reset hole:** the 1.5 mm hole is the reset pinhole.
 
 ## Assembly
 
@@ -69,21 +61,58 @@ Renders: `renders/<option>-<view>.jpg`.
 - In step 5, lower the faceplate straight down.
 - Drive four screws.
 
-**C (clear back):**
-1. Press the two nuts into the panel's pockets from outside. Tape holds them until the screws are in.
-2. Lay the panel in the frame on the bottom ledge.
-3. Stand the loose standoffs, posts and USB support in their panel holes.
-4. Continue as A from step 2.
+## Option C: clear sandwich (`sandwich/`)
+
+The owner's design goals for C are the most view of the board from above and below, and the fewest printed parts.
+
+**Stack, bottom to top:** feet 2.0, back acrylic 4.76, corner standoffs 6.02, board 1.6, upper piece 6.7 (its plate is at the standard MX height), top acrylic 4.76.
+
+| Part | File | Notes |
+|---|---|---|
+| Top acrylic | `faceplate-acrylic-Q5B.svg` / `.dxf` | 3/16 in clear. Four 2.9 mm holes and the 38.1 × 19.2 mm key opening. |
+| **Upper piece** (print 1) | `upper-piece-with-supports-Q5B.stl` | Switch plate (2 mm rings round the switches), two spacer bosses on 3.2 mm arms beside the display, and two key-end blocks. |
+| **Surround** (print 2) | `surround-Q5B.stl` | 2.0 mm ring, flush with the top acrylic, with four corner standoffs joined to the walls and a USB shelf. No floor. |
+| Back acrylic | `back-panel-acrylic-Q5B.svg` / `.dxf` | 3/16 in clear, full outline. |
+| Feet (optional print) | `foot-2.0-Q5B.stl` × 4 | 8 mm discs, glued on. Stick-on bumpers of 2 mm or more also work. |
+
+**Fasteners:**
+- 4 × M2.5 × 25 pan head and 4 × M2.5 nuts, through everything.
+- 2 × M2 × 10 self-tapping pan head (head 3.8 mm or less). Each goes through a key-end block and the board's key-end hole into a 1.7 mm pilot hole in the surround's standoff, with 4.4 mm of thread in the plastic. They replace printed locating pins (the owner's change).
+
+**Printing (0.4 mm nozzle, 0.2 mm layers, PETG):**
+- **Upper piece:** print it as exported, top side down. The arms, bosses and blocks sit on the bed. The plate hangs 1.7 mm above the bed on built-in support ribs (0.5 mm wide, 0.2 mm gap under the plate). Turn slicer supports off, then break the rib grid off the plate afterwards. `upper-piece-no-supports-Q5B.stl` is the same part without ribs, for slicer supports.
+- **M2 counterbores:** each has a 0.25 mm sacrificial skin over the screw hole so the counterbore roof bridges cleanly. The screw pierces it.
+- **Surround:** print it back-panel side down. It needs no supports. The USB opening's top edge is a 13.4 mm bridge. The bed edge has a 0.3 mm chamfer.
+- **Plate fit:** print `plate-fit-coupon-printable-Q5B.stl` first if your printer runs holes small.
+
+**Back panel SVG:**
+- **Orientation:** drawn as seen from outside. Lay the panel outside face up.
+- **Red:** cut (outline, four screw holes, the 1.5 mm reset pinhole).
+- **Grey fill:** the four hex nut pockets. Engrave them **2.05 mm deep**, and test the depth on scrap first.
+- **Blue:** the battery warning, to engrave. Convert the text to paths if your laser software needs it.
+- **Green dashed:** where the feet go. Reference only; switch it off before cutting.
+
+**Assembly:**
+1. Fit the LIR2032 with USB connected (Q5 USB-first rule). Drop the board into the surround, onto the four corner standoffs.
+2. Lay the upper piece on the board and drive the two M2 screws. The board is now fixed.
+3. Clip the Box Jades into the plate.
+4. Press the four nuts into the back panel's pockets from outside. Tape holds them.
+5. Put the top acrylic in the bezel, hold the back panel under the surround and drive the four M2.5 × 25 screws.
+6. Stick the feet on, clear of the screws. Press the keycaps on.
+
+**The screw tips stand 1.2 mm proud of the back** (0.9 to 1.4 mm over the accepted acrylic thickness range). The 2 mm feet keep them off the table. The alternative is trimming the screws to 23.5 mm.
+
+**Checks:** zero intersections and zero collisions over 427 vertical assembly poses. `sandwich/drawings/` has the agreed plan, the three sections and two views of the printed parts. `scripts/q5b_sections/draw_option_c.py` draws the sections.
 
 ## What the generator checks
 
-`scripts/build_q5b_enclosure.py` builds one option per run. Select it with `Q5B_VARIANT=lip|four|back`.
+`scripts/build_q5b_enclosure.py` builds A or B per run (`Q5B_VARIANT=lip|four`). Option C has its own generator, `scripts/build_q5b_sandwich.py`.
 
 For each option, the final build found:
 - **Parts:** valid single solids; every STL is manifold and sits on the bed.
 - **Static clearance:** zero intersections between the case parts, both acrylic parts, the switches, spacers, collars, standoffs, screws, nuts, the board, every component envelope and the USB plug space.
 - **Keycaps:** clear at rest and fully pressed (4.0 mm travel, with a 0.3 mm wobble allowance), against the thickest accepted faceplate (5.0 mm) and everything else.
-- **Assembly paths:** zero collisions on straight vertical paths, plus the tilt-and-swing faceplate path in A and C. That is 520 / 488 / 642 poses.
+- **Assembly paths:** zero collisions on straight vertical paths, plus the tilt-and-swing faceplate path in A. That is 520 / 488 poses (427 for C).
 
 ## Not established (first-article checks)
 
@@ -91,10 +120,10 @@ Nothing here is a measurement. Before calling Q5B done, check:
 - **Switches and caps:**
   - Box Jade fit in the printed plate (use the coupon);
   - keycap **skirt height**, which is assumed at PCB top + 11.0. Only the plan size was measured.
-- **Faceplate and lip (A, C):**
+- **Faceplate and lip (A):**
   - lip retention and fit on a real print;
   - the acrylic lip insertion.
-- **Back panel (C):** laser nut-pocket depth.
+- **Option C:** laser nut-pocket depth; support-rib removal; M2 thread strength in the printed standoffs; screw tips against the feet.
 - **Hardware fit:**
   - nut-pocket fit;
   - spacer and collar lengths (check with calipers);
@@ -108,7 +137,7 @@ Nothing here is a measurement. Before calling Q5B done, check:
 
 ## Renders
 
-`scripts/render_q5b/` renders each option:
+`scripts/render_q5b/` renders options A and B (C has drawings only, in `sandwich/drawings/`):
 - **Board:** the native board textures and KiCad STEP models.
 - **Enclosure:** the checked enclosure parts.
 - **Display:** firmware OLED frames.
@@ -116,7 +145,7 @@ Nothing here is a measurement. Before calling Q5B done, check:
 - **Substitutions:** Blender's bundled `studio.exr` stands in for the Poly Haven HDRIs, and DejaVu for the decal fonts.
 
 ```sh
-for v in lip four back; do
+for v in lip four; do
   Q5B_VARIANT=$v python3 -B scripts/build_q5b_enclosure.py --kicad-python /usr/bin/python3
   Q5B_VARIANT=$v python3 -B scripts/render_q5b/build_render_assets.py --kicad-python /usr/bin/python3
   Q5B_VARIANT=$v python3 -B scripts/render_q5b/render_stills.py -- --shots hero,top,exploded2,under --samples 128
