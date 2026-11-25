@@ -13,4 +13,4 @@ One log per board (`CF-0N.md`, copied from [the template](bring-up-log-TEMPLATE.
 | [CF-03](CF-03.md) | NOT STARTED | | | |
 | [CF-04](CF-04.md) | NOT STARTED | | | |
 
-Status: NOT STARTED, PASS-BARE (stages 0–7), PASS (all stages), HOLD (a stop rule hit, under investigation), REJECT (confirmed fault).
+Status: NOT STARTED, PASS-BARE (stages 0–7), PASS (all stages), PASS-NOMETER (passed without the multimeter checks), HOLD (a stop rule hit, under investigation), REJECT (confirmed fault).

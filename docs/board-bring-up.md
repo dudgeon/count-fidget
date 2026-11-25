@@ -26,13 +26,12 @@ A **STOP** means: do not continue on this board, do not power it again, mark it 
 Required:
 - Mac with this repository checked out and the Claude desktop app open, so Claude can run the flasher (setup below)
 - USB-C **data** cable (a charge-only cable never enumerates); a second cable of another brand for troubleshooting
-- Multimeter with resistance, diode/continuity and DC volts; fine probes
 - Loupe or phone macro camera
 - 2 × CPG151101D13 clicky switches (LCSC C49234235) per board; they can be moved between boards for bring-up
 - 1 × LIR2032 per board, charged or part-charged
 - Paper clip (pinhole), flush cutters or pliers for the edge rails, a fine file or sandpaper, safety glasses
 
-Useful, not required: an inline USB-C power meter (about US$15; lets you read the stage 5 current and the C4 charge current), a current-limited bench supply (0–5 V), PPK2 or similar for the sampled tests, printed enclosure parts and M2 × 6 self-tapping screws (C357360) for stage 8.
+Strongly recommended: a multimeter (resistance and DC volts, fine probes) for stages 3 and 5. Useful, not required: an inline USB-C power meter (about US$15; lets you read the stage 5 current and the C4 charge current), a current-limited bench supply (0–5 V), PPK2 or similar for the sampled tests, printed enclosure parts and M2 × 6 self-tapping screws (C357360) for stage 8.
 
 Reference files to have open:
 - [`POLARITY-REFERENCE-Q5-BOTTOM.png`](../procurement/q5/POLARITY-REFERENCE-Q5-BOTTOM.png) and [`-TOP.png`](../procurement/q5/POLARITY-REFERENCE-Q5-TOP.png) (or the [PDF](../procurement/q5/POLARITY-REFERENCE-Q5.pdf))
@@ -50,6 +49,10 @@ python3 tools/clicker-flash/clicker_flash.py doctor   # dfu-util >= 0.9, image O
 ```
 
 If the image check fails, nothing is flashed until the committed build is restored. The flasher's unit log stays outside the repository (`~/count-fidget-flash-log.csv`). It is private; only board IDs and results go into the committed logs.
+
+## No-meter path
+
+Without a multimeter, skip stage 3 and the voltage readings in stage 5 and write "no meter" in the log. You lose the early short and BT1-polarity checks, so the stage 2 visual check and the stage 5 five-second power-on and touch test carry more weight. The go/no-go test is then stage 6: if the Mac sees the board in DFU mode, power, the MCU and USB are working. A board that passes everything else this way is **PASS-NOMETER**, not PASS; the voltages can be measured later.
 
 ## Per-board procedure
 

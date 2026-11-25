@@ -10,7 +10,7 @@ Procedure: [docs/board-bring-up.md](../../docs/board-bring-up.md). Record measur
 | DFU serial (from the flasher) | |
 | Firmware image SHA-256 (first 12) | |
 | Instruments (multimeter; USB meter or "none") | |
-| **Status** | NOT STARTED / PASS-BARE / PASS / HOLD / REJECT |
+| **Status** | NOT STARTED / PASS-BARE / PASS-NOMETER / PASS / HOLD / REJECT |
 
 ## Stages 0–1 — Identify, rails
 
