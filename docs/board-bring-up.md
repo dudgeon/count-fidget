@@ -10,8 +10,8 @@ It is the every-unit part (section A, plus the enclosure checks in G) of the [fi
 
 A **STOP** means: do not continue on this board, do not power it again, mark it **HOLD** in its log and in the summary table, and move on to the next board only once you understand the fault is not common to all boards.
 
-- Any short in stage 2, or BT1 reversed.
-- More than 100 mA, a hot part, smell or smoke in stage 3.
+- Any short or a reversed BT1 in stage 3.
+- A warm part, smell, smoke, "USB accessories disabled" or (with a meter) more than 100 mA in stage 5.
 - VLOGIC outside 3.15–3.26 V.
 - DFU never enumerates on two different data cables.
 - Flash VERIFY FAILED twice.
@@ -26,14 +26,13 @@ A **STOP** means: do not continue on this board, do not power it again, mark it 
 Required:
 - Mac with this repository checked out, Python 3 and `dfu-util` (one-time setup below)
 - USB-C **data** cable (a charge-only cable never enumerates); a second cable of another brand for troubleshooting
-- Inline **USB-C power meter** (shows V and mA) between the Mac and the board
 - Multimeter with resistance, diode/continuity and DC volts; fine probes
 - Loupe or phone macro camera
 - 2 × CPG151101D13 clicky switches (LCSC C49234235) per board; they can be moved between boards for bring-up
 - 1 × LIR2032 per board, charged or part-charged
 - Paper clip (pinhole), flush cutters or pliers for the edge rails, a fine file or sandpaper, safety glasses
 
-Useful, not required: current-limited bench supply (0–5 V), PPK2 or similar for the sampled tests, printed enclosure parts and M2 × 6 self-tapping screws (C357360) for stage 8.
+Useful, not required: an inline USB-C power meter (about US$15; lets you read the stage 5 current and the C4 charge current), a current-limited bench supply (0–5 V), PPK2 or similar for the sampled tests, printed enclosure parts and M2 × 6 self-tapping screws (C357360) for stage 8.
 
 Reference files to have open:
 - [`POLARITY-REFERENCE-Q5-BOTTOM.png`](../procurement/q5/POLARITY-REFERENCE-Q5-BOTTOM.png) and [`-TOP.png`](../procurement/q5/POLARITY-REFERENCE-Q5-TOP.png) (or the [PDF](../procurement/q5/POLARITY-REFERENCE-Q5.pdf))
@@ -108,15 +107,16 @@ Fitting them now lets you enter DFU and run the commissioning check without the 
 
 ### Stage 5 — First power, USB only, no cell (5 min) — test A3
 
-1. Connect: Mac → USB-C power meter → data cable → board. Watch the meter as you plug in; unplug at once if the current goes above **100 mA** or anything gets warm.
-   With a bench supply instead: 5.0 V, current limit 100 mA, into the USB-C port through a breakout.
-2. The display stays dark (the flash is blank). That is expected.
-3. Record the current. Pass: **< 30 mA**.
+Stage 3 has already ruled out a dead short, so this stage looks for a part that draws too much and heats up. Plug into a **Mac port**, not a wall charger: the Mac cuts power to a port that draws too much and says "USB accessories disabled".
+
+1. **Five-second power-on.** Plug the board in, count to five, unplug. Straight away, touch U2, U5, U7 and the MCU (U1) with a fingertip. Pass: nothing warm, no smell, no "USB accessories disabled" message. Any of those is a STOP.
+2. Plug in again for the measurements. The display stays dark (the flash is blank). That is expected.
+3. Current: with a USB-C power meter, record it (pass **< 30 mA**). Without one, write "no meter" and rely on step 1 and the touch test in step 5. A board drawing well over 30 mA from a 3.3 V rail warms a part noticeably within a minute.
 4. Measure to TP1 GND and record:
    - TP5 VBUS ≈ 5 V
    - TP6 SYS ≈ 4.5 V (the charger regulates SYS with USB present)
    - **TP2 VLOGIC 3.15–3.26 V** (STOP outside this band)
-5. Touch-test U2, U5, U7 and the MCU: none should be warm.
+5. After a minute on USB, touch-test U2, U5, U7 and the MCU again: none should be warm.
 
 ### Stage 6 — Flash and commission (5 min) — tests A4, A6
 

@@ -9,7 +9,7 @@ Procedure: [docs/board-bring-up.md](../../docs/board-bring-up.md). Record measur
 | Operator | |
 | DFU serial (from the flasher) | |
 | Firmware image SHA-256 (first 12) | |
-| Instruments (meter, USB meter) | |
+| Instruments (multimeter; USB meter or "none") | |
 | **Status** | NOT STARTED / PASS-BARE / PASS / HOLD / REJECT |
 
 ## Stages 0–1 — Identify, rails
@@ -53,11 +53,12 @@ Procedure: [docs/board-bring-up.md](../../docs/board-bring-up.md). Record measur
 
 | Measure | Value | Pass band | Result |
 |---|---|---|---|
-| USB current | mA | < 30 mA | |
+| 5 s power-on: no warm part, smell or port shutdown | | | |
+| USB current (if a meter is available) | mA | < 30 mA | |
 | TP5 VBUS | V | ≈ 5 V | |
 | TP6 SYS | V | ≈ 4.5 V | |
 | TP2 VLOGIC | V | 3.15–3.26 V | |
-| No warm parts | | | |
+| No warm parts after 1 min | | | |
 
 ## Stage 6 — Flash and commission (A4, A6)
 
