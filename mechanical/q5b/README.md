@@ -52,6 +52,7 @@ Q5B is the third enclosure for the **ordered, locked Q5 board**. The board, BOM 
 ## DFM
 
 - **Switch fit:**
+  - **Printed plate:** print it flat at 0.25 or 0.15 mm layers (6 or 10 layers make exactly 1.5 mm; 0.2 mm layers give 1.4 or 1.6). Print `plate-fit-coupon-printable-Q5B.stl` first (13.9 / 14.0 / 14.1 / 14.2 mm holes). Use the size where a Box Jade clicks in and doesn't rock; FDM holes usually print 0.1–0.2 mm small. If that size isn't 14.0, tell Claude and the plate will be regenerated with it.
   - **Laser-cut plate:** cut `laser-coupon-Q5B.svg` from the 1.5 mm sheet first. A Box Jade should click into the 14.0 mm hole and not rock.
   - **Printed plate:** check the same fit on a print.
 - **Faceplate thickness:** 4.3–5.0 mm is accepted, so 3/16 in (4.76 mm) sheet works. The datum is its underside, so thickness only moves the top face. The screws keep 1.18–1.6 mm of thread in the nut across that range (1.42 mm at 3/16 in).
