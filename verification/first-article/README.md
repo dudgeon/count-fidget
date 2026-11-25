@@ -8,7 +8,7 @@ One log per board (`CF-0N.md`, copied from [the template](bring-up-log-TEMPLATE.
 
 | Board | Status | Date | DFU serial (last 6) | Notes |
 |---|---|---|---|---|
-| [CF-01](CF-01.md) | IN PROGRESS | 2026-11-24 | 430000 | Flashed and commissioned; cell stage next |
+| [CF-01](CF-01.md) | PASS-NOMETER | 2026-11-24 | 430000 | Flashed, commissioned, CHG on USB, works on battery; no enclosure yet |
 | [CF-02](CF-02.md) | NOT STARTED | | | |
 | [CF-03](CF-03.md) | NOT STARTED | | | |
 | [CF-04](CF-04.md) | NOT STARTED | | | |
