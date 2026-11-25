@@ -38,6 +38,7 @@ FLASH_BASE = 0x08000000
 BANK1_BYTES = 96 * 1024          # STM32L072CB: 192 KiB in two 96 KiB banks
 RAM_BASE, RAM_BYTES = 0x20000000, 20 * 1024
 DEFAULT_LOG = Path.home() / 'count-fidget-flash-log.csv'
+DEFAULT_BACKUPS = Path.home() / 'count-fidget-flash-backups'
 LOG_FIELDS = ['utc', 'serial', 'usb_path', 'result', 'image_sha256', 'image_bytes',
               'readback_sha256', 'dfu_util', 'checks', 'note']
 COMMISSIONING = [
@@ -177,11 +178,13 @@ def flash_alt(device, image_len):
     raise FlashError('No "@Internal Flash" DfuSe interface: this is not the STM32 ROM bootloader')
 
 
-def wait_for_device(tool, timeout, exclude=(), poll=0.5, say=print):
+def wait_for_device(tool, timeout, exclude=(), poll=0.5, say=print, serial=None):
     deadline = time.monotonic() + timeout
     announced = False
     while True:
         devices = [d for d in list_devices(tool) if (d['path'], d['serial']) not in exclude]
+        if serial:
+            devices = [d for d in devices if d['serial'] == serial]
         if len(devices) > 1:
             raise FlashError('More than one STM32 DFU device is connected; connect one clicker at a time')
         if devices:
@@ -325,7 +328,7 @@ def cmd_flash(a, ask=input):
     print(f'Image {Path(info["path"]).name}: {info["bytes"]} bytes, SHA-256 {info["sha256"][:16]}...  (dfu-util {version})')
     done, failures, seen = 0, 0, set()
     while True:
-        device = wait_for_device(tool, a.timeout, exclude=seen)
+        device = wait_for_device(tool, a.timeout, exclude=seen, serial=a.serial)
         row = {'utc': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'serial': device['serial'],
                'usb_path': device['path'], 'image_sha256': info['sha256'], 'image_bytes': info['bytes'], 'dfu_util': version}
         try:
@@ -350,6 +353,8 @@ def cmd_flash(a, ask=input):
         append_log(a.log, row)
         print(f'Logged to {a.log}')
         if not a.batch:
+            emit({'step': 'flash', 'ok': failures == 0, 'serial': device['serial'], 'result': row['result'],
+                  'leave_requested': not a.no_leave and row['result'] != 'FAIL', 'note': row.get('note', '')})
             return 0 if failures == 0 else 1
         seen = set()
         if a.no_leave or not wait_for_departure(tool, device, timeout=15):
@@ -358,6 +363,169 @@ def cmd_flash(a, ask=input):
             if not a.no_leave:
                 print('WARNING: this unit is still in DFU mode after leave.', STUCK_HINT)
         print(f'\n{done} flashed, {failures} failed. Connect the next clicker in DFU mode, or Ctrl-C to stop.')
+
+
+# ---------------------------------------------------------------- step-by-step commands (agent-operated)
+#
+# Each command below does one thing, never prompts, and prints a final machine-readable line
+# `RESULT {json}` so an operator script or agent can drive a first-article flash one step at a time:
+#   wait -> probe -> backup -> flash --no-leave -> verify-device -> leave -> record-check
+# Only `flash` writes to the device. probe/backup/verify-device/leave only list or read.
+
+def emit(obj):
+    print('RESULT ' + json.dumps(obj, sort_keys=True))
+
+
+def one_device(tool, serial=None):
+    devices = list_devices(tool)
+    if serial:
+        devices = [d for d in devices if d['serial'] == serial]
+    if not devices:
+        raise FlashError('No STM32 DFU device found' + (f' with serial {serial}' if serial else '') +
+                         '. With USB connected: hold RESET, press and release the pinhole, then release RESET')
+    if len(devices) > 1:
+        raise FlashError('More than one STM32 DFU device is connected; connect one clicker at a time')
+    return devices[0]
+
+
+def flash_size(device):
+    for alt, name in sorted(device['alts'].items()):
+        if name.startswith('@Internal Flash'):
+            _, segments = parse_layout(name)
+            return alt, segments[-1]['end'] - FLASH_BASE
+    raise FlashError('No "@Internal Flash" DfuSe interface: this is not the STM32 ROM bootloader')
+
+
+def upload(tool, device, alt, length, leave=False):
+    """Read `length` bytes from FLASH_BASE. Read-only; with leave=True the ROM then starts the application."""
+    with tempfile.TemporaryDirectory(prefix='clicker-read-') as td:
+        back = Path(td) / 'read.bin'
+        opts = f'0x{FLASH_BASE:08x}:{length}' + (':leave' if leave else '')
+        code, out = run([tool] + select_args(device, alt) + ['-s', opts, '-U', str(back)], timeout=180)
+        data = back.read_bytes() if back.is_file() else None
+    return code, out, data
+
+
+def describe_contents(data, image):
+    if data[:len(image)] == image:
+        return 'q5-image'
+    if all(b == 0xFF for b in data):
+        return 'blank'
+    return 'other'
+
+
+def cmd_wait(a):
+    tool = dfu_util_path(a.dfu_util)
+    d = wait_for_device(tool, a.timeout, serial=a.serial)
+    print(f'Found STM32 DFU device serial={d["serial"]} path={d["path"]}')
+    emit({'step': 'wait', 'ok': True, 'serial': d['serial'], 'path': d['path']})
+    return 0
+
+
+def cmd_probe(a):
+    image, info = load_image(a.build, a.image)
+    tool = dfu_util_path(a.dfu_util)
+    d = one_device(tool, a.serial)
+    alt, warnings = flash_alt(d, len(image))
+    _, total = flash_size(d)
+    option_alt = next((k for k, v in d['alts'].items() if v.startswith('@Option Bytes')), None)
+    print(f'serial={d["serial"]} path={d["path"]} bootloader ver={d["ver"]}')
+    for k, v in sorted(d['alts'].items()):
+        print(f'  alt {k}: {v}')
+    print(f'Flash alt {alt}: {total // 1024} KiB; image pages readable/erasable/writable (RDP level 0)')
+    for w in warnings:
+        print('WARNING: ' + w)
+    emit({'step': 'probe', 'ok': not warnings, 'serial': d['serial'], 'path': d['path'], 'bootloader_ver': d['ver'],
+          'flash_alt': alt, 'flash_kib': total // 1024, 'option_bytes_alt': option_alt, 'warnings': warnings})
+    return 0 if not warnings else 3
+
+
+def cmd_backup(a):
+    image, _ = load_image(a.build, a.image)
+    tool = dfu_util_path(a.dfu_util)
+    d = one_device(tool, a.serial)
+    alt, total = flash_size(d)
+    print(f'Reading all {total // 1024} KiB of flash from {d["serial"]} (read-only, stays in DFU)...')
+    code, out, data = upload(tool, d, alt, total)
+    if data is None or len(data) != total:
+        raise FlashError(f'Backup read returned {0 if data is None else len(data)} of {total} bytes:\n' + tail(out))
+    stamp = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+    a.out.mkdir(parents=True, exist_ok=True)
+    path = a.out / f'{d["serial"] or "unknown"}-{stamp}.bin'
+    path.write_bytes(data)
+    contents = describe_contents(data, image)
+    print(f'Saved {path} ({len(data)} bytes, SHA-256 {sha256(data)}); contents: {contents}')
+    emit({'step': 'backup', 'ok': True, 'serial': d['serial'], 'file': str(path), 'bytes': len(data),
+          'sha256': sha256(data), 'contents': contents, 'dfu_exit': code})
+    return 0
+
+
+def cmd_verify_device(a):
+    image, info = load_image(a.build, a.image)
+    tool = dfu_util_path(a.dfu_util)
+    d = one_device(tool, a.serial)
+    alt, _ = flash_alt(d, len(image))
+    code, out, data = upload(tool, d, alt, len(image))
+    if data is None:
+        raise FlashError('Read-back produced no file:\n' + tail(out))
+    match = data == image
+    first = None if match else next((i for i, (x, y) in enumerate(zip(data, image)) if x != y), min(len(data), len(image)))
+    print(('MATCH' if match else f'MISMATCH at offset 0x{first:x}') + f': {d["serial"]} flash vs {Path(info["path"]).name}')
+    emit({'step': 'verify-device', 'ok': match, 'serial': d['serial'], 'readback_sha256': sha256(data),
+          'image_sha256': info['sha256'], 'first_difference': first})
+    return 0 if match else 1
+
+
+def cmd_leave(a):
+    tool = dfu_util_path(a.dfu_util)
+    d = one_device(tool, a.serial)
+    alt, _ = flash_size(d)
+    print(f'Asking the ROM bootloader on {d["serial"]} to start the application (no write)...')
+    code, out, _ = upload(tool, d, alt, 8, leave=True)
+    departed = wait_for_departure(tool, d, timeout=a.timeout)
+    print('Device left DFU mode.' if departed else 'WARNING: still in DFU mode. ' + STUCK_HINT)
+    emit({'step': 'leave', 'ok': departed, 'serial': d['serial'], 'dfu_exit': code})
+    return 0 if departed else 1
+
+
+def parse_checks(text):
+    checks = {}
+    keys = [k for k, _ in COMMISSIONING]
+    for part in filter(None, (p.strip() for p in text.split(','))):
+        k, _, v = part.partition('=')
+        if k not in keys or v not in ('pass', 'FAIL', 'fail', 'skipped'):
+            raise FlashError(f'Bad check {part!r}; use {",".join(k + "=pass|fail|skipped" for k in keys)}')
+        checks[k] = 'FAIL' if v.lower() == 'fail' else v
+    return checks
+
+
+def cmd_record_check(a):
+    checks = parse_checks(a.checks)
+    _, info = load_image(a.build, a.image)
+    failed = 'FAIL' in checks.values()
+    row = {'utc': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'), 'serial': a.serial,
+           'result': 'FLASHED_CHECK_FAIL' if failed else 'COMMISSIONED', 'image_sha256': info['sha256'],
+           'image_bytes': info['bytes'], 'checks': ';'.join(f'{k}={v}' for k, v in checks.items()), 'note': a.note or ''}
+    append_log(a.log, row)
+    print(f'Logged {row["result"]} for {a.serial} to {a.log}')
+    emit({'step': 'record-check', 'ok': not failed, 'serial': a.serial, 'result': row['result'], 'checks': checks})
+    return 0 if not failed else 1
+
+
+def cmd_summary(a):
+    if not Path(a.log).exists():
+        print(f'No log at {a.log}')
+        emit({'step': 'summary', 'ok': True, 'units': {}})
+        return 0
+    with Path(a.log).open() as f:
+        rows = list(csv.DictReader(f))
+    units = {}
+    for r in rows:
+        units.setdefault(r['serial'], []).append(r['result'])
+    for serial, results in units.items():
+        print(f'{serial}: {" -> ".join(results)}')
+    emit({'step': 'summary', 'ok': True, 'units': {s: r[-1] for s, r in units.items()}, 'rows': len(rows)})
+    return 0
 
 
 def build_parser():
@@ -375,15 +543,37 @@ def build_parser():
     f.add_argument('--no-leave', action='store_true', help='stay in DFU after verifying (for debugging)')
     f.add_argument('--timeout', type=float, default=120, help='seconds to wait for a device (default: %(default)s)')
     f.add_argument('--log', type=Path, default=DEFAULT_LOG, help='CSV unit log (default: %(default)s)')
+    f.add_argument('--serial', help='only flash the DFU device with this serial')
+    s = sub.add_parser('wait', help='wait for exactly one STM32 DFU device (no access beyond listing)')
+    s.add_argument('--timeout', type=float, default=300); s.add_argument('--serial')
+    for name, text in (('probe', 'check the connected device layout and protection (list only)'),
+                       ('backup', 'read the whole flash to a file (read-only; stays in DFU)'),
+                       ('verify-device', 'read the image range back and compare with the image (read-only)'),
+                       ('leave', 'start the application from DFU without writing')):
+        s = sub.add_parser(name, help=text); s.add_argument('--serial')
+        if name == 'backup':
+            s.add_argument('--out', type=Path, default=DEFAULT_BACKUPS)
+        if name == 'leave':
+            s.add_argument('--timeout', type=float, default=10)
+    s = sub.add_parser('record-check', help='log on-device commissioning answers for a unit (no device access)')
+    s.add_argument('--serial', required=True)
+    s.add_argument('--checks', required=True, help='e.g. blank=pass,reset=pass,count=pass,zero=fail')
+    s.add_argument('--note'); s.add_argument('--log', type=Path, default=DEFAULT_LOG)
+    s = sub.add_parser('summary', help='latest result per unit from the log')
+    s.add_argument('--log', type=Path, default=DEFAULT_LOG)
     return p
 
 
 def main(argv=None):
     a = build_parser().parse_args(argv)
     try:
-        return {'doctor': cmd_doctor, 'verify-image': cmd_verify_image, 'list': cmd_list, 'flash': cmd_flash}[a.command](a)
+        return {'doctor': cmd_doctor, 'verify-image': cmd_verify_image, 'list': cmd_list, 'flash': cmd_flash,
+                'wait': cmd_wait, 'probe': cmd_probe, 'backup': cmd_backup, 'verify-device': cmd_verify_device,
+                'leave': cmd_leave, 'record-check': cmd_record_check, 'summary': cmd_summary}[a.command](a)
     except FlashError as e:
         print('FAIL:', e, file=sys.stderr)
+        if a.command in ('wait', 'probe', 'backup', 'verify-device', 'leave', 'record-check', 'summary', 'flash'):
+            emit({'step': a.command, 'ok': False, 'error': str(e).splitlines()[0]})
         return 2
     except KeyboardInterrupt:
         print('\nStopped.')

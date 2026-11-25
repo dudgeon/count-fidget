@@ -234,6 +234,90 @@ def batch_flashes_successive_units(td):
     assert [r['serial'] for r in rows] == ['2067368F5041', '2067368F5042'] and all(r['result'] == 'PASS' for r in rows), rows
 
 
+def step(env, *args):
+    """Run one step-by-step command through main() and return (exit, RESULT dict, output)."""
+    out, err = io.StringIO(), io.StringIO()
+    with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+        code = cf.main(['--dfu-util', str(env.tool), *args])
+    text = out.getvalue() + err.getvalue()
+    results = [json.loads(l[7:]) for l in out.getvalue().splitlines() if l.startswith('RESULT ')]
+    assert len(results) == 1, text
+    return code, results[0], text
+
+
+def writes(env):
+    return [c for c in env.read().get('calls', []) if '-D' in c]
+
+
+@case
+def stepwise_first_article_sequence(td):
+    env = Env(td)
+    backups = Path(td) / 'backups'
+    code, r, _ = step(env, 'wait', '--timeout', '1')
+    assert code == 0 and r['serial'] == DEVICE['serial']
+    code, r, _ = step(env, 'probe')
+    assert code == 0 and r['ok'] and r['flash_kib'] == 192 and r['option_bytes_alt'] == 1
+    code, r, _ = step(env, 'backup', '--out', str(backups))
+    assert code == 0 and r['contents'] == 'blank' and r['bytes'] == 192 * 1024 and Path(r['file']).is_file()
+    code, r, _ = step(env, 'verify-device')
+    assert code == 1 and not r['ok'], r
+    assert not writes(env), 'read-only steps must never download'
+    assert env.read()['devices'][0].get('in_dfu', True) is True, 'read-only steps must not leave DFU'
+    code, r, _ = step(env, 'flash', '--no-leave', '--timeout', '1', '--log', str(env.log))
+    assert code == 0 and r['result'] == 'PASS' and r['leave_requested'] is False
+    assert env.read()['devices'][0].get('in_dfu', True) is True
+    code, r, _ = step(env, 'verify-device')
+    assert code == 0 and r['ok'] and r['readback_sha256'] == r['image_sha256']
+    code, r, _ = step(env, 'backup', '--out', str(backups))
+    assert r['contents'] == 'q5-image'
+    code, r, _ = step(env, 'leave')
+    assert code == 0 and r['ok'] and env.read()['devices'][0]['app_started'] == 1
+    assert len(writes(env)) == 1
+    code, r, _ = step(env, 'record-check', '--serial', DEVICE['serial'], '--checks',
+                      'blank=pass,reset=pass,count=pass,zero=pass', '--log', str(env.log))
+    assert code == 0 and r['result'] == 'COMMISSIONED'
+    code, r, _ = step(env, 'summary', '--log', str(env.log))
+    assert r['units'] == {DEVICE['serial']: 'COMMISSIONED'} and r['rows'] == 2
+
+
+@case
+def stepwise_commands_refuse_ambiguity_and_absence(td):
+    other = dict(DEVICE, serial='3A1F00000001', path='20-2')
+    env = Env(td, devices=[dict(DEVICE), other])
+    for cmd in ('probe', 'backup', 'verify-device', 'leave'):
+        code, r, _ = step(env, cmd, *(['--out', str(Path(td) / 'b')] if cmd == 'backup' else []))
+        assert code == 2 and not r['ok'] and 'More than one' in r['error'], (cmd, r)
+    code, r, _ = step(env, 'probe', '--serial', other['serial'])
+    assert code == 0 and r['serial'] == other['serial']
+    env2 = Env(Path(td), devices=[])
+    code, r, _ = step(env2, 'wait', '--timeout', '0.2')
+    assert code == 2 and 'No STM32 DFU device' in r['error']
+    assert not writes(env) and not writes(env2)
+
+
+@case
+def stepwise_probe_refuses_read_protection(td):
+    env = Env(td, devices=[dict(DEVICE, alts={'0': '@Internal Flash  /0x08000000/1536*128 a'})])
+    code, r, _ = step(env, 'probe')
+    assert code == 2 and 'read protection' in r['error']
+
+
+@case
+def flash_serial_filter_ignores_other_units(td):
+    env = Env(td, devices=[dict(DEVICE)])
+    code, r, _ = step(env, 'flash', '--serial', 'NOT-THIS-ONE', '--timeout', '0.3', '--log', str(env.log))
+    assert code == 2 and not r['ok'] and not writes(env)
+
+
+@case
+def record_check_rejects_bad_input_and_logs_failures(td):
+    env = Env(td)
+    code, r, _ = step(env, 'record-check', '--serial', 'X', '--checks', 'blank=maybe', '--log', str(env.log))
+    assert code == 2 and not env.log.exists()
+    code, r, _ = step(env, 'record-check', '--serial', 'X', '--checks', 'blank=pass,reset=fail', '--log', str(env.log))
+    assert code == 1 and r['result'] == 'FLASHED_CHECK_FAIL' and env.rows()[0]['checks'] == 'blank=pass;reset=FAIL'
+
+
 def real_dfu_util_accepts_arguments():
     """With no device attached, the real dfu-util must fail on 'no device', never on usage."""
     tool = shutil.which('dfu-util')
@@ -244,7 +328,8 @@ def real_dfu_util_accepts_arguments():
         src = Path(td) / 'i.bin'; src.write_bytes(image())
         dev = {'serial': '2067368F5041', 'path': '1-1'}
         for name, extra in (('download', ['-s', '0x08000000', '-D', str(src)]),
-                            ('upload_leave', ['-s', f'0x08000000:{len(image())}:leave', '-U', str(Path(td) / 'r.bin')])):
+                            ('upload_leave', ['-s', f'0x08000000:{len(image())}:leave', '-U', str(Path(td) / 'r.bin')]),
+                            ('upload_backup', ['-s', f'0x08000000:{192 * 1024}', '-U', str(Path(td) / 'b.bin')])):
             p = subprocess.run([tool] + cf.select_args(dev, 0) + extra, capture_output=True, text=True)
             out = p.stdout + p.stderr
             assert p.returncode != 64 and 'No DFU capable USB device available' in out, (name, p.returncode, out)
