@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="51.000mm" height="67.250mm" viewBox="0 0 51.000 67.250">
+  <!-- Count Fidget Q5B option C back panel: clear cast acrylic 3/16 in (4.76 mm), 1 part, drawn as seen from OUTSIDE (put the outside face up). Red = cut through (4 screw holes 2.9 mm, reset pinhole 1.5 mm, outline). Grey fill = hex nut pockets (5.15 mm across flats), engrave 2.05 mm deep: test the depth on scrap first. Display end at the top of the drawing. Lines are 0.1 mm wide so they show on screen: set them to hairline if your laser needs it. -->
+  <path d="M46.973,7.000 L45.487,9.575 L42.513,9.575 L41.027,7.000 L42.513,4.425 L45.487,4.425 Z" fill="#808080" stroke="none"/>
+  <path d="M9.973,7.000 L8.487,9.575 L5.513,9.575 L4.027,7.000 L5.513,4.425 L8.487,4.425 Z" fill="#808080" stroke="none"/>
+  <path d="M46.973,61.050 L45.487,63.625 L42.513,63.625 L41.027,61.050 L42.513,58.475 L45.487,58.475 Z" fill="#808080" stroke="none"/>
+  <path d="M9.973,61.050 L8.487,63.625 L5.513,63.625 L4.027,61.050 L5.513,58.475 L8.487,58.475 Z" fill="#808080" stroke="none"/>
+  <path d="M5.4000,2.0000 H45.6000 A3.4,3.4 0 0 1 49.0000,5.4000 V61.8500 A3.4,3.4 0 0 1 45.6000,65.2500 H5.4000 A3.4,3.4 0 0 1 2.0000,61.8500 V5.4000 A3.4,3.4 0 0 1 5.4000,2.0000 Z" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+  <path d="M42.5500,7.0000 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+  <path d="M5.5500,7.0000 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+  <path d="M42.5500,61.0500 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+  <path d="M5.5500,61.0500 a1.45,1.45 0 1 0 2.9,0 a1.45,1.45 0 1 0 -2.9,0 Z" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+  <path d="M12.1500,55.7000 a0.75,0.75 0 1 0 1.5,0 a0.75,0.75 0 1 0 -1.5,0 Z" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+</svg>

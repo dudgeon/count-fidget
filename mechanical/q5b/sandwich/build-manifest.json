@@ -1,0 +1,16 @@
+{
+  "generator": "150fc1b992c8edfe8140eef27445948d21d3430a8dfd2e0d089a45557c306359",
+  "board": "54046b7459257508f25762767020c1e18dcfb025dc6bfc4bd7c5e4c7b4d8c913",
+  "model": "42b4e94597259fa85e0b4b5891778b16e462d954974e7f7b7f11800302496995",
+  "outputs": {
+    "surround-Q5B.stl": "3be851f02a8a38ef8a138176c4444b06397a27db2cecc5312849e547b540623c",
+    "upper-piece-Q5B.stl": "dad543ad4d82e46989023a6d2aca1ec23896df45e52bb36bf2b6e504e2192bc3",
+    "foot-2.0-Q5B.stl": "ef850a28c1c331ba7117cea10ef364ac2919f95867d535b169aa945e7c4ed6fa",
+    "faceplate-acrylic-Q5B.dxf": "6cb81125c1a9b429046d66693851f03a831146cb30509ac5820f1f300766218f",
+    "faceplate-acrylic-Q5B.svg": "7a67e55eed806039f06c8859f0c8ddf7d4f9ce96ae0dfb75a902110b5cfe1061",
+    "back-panel-acrylic-Q5B.dxf": "b46ccc7163fdd6deb19dcdad3bdbbf8dae75e5192ea371dad6a83b5397384149",
+    "back-panel-acrylic-Q5B.svg": "1c1ffd63f02dbf52f78410cb5a543c165f8cb04e851b91e9995f032dc8add475",
+    "enclosure-Q5B-sandwich.step": "d598753da42657f36cbd6c36592cd0dafff357f15eccd6041cc3d7a6e3617634",
+    "fit-report.json": "6b2936b3cd3f7addb05a7191accb5598ce19c5c946bd1afd488bbfad48e58f19"
+  }
+}

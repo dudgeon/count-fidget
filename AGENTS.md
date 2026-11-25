@@ -1,5 +1,41 @@
 # Instructions for agents
 
+## Q5B enclosure — 24 November 2026 (supersedes Q5A for the owner's build)
+
+The owner uses **Kailh Box Jade** switches and **standard MX keycaps**. Their rules for this enclosure:
+- **a single one-piece acrylic top**; a two-part bottom is fine;
+- a printed bezel, thicker walls and a bottom chamfer;
+- keys that sit less proud;
+- easy-to-buy fasteners into captive nuts under the case;
+- printable spacers.
+
+**Q5B** implements this in `mechanical/q5b/` (start at its README). Its generator is `scripts/build_q5b_enclosure.py` and its renders are in `scripts/render_q5b/`.
+
+Key facts (25 Nov 2026; three options pending the owner's choice; A and B come from `Q5B_VARIANT=lip|four`, C from `scripts/build_q5b_sandwich.py`):
+- **Owner's stock:** M2.5 × 20 / × 25 screws and M2.5 nuts only; 3/16 in clear acrylic. The board's two display-end holes are drilled to 7/64 in.
+- **Keycaps:** measured as a pair at 36.9 × 18.0 mm. The faceplate opening is 38.1 × 19.2 mm.
+- **Shared parts:**
+  - one 3/16 in clear faceplate, 1.0 mm over the OLED;
+  - a hidden 1.5 mm printed switch plate with integrated pegs, printed top face down.
+- **The options:**
+  - **A lip** (47 × 59): 2 × M2.5 × 20; the key-end acrylic edge sits under a printed lip; collars on top of the plate.
+  - **B four** (47 × 63.25): 4 × M2.5 × 20; the key-end pair on tray posts outside the board edge.
+  - **C sandwich** (47 × 63.25 × 23.8, `mechanical/q5b/sandwich/`): the owner's own design, and the one they are printing first. Clear 3/16 in top and back; two prints only (upper piece = plate + spacers; surround with corner standoffs, no floor); 4 × M2.5 × 25 into nuts in laser-pocketed hex recesses in the back; 2 × M2 × 10 self-tappers fix the upper piece and board to the surround. Goal: the most view of the board from above and below.
+- **Key-end board holes:** never take faceplate screws; they are about 0.2 mm from the key opening.
+- **Checks:** zero intersections and zero assembly-path collisions in all three.
+- **A and B shared parts** (below) do not apply to C: it has no separate plate, pegs or loose spacers.
+
+Physical gates:
+- plate fit (coupon);
+- keycap skirt height;
+- lip insertion and retention;
+- laser pocket depth;
+- nut pockets and spacers;
+- acrylic crazing (no anaerobic threadlocker);
+- OLED readability.
+
+Q5A stays as it was. No purchase or order is authorised.
+
 ## Q5A acrylic-lid enclosure — 27 September 2026
 
 The owner has ordered the Q5 board and asked for an alternate case. It keeps the 3D-printed tray and replaces the Q5 printed front cover and rear key plate with **one flat, clear, laser-cut acrylic lid**, as small as works well. The request included DFM and high-fidelity renders plus an assembly film.
