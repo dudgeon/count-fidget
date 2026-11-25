@@ -153,7 +153,7 @@ Result handling: **PASS** → continue. **VERIFY FAILED** or download failed →
 1. **A5 (USB):** count to a number you'll recognise (e.g. 7). Unplug USB, plug it back in: the count returns, no ERR. Press the pinhole with USB connected: the count returns, no ERR.
 2. **Fit the cell with USB connected** (USB-first; the protector chip may not wake on a cold insertion). LIR2032, **+ side as marked on the holder**. The display should stay on and show **CHG** (or a full gauge for a full cell). Record which.
 3. Leave it on USB for a minute, then unplug USB. Now on battery:
-   - The display shows the count with battery bars (with USB and no cell, the battery icon flashes; that should stop once a cell is in) (or **LO** if the cell is nearly empty: charge it on USB and come back).
+   - The display shows the count with battery bars (or **LO** if the cell is nearly empty: charge it on USB and come back). Before the cell goes in, a blinking battery icon on USB is expected (seen on CF-01); it should settle once the cell is fitted.
    - Wait **30 s** without touching anything: the display turns off.
    - Press COUNT once: the board wakes and the count goes up by **exactly 1** (the power-on press counts once). Record before/after.
    - Press the pinhole (**B7**): the board turns off. Press COUNT: it comes back with the count kept (+1 for that press).
