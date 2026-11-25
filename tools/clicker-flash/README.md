@@ -50,6 +50,23 @@ For each unit the tool:
 
 In `--batch` mode, unplug the finished unit, connect the next one in DFU mode, and the tool continues. Ctrl-C stops.
 
+## Step-by-step commands (agent-operated)
+
+The `flash-clickers` skill (`.claude/skills/flash-clickers/`) has Claude run every command while the operator only handles the board. These subcommands never prompt, and each ends with one `RESULT {json}` line:
+
+| Command | Device access |
+|---|---|
+| `wait [--timeout 300]` | lists devices until exactly one appears |
+| `probe` | lists the device; checks the 192 KiB layout and that read protection is off |
+| `backup [--out DIR]` | reads the whole flash to `~/count-fidget-flash-backups/<serial>-<utc>.bin` and stays in DFU |
+| `flash --no-leave [--serial S]` | the only write: writes, reads back and compares, and stays in DFU |
+| `verify-device` | a second, independent read-back compared with the image |
+| `leave` | starts the application without writing, then confirms the device left DFU |
+| `record-check --serial S --checks blank=pass,reset=pass,count=pass,zero=pass` | logs the commissioning answers |
+| `summary` | shows the latest result per unit from the log |
+
+All except `record-check` and `summary` accept `--serial S`.
+
 ## What it refuses to do
 
 - Flash an image whose size or SHA-256 differs from the build manifest, whose vector table is invalid, or that exceeds Flash Bank 1.
